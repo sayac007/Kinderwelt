@@ -48,3 +48,14 @@ Versionsnachweis; die finale Suite lief vollständig auf 4.7.2.
 - Begleitete Beobachtung: Wird das Tippen und der Abschluss ohne Erklärung verstanden?
 
 Es gibt keine behaupteten Lernwirkungen oder gemessenen Geräteleistungswerte.
+
+## Übergabe / GitHub
+
+Branch `feat/foundation` wurde erfolgreich nach `origin` gepusht.
+`gh pr create --repo sayac007/Kinderwelt --base main --head feat/foundation ...`
+scheiterte an `Post https://api.github.com/graphql: Forbidden`.
+Auch REST-Zugriff auf `api.github.com` wurde abgewiesen. Kein PR erstellt und
+kein Remote-CI-Ergebnis behauptet. Der vorbereitete PR-Text steht in
+`docs/pull-request.md`. `api.github.com` wurde als ergänzende Netzwerkfreigabe
+im Cloud-Konfigurationsentwurf gespeichert; Speichern des Entwurfs wendet diese
+Freigabe noch nicht auf die laufende Umgebung an.
