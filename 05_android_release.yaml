@@ -1,0 +1,40 @@
+id: 05_android_release
+title: "Android release and Google Play upload readiness"
+priority: 5
+depends_on: [01_foundation, 02_logic_math, 03_language_autonomy_social, 04_quality_research]
+estimated_effort_hours: 3-5
+objective: >
+  Produce the most complete legally and technically valid Google Play release
+  candidate possible without inventing credentials or claiming publication.
+android:
+  application_id: "org.example.kinderwelt" # PLACEHOLDER: replace before publishing
+  display_name: "Kinderwelt"
+  package_format: "Android App Bundle (.aab)"
+  requirements:
+    - "Pin Godot version, Android SDK, Java and export templates in docs."
+    - "Use Android target API and Google Play policies CURRENT AT RELEASE TIME; verify against official documentation."
+    - "Configure portrait and landscape behavior deliberately and test it."
+    - "Minimize permissions; no ads, tracking, account creation or in-app purchases."
+    - "Prepare icons, screenshots, short and full store descriptions from actual app content."
+    - "Prepare privacy-policy draft and data-safety questionnaire with truthful claims, requiring owner review."
+    - "Account for Google Play Families / child-directed policies and applicable age rating requirements."
+    - "Never commit signing keys, passwords, tokens or personal data."
+release_process:
+  - "Build unsigned or debug Android artifacts for local verification."
+  - "If secure signing material is supplied, build a signed release AAB."
+  - "If signing material is absent, leave a reproducible signing procedure and mark upload NOT READY."
+  - "Validate AAB structure with available Android tools and install/test via APK on a device if available."
+  - "Do not attempt Play Console upload without explicit authorization and access."
+  - "Record build provenance, SHA-256 checksums and all unmet release requirements."
+expected_artifacts:
+  - "build/android/kinderwelt-release.aab (only if successfully signed)"
+  - "build/android/kinderwelt-debug.apk (if environment supports build)"
+  - "docs/google-play-release-checklist.md"
+  - "docs/store-listing-de.md"
+  - "docs/privacy-policy-draft.md"
+  - "docs/release-report.md"
+acceptance_criteria:
+  - "Reproducible Android build documented and executed when toolchain exists."
+  - "Upload readiness status is honest: READY or BLOCKED with concrete reasons."
+  - "No secrets stored in repository or generated archive."
+  - "Store assets and declarations are reviewed rather than automatically asserted."

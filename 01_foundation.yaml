@@ -1,0 +1,42 @@
+id: 01_foundation
+title: "Kinderwelt: platform foundation"
+priority: 1
+estimated_effort_hours: 4-7
+objective: >
+  Create a reusable, offline-first, child-friendly Godot 4.x game platform
+  for a seven-year-old, playable without reading, with optional adult co-play.
+constraints:
+  - "Use current stable Godot 4.x; pin and document exact version."
+  - "Prefer built-in Godot capabilities; avoid paid services and telemetry."
+  - "No accounts, ads, analytics, purchases, chat, external links in child UI, or network requirement."
+  - "No copyrighted third-party art, music, or fonts without compatible licenses."
+  - "German UI and spoken/audio-first interaction; reading never required."
+  - "All five modules must be accessible from a single child-friendly hub."
+  - "Architecture must separate core runtime, content data, and minigame modules."
+  - "Use permissively licensed original/procedural placeholder visuals and sound."
+implementation:
+  repository_layout:
+    - "project.godot"
+    - "core/ (navigation, save system, audio, accessibility, co-play interface)"
+    - "games/ (five isolated minigames)"
+    - "content/ (data-driven levels, strings, optional narration)"
+    - "tests/"
+    - "android/"
+    - "docs/"
+  requirements:
+    - "Responsive portrait and landscape layouts; touch-first, mouse and keyboard usable."
+    - "Large hit targets, clear icons, replayable instructions, reduced-motion option."
+    - "Child can start, play, request hints, and return to hub without reading."
+    - "Local-only saves with versioned schema; reset available in adult settings."
+    - "Adult participation is optional; no mechanic requires a second player."
+    - "Reusable minigame registration and level-loading contract."
+acceptance_criteria:
+  - "Godot project imports and launches without errors."
+  - "Hub shows five accessible module entrances."
+  - "Offline mode works and no runtime permissions beyond necessity are requested."
+  - "Automated smoke test launches project headlessly."
+  - "Architecture and developer quickstart documented."
+deliverables:
+  - "Runnable Godot source project"
+  - "README.md and docs/architecture.md"
+  - "Basic automated tests and CI workflow"
