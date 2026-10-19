@@ -1,0 +1,32 @@
+[
+  {
+    "id": "logic",
+    "name": "Brückenwerkstatt",
+    "icon": "bridge",
+    "level": "res://games/logic/foundation.json"
+  },
+  {
+    "id": "math",
+    "name": "Marktstand",
+    "icon": "dots",
+    "level": "res://games/math/foundation.json"
+  },
+  {
+    "id": "language",
+    "name": "Bildergeschichte",
+    "icon": "book",
+    "level": "res://games/language/foundation.json"
+  },
+  {
+    "id": "autonomy",
+    "name": "Entdeckerwerkstatt",
+    "icon": "star",
+    "level": "res://games/autonomy/foundation.json"
+  },
+  {
+    "id": "social",
+    "name": "Gemeinsames Dorf",
+    "icon": "people",
+    "level": "res://games/social/foundation.json"
+  }
+]

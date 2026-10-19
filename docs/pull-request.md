@@ -1,0 +1,5 @@
+Implementiert ausschließlich `01_foundation.yaml` als startbares Godot-4.7.2-Projekt. Alle fünf YAML-Dateien wurden vollständig gelesen und bleiben unverändert; Aufgaben 02–05 sind zurückgestellt.
+
+Der Hub enthält fünf unterschiedliche Piktogramm-Eingänge zu einfachen Fundament-Demos. Gemeinsam nutzbar sind Navigation, Wiederholung, visuelle Hinweise mit synthetischen Tonsignalen, optionale Co-Play-Hilfe, Stummschaltung, reduzierte Bewegung und versionierte lokale Speicherung mit bestätigtem Reset. Laufzeit, Registrierung und modulbezogene Leveldaten sind getrennt.
+
+Validierung: checksum-geprüfte Godot-Installation, fehlerfreier Headless-Import, 47 bestandene Integrationstest-Prüfungen und erfolgreicher Headless-Projektstart. CI führt dieselben Schritte aus; ein Remote-CI-Ergebnis liegt noch nicht vor. Physische Geräte-, Touch-, Hör- und Kind-Usability-Tests wurden nicht ausgeführt. Keine Sprachausgabe und keine Lernmechaniken aus späteren Aufgaben. Details und offene manuelle Prüfungen: `docs/test-report.md`.
