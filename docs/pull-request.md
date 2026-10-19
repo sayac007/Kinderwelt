@@ -1,5 +1,10 @@
-Implementiert ausschließlich `01_foundation.yaml` als startbares Godot-4.7.2-Projekt. Alle fünf YAML-Dateien wurden vollständig gelesen und bleiben unverändert; Aufgaben 02–05 sind zurückgestellt.
+Implementiert ausschließlich `02_logic_math.yaml` auf Basis des zusammengeführten Fundaments.
 
-Der Hub enthält fünf unterschiedliche Piktogramm-Eingänge zu einfachen Fundament-Demos. Gemeinsam nutzbar sind Navigation, Wiederholung, visuelle Hinweise mit synthetischen Tonsignalen, optionale Co-Play-Hilfe, Stummschaltung, reduzierte Bewegung und versionierte lokale Speicherung mit bestätigtem Reset. Laufzeit, Registrierung und modulbezogene Leveldaten sind getrennt.
+- Brückenwerkstatt: neun datenbasierte Level in drei Stufen, kombinierbare Stücke, alternative Lösungen, sichtbare Restlücken und reversible Entscheidungen.
+- Marktstand: neun Level für Mengenabgleich, Vergleich, Sortieren und gleiches Verteilen mit sichtbaren Früchten im Bereich 1–10.
+- Gemeinsame Levelwahl, Rückgängig, Wiederholung und Hilfefolge Zeigen → Teilschritt → abbrechbares Vormachen; lokale Fortschritte und transparente adaptive Vorschläge ohne Fehlerstrafen.
+- Tatsächliche Fenstergröße und Fokus-Scrolling; synthetische Touch- und Tastaturtests, auch nach Größenwechsel.
 
-Validierung: checksum-geprüfte Godot-Installation, fehlerfreier Headless-Import, 47 bestandene Integrationstest-Prüfungen und erfolgreicher Headless-Projektstart. CI führt dieselben Schritte aus; ein Remote-CI-Ergebnis liegt noch nicht vor. Physische Geräte-, Touch-, Hör- und Kind-Usability-Tests wurden nicht ausgeführt. Keine Sprachausgabe und keine Lernmechaniken aus späteren Aufgaben. Details und offene manuelle Prüfungen: `docs/test-report.md`.
+Validierung mit Godot 4.7.2: Import, 33 Fundament-Regressionen, 507 Lernspiel-Prüfungen, 49 Eingabe-/Layoutprüfungen und Headless-Projektstart erfolgreich (589 Prüfungen). Alle 18 Level werden über Modelle und UI gelöst. Details: `docs/test-report.md`.
+
+Keine physischen Geräte-, Hör-, Screenshot- oder Kind-Usability-Tests; keine Sprachausgabe oder behauptete Lernwirkung. Aufgaben 03–05 und alle YAML-Spezifikationen bleiben unverändert. Die drei übrigen Hub-Eingänge bleiben Fundament-Demos.
