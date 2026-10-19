@@ -8,3 +8,5 @@ Implementiert ausschließlich `02_logic_math.yaml` auf Basis des zusammengeführ
 Validierung mit Godot 4.7.2: Import, 33 Fundament-Regressionen, 507 Lernspiel-Prüfungen, 49 Eingabe-/Layoutprüfungen und Headless-Projektstart erfolgreich (589 Prüfungen). Alle 18 Level werden über Modelle und UI gelöst. Details: `docs/test-report.md`.
 
 Keine physischen Geräte-, Hör-, Screenshot- oder Kind-Usability-Tests; keine Sprachausgabe oder behauptete Lernwirkung. Aufgaben 03–05 und alle YAML-Spezifikationen bleiben unverändert. Die drei übrigen Hub-Eingänge bleiben Fundament-Demos.
+
+GitHub Actions ist ebenfalls erfolgreich: [Lauf 39313762029](https://github.com/sayac007/Kinderwelt/actions/runs/39313762029) auf Commit `1ed2822`, einschließlich der checksum-geprüften Installation und aller 589 Prüfungen.

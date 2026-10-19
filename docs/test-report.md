@@ -20,7 +20,7 @@ GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/r
 | Projektstart `--headless --quit-after 60` | PASS, Exit 0 |
 | `git diff --check` | PASS |
 | Statische Suche nach Laufzeit-Netzwerk-APIs in core/games/content/project.godot | Keine Treffer |
-| GitHub Actions | Wird nach Push geprüft; Ergebnis hier noch nicht behauptet |
+| GitHub Actions | PASS: [Lauf 39313762029](https://github.com/sayac007/Kinderwelt/actions/runs/39313762029), Commit `1ed2822`; Installation, Import, alle drei Suiten und Start erfolgreich |
 
 **589 Prüfungen bestanden.** Die bisherigen Modul-Tap-Assertions für Logik und
 Mathematik wurden durch die umfassendere Lernspiel-Suite ersetzt. Die 33
