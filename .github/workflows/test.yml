@@ -1,0 +1,13 @@
+name: Foundation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install checksum-verified Godot 4.7.2
+        run: GODOT_INSTALL_DIR="$RUNNER_TEMP/godot" bash scripts/install-godot.sh
+      - name: Import, functional suite and startup
+        run: GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" bash tests/run.sh

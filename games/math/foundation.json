@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "module": "math",
+  "target": 3,
+  "instruction": "Tippe dreimal auf das große Bild.",
+  "narration": null
+}

@@ -1,15 +1,51 @@
-# Kinderwelt — Codex work package
+# Kinderwelt · Fundament
 
-Five YAML specifications for a reusable, offline-first, age-7 educational game platform built with Godot 4.x. The five learning domains are logic, mathematics, language, autonomy and social cooperation.
+Offline nutzbares Godot-Projekt gemäß `01_foundation.yaml`. Alle fünf YAML-Dateien
+wurden gelesen; ausschließlich das Fundament ist umgesetzt. Die fünf Eingänge
+führen zu ausdrücklich einfachen Interaktions-Demos (dreimal Bild antippen),
+noch nicht zu den Lernspielen aus Aufgaben 02–05.
 
-## Suggested execution
+## Starten
 
-Give Codex the entire folder and ask it to execute `01_foundation.yaml` through `05_android_release.yaml` in dependency order, maintaining a working repository, committing after each accepted stage, running tests and reporting failures. Parallelize only independent work; integration and QA must follow the dependent stages. The 1–2 day duration is an ambition, not a promise.
+Festgelegte Version: **Godot 4.7.2.stable.official.ed1daf0bf**, Linux x86_64.
+Am 19.10.2026 über den offiziellen GitHub-Release-Redirect als aktuell ermittelt.
+Keine Add-ons, Konten, Dienste oder Laufzeit-Netzwerkverbindungen erforderlich.
 
-**Suggested Codex instruction:**
+```bash
+bash scripts/install-godot.sh
+export GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64
+# Cloud-Sandbox: beschreibbare Einstellungen und lokale Spielstände
+export XDG_DATA_HOME=/workspace/.kinderwelt/data
+export XDG_CONFIG_HOME=/workspace/.kinderwelt/config
+export XDG_CACHE_HOME=/workspace/.kinderwelt/cache
+mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
+"$GODOT" --editor --path .
+# F5 startet das Projekt; alternativ:
+"$GODOT" --path .
+```
 
-> Treat the five YAML files as the implementation contract. Build a working Godot project, not a mockup. Execute in dependency order. Make reasonable decisions autonomously and document them. Use existing test tooling when applicable. Run and record actual test results. Do not invent benchmarks, signing credentials, audio assets, device tests, or publication status. If Android export/signing is unavailable, deliver the reproducible build scripts, all available artifacts, and a precise blocker report. Prioritize a genuinely playable, readable-free child experience over breadth of placeholder features. Keep all work in version control and provide a final acceptance matrix.
+Auf anderen Linux-Rechnern `GODOT_INSTALL_DIR` beim Installieren anpassen.
+Auf Windows/macOS dieselbe Godot-Version vom offiziellen Release verwenden.
+Die Installation benötigt curl, unzip, awk und sha512sum; sie verifiziert das
+Archiv vor dem Entpacken gegen die offizielle Prüfsummenliste.
 
-## Important
+## Spielen und testen
 
-Google Play publication requires a developer account, valid app ID, signing, policy declarations and assets. No credentials are included. A signed `.aab` is not guaranteed without the necessary environment and signing material.
+Bild auswählen → großes Bild dreimal antippen → Sterne. `? ☞` hebt das Ziel hervor,
+`↻ ♪` wiederholt das visuelle Signal mit Ton. `↺` beginnt neu, `⌂` führt zurück.
+Tab/Pfeiltasten, Enter/Leertaste sowie Maus und Touch nutzen Godots Button-Eingaben.
+Escape führt zum Hub. Große Ziele sind mindestens 96 × 72 logische Pixel groß.
+Erwachsene finden Ton, reduzierte Bewegung, freiwillige Gesprächshilfe und einen
+bestätigten lokalen Reset hinter dem Zahnrad. Keine Erwachsenenaktion ist zum
+Spielen nötig. Das Zahnrad ist keine kindersichere Zugangssperre.
+
+```bash
+GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/run.sh
+```
+
+Der Test verwendet ein temporäres Benutzerverzeichnis, niemals echte Spielstände.
+Siehe [Architektur](docs/architecture.md) und [Testbericht](docs/test-report.md).
+Es gibt synthetische Töne, **keine implementierte Sprachausgabe**. Die Bedienung
+stützt sich auf Bilder, Mengenpunkte, Fokus und wiederholbare Hinweise; deutsche
+Beschriftungen sind ergänzend. Verständlichkeit ohne Lesen ist auf einem Gerät
+mit Kind und Begleitung noch zu prüfen.
