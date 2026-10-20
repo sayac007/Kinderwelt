@@ -148,6 +148,7 @@ func dialog(title: String) -> VBoxContainer:
 	style.set_content_margin_all(6)
 	overlay.add_theme_stylebox_override("panel",style)
 	var scroll := ScrollContainer.new()
+	scroll.follow_focus = true
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	overlay.add_child(scroll)
 	var page := VBoxContainer.new()

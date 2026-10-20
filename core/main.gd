@@ -126,6 +126,7 @@ func hub() -> void:
 	clear()
 	audio.set_world("logic")
 	label("Worauf hast du heute Lust?")
+	button("⚡ Picos Kraftwerk testen", open_adventure)
 	grid = GridContainer.new()
 	body.add_child(grid)
 	for entry in Catalog.modules():
@@ -150,7 +151,6 @@ func hub() -> void:
 		b.custom_minimum_size.y = 230
 		b.alignment = HORIZONTAL_ALIGNMENT_CENTER
 		b.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
-	button("⚡ Picos Kraftwerk · Adventure testen", open_adventure)
 	button("Erwachsene & Klang", settings)
 	responsive()
 	grid.get_child(0).grab_focus()
