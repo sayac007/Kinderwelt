@@ -100,3 +100,17 @@ GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/q
 Keine Kinderbeobachtungen werden standardmäßig erfasst; eine optionale lokale
 Vorlage ist nicht aktiviert. Technische Erfolge belegen weder Lernwirkung noch
 Marktreife. Reale Geräteleistung und empirische Evaluation bleiben offen.
+
+## Android-Verifikation
+
+Die [Android-Build-Anleitung](docs/android-build.md) beschreibt den gepinnten
+Werkzeugsatz und die Befehle für Debug-APK und unsigniertes AAB. GitHub Actions
+baut beide als überprüfbare Artefakte; die Ausführung auf GitHub ist gesondert
+zu bestätigen. Der bestehende Qualitätsworkflow bleibt erhalten.
+
+[Build-Ergebnisse](docs/release-report.md),
+[Google-Play-Freigaben](docs/google-play-release-checklist.md),
+[Store-Entwurf](docs/store-listing-de.md) und
+[Datenschutz-Entwurf](docs/privacy-policy-draft.md).
+**Upload gesperrt:** Platzhalter-Paketkennung, fehlende Release-Signatur,
+offene aktuelle Policy-Prüfung und ausstehende Geräte-/Betreiberfreigaben.
