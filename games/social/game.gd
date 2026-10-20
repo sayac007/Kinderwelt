@@ -11,7 +11,7 @@ func apply_move(move: Dictionary) -> bool:
 
 func build_board() -> void:
 	var gives: Array = [{},{}] if model.chosen < 0 else model.level.choices[model.chosen].gives
-	picture({"kind":"village","people":model.level.people,"gives":gives},160)
+	picture({"kind":"village","people":model.level.people,"gives":gives},240)
 	for i in range(model.level.choices.size()):
 		var choice: Dictionary = model.level.choices[i]
-		source_buttons.append(art_button({"kind":"plan","gives":choice.gives,"style":choice.id,"selected":model.chosen==i},L.message(choice.caption_key),act.bind({"action":"choose","choice":i}),self,Vector2(280,160)))
+		source_buttons.append(art_button({"kind":"plan","gives":choice.gives,"style":choice.id,"selected":model.chosen==i},L.message(choice.caption_key),act.bind({"action":"choose","choice":i}),self,Vector2(280,220)))

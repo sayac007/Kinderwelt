@@ -1,4 +1,4 @@
-# Kinderwelt · fünf spielbare Lernbereiche
+# Kinderwelt 0.2 · Child-Friendly Experience
 
 Offline nutzbares Godot-Projekt mit Fundament, Logik und Mathematik sowie den
 Modulen aus `03_language_autonomy_social.yaml`. Brückenwerkstatt und Marktstand
@@ -79,7 +79,8 @@ Der Test verwendet ein temporäres Benutzerverzeichnis, niemals echte Spielstän
 Siehe [Architektur](docs/architecture.md), [Logik-/Mathematik-Testbericht](docs/logic-math-test-report.md),
 [Bedienung und Content-Anleitung der neuen Module](docs/scenario-authoring.md) und
 [aktuellen Szenarien-Testbericht](docs/scenario-test-report.md).
-Es gibt synthetische Töne, **keine implementierte Sprachausgabe**. Die Bedienung
+Es gibt fünf integrierte eigene Retro-Musikstücke, getrennte Musik-/Effektregler
+und synthetische Spielklänge, **keine implementierte Sprachausgabe**. Die Bedienung
 stützt sich auf Bilder, Mengenpunkte, Fokus und wiederholbare Hinweise; deutsche
 Beschriftungen sind ergänzend. Verständlichkeit ohne Lesen ist auf einem physischen Gerät
 mit Kind und Begleitung noch zu prüfen.
@@ -115,3 +116,22 @@ zu bestätigen. Der bestehende Qualitätsworkflow bleibt erhalten.
 [Datenschutz-Entwurf](docs/privacy-policy-draft.md).
 **Upload gesperrt:** Platzhalter-Paketkennung, fehlende Release-Signatur,
 offene aktuelle Policy-Prüfung und ausstehende Geräte-/Betreiberfreigaben.
+
+## Meilenstein 0.2
+
+Helles Designsystem, illustrierte Spielauswahl, beschriftete gemeinsame Navigation,
+Android-Dichteskalierung, größere Schrift auf Wunsch und optionaler Erwachsenenmodus.
+Alle 36 Aufgaben bleiben erhalten. Die eigene Musik ist tatsächlich integriert;
+Nutzung und Spielstände bleiben offline und lokal.
+
+[Architektur und Vorher/Nachher](docs/child-friendly-experience.md) ·
+[Musik und Herkunft](docs/music-provenance.md) ·
+[tatsächliche Tests und APK](docs/child-friendly-test-report.md) ·
+[nächster Smartphone-Test](docs/child-friendly-device-checklist.md).
+
+Die neue Debug-APK liegt in dieser Sitzung unter
+`build/android-0.2-release-check/kinderwelt-debug.apk` (Version 0.2.0, Code 2).
+Auf GitHub liefert der Android-Workflow sie im Artefakt
+`android-development-artifacts`; der Remote-Lauf ist separat zu prüfen.
+Die Bedienbarkeit für Siebenjährige und die Lautheit auf dem Gerät sind noch
+nicht durch Menschen nachgewiesen. Es gibt keine Play-Veröffentlichung.

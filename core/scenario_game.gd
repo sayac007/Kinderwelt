@@ -54,14 +54,17 @@ func build() -> void:
 	art_button({"kind":"levels"}, L.message("nav.levels"), chooser,navigation)
 	art_button({"kind":"retry"}, L.message("nav.retry"),func(): start_level(index),navigation)
 	text(L.message(levels[index].title_key))
-	var instruction := text(L.message(entry.id+".instruction"))
-	instruction.add_theme_font_size_override("font_size",18)
+	if entry.id != "autonomy":
+		var instruction := text(L.message(entry.id+".instruction"))
+		instruction.add_theme_font_size_override("font_size",Design.font_size(23,float(host.store.data.text_scale)))
 	build_board()
 	var controls := row()
 	undo_button = art_button({"kind":"undo"},L.message("nav.undo"),undo,controls)
 	art_button({"kind":"replay"},L.message("nav.replay"),replay,controls)
 	art_button({"kind":"hint","stage":mini(hint_stage,2)},L.message("nav.hint"),hint,controls)
-	adult_button = art_button({"kind":"adult"},L.message("adult.toggle"),toggle_adult)
+	adult_button = null
+	if host.co_play or adult_visible:
+		adult_button = art_button({"kind":"adult"},L.message("adult.toggle"),toggle_adult)
 	if adult_visible:
 		text(L.message("adult.intro"))
 		text(L.message(levels[index].prompt_key))
@@ -89,7 +92,8 @@ func toggle_adult() -> void:
 	# No password, modal, confirmation, second player or exclusive action.
 	adult_visible = not adult_visible
 	build()
-	adult_button.grab_focus()
+	if is_instance_valid(adult_button): adult_button.grab_focus()
+	else: get_child(0).get_child(0).grab_focus()
 
 func finish_if_complete() -> void:
 	if model.complete() and not recorded:
@@ -189,6 +193,7 @@ func cancel_demonstration() -> void:
 func replay() -> void:
 	cancel_demonstration()
 	if entry.id != "language":
+		if not entering_level: build_hint()
 		host.sound()
 		return
 	replaying = true

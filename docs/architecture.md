@@ -167,3 +167,11 @@ Rangstufen oder soziale Bewertungen. Natürliche Sprachausgabe ist nicht enthalt
 
 Vollständiger [Datenvertrag, Bedienung, Audio-Slots und Content-Anleitung](scenario-authoring.md)
 sowie [aktuelle Prüfungen und manuelle Abnahme](scenario-test-report.md).
+
+## Kinderwelt 0.2
+
+Das neue [Design-, Skalierungs- und Audiosystem](child-friendly-experience.md)
+überarbeitet die gemeinsame Darstellung aller fünf Bereiche. Spielmodelle und
+Aufgabenverträge bleiben erhalten. Aktuelle technische Ergebnisse stehen im
+[0.2-Testbericht](child-friendly-test-report.md); ältere Abschnitte dokumentieren
+die vorangegangenen Meilensteine.
