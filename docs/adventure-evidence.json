@@ -1021,5 +1021,12 @@
     "Long overlays require vertical scrolling on small/landscape/large-text profiles",
     "Existing two-object warning on hard headless engine shutdown",
     "Google Play identity, policy, release signing and approvals remain blocked"
-  ]
+  ],
+  "github": {
+    "branch": "feat/explorer-adventure-v03",
+    "push": "PASS",
+    "pr_creation": "ATTEMPTED: GraphQL Forbidden",
+    "manual_pr_url": "https://github.com/sayac007/Kinderwelt/compare/main...feat/explorer-adventure-v03?expand=1",
+    "remote_actions": "NOT VERIFIED"
+  }
 }

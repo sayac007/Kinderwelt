@@ -121,3 +121,11 @@ App-Objekt aktiv. Dessen Fenster-Signal kollidierte mit dem neuen Profil. Der Ha
 jede App jetzt vollständig frei. Die erste zusätzliche Touch-Prüfung wartete nicht auf
 Godots Eventdispatch; sie wurde auf echte, über Frames eingespeiste Touch-Ereignisse
 korrigiert. Die oben genannten endgültigen Läufe sind die erfolgreichen Nachweise.
+
+## GitHub-Übergabe
+
+Branch `feat/explorer-adventure-v03` erfolgreich nach GitHub gepusht.
+`gh pr create --base main --head feat/explorer-adventure-v03` wurde tatsächlich versucht;
+die GitHub-GraphQL-API antwortete `Forbidden`. Es wurde damit kein PR automatisch erstellt.
+[Pull Request gegen main manuell erstellen](https://github.com/sayac007/Kinderwelt/compare/main...feat/explorer-adventure-v03?expand=1).
+Remote Actions wurden hier nicht als erfolgreich ausgeführt bestätigt.
