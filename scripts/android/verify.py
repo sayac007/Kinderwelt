@@ -47,7 +47,7 @@ def check_payload(names):
     for script in ['game','world','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
-    for child in ['mischa','du','mama','katze']:
+    for child in ['wanja','mischa','du','mama','katze']:
         assert 'assets/quest/'+child+'.png.import' in assets,'Missing character: '+child
         assert any(n.startswith('.godot/imported/'+child+'.png-') and n.endswith('.ctex') for n in assets),'Missing character texture: '+child
     for track in ['wiener_blut','babbino','french_song','consolation']:

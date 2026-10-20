@@ -9,7 +9,7 @@ TASK_IDS=['math_count','math_add','math_take','math_ten','math_compare','math_st
 PAYLOAD=['assets/project.binary','assets/core/quest/main.gdc']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','task','picture','progress','choice']]
-for name in ['mischa','du','mama','katze']:
+for name in ['wanja','mischa','du','mama','katze']:
     PAYLOAD += ['assets/assets/quest/'+name+'.png.import','assets/.godot/imported/'+name+'.png-fixture.ctex']
 for track in ['wiener_blut','babbino','french_song','consolation']:
     ext='.ogg'

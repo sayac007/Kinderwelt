@@ -24,8 +24,11 @@ func run() -> void:
 	check(not Progress.same("6",6) and not Progress.same(true,1) and not Progress.same(NAN,NAN),"No coercion of strings, booleans or invalid numbers")
 	check(Progress.same(6,6.0),"JSON float and integer answers agree")
 	var sanitized:=Store.clean({"hero":"unknown","music_volume":INF,"effects_volume":-99,"voice_auto":"yes","private_name":"discard","stars":9999})
-	check(sanitized.hero=="mischa" and sanitized.music_volume==.35 and sanitized.effects_volume==0 and not sanitized.has("private_name") and not sanitized.has("stars"),"Save whitelist rejects unknown/invalid fields")
-	for pair in [["mina","mischa"],["leo","du"],["sam","mama"],["jule","katze"]]:
+	check(sanitized.hero=="wanja" and sanitized.music_volume==.35 and sanitized.effects_volume==0 and not sanitized.has("private_name") and not sanitized.has("stars"),"Save whitelist rejects unknown/invalid fields")
+	check(Store.defaults().hero=="wanja" and preload("res://core/quest/hero.gd").IDS[0]=="wanja","Wanja is the default and first main hero")
+	for id in ["wanja","mischa","du","mama","katze"]:
+		check(Store.clean({"hero":id}).hero==id,"All five family members remain independently selectable and persistent: "+id)
+	for pair in [["mina","wanja"],["leo","du"],["sam","mama"],["jule","katze"]]:
 		var migrated := Store.clean({"hero":pair[0],"quest":{"solved":{"math_count":true},"hero_chosen":true}})
 		check(migrated.hero==pair[1] and migrated.quest.solved.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
 	check(Store.clean({"music_track":"stars","music_locked":true}).music_track==Tracks.DEFAULT and not Store.clean({"music_track":"stars","music_locked":true}).music_locked,"Unavailable old favourites migrate to an alternating classical playlist")
@@ -58,12 +61,12 @@ func run() -> void:
 		for i in range(3): await process_frame
 		var game: Control=app.game_view
 		var logical := Vector2(root.content_scale_size) if root.content_scale_size.x>0 else Vector2(viewport)
-		check(game.choosing and game.hero_choices.size()==4,"Visible four-hero first-run choice")
+		check(game.choosing and game.hero_choices.size()==5,"Visible five-hero first-run choice with Wanja")
 		for b in game.hero_choices:
 			check(b.get_global_rect().size.x>=64 and b.get_global_rect().size.y>=100,"Large character targets")
 			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"Hero choice fits viewport")
-		await touch_button(game.hero_choices[2])
-		check(app.store.data.hero=="mama" and game.hero_choices[2].get_child(0).reaction>0,"Real touch selects hero and triggers colored reaction")
+		await touch_button(game.hero_choices[3])
+		check(app.store.data.hero=="mama" and game.hero_choices[3].get_child(0).reaction>0,"Real touch selects hero and triggers colored reaction")
 		await touch_button(game.start_button)
 		check(not game.choosing and game.world.hero.person=="mama","Chosen hero enters the playable world")
 		for b in game.tabs: check(b.size.y>=48,"Subject touch areas at least 48 units")

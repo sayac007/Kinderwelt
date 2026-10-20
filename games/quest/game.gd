@@ -198,14 +198,21 @@ func choose_hero() -> void:
 func arrange_chooser() -> void:
 	var landscape := size.x>size.y*1.3
 	chooser_label.position = Vector2(12,12);chooser_label.size = Vector2(size.x-24,48)
-	var columns := 4 if landscape else 2
-	var rows := 1 if landscape else 2
+	var count := hero_choices.size()
+	var featured := count==5 and not landscape
+	var columns := count if landscape else 2
+	var rows := 1 if landscape else ceili(count/2.0)
 	var width := (size.x-28)/columns
 	var height := (size.y-144)/rows
 	for i in range(hero_choices.size()):
 		var b := hero_choices[i]
-		b.position = Vector2(14+(i%columns)*width,68+(i/columns)*height)
-		b.size = Vector2(width-8,height-8)
+		if featured:
+			# Wanja leads the family, followed by four equally reachable choices.
+			b.position = Vector2(14,68) if i==0 else Vector2(14+((i-1)%2)*width,68+(1+(i-1)/2)*height)
+			b.size = Vector2(size.x-36 if i==0 else width-8,height-8)
+		else:
+			b.position = Vector2(14+(i%columns)*width,68+(i/columns)*height)
+			b.size = Vector2(width-8,height-8)
 		var figure: Control = b.get_child(0)
 		var h := height-40
 		figure.size = Vector2(h*.67,h)

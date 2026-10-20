@@ -55,16 +55,16 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(actual[task['id']+'_hint'],task['tip'])
     def test_graphics_are_real_png_and_individual_heroes_differ(self):
         hashes=set()
-        for name in ['mischa','du','mama','katze','icons','objects','landscape']:
+        for name in ['wanja','mischa','du','mama','katze','icons','objects','landscape']:
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])
             self.assertGreaterEqual(width,1024)
             self.assertGreaterEqual(height,1024)
             hashes.add(hashlib.sha256(raw).hexdigest())
-        self.assertEqual(len(hashes),7)
+        self.assertEqual(len(hashes),8)
     def test_approved_family_art_is_used_without_changes(self):
-        for name in ['mischa','du','mama','katze']:
+        for name in ['wanja','mischa','du','mama','katze']:
             self.assertEqual((ROOT/'assets/quest'/f'{name}.png').read_bytes(),(ROOT/'docs/character-proposals'/f'{name}.png').read_bytes())
         for name in ['mina','leo','sam','jule']:
             self.assertFalse((ROOT/'assets/quest'/f'{name}.png').exists())

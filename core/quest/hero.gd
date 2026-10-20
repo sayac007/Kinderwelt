@@ -1,10 +1,10 @@
 extends Control
 # Each sprite is split at the hips: legs swing around their hip independently.
 # The upper body, head and backpack remain readable during walking/celebration.
-const NAMES := {"mischa":"Mischa","du":"Du","mama":"Mama","katze":"Katze"}
-const IDS := ["mischa","du","mama","katze"]
-const SPRITES = {"mischa":preload("res://assets/quest/mischa.png"),"du":preload("res://assets/quest/du.png"),"mama":preload("res://assets/quest/mama.png"),"katze":preload("res://assets/quest/katze.png")}
-var person := "mischa"
+const NAMES := {"wanja":"Wanja","mischa":"Mischa","du":"Du","mama":"Mama","katze":"Katze"}
+const IDS := ["wanja","mischa","du","mama","katze"]
+const SPRITES = {"wanja":preload("res://assets/quest/wanja.png"),"mischa":preload("res://assets/quest/mischa.png"),"du":preload("res://assets/quest/du.png"),"mama":preload("res://assets/quest/mama.png"),"katze":preload("res://assets/quest/katze.png")}
+var person := "wanja"
 var animation := "idle"
 var clock := 0.0
 var reduced_motion := false
@@ -32,12 +32,12 @@ func _process(delta: float) -> void:
 		if reaction==0: animation="idle"
 	queue_redraw()
 func _draw() -> void:
-	var texture: Texture2D = SPRITES.get(person,SPRITES.mischa)
+	var texture: Texture2D = SPRITES.get(person,SPRITES.wanja)
 	var col := maxi(IDS.find(person),0)
 	var w := float(texture.get_width())
 	var h := float(texture.get_height())
 	var scale_size := Vector2(size.x,size.y)
-	var hue: float = [.51,.61,.35,.77][col]
+	var hue: float = [.02,.51,.61,.35,.77][col]
 	if reaction>0 and not reduced_motion: hue+=reaction*.16
 	var glow := Color.from_hsv(fposmod(hue+(.08*sin(clock*1.7) if selected and not reduced_motion else 0),1),.68,1)
 	var intensity := .8 if selected else .24

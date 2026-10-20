@@ -1,7 +1,17 @@
 {
-  "status": "PROPOSALS ONLY; not integrated into application",
-  "references": "User-provided family photographs; originals not redistributed",
+  "status": "Four approved family characters plus Wanja as the main hero",
+  "references": "User-provided photographs; originals not redistributed",
   "files": [
+    {
+      "file": "wanja.png",
+      "pixels": [
+        1024,
+        1536
+      ],
+      "format": "PNG RGBA",
+      "bytes": 2151929,
+      "sha256": "3791e787483cea3e1eddc6ff0832f57c0d506088d966defeb7ce256b46dab0eb"
+    },
     {
       "file": "mischa.png",
       "pixels": [
