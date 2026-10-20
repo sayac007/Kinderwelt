@@ -46,7 +46,7 @@ func run() -> void:
 		await process_frame
 		frames.append((Time.get_ticks_usec()-start)/1000.0)
 	frames.sort()
-	var report := {"scope":"Automated desktop engine timings; no Android performance/latency claim","renderer":DisplayServer.get_name(),"startup_to_two_frames_ms":startup_ms,"samples":samples,"frame_intervals_ms":{"median":frames[45],"p95":frames[85],"max":frames[-1]},"max_music_stream_slots":max_voices,"background_state_paused":paused,"background_state_resumed":resumed}
+	var report := {"scope":"Automated desktop engine timings; no Android performance/latency claim","renderer":DisplayServer.get_name(),"audio_driver":"Dummy; no hardware output measurement","startup_to_two_frames_ms":startup_ms,"samples":samples,"frame_intervals_ms":{"median":frames[45],"p95":frames[85],"max":frames[-1]},"max_music_stream_slots":max_voices,"background_state_paused":paused,"background_state_resumed":resumed}
 	var f := FileAccess.open(output,FileAccess.WRITE);f.store_string(JSON.stringify(report,"  "));f.close()
 	app.narration.cancel()
 	app.free()

@@ -16,7 +16,7 @@ if [[ ${2:-} == --graphical ]]; then
   PERF_FLAGS=()
 fi
 RESULT=0
-python3 scripts/qa/measure_process.py --metrics "$OUTPUT/process.json" --log "$OUTPUT/performance.log" -- "${GODOT:-godot}" "${PERF_FLAGS[@]}" --path . -s tests/qa/benchmark_modern.gd || RESULT=$?
+python3 scripts/qa/measure_process.py --metrics "$OUTPUT/process.json" --log "$OUTPUT/performance.log" -- "${GODOT:-godot}" "${PERF_FLAGS[@]}" --audio-driver Dummy --path . -s tests/qa/benchmark_modern.gd || RESULT=$?
 cat "$OUTPUT/performance.log"
 if (( RESULT != 0 )); then exit "$RESULT"; fi
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/performance.log"; then exit 1; fi
