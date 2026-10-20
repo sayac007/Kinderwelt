@@ -16,7 +16,7 @@ def analyze(path):
                       'graphics' if n.endswith(('.ctex','.png','.webp','.svg')) else
                       'application/imports/other' if 'assets/' in n else 'Android/metadata/classes')
             g=groups[category];g['raw_bytes']+=entry.file_size;g['stored_bytes']+=entry.compress_size;g['files']+=1
-        largest=[{'file':e.filename,'raw_bytes':e.file_size,'stored_bytes':e.compress_size,'zip_method':e.compress_type} for e in sorted(entries,key=lambda e:e.compress_size,reverse=True)[:20]]
+        largest=[{'file':e.filename,'raw_bytes':e.file_size,'stored_bytes':e.compress_size,'zip_method':e.compress_type,**({'raw_sha256':hashlib.sha256(z.read(e)).hexdigest()} if e.filename.endswith('.so') else {})} for e in sorted(entries,key=lambda e:e.compress_size,reverse=True)[:20]]
     payload=sum(g['stored_bytes'] for g in groups.values())
     return {'path':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'groups':dict(groups),'zip_alignment_signing_overhead_bytes':path.stat().st_size-payload,'largest':largest,'note':'APK/AAB archive bytes, not installed footprint or measured Play device download'}
 if __name__=='__main__':

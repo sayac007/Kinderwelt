@@ -13,12 +13,13 @@ func snap(name: String,profile: Dictionary) -> void:
 	frames.append({"file":file,"state":name,"pixels":[image.get_width(),image.get_height()]})
 func capture() -> void:
 	if output.is_empty() or DisplayServer.get_name()=="headless": push_error("Real display/output required");quit(1);return
-	for profile in [{"name":"small","size":Vector2i(320,568),"dpi":0},{"name":"phone","size":Vector2i(360,800),"dpi":0},{"name":"landscape","size":Vector2i(800,360),"dpi":0},{"name":"dense","size":Vector2i(1080,2400),"dpi":420}]:
+	for profile in [{"name":"small","size":Vector2i(320,568),"dpi":0},{"name":"large-text","size":Vector2i(320,568),"dpi":0,"text_scale":1.15},{"name":"phone","size":Vector2i(360,800),"dpi":0},{"name":"landscape","size":Vector2i(800,360),"dpi":0},{"name":"dense","size":Vector2i(1080,2400),"dpi":420}]:
 		root.size = profile.size
 		var app: Control = load("res://core/main.tscn").instantiate()
 		app.simulated_dpi = profile.dpi
 		root.add_child(app)
 		app.store.reset()
+		app.store.data.text_scale = profile.get("text_scale",1.0)
 		app.store.data.muted = true
 		app.store.data.reduced_motion = true
 		app.audio.sync_settings()
@@ -30,6 +31,10 @@ func capture() -> void:
 		app.heroes()
 		app.scroll_view.scroll_vertical = 0
 		await snap("heroes",profile)
+		for pose in ["idle","move","think","success"]:
+			for button in app.body.get_child(2).get_children():
+				button.get_child(0).animation = pose
+			await snap("heroes-"+pose,profile)
 		app.musicbox()
 		app.scroll_view.scroll_vertical = 0
 		await snap("musicbox",profile)

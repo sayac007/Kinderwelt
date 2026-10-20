@@ -21,6 +21,8 @@ func run() -> void:
 		await process_frame
 		await process_frame
 		samples.append({"scene":name,"ready_ms":(Time.get_ticks_usec()-start)/1000.0,"static_memory_bytes":OS.get_static_memory_usage(),"resources":Performance.get_monitor(Performance.OBJECT_RESOURCE_COUNT)})
+	app.store.data.muted = false
+	app.audio.sync_settings()
 	var max_voices := 0
 	for id in preload("res://core/modern/tracks.gd").ITEMS:
 		start = Time.get_ticks_usec()
@@ -34,6 +36,10 @@ func run() -> void:
 	var paused: bool = app.audio.music.suspended
 	app.audio.music._notification(Node.NOTIFICATION_APPLICATION_RESUMED)
 	var resumed: bool = not app.audio.music.suspended
+	app.open_water()
+	app.modern_view.model.rotate(5)
+	app.modern_view.model.rotate(6)
+	app.modern_view.turn_water()
 	var frames := []
 	for i in range(90):
 		start = Time.get_ticks_usec()

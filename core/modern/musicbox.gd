@@ -14,9 +14,9 @@ func setup(parent: Control) -> void:
 	add_child(current)
 	var controls := HBoxContainer.new()
 	add_child(controls)
-	host.button("⏮︎",func(): step(-1),controls).tooltip_text = "Voriger Titel"
-	host.button("▶︎",func(): select(selected()),controls).tooltip_text = "Titel anhören"
-	host.button("⏭︎",func(): step(1),controls).tooltip_text = "Nächster Titel"
+	transport(controls,"previous","Voriger Titel",func(): step(-1))
+	transport(controls,"play","Titel anhören",func(): select(selected()))
+	transport(controls,"next","Nächster Titel",func(): step(1))
 	var options := HBoxContainer.new()
 	add_child(options)
 	shuffle = host.button("",toggle_shuffle,options)
@@ -77,3 +77,9 @@ func refresh() -> void:
 	for id in covers:
 		covers[id].add_theme_stylebox_override("normal",preload("res://core/design.gd").style(Color("e1ead3") if selected()==id else Color("fffdf6")))
 		covers[id].get_child(1).text = ("✓ " if selected()==id else "")+Tracks.ITEMS[id].title
+
+func transport(parent: Node,icon: String,title: String,action: Callable) -> void:
+	var b: Button = host.button("",action,parent)
+	b.tooltip_text = title
+	preload("res://core/modern/icons.gd").apply(b,icon,32)
+	b.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER

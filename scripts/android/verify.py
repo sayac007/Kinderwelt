@@ -19,6 +19,7 @@ def check_manifest(root):
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
     app=root.find('application');assert app is not None
     assert app.get(ANDROID+'allowBackup')=='false','Backup must be disabled'
+    assert app.get(ANDROID+'extractNativeLibs')=='true','Compressed libraries must be extracted'
     assert app.get(ANDROID+'debuggable','false')=='false','Release bundle must not be debuggable'
     launcher=[a for a in list(app.findall('activity'))+list(app.findall('activity-alias')) if a.find('intent-filter/category[@'+ANDROID+'name="android.intent.category.LAUNCHER"]') is not None]
     assert len(launcher)==1,'Missing launcher'
@@ -77,12 +78,13 @@ def inspect_zip(path,aab=False):
         assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names),'Unsafe archive path'
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
         if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
-        abis=set()
+        abis=set();native_methods=set()
         for n in names:
             if n.endswith('.so'):
-                abis.add(n.split('/')[-2]);elf_alignment(z.read(n))
+                abis.add(n.split('/')[-2]);elf_alignment(z.read(n));native_methods.add(z.getinfo(n).compress_type)
         assert abis=={'arm64-v8a','x86_64'},'Unexpected native ABI set'
-        return {'assets_checked':check_payload(names),'abis':sorted(abis),'elf_16kb_alignment':'PASS'}
+        assert native_methods=={zipfile.ZIP_DEFLATED},'Expected lossless native library compression'
+        return {'assets_checked':check_payload(names),'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);a=p.parse_args()
@@ -95,6 +97,7 @@ def main():
         assert re.search(pattern,badging),'APK manifest mismatch'
     permissions=command([bt/'aapt2','dump','permissions',apk]);assert 'uses-permission' not in permissions,'Unexpected APK permissions'
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
+    assert re.search(r'android:extractNativeLibs[^\n]*=true\b',xmltree),'Compressed native libraries must be extracted'
     assert re.search(r'android:allowBackup[^\n]*=false\b',xmltree),'APK backup enabled'
     assert re.search(r'android:screenOrientation[^\n]*=13\b',xmltree),'APK orientation mismatch'
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)

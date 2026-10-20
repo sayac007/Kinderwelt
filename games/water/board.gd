@@ -114,14 +114,14 @@ func _draw() -> void:
 			draw_circle(at+Vector2(-cell*.25,-cell*.31),cell*.14,Color("c67758"))
 			continue
 		if model.goals.has(index):
+			for d in range(4):
+				if ports & (1<<d): stroke(at+Vector2(model.DIRS[d])*cell*.5,at+Vector2(0,cell*.15),Color("6ca2ad") if r.supplied.has(index) else Color("99aaa0"),cell*.10)
 			if model.tier==1 and index==14:
-				stroke(at+Vector2(-cell*.3,.15*cell),at+Vector2(cell*.3,.15*cell),Color("81a8a8"),cell*.14)
+				stroke(at+Vector2(-cell*.3,.15*cell),at+Vector2(cell*.3,.15*cell),Color("5299b4") if r.supplied.has(index) else Color("81a8a8"),cell*.14)
 				draw_circle(at+Vector2(0,-cell*.12),cell*.15,Color("ab7651"))
 				draw_circle(at+Vector2(cell*.13,-cell*.21),cell*.10,Color("ab7651"))
 				draw_circle(at+Vector2(cell*.16,-cell*.23),1.5,INK)
 			else: pot(at,r.supplied.has(index),model.goals[index])
-			for d in range(4):
-				if ports & (1<<d): stroke(at+Vector2(model.DIRS[d])*cell*.5,at,Color("6ca2ad") if r.supplied.has(index) else Color("99aaa0"),cell*.10)
 			continue
 		if ports==0:
 			draw_circle(at,3,Color("bba582"))

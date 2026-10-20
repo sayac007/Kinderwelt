@@ -38,6 +38,7 @@ func touch_button(button: Button) -> void:
 	await process_frame
 	await touch(button.get_global_rect().get_center())
 func run() -> void:
+	Input.set_emulate_touch_from_mouse(true) # Native Android-style ScrollContainer drag path.
 	for tier in range(3):
 		var m := Water.new(tier)
 		check(not m.evaluate().complete,"Initial puzzle is unsolved")
@@ -96,6 +97,25 @@ func run() -> void:
 			check(b.position.x>=0 and b.get_rect().end.x<=app.grid.size.x+1,"Map fits width")
 			for previous in previous_rects: check(not b.get_rect().intersects(previous),"Map places do not overlap")
 			previous_rects.append(b.get_rect())
+		if viewport==Vector2i(320,568):
+			app.scroll_view.scroll_vertical = 0
+			await process_frame
+			var start := Vector2(290,420)
+			var down := InputEventScreenTouch.new()
+			down.index=0;down.position=start;down.pressed=true
+			Input.parse_input_event(down)
+			await process_frame
+			for n in range(6):
+				var motion := InputEventScreenDrag.new()
+				motion.index=0;motion.position=start+Vector2(0,-25*(n+1));motion.relative=Vector2(0,-25);motion.velocity=Vector2(0,-400)
+				Input.parse_input_event(motion)
+				await process_frame
+			var up := InputEventScreenTouch.new()
+			up.index=0;up.position=start+Vector2(0,-150)
+			Input.parse_input_event(up)
+			await process_frame
+			check(app.scroll_view.scroll_vertical>50,"Long synthetic finger swipe actually scrolls the map")
+			check(app.active.is_empty(),"Scrolling does not accidentally open a place")
 		var catalog = preload("res://core/catalog.gd").modules()
 		for i in range(5):
 			app.hub()
@@ -201,5 +221,6 @@ func run() -> void:
 	app.narration.cancel()
 	app.free()
 	await create_timer(.5).timeout
+	Input.set_emulate_touch_from_mouse(false)
 	print("MODERN RESULT: %d checks, %d failures" % [checks,failures])
 	quit(1 if failures else 0)

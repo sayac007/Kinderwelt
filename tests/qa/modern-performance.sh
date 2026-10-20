@@ -10,8 +10,13 @@ trap 'rm -rf "$STATE"' EXIT
 export XDG_DATA_HOME="$STATE/data" XDG_CONFIG_HOME="$STATE/config" XDG_CACHE_HOME="$STATE/cache"
 mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
 export KINDERWELT_PERF_OUTPUT="$OUTPUT/performance.json"
+PERF_FLAGS=(--headless)
+if [[ ${2:-} == --graphical ]]; then
+  if [[ -z ${DISPLAY:-}${WAYLAND_DISPLAY:-} ]]; then echo "Graphical backend required" >&2; exit 2; fi
+  PERF_FLAGS=()
+fi
 RESULT=0
-timeout 120 "${GODOT:-godot}" --headless --path . -s tests/qa/benchmark_modern.gd >"$OUTPUT/performance.log" 2>&1 || RESULT=$?
+python3 scripts/qa/measure_process.py --metrics "$OUTPUT/process.json" --log "$OUTPUT/performance.log" -- "${GODOT:-godot}" "${PERF_FLAGS[@]}" --path . -s tests/qa/benchmark_modern.gd || RESULT=$?
 cat "$OUTPUT/performance.log"
 if (( RESULT != 0 )); then exit "$RESULT"; fi
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/performance.log"; then exit 1; fi

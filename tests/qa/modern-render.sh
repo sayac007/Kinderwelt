@@ -23,10 +23,10 @@ python3 - "$OUTPUT" <<'PY'
 import json,struct,sys
 from pathlib import Path
 root=Path(sys.argv[1]);frames=json.loads((root/'modern-render.json').read_text())['frames']
-assert len(frames)==40
+assert len(frames)==70
 for frame in frames:
  data=(root/frame['file']).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
  assert list(struct.unpack('>II',data[16:24]))==frame['pixels']
-print('PASS: 40 modern renders, four profiles')
+print('PASS: 70 modern renders, five profiles with four hero poses')
 PY
