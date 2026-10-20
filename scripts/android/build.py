@@ -62,7 +62,10 @@ def main():
     a=p.parse_args();tools=a.tools.resolve();out=a.output.resolve()
     out.mkdir(parents=True,exist_ok=False) # no stale artifact may appear successful
     godot=os.environ.get('GODOT',str(tools/'godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64'))
-    if subprocess.check_output([godot,'--version'],text=True).strip()!=LOCK['godot']:raise ValueError('Wrong Godot')
+    with tempfile.TemporaryDirectory(prefix='kinderwelt-version.') as version_cache:
+        probe_env=os.environ.copy()
+        probe_env['XDG_CACHE_HOME']=version_cache
+        if subprocess.check_output([godot,'--version'],text=True,env=probe_env).strip()!=LOCK['godot']:raise ValueError('Wrong Godot')
     java=tools/'android-jdk'
     version=subprocess.check_output([str(java/'bin/java'),'-version'],stderr=subprocess.STDOUT,text=True)
     if 'Temurin-17.0.16+8' not in version:raise ValueError('Wrong JDK')
