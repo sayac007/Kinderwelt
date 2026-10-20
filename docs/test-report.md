@@ -11,6 +11,8 @@ Stand: 20. Oktober 2026. App-Quellcommit: `19b2d2e5359e0cd465040684c31bb59784f11
 - Begrenzte Quellprüfung: keine Laufzeit-Netzwerkaufrufe oder aktivierten Android-Berechtigungen gefunden. Das ist keine umfassende Sicherheitszertifizierung.
 - APK und AAB beider Paketvarianten technisch **PASS**: Paket, Version 0.5.0/5, API 24–36, keine Berechtigungen, Backup deaktiviert, Rotation, vollständige Medien, ARM64/x86_64, 16-KB-ELF-/ZIP-Ausrichtung, gültige APK-Entwicklungssignatur, Bundletool und unsignierter AAB-Status. Font-Lizenz und Modellkarte sind enthalten. Keine privaten Schlüssel im Paket oder Repository.
 
+Der Remote-Status von GitHub Actions konnte wegen **Forbidden** beim API-Abruf nicht gelesen werden; es wird kein bestandener Remote-Lauf behauptet. Die hier dokumentierten Prüfungen wurden lokal tatsächlich ausgeführt.
+
 Die aktuell gespeicherten Ergebnisdaten und SHA256-Nachweise stehen in [test-evidence.json](test-evidence.json). Die Exportprotokolle enthalten keine ADB- oder Godot-Fehler. Das reine Build-Preset startet keine angeschlossene Gerätesuche.
 
 ## Erzeugte Dateien

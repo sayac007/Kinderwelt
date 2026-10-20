@@ -1610,5 +1610,5 @@
     "learning_transfer": "NOT ESTABLISHED",
     "sofatutor_source_access": "BLOCKED: HTTP 403"
   },
-  "github_ci": "Not yet confirmed remotely"
+  "github_ci": "Remote status unconfirmed: GitHub Actions API GET returned Forbidden; local suites and exports passed"
 }
