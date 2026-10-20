@@ -138,6 +138,7 @@ def main():
                     upstream=",".join("res://.godot/qa-tools/gut/"+p for p in POLICY["upstream_tests"])
                     step("gut-upstream",base+["-gtest="+upstream,"-gjunit_xml_file="+str(output/"upstream.xml")],check=lambda _:validate_junit(output/"upstream.xml"))
                     step("gut-quality",base+["-gtest=res://tests/qa/test_quality.gd","-gjunit_xml_file="+str(output/"quality.xml")],timeout=300,check=lambda _:validate_junit(output/"quality.xml"))
+                    step("gut-experience",base+["-gtest=res://tests/qa/test_experience.gd","-gjunit_xml_file="+str(output/"experience.xml")],timeout=300,check=lambda _:validate_junit(output/"experience.xml"))
                     try:
                         coverage=json.loads((output/"coverage.json").read_text())["cases"]
                         expected={(t["module"],t["task"],tuple(v)) for t in static["tasks"] for v in POLICY["viewports"]}
