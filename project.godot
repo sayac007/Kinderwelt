@@ -1,6 +1,8 @@
 config_version=5
 [application]
 config/name="Kinderwelt"
+config/version="0.1.0"
+config/icon="res://assets/icons/kinderwelt.svg"
 run/main_scene="res://core/main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 [display]
@@ -10,4 +12,6 @@ window/stretch/mode="disabled"
 window/handheld/orientation=6
 [rendering]
 renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.06, 0.10, 0.18, 1)
+textures/vram_compression/import_etc2_astc=true

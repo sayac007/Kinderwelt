@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "provenance": {
+    "schema": 1,
+    "built_utc": "2026-10-20T08:52:55.632600+00:00",
+    "source_commit": "62c56a5702175c42b9a479c80a99b65f60c36c3e",
+    "source_dirty": false,
+    "application_source_sha256": "b2ed8cd41a97032adbcf4323767e9c4b5018e29ea661336c0dd0d87f9301c5ef",
+    "toolchain": {
+      "godot": "4.7.2.stable.official.ed1daf0bf",
+      "java": "17.0.16+8",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "build_tools": "36.1.0",
+      "gradle": "8.11.1",
+      "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+      "sdk_archives": [
+        {
+          "name": "commandline",
+          "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+          "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+          "destination": "cmdline-tools/19.0"
+        },
+        {
+          "name": "platform",
+          "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+          "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+          "destination": "platforms/android-36"
+        },
+        {
+          "name": "build-tools",
+          "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+          "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+          "destination": "build-tools/36.1.0"
+        },
+        {
+          "name": "platform-tools",
+          "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+          "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+          "destination": "platform-tools"
+        }
+      ],
+      "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+      "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+      "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+      "bundletool_version": "1.18.2",
+      "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
+    },
+    "signing": {
+      "apk": "ephemeral Godot development key; not a release identity",
+      "aab": "UNSIGNED"
+    },
+    "upload_readiness": "BLOCKED",
+    "artifacts": {
+      "kinderwelt-unsigned.aab": {
+        "bytes": 52392097,
+        "sha256": "bfc5d044db77a9eb87a0d15dd3fa8c1ef956aca317968cb3d15a7d353b074ec4"
+      },
+      "kinderwelt-debug.apk": {
+        "bytes": 162757298,
+        "sha256": "12bb92bc2e33bb479622db959385a43a0b2c3d7ea5220ae0b6ad42221e6db03a"
+      }
+    }
+  },
+  "verification": {
+    "status": "PASS",
+    "upload_readiness": "BLOCKED",
+    "artifacts": {
+      "kinderwelt-debug.apk": {
+        "assets_checked": 68,
+        "abis": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "elf_16kb_alignment": "PASS",
+        "package": "org.example.kinderwelt",
+        "version_name": "0.1.0",
+        "version_code": 1,
+        "min_sdk": 24,
+        "target_sdk": 36,
+        "permissions": [],
+        "allow_backup": false,
+        "orientation": "fullUser",
+        "signature": "verified Godot development certificate, v2",
+        "zip_16kb_alignment": "PASS",
+        "bytes": 162757298,
+        "sha256": "12bb92bc2e33bb479622db959385a43a0b2c3d7ea5220ae0b6ad42221e6db03a"
+      },
+      "kinderwelt-unsigned.aab": {
+        "assets_checked": 68,
+        "abis": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "elf_16kb_alignment": "PASS",
+        "package": "org.example.kinderwelt",
+        "version_name": "0.1.0",
+        "version_code": 1,
+        "min_sdk": 24,
+        "target_sdk": 36,
+        "permissions": [],
+        "allow_backup": false,
+        "orientation": "fullUser",
+        "signature": "UNSIGNED",
+        "rendering": "gl_compatibility",
+        "bytes": 52392097,
+        "sha256": "bfc5d044db77a9eb87a0d15dd3fa8c1ef956aca317968cb3d15a7d353b074ec4"
+      }
+    }
+  },
+  "quality": {
+    "source_commit": "62c56a5702175c42b9a479c80a99b65f60c36c3e",
+    "source_dirty": false,
+    "source_sha256": "3eec79c8c79f283d8fe06f35a6e612e4bba947b2a1155eb57d1c2834fb11d5a3",
+    "technical_status": "PASS",
+    "steps": [
+      {
+        "name": "static-audit",
+        "status": "PASS"
+      },
+      {
+        "name": "static-checker-regression",
+        "status": "PASS",
+        "tests": 16
+      },
+      {
+        "name": "engine-version",
+        "status": "PASS"
+      },
+      {
+        "name": "install-gut",
+        "status": "PASS"
+      },
+      {
+        "name": "fresh-import",
+        "status": "PASS"
+      },
+      {
+        "name": "fresh-startup",
+        "status": "PASS"
+      },
+      {
+        "name": "existing-suite",
+        "status": "PASS"
+      },
+      {
+        "name": "framework-import",
+        "status": "PASS"
+      },
+      {
+        "name": "gut-upstream",
+        "status": "PASS",
+        "tests": 13,
+        "assertions": 62
+      },
+      {
+        "name": "gut-quality",
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 13433
+      },
+      {
+        "name": "coverage-completeness",
+        "status": "PASS",
+        "expected": 144,
+        "executed": 144,
+        "authored_tasks": 36
+      }
+    ],
+    "android_regression_tests": 10,
+    "existing_checks": 1236,
+    "human_gates": {
+      "real_device_performance": "NOT MEASURED",
+      "child_usability": "NOT RUN",
+      "educational_transfer": "NOT ESTABLISHED",
+      "manual_accessibility": "NOT RUN"
+    }
+  },
+  "repeat_build": {
+    "source_commit": "62c56a5702175c42b9a479c80a99b65f60c36c3e",
+    "source_dirty": false,
+    "application_source_sha256": "b2ed8cd41a97032adbcf4323767e9c4b5018e29ea661336c0dd0d87f9301c5ef",
+    "status": "PASS",
+    "verification": {
+      "status": "PASS",
+      "upload_readiness": "BLOCKED",
+      "artifacts": {
+        "kinderwelt-debug.apk": {
+          "assets_checked": 68,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.1.0",
+          "version_code": 1,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "verified Godot development certificate, v2",
+          "zip_16kb_alignment": "PASS",
+          "bytes": 162757298,
+          "sha256": "2b7c49a6dc1520b045afb1d5a97e6f9e5e6499fea8d4f4f19ad79ec345a0ec19"
+        },
+        "kinderwelt-unsigned.aab": {
+          "assets_checked": 68,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.1.0",
+          "version_code": 1,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "UNSIGNED",
+          "rendering": "gl_compatibility",
+          "bytes": 52392099,
+          "sha256": "4ca5a3be20e0a7a39f9cb2520fa78e19b3c346ecb23f46fb97f1917942cb8509"
+        }
+      }
+    },
+    "location": "/tmp/kinderwelt-05-repro-artifacts"
+  }
+}

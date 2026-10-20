@@ -24,7 +24,7 @@ def digest():
     names = subprocess.check_output(["git","ls-files","-co","--exclude-standard","-z"],cwd=ROOT).decode().split("\0")
     value = hashlib.sha256()
     for name in sorted(set(filter(None,names))):
-        if not (name.startswith(("core/","games/","content/","tests/","scripts/",".github/")) or name=="project.godot"):
+        if not (name.startswith(("core/","games/","content/","assets/","tests/","scripts/",".github/")) or name in {"project.godot","export_presets.cfg"}):
             continue
         path=ROOT/name
         if path.is_file():
@@ -126,7 +126,7 @@ def main():
             fresh=session_path/"fresh-project"
             fresh.mkdir()
             shutil.copy2(ROOT/"project.godot",fresh/"project.godot")
-            for name in ["core","games","content"]: (fresh/name).symlink_to(ROOT/name,target_is_directory=True)
+            for name in ["core","games","content","assets"]: (fresh/name).symlink_to(ROOT/name,target_is_directory=True)
             step("fresh-import",[command,"--headless","--path",fresh,"--editor","--import","--quit"])
             step("fresh-startup",[command,"--headless","--path",fresh,"--quit-after","60"])
             step("existing-suite",["bash","tests/run.sh"],timeout=600,check=existing_check)

@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "base_commit": "99f9ea983d48f33dd36543069df17354305cf89c",
+  "original_actions_artifact_access": "BLOCKED: GitHub API Forbidden; no original artifact retrieved",
+  "runner_images_reference": "82d1b86ad393865982dd29535cb8d3adbc68e41e",
+  "before": {
+    "status": "FAIL as expected before SDK correction",
+    "location": "/workspace/Kinderwelt/build/android-ci-existing-sdk/apk.log",
+    "log_sha256": "f5b35749806ef1c5fe633dd484091968795161db89981105458ea206e56800df",
+    "cause": "* What went wrong:\nCould not determine the dependencies of task ':compileStandardDebugJavaWithJavac'.\n> Several environment variables and/or system properties contain different paths to the SDK.\n  Please correct and use only one way to inject the SDK location.\n  \n  ANDROID_HOME: /workspace/tools/android-sdk\n  ANDROID_SDK_ROOT: /tmp/kinderwelt-runner-sdk\n  \n  It is recommended to use ANDROID_HOME as other methods are deprecated",
+    "inherited_sdk": "/tmp/kinderwelt-runner-sdk",
+    "note": "Reproduction already included improved logging but retained original SDK selection"
+  },
+  "after": {
+    "status": "PASS",
+    "inherited_sdk": "/tmp/kinderwelt-runner-sdk",
+    "location": "/workspace/Kinderwelt/build/android-ci-fix",
+    "verification": {
+      "status": "PASS",
+      "upload_readiness": "BLOCKED",
+      "artifacts": {
+        "kinderwelt-debug.apk": {
+          "assets_checked": 68,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.1.0",
+          "version_code": 1,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "verified Godot development certificate, v2",
+          "zip_16kb_alignment": "PASS",
+          "bytes": 162757294,
+          "sha256": "422e601dd12f730e3edb3ab8d166c3ad620781d42840544b157556c5ed2d2178"
+        },
+        "kinderwelt-unsigned.aab": {
+          "assets_checked": 68,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.1.0",
+          "version_code": 1,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "UNSIGNED",
+          "rendering": "gl_compatibility",
+          "bytes": 52392096,
+          "sha256": "05c315084d1aab91be0f7d70b77092d6b7d8233f264893afc8ebebc424c2665b"
+        }
+      }
+    },
+    "provenance": {
+      "schema": 1,
+      "built_utc": "2026-10-20T09:07:39.936292+00:00",
+      "source_commit": "99f9ea983d48f33dd36543069df17354305cf89c",
+      "source_dirty": true,
+      "application_source_sha256": "b2ed8cd41a97032adbcf4323767e9c4b5018e29ea661336c0dd0d87f9301c5ef",
+      "toolchain": {
+        "godot": "4.7.2.stable.official.ed1daf0bf",
+        "java": "17.0.16+8",
+        "min_sdk": 24,
+        "target_sdk": 36,
+        "build_tools": "36.1.0",
+        "gradle": "8.11.1",
+        "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+        "sdk_archives": [
+          {
+            "name": "commandline",
+            "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+            "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+            "destination": "cmdline-tools/19.0"
+          },
+          {
+            "name": "platform",
+            "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+            "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+            "destination": "platforms/android-36"
+          },
+          {
+            "name": "build-tools",
+            "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+            "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+            "destination": "build-tools/36.1.0"
+          },
+          {
+            "name": "platform-tools",
+            "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+            "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+            "destination": "platform-tools"
+          }
+        ],
+        "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+        "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+        "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+        "bundletool_version": "1.18.2",
+        "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
+      },
+      "signing": {
+        "apk": "ephemeral Godot development key; not a release identity",
+        "aab": "UNSIGNED"
+      },
+      "upload_readiness": "BLOCKED",
+      "artifacts": {
+        "kinderwelt-unsigned.aab": {
+          "bytes": 52392096,
+          "sha256": "05c315084d1aab91be0f7d70b77092d6b7d8233f264893afc8ebebc424c2665b"
+        },
+        "kinderwelt-debug.apk": {
+          "bytes": 162757294,
+          "sha256": "422e601dd12f730e3edb3ab8d166c3ad620781d42840544b157556c5ed2d2178"
+        }
+      }
+    }
+  },
+  "tests": {
+    "android_tests": 16,
+    "new_diagnostic_tests": 6,
+    "qa_python_tests": 16,
+    "existing_checks": 1236,
+    "qa_source_sha256": "401a87a3c9139c6fdd891cea6d6416ecaf27c2db4820f7f7336d4f1fd1ff0ed3",
+    "quality_status": "PASS",
+    "steps": [
+      {
+        "name": "static-audit",
+        "status": "PASS"
+      },
+      {
+        "name": "static-checker-regression",
+        "status": "PASS",
+        "tests": 16
+      },
+      {
+        "name": "engine-version",
+        "status": "PASS"
+      },
+      {
+        "name": "install-gut",
+        "status": "PASS"
+      },
+      {
+        "name": "fresh-import",
+        "status": "PASS"
+      },
+      {
+        "name": "fresh-startup",
+        "status": "PASS"
+      },
+      {
+        "name": "existing-suite",
+        "status": "PASS"
+      },
+      {
+        "name": "framework-import",
+        "status": "PASS"
+      },
+      {
+        "name": "gut-upstream",
+        "status": "PASS",
+        "tests": 13,
+        "assertions": 62
+      },
+      {
+        "name": "gut-quality",
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 13433
+      },
+      {
+        "name": "coverage-completeness",
+        "status": "PASS",
+        "expected": 144,
+        "executed": 144
+      }
+    ]
+  }
+}
