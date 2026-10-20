@@ -1,5 +1,7 @@
 """Decode delivered neural clips, and check the authored task/asset contract."""
 import array
+import configparser
+import fnmatch
 import hashlib
 import json
 import math
@@ -102,6 +104,16 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual((ROOT/'assets/quest'/f'{name}.png').read_bytes(),(ROOT/'docs/character-proposals'/f'{name}.png').read_bytes())
         for name in ['mina','leo','sam','jule']:
             self.assertFalse((ROOT/'assets/quest'/f'{name}.png').exists())
+    def test_android_presets_include_all_nonresource_licence_texts(self):
+        presets=configparser.ConfigParser(interpolation=None)
+        presets.read(ROOT/'export_presets.cfg')
+        notices=['assets/quest/OFL.txt','assets/music/NOTICES.txt']
+        notices += [str(p.relative_to(ROOT)) for p in (ROOT/'assets/music/licenses').glob('*.txt')]
+        notices += ['assets/voice/quest/'+locale+'/MODEL_CARD.txt' for locale in ['de','en','ru']]
+        for preset in ['preset.0','preset.1']:
+            patterns=json.loads(presets[preset]['include_filter']).split(',')
+            for name in notices:
+                self.assertTrue(any(fnmatch.fnmatchcase(name,pattern) for pattern in patterns),(preset,name))
     def test_classical_sources_and_notices_are_present(self):
         data=json.loads((ROOT/'assets/music/manifest.json').read_text())
         composers={'wiener_blut':'Johann Strauss II','babbino':'Giacomo Puccini','french_song':'P. I. Tschaikowski','consolation':'Franz Liszt'}
