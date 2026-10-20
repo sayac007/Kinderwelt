@@ -75,10 +75,28 @@ GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/r
 ```
 
 Der Test verwendet ein temporäres Benutzerverzeichnis, niemals echte Spielstände.
-Siehe [Architektur](docs/architecture.md), [Logik-/Mathematik-Testbericht](docs/test-report.md),
+Siehe [Architektur](docs/architecture.md), [Logik-/Mathematik-Testbericht](docs/logic-math-test-report.md),
 [Bedienung und Content-Anleitung der neuen Module](docs/scenario-authoring.md) und
 [aktuellen Szenarien-Testbericht](docs/scenario-test-report.md).
 Es gibt synthetische Töne, **keine implementierte Sprachausgabe**. Die Bedienung
 stützt sich auf Bilder, Mengenpunkte, Fokus und wiederholbare Hinweise; deutsche
 Beschriftungen sind ergänzend. Verständlichkeit ohne Lesen ist auf einem physischen Gerät
 mit Kind und Begleitung noch zu prüfen.
+
+## Qualität und Evaluation
+
+Die vorhandene Testsuite bleibt unverändert über `bash tests/run.sh` erreichbar.
+Der vollständige QA-Einstieg ergänzt gepinntes GUT 9.7.1, frischen Import/Start,
+statische Risiko-/Schlüsselprüfungen und eine dynamische Matrix aller Aufgaben:
+
+```bash
+GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/qa/run.sh
+```
+
+[Qualitätssystem und Ergebnisformate](docs/quality-system.md),
+[aktueller Testbericht](docs/test-report.md),
+[manuelle Kinder-/Geräteprüfung](docs/child-usability-checklist.md) und
+[Lernhypothesen/Evaluationsplan](docs/learning-hypotheses.md).
+Keine Kinderbeobachtungen werden standardmäßig erfasst; eine optionale lokale
+Vorlage ist nicht aktiviert. Technische Erfolge belegen weder Lernwirkung noch
+Marktreife. Reale Geräteleistung und empirische Evaluation bleiben offen.

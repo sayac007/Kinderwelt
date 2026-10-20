@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "engine_version": "4.7.2.stable.official.ed1daf0bf",
+  "gut_version": "9.7.1",
+  "gut_commit": "aeb5d4f3f7f0a6c9b5e178876d6c99b791fda605",
+  "minimum_tasks": {"logic": 9, "math": 9, "language": 6, "autonomy": 6, "social": 6},
+  "viewports": [[320, 568], [360, 800], [768, 1024], [1024, 768]],
+  "minimum_target": [96, 72],
+  "retries": 3,
+  "upstream_tests": ["test/unit/test_version_numbers.gd", "test/unit/test_parameter_factory.gd"],
+  "static_exceptions": []
+}

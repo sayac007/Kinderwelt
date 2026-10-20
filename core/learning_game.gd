@@ -22,6 +22,7 @@ var feedback := ""
 var session := 0
 var demonstrating := false
 var layout_grids: Array[GridContainer] = []
+var entering_level := false
 
 func setup(app: Control, registration: Dictionary) -> void:
 	host = app
@@ -123,7 +124,13 @@ func start_level(which: int) -> void:
 	gesture = []
 	rejected = -1
 	feedback = ""
+	# A new task must not inherit the chooser's scroll position or focus the
+	# bottom inventory before its instruction has been seen.
+	var scroll := get_parent().get_parent() as ScrollContainer
+	if scroll: scroll.scroll_vertical = 0
+	entering_level = true
 	build()
+	entering_level = false
 	replay()
 
 func create_model(_data: Dictionary) -> RefCounted:
@@ -149,6 +156,8 @@ func build() -> void:
 	responsive()
 	if model.complete():
 		next_button.grab_focus()
+	elif entering_level:
+		navigation.get_child(0).grab_focus()
 	elif not source_buttons.is_empty():
 		for b in source_buttons:
 			if not b.disabled:
