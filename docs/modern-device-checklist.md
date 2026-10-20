@@ -8,7 +8,8 @@ Paketprüfungen sind keine Installation auf einem Android-Telefon.
 - Endgültige APK aus `build/android-0.4-final/` und deren Hash aus dem Prüfbericht verwenden.
   Gerätetyp und Android-Version als technische Angaben reichen; keine Seriennummern oder
   personenbezogenen Kinderangaben erfassen.
-- Eine alte APK kann anders debug-signiert sein. Ein Update wird dann abgewiesen.
+- Die hier gelieferten 0.3-/0.4-APK haben nachweislich unterschiedliche Signaturfingerprints.
+  Ein direktes Update zwischen diesen Dateien wird deshalb abgewiesen.
   **Nicht einfach deinstallieren: Dabei gehen lokale Spielstände verloren.** Vorzugsweise
   ein separates Testgerät verwenden. Ein Update-/Migrationsnachweis fehlt ohne den alten
   Entwicklungsschlüssel; zukünftige stabile Entwicklungssignierung sicher außerhalb des

@@ -139,3 +139,18 @@ Die Tabelle enthält ausschließlich die erfolgreichen abschließenden Läufe.
   Gerätefreigabe. Bestehende Play-Checklisten bleiben offen und unverändert verbindlich.
 
 [Praktisches freiwilliges Gerätetestprotokoll](modern-device-checklist.md).
+
+## Signatur- und GitHub-Übergabe
+
+Die öffentlichen Zertifikatsfingerprints der hier gemessenen 0.3- und 0.4-Debug-APK
+wurden tatsächlich verglichen: **unterschiedlich**. Ein normales direktes Update zwischen
+diesen Dateien hat daher keine passende Signaturidentität. Der alte private
+Entwicklungsschlüssel steht hier nicht zur Verfügung. Keine bestehende Installation
+wurde entfernt; eine sichere Übernahme des Gerätespielstands ist ein offener manueller
+Schritt. Nicht zur Umgehung des Problems unbedacht deinstallieren.
+
+Der Feature-Branch wurde erfolgreich gepusht. Die PR-Erstellung gegen `main` wurde
+mit `gh pr create` tatsächlich versucht; `https://api.github.com/graphql` antwortete
+`Forbidden`. Es wurde damit kein PR automatisch erstellt.
+[Pull Request manuell erstellen](https://github.com/sayac007/Kinderwelt/compare/main...feat/kinderwelt-modern-experience-v04?expand=1).
+Remote Actions wurden hier nicht als bereits erfolgreich ausgeführt bestätigt.

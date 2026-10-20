@@ -2148,5 +2148,21 @@
     "New development certificate can prevent an update; uninstall erases local saves",
     "Release signature and all Play publication gates remain blocked"
   ],
-  "measurement_helper_commit": "72d2424"
+  "measurement_helper_commit": "72d2424",
+  "signer_comparison": {
+    "public_certificate_sha256": {
+      "0.3": "1ab3e1b6e27575e1144b37286601ed1378d9fcd11657747924a05b42d8d3e378",
+      "0.4": "95dcd880eb074f99b8592ebec78359622197404f26980e5e83656b314915c144"
+    },
+    "same_signer": false,
+    "scope": "Compared the two delivered cloud debug APKs; no device installation attempted",
+    "migration": "Direct update requires matching signing identity; do not uninstall without a local-save decision"
+  },
+  "github": {
+    "branch": "feat/kinderwelt-modern-experience-v04",
+    "push": "PASS",
+    "pr_creation": "ATTEMPTED: GraphQL Forbidden",
+    "manual_pr_url": "https://github.com/sayac007/Kinderwelt/compare/main...feat/kinderwelt-modern-experience-v04?expand=1",
+    "remote_actions": "NOT VERIFIED"
+  }
 }
