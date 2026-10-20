@@ -129,3 +129,13 @@ Prüfungen vorgemerkt. Der Entwurf ist nicht automatisch aktiv oder veröffentli
 die Umgebungseinstellungen müssen zum dauerhaften Übernehmen gespeichert und die
 Umgebung veröffentlicht werden. Wiederherstellung in einer neuen Sitzung ist
 nicht geprüft.
+
+## GitHub-Übergabe
+
+`feat/android-release` wurde erfolgreich nach origin gepusht. Der anschließende
+Aufruf `gh pr create --base main --head feat/android-release` mit der vorbereiteten
+Beschreibung scheiterte mit `Post "https://api.github.com/graphql": Forbidden`.
+Ein erstellter Pull Request wird deshalb nicht behauptet.
+
+[Pull Request gegen main manuell erstellen](https://github.com/sayac007/Kinderwelt/compare/main...feat/android-release?expand=1).
+Die fertige Beschreibung steht in [android-release-pull-request.md](android-release-pull-request.md).
