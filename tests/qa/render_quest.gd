@@ -40,6 +40,10 @@ func run() -> void:
 					game.task_panel.answer(game.task_panel.task.answer)
 					await snap(profile.id+"-"+subject+"-solved")
 				game.close_task()
+		app.musicbox()
+		await snap(profile.id+"-musicbox")
+		app.settings()
+		await snap(profile.id+"-settings")
 		app.narration.cancel();app.audio.music.shutdown();app.audio.stop()
 		await create_timer(.15).timeout
 		app.free()

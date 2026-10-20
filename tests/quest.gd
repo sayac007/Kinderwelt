@@ -108,6 +108,12 @@ func run() -> void:
 	var locked: String=app.store.data.music_track
 	app.audio.set_world("math")
 	check(app.audio.music.world==locked,"Favorite track remains during subject changes")
+	for i in range(4): await process_frame
+	app.scroll_view.scroll_vertical=300
+	await process_frame
+	app.settings()
+	for i in range(4): await process_frame
+	check(app.scroll_view.scroll_vertical==0 and app.body.get_child(0).get_global_rect().position.y>=0,"Opening settings after scrolling music leaves Back visible at the top")
 	app.hub()
 	check(app.narration.play_clip("quest/german_sun"),"Actual neural offline task audio plays")
 	check(app.audio.music.ducked,"Narration ducks music")

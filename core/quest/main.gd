@@ -47,6 +47,7 @@ func clear() -> void:
 		game_view.persist()
 		remove_child(game_view);game_view.queue_free();game_view=null
 	scroll_view.show()
+	scroll_view.scroll_vertical=0
 	for child in body.get_children(): body.remove_child(child);child.queue_free()
 func hub() -> void:
 	clear()

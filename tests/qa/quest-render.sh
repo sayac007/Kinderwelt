@@ -19,12 +19,12 @@ python3 - "$OUTPUT" <<'PY'
 import hashlib,json,struct,sys
 from pathlib import Path
 p=Path(sys.argv[1]);frames=json.loads((p/'renders.json').read_text())
-assert len(frames)==136
+assert len(frames)==144
 for frame in frames:
  data=(p/(frame['name']+'.png')).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
  assert list(struct.unpack('>II',data[16:24]))==frame['pixels']
 for profile in ['phone','small','landscape','dense']:
  assert len({hashlib.sha256((p/(profile+'-heroes'+suffix+'.png')).read_bytes()).hexdigest() for suffix in ['', '-move','-think','-success']})==4
-print('PASS: 136 real frames; all 24 tasks at four profiles; distinct animated poses')
+print('PASS: 144 real frames; all 24 tasks and secondary menus at four profiles; distinct animated poses')
 PY
