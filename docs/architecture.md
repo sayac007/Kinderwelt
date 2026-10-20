@@ -78,7 +78,9 @@ kombiniert werden; überschüssiges Material darf liegenbleiben. Der Validator
 verlangt eine vollständige Lösung ohne Wiederverwendung eines Stücks.
 
 Die Spielfigur steht vor der Lücke und wird auf der anderen Seite dargestellt,
-sobald alle Felder dieser Lücke überbrückt sind. Punkte und Segmentumrisse zeigen
+sobald alle Felder dieser Lücke überbrückt sind. Bei aktivierter Bewegung
+überquert sie die Brücke animiert; mit reduzierter Bewegung erscheint direkt
+der Endzustand. Punkte und Segmentumrisse zeigen
 Länge und Reststrecke ohne Ziffern. Zu lange Stücke bleiben im Vorrat und die
 Lücke erhält ein Kreuz; kleine Teilstücke lassen sichtbar Wasser offen.
 Backtracking sucht Hinweise, die vorhandene Entscheidungen erhalten. Ist eine
@@ -101,7 +103,9 @@ Ein Ziel ist `{ "count": 3, "kind": "apple" }`; Fruchtarten sind `apple`, `pear`
 oder für frei gemischte Verteilung `any`. `items` zählt die tatsächlich verfügbaren
 Einzelstücke auf. Mengen sind ganze Zahlen 1–10, der verteilbare Vorrat umfasst
 höchstens zehn Früchte. Vergleichsaufgaben benötigen eine eindeutige größte Menge.
-Die Formen der abgelegten Früchte bleiben erhalten. Falsche Form/Überfüllung wird
+Freie Plätze bei `any` zeigen neutrale Kreise statt eines Apfelumrisses;
+damit wird keine unzutreffende Sortenvorgabe signalisiert. Die Formen der
+abgelegten Früchte bleiben erhalten. Falsche Form/Überfüllung wird
 mit Umriss und Kreuz erklärt, ohne Fruchtverbrauch, Zeitdruck oder Strafe.
 
 ## Hilfen und Vorschläge

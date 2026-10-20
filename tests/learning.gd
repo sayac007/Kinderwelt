@@ -79,6 +79,25 @@ func run() -> void:
 					game.socket_buttons[move[1]].pressed.emit()
 				steps += 1
 			check(game.model.complete() and not game.assisted,"Unaided UI completion "+data.id)
+			# Validate the result independently of complete()/next_hint().
+			if entry.id == "logic":
+				for slot in range(data.gaps.size()):
+					var total := 0
+					for i in range(game.model.placements.size()):
+						if game.model.placements[i] == slot: total += int(data.pieces[i])
+					check(total == int(data.gaps[slot]), "Placed bridge spans the authored gap")
+			elif data.mode == "compare":
+				var chosen: int = game.model.chosen
+				check(data.counts.all(func(amount): return amount <= data.counts[chosen]), "Chosen collection independently has the most fruit")
+			else:
+				for slot in range(data.targets.size()):
+					var fruit: Array = []
+					for i in range(game.model.placements.size()):
+						if game.model.placements[i] == slot: fruit.append(data.items[i])
+					check(fruit.size() == int(data.targets[slot].count), "Basket matches authored quantity")
+					check(data.targets[slot].kind == "any" or fruit.all(func(kind): return kind == data.targets[slot].kind), "Basket matches authored fruit shape")
+					if data.targets[slot].kind == "any":
+						check(game.socket_buttons[slot].get_child(0).spec.get("any_fruit", false), "Shared slots do not falsely require apples")
 			var progress: Dictionary = Progress.state(app.store,entry.id)
 			check(progress.completed.has(data.id),"Per-level completion saved")
 			app.hub()

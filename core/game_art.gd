@@ -2,6 +2,10 @@ extends Control
 # Original procedural pictograms. Meanings use shape, grouping and outlines,
 # never color alone. All labels are optional supplements to these drawings.
 var spec: Dictionary = {}
+var crossing := 0.0:
+	set(value):
+		crossing = value
+		queue_redraw()
 var phase := 0.0:
 	set(value):
 		phase = value
@@ -12,6 +16,14 @@ const WATER := Color("315d85")
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if spec.get("kind") == "bridge":
+		var total := 0
+		for count in spec.get("pieces", []): total += int(count)
+		if total == int(spec.get("target", 1)):
+			if spec.get("reduced_motion", false): crossing = 1.0
+			else:
+				var walk := create_tween()
+				walk.tween_property(self, "crossing", 1.0, 0.8)
 	if spec.get("hint", false) and not spec.get("reduced_motion", false):
 		var tween := create_tween().set_loops()
 		tween.tween_property(self, "phase", 1.0, 0.5)
@@ -37,6 +49,7 @@ func fruit(center: Vector2, radius: float, kind: String, ghost := false) -> void
 
 func person(c: Vector2, r: float) -> void:
 	draw_circle(c+Vector2(0,-r*0.6), r*0.4, GOLD)
+	draw_arc(c+Vector2(0,-r*0.65),r*0.23,0.2,PI-0.2,12,Color("322820"),1.5,true)
 	line(c, c+Vector2(0,r*0.8), GOLD, r*0.35)
 	line(c+Vector2(-r*0.5,r*0.1), c+Vector2(r*0.5,r*0.1), GOLD, 3)
 
@@ -148,7 +161,7 @@ func bridge() -> void:
 		draw_rect(Rect2(Vector2(47+offset*unit,y-13),Vector2(count*unit-4,19)),Color("d9b181"))
 		for i in range(int(count)): draw_circle(Vector2(47+(offset+i+0.5)*unit,y-3),3,Color("322820"))
 		offset += int(count)
-	person(Vector2(size.x-26 if offset==target else 24,y-8),15)
+	person(Vector2(lerpf(24.0,size.x-26,crossing) if offset==target else 24,y-8),15)
 	line(Vector2(size.x-20,y-16),Vector2(size.x-20,y+18),INK,3)
 	draw_colored_polygon(PackedVector2Array([Vector2(size.x-20,y-16),Vector2(size.x-7,y-11),Vector2(size.x-20,y-6)]),GOLD)
 
@@ -163,7 +176,11 @@ func basket() -> void:
 		var p := start+Vector2((i%columns)*spacing,(i/columns)*30)
 		var items: Array = spec.get("items", [])
 		var shown_kind: String = items[i] if i < items.size() else fruit_kind
-		fruit(p, 10, shown_kind, i>=actual)
+		if i >= actual and spec.get("any_fruit", false):
+			# A plain place accepts either shape; an apple outline would falsely
+			# suggest that pears cannot be shared here.
+			draw_arc(p, 10, 0, TAU, 24, INK, 2, true)
+		else: fruit(p, 10, shown_kind, i>=actual)
 	line(Vector2(14,36),Vector2(14,size.y-14),INK,3)
 	line(Vector2(14,size.y-14),Vector2(size.x-14,size.y-14),INK,3)
 	line(Vector2(size.x-14,size.y-14),Vector2(size.x-14,36),INK,3)

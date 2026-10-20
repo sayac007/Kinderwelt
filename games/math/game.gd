@@ -18,7 +18,7 @@ func build_board() -> void:
 		for i in range(model.placements.size()):
 			if model.placements[i] == slot: placed_items.append(model.level.items[i])
 		var kind: String = target.kind if target.kind != "any" else "apple"
-		socket_buttons.append(art_button({"kind":"basket","target":target.count,"amount":model.filled(slot),"items":placed_items,"fruit":kind,"person":model.level.mode=="share","sort":model.level.mode=="sort","hint":show_hint,"error":rejected==slot}, "Obstkorb %d" % [slot+1], socket.bind(slot), self, Vector2(280,135)))
+		socket_buttons.append(art_button({"kind":"basket","target":target.count,"amount":model.filled(slot),"items":placed_items,"fruit":kind,"any_fruit":target.kind=="any","person":model.level.mode=="share","sort":model.level.mode=="sort","hint":show_hint,"error":rejected==slot}, "Obstkorb %d" % [slot+1], socket.bind(slot), self, Vector2(280,135)))
 	var inventory := make_grid()
 	for i in range(model.level.items.size()):
 		var show_hint: bool = gesture.size()==2 and gesture[0]==i

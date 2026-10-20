@@ -81,6 +81,18 @@ func run() -> void:
 			await touch(game.socket_buttons[0])
 			check(game.model.placements[0]==0,"Touch places after rotation")
 			game.undo()
+		# Complete a level through actual touch dispatch, not only one placement.
+		game.start_level(0)
+		for step in range(20):
+			if game.model.complete(): break
+			var move: Array = game.model.next_hint()
+			check(move.size() == 2 and move[0] >= 0, "Touch completion has a playable next move")
+			if move.size() != 2 or move[0] < 0: break
+			await touch(game.source_buttons[move[0]])
+			await touch(game.socket_buttons[move[1]])
+		check(game.model.complete() and game.recorded, entry.id + " completes via viewport touch")
+		game.start_level(0)
+		check(not game.model.complete() and game.model.history.is_empty(), entry.id + " remains retryable after touch success")
 		app.hub()
 		await process_frame
 	# Wrong comparisons explain the mismatch without consuming a chance.
@@ -91,6 +103,22 @@ func run() -> void:
 	check(not comparison.model.complete() and comparison.rejected==0,"Wrong comparison remains retryable")
 	await touch(comparison.socket_buttons[1])
 	check(comparison.model.complete(),"Comparison can be corrected by touch")
+	app.hub()
+	# Crossing respects both animation preferences without changing game rules.
+	app.open_module(entries[0])
+	var crossing_game = app.learning_game
+	app.store.data.reduced_motion = false
+	crossing_game.start_level(0)
+	for step in range(20):
+		if crossing_game.model.complete(): break
+		var move: Array = crossing_game.model.next_hint()
+		crossing_game.pick(move[0])
+		crossing_game.socket(move[1])
+	await create_timer(1.0).timeout
+	check(crossing_game.socket_buttons[0].get_child(0).crossing == 1.0, "Friendly character crosses the completed bridge")
+	app.store.data.reduced_motion = true
+	crossing_game.build()
+	check(crossing_game.socket_buttons[0].get_child(0).crossing == 1.0, "Reduced motion immediately shows the safe crossing")
 	app.hub()
 	# Animated worked example must remain interruptible, including retry/home.
 	app.open_module(entries[0])
