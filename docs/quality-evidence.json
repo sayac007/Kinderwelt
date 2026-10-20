@@ -1,0 +1,899 @@
+{
+  "schema": 1,
+  "scope": "Synthetic technical evidence only; no child observations, device benchmarks or efficacy results",
+  "run_id": "20261020T081907Z-75dc9879",
+  "code_commit": "86d8b452f888b3f9e39146d42fc1127594b844c1",
+  "source_dirty": false,
+  "relevant_source_sha256": "ca8fa97891cc519a2a810f53cf00860981de2c8af53a7c426c9c3decd0aba0a5",
+  "engine_version": "4.7.2.stable.official.ed1daf0bf",
+  "gut": {
+    "version": "9.7.1",
+    "commit": "aeb5d4f3f7f0a6c9b5e178876d6c99b791fda605"
+  },
+  "technical_status": "PASS",
+  "existing_checks": 1236,
+  "upstream_gut": {
+    "tests": 13,
+    "assertions": 62,
+    "failed": 0,
+    "skipped": 0
+  },
+  "quality_gut": {
+    "tests": 6,
+    "assertions": 13433,
+    "failed": 0,
+    "skipped": 0
+  },
+  "checker_tests": 16,
+  "static": {
+    "findings": 0,
+    "files_examined": 104,
+    "scope": "bounded source patterns; not security certification"
+  },
+  "matrix": {
+    "tasks": 36,
+    "cases": 144,
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        360,
+        800
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "retries_per_case": 3
+  },
+  "render": {
+    "backend": "X11",
+    "tasks": 36,
+    "task_viewport_pairs": 72,
+    "frames": 112,
+    "scope": "synthetic initial UI; not a real device benchmark or child observation"
+  },
+  "human_gates": {
+    "real_device_performance": "NOT MEASURED",
+    "child_usability": "NOT RUN",
+    "educational_transfer": "NOT ESTABLISHED",
+    "manual_accessibility": "NOT RUN"
+  },
+  "task_results": [
+    {
+      "module": "logic",
+      "task": "bridge_01",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_02",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_03",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_04",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_05",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_06",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_07",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_08",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "logic",
+      "task": "bridge_09",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_01",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_02",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_03",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_04",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_05",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_06",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_07",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_08",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "math",
+      "task": "market_09",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "garden",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "bread",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "rain",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "kite",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "paint",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "language",
+      "task": "picnic",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "ramp",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "light",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "water",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "wind",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "balance",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "autonomy",
+      "task": "garden",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "music",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "shade",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "blocks",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "tools",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "snack",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    },
+    {
+      "module": "social",
+      "task": "space",
+      "status": "PASS",
+      "tested_viewports": [
+        [
+          320.0,
+          568.0
+        ],
+        [
+          360.0,
+          800.0
+        ],
+        [
+          768.0,
+          1024.0
+        ],
+        [
+          1024.0,
+          768.0
+        ]
+      ]
+    }
+  ]
+}

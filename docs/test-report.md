@@ -30,6 +30,7 @@ pädagogische Wirkung bleiben offen. Es wurden keine Kinder untersucht.
 | Renderlauf | PASS | alle 36 Aufgaben an 320×568 und 768×1024, 112 erfasste Scrollseiten, Bildabmessungen geprüft |
 | Sichtprüfung | TEILWEISE | synthetische Übersichten aller Telefon-Aufgaben sowie Einzelansichten; kein vollständiger Zustands-/Kontrast-/Gerätetest |
 | `git diff --check` | PASS | keine Whitespacefehler |
+| Sauberer Checkout mit neuer Installation | PASS | Codecommit `86d8b45`, alle Gates erneut bestanden; SHA-512 und GUT-Pin geprüft |
 | GitHub-CI für diesen Branch | NOT RUN / NICHT BESTÄTIGT | Workflow vorhanden; lokaler Erfolg ist kein Remote-Nachweis |
 | Physische Geräte / Screenreader / Hörtest | NOT RUN | manuelle Checkliste vorbereitet |
 | Geräte-Kaltstart, Frametimes, Speicher | NOT MEASURED | kein physisches Zielgerät verfügbar, keine Cloudwerte umgedeutet |
@@ -66,8 +67,19 @@ verhindern ein PASS. Eingefrorene/alte Ergebnisdateien werden nicht übernommen.
 
 Der abschließende Arbeitsbaum-Lauf liegt in dieser Sitzung unter
 `/tmp/kinderwelt-quality-final-report`; die CLI gibt bei weiteren Läufen das neue
-Verzeichnis aus. Ein sauberer Checkout wird zusätzlich separat überprüft;
-sein konkreter Nachweis wird nach Abschluss hier ergänzt. CI verwendet denselben
+Verzeichnis aus. Ein zusätzlicher sauberer Checkout von Codecommit `86d8b45` wurde
+unter `/tmp/kinderwelt-quality-repro.waDQId/repo` erstellt. Der vorhandene vorbereitete Cache wurde nicht
+übernommen: Godot wurde neu installiert (offizielle SHA-512-Prüfung PASS),
+GUT neu auf den gepinnten Commit geholt und derselbe QA-Einstieg ausgeführt.
+Gesamtstatus PASS, Dirty-Status false, 144/144 Matrixfälle und alle oben genannten
+Suiten erneut erfolgreich. Laufkennung `20261020T081907Z-75dc9879`; Originalartefakte unter
+`/tmp/kinderwelt-quality-repro.waDQId/repo/qa-results/20261020T081907Z-75dc9879`. Der relevante Quelldigest ist
+`ca8fa97891cc519a2a810f53cf00860981de2c8af53a7c426c9c3decd0aba0a5`.
+Diese lokale Linux-Reproduktion ist kein bestätigter GitHub-Job und keine
+Messung auf einem physischen Zielgerät. Eine nachfolgende Änderung ausschließlich
+an Berichten/Protokolltexten verändert den getesteten Spiel-/QA-Code nicht.
+Die [kompakte technische Evidenz](quality-evidence.json) und
+[alle 36 Aufgabenstatus](quality-task-audit.md) sind versioniert. CI verwendet denselben
 Einstieg und archiviert ausschließlich synthetische technische Artefakte.
 
 ## Was für alle 36 Aufgaben abgedeckt ist

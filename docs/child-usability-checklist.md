@@ -5,6 +5,13 @@ rekrutiert, beobachtet oder vermessen. Die App erhält keinen Studienmodus,
 keine Telemetrie, keine Cloud-Exporte und keine Erfassung personenbezogener Daten.
 Ein grüner Softwaretest ist keine Freigabe für eine Untersuchung.
 
+Die vorhandenen lokalen Spielstände speichern Aufgabenmarkierungen und
+Einstellungen. Auch solche Daten können auf einem gemeinsam bekannten Gerät
+indirekt zuordenbar sein. Sie werden hier nicht als Forschungsdaten ausgelesen
+oder exportiert; die automatisierten Prüfungen verwenden ausschließlich eigene
+synthetische Daten. Eine tatsächliche Studie benötigt ihr separat festgelegtes
+Vorgehen auch für diese lokalen Spielstände.
+
 ## 0. Vor jeder Datenerfassung gesondert entscheiden
 
 - [ ] Zweck, verantwortliche Stelle, zuständige Aufsicht und geeignete ethische/
