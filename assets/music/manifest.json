@@ -1,0 +1,172 @@
+{
+  "provenance": "Original synthesized retro miniature studies; public-domain compositional inspiration, no sampled recordings or third-party arrangements.",
+  "license": "MIT (original code and generated recordings); underlying works require jurisdiction-specific public-domain review before distribution.",
+  "orchestral_variant": "not produced; shared MIDI-note themes are the production input",
+  "themes": {
+    "logic": {
+      "file": "assets/music/logic.wav",
+      "duration_seconds": 22.857142857142858,
+      "sample_rate": 22050,
+      "peak": 0.19611,
+      "sha256": "61c8b890cebbe81207371dcae21844dbc8db621da8048f4ab5dcbb783c21ae91",
+      "inspiration": "Liszt · Liebesträume Nr. 3",
+      "bpm": 84,
+      "notes_midi": [
+        72,
+        72,
+        72,
+        71,
+        72,
+        76,
+        75,
+        72,
+        70,
+        68,
+        67,
+        68,
+        72,
+        70,
+        68,
+        0
+      ],
+      "bass_midi": [
+        56,
+        63,
+        65,
+        60
+      ]
+    },
+    "math": {
+      "file": "assets/music/math.wav",
+      "duration_seconds": 17.77777777777778,
+      "sample_rate": 22050,
+      "peak": 0.19521,
+      "sha256": "44edcce96b1565201528712b6da65fd0f13f023d529e11a18fad727bdc072186",
+      "inspiration": "Liszt · Ungarische Rhapsodie Nr. 2",
+      "bpm": 108,
+      "notes_midi": [
+        69,
+        70,
+        73,
+        74,
+        73,
+        70,
+        69,
+        0,
+        76,
+        74,
+        73,
+        70,
+        69,
+        68,
+        69,
+        0
+      ],
+      "bass_midi": [
+        45,
+        52,
+        50,
+        52
+      ]
+    },
+    "language": {
+      "file": "assets/music/language.wav",
+      "duration_seconds": 24.615374149659864,
+      "sample_rate": 22050,
+      "peak": 0.19135,
+      "sha256": "9fd7a4e228c5e56221fd1cb08d0359a251b7ed984d0cb725756e2d625c7b56aa",
+      "inspiration": "Puccini · O mio babbino caro",
+      "bpm": 78,
+      "notes_midi": [
+        67,
+        72,
+        71,
+        72,
+        76,
+        74,
+        72,
+        71,
+        69,
+        67,
+        69,
+        72,
+        71,
+        69,
+        67,
+        0
+      ],
+      "bass_midi": [
+        48,
+        55,
+        57,
+        55
+      ]
+    },
+    "autonomy": {
+      "file": "assets/music/autonomy.wav",
+      "duration_seconds": 18.461496598639457,
+      "sample_rate": 22050,
+      "peak": 0.19613,
+      "sha256": "a871adadf06dfc5784a4bd54ce300d70bc0fab36e7ebddd6ac6adbd17b4d1545",
+      "inspiration": "Liszt · La Campanella",
+      "bpm": 104,
+      "notes_midi": [
+        83,
+        0,
+        83,
+        82,
+        83,
+        78,
+        79,
+        83,
+        81,
+        79,
+        78,
+        76,
+        78,
+        81,
+        79,
+        0
+      ],
+      "bass_midi": [
+        52,
+        59,
+        57,
+        59
+      ]
+    },
+    "social": {
+      "file": "assets/music/social.wav",
+      "duration_seconds": 23.414603174603176,
+      "sample_rate": 22050,
+      "peak": 0.19519,
+      "sha256": "db945d99ca913b5f227e4de12267a1c6243498e82b6b6dea9eb4e346053d79f5",
+      "inspiration": "Puccini · Nessun dorma",
+      "bpm": 82,
+      "notes_midi": [
+        71,
+        74,
+        76,
+        78,
+        76,
+        74,
+        71,
+        0,
+        72,
+        76,
+        79,
+        78,
+        76,
+        74,
+        71,
+        0
+      ],
+      "bass_midi": [
+        43,
+        50,
+        48,
+        50
+      ]
+    }
+  }
+}

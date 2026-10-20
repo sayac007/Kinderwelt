@@ -13,11 +13,12 @@ func apply_move(move: Dictionary) -> bool:
 
 func build_board() -> void:
 	var data: Dictionary = levels[index]
-	picture({"kind":"experiment","experiment":data.experiment,"values":goal_values(data),"result":data.goal,"goal":true},145)
+	var goals := {"ramp":"Roll bis zur Fahne auf Feld 4!", "light":"Lenke das Licht auf die Pflanze!", "water":"Bring das Wasser zur Blume!", "wind":"Segle bis zur Fahne auf Feld 4!", "balance":"Mach beide Schalen gleich schwer!", "garden":"Gib der Pflanze Wasser und Sonne!"}
+	text(goals[data.experiment])
+	picture({"kind":"experiment","experiment":data.experiment,"values":model.values,"result":Model.result(data.experiment,model.values),"target":data.goal},250)
 	var settings := make_grid()
 	for i in range(2):
-		source_buttons.append(art_button({"kind":"setting","experiment":data.experiment,"control":i,"value":model.values[i]},L.message("autonomy.control"),act.bind({"action":"cycle","control":i}),settings,Vector2(140,120)))
+		source_buttons.append(art_button({"kind":"setting","experiment":data.experiment,"control":i,"value":model.values[i]},L.message("autonomy.control"),act.bind({"action":"cycle","control":i}),settings,Vector2(140,156)))
 	socket_buttons.append(art_button({"kind":"test"},L.message("autonomy.test"),act.bind({"action":"test"})))
 	if model.tested:
-		picture({"kind":"experiment","experiment":data.experiment,"values":model.values,"result":Model.result(data.experiment,model.values)},145)
 		text(L.message("autonomy.result"))

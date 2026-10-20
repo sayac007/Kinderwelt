@@ -10,9 +10,9 @@ var phase := 0.0:
 	set(value):
 		phase = value
 		queue_redraw()
-const INK := Color("e5f5ff")
-const GOLD := Color("ffdc78")
-const WATER := Color("315d85")
+const INK := Color("293e34")
+const GOLD := Color("92541e")
+const WATER := Color("b8e1e7")
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -33,7 +33,7 @@ func line(a: Vector2, b: Vector2, color: Color = INK, width: float = 4.0) -> voi
 	draw_line(a, b, color, width, true)
 
 func fruit(center: Vector2, radius: float, kind: String, ghost := false) -> void:
-	var color := Color("fbab84") if kind == "apple" else Color("b7df89")
+	var color := Color("cf473b") if kind == "apple" else Color("5d8636")
 	if ghost:
 		draw_arc(center, radius, 0, TAU, 24, INK, 2, true)
 		if kind == "pear":
@@ -144,7 +144,7 @@ func checkmark(c: Vector2, r: float) -> void:
 
 func selected_style() -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.2,0.4,0.55,0.5)
+	style.bg_color = Color("d4e8d9")
 	style.border_color = GOLD
 	style.set_border_width_all(3)
 	style.set_corner_radius_all(10)

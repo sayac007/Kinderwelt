@@ -1,5 +1,6 @@
 extends VBoxContainer
-const Art = preload("res://core/game_art.gd")
+const Art = preload("res://core/world_art.gd")
+const Design = preload("res://core/design.gd")
 const Catalog = preload("res://core/catalog.gd")
 const Progress = preload("res://core/learning_progress.gd")
 var host: Control
@@ -45,13 +46,15 @@ func text(value: String, parent: Node = self) -> Label:
 	l.text = value
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	l.add_theme_font_size_override("font_size", 23)
+	l.add_theme_font_size_override("font_size", Design.font_size(23,float(host.store.data.text_scale)))
 	parent.add_child(l)
 	return l
 
-func art_button(spec: Dictionary, tooltip: String, action: Callable, parent: Node = self, minimum := Vector2(96,80)) -> Button:
+func art_button(spec: Dictionary, tooltip: String, action: Callable, parent: Node = self, minimum := Vector2(96,112)) -> Button:
 	var b := Button.new()
-	b.custom_minimum_size = minimum
+	var compact: bool = spec.get("kind", "") in ["home","levels","retry","undo","replay","hint","next","test","previous","forward"]
+	var large_text: bool = float(host.store.data.text_scale)>1
+	b.custom_minimum_size = Vector2(96,112 if large_text else 80) if compact else minimum
 	b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	b.tooltip_text = tooltip
 	b.pressed.connect(action)
@@ -60,14 +63,49 @@ func art_button(spec: Dictionary, tooltip: String, action: Callable, parent: Nod
 	art.spec = spec.merged({"reduced_motion": host.store.data.reduced_motion})
 	art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	b.add_child(art)
+	var caption := Label.new()
+	caption.text = short_caption(spec,tooltip)
+	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	caption.add_theme_font_size_override("font_size",Design.font_size(18,float(host.store.data.text_scale)))
+	caption.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	caption.offset_top = (-56 if large_text else -32) if compact else (-64 if large_text else -56)
+	caption.offset_left = 4
+	caption.offset_right = -4
+	b.add_child(caption)
+	art.offset_bottom = caption.offset_top
 	return b
 
-func picture(spec: Dictionary, height := 84.0) -> Control:
+func picture(spec: Dictionary, height := 160.0) -> Control:
 	var art := create_art()
 	art.spec = spec.merged({"reduced_motion": host.store.data.reduced_motion})
-	art.custom_minimum_size.y = height
+	art.custom_minimum_size.y = minf(height,host.size.x*0.6) if host.size.x<600 else height
 	add_child(art)
 	return art
+
+func short_caption(spec: Dictionary, tooltip: String) -> String:
+	var captions := {"home":"Start", "levels":"Aufgaben", "retry":"Nochmal", "undo":"Zurück", "replay":"Anleitung", "hint":"Hilfe", "next":"Weiter", "test":"Los!", "previous":"Zurück", "forward":"Weiter"}
+	var kind: String = spec.get("kind","")
+	if captions.has(kind): return captions[kind]
+	if kind == "piece": return "%d Felder" % int(spec.amount)
+	if kind == "fruit": return tooltip
+	if kind == "bridge": return "Hier bauen"
+	if kind == "basket": return "%d von %d" % [int(spec.get("amount",0)),int(spec.target)]
+	if kind == "level": return "Aufgabe %d" % int(spec.ordinal)
+	if kind == "setting":
+		var titles := {"ramp":["Neigung","Boden"],"light":["Richtung","Blende"],"water":["Wasserweg","Ventil"],"wind":["Segel","Wind"],"balance":["Links","Rechts"],"garden":["Wasser","Sonne"]}
+		var value_names := {"ramp":[[],["Glatt","Rau"]],"light":[["Nach oben","Zur Mitte","Zur Pflanze"],["Blende zu","Blende auf"]],"water":[["Nach links","Zur Blume","Nach rechts"],["Ventil zu","Ventil auf"]],"wind":[["Kein Segel","Kleines Segel","Großes Segel"],["Windstill","Leichter Wind","Viel Wind"]],"garden":[["Kein Wasser","Etwas Wasser","Viel Wasser"],["Wolken","Etwas Sonne","Viel Sonne"]]}
+		if value_names.has(spec.experiment):
+			var choices: Array = value_names[spec.experiment][int(spec.control)]
+			if not choices.is_empty(): return choices[int(spec.value)]
+		return titles[spec.experiment][int(spec.control)]+" · "+str(int(spec.value))
+	if kind == "story":
+		var words := {"garden":["Der Samen","Wasser","Der Trieb","Die Blume"],"bread":["Das Mehl","Der Teig","Im Ofen","Das Brot"],"rain":["Regen","Der Schirm","Sonne"],"kite":["Papier","Falten","Die Schnur","Fliegen"],"paint":["Papier","Malen","Sonne"],"picnic":["Der Korb","Der Apfel","Zuklappen","Tragen","Teilen"]}
+		return words[spec.card.scene][int(spec.card.step)]
+	if kind == "adult": return "Gemeinsam"
+	if kind == "story_slot": return "Platz %d" % int(spec.ordinal)
+	return tooltip
 
 func create_art() -> Control:
 	return Art.new()
@@ -130,8 +168,8 @@ func start_level(which: int) -> void:
 	if scroll: scroll.scroll_vertical = 0
 	entering_level = true
 	build()
-	entering_level = false
 	replay()
+	entering_level = false
 
 func create_model(_data: Dictionary) -> RefCounted:
 	return null
@@ -142,9 +180,11 @@ func build() -> void:
 	art_button({"kind":"home"}, "Zurück zur Kinderwelt", host.hub, navigation)
 	art_button({"kind":"levels"}, "Alle Aufgaben", chooser, navigation)
 	art_button({"kind":"retry"}, "Noch einmal", func(): start_level(index), navigation)
-	text(entry.name + " · " + "● ".repeat(int(levels[index].tier)))
-	instruction_art = picture({"kind":"instruction","mode":levels[index].get("mode","bridge")})
+	text(entry.name + " · Aufgabe %d" % [index+1])
+	text(instruction_text())
+	instruction_art = null
 	build_board()
+	if not socket_buttons.is_empty(): instruction_art = socket_buttons[0].get_child(0)
 	var controls := row()
 	undo_button = art_button({"kind":"undo","hint":gesture==[-1,-1]}, "Letzten Schritt rückgängig machen", undo, controls)
 	art_button({"kind":"replay"}, "Anleitung wiederholen", replay, controls)
@@ -164,6 +204,14 @@ func build() -> void:
 				b.grab_focus()
 				break
 	elif not socket_buttons.is_empty(): socket_buttons[0].grab_focus()
+
+func instruction_text() -> String:
+	if entry.id == "logic": return "Bau die Brücke. Wähle Holz und tippe auf die Lücke!"
+	match levels[index].get("mode",""):
+		"compare": return "In welchem Korb liegt am meisten Obst?"
+		"share": return "Verteile das Obst auf beide Körbe!"
+		"sort": return "Lege jede Frucht in ihren Korb!"
+	return "Fülle die Körbe. Die Umrisse zeigen, wie viel fehlt."
 
 func build_board() -> void:
 	pass
@@ -203,6 +251,7 @@ func socket(slot: int) -> void:
 		finish_if_complete()
 	else:
 		rejected = slot
+		host.sound()
 		# Keep the selected piece visible beside the unchanged target for comparison.
 		feedback = "Schau auf die Umrisse. Du kannst es weiter versuchen."
 	build()

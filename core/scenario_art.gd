@@ -5,6 +5,7 @@ func _draw() -> void:
 	if spec.get("kind") not in ["story", "story_slot", "experiment", "setting", "village", "plan", "adult", "test", "previous", "forward"]: return
 	var factor := minf(size.x / 300.0, size.y / 150.0)
 	draw_set_transform((size - Vector2(300,150) * factor) / 2, 0, Vector2(factor,factor))
+	draw_style_box(preload("res://core/design.gd").style(Color("d4e8d9") if spec.get("selected",false) else Color("f1f5e9")),Rect2(4,4,292,142))
 	match spec.kind:
 		"story": story(spec.card.scene, int(spec.card.step))
 		"story_slot":
@@ -38,16 +39,18 @@ func sun(at: Vector2, radius := 17.0) -> void:
 		line(at+ray*(radius+4),at+ray*(radius+12),GOLD,3)
 
 func plant(at: Vector2, grown := true) -> void:
-	line(at,at-Vector2(0,35),Color("b7df89"),5)
-	line(at-Vector2(0,15),at-Vector2(15,25),Color("b7df89"),5)
+	line(at,at-Vector2(0,35),Color("4c7b36"),5)
+	line(at-Vector2(0,15),at-Vector2(15,25),Color("4c7b36"),5)
 	if grown:
 		for i in range(6): draw_circle(at-Vector2(0,42)+Vector2.from_angle(i*TAU/6)*10,7,GOLD)
 		draw_circle(at-Vector2(0,42),5,INK)
+	else:
+		draw_circle(at-Vector2(0,37),9,Color("aa7256"))
 
 func water(at: Vector2, count := 3) -> void:
 	for i in range(count):
 		var p := at+Vector2(i*14,0)
-		line(p,p+Vector2(-4,13),Color("9bdfff"),4)
+		line(p,p+Vector2(-4,13),Color("236e96"),4)
 
 func container(at: Vector2, width := 90.0) -> void:
 	line(at-Vector2(width/2,25),at+Vector2(-width/2+8,20))
@@ -55,6 +58,11 @@ func container(at: Vector2, width := 90.0) -> void:
 	line(at+Vector2(width/2-8,20),at+Vector2(width/2,-25))
 
 func story(scene: String, step: int) -> void:
+	draw_rect(Rect2(16,114,268,22),Color("cfddbb"))
+	if scene=="garden": draw_style_box(preload("res://core/design.gd").style(Color("d9ac82")),Rect2(104,88,92,40))
+	if scene=="bread": draw_circle(Vector2(150,88),48,Color("e8c794"))
+	if scene=="rain": draw_rect(Rect2(24,12,252,99),Color("d6e9ec"))
+	if scene=="paint": draw_rect(Rect2(88,18,124,114),Color("fff5db"))
 	match scene:
 		"garden":
 			container(Vector2(150,110),90)
@@ -96,7 +104,7 @@ func story(scene: String, step: int) -> void:
 			if step == 0: draw_rect(Rect2(105,30,90,90),INK,false,3)
 			else:
 				var p := PackedVector2Array([Vector2(150,20),Vector2(190,60),Vector2(150,100),Vector2(110,60)])
-				draw_colored_polygon(p,Color("9bdfff"))
+				draw_colored_polygon(p,Color("236e96"))
 				line(Vector2(150,20),Vector2(150,100),INK,3)
 				if step >= 2: line(Vector2(150,100),Vector2(185,140),GOLD,3)
 				if step == 3:
@@ -187,17 +195,33 @@ func experiment_view() -> void:
 				line(Vector2(x,75),Vector2(x,35),INK,3)
 				draw_colored_polygon(PackedVector2Array([Vector2(x,35),Vector2(x+25,65),Vector2(x,65)]),GOLD)
 		"light", "water", "garden":
-			plant(Vector2(195,110),result==1)
-			container(Vector2(195,124),60)
+			draw_rect(Rect2(170,110,70,27),Color("ac7048"))
+			plant(Vector2(205,112),result==1)
 			if experiment == "light":
-				draw_rect(Rect2(40,55,45,25),INK,false,3)
-				if result == 1: line(Vector2(85,68),Vector2(195,75),GOLD,6)
-				else: line(Vector2(85,68),Vector2(140,25),GOLD,3)
+				draw_rect(Rect2(24,57,55,35),Color("e2ba59"))
+				draw_circle(Vector2(80,74),15,Color("a66c22"))
+				var destination := Vector2(205,74) if int(values[0])==2 else Vector2(150,24+int(values[0])*20)
+				if int(values[1])==1:
+					draw_colored_polygon(PackedVector2Array([Vector2(86,66),destination-Vector2(0,16),destination+Vector2(0,16),Vector2(86,82)]),Color("f1d57e"))
+				line(Vector2(79,58),Vector2(79,90),INK,4)
 			else:
-				water(Vector2(50,55),3)
-				line(Vector2(70,85),Vector2(180 if result==1 else 110,100),INK,4)
-				if result==1: water(Vector2(175,55),3)
-				if experiment=="garden" and int(values[0])==2: water(Vector2(155,115),5)
+				draw_style_box(preload("res://core/design.gd").style(Color("90cddd")),Rect2(25,14,55,48))
+				line(Vector2(32,35),Vector2(73,35),Color("236e96"),3)
+				line(Vector2(53,62),Vector2(53,83),INK,12)
+				line(Vector2(53,83),Vector2(137,83),INK,12)
+				var destination := 205.0
+				if experiment=="water": destination=[95.0,205.0,265.0][int(values[0])]
+				var flowing := int(values[1])==1 if experiment=="water" else int(values[0])>0
+				line(Vector2(137,83),Vector2(destination,105),INK,12)
+				if flowing:
+					line(Vector2(53,62),Vector2(53,83),Color("236e96"),6)
+					line(Vector2(53,83),Vector2(137,83),Color("236e96"),6)
+					line(Vector2(137,83),Vector2(destination,105),Color("236e96"),6)
+					water(Vector2(destination-7,109),2)
+				line(Vector2(108,70),Vector2(108,94) if flowing else Vector2(132,70),Color("92541e"),5)
+				if experiment=="garden":
+					for i in range(int(values[1])): sun(Vector2(255+i*22,28),8)
+					if int(values[0])==2: water(Vector2(160,128),5)
 		"balance":
 			line(Vector2(150,60),Vector2(150,125),GOLD,5)
 			var tilt := 0 if result==1 else (18 if values[0]>values[1] else -18)
