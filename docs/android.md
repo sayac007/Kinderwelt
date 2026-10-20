@@ -22,3 +22,15 @@ GitHub Actions führt die aktuelle Testsuite, echte Software-Renderings und Andr
 ## Google Play bleibt offen
 
 Es gibt weder eine Release-Signatur noch eine Upload-Freigabe. Eine Betreiberentscheidung zu App-ID und dauerhaftem Signierschlüssel, sicherer Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte und aktuelle Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben sind erforderlich. Es wird keine Uploadbereitschaft behauptet.
+
+## Fertige Testdateien und Actions-Downloads
+
+Die tatsächlich geprüften lokalen Dateien dieser Lieferung liegen unter `build/android-v06-verified/` (Standard) und `build/android-v06-preview/` (separate Test-App). Jeweils `kinderwelt-debug.apk` installieren; `kinderwelt-unsigned.aab` ist das unsignierte Prüfbundle. Größen, Hashes und Grenzen stehen in [test-report.md](test-report.md).
+
+Nach einem erfolgreichen GitHub-Lauf lassen sich Dateien so herunterladen:
+
+1. [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml) öffnen und den Lauf des Branches `feat/science-languages-classics` wählen.
+2. Auf der Zusammenfassungsseite unten unter **Artifacts** `android-development-artifacts` herunterladen (GitHub-Anmeldung erforderlich).
+3. ZIP entpacken; `kinderwelt-debug.apk` ist die Standard-App. Die Pipeline baut dort keine separate Preview-Identität, außer sie wird ausdrücklich mit `--preview` aufgerufen.
+
+Artefakte werden sieben Tage aufbewahrt und existieren erst nach erfolgreichem Export/Upload. Der Remote-Status kann aus dieser Umgebung wegen API-Forbidden nicht bestätigt werden. Lokale APK-/AAB-Prüfungen sind davon getrennt dokumentiert.
