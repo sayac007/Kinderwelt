@@ -16,6 +16,7 @@ for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden',
     PAYLOAD += ['assets/assets/music/'+track+ext+'.import','assets/.godot/imported/'+track+ext+'-fixture'+('.sample' if ext=='.wav' else '.oggvorbisstr')]
 for name in ['choose','walk','success','again']+[task+suffix for task in TASK_IDS for suffix in ['', '_hint']]:
     PAYLOAD += ['assets/assets/voice/quest/'+name+'.ogg.import','assets/.godot/imported/'+name+'.ogg-fixture.oggvorbisstr']
+PAYLOAD += ['assets/assets/quest/OFL.txt','assets/assets/voice/quest/MODEL_CARD.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon']]
 
 class VerificationTests(unittest.TestCase):
     def test_preview_identity_is_explicit_and_preserves_main_app(self):

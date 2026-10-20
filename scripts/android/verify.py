@@ -39,6 +39,11 @@ def check_payload(names):
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml')),'Sensitive or specification file packaged'
     required=['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
+    for notice in ['assets/quest/OFL.txt','assets/voice/quest/MODEL_CARD.txt']:
+        assert notice in assets,'Missing bundled notice: '+notice
+    for image in ['landscape','icons','objects','appicon']:
+        assert any(n.startswith('.godot/imported/'+image+'.png-') and n.endswith('.ctex') for n in assets),'Missing actual image texture: '+image
+    assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'
     for script in ['game','world','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'

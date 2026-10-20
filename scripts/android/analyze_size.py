@@ -13,7 +13,7 @@ def analyze(path):
             n=entry.filename
             category=('native/'+n.split('/')[-2] if n.endswith('.so') else
                       'audio' if n.endswith(('.sample','.ogg','.wav','.oggvorbisstr','.mp3')) else
-                      'fonts' if n.endswith(('.ttf','.otf','.woff','.woff2')) else
+                      'fonts' if n.endswith(('.ttf','.otf','.woff','.woff2','.fontdata')) else
                       'graphics' if n.endswith(('.ctex','.png','.webp','.svg')) else
                       'application/imports/other' if 'assets/' in n else 'Android/metadata/classes')
             g=groups[category];g['raw_bytes']+=entry.file_size;g['stored_bytes']+=entry.compress_size;g['files']+=1
