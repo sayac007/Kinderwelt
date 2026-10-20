@@ -13,7 +13,7 @@ jobs:
       - name: Install checksum-pinned Android toolchain
         # Repository maintainers must accept the Android SDK licence before enabling this workflow.
         run: python3 scripts/android/install.py --root "$RUNNER_TEMP/tools" --accept-android-sdk-license
-      - name: Negative regression fixtures for artifact checks
+      - name: Android subprocess and artifact checker regressions
         run: python3 -m unittest discover -s tests/android -v
       - name: Build and verify development APK and unsigned AAB
         run: |

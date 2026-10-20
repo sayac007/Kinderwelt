@@ -101,3 +101,21 @@ normally. The official 4.7.2 template retains AGP 8.6.1, which warns that API 36
 is above its tested compileSdk range; the warning is not suppressed. Actual
 package validation is required each run, and owner review of a supported future
 engine/toolchain update remains a release consideration.
+
+## Export failure diagnostics and hosted runners
+
+The build sets both `ANDROID_HOME` and `ANDROID_SDK_ROOT` to the same resolved,
+pinned SDK directory. Ubuntu Actions runners already export a system SDK root;
+changing only `ANDROID_HOME` leaves two valid SDK locations and AGP 8.6.1 rejects
+that configuration before `compileStandardDebugJavaWithJavac`.
+
+On subprocess failure, timeout or a Godot error with exit status zero, build.py
+prints a grouped, ANSI-clean excerpt directly to stdout: initial context, the
+first/last Gradle/Godot cause blocks and the final 80 lines, with original line
+numbers. An Actions error annotation identifies the failed log. Complete logs
+remain in the existing always-uploaded artifact. Child log lines are prefixed so
+they cannot become workflow commands. Successful import/APK/AAB phases print PASS.
+No environment dump or release-signing invocation was added.
+
+See [the CI correction evidence](android-ci-fix-report.md) for the reproduced
+SDK conflict, access limitations and the actual rerun results.
