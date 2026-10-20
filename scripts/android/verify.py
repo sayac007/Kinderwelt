@@ -10,10 +10,10 @@ PACKAGE='org.example.kinderwelt'
 def command(args):
     return subprocess.check_output([str(x) for x in args],stderr=subprocess.STDOUT,text=True)
 
-def check_manifest(root):
-    assert root.get('package')==PACKAGE,'Unexpected package'
-    assert root.get(ANDROID+'versionCode')=='4','Unexpected version code'
-    assert root.get(ANDROID+'versionName')=='0.4.0','Unexpected version name'
+def check_manifest(root,package=PACKAGE):
+    assert root.get('package')==package,'Unexpected package'
+    assert root.get(ANDROID+'versionCode')=='5','Unexpected version code'
+    assert root.get(ANDROID+'versionName')=='0.5.0','Unexpected version name'
     sdk=root.find('uses-sdk')
     assert sdk is not None and sdk.get(ANDROID+'minSdkVersion')=='24' and sdk.get(ANDROID+'targetSdkVersion')=='36','SDK mismatch'
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
@@ -29,7 +29,7 @@ def check_manifest(root):
         assert len(targets)==1,'Invalid launcher target'
         activity=targets[0]
     assert activity.get(ANDROID+'screenOrientation') in {'13','fullUser'},'Expected deliberate portrait and landscape rotation'
-    return {'package':PACKAGE,'version_name':'0.4.0','version_code':4,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
+    return {'package':package,'version_name':'0.5.0','version_code':5,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
 
 def check_payload(names):
     assets=[n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')]
@@ -37,31 +37,23 @@ def check_payload(names):
     for n in assets:
         assert not re.search(r'(^|/)(tests|scripts|docs|addons|qa-results|android|build)(/|$)',n),'Development files packaged: '+n
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml')),'Sensitive or specification file packaged'
-    for module in ['logic','math','language','autonomy','social']:
-        assert 'games/'+module+'/levels.json' in assets,'Missing task content: '+module
-    for module in ['logic','math','language','autonomy','social']:
-        assert 'assets/music/'+module+'.wav.import' in assets,'Missing music import: '+module
-        assert any(n.startswith('.godot/imported/'+module+'.wav-') and n.endswith('.sample') for n in assets),'Missing playable music payload: '+module
-    assert 'assets/music/manifest.json' in assets,'Missing music provenance'
-    for track in ['workshop','stars']:
-        assert 'assets/music/adventure/'+track+'.wav.import' in assets,'Missing adventure music import: '+track
-        assert any(n.startswith('.godot/imported/'+track+'.wav-') and n.endswith('.sample') for n in assets),'Missing playable adventure track: '+track
-    assert 'assets/music/adventure/manifest.json' in assets,'Missing adventure music provenance'
-    for script in ['game','power','world']:
-        assert any(n.startswith('games/adventure/'+script+'.gd') for n in assets),'Missing adventure runtime: '+script
-    for script in ['game','model','board']:
-        assert any(n.startswith('games/water/'+script+'.gd') for n in assets),'Missing water mission: '+script
-    assert any(n.startswith('core/modern/hero.gd') for n in assets),'Missing children'
-    for name in ['meadow','gears','market','stories','garden','together','rain','victory']:
-        assert 'assets/music/modern/'+name+'.ogg.import' in assets,'Missing modern music import: '+name
-        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing playable modern track: '+name
-    for name in ['logic','math','language','autonomy','social','heroes','musicbox','settings','parents','mina','leo','sam','jule','water_0','water_1','water_2','water_help','water_success']:
-        assert 'assets/voice/'+name+'.ogg.import' in assets,'Missing voice import: '+name
-        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing offline voice: '+name
-    for manifest in ['assets/voice/manifest.json','assets/music/modern/manifest.json']:
-        assert manifest in assets,'Missing modern provenance: '+manifest
-    assert 'content/modules.json' in assets and 'content/locales/de.json' in assets,'Missing registry/locale'
-    assert any('core/main.gd' in n for n in assets),'Missing application code'
+    required=['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
+    for item in required: assert item in assets,'Missing quest asset: '+item
+    for script in ['game','world','task','picture','progress','choice']:
+        assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
+    assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
+    for child in ['mina','leo','sam','jule']:
+        assert 'assets/quest/'+child+'.png.import' in assets,'Missing character: '+child
+        assert any(n.startswith('.godot/imported/'+child+'.png-') and n.endswith('.ctex') for n in assets),'Missing character texture: '+child
+    for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
+        ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
+        assert 'assets/music/'+track+ext+'.import' in assets,'Missing music import: '+track
+        assert any(n.startswith('.godot/imported/'+track+ext+'-') and n.endswith('.sample' if ext=='.wav' else '.oggvorbisstr') for n in assets),'Missing playable music: '+track
+    tasks=json.loads((Path(__file__).resolve().parents[2]/'games/quest/tasks.json').read_text())['tasks']
+    for name in ['choose','walk','success','again']+[t['id']+suffix for t in tasks for suffix in ['', '_hint']]:
+        assert 'assets/voice/quest/'+name+'.ogg.import' in assets,'Missing neural speech: '+name
+        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing playable neural speech: '+name
+    assert not any(n.startswith(('games/adventure/','games/water/','core/modern/','content/')) for n in assets),'Obsolete runtime packaged'
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
     return len(assets)
 
@@ -87,13 +79,13 @@ def inspect_zip(path,aab=False):
         return {'assets_checked':check_payload(names),'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',choices=[PACKAGE,PACKAGE+'.preview'],default=PACKAGE);a=p.parse_args()
     tools=a.tools;out=a.output;bt=tools/'android-sdk/build-tools/36.1.0';java=tools/'android-jdk/bin/java';bundle=tools/'android-tools/bundletool-1.18.2.jar'
     report={'status':'PASS','upload_readiness':'BLOCKED','artifacts':{}}
     apk=out/'kinderwelt-debug.apk';aab=out/'kinderwelt-unsigned.aab'
     apk_data=inspect_zip(apk)
     badging=command([bt/'aapt2','dump','badging',apk]);(out/'apk-badging.txt').write_text(badging)
-    for pattern in [r"package: name='org.example.kinderwelt' versionCode='4' versionName='0.4.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
+    for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='5' versionName='0.5.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
         assert re.search(pattern,badging),'APK manifest mismatch'
     permissions=command([bt/'aapt2','dump','permissions',apk]);assert 'uses-permission' not in permissions,'Unexpected APK permissions'
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
@@ -103,10 +95,10 @@ def main():
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':PACKAGE,'version_name':'0.4.0','version_code':4,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':a.package,'version_name':'0.5.0','version_code':5,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
-    aab_data=inspect_zip(aab,True);aab_data.update(check_manifest(ET.fromstring(manifest)));aab_data['signature']='UNSIGNED'
+    aab_data=inspect_zip(aab,True);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'
     rendering=ET.fromstring(manifest).find('application/meta-data[@'+ANDROID+'name="org.godotengine.rendering.method"]')
     assert rendering is not None and rendering.get(ANDROID+'value')=='gl_compatibility','Unexpected Android rendering backend'
     aab_data['rendering']='gl_compatibility'

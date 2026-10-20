@@ -1,14 +1,12 @@
 .godot/
-*.tmp
-# Development-only test framework and generated technical QA evidence.
-/addons/gut
+.tools/
+/addons/
 /qa-results/
-__pycache__/
-
-# Generated Android toolchain, exports and local signing material.
 /build/
 /android/build/
 /android/.build_version
+__pycache__/
+*.tmp
 *.keystore
 *.jks
 *.p12

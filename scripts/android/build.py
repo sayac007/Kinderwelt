@@ -58,6 +58,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tools',type=Path,default=Path('/workspace/tools'))
     p.add_argument('--output',type=Path,default=ROOT/'build/android')
+    p.add_argument('--preview',action='store_true',help='Build separate org.example.kinderwelt.preview app; preserves existing installations')
     a=p.parse_args();tools=a.tools.resolve();out=a.output.resolve()
     out.mkdir(parents=True,exist_ok=False) # no stale artifact may appear successful
     godot=os.environ.get('GODOT',str(tools/'godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64'))
@@ -68,10 +69,15 @@ def main():
     source=hashlib.sha256()
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
         temp=Path(directory);app=temp/'app';app.mkdir()
-        for name in ['core','games','content','assets','project.godot','export_presets.cfg']:
+        for name in ['core','games','assets','project.godot','export_presets.cfg']:
             src=ROOT/name;dest=app/name
             if src.is_dir():shutil.copytree(src,dest)
             else:shutil.copy2(src,dest)
+        if a.preview:
+            preset=app/'export_presets.cfg'
+            preset.write_text(preset.read_text().replace('package/unique_name="org.example.kinderwelt"','package/unique_name="org.example.kinderwelt.preview"').replace('package/name="Kinderwelt"','package/name="Kinderwelt 0.5 Test"'))
+            project=app/'project.godot'
+            project.write_text(project.read_text().replace('config/name="Kinderwelt"','config/name="Kinderwelt 0.5 Test"'))
         for file in sorted(app.rglob('*')):
             if file.is_file():source.update(str(file.relative_to(app)).encode()+b'\0'+file.read_bytes())
         env=os.environ.copy()
@@ -113,9 +119,9 @@ def main():
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
         run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-    evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+    evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'package':'org.example.kinderwelt.preview' if a.preview else 'org.example.kinderwelt','signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
     (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
-    subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out)],check=True)
+    subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package']],check=True)
     subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
     print('Verified debug APK and unsigned AAB:',out)
 

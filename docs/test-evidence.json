@@ -1,0 +1,973 @@
+{
+  "functional_log": "/tmp/kinderwelt-clean-tests-fourth.log",
+  "render_log": "/tmp/kinderwelt-clean-render-final.log",
+  "render_scope": "Real Godot OpenGL llvmpipe desktop frames; simulated density is not an Android device",
+  "render_manifest": [
+    {
+      "name": "phone-heroes",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-heroes-move",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-heroes-think",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-heroes-success",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-world",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-0",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-solved",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-1",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-2",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-3",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-4",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-5",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-6",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-math-task-7",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-world",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-0",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-solved",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-1",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-2",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-3",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-4",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-5",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-6",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-german-task-7",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-world",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-0",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-solved",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-1",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-2",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-3",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-4",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-5",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-6",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "phone-logic-task-7",
+      "pixels": [
+        360,
+        800
+      ]
+    },
+    {
+      "name": "small-heroes",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-heroes-move",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-heroes-think",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-heroes-success",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-world",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-0",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-solved",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-1",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-2",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-3",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-4",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-5",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-6",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-math-task-7",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-world",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-0",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-solved",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-1",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-2",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-3",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-4",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-5",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-6",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-german-task-7",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-world",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-0",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-solved",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-1",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-2",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-3",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-4",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-5",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-6",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "small-logic-task-7",
+      "pixels": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "landscape-heroes",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-heroes-move",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-heroes-think",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-heroes-success",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-world",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-0",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-solved",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-1",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-2",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-3",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-4",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-5",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-6",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-math-task-7",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-world",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-0",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-solved",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-1",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-2",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-3",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-4",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-5",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-6",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-german-task-7",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-world",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-0",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-solved",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-1",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-2",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-3",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-4",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-5",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-6",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "landscape-logic-task-7",
+      "pixels": [
+        800,
+        360
+      ]
+    },
+    {
+      "name": "dense-heroes",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-heroes-move",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-heroes-think",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-heroes-success",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-world",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-0",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-solved",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-1",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-2",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-3",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-4",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-5",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-6",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-math-task-7",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-world",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-0",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-solved",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-1",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-2",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-3",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-4",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-5",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-6",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-german-task-7",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-world",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-0",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-solved",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-1",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-2",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-3",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-4",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-5",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-6",
+      "pixels": [
+        1080,
+        2398
+      ]
+    },
+    {
+      "name": "dense-logic-task-7",
+      "pixels": [
+        1080,
+        2398
+      ]
+    }
+  ],
+  "screenshots": {
+    "small-math-task-3.png": "97ec210cfdbbacf099a8c98da449c0e74d7f690e957a8a0748466edd13737f5c",
+    "landscape-math-task-4.png": "e0be4d41c5ac8f9a20b2a768c28e02a83d126f094b477fa3bc428ce301d8c917",
+    "phone-math-task-0.png": "c1f18ad6ae104da4ade58975c544bc6a680ebbd43006a684990d34bc24b0bb0e",
+    "phone-math-solved.png": "5db6e6dfba1fcef2d08bd5b3ba08592aa64b02125d9b5b3c57dd5c8240275e67",
+    "phone-math-world.png": "2a3e43bc0c60af17081a7e09b29319a1df43a4f475e880647d9dfca84640162a",
+    "phone-logic-task-0.png": "b502dd6855800698ec161c3af3f516399ae84dd22d2e830e50c8c0890966c30d",
+    "small-heroes.png": "e116b5b3188fb30523d146e1ae37da63d108fa9937007d9bdb1fefa085bacc70",
+    "dense-heroes.png": "d4f378e192ccfe74d83f480bbe1325f9b088f7f1c82a5707611de30e61e6f783",
+    "phone-german-task-3.png": "5c53d921ecee03f37d3fe7103612a7e13281d913269d7967bc5e0c1e765ceb2c",
+    "phone-heroes.png": "52e5c2574a6a466769b393abf13a9a2a10b1bd59c2f3d83b3895489536827c8b"
+  },
+  "technical_only": true,
+  "device_and_child_trials": "OPEN"
+}

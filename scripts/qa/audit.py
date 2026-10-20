@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""Bounded local source/content audit; not a privacy or educational certification."""
+import json,re
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+findings=[]
+for folder in ['core','games']:
+ for path in (ROOT/folder).rglob('*.gd'):
+  if re.search(r'HTTPRequest|HTTPClient|WebSocket|JavaScriptBridge|OS\.(execute|create_process|shell_open)',path.read_text()):findings.append(str(path.relative_to(ROOT)))
+for line in (ROOT/'export_presets.cfg').read_text().splitlines():
+ if re.search(r'permissions/\w+\s*=true',line):findings.append('enabled Android permission')
+tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
+assert len(tasks)==24 and len({t['id'] for t in tasks})==24
+assert {t['subject'] for t in tasks}=={'math','german','logic'}
+for s in ['math','german','logic']:assert sum(t['subject']==s for t in tasks)==8
+for path in ['core/main.gd','core/modern','games/adventure','games/water','content']:
+ if (ROOT/path).exists():findings.append('obsolete project component: '+path)
+report={'technical_status':'PASS' if not findings else 'FAIL','task_count':24,'subjects':3,'findings':findings,'scope':'Bounded runtime network/permission/source checks, not a security certification','device_testing':'OPEN','child_usability':'NOT EMPIRICALLY EVALUATED','learning_effect':'NOT ESTABLISHED'}
+output=ROOT/'qa-results';output.mkdir(exist_ok=True)
+(output/'audit.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report,indent=2))
+raise SystemExit(bool(findings))

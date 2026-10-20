@@ -5,8 +5,6 @@ var players: Array[AudioStreamPlayer] = []
 var active := 0
 var world := ""
 var transition: Tween
-const BANKS := {"retro":"res://assets/music/"}
-var palette := "retro"
 var suspended := false
 var ducked := false
 func _ready() -> void:
@@ -26,8 +24,9 @@ func set_ducked(value: bool) -> void:
 func set_world(next: String) -> void:
 	if next==world: return
 	if not is_inside_tree() or store==null: return
-	var registry = preload("res://core/modern/tracks.gd").ITEMS
-	var path: String = registry[next].path if registry.has(next) else str(BANKS.get(palette,BANKS.retro))+next+".wav"
+	var registry = preload("res://core/quest/tracks.gd").ITEMS
+	if not registry.has(next): return
+	var path: String = registry[next].path
 	if not ResourceLoader.exists(path): return
 	var track := load(path) as AudioStream
 	if track==null: return

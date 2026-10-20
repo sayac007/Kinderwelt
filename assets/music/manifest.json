@@ -1,172 +1,65 @@
 {
-  "provenance": "Original synthesized retro miniature studies; public-domain compositional inspiration, no sampled recordings or third-party arrangements.",
-  "license": "MIT (original code and generated recordings); underlying works require jurisdiction-specific public-domain review before distribution.",
-  "orchestral_variant": "not produced; shared MIDI-note themes are the production input",
-  "themes": {
-    "logic": {
-      "file": "assets/music/logic.wav",
-      "duration_seconds": 22.857142857142858,
-      "sample_rate": 22050,
-      "peak": 0.19611,
-      "sha256": "61c8b890cebbe81207371dcae21844dbc8db621da8048f4ab5dcbb783c21ae91",
-      "inspiration": "Liszt · Liebesträume Nr. 3",
-      "bpm": 84,
-      "notes_midi": [
-        72,
-        72,
-        72,
-        71,
-        72,
-        76,
-        75,
-        72,
-        70,
-        68,
-        67,
-        68,
-        72,
-        70,
-        68,
-        0
-      ],
-      "bass_midi": [
-        56,
-        63,
-        65,
-        60
-      ]
+  "authorship": "Original synthesized Kinderwelt compositions; no external recordings or game soundtrack samples.",
+  "tracks": [
+    {
+      "id": "bounce",
+      "file": "bounce.ogg",
+      "bytes": 149470,
+      "sha256": "4d7efcefd3073f49cae97179848decb44e11c0d009e407dee9dd58ec8bd7bb88"
     },
-    "math": {
-      "file": "assets/music/math.wav",
-      "duration_seconds": 17.77777777777778,
-      "sample_rate": 22050,
-      "peak": 0.19521,
-      "sha256": "44edcce96b1565201528712b6da65fd0f13f023d529e11a18fad727bdc072186",
-      "inspiration": "Liszt · Ungarische Rhapsodie Nr. 2",
-      "bpm": 108,
-      "notes_midi": [
-        69,
-        70,
-        73,
-        74,
-        73,
-        70,
-        69,
-        0,
-        76,
-        74,
-        73,
-        70,
-        69,
-        68,
-        69,
-        0
-      ],
-      "bass_midi": [
-        45,
-        52,
-        50,
-        52
-      ]
+    {
+      "id": "friends",
+      "file": "friends.ogg",
+      "bytes": 145220,
+      "sha256": "792cd15df775384bc3bd7cd4eab95febf2aa002a8ecf0f0808c440b5219e1b22"
     },
-    "language": {
-      "file": "assets/music/language.wav",
-      "duration_seconds": 24.615374149659864,
-      "sample_rate": 22050,
-      "peak": 0.19135,
-      "sha256": "9fd7a4e228c5e56221fd1cb08d0359a251b7ed984d0cb725756e2d625c7b56aa",
-      "inspiration": "Puccini · O mio babbino caro",
-      "bpm": 78,
-      "notes_midi": [
-        67,
-        72,
-        71,
-        72,
-        76,
-        74,
-        72,
-        71,
-        69,
-        67,
-        69,
-        72,
-        71,
-        69,
-        67,
-        0
-      ],
-      "bass_midi": [
-        48,
-        55,
-        57,
-        55
-      ]
+    {
+      "id": "funkenflug",
+      "file": "funkenflug.wav",
+      "bytes": 1282954,
+      "sha256": "6bf0c2dc98b4248e5057df5c98c1ab00954e1bc36951bc1e4c568c50c5b958fa"
     },
-    "autonomy": {
-      "file": "assets/music/autonomy.wav",
-      "duration_seconds": 18.461496598639457,
-      "sample_rate": 22050,
-      "peak": 0.19613,
-      "sha256": "a871adadf06dfc5784a4bd54ce300d70bc0fab36e7ebddd6ac6adbd17b4d1545",
-      "inspiration": "Liszt · La Campanella",
-      "bpm": 104,
-      "notes_midi": [
-        83,
-        0,
-        83,
-        82,
-        83,
-        78,
-        79,
-        83,
-        81,
-        79,
-        78,
-        76,
-        78,
-        81,
-        79,
-        0
-      ],
-      "bass_midi": [
-        52,
-        59,
-        57,
-        59
-      ]
+    {
+      "id": "garden",
+      "file": "garden.ogg",
+      "bytes": 151935,
+      "sha256": "a9ada6d41e8c04c2c4c1a3d3a52095c4cfeb25d9e099dbd59eb394253d4faa3e"
     },
-    "social": {
-      "file": "assets/music/social.wav",
-      "duration_seconds": 23.414603174603176,
-      "sample_rate": 22050,
-      "peak": 0.19519,
-      "sha256": "db945d99ca913b5f227e4de12267a1c6243498e82b6b6dea9eb4e346053d79f5",
-      "inspiration": "Puccini · Nessun dorma",
-      "bpm": 82,
-      "notes_midi": [
-        71,
-        74,
-        76,
-        78,
-        76,
-        74,
-        71,
-        0,
-        72,
-        76,
-        79,
-        78,
-        76,
-        74,
-        71,
-        0
-      ],
-      "bass_midi": [
-        43,
-        50,
-        48,
-        50
-      ]
+    {
+      "id": "gears",
+      "file": "gears.ogg",
+      "bytes": 140263,
+      "sha256": "016fb8f5881e77d463c8f8caed43a0f9186b94ddd6ba6df6dadfa3fd621bde9c"
+    },
+    {
+      "id": "meadow",
+      "file": "meadow.ogg",
+      "bytes": 156431,
+      "sha256": "ee6b333cee066fe0f072a2bd5119647d495b0da60edc58aa43f1ef263a7597ba"
+    },
+    {
+      "id": "rain",
+      "file": "rain.ogg",
+      "bytes": 166443,
+      "sha256": "840fcb086d94b63ba6814a8c6352d1cf1e64195d9f70a40d191384272577fc9e"
+    },
+    {
+      "id": "stars",
+      "file": "stars.wav",
+      "bytes": 1159934,
+      "sha256": "8f7a647313a6f06c8b66f2c8c6812bccc1a16b8d15b7e7ad8961eb3bd5df5b55"
+    },
+    {
+      "id": "stories",
+      "file": "stories.ogg",
+      "bytes": 172173,
+      "sha256": "de779a3115bdc965a195ed26a5128117d6a0fe9b9262395d60dcbcd2e5e613dd"
+    },
+    {
+      "id": "victory",
+      "file": "victory.ogg",
+      "bytes": 133129,
+      "sha256": "2cb3ceaa3429165b84ac2805e15387a9b4282dcead1f25438da3daea9645749d"
     }
-  }
+  ]
 }

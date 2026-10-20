@@ -1,24 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-# Isolate tests from real local saves and permit use in sandboxed cloud tasks.
-TEST_STATE=$(mktemp -d /tmp/kinderwelt-tests.XXXXXX)
-trap 'rm -rf "$TEST_STATE"' EXIT
-export XDG_DATA_HOME="$TEST_STATE/data" XDG_CONFIG_HOME="$TEST_STATE/config" XDG_CACHE_HOME="$TEST_STATE/cache"
+STATE=$(mktemp -d /tmp/kinderwelt-tests.XXXXXX)
+trap 'rm -rf "$STATE"' EXIT
+export XDG_DATA_HOME="$STATE/data" XDG_CONFIG_HOME="$STATE/config" XDG_CACHE_HOME="$STATE/cache"
 mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
-run_checked() {
-  local log="$TEST_STATE/run.log"
-  local result=0
-  timeout 120 "${GODOT:-godot}" "$@" >"$log" 2>&1 || result=$?
-  cat "$log"
-  if (( result != 0 )); then return "$result"; fi
-  if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$log"; then return 1; fi
-}
-run_checked --headless --path . --editor --import --quit
-run_checked --headless --path . --script tests/smoke.gd
-run_checked --headless --path . --script tests/learning.gd
-run_checked --headless --path . --script tests/input.gd
-run_checked --headless --path . --script tests/scenarios.gd
-run_checked --headless --path . --script tests/adventure.gd
-run_checked --headless --path . --script tests/modern.gd
-run_checked --headless --path . --script tests/boot.gd
+for SCRIPT in import quest boot; do
+  RESULT=0
+  if [[ "$SCRIPT" == import ]]; then
+    timeout 120 "${GODOT:-godot}" --headless --path . --editor --import --quit >"$STATE/run.log" 2>&1 || RESULT=$?
+  else
+    timeout 120 "${GODOT:-godot}" --headless --path . -s "tests/$SCRIPT.gd" >"$STATE/run.log" 2>&1 || RESULT=$?
+  fi
+  cat "$STATE/run.log"
+  if ((RESULT!=0)); then exit "$RESULT"; fi
+  if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$STATE/run.log"; then exit 1; fi
+done
+python3 -m unittest discover -s tests/android -v
+python3 scripts/qa/audit.py

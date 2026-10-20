@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3]
-[ext_resource type="Script" path="res://core/modern/hero.gd" id="1"]
-[node name="Kinderheld" type="Control"]
-mouse_filter = 2
-script = ExtResource("1")

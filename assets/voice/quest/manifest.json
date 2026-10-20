@@ -1,0 +1,375 @@
+{
+  "engine": "Piper 1.4.2 (development tool only)",
+  "model": "de_DE-thorsten-medium",
+  "model_source": "k2-fsa/sherpa-onnx: tts-models release, vits-piper-de_DE-thorsten-medium.tar.bz2 (URL in docs/subject-adventure-v05.md)",
+  "model_sha256": "2d98b40baac55e4206f64114110a3474807e26440b80d465cd202af1e95be5e0",
+  "dataset_license": "CC0, see Thorsten MODEL_CARD.txt",
+  "runtime": "Bundled Vorbis only; no network, microphone, model or TTS engine",
+  "human_listening_review": "OPEN; synthetic voice, not an actor recording",
+  "clips": [
+    {
+      "id": "choose",
+      "text": "Wer bist du heute? Tippe auf eine Figur. Dann geht es los.",
+      "seconds": 3.4829931972789114,
+      "bytes": 26422,
+      "sha256": "743760a20ae18f08c21d22b677528335dc7a960ea97ba0a6c26c5ca1c84fd685"
+    },
+    {
+      "id": "walk",
+      "text": "Tippe auf ein Schild. Deine Figur läuft dorthin.",
+      "seconds": 2.647074829931973,
+      "bytes": 20514,
+      "sha256": "01c335ba89b3ba5900ce4b86d1a13f6deba01a1554c2b1cfddb9d00121d7b7a0"
+    },
+    {
+      "id": "success",
+      "text": "Das passt! Du hast es geschafft.",
+      "seconds": 2.10140589569161,
+      "bytes": 17601,
+      "sha256": "1cbad97fc1cd2de58eec8da3e952da952b5590a1a26434acb5ff2615081226f8"
+    },
+    {
+      "id": "again",
+      "text": "Das passt noch nicht. Schau noch einmal. Du kannst es ausprobieren.",
+      "seconds": 4.249251700680272,
+      "bytes": 29705,
+      "sha256": "4052b81d86cc9e6138df0ed620ebea8a4b4ddc981d0bf8cb98205f281bc8c31f"
+    },
+    {
+      "id": "math_count",
+      "text": "Wie viele Äpfel siehst du?",
+      "seconds": 1.6950566893424037,
+      "bytes": 13449,
+      "sha256": "46a696a9fdd9d04c805fa04ba8307ea7f1254d6dcd537fa1d2ef9d2ad130a0e1"
+    },
+    {
+      "id": "math_count_hint",
+      "text": "Tippe jeden Apfel einmal an. Zähle dabei mit.",
+      "seconds": 2.681904761904762,
+      "bytes": 20544,
+      "sha256": "a1a45c6f147e067b479424108a2c4b648c7f66a55cbe5b82cd4a3b06766f50c2"
+    },
+    {
+      "id": "math_add",
+      "text": "Drei Äpfel und zwei Äpfel. Wie viele sind es zusammen?",
+      "seconds": 3.5526530612244898,
+      "bytes": 25174,
+      "sha256": "5f1983a2b0b84b76cd33bc42db11db5801247abe356adc9f08731048fca5e720"
+    },
+    {
+      "id": "math_add_hint",
+      "text": "Zähle erst links. Zähle dann rechts weiter.",
+      "seconds": 2.5658049886621317,
+      "bytes": 20860,
+      "sha256": "b1a7695325bf239b0ab656e5b6f1faf8fe1e0d0cdea2452def21998c1664a748"
+    },
+    {
+      "id": "math_take",
+      "text": "Sieben Blätter. Drei fliegen weg. Wie viele bleiben?",
+      "seconds": 3.2856235827664397,
+      "bytes": 23343,
+      "sha256": "3a958833909154f7c31df47df861d11b3de80c7a873c8645563d93c7109bb316"
+    },
+    {
+      "id": "math_take_hint",
+      "text": "Zähle nur die Blätter ohne Kreuz.",
+      "seconds": 1.7182766439909296,
+      "bytes": 14625,
+      "sha256": "1714863968c1939bba3ea716442c5831a02a3f903865b3a9da9645fee216fe2f"
+    },
+    {
+      "id": "math_ten",
+      "text": "Vier Sterne sind schon da. Wie viele fehlen bis zehn?",
+      "seconds": 3.030204081632653,
+      "bytes": 23116,
+      "sha256": "c985b2c84ef2008845f0fe33ee0916e6de66d23e1a6551f4b0e04cd1c5350538"
+    },
+    {
+      "id": "math_ten_hint",
+      "text": "Zähle die leeren Sternplätze.",
+      "seconds": 1.6718367346938776,
+      "bytes": 14502,
+      "sha256": "b335d4ae323e4e1028ddcce82f6fc377526406c97215f3ffcf7557718a62a5e4"
+    },
+    {
+      "id": "math_compare",
+      "text": "Wo sind mehr Äpfel?",
+      "seconds": 1.3931972789115645,
+      "bytes": 12256,
+      "sha256": "8be48b1d69913fc64ef989d1f631fdf3447786ed43f09719ef499276068df90a"
+    },
+    {
+      "id": "math_compare_hint",
+      "text": "Vergleiche die beiden Mengen. Tippe die größere an.",
+      "seconds": 2.8560544217687074,
+      "bytes": 21331,
+      "sha256": "5f74f606a7899d1bac17ce9001f06faa790d2947c64a2d08841deb7ba0e8d2dd"
+    },
+    {
+      "id": "math_steps",
+      "text": "Zwei, vier, sechs. Welche Zahl kommt als Nächstes?",
+      "seconds": 3.7384126984126986,
+      "bytes": 26707,
+      "sha256": "210bceca88b0b42e980489ac0773e1d2c856df23bb62a59e37e4b7ec27d603ba"
+    },
+    {
+      "id": "math_steps_hint",
+      "text": "Es kommen jedes Mal zwei dazu.",
+      "seconds": 2.0085260770975055,
+      "bytes": 16733,
+      "sha256": "986357efcb7b403e4fc87aec3f1135ca7be718c6f0e4b17a5973bc125fa2eb05"
+    },
+    {
+      "id": "math_twenty",
+      "text": "Zehn und vier. Wie viel ist das zusammen?",
+      "seconds": 2.6586848072562357,
+      "bytes": 19748,
+      "sha256": "0aac8638d4806ebab79a7fee9a1e5fecc9f253aa47bb65cc35131910c4b9562d"
+    },
+    {
+      "id": "math_twenty_hint",
+      "text": "Die erste Menge ist zehn. Zähle vier weiter.",
+      "seconds": 2.414875283446712,
+      "bytes": 19292,
+      "sha256": "274cce398c0b5cc08671c15a05514468512eee2e5068d97955df0989dc12bb80"
+    },
+    {
+      "id": "math_split",
+      "text": "Fünf Sterne sind schon da. Wie viele fehlen bis acht?",
+      "seconds": 3.076643990929705,
+      "bytes": 22859,
+      "sha256": "aee59c059eacd1f5d42ac0955c6da6f89e0af4983f1a039551426c1d18f045b3"
+    },
+    {
+      "id": "math_split_hint",
+      "text": "Zähle die leeren Sternplätze.",
+      "seconds": 1.811156462585034,
+      "bytes": 15533,
+      "sha256": "6c057c2ce0d97d088f312963eaf6e6b81a109f49d28e4b5a37a73ee979df2946"
+    },
+    {
+      "id": "german_sun",
+      "text": "Sonne. Welcher Buchstabe passt am Anfang?",
+      "seconds": 2.786394557823129,
+      "bytes": 21253,
+      "sha256": "aeccc6af406369811c3d3b968ec21311cc0aa3655bde619a88e9566a4b0740cf"
+    },
+    {
+      "id": "german_sun_hint",
+      "text": "Das Wort Sonne beginnt mit S. Suche das S.",
+      "seconds": 2.8676643990929707,
+      "bytes": 22482,
+      "sha256": "f737ab4a506974453b18aa3d5e18df735e2516863a562c3a75fea1d8adcb16a4"
+    },
+    {
+      "id": "german_mouse",
+      "text": "Maus. Welcher Buchstabe passt am Anfang?",
+      "seconds": 2.8560544217687074,
+      "bytes": 21519,
+      "sha256": "a5374d30610fc562cd765c8532c20ac9509938003bbb09f64d6934bd6ccff4a8"
+    },
+    {
+      "id": "german_mouse_hint",
+      "text": "Maus beginnt mit M. Suche das M.",
+      "seconds": 2.2755555555555556,
+      "bytes": 17863,
+      "sha256": "8f2d57fdac14cc8495616715f4d32722e76fa1ce506520cd442e6521ac48babe"
+    },
+    {
+      "id": "german_apple",
+      "text": "Apfel. Welcher Buchstabe passt am Anfang?",
+      "seconds": 2.995374149659864,
+      "bytes": 21980,
+      "sha256": "8fb434f9336a8c7a9fecb837db330fd72ccbf4b10e83840fbcf78e02872f3010"
+    },
+    {
+      "id": "german_apple_hint",
+      "text": "Apfel beginnt mit A. Suche das A.",
+      "seconds": 2.426485260770975,
+      "bytes": 18928,
+      "sha256": "6af049603be6875a388d845b3da6a26baa3fc4fcf5dc7a4b5302fbf48c891535"
+    },
+    {
+      "id": "german_rhyme",
+      "text": "Was reimt sich auf Haus?",
+      "seconds": 1.5209070294784581,
+      "bytes": 12434,
+      "sha256": "47c0909ab16dc3bb685f8fe075c97f2d86bcdb73a8da16dc81036400a16b1224"
+    },
+    {
+      "id": "german_rhyme_hint",
+      "text": "Haus und Maus klingen hinten gleich.",
+      "seconds": 1.9853061224489796,
+      "bytes": 16575,
+      "sha256": "cfdd9f95b4961f22d4b9d927068c1aa4328cc58028991a6dd302a5dbb0eb9b22"
+    },
+    {
+      "id": "german_robot",
+      "text": "Roboter. Wie viele Silben hörst du?",
+      "seconds": 2.3568253968253967,
+      "bytes": 17746,
+      "sha256": "aa8040cc10cacf3665fd943e260a75fe24f2ab2e30219b4520e798a992e34a54"
+    },
+    {
+      "id": "german_robot_hint",
+      "text": "Sprich und klatsche: Ro. Bo. Ter. Das sind drei Silben.",
+      "seconds": 4.3769614512471655,
+      "bytes": 30086,
+      "sha256": "761a0284108644210ea1d4a14fd615d132b26d76fa3f60e3232fe466e289a06b"
+    },
+    {
+      "id": "german_read",
+      "text": "Welches Wort gehört zum Ball?",
+      "seconds": 1.6486167800453515,
+      "bytes": 14099,
+      "sha256": "464fdd713b931b9619224c832f3fdeba51f4e42c48201007bb06d305e69dfa2c"
+    },
+    {
+      "id": "german_read_hint",
+      "text": "B. A. L. L. Suche das Wort Ball.",
+      "seconds": 2.9605442176870747,
+      "bytes": 20556,
+      "sha256": "5338589929264a0a8797bb4427744287cfa8b29dbd8c00e347f6dd4ce6f5e953"
+    },
+    {
+      "id": "german_flower",
+      "text": "Blume. Wie viele Silben hörst du?",
+      "seconds": 2.3103854875283445,
+      "bytes": 16432,
+      "sha256": "9f28872416d6fb8eb076f03091c98f70ad688dd3a19ffb76a42cd5cc005db0db"
+    },
+    {
+      "id": "german_flower_hint",
+      "text": "Sprich und klatsche: Blu. Me. Das sind zwei Silben.",
+      "seconds": 4.098321995464852,
+      "bytes": 28204,
+      "sha256": "6a704cca43fdeee4d3506b389440da6e918eeb382c66846226a4688fa036b76f"
+    },
+    {
+      "id": "german_fish",
+      "text": "Fisch. Welcher Buchstabe passt am Anfang?",
+      "seconds": 3.01859410430839,
+      "bytes": 22193,
+      "sha256": "ae67914843d51f38cddcc6261545f4fea74ee1071944e23d39b29540071f2de2"
+    },
+    {
+      "id": "german_fish_hint",
+      "text": "Fisch beginnt mit F. Suche das F.",
+      "seconds": 2.3568253968253967,
+      "bytes": 18287,
+      "sha256": "fc35a1507d9c045be68a1a797eebf57b1bbcfe8d727d775c2122f88ee6eb9311"
+    },
+    {
+      "id": "logic_repeat",
+      "text": "Was kommt als Nächstes?",
+      "seconds": 1.3003174603174603,
+      "bytes": 12270,
+      "sha256": "6bfeb790c91d684ef2f55fb83839dde58768b917d55c4456a44151b082da5105"
+    },
+    {
+      "id": "logic_repeat_hint",
+      "text": "Apfel, Blatt. Apfel, Blatt. Nach dem Apfel kommt ein Blatt.",
+      "seconds": 4.121541950113379,
+      "bytes": 30316,
+      "sha256": "e3035b1a46d5931d1f3a05836072474d364de05c4f08152bfeedf9b4cc434342"
+    },
+    {
+      "id": "logic_triple",
+      "text": "Wie geht das Muster weiter?",
+      "seconds": 1.5905668934240362,
+      "bytes": 13735,
+      "sha256": "53c53b5256d22a86c5673b6a6057abbaaf2695b677dcfb10bc4fa9cf97e69b55"
+    },
+    {
+      "id": "logic_triple_hint",
+      "text": "Zwei Sterne, dann ein Mond. Jetzt kommt wieder ein Mond.",
+      "seconds": 3.2275736961451247,
+      "bytes": 24707,
+      "sha256": "aa87a772fe8bf4d49ab4e73c9435770de084dd30115f75ccc3683a2400bb809d"
+    },
+    {
+      "id": "logic_odd",
+      "text": "Was passt hier nicht dazu?",
+      "seconds": 1.555736961451247,
+      "bytes": 13737,
+      "sha256": "6682f6d5eac16607fa8a1388303b4b5089533eb20f2e4101ec77999d0a46b4c6"
+    },
+    {
+      "id": "logic_odd_hint",
+      "text": "Apfel, Blatt und Blume wachsen. Ein Ball wächst nicht.",
+      "seconds": 3.436553287981859,
+      "bytes": 25493,
+      "sha256": "1f03e3d8ff7a30af7122fb192e0867a09856a91b14ac30606fd53879c6328723"
+    },
+    {
+      "id": "logic_shadow",
+      "text": "Welcher Gegenstand passt zum Schatten?",
+      "seconds": 1.9040362811791383,
+      "bytes": 15848,
+      "sha256": "fcd24154874459ed0ff11ba37b0a8cb2a77cae759f47144b260bc5a6c26ba219"
+    },
+    {
+      "id": "logic_shadow_hint",
+      "text": "Vergleiche die Umrisse. Der Schatten zeigt einen Baum.",
+      "seconds": 3.1346938775510202,
+      "bytes": 23721,
+      "sha256": "d731daaacdd9f92c63adddeffc55c6cc34b861445a0c4106301ad2a5cb4c00c8"
+    },
+    {
+      "id": "logic_size",
+      "text": "Welcher Baum ist am größten?",
+      "seconds": 1.6602267573696146,
+      "bytes": 14192,
+      "sha256": "84c5547d5e9566f27e48c2c39bcd541fc640a27c80a572f6a82e33a026c1d16c"
+    },
+    {
+      "id": "logic_size_hint",
+      "text": "Der höchste Baum ist gesucht. Tippe ihn an.",
+      "seconds": 2.3103854875283445,
+      "bytes": 19503,
+      "sha256": "662d1842c05503fd7ed55d2256157710a32776074623d82de886e5cd0c623b99"
+    },
+    {
+      "id": "logic_double",
+      "text": "Was kommt in die Lücke?",
+      "seconds": 1.0332879818594105,
+      "bytes": 10720,
+      "sha256": "508fcded9bc2ba0e7c3c0ab324b6f7e0683e9ebcb35444f031ca2db6b73a8963"
+    },
+    {
+      "id": "logic_double_hint",
+      "text": "Eine Sonne und zwei Monde. Dann beginnt das Muster von vorn.",
+      "seconds": 3.1811337868480725,
+      "bytes": 24684,
+      "sha256": "d44f97b3b27f79a20d40f127fdbb4b50278c13cd4dc679a442d4deb4d295ead1"
+    },
+    {
+      "id": "logic_shape",
+      "text": "Welcher Gegenstand passt zum Schatten?",
+      "seconds": 2.020136054421769,
+      "bytes": 16821,
+      "sha256": "75f3f62d798482495e7115ba19e3293e0bf4859bd371763529228bbad6ca10ad"
+    },
+    {
+      "id": "logic_shape_hint",
+      "text": "Achte auf den eckigen Kopf und die beiden Arme.",
+      "seconds": 2.5309750566893423,
+      "bytes": 19603,
+      "sha256": "855efd46a62181882f698295a4ab4d5528c1ee7f5ebe3c213c5d6f1e17ff1846"
+    },
+    {
+      "id": "logic_rule",
+      "text": "Was gehört nicht zu den Himmelskörpern?",
+      "seconds": 2.043356009070295,
+      "bytes": 17694,
+      "sha256": "30308e18e842f02fdffe9f34beeeac692f15394472903494db7ff3a80e88b72c"
+    },
+    {
+      "id": "logic_rule_hint",
+      "text": "Sonne, Mond und Sterne stehen am Himmel. Eine Blume wächst am Boden.",
+      "seconds": 4.214421768707483,
+      "bytes": 28792,
+      "sha256": "637745de92a3eba53f78127519b5951216b987686f9d57052e00d4c10b24b6d0"
+    }
+  ]
+}
