@@ -1,0 +1,2152 @@
+{
+  "schema": 1,
+  "scope": "Technical evidence only; no Android hardware or child evaluation",
+  "baseline": "origin/main 7735ba7, merged PR #7",
+  "runtime_commit": "e69bb70",
+  "qa": {
+    "schema": 1,
+    "run_id": "20261020T165131Z-52031375",
+    "source_commit": "e69bb70e5bbf51763e0b5c1b98f7e78f262b8a80",
+    "source_dirty": false,
+    "source_sha256": "680f59ff6bfe314011b170d8bdcd9802208aeb740996c036a83f8d10c6de1994",
+    "started_utc": "2026-10-20T16:51:31.032046+00:00",
+    "policy": {
+      "schema": 1,
+      "engine_version": "4.7.2.stable.official.ed1daf0bf",
+      "gut_version": "9.7.1",
+      "gut_commit": "aeb5d4f3f7f0a6c9b5e178876d6c99b791fda605",
+      "minimum_tasks": {
+        "logic": 9,
+        "math": 9,
+        "language": 6,
+        "autonomy": 6,
+        "social": 6
+      },
+      "viewports": [
+        [
+          320,
+          568
+        ],
+        [
+          360,
+          800
+        ],
+        [
+          768,
+          1024
+        ],
+        [
+          1024,
+          768
+        ]
+      ],
+      "minimum_target": [
+        96,
+        72
+      ],
+      "retries": 3,
+      "upstream_tests": [
+        "test/unit/test_version_numbers.gd",
+        "test/unit/test_parameter_factory.gd"
+      ],
+      "static_exceptions": []
+    },
+    "steps": [
+      {
+        "name": "static-audit",
+        "status": "PASS",
+        "report": "static.json",
+        "findings": 0,
+        "files_examined": 276
+      },
+      {
+        "name": "static-checker-regression",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/qa",
+          "-p",
+          "test_static_audit.py",
+          "-v"
+        ],
+        "status": "PASS",
+        "log": "static-checker-regression.log",
+        "exit_code": 0,
+        "tests": 16
+      },
+      {
+        "name": "engine-version",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--version"
+        ],
+        "status": "PASS",
+        "log": "engine-version.log",
+        "exit_code": 0,
+        "version": "4.7.2.stable.official.ed1daf0bf"
+      },
+      {
+        "name": "install-gut",
+        "command": [
+          "bash",
+          "scripts/install-gut.sh"
+        ],
+        "status": "PASS",
+        "log": "install-gut.log",
+        "exit_code": 0
+      },
+      {
+        "name": "fresh-import",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/tmp/kinderwelt-quality.4qtymq2j/fresh-project",
+          "--editor",
+          "--import",
+          "--quit"
+        ],
+        "status": "PASS",
+        "log": "fresh-import.log",
+        "exit_code": 0
+      },
+      {
+        "name": "fresh-startup",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/tmp/kinderwelt-quality.4qtymq2j/fresh-project",
+          "--script",
+          "/workspace/Kinderwelt/tests/boot.gd"
+        ],
+        "status": "PASS",
+        "log": "fresh-startup.log",
+        "exit_code": 0
+      },
+      {
+        "name": "existing-suite",
+        "command": [
+          "bash",
+          "tests/run.sh"
+        ],
+        "status": "PASS",
+        "log": "existing-suite.log",
+        "exit_code": 0,
+        "modern_checks": 285,
+        "adventure_checks": 679,
+        "checks": 1236,
+        "suites": [
+          {
+            "name": "RESULT",
+            "checks": 33,
+            "failed": 0
+          },
+          {
+            "name": "LEARNING RESULT",
+            "checks": 559,
+            "failed": 0
+          },
+          {
+            "name": "INPUT RESULT",
+            "checks": 59,
+            "failed": 0
+          },
+          {
+            "name": "SCENARIOS RESULT",
+            "checks": 585,
+            "failed": 0
+          }
+        ]
+      },
+      {
+        "name": "framework-import",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/workspace/Kinderwelt",
+          "--editor",
+          "--import",
+          "--quit"
+        ],
+        "status": "PASS",
+        "log": "framework-import.log",
+        "exit_code": 0
+      },
+      {
+        "name": "gut-upstream",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/workspace/Kinderwelt",
+          "-s",
+          "addons/gut/gut_cmdln.gd",
+          "-gconfig=tests/qa/gut.json",
+          "-gtest=res://.godot/qa-tools/gut/test/unit/test_version_numbers.gd,res://.godot/qa-tools/gut/test/unit/test_parameter_factory.gd",
+          "-gjunit_xml_file=/tmp/kinderwelt-04-qa-final/upstream.xml"
+        ],
+        "status": "PASS",
+        "log": "gut-upstream.log",
+        "exit_code": 0,
+        "tests": 13,
+        "assertions": 62,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "name": "gut-quality",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/workspace/Kinderwelt",
+          "-s",
+          "addons/gut/gut_cmdln.gd",
+          "-gconfig=tests/qa/gut.json",
+          "-gtest=res://tests/qa/test_quality.gd",
+          "-gjunit_xml_file=/tmp/kinderwelt-04-qa-final/quality.xml"
+        ],
+        "status": "PASS",
+        "log": "gut-quality.log",
+        "exit_code": 0,
+        "tests": 6,
+        "assertions": 13001,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "name": "gut-experience",
+        "command": [
+          "/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--headless",
+          "--path",
+          "/workspace/Kinderwelt",
+          "-s",
+          "addons/gut/gut_cmdln.gd",
+          "-gconfig=tests/qa/gut.json",
+          "-gtest=res://tests/qa/test_experience.gd",
+          "-gjunit_xml_file=/tmp/kinderwelt-04-qa-final/experience.xml"
+        ],
+        "status": "PASS",
+        "log": "gut-experience.log",
+        "exit_code": 0,
+        "tests": 6,
+        "assertions": 22909,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "name": "coverage-completeness",
+        "status": "PASS",
+        "expected": 144,
+        "executed": 144,
+        "authored_tasks": 36
+      }
+    ],
+    "human_gates": {
+      "real_device_performance": "NOT MEASURED",
+      "child_usability": "NOT RUN",
+      "educational_transfer": "NOT ESTABLISHED",
+      "manual_accessibility": "NOT RUN"
+    },
+    "finished_utc": "2026-10-20T16:52:34.507449+00:00",
+    "technical_status": "PASS",
+    "human_trial_readiness": "NOT APPROVED BY AUTOMATION; complete manual preflight and consent/safeguarding decisions first"
+  },
+  "android": {
+    "status": "PASS",
+    "upload_readiness": "BLOCKED",
+    "artifacts": {
+      "kinderwelt-debug.apk": {
+        "assets_checked": 208,
+        "abis": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "elf_16kb_alignment": "PASS",
+        "native_packaging": "deflated; extracted by Android on installation",
+        "package": "org.example.kinderwelt",
+        "version_name": "0.4.0",
+        "version_code": 4,
+        "min_sdk": 24,
+        "target_sdk": 36,
+        "permissions": [],
+        "allow_backup": false,
+        "orientation": "fullUser",
+        "signature": "verified Godot development certificate, v2",
+        "zip_16kb_alignment": "PASS",
+        "bytes": 65764990,
+        "sha256": "1108a8203646d6847d7854c33369a8962d503288829f19dcb50225bfa66d1ea8"
+      },
+      "kinderwelt-unsigned.aab": {
+        "assets_checked": 208,
+        "abis": [
+          "arm64-v8a",
+          "x86_64"
+        ],
+        "elf_16kb_alignment": "PASS",
+        "native_packaging": "deflated; extracted by Android on installation",
+        "package": "org.example.kinderwelt",
+        "version_name": "0.4.0",
+        "version_code": 4,
+        "min_sdk": 24,
+        "target_sdk": 36,
+        "permissions": [],
+        "allow_backup": false,
+        "orientation": "fullUser",
+        "signature": "UNSIGNED",
+        "rendering": "gl_compatibility",
+        "bytes": 55406003,
+        "sha256": "6b2a7ee1713aa8eb153478c0d35140a0f3c831f8528076068c02395889b05034"
+      }
+    }
+  },
+  "build_provenance": {
+    "schema": 1,
+    "built_utc": "2026-10-20T16:52:19.032320+00:00",
+    "source_commit": "e69bb70e5bbf51763e0b5c1b98f7e78f262b8a80",
+    "source_dirty": false,
+    "application_source_sha256": "c77a4177c7661e7157928cbe8665b2eae204d472bfca37ebc22e40c2d31cc18b",
+    "toolchain": {
+      "godot": "4.7.2.stable.official.ed1daf0bf",
+      "java": "17.0.16+8",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "build_tools": "36.1.0",
+      "gradle": "8.11.1",
+      "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+      "sdk_archives": [
+        {
+          "name": "commandline",
+          "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+          "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+          "destination": "cmdline-tools/19.0"
+        },
+        {
+          "name": "platform",
+          "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+          "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+          "destination": "platforms/android-36"
+        },
+        {
+          "name": "build-tools",
+          "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+          "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+          "destination": "build-tools/36.1.0"
+        },
+        {
+          "name": "platform-tools",
+          "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+          "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+          "destination": "platform-tools"
+        }
+      ],
+      "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+      "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+      "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+      "bundletool_version": "1.18.2",
+      "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
+    },
+    "signing": {
+      "apk": "ephemeral Godot development key; not a release identity",
+      "aab": "UNSIGNED"
+    },
+    "upload_readiness": "BLOCKED",
+    "artifacts": {
+      "kinderwelt-unsigned.aab": {
+        "bytes": 55406003,
+        "sha256": "6b2a7ee1713aa8eb153478c0d35140a0f3c831f8528076068c02395889b05034"
+      },
+      "kinderwelt-debug.apk": {
+        "bytes": 65764990,
+        "sha256": "1108a8203646d6847d7854c33369a8962d503288829f19dcb50225bfa66d1ea8"
+      }
+    }
+  },
+  "size_analysis": {
+    "scope": "Actual archive measurements; no Play device download or installed-size claim",
+    "artifacts": [
+      {
+        "path": "build/android-0.3-first-mission/kinderwelt-debug.apk",
+        "bytes": 164121430,
+        "sha256": "c4272897668de7903cfd1389888bc822a71e7ec2090bebf0fb80105d5cac938f",
+        "groups": {
+          "audio": {
+            "raw_bytes": 1453065,
+            "stored_bytes": 1309296,
+            "files": 7
+          },
+          "fonts": {
+            "raw_bytes": 0,
+            "stored_bytes": 0,
+            "files": 0
+          },
+          "graphics": {
+            "raw_bytes": 138276,
+            "stored_bytes": 137841,
+            "files": 43
+          },
+          "application/imports/other": {
+            "raw_bytes": 157718,
+            "stored_bytes": 125935,
+            "files": 95
+          },
+          "Android/metadata/classes": {
+            "raw_bytes": 6188161,
+            "stored_bytes": 2407338,
+            "files": 70
+          },
+          "native/arm64-v8a": {
+            "raw_bytes": 77555944,
+            "stored_bytes": 77555944,
+            "files": 2
+          },
+          "native/x86_64": {
+            "raw_bytes": 82524296,
+            "stored_bytes": 82524296,
+            "files": 2
+          }
+        },
+        "zip_alignment_signing_overhead_bytes": 60780,
+        "largest": [
+          {
+            "file": "lib/x86_64/libgodot_android.so",
+            "raw_bytes": 81186808,
+            "stored_bytes": 81186808,
+            "zip_method": 0,
+            "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+          },
+          {
+            "file": "lib/arm64-v8a/libgodot_android.so",
+            "raw_bytes": 76181608,
+            "stored_bytes": 76181608,
+            "zip_method": 0,
+            "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+          },
+          {
+            "file": "classes.dex",
+            "raw_bytes": 6043992,
+            "stored_bytes": 2332621,
+            "zip_method": 8
+          },
+          {
+            "file": "lib/arm64-v8a/libc++_shared.so",
+            "raw_bytes": 1374336,
+            "stored_bytes": 1374336,
+            "zip_method": 0,
+            "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+          },
+          {
+            "file": "lib/x86_64/libc++_shared.so",
+            "raw_bytes": 1337488,
+            "stored_bytes": 1337488,
+            "zip_method": 0,
+            "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+          },
+          {
+            "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+            "raw_bytes": 259999,
+            "stored_bytes": 245756,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+            "raw_bytes": 235111,
+            "stored_bytes": 225477,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+            "raw_bytes": 220071,
+            "stored_bytes": 191387,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+            "raw_bytes": 209335,
+            "stored_bytes": 182575,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+            "raw_bytes": 204367,
+            "stored_bytes": 180949,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+            "raw_bytes": 165143,
+            "stored_bytes": 148414,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+            "raw_bytes": 159039,
+            "stored_bytes": 134738,
+            "zip_method": 8
+          },
+          {
+            "file": "resources.arsc",
+            "raw_bytes": 35080,
+            "stored_bytes": 35080,
+            "zip_method": 0
+          },
+          {
+            "file": "classes2.dex",
+            "raw_bytes": 39588,
+            "stored_bytes": 12666,
+            "zip_method": 8
+          },
+          {
+            "file": "res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "assets/games/adventure/game.gdc",
+            "raw_bytes": 11512,
+            "stored_bytes": 11380,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/core/scenario_art.gdc",
+            "raw_bytes": 11319,
+            "stored_bytes": 11172,
+            "zip_method": 8
+          }
+        ],
+        "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+      },
+      {
+        "path": "build/android-0.4-compression-experiment/kinderwelt-debug.apk",
+        "bytes": 64093414,
+        "sha256": "f65578dd7c550d1c456f66e4b109c6e49c95b1be6ec4104e5b292eda1c85eea0",
+        "groups": {
+          "audio": {
+            "raw_bytes": 1453065,
+            "stored_bytes": 1309296,
+            "files": 7
+          },
+          "fonts": {
+            "raw_bytes": 0,
+            "stored_bytes": 0,
+            "files": 0
+          },
+          "graphics": {
+            "raw_bytes": 138276,
+            "stored_bytes": 137841,
+            "files": 43
+          },
+          "application/imports/other": {
+            "raw_bytes": 157718,
+            "stored_bytes": 125935,
+            "files": 95
+          },
+          "Android/metadata/classes": {
+            "raw_bytes": 6188161,
+            "stored_bytes": 2407337,
+            "files": 70
+          },
+          "native/arm64-v8a": {
+            "raw_bytes": 77555944,
+            "stored_bytes": 28340126,
+            "files": 2
+          },
+          "native/x86_64": {
+            "raw_bytes": 82524296,
+            "stored_bytes": 31735164,
+            "files": 2
+          }
+        },
+        "zip_alignment_signing_overhead_bytes": 37715,
+        "largest": [
+          {
+            "file": "lib/x86_64/libgodot_android.so",
+            "raw_bytes": 81186808,
+            "stored_bytes": 31226056,
+            "zip_method": 8,
+            "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+          },
+          {
+            "file": "lib/arm64-v8a/libgodot_android.so",
+            "raw_bytes": 76181608,
+            "stored_bytes": 27838354,
+            "zip_method": 8,
+            "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+          },
+          {
+            "file": "classes.dex",
+            "raw_bytes": 6043992,
+            "stored_bytes": 2332621,
+            "zip_method": 8
+          },
+          {
+            "file": "lib/x86_64/libc++_shared.so",
+            "raw_bytes": 1337488,
+            "stored_bytes": 509108,
+            "zip_method": 8,
+            "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+          },
+          {
+            "file": "lib/arm64-v8a/libc++_shared.so",
+            "raw_bytes": 1374336,
+            "stored_bytes": 501772,
+            "zip_method": 8,
+            "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+          },
+          {
+            "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+            "raw_bytes": 259999,
+            "stored_bytes": 245756,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+            "raw_bytes": 235111,
+            "stored_bytes": 225477,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+            "raw_bytes": 220071,
+            "stored_bytes": 191387,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+            "raw_bytes": 209335,
+            "stored_bytes": 182575,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+            "raw_bytes": 204367,
+            "stored_bytes": 180949,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+            "raw_bytes": 165143,
+            "stored_bytes": 148414,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+            "raw_bytes": 159039,
+            "stored_bytes": 134738,
+            "zip_method": 8
+          },
+          {
+            "file": "resources.arsc",
+            "raw_bytes": 35080,
+            "stored_bytes": 35080,
+            "zip_method": 0
+          },
+          {
+            "file": "classes2.dex",
+            "raw_bytes": 39588,
+            "stored_bytes": 12666,
+            "zip_method": 8
+          },
+          {
+            "file": "res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "res/mipmap/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12160,
+            "zip_method": 0
+          },
+          {
+            "file": "assets/games/adventure/game.gdc",
+            "raw_bytes": 11512,
+            "stored_bytes": 11380,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/core/scenario_art.gdc",
+            "raw_bytes": 11319,
+            "stored_bytes": 11172,
+            "zip_method": 8
+          }
+        ],
+        "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+      },
+      {
+        "path": "build/android-0.4-final/kinderwelt-debug.apk",
+        "bytes": 65764990,
+        "sha256": "1108a8203646d6847d7854c33369a8962d503288829f19dcb50225bfa66d1ea8",
+        "groups": {
+          "audio": {
+            "raw_bytes": 3176867,
+            "stored_bytes": 2892702,
+            "files": 33
+          },
+          "fonts": {
+            "raw_bytes": 0,
+            "stored_bytes": 0,
+            "files": 0
+          },
+          "graphics": {
+            "raw_bytes": 151318,
+            "stored_bytes": 150943,
+            "files": 55
+          },
+          "application/imports/other": {
+            "raw_bytes": 229479,
+            "stored_bytes": 182423,
+            "files": 161
+          },
+          "Android/metadata/classes": {
+            "raw_bytes": 6188161,
+            "stored_bytes": 2407333,
+            "files": 70
+          },
+          "native/arm64-v8a": {
+            "raw_bytes": 77555944,
+            "stored_bytes": 28340126,
+            "files": 2
+          },
+          "native/x86_64": {
+            "raw_bytes": 82524296,
+            "stored_bytes": 31735164,
+            "files": 2
+          }
+        },
+        "zip_alignment_signing_overhead_bytes": 56299,
+        "largest": [
+          {
+            "file": "lib/x86_64/libgodot_android.so",
+            "raw_bytes": 81186808,
+            "stored_bytes": 31226056,
+            "zip_method": 8,
+            "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+          },
+          {
+            "file": "lib/arm64-v8a/libgodot_android.so",
+            "raw_bytes": 76181608,
+            "stored_bytes": 27838354,
+            "zip_method": 8,
+            "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+          },
+          {
+            "file": "classes.dex",
+            "raw_bytes": 6043992,
+            "stored_bytes": 2332621,
+            "zip_method": 8
+          },
+          {
+            "file": "lib/x86_64/libc++_shared.so",
+            "raw_bytes": 1337488,
+            "stored_bytes": 509108,
+            "zip_method": 8,
+            "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+          },
+          {
+            "file": "lib/arm64-v8a/libc++_shared.so",
+            "raw_bytes": 1374336,
+            "stored_bytes": 501772,
+            "zip_method": 8,
+            "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+          },
+          {
+            "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+            "raw_bytes": 259999,
+            "stored_bytes": 245756,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+            "raw_bytes": 235111,
+            "stored_bytes": 225477,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+            "raw_bytes": 220071,
+            "stored_bytes": 191387,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+            "raw_bytes": 209335,
+            "stored_bytes": 182575,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+            "raw_bytes": 204367,
+            "stored_bytes": 180949,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/stories.ogg-1e763cf670e7325885aefc0a44a11c6d.oggvorbisstr",
+            "raw_bytes": 188103,
+            "stored_bytes": 170863,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/rain.ogg-ad23eaffc1c48efc028853812b2bc9b4.oggvorbisstr",
+            "raw_bytes": 181939,
+            "stored_bytes": 165473,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/meadow.ogg-b0ed940f9a93b8ac55bfcbdb7a16b570.oggvorbisstr",
+            "raw_bytes": 171199,
+            "stored_bytes": 157876,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/garden.ogg-f69d5aeef8e01197d24673728d204a63.oggvorbisstr",
+            "raw_bytes": 165891,
+            "stored_bytes": 153223,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/market.ogg-46194474e76df354cc06e6021ee9f53f.oggvorbisstr",
+            "raw_bytes": 162923,
+            "stored_bytes": 150596,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+            "raw_bytes": 165143,
+            "stored_bytes": 148414,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/together.ogg-8a2d591dae660212113f1a17d56c0318.oggvorbisstr",
+            "raw_bytes": 158179,
+            "stored_bytes": 146300,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/gears.ogg-8c5cc6726cf38a20351469a2b507fe1f.oggvorbisstr",
+            "raw_bytes": 152923,
+            "stored_bytes": 142602,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+            "raw_bytes": 159039,
+            "stored_bytes": 134738,
+            "zip_method": 8
+          },
+          {
+            "file": "assets/.godot/imported/victory.ogg-c5a099d0abf4276017ece5abe5640732.oggvorbisstr",
+            "raw_bytes": 144671,
+            "stored_bytes": 133899,
+            "zip_method": 8
+          }
+        ],
+        "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+      },
+      {
+        "path": "build/android-0.3-first-mission/kinderwelt-unsigned.aab",
+        "bytes": 53755876,
+        "sha256": "35c7fe31cbb030805594dd2d12d9ee9f92660b53b081275b64b429888dc144da",
+        "groups": {
+          "audio": {
+            "raw_bytes": 1453065,
+            "stored_bytes": 1306487,
+            "files": 7
+          },
+          "fonts": {
+            "raw_bytes": 0,
+            "stored_bytes": 0,
+            "files": 0
+          },
+          "graphics": {
+            "raw_bytes": 138276,
+            "stored_bytes": 136638,
+            "files": 43
+          },
+          "application/imports/other": {
+            "raw_bytes": 157718,
+            "stored_bytes": 124546,
+            "files": 95
+          },
+          "Android/metadata/classes": {
+            "raw_bytes": 5252792,
+            "stored_bytes": 1825179,
+            "files": 78
+          },
+          "native/arm64-v8a": {
+            "raw_bytes": 72489280,
+            "stored_bytes": 24478799,
+            "files": 2
+          },
+          "native/x86_64": {
+            "raw_bytes": 75398760,
+            "stored_bytes": 25835633,
+            "files": 2
+          }
+        },
+        "zip_alignment_signing_overhead_bytes": 48594,
+        "largest": [
+          {
+            "file": "base/lib/x86_64/libgodot_android.so",
+            "raw_bytes": 74061272,
+            "stored_bytes": 25373224,
+            "zip_method": 8,
+            "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+          },
+          {
+            "file": "base/lib/arm64-v8a/libgodot_android.so",
+            "raw_bytes": 71114944,
+            "stored_bytes": 24023949,
+            "zip_method": 8,
+            "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+          },
+          {
+            "file": "base/dex/classes.dex",
+            "raw_bytes": 5136056,
+            "stored_bytes": 1785571,
+            "zip_method": 8
+          },
+          {
+            "file": "base/lib/x86_64/libc++_shared.so",
+            "raw_bytes": 1337488,
+            "stored_bytes": 462409,
+            "zip_method": 8,
+            "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+          },
+          {
+            "file": "base/lib/arm64-v8a/libc++_shared.so",
+            "raw_bytes": 1374336,
+            "stored_bytes": 454850,
+            "zip_method": 8,
+            "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+            "raw_bytes": 259999,
+            "stored_bytes": 245568,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+            "raw_bytes": 235111,
+            "stored_bytes": 225278,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+            "raw_bytes": 220071,
+            "stored_bytes": 190809,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+            "raw_bytes": 209335,
+            "stored_bytes": 182135,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+            "raw_bytes": 204367,
+            "stored_bytes": 180443,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+            "raw_bytes": 165143,
+            "stored_bytes": 148063,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+            "raw_bytes": 159039,
+            "stored_bytes": 134191,
+            "zip_method": 8
+          },
+          {
+            "file": "base/res/mipmap/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12139,
+            "zip_method": 8
+          },
+          {
+            "file": "base/res/mipmap/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12139,
+            "zip_method": 8
+          },
+          {
+            "file": "base/res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12139,
+            "zip_method": 8
+          },
+          {
+            "file": "base/res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+            "raw_bytes": 12160,
+            "stored_bytes": 12139,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/games/adventure/game.gdc",
+            "raw_bytes": 11512,
+            "stored_bytes": 11375,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/core/scenario_art.gdc",
+            "raw_bytes": 11319,
+            "stored_bytes": 11166,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/core/learning_game.gdc",
+            "raw_bytes": 11060,
+            "stored_bytes": 10972,
+            "zip_method": 8
+          },
+          {
+            "file": "base/res/mipmap-xxhdpi-v4/icon_foreground.webp",
+            "raw_bytes": 9066,
+            "stored_bytes": 9071,
+            "zip_method": 8
+          }
+        ],
+        "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+      },
+      {
+        "path": "build/android-0.4-final/kinderwelt-unsigned.aab",
+        "bytes": 55406003,
+        "sha256": "6b2a7ee1713aa8eb153478c0d35140a0f3c831f8528076068c02395889b05034",
+        "groups": {
+          "audio": {
+            "raw_bytes": 3176867,
+            "stored_bytes": 2861259,
+            "files": 33
+          },
+          "fonts": {
+            "raw_bytes": 0,
+            "stored_bytes": 0,
+            "files": 0
+          },
+          "graphics": {
+            "raw_bytes": 151318,
+            "stored_bytes": 149740,
+            "files": 55
+          },
+          "application/imports/other": {
+            "raw_bytes": 229479,
+            "stored_bytes": 180279,
+            "files": 161
+          },
+          "Android/metadata/classes": {
+            "raw_bytes": 5252922,
+            "stored_bytes": 1825211,
+            "files": 78
+          },
+          "native/arm64-v8a": {
+            "raw_bytes": 72489280,
+            "stored_bytes": 24478799,
+            "files": 2
+          },
+          "native/x86_64": {
+            "raw_bytes": 75398760,
+            "stored_bytes": 25835633,
+            "files": 2
+          }
+        },
+        "zip_alignment_signing_overhead_bytes": 75082,
+        "largest": [
+          {
+            "file": "base/lib/x86_64/libgodot_android.so",
+            "raw_bytes": 74061272,
+            "stored_bytes": 25373224,
+            "zip_method": 8,
+            "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+          },
+          {
+            "file": "base/lib/arm64-v8a/libgodot_android.so",
+            "raw_bytes": 71114944,
+            "stored_bytes": 24023949,
+            "zip_method": 8,
+            "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+          },
+          {
+            "file": "base/dex/classes.dex",
+            "raw_bytes": 5136056,
+            "stored_bytes": 1785571,
+            "zip_method": 8
+          },
+          {
+            "file": "base/lib/x86_64/libc++_shared.so",
+            "raw_bytes": 1337488,
+            "stored_bytes": 462409,
+            "zip_method": 8,
+            "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+          },
+          {
+            "file": "base/lib/arm64-v8a/libc++_shared.so",
+            "raw_bytes": 1374336,
+            "stored_bytes": 454850,
+            "zip_method": 8,
+            "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+            "raw_bytes": 259999,
+            "stored_bytes": 245568,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+            "raw_bytes": 235111,
+            "stored_bytes": 225278,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+            "raw_bytes": 220071,
+            "stored_bytes": 190809,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+            "raw_bytes": 209335,
+            "stored_bytes": 182135,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+            "raw_bytes": 204367,
+            "stored_bytes": 180443,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/stories.ogg-1e763cf670e7325885aefc0a44a11c6d.oggvorbisstr",
+            "raw_bytes": 188103,
+            "stored_bytes": 167270,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/rain.ogg-ad23eaffc1c48efc028853812b2bc9b4.oggvorbisstr",
+            "raw_bytes": 181939,
+            "stored_bytes": 161958,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/meadow.ogg-b0ed940f9a93b8ac55bfcbdb7a16b570.oggvorbisstr",
+            "raw_bytes": 171199,
+            "stored_bytes": 154790,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/garden.ogg-f69d5aeef8e01197d24673728d204a63.oggvorbisstr",
+            "raw_bytes": 165891,
+            "stored_bytes": 150304,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+            "raw_bytes": 165143,
+            "stored_bytes": 148063,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/market.ogg-46194474e76df354cc06e6021ee9f53f.oggvorbisstr",
+            "raw_bytes": 162923,
+            "stored_bytes": 147822,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/together.ogg-8a2d591dae660212113f1a17d56c0318.oggvorbisstr",
+            "raw_bytes": 158179,
+            "stored_bytes": 143575,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/gears.ogg-8c5cc6726cf38a20351469a2b507fe1f.oggvorbisstr",
+            "raw_bytes": 152923,
+            "stored_bytes": 140005,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+            "raw_bytes": 159039,
+            "stored_bytes": 134191,
+            "zip_method": 8
+          },
+          {
+            "file": "assetPackInstallTime/assets/.godot/imported/victory.ogg-c5a099d0abf4276017ece5abe5640732.oggvorbisstr",
+            "raw_bytes": 144671,
+            "stored_bytes": 131455,
+            "zip_method": 8
+          }
+        ],
+        "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+      }
+    ],
+    "native_library_content_unchanged": true,
+    "native_library_sha256": {
+      "lib/x86_64/libgodot_android.so": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443",
+      "lib/arm64-v8a/libgodot_android.so": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159",
+      "lib/x86_64/libc++_shared.so": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef",
+      "lib/arm64-v8a/libc++_shared.so": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+    },
+    "apk_reduction_percent": 59.92906593611815,
+    "universal_debug_budget_bytes": 120000000,
+    "universal_debug_budget_met": true,
+    "play_device_download_budget_bytes": 80000000,
+    "play_device_download_budget_status": "NOT MEASURED",
+    "fonts_note": "No separately packaged font files; Godot fallback fonts are part of the engine and not separated here"
+  },
+  "objective_codec_comparison": {
+    "scope": "One deterministic synthesized reference vs delivered Vorbis decode; objective codec comparison, no human listening",
+    "track": "garden",
+    "reference_frames": 694033,
+    "decoded_frames": 694033,
+    "compared_frames": 694033,
+    "signal_to_error_db": 27.567412204506535,
+    "normalized_correlation": 0.9991255030344806,
+    "reference_peak": 0.819976806640625,
+    "decoded_peak": 0.81085205078125
+  },
+  "render": {
+    "frames": [
+      {
+        "file": "small_map.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "map"
+      },
+      {
+        "file": "small_map-bottom.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "map-bottom"
+      },
+      {
+        "file": "small_heroes.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes"
+      },
+      {
+        "file": "small_heroes-idle.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-idle"
+      },
+      {
+        "file": "small_heroes-move.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-move"
+      },
+      {
+        "file": "small_heroes-think.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-think"
+      },
+      {
+        "file": "small_heroes-success.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-success"
+      },
+      {
+        "file": "small_musicbox.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "musicbox"
+      },
+      {
+        "file": "small_water-0.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-0"
+      },
+      {
+        "file": "small_water-solved-0.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-0"
+      },
+      {
+        "file": "small_water-1.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-1"
+      },
+      {
+        "file": "small_water-solved-1.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-1"
+      },
+      {
+        "file": "small_water-2.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-2"
+      },
+      {
+        "file": "small_water-solved-2.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-2"
+      },
+      {
+        "file": "large-text_map.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "map"
+      },
+      {
+        "file": "large-text_map-bottom.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "map-bottom"
+      },
+      {
+        "file": "large-text_heroes.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes"
+      },
+      {
+        "file": "large-text_heroes-idle.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-idle"
+      },
+      {
+        "file": "large-text_heroes-move.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-move"
+      },
+      {
+        "file": "large-text_heroes-think.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-think"
+      },
+      {
+        "file": "large-text_heroes-success.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "heroes-success"
+      },
+      {
+        "file": "large-text_musicbox.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "musicbox"
+      },
+      {
+        "file": "large-text_water-0.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-0"
+      },
+      {
+        "file": "large-text_water-solved-0.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-0"
+      },
+      {
+        "file": "large-text_water-1.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-1"
+      },
+      {
+        "file": "large-text_water-solved-1.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-1"
+      },
+      {
+        "file": "large-text_water-2.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-2"
+      },
+      {
+        "file": "large-text_water-solved-2.png",
+        "pixels": [
+          320,
+          568
+        ],
+        "state": "water-solved-2"
+      },
+      {
+        "file": "phone_map.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "map"
+      },
+      {
+        "file": "phone_map-bottom.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "map-bottom"
+      },
+      {
+        "file": "phone_heroes.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "heroes"
+      },
+      {
+        "file": "phone_heroes-idle.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "heroes-idle"
+      },
+      {
+        "file": "phone_heroes-move.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "heroes-move"
+      },
+      {
+        "file": "phone_heroes-think.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "heroes-think"
+      },
+      {
+        "file": "phone_heroes-success.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "heroes-success"
+      },
+      {
+        "file": "phone_musicbox.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "musicbox"
+      },
+      {
+        "file": "phone_water-0.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-0"
+      },
+      {
+        "file": "phone_water-solved-0.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-solved-0"
+      },
+      {
+        "file": "phone_water-1.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-1"
+      },
+      {
+        "file": "phone_water-solved-1.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-solved-1"
+      },
+      {
+        "file": "phone_water-2.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-2"
+      },
+      {
+        "file": "phone_water-solved-2.png",
+        "pixels": [
+          360,
+          800
+        ],
+        "state": "water-solved-2"
+      },
+      {
+        "file": "landscape_map.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "map"
+      },
+      {
+        "file": "landscape_map-bottom.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "map-bottom"
+      },
+      {
+        "file": "landscape_heroes.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "heroes"
+      },
+      {
+        "file": "landscape_heroes-idle.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "heroes-idle"
+      },
+      {
+        "file": "landscape_heroes-move.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "heroes-move"
+      },
+      {
+        "file": "landscape_heroes-think.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "heroes-think"
+      },
+      {
+        "file": "landscape_heroes-success.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "heroes-success"
+      },
+      {
+        "file": "landscape_musicbox.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "musicbox"
+      },
+      {
+        "file": "landscape_water-0.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-0"
+      },
+      {
+        "file": "landscape_water-solved-0.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-solved-0"
+      },
+      {
+        "file": "landscape_water-1.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-1"
+      },
+      {
+        "file": "landscape_water-solved-1.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-solved-1"
+      },
+      {
+        "file": "landscape_water-2.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-2"
+      },
+      {
+        "file": "landscape_water-solved-2.png",
+        "pixels": [
+          800,
+          360
+        ],
+        "state": "water-solved-2"
+      },
+      {
+        "file": "dense_map.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "map"
+      },
+      {
+        "file": "dense_map-bottom.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "map-bottom"
+      },
+      {
+        "file": "dense_heroes.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "heroes"
+      },
+      {
+        "file": "dense_heroes-idle.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "heroes-idle"
+      },
+      {
+        "file": "dense_heroes-move.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "heroes-move"
+      },
+      {
+        "file": "dense_heroes-think.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "heroes-think"
+      },
+      {
+        "file": "dense_heroes-success.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "heroes-success"
+      },
+      {
+        "file": "dense_musicbox.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "musicbox"
+      },
+      {
+        "file": "dense_water-0.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-0"
+      },
+      {
+        "file": "dense_water-solved-0.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-solved-0"
+      },
+      {
+        "file": "dense_water-1.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-1"
+      },
+      {
+        "file": "dense_water-solved-1.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-solved-1"
+      },
+      {
+        "file": "dense_water-2.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-2"
+      },
+      {
+        "file": "dense_water-solved-2.png",
+        "pixels": [
+          1080,
+          2398
+        ],
+        "state": "water-solved-2"
+      }
+    ],
+    "scope": "Real desktop software rendering, simulated DPI; not Android hardware"
+  },
+  "legacy_renders": [
+    {
+      "path": "/tmp/kinderwelt-04-legacy-renders",
+      "frames": 146,
+      "status": "PASS",
+      "runtime_commit": "c74e7fa; subsequent application change confined to the water mission"
+    },
+    {
+      "path": "/tmp/kinderwelt-04-experience-renders",
+      "frames": 44,
+      "status": "PASS",
+      "runtime_commit": "c74e7fa; subsequent application change confined to the water mission"
+    },
+    {
+      "path": "/tmp/kinderwelt-04-pico-renders",
+      "frames": 45,
+      "status": "PASS",
+      "runtime_commit": "c74e7fa; subsequent application change confined to the water mission"
+    }
+  ],
+  "performance": {
+    "headless": {
+      "engine": {
+        "audio_driver": "Dummy; no hardware output measurement",
+        "background_state_paused": true,
+        "background_state_resumed": true,
+        "frame_intervals_ms": {
+          "max": 6.973,
+          "median": 6.899,
+          "p95": 6.922
+        },
+        "max_music_stream_slots": 2,
+        "renderer": "headless",
+        "samples": [
+          {
+            "ready_ms": 13.656,
+            "resources": 37.0,
+            "scene": "heroes",
+            "static_memory_bytes": 41880594
+          },
+          {
+            "ready_ms": 13.791,
+            "resources": 40.0,
+            "scene": "musicbox",
+            "static_memory_bytes": 43582010
+          },
+          {
+            "ready_ms": 20.512,
+            "resources": 42.0,
+            "scene": "open_water",
+            "static_memory_bytes": 44116798
+          },
+          {
+            "ready_ms": 13.718,
+            "resources": 41.0,
+            "scene": "hub",
+            "static_memory_bytes": 44314038
+          },
+          {
+            "ready_ms": 19.497,
+            "resources": 42.0,
+            "scene": "open_water",
+            "static_memory_bytes": 44122046
+          },
+          {
+            "ready_ms": 13.728,
+            "resources": 41.0,
+            "scene": "hub",
+            "static_memory_bytes": 44321198
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.716,
+            "static_memory_bytes": 44603854,
+            "track": "adventure_workshop"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.426,
+            "static_memory_bytes": 44855102,
+            "track": "adventure_stars"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.448,
+            "static_memory_bytes": 44864450,
+            "track": "meadow"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.024,
+            "static_memory_bytes": 45089329,
+            "track": "gears"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.075,
+            "static_memory_bytes": 45328146,
+            "track": "market"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.213,
+            "static_memory_bytes": 45605891,
+            "track": "stories"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.117,
+            "static_memory_bytes": 45850468,
+            "track": "garden"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.051,
+            "static_memory_bytes": 46082435,
+            "track": "together"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.234,
+            "static_memory_bytes": 46350503,
+            "track": "rain"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.207,
+            "static_memory_bytes": 46560567,
+            "track": "victory"
+          }
+        ],
+        "scope": "Automated desktop engine timings; no Android performance/latency claim",
+        "startup_to_two_frames_ms": 89.854
+      },
+      "process": {
+        "scope": "Linux desktop subprocess resource usage; not Android memory or battery",
+        "elapsed_seconds": 1.4477633990027243,
+        "startup_to_ready_wall_seconds": 0.16997124699992128,
+        "max_rss_kib": 128312,
+        "user_cpu_seconds": 0.284945,
+        "system_cpu_seconds": 0.036723,
+        "exit_code": 0
+      }
+    },
+    "software_opengl": {
+      "engine": {
+        "audio_driver": "Dummy; no hardware output measurement",
+        "background_state_paused": true,
+        "background_state_resumed": true,
+        "frame_intervals_ms": {
+          "max": 11.976,
+          "median": 3.993,
+          "p95": 6.247
+        },
+        "max_music_stream_slots": 2,
+        "renderer": "X11",
+        "samples": [
+          {
+            "ready_ms": 20.003,
+            "resources": 37.0,
+            "scene": "heroes",
+            "static_memory_bytes": 48784811
+          },
+          {
+            "ready_ms": 27.932,
+            "resources": 39.0,
+            "scene": "musicbox",
+            "static_memory_bytes": 50066774
+          },
+          {
+            "ready_ms": 71.464,
+            "resources": 42.0,
+            "scene": "open_water",
+            "static_memory_bytes": 50692031
+          },
+          {
+            "ready_ms": 16.278,
+            "resources": 41.0,
+            "scene": "hub",
+            "static_memory_bytes": 50904895
+          },
+          {
+            "ready_ms": 27.683,
+            "resources": 42.0,
+            "scene": "open_water",
+            "static_memory_bytes": 50697279
+          },
+          {
+            "ready_ms": 15.24,
+            "resources": 41.0,
+            "scene": "hub",
+            "static_memory_bytes": 50908135
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.533,
+            "static_memory_bytes": 51190791,
+            "track": "adventure_workshop"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.415,
+            "static_memory_bytes": 51442039,
+            "track": "adventure_stars"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 0.429,
+            "static_memory_bytes": 51451387,
+            "track": "meadow"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.049,
+            "static_memory_bytes": 51676266,
+            "track": "gears"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.076,
+            "static_memory_bytes": 51915083,
+            "track": "market"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.299,
+            "static_memory_bytes": 52192828,
+            "track": "stories"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.14,
+            "static_memory_bytes": 52437405,
+            "track": "garden"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.043,
+            "static_memory_bytes": 52669372,
+            "track": "together"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.182,
+            "static_memory_bytes": 52937440,
+            "track": "rain"
+          },
+          {
+            "active_stream_slots": 2,
+            "load_ms": 1.003,
+            "static_memory_bytes": 53147504,
+            "track": "victory"
+          }
+        ],
+        "scope": "Automated desktop engine timings; no Android performance/latency claim",
+        "startup_to_two_frames_ms": 362.093
+      },
+      "process": {
+        "scope": "Linux desktop subprocess resource usage; not Android memory or battery",
+        "elapsed_seconds": 12.181515621996368,
+        "startup_to_ready_wall_seconds": 9.767460839997511,
+        "max_rss_kib": 263796,
+        "user_cpu_seconds": 2.7972289999999997,
+        "system_cpu_seconds": 0.554797,
+        "exit_code": 0
+      }
+    }
+  },
+  "android_python_tests": {
+    "tests": 24,
+    "status": "PASS",
+    "log": "/tmp/kinderwelt-04-android-final.log"
+  },
+  "screenshots": [
+    {
+      "file": "docs/modern-screenshots/dense_water-solved-0.png",
+      "sha256": "7a543d5f430751bc65aac54268f3ecda6a3da9b286ce07e58c2cb20c0150b03c"
+    },
+    {
+      "file": "docs/modern-screenshots/landscape_water-solved-2.png",
+      "sha256": "0f248add52961cbe14fb45892d612d8b570e5f1dc1b4bb5137a1b882c3c766de"
+    },
+    {
+      "file": "docs/modern-screenshots/large-text_water-2.png",
+      "sha256": "bdb5a9830ffed742d8448ab0808afe45a7a18bcc24cf7efd2f90d737910116d9"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_heroes-move.png",
+      "sha256": "7813ec1fa85d565a7845300fe4744462eb9363387ef864125204939d27f9b3e5"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_heroes-success.png",
+      "sha256": "31953e16ced8a7143a31b69df04e2ecfa5db288f0dbc0ddb8107774a806a59ea"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_heroes-think.png",
+      "sha256": "1f0e9bff5dd27cc326df4852d0ca290e60b773652c00538817d8efbe0ba58ac1"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_heroes.png",
+      "sha256": "333101376530a0097a84bd995b4dd56db86025c2f9dd2c0590f58b358a28881f"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_map-bottom.png",
+      "sha256": "85d137d48f7003eaf39f5f0eff8568a84d74f5696afa443baa355846649b5313"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_musicbox.png",
+      "sha256": "95ed7d2147b06c01b6fe71222dbb23a7a89c765a5be250660d709c77e5f6dc06"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_water-1.png",
+      "sha256": "54e803d265dd93848dac1212a51591ea7b3f57b874c4d15a3b318c5b722998cd"
+    },
+    {
+      "file": "docs/modern-screenshots/phone_water-solved-2.png",
+      "sha256": "bdaca7f28b1d10fd458a40104e154b3e7e5fef90deba901fe88d097c933ed9eb"
+    },
+    {
+      "file": "docs/modern-screenshots/small_map.png",
+      "sha256": "f746469b464b05289b889bfe8f1fdffe0323f8f04d545de05b46a49c91dafdd4"
+    },
+    {
+      "file": "docs/modern-screenshots/small_water-0.png",
+      "sha256": "a2aa7b459caaf3c8c0c334592e3f6f32c47ed5a9d3f5fb1c35cafcfc43325d44"
+    }
+  ],
+  "limitations": [
+    "German speech is eSpeak NG synthetic prototype, not natural production narration",
+    "No physical device install, performance, system bar or touch observation",
+    "No human music/voice quality or child usability/learning evaluation",
+    "Desktop GL cold readiness 9.77 s in llvmpipe; Android startup not measured",
+    "Installed footprint and Play device download not measured",
+    "New development certificate can prevent an update; uninstall erases local saves",
+    "Release signature and all Play publication gates remain blocked"
+  ],
+  "measurement_helper_commit": "72d2424"
+}

@@ -182,3 +182,11 @@ Eine separate Testmission verwendet das vorhandene Hauptmenü, Design, sichere
 Displayfläche, SaveStore und Audio. Die fünf registrierten Module bleiben unverändert.
 Simulation, Bewegung, Welt und versionierter Fortschritt sind unter `games/adventure/`
 getrennt. Regeln, Wiederverwendung und Grenzen: [Adventure-Mission](adventure-mission.md).
+
+## Gemeinsame Plattform 0.4
+
+Karte, Kinderhelden, Narration und Musikregister sind unter `core/modern/` getrennte
+Komponenten. Die neue Mission trennt reinen Rohrgraph (`model.gd`), Eingabetransaktion
+(`gesture.gd`), Zeichnung (`board.gd`) und Ablauf/validierten Fortschritt (`game.gd`).
+Die fünf alten Registrierungen und Aufgaben bleiben erhalten. Der globale SaveStore
+bleibt schema-1-kompatibel. [Verantwortlichkeiten und Regeln](modern-experience-v04.md).

@@ -47,3 +47,13 @@ bewerten; dieser Entwurf macht keine Zusagen über deren Verarbeitung.
 
 Keine personenbezogenen Daten oder Kinderbeobachtungen wurden für diese
 Build-Arbeit erhoben. Diese Vorlage ersetzt keine Betreiberprüfung.
+
+## Ergänzung zum weiterhin ungeprüften Entwurf: Version 0.4
+
+Neu lokal gespeichert werden die gewählte fiktive Kinderfigur, Musikpräferenz, getrennte
+Sprachlautstärke/Automatik und Zustände/Lösungsnachweise der Pflanzenmission. Die
+Figurenauswahl erfordert keinen Namen oder ein Konto des Kindes. Gesprochene Aufgaben
+sind gebündelte synthetische Offline-Clips; es gibt keine Mikrofonaufnahme, Kinderstimmen-
+Übertragung oder verpflichtende Cloud-TTS. Das ist eine technische Beschreibung, keine
+rechtliche oder Google-Play-Freigabe. Veröffentlichung und manueller Datenschutzreview
+bleiben offen.

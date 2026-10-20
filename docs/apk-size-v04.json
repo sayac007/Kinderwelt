@@ -1,0 +1,868 @@
+{
+  "scope": "Actual archive measurements; no Play device download or installed-size claim",
+  "artifacts": [
+    {
+      "path": "build/android-0.3-first-mission/kinderwelt-debug.apk",
+      "bytes": 164121430,
+      "sha256": "c4272897668de7903cfd1389888bc822a71e7ec2090bebf0fb80105d5cac938f",
+      "groups": {
+        "audio": {
+          "raw_bytes": 1453065,
+          "stored_bytes": 1309296,
+          "files": 7
+        },
+        "fonts": {
+          "raw_bytes": 0,
+          "stored_bytes": 0,
+          "files": 0
+        },
+        "graphics": {
+          "raw_bytes": 138276,
+          "stored_bytes": 137841,
+          "files": 43
+        },
+        "application/imports/other": {
+          "raw_bytes": 157718,
+          "stored_bytes": 125935,
+          "files": 95
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 6188161,
+          "stored_bytes": 2407338,
+          "files": 70
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 77555944,
+          "stored_bytes": 77555944,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 82524296,
+          "stored_bytes": 82524296,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 60780,
+      "largest": [
+        {
+          "file": "lib/x86_64/libgodot_android.so",
+          "raw_bytes": 81186808,
+          "stored_bytes": 81186808,
+          "zip_method": 0,
+          "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+        },
+        {
+          "file": "lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 76181608,
+          "stored_bytes": 76181608,
+          "zip_method": 0,
+          "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+        },
+        {
+          "file": "classes.dex",
+          "raw_bytes": 6043992,
+          "stored_bytes": 2332621,
+          "zip_method": 8
+        },
+        {
+          "file": "lib/arm64-v8a/libc++_shared.so",
+          "raw_bytes": 1374336,
+          "stored_bytes": 1374336,
+          "zip_method": 0,
+          "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+        },
+        {
+          "file": "lib/x86_64/libc++_shared.so",
+          "raw_bytes": 1337488,
+          "stored_bytes": 1337488,
+          "zip_method": 0,
+          "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+        },
+        {
+          "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+          "raw_bytes": 259999,
+          "stored_bytes": 245756,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+          "raw_bytes": 235111,
+          "stored_bytes": 225477,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+          "raw_bytes": 220071,
+          "stored_bytes": 191387,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+          "raw_bytes": 209335,
+          "stored_bytes": 182575,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+          "raw_bytes": 204367,
+          "stored_bytes": 180949,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+          "raw_bytes": 165143,
+          "stored_bytes": 148414,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+          "raw_bytes": 159039,
+          "stored_bytes": 134738,
+          "zip_method": 8
+        },
+        {
+          "file": "resources.arsc",
+          "raw_bytes": 35080,
+          "stored_bytes": 35080,
+          "zip_method": 0
+        },
+        {
+          "file": "classes2.dex",
+          "raw_bytes": 39588,
+          "stored_bytes": 12666,
+          "zip_method": 8
+        },
+        {
+          "file": "res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "assets/games/adventure/game.gdc",
+          "raw_bytes": 11512,
+          "stored_bytes": 11380,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/core/scenario_art.gdc",
+          "raw_bytes": 11319,
+          "stored_bytes": 11172,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    },
+    {
+      "path": "build/android-0.4-compression-experiment/kinderwelt-debug.apk",
+      "bytes": 64093414,
+      "sha256": "f65578dd7c550d1c456f66e4b109c6e49c95b1be6ec4104e5b292eda1c85eea0",
+      "groups": {
+        "audio": {
+          "raw_bytes": 1453065,
+          "stored_bytes": 1309296,
+          "files": 7
+        },
+        "fonts": {
+          "raw_bytes": 0,
+          "stored_bytes": 0,
+          "files": 0
+        },
+        "graphics": {
+          "raw_bytes": 138276,
+          "stored_bytes": 137841,
+          "files": 43
+        },
+        "application/imports/other": {
+          "raw_bytes": 157718,
+          "stored_bytes": 125935,
+          "files": 95
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 6188161,
+          "stored_bytes": 2407337,
+          "files": 70
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 77555944,
+          "stored_bytes": 28340126,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 82524296,
+          "stored_bytes": 31735164,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 37715,
+      "largest": [
+        {
+          "file": "lib/x86_64/libgodot_android.so",
+          "raw_bytes": 81186808,
+          "stored_bytes": 31226056,
+          "zip_method": 8,
+          "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+        },
+        {
+          "file": "lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 76181608,
+          "stored_bytes": 27838354,
+          "zip_method": 8,
+          "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+        },
+        {
+          "file": "classes.dex",
+          "raw_bytes": 6043992,
+          "stored_bytes": 2332621,
+          "zip_method": 8
+        },
+        {
+          "file": "lib/x86_64/libc++_shared.so",
+          "raw_bytes": 1337488,
+          "stored_bytes": 509108,
+          "zip_method": 8,
+          "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+        },
+        {
+          "file": "lib/arm64-v8a/libc++_shared.so",
+          "raw_bytes": 1374336,
+          "stored_bytes": 501772,
+          "zip_method": 8,
+          "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+        },
+        {
+          "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+          "raw_bytes": 259999,
+          "stored_bytes": 245756,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+          "raw_bytes": 235111,
+          "stored_bytes": 225477,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+          "raw_bytes": 220071,
+          "stored_bytes": 191387,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+          "raw_bytes": 209335,
+          "stored_bytes": 182575,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+          "raw_bytes": 204367,
+          "stored_bytes": 180949,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+          "raw_bytes": 165143,
+          "stored_bytes": 148414,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+          "raw_bytes": 159039,
+          "stored_bytes": 134738,
+          "zip_method": 8
+        },
+        {
+          "file": "resources.arsc",
+          "raw_bytes": 35080,
+          "stored_bytes": 35080,
+          "zip_method": 0
+        },
+        {
+          "file": "classes2.dex",
+          "raw_bytes": 39588,
+          "stored_bytes": 12666,
+          "zip_method": 8
+        },
+        {
+          "file": "res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "res/mipmap/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12160,
+          "zip_method": 0
+        },
+        {
+          "file": "assets/games/adventure/game.gdc",
+          "raw_bytes": 11512,
+          "stored_bytes": 11380,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/core/scenario_art.gdc",
+          "raw_bytes": 11319,
+          "stored_bytes": 11172,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    },
+    {
+      "path": "build/android-0.4-final/kinderwelt-debug.apk",
+      "bytes": 65764990,
+      "sha256": "1108a8203646d6847d7854c33369a8962d503288829f19dcb50225bfa66d1ea8",
+      "groups": {
+        "audio": {
+          "raw_bytes": 3176867,
+          "stored_bytes": 2892702,
+          "files": 33
+        },
+        "fonts": {
+          "raw_bytes": 0,
+          "stored_bytes": 0,
+          "files": 0
+        },
+        "graphics": {
+          "raw_bytes": 151318,
+          "stored_bytes": 150943,
+          "files": 55
+        },
+        "application/imports/other": {
+          "raw_bytes": 229479,
+          "stored_bytes": 182423,
+          "files": 161
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 6188161,
+          "stored_bytes": 2407333,
+          "files": 70
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 77555944,
+          "stored_bytes": 28340126,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 82524296,
+          "stored_bytes": 31735164,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 56299,
+      "largest": [
+        {
+          "file": "lib/x86_64/libgodot_android.so",
+          "raw_bytes": 81186808,
+          "stored_bytes": 31226056,
+          "zip_method": 8,
+          "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+        },
+        {
+          "file": "lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 76181608,
+          "stored_bytes": 27838354,
+          "zip_method": 8,
+          "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+        },
+        {
+          "file": "classes.dex",
+          "raw_bytes": 6043992,
+          "stored_bytes": 2332621,
+          "zip_method": 8
+        },
+        {
+          "file": "lib/x86_64/libc++_shared.so",
+          "raw_bytes": 1337488,
+          "stored_bytes": 509108,
+          "zip_method": 8,
+          "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+        },
+        {
+          "file": "lib/arm64-v8a/libc++_shared.so",
+          "raw_bytes": 1374336,
+          "stored_bytes": 501772,
+          "zip_method": 8,
+          "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+        },
+        {
+          "file": "assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+          "raw_bytes": 259999,
+          "stored_bytes": 245756,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+          "raw_bytes": 235111,
+          "stored_bytes": 225477,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+          "raw_bytes": 220071,
+          "stored_bytes": 191387,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+          "raw_bytes": 209335,
+          "stored_bytes": 182575,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+          "raw_bytes": 204367,
+          "stored_bytes": 180949,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/stories.ogg-1e763cf670e7325885aefc0a44a11c6d.oggvorbisstr",
+          "raw_bytes": 188103,
+          "stored_bytes": 170863,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/rain.ogg-ad23eaffc1c48efc028853812b2bc9b4.oggvorbisstr",
+          "raw_bytes": 181939,
+          "stored_bytes": 165473,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/meadow.ogg-b0ed940f9a93b8ac55bfcbdb7a16b570.oggvorbisstr",
+          "raw_bytes": 171199,
+          "stored_bytes": 157876,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/garden.ogg-f69d5aeef8e01197d24673728d204a63.oggvorbisstr",
+          "raw_bytes": 165891,
+          "stored_bytes": 153223,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/market.ogg-46194474e76df354cc06e6021ee9f53f.oggvorbisstr",
+          "raw_bytes": 162923,
+          "stored_bytes": 150596,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+          "raw_bytes": 165143,
+          "stored_bytes": 148414,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/together.ogg-8a2d591dae660212113f1a17d56c0318.oggvorbisstr",
+          "raw_bytes": 158179,
+          "stored_bytes": 146300,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/gears.ogg-8c5cc6726cf38a20351469a2b507fe1f.oggvorbisstr",
+          "raw_bytes": 152923,
+          "stored_bytes": 142602,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+          "raw_bytes": 159039,
+          "stored_bytes": 134738,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/victory.ogg-c5a099d0abf4276017ece5abe5640732.oggvorbisstr",
+          "raw_bytes": 144671,
+          "stored_bytes": 133899,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    },
+    {
+      "path": "build/android-0.3-first-mission/kinderwelt-unsigned.aab",
+      "bytes": 53755876,
+      "sha256": "35c7fe31cbb030805594dd2d12d9ee9f92660b53b081275b64b429888dc144da",
+      "groups": {
+        "audio": {
+          "raw_bytes": 1453065,
+          "stored_bytes": 1306487,
+          "files": 7
+        },
+        "fonts": {
+          "raw_bytes": 0,
+          "stored_bytes": 0,
+          "files": 0
+        },
+        "graphics": {
+          "raw_bytes": 138276,
+          "stored_bytes": 136638,
+          "files": 43
+        },
+        "application/imports/other": {
+          "raw_bytes": 157718,
+          "stored_bytes": 124546,
+          "files": 95
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 5252792,
+          "stored_bytes": 1825179,
+          "files": 78
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 72489280,
+          "stored_bytes": 24478799,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 75398760,
+          "stored_bytes": 25835633,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 48594,
+      "largest": [
+        {
+          "file": "base/lib/x86_64/libgodot_android.so",
+          "raw_bytes": 74061272,
+          "stored_bytes": 25373224,
+          "zip_method": 8,
+          "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+        },
+        {
+          "file": "base/lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 71114944,
+          "stored_bytes": 24023949,
+          "zip_method": 8,
+          "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+        },
+        {
+          "file": "base/dex/classes.dex",
+          "raw_bytes": 5136056,
+          "stored_bytes": 1785571,
+          "zip_method": 8
+        },
+        {
+          "file": "base/lib/x86_64/libc++_shared.so",
+          "raw_bytes": 1337488,
+          "stored_bytes": 462409,
+          "zip_method": 8,
+          "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+        },
+        {
+          "file": "base/lib/arm64-v8a/libc++_shared.so",
+          "raw_bytes": 1374336,
+          "stored_bytes": 454850,
+          "zip_method": 8,
+          "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+          "raw_bytes": 259999,
+          "stored_bytes": 245568,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+          "raw_bytes": 235111,
+          "stored_bytes": 225278,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+          "raw_bytes": 220071,
+          "stored_bytes": 190809,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+          "raw_bytes": 209335,
+          "stored_bytes": 182135,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+          "raw_bytes": 204367,
+          "stored_bytes": 180443,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+          "raw_bytes": 165143,
+          "stored_bytes": 148063,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+          "raw_bytes": 159039,
+          "stored_bytes": 134191,
+          "zip_method": 8
+        },
+        {
+          "file": "base/res/mipmap/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12139,
+          "zip_method": 8
+        },
+        {
+          "file": "base/res/mipmap/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12139,
+          "zip_method": 8
+        },
+        {
+          "file": "base/res/mipmap-xxxhdpi-v4/icon_foreground.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12139,
+          "zip_method": 8
+        },
+        {
+          "file": "base/res/mipmap-xxxhdpi-v4/icon_monochrome.webp",
+          "raw_bytes": 12160,
+          "stored_bytes": 12139,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/games/adventure/game.gdc",
+          "raw_bytes": 11512,
+          "stored_bytes": 11375,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/core/scenario_art.gdc",
+          "raw_bytes": 11319,
+          "stored_bytes": 11166,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/core/learning_game.gdc",
+          "raw_bytes": 11060,
+          "stored_bytes": 10972,
+          "zip_method": 8
+        },
+        {
+          "file": "base/res/mipmap-xxhdpi-v4/icon_foreground.webp",
+          "raw_bytes": 9066,
+          "stored_bytes": 9071,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    },
+    {
+      "path": "build/android-0.4-final/kinderwelt-unsigned.aab",
+      "bytes": 55406003,
+      "sha256": "6b2a7ee1713aa8eb153478c0d35140a0f3c831f8528076068c02395889b05034",
+      "groups": {
+        "audio": {
+          "raw_bytes": 3176867,
+          "stored_bytes": 2861259,
+          "files": 33
+        },
+        "fonts": {
+          "raw_bytes": 0,
+          "stored_bytes": 0,
+          "files": 0
+        },
+        "graphics": {
+          "raw_bytes": 151318,
+          "stored_bytes": 149740,
+          "files": 55
+        },
+        "application/imports/other": {
+          "raw_bytes": 229479,
+          "stored_bytes": 180279,
+          "files": 161
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 5252922,
+          "stored_bytes": 1825211,
+          "files": 78
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 72489280,
+          "stored_bytes": 24478799,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 75398760,
+          "stored_bytes": 25835633,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 75082,
+      "largest": [
+        {
+          "file": "base/lib/x86_64/libgodot_android.so",
+          "raw_bytes": 74061272,
+          "stored_bytes": 25373224,
+          "zip_method": 8,
+          "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+        },
+        {
+          "file": "base/lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 71114944,
+          "stored_bytes": 24023949,
+          "zip_method": 8,
+          "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+        },
+        {
+          "file": "base/dex/classes.dex",
+          "raw_bytes": 5136056,
+          "stored_bytes": 1785571,
+          "zip_method": 8
+        },
+        {
+          "file": "base/lib/x86_64/libc++_shared.so",
+          "raw_bytes": 1337488,
+          "stored_bytes": 462409,
+          "zip_method": 8,
+          "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+        },
+        {
+          "file": "base/lib/arm64-v8a/libc++_shared.so",
+          "raw_bytes": 1374336,
+          "stored_bytes": 454850,
+          "zip_method": 8,
+          "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/workshop.wav-420ac82b4f31c4aab73b9f489ea279e4.sample",
+          "raw_bytes": 259999,
+          "stored_bytes": 245568,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/stars.wav-fd130ccafd17e1959d6badb036a429c0.sample",
+          "raw_bytes": 235111,
+          "stored_bytes": 225278,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/language.wav-d0e7354916283196f71607800b21b4f2.sample",
+          "raw_bytes": 220071,
+          "stored_bytes": 190809,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/social.wav-f35c3eac6675fcd7af0c3b816630493c.sample",
+          "raw_bytes": 209335,
+          "stored_bytes": 182135,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/logic.wav-493105d2981c639829fd46ab1259ef84.sample",
+          "raw_bytes": 204367,
+          "stored_bytes": 180443,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/stories.ogg-1e763cf670e7325885aefc0a44a11c6d.oggvorbisstr",
+          "raw_bytes": 188103,
+          "stored_bytes": 167270,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/rain.ogg-ad23eaffc1c48efc028853812b2bc9b4.oggvorbisstr",
+          "raw_bytes": 181939,
+          "stored_bytes": 161958,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/meadow.ogg-b0ed940f9a93b8ac55bfcbdb7a16b570.oggvorbisstr",
+          "raw_bytes": 171199,
+          "stored_bytes": 154790,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/garden.ogg-f69d5aeef8e01197d24673728d204a63.oggvorbisstr",
+          "raw_bytes": 165891,
+          "stored_bytes": 150304,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/autonomy.wav-386a5e4f638c152733939bba4d83506c.sample",
+          "raw_bytes": 165143,
+          "stored_bytes": 148063,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/market.ogg-46194474e76df354cc06e6021ee9f53f.oggvorbisstr",
+          "raw_bytes": 162923,
+          "stored_bytes": 147822,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/together.ogg-8a2d591dae660212113f1a17d56c0318.oggvorbisstr",
+          "raw_bytes": 158179,
+          "stored_bytes": 143575,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/gears.ogg-8c5cc6726cf38a20351469a2b507fe1f.oggvorbisstr",
+          "raw_bytes": 152923,
+          "stored_bytes": 140005,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/math.wav-4c127ecd17b296d1ffc78e8a16f483fc.sample",
+          "raw_bytes": 159039,
+          "stored_bytes": 134191,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/victory.ogg-c5a099d0abf4276017ece5abe5640732.oggvorbisstr",
+          "raw_bytes": 144671,
+          "stored_bytes": 131455,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    }
+  ],
+  "native_library_content_unchanged": true,
+  "native_library_sha256": {
+    "lib/x86_64/libgodot_android.so": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443",
+    "lib/arm64-v8a/libgodot_android.so": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159",
+    "lib/x86_64/libc++_shared.so": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef",
+    "lib/arm64-v8a/libc++_shared.so": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
+  },
+  "apk_reduction_percent": 59.92906593611815,
+  "universal_debug_budget_bytes": 120000000,
+  "universal_debug_budget_met": true,
+  "play_device_download_budget_bytes": 80000000,
+  "play_device_download_budget_status": "NOT MEASURED",
+  "fonts_note": "No separately packaged font files; Godot fallback fonts are part of the engine and not separated here"
+}

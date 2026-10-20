@@ -1,11 +1,15 @@
-# Kinderwelt 0.3 · erster Adventure-Test
+# Kinderwelt 0.4 · Karte, Kinderhelden und Pflanzenmission
 
-Neu: **eine** experimentelle Mission „Picos Kraftwerk“ mit drei Räumen, drei
-Schwierigkeitsvarianten und zwei eigenen elektronischen Musikstücken.
-Start über **⚡ Picos Kraftwerk testen** oben im Hauptmenü.
-[Spielanleitung und Lösungen](docs/adventure-mission.md) ·
-[APK, Screenshots und tatsächliche Testergebnisse](docs/adventure-test-report.md).
-Weitere Missionen folgen erst nach dem Gerätetest. Die bisherige 0.2 bleibt erhalten.
+Neue gemeinsame Abenteuerkarte, vier wählbare Kinderfiguren, zehn elektronische
+Musikstücke und Offline-Sprachausgabe. Die Referenzmission **Die durstige Pflanze**
+verwendet echte Rohrverbindungen, Drag-and-drop und drei Schwierigkeitsstufen.
+Die deutsche Stimme ist ein synthetischer Prototyp; die fünf bisherigen Bereiche
+und Picos Kraftwerk bleiben erhalten.
+
+[Bedienung](docs/modern-experience-v04.md) ·
+[APK/AAB, Tests und Screenshots](docs/modern-test-report.md) ·
+[Größenanalyse: 164,12 → 65,76 MB](docs/apk-size-v04.md).
+
 
 Offline nutzbares Godot-Projekt mit Fundament, Logik und Mathematik sowie den
 Modulen aus `03_language_autonomy_social.yaml`. Brückenwerkstatt und Marktstand

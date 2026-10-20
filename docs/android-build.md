@@ -1,5 +1,6 @@
-> Aktueller Testexport: **0.3.0 / Code 3**, eine Adventure-Mission.
-> Tatsächliche Artefakte und aktuelle Nachweise: [Adventure-Testbericht](adventure-test-report.md).
+> Aktueller Testexport: **0.4.0 / Code 4**, Universal-Debug-APK und unsigniertes AAB.
+> Tatsächliche Artefakte: [0.4-Prüfbericht](modern-test-report.md). Native Libraries werden
+> verlustfrei komprimiert und bei Installation extrahiert; [Messung und Trade-off](apk-size-v04.md).
 > Ältere Ergebnisangaben unten sind historische Nachweise. Build-Befehle bleiben gültig.
 
 # Reproducible Android verification builds
