@@ -136,3 +136,13 @@ weitgehend selbstständig“ bleibt **nicht nachgewiesen**, bis der
 [reale Smartphone-Test](child-friendly-device-checklist.md) stattgefunden hat.
 Datenschutz-/Families-/Store-/Signaturfreigaben und Lernwirkungsnachweise bleiben
 von diesem Meilenstein getrennt. Keine Marktreife- oder Play-Uploadbehauptung.
+
+## GitHub-Übergabe
+
+`feat/child-friendly-experience` wurde erfolgreich nach origin gepusht. Die
+PR-Erstellung mit der fertigen Beschreibung scheiterte erneut mit
+`Post "https://api.github.com/graphql": Forbidden`. Ein erfolgreich erstellter
+PR oder grüner Remote-Actions-Lauf wird nicht behauptet.
+
+[PR gegen main manuell erstellen](https://github.com/sayac007/Kinderwelt/compare/main...feat/child-friendly-experience?expand=1).
+Die Beschreibung liegt in [child-friendly-pull-request.md](child-friendly-pull-request.md).
