@@ -24,7 +24,7 @@ class VerificationTests(unittest.TestCase):
     def test_missing_modules_rejected(self):
         with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/games/social/levels.json"])
     def test_missing_music_payload_rejected(self):
-        with self.assertRaises(AssertionError):v.check_payload(PAYLOAD[:-1])
+        with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/social.wav-fixture.sample"])
     def test_missing_adventure_asset_rejected(self):
         for required in PAYLOAD[20:]:
             with self.subTest(required=required),self.assertRaises(AssertionError):v.check_payload([p for p in PAYLOAD if p!=required])
