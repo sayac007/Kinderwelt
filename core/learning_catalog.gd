@@ -10,6 +10,8 @@ static func load_levels(entry: Dictionary) -> Array:
 	return data.levels if valid_levels(entry.id, data.levels) else []
 
 static func valid_levels(module: String, levels: Array) -> bool:
+	if module in ["language", "autonomy", "social"]:
+		return preload("res://core/scenario_catalog.gd").valid_levels(module, levels)
 	if not module in ["logic", "math"] or levels.size() < 9: return false
 	var ids: Array = []
 	var tiers := [0, 0, 0]

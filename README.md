@@ -1,9 +1,11 @@
-# Kinderwelt · Fundament, Logik und Mathematik
+# Kinderwelt · fünf spielbare Lernbereiche
 
-Offline nutzbares Godot-Projekt gemäß `01_foundation.yaml` und `02_logic_math.yaml`.
-Brückenwerkstatt und Marktstand enthalten jeweils neun spielbare Level in drei
-Stufen. Die drei übrigen Hub-Eingänge bleiben Fundament-Demos; Aufgaben 03–05
-sind unverändert und noch nicht implementiert.
+Offline nutzbares Godot-Projekt mit Fundament, Logik und Mathematik sowie den
+Modulen aus `03_language_autonomy_social.yaml`. Brückenwerkstatt und Marktstand
+enthalten je neun Level. Bildergeschichte, Entdeckerwerkstatt und gemeinsames
+Dorf enthalten jeweils sechs frei wählbare Geschichten, Experimente und Szenarien.
+Alle fünf Bereiche sind solo spielbar; Begleitung ist freiwillig. Aufgaben 04 und
+05 wurden noch nicht umgesetzt.
 
 ## Starten
 
@@ -31,8 +33,8 @@ Archiv vor dem Entpacken gegen die offizielle Prüfsummenliste.
 
 ## Spielen und testen
 
-Im Hub die Brücke oder die Obstpunkte wählen, dann den Pfeil für den aktuellen
-Levelvorschlag oder eine der neun Levelkarten. Alle Stufen sind frei zugänglich.
+Im Hub einen der fünf Bereiche wählen. Logik und Mathematik bieten Vorschläge
+und freie Levelwahl; die drei neuen Bereiche sind ohne Rangstufen frei wählbar.
 
 - **Brückenwerkstatt:** Holzstück auswählen, anschließend die passende Lücke
   antippen. Gepunktete Holzstücke können kombiniert werden; die Umrisse zeigen
@@ -42,6 +44,15 @@ Levelvorschlag oder eine der neun Levelkarten. Alle Stufen sind frei zugänglich
   legen. Äpfel und Birnen haben unterschiedliche Formen. Mal geht es um eine
   passende Menge, mal um Sortieren oder gleiches Verteilen. Bei vollen Körben
   zeigt die Anleitung auf den Korb mit mehr Früchten: diesen direkt antippen.
+- **Bildergeschichte:** Eine Bild-/Klanggeschichte ansehen, bei Bedarf mit Pfeilen
+  im eigenen Tempo blättern, dann 3–5 Bilder in Reihenfolge legen. Herausnehmen
+  und Neuordnen sind jederzeit möglich.
+- **Entdeckerwerkstatt:** Zwei Bildeinstellungen verändern, den Versuchspfeil
+  drücken und das Ergebnis mit dem Fahnenbild vergleichen. Alle Versuche sind
+  reversibel; mehrere Einstellungen können zum Ziel führen.
+- **Gemeinsames Dorf:** Eine bebilderte Idee für zwei unterschiedliche Bedürfnisse
+  ausprobieren. Umrisse zeigen noch offene Wünsche, ohne Punkte oder Beschämung.
+  Zwei Figuren mit Sprechblase öffnen freiwillige Gesprächsimpulse.
 - Das Haus führt zurück, das Raster zur Levelwahl. Der runde Pfeil startet neu.
   Rückgängig nimmt den letzten Schritt zurück. Das Ton-/Wiederholungssymbol
   zeigt die Bildanleitung erneut. Die Hand hilft in drei Stufen: **zeigen → einen
@@ -64,7 +75,9 @@ GODOT=/workspace/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 bash tests/r
 ```
 
 Der Test verwendet ein temporäres Benutzerverzeichnis, niemals echte Spielstände.
-Siehe [Architektur](docs/architecture.md) und [Testbericht](docs/test-report.md).
+Siehe [Architektur](docs/architecture.md), [Logik-/Mathematik-Testbericht](docs/test-report.md),
+[Bedienung und Content-Anleitung der neuen Module](docs/scenario-authoring.md) und
+[aktuellen Szenarien-Testbericht](docs/scenario-test-report.md).
 Es gibt synthetische Töne, **keine implementierte Sprachausgabe**. Die Bedienung
 stützt sich auf Bilder, Mengenpunkte, Fokus und wiederholbare Hinweise; deutsche
 Beschriftungen sind ergänzend. Verständlichkeit ohne Lesen ist auf einem physischen Gerät

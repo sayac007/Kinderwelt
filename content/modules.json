@@ -19,18 +19,27 @@
     "id": "language",
     "name": "Bildergeschichte",
     "icon": "book",
-    "level": "res://games/language/foundation.json"
+    "level": "res://games/language/foundation.json",
+    "levels": "res://games/language/levels.json",
+    "runtime": "res://games/language/game.gd",
+    "name_key": "language.name"
   },
   {
     "id": "autonomy",
     "name": "Entdeckerwerkstatt",
     "icon": "star",
-    "level": "res://games/autonomy/foundation.json"
+    "level": "res://games/autonomy/foundation.json",
+    "levels": "res://games/autonomy/levels.json",
+    "runtime": "res://games/autonomy/game.gd",
+    "name_key": "autonomy.name"
   },
   {
     "id": "social",
     "name": "Gemeinsames Dorf",
     "icon": "people",
-    "level": "res://games/social/foundation.json"
+    "level": "res://games/social/foundation.json",
+    "levels": "res://games/social/levels.json",
+    "runtime": "res://games/social/game.gd",
+    "name_key": "social.name"
   }
 ]

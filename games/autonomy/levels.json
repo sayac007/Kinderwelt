@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "module": "autonomy",
+  "levels": [
+    {
+      "id": "ramp",
+      "title_key": "autonomy.ramp.title",
+      "prompt_key": "autonomy.ramp.prompt",
+      "narration": null,
+      "experiment": "ramp",
+      "goal": 4,
+      "initial": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "light",
+      "title_key": "autonomy.light.title",
+      "prompt_key": "autonomy.light.prompt",
+      "narration": null,
+      "experiment": "light",
+      "goal": 1,
+      "initial": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "water",
+      "title_key": "autonomy.water.title",
+      "prompt_key": "autonomy.water.prompt",
+      "narration": null,
+      "experiment": "water",
+      "goal": 1,
+      "initial": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wind",
+      "title_key": "autonomy.wind.title",
+      "prompt_key": "autonomy.wind.prompt",
+      "narration": null,
+      "experiment": "wind",
+      "goal": 4,
+      "initial": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "balance",
+      "title_key": "autonomy.balance.title",
+      "prompt_key": "autonomy.balance.prompt",
+      "narration": null,
+      "experiment": "balance",
+      "goal": 1,
+      "initial": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "garden",
+      "title_key": "autonomy.garden.title",
+      "prompt_key": "autonomy.garden.prompt",
+      "narration": null,
+      "experiment": "garden",
+      "goal": 1,
+      "initial": [
+        0,
+        0
+      ]
+    }
+  ]
+}

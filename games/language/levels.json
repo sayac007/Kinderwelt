@@ -1,0 +1,320 @@
+{
+  "schema": 1,
+  "module": "language",
+  "levels": [
+    {
+      "id": "garden",
+      "title_key": "language.garden.title",
+      "prompt_key": "language.garden.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "garden_0",
+          "scene": "garden",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.garden.card0",
+          "narration": null
+        },
+        {
+          "id": "garden_1",
+          "scene": "garden",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.garden.card1",
+          "narration": null
+        },
+        {
+          "id": "garden_2",
+          "scene": "garden",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.garden.card2",
+          "narration": null
+        },
+        {
+          "id": "garden_3",
+          "scene": "garden",
+          "step": 3,
+          "cue": 4,
+          "caption_key": "language.garden.card3",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "garden_1",
+        "garden_3",
+        "garden_0",
+        "garden_2"
+      ],
+      "orders": [
+        [
+          "garden_0",
+          "garden_1",
+          "garden_2",
+          "garden_3"
+        ]
+      ]
+    },
+    {
+      "id": "bread",
+      "title_key": "language.bread.title",
+      "prompt_key": "language.bread.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "bread_0",
+          "scene": "bread",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.bread.card0",
+          "narration": null
+        },
+        {
+          "id": "bread_1",
+          "scene": "bread",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.bread.card1",
+          "narration": null
+        },
+        {
+          "id": "bread_2",
+          "scene": "bread",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.bread.card2",
+          "narration": null
+        },
+        {
+          "id": "bread_3",
+          "scene": "bread",
+          "step": 3,
+          "cue": 4,
+          "caption_key": "language.bread.card3",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "bread_1",
+        "bread_3",
+        "bread_0",
+        "bread_2"
+      ],
+      "orders": [
+        [
+          "bread_0",
+          "bread_1",
+          "bread_2",
+          "bread_3"
+        ]
+      ]
+    },
+    {
+      "id": "rain",
+      "title_key": "language.rain.title",
+      "prompt_key": "language.rain.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "rain_0",
+          "scene": "rain",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.rain.card0",
+          "narration": null
+        },
+        {
+          "id": "rain_1",
+          "scene": "rain",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.rain.card1",
+          "narration": null
+        },
+        {
+          "id": "rain_2",
+          "scene": "rain",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.rain.card2",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "rain_1",
+        "rain_0",
+        "rain_2"
+      ],
+      "orders": [
+        [
+          "rain_0",
+          "rain_1",
+          "rain_2"
+        ]
+      ]
+    },
+    {
+      "id": "kite",
+      "title_key": "language.kite.title",
+      "prompt_key": "language.kite.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "kite_0",
+          "scene": "kite",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.kite.card0",
+          "narration": null
+        },
+        {
+          "id": "kite_1",
+          "scene": "kite",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.kite.card1",
+          "narration": null
+        },
+        {
+          "id": "kite_2",
+          "scene": "kite",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.kite.card2",
+          "narration": null
+        },
+        {
+          "id": "kite_3",
+          "scene": "kite",
+          "step": 3,
+          "cue": 4,
+          "caption_key": "language.kite.card3",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "kite_1",
+        "kite_3",
+        "kite_0",
+        "kite_2"
+      ],
+      "orders": [
+        [
+          "kite_0",
+          "kite_1",
+          "kite_2",
+          "kite_3"
+        ]
+      ]
+    },
+    {
+      "id": "paint",
+      "title_key": "language.paint.title",
+      "prompt_key": "language.paint.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "paint_0",
+          "scene": "paint",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.paint.card0",
+          "narration": null
+        },
+        {
+          "id": "paint_1",
+          "scene": "paint",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.paint.card1",
+          "narration": null
+        },
+        {
+          "id": "paint_2",
+          "scene": "paint",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.paint.card2",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "paint_1",
+        "paint_0",
+        "paint_2"
+      ],
+      "orders": [
+        [
+          "paint_0",
+          "paint_1",
+          "paint_2"
+        ]
+      ]
+    },
+    {
+      "id": "picnic",
+      "title_key": "language.picnic.title",
+      "prompt_key": "language.picnic.prompt",
+      "narration": null,
+      "cards": [
+        {
+          "id": "picnic_0",
+          "scene": "picnic",
+          "step": 0,
+          "cue": 1,
+          "caption_key": "language.picnic.card0",
+          "narration": null
+        },
+        {
+          "id": "picnic_1",
+          "scene": "picnic",
+          "step": 1,
+          "cue": 2,
+          "caption_key": "language.picnic.card1",
+          "narration": null
+        },
+        {
+          "id": "picnic_2",
+          "scene": "picnic",
+          "step": 2,
+          "cue": 3,
+          "caption_key": "language.picnic.card2",
+          "narration": null
+        },
+        {
+          "id": "picnic_3",
+          "scene": "picnic",
+          "step": 3,
+          "cue": 4,
+          "caption_key": "language.picnic.card3",
+          "narration": null
+        },
+        {
+          "id": "picnic_4",
+          "scene": "picnic",
+          "step": 4,
+          "cue": 5,
+          "caption_key": "language.picnic.card4",
+          "narration": null
+        }
+      ],
+      "tray": [
+        "picnic_1",
+        "picnic_3",
+        "picnic_0",
+        "picnic_2",
+        "picnic_4"
+      ],
+      "orders": [
+        [
+          "picnic_0",
+          "picnic_1",
+          "picnic_2",
+          "picnic_3",
+          "picnic_4"
+        ]
+      ]
+    }
+  ]
+}
