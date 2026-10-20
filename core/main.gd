@@ -20,6 +20,7 @@ const Design = preload("res://core/design.gd")
 const Mobile = preload("res://core/mobile.gd")
 var sound_button: Button
 var scroll_view: ScrollContainer
+var adventure: Control
 var top_bar: HBoxContainer
 
 func _ready() -> void:
@@ -80,6 +81,12 @@ func toggle_sound() -> void:
 	save()
 
 func clear() -> void:
+	if is_instance_valid(adventure):
+		adventure.persist()
+		remove_child(adventure)
+		adventure.queue_free()
+		adventure = null
+	if is_instance_valid(scroll_view): scroll_view.show()
 	if hint_tween: hint_tween.kill()
 	learning_game = null
 	grid = null
@@ -119,6 +126,7 @@ func hub() -> void:
 	clear()
 	audio.set_world("logic")
 	label("Worauf hast du heute Lust?")
+	button("⚡ Picos Kraftwerk testen", open_adventure)
 	grid = GridContainer.new()
 	body.add_child(grid)
 	for entry in Catalog.modules():
@@ -263,3 +271,11 @@ func _unhandled_input(event: InputEvent) -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST and is_instance_valid(body):
 		hub()
+
+func open_adventure() -> void:
+	clear()
+	active = {}
+	scroll_view.hide()
+	adventure = preload("res://games/adventure/game.gd").new()
+	add_child(adventure)
+	adventure.setup(self)

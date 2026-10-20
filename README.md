@@ -1,4 +1,11 @@
-# Kinderwelt 0.2 · Child-Friendly Experience
+# Kinderwelt 0.3 · erster Adventure-Test
+
+Neu: **eine** experimentelle Mission „Picos Kraftwerk“ mit drei Räumen, drei
+Schwierigkeitsvarianten und zwei eigenen elektronischen Musikstücken.
+Start über **⚡ Picos Kraftwerk testen** oben im Hauptmenü.
+[Spielanleitung und Lösungen](docs/adventure-mission.md) ·
+[APK, Screenshots und tatsächliche Testergebnisse](docs/adventure-test-report.md).
+Weitere Missionen folgen erst nach dem Gerätetest. Die bisherige 0.2 bleibt erhalten.
 
 Offline nutzbares Godot-Projekt mit Fundament, Logik und Mathematik sowie den
 Modulen aus `03_language_autonomy_social.yaml`. Brückenwerkstatt und Marktstand

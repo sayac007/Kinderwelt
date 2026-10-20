@@ -106,7 +106,10 @@ def main():
         outcomes=re.findall(r"^(RESULT|LEARNING RESULT|INPUT RESULT|SCENARIOS RESULT): (\d+) checks, (\d+) failures$",log,re.M)
         if len(outcomes)!=4 or any(int(n)==0 or int(f)!=0 for _,n,f in outcomes):
             raise ValueError("All four existing suites must execute nonzero checks and pass")
-        return {"checks":sum(int(n) for _,n,_ in outcomes),"suites":[{"name":n,"checks":int(c),"failed":int(f)} for n,c,f in outcomes]}
+        adventure=re.findall(r"^ADVENTURE RESULT: (\d+) checks, (\d+) failures$",log,re.M)
+        if len(adventure)!=1 or int(adventure[0][0])==0 or int(adventure[0][1])!=0:
+            raise ValueError("Adventure suite must execute nonzero checks and pass")
+        return {"adventure_checks":int(adventure[0][0]),"checks":sum(int(n) for _,n,_ in outcomes),"suites":[{"name":n,"checks":int(c),"failed":int(f)} for n,c,f in outcomes]}
 
     def python_check(log):
         match=re.search(r"Ran (\d+) tests?",log)
