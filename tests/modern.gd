@@ -135,6 +135,7 @@ func run() -> void:
 		check(game.board.hero.person=="sam","Selected child appears in the mission")
 		check(game.board.cell>=48,"Pipe touch area at least 48 logical units")
 		game.switch_tier(0)
+		game.restart()
 		await process_frame
 		var before: int = game.model.tiles[5]
 		var p: Vector2 = game.board.get_global_transform_with_canvas()*game.board.center(5)
@@ -166,12 +167,25 @@ func run() -> void:
 		for tier in range(3):
 			app.modern_view.switch_tier(tier)
 			# Fresh fixture for this tier, actions still use the real model.
-			app.modern_view.model.configure(tier)
+			app.modern_view.restart()
+			check(not app.modern_view.completed,"Restart clears only this mission award")
 			solve(app.modern_view.model)
 			app.modern_view.turn_water()
 			check(app.modern_view.completed,"UI detects success at each difficulty")
+			app.modern_view.turn_water()
+			check(app.modern_view.completed and app.modern_view.board.watered,"Closing the tap does not undo plant growth")
+			app.hub();app.open_water()
+			check(app.modern_view.completed and not app.modern_view.model.valve,"Watering achievement resumes with the tap closed")
 		app.hub()
 		await process_frame
+	var closed_state: Dictionary = app.store.data.water["2"].duplicate(true)
+	for invalid_proof in [app.store.data.water["0"].proof,{"schema":1}]:
+		app.hub()
+		app.store.data.water["2"] = closed_state.duplicate(true)
+		app.store.data.water["2"].proof = invalid_proof
+		app.store.data.water_tier = 2
+		app.open_water()
+		check(not app.modern_view.completed and not app.modern_view.model.valve,"Invalid or wrong-tier proof cannot award a plant")
 	app.store.reset()
 	app.musicbox()
 	var box: Control = app.body.get_child(0)
@@ -200,7 +214,9 @@ func run() -> void:
 	check(app.narration.play_clip("mina",true),"Bundled German voice actually starts")
 	check(app.narration.playing and app.audio.music.ducked,"Speech playback ducks music")
 	check(app.audio.music.players[app.audio.music.active].volume_db<=normal-12.9,"Measured music gain lowered by 13 dB")
-	await create_timer(app.narration.stream.get_length()+.15).timeout
+	var voice_deadline := Time.get_ticks_msec()+int((app.narration.stream.get_length()+1.0)*1000)
+	while (app.narration.playing or app.audio.music.ducked) and Time.get_ticks_msec()<voice_deadline:
+		await process_frame
 	check(not app.narration.playing and not app.audio.music.ducked,"Natural end releases ducking")
 	app.store.data.voice_auto = false
 	check(not app.narration.play_clip("water_0",true),"Autoplay can be disabled")

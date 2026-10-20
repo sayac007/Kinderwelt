@@ -15,6 +15,7 @@ var phase := "idle"
 var entered := 0.0
 var celebration := 0.0
 var was_complete := false
+var watered := false
 const INK := Color("354b53")
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
@@ -54,7 +55,8 @@ func _process(delta: float) -> void:
 	if model==null: return
 	geometry()
 	if not reduced_motion: clock += delta
-	var complete: bool = model.evaluate().complete
+	var complete: bool = watered or model.evaluate().complete
+	watered = complete
 	if complete and not was_complete: celebration = 1.0
 	was_complete = complete
 	celebration = maxf(0,celebration-delta)
@@ -121,7 +123,7 @@ func _draw() -> void:
 				draw_circle(at+Vector2(0,-cell*.12),cell*.15,Color("ab7651"))
 				draw_circle(at+Vector2(cell*.13,-cell*.21),cell*.10,Color("ab7651"))
 				draw_circle(at+Vector2(cell*.16,-cell*.23),1.5,INK)
-			else: pot(at,r.supplied.has(index),model.goals[index])
+			else: pot(at,watered or r.supplied.has(index),model.goals[index])
 			continue
 		if ports==0:
 			draw_circle(at,3,Color("bba582"))
