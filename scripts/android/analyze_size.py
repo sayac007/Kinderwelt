@@ -5,13 +5,14 @@ from pathlib import Path
 
 def analyze(path):
     groups=collections.defaultdict(lambda:{'raw_bytes':0,'stored_bytes':0,'files':0})
+    for name in ['audio','fonts','graphics','application/imports/other','Android/metadata/classes']: groups[name]
     with zipfile.ZipFile(path) as z:
         assert z.testzip() is None,'Corrupt artifact'
         entries=z.infolist()
         for entry in entries:
             n=entry.filename
             category=('native/'+n.split('/')[-2] if n.endswith('.so') else
-                      'audio' if n.endswith(('.sample','.ogg','.wav')) else
+                      'audio' if n.endswith(('.sample','.ogg','.wav','.oggvorbisstr','.mp3')) else
                       'fonts' if n.endswith(('.ttf','.otf','.woff','.woff2')) else
                       'graphics' if n.endswith(('.ctex','.png','.webp','.svg')) else
                       'application/imports/other' if 'assets/' in n else 'Android/metadata/classes')

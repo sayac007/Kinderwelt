@@ -20,7 +20,7 @@ cat "$OUTPUT/render.log"
 if (( RESULT != 0 )); then exit "$RESULT"; fi
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/render.log"; then exit 1; fi
 python3 - "$OUTPUT" <<'PY'
-import json,struct,sys
+import hashlib,json,struct,sys
 from pathlib import Path
 root=Path(sys.argv[1]);frames=json.loads((root/'modern-render.json').read_text())['frames']
 assert len(frames)==70
@@ -28,5 +28,7 @@ for frame in frames:
  data=(root/frame['file']).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
  assert list(struct.unpack('>II',data[16:24]))==frame['pixels']
+for profile in ['small','large-text','phone','landscape','dense']:
+ assert len({hashlib.sha256((root/(profile+'_heroes-'+pose+'.png')).read_bytes()).hexdigest() for pose in ['idle','move','think','success']})==4,'Hero poses must render differently'
 print('PASS: 70 modern renders, five profiles with four hero poses')
 PY

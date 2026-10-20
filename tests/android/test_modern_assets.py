@@ -38,6 +38,7 @@ class ModernAssets(unittest.TestCase):
             with zipfile.ZipFile(path,'w') as z:
                 z.writestr('lib/arm64-v8a/libfake.so',b'a'*4096,compress_type=zipfile.ZIP_DEFLATED)
                 z.writestr('assets/.godot/imported/music.sample',b'music'*200)
+                z.writestr('assets/.godot/imported/voice.ogg-fixture.oggvorbisstr',b'voice'*20)
                 z.writestr('assets/font.ttf',b'font')
                 z.writestr('assets/hero.ctex',b'image')
                 z.writestr('assets/game.gdc',b'code')
@@ -46,6 +47,7 @@ class ModernAssets(unittest.TestCase):
             self.assertEqual(report['bytes'],path.stat().st_size)
             self.assertEqual(report['groups']['native/arm64-v8a']['raw_bytes'],4096)
             self.assertLess(report['groups']['native/arm64-v8a']['stored_bytes'],4096)
+            self.assertEqual(report['groups']['audio']['files'],2)
             self.assertIn('audio',report['groups']);self.assertIn('fonts',report['groups']);self.assertIn('graphics',report['groups'])
             self.assertEqual(sum(g['stored_bytes'] for g in report['groups'].values())+report['zip_alignment_signing_overhead_bytes'],path.stat().st_size)
 if __name__=='__main__':unittest.main()

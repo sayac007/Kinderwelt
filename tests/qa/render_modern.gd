@@ -34,6 +34,8 @@ func capture() -> void:
 		for pose in ["idle","move","think","success"]:
 			for button in app.body.get_child(2).get_children():
 				button.get_child(0).animation = pose
+				button.get_child(0).reduced_motion = false
+				button.get_child(0).clock = .2
 			await snap("heroes-"+pose,profile)
 		app.musicbox()
 		app.scroll_view.scroll_vertical = 0
