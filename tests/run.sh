@@ -8,10 +8,14 @@ export XDG_DATA_HOME="$TEST_STATE/data" XDG_CONFIG_HOME="$TEST_STATE/config" XDG
 mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
 run_checked() {
   local log="$TEST_STATE/run.log"
-  "${GODOT:-godot}" "$@" >"$log" 2>&1 || { cat "$log"; return 1; }
+  local result=0
+  timeout 120 "${GODOT:-godot}" "$@" >"$log" 2>&1 || result=$?
   cat "$log"
+  if (( result != 0 )); then return "$result"; fi
   if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$log"; then return 1; fi
 }
 run_checked --headless --path . --editor --import --quit
 run_checked --headless --path . --script tests/smoke.gd
+run_checked --headless --path . --script tests/learning.gd
+run_checked --headless --path . --script tests/input.gd
 run_checked --headless --path . --quit-after 60

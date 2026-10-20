@@ -12,12 +12,14 @@ var taps := 0
 var play_button: Button
 var status: Label
 var co_play := false
+var learning_game: Control
 var hint_tween: Tween
 
 func _ready() -> void:
 	store.load_save()
 	add_child(audio)
 	var scroll := ScrollContainer.new()
+	scroll.follow_focus = true
 	scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(scroll)
 	body = VBoxContainer.new()
@@ -29,6 +31,7 @@ func _ready() -> void:
 
 func clear() -> void:
 	if hint_tween: hint_tween.kill()
+	learning_game = null
 	grid = null
 	for child in body.get_children():
 		body.remove_child(child)
@@ -94,9 +97,14 @@ func responsive() -> void:
 
 func open_module(entry: Dictionary) -> void:
 	active = entry
+	clear()
+	if entry.has("runtime"):
+		learning_game = load(entry.runtime).new()
+		body.add_child(learning_game)
+		learning_game.setup(self, entry)
+		return
 	level = Catalog.level(entry)
 	taps = 0
-	clear()
 	button("⌂", hub)
 	label(entry.name)
 	if level.is_empty():
