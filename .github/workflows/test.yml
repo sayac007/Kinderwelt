@@ -1,13 +1,22 @@
-name: Foundation
+name: Kinderwelt quality gates
 on: [push, pull_request]
 permissions:
   contents: read
 jobs:
-  smoke:
-    runs-on: ubuntu-latest
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Install checksum-verified Godot 4.7.2
         run: GODOT_INSTALL_DIR="$RUNNER_TEMP/godot" bash scripts/install-godot.sh
-      - name: Import, functional suite and startup
-        run: GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" bash tests/run.sh
+      - name: Existing suites, pinned GUT and all-task quality gates
+        run: GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" bash tests/qa/run.sh
+      - name: Retain synthetic technical evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: technical-quality-results
+          path: qa-results/
+          if-no-files-found: error
+          retention-days: 7

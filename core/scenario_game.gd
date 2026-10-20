@@ -5,6 +5,7 @@ var adult_visible := false
 var preview_index := 0
 var replaying := false
 var story_art: Control
+var adult_button: Button
 
 func create_art() -> Control:
 	return ScenarioArt.new()
@@ -17,7 +18,7 @@ func chooser() -> void:
 	cancel_demonstration()
 	index = -1
 	wipe()
-	art_button({"kind":"home"}, L.message("nav.home"), host.hub)
+	art_button({"kind":"home"}, L.message("nav.home"), host.hub).grab_focus()
 	text(L.message(entry.name_key))
 	text(L.message("common.choose"))
 	if levels.is_empty():
@@ -60,7 +61,7 @@ func build() -> void:
 	undo_button = art_button({"kind":"undo"},L.message("nav.undo"),undo,controls)
 	art_button({"kind":"replay"},L.message("nav.replay"),replay,controls)
 	art_button({"kind":"hint","stage":mini(hint_stage,2)},L.message("nav.hint"),hint,controls)
-	art_button({"kind":"adult"},L.message("adult.toggle"),toggle_adult)
+	adult_button = art_button({"kind":"adult"},L.message("adult.toggle"),toggle_adult)
 	if adult_visible:
 		text(L.message("adult.intro"))
 		text(L.message(levels[index].prompt_key))
@@ -69,6 +70,17 @@ func build() -> void:
 		text(L.message("common.found"))
 		next_button = art_button({"kind":"next"},L.message("nav.next"),next_scenario)
 	responsive()
+	# Rebuilding Controls must not strand keyboard users on a freed node.
+	# Start at navigation so story replay stays visible rather than auto-scrolling
+	# to its inventory before the child has seen the pictures.
+	if model.complete(): next_button.grab_focus()
+	else: navigation.get_child(0).grab_focus()
+
+func focus_source() -> void:
+	for button in source_buttons:
+		if not button.disabled:
+			button.grab_focus()
+			return
 
 func next_scenario() -> void:
 	start_level((index+1)%levels.size())
@@ -77,6 +89,7 @@ func toggle_adult() -> void:
 	# No password, modal, confirmation, second player or exclusive action.
 	adult_visible = not adult_visible
 	build()
+	adult_button.grab_focus()
 
 func finish_if_complete() -> void:
 	if model.complete() and not recorded:
@@ -98,6 +111,7 @@ func act(move: Dictionary) -> void:
 	finish_if_complete()
 	host.sound(model.complete())
 	build()
+	if not model.complete(): focus_source()
 
 func pick(piece: int) -> void:
 	cancel_demonstration()
@@ -120,6 +134,7 @@ func undo() -> void:
 	gesture = []
 	feedback = ""
 	build()
+	focus_source()
 
 func hint() -> void:
 	if demonstrating or index < 0: return

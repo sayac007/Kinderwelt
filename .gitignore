@@ -1,2 +1,6 @@
 .godot/
 *.tmp
+# Development-only test framework and generated technical QA evidence.
+/addons/gut
+/qa-results/
+__pycache__/
