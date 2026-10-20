@@ -57,6 +57,12 @@ func run() -> void:
 	for key in ["sun","battery","relay","door"]: p.model.toggle(key)
 	p.proof = p.model.snapshot()
 	check(restored.restore(p.capture()) and restored.room==2 and restored.unlocked(),"Solution proof restores open room")
+	var mismatched: Dictionary = p.capture()
+	mismatched.puzzle.difficulty = "Meister"
+	check(restored.restore(mismatched) and not restored.unlocked() and restored.room==1,"Solution from another difficulty cannot unlock a new variant")
+	var nonfinite: Dictionary = p.capture()
+	nonfinite.position = [NAN,INF]
+	check(not restored.restore(nonfinite),"Non-finite player coordinates rejected")
 	var controller := Movement.new()
 	controller.set_target(Vector2(20000,-20))
 	check(controller.target==Vector2(840,270),"Tap targets clamp to walkable floor")
@@ -77,6 +83,9 @@ func run() -> void:
 		var game: Control = app.adventure
 		check(game.progress.model.difficulty=="Tüftler","Tinkerer is default")
 		check(not app.scroll_view.visible and game.world.size.y>0,"World has space and needs no scrolling")
+		var unchanged: Dictionary = game.progress.capture()
+		game.reset_mission("invalid")
+		check(game.progress.capture()==unchanged,"Invalid difficulty cannot mutate progress")
 		game.progress.introduced = true
 		game.close_dialog()
 		await process_frame
@@ -86,8 +95,29 @@ func run() -> void:
 		touch.position = Vector2(60,world.size.y*.8)
 		world.point_input(touch)
 		check(world.controller.target.y>=270 and world.controller.target.y<=490,"Touch chooses walkable destination")
+		# Inject a real touch through the viewport, not a direct interaction call.
+		var robot_point := Vector2((220-world.camera)*world.zoom,(245-world.camera_y)*world.zoom)
+		var press := InputEventScreenTouch.new()
+		press.index = 0
+		press.pressed = true
+		press.position = root.get_final_transform()*(world.get_global_transform_with_canvas()*robot_point)
+		Input.parse_input_event(press)
+		await process_frame
+		var release := InputEventScreenTouch.new()
+		release.index = 0
+		release.position = press.position
+		release.pressed = false
+		Input.parse_input_event(release)
+		await process_frame
+		await process_frame
+		for i in range(12): world._process(.05)
+		check(is_instance_valid(game.overlay) and world.paused,"Viewport touch walks to Pico and interacts")
+		game.close_dialog()
 		game.pause_menu()
 		check(world.paused,"Pause stops movement")
+		var prior_track: String = game.track
+		game.set_track("invalid")
+		check(game.track==prior_track,"Invalid audio selection rejected")
 		var paused_position: Vector2 = world.controller.position
 		world._process(.1)
 		check(world.controller.position==paused_position,"Simulation stays paused")
@@ -121,7 +151,7 @@ func run() -> void:
 		app.adventure.reset_mission("Tüftler")
 		app.hub()
 		await process_frame
-	app.queue_free()
-	await process_frame
+	app.free()
+	await create_timer(.15).timeout
 	print("ADVENTURE RESULT: %d checks, %d failures" % [checks,failures])
 	quit(1 if failures else 0)

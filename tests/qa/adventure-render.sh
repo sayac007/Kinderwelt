@@ -23,10 +23,10 @@ python3 - "$OUTPUT" <<'PY'
 import json,struct,sys
 from pathlib import Path
 root=Path(sys.argv[1]);frames=json.loads((root/'adventure-render.json').read_text())['frames']
-assert len(frames)==36
+assert len(frames)==45
 for frame in frames:
  data=(root/frame['file']).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
  assert list(struct.unpack('>II',data[16:24]))==frame['pixels']
-print('PASS: 36 adventure renders, four profiles')
+print('PASS: 45 adventure renders, five profiles (including large text)')
 PY

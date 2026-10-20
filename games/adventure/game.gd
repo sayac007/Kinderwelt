@@ -40,13 +40,13 @@ func _notification(what: int) -> void:
 
 func button(parent: Node,text: String,action: Callable) -> Button:
 	var result: Button = host.button(text,action,parent)
-	result.add_theme_font_size_override("font_size",19)
+	result.add_theme_font_size_override("font_size",preload("res://core/design.gd").font_size(19,float(host.store.data.text_scale)))
 	return result
 func label(parent: Node,text: String,fs := 20) -> Label:
 	var result := Label.new()
 	result.text = text
 	result.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	result.add_theme_font_size_override("font_size",fs)
+	result.add_theme_font_size_override("font_size",preload("res://core/design.gd").font_size(fs,float(host.store.data.text_scale)))
 	parent.add_child(result)
 	return result
 
@@ -241,6 +241,7 @@ func confirm_reset() -> void:
 	button(page,"Ja, neue Anlage",func(): reset_mission(progress.model.difficulty))
 	button(page,"Abbrechen",pause_menu)
 func reset_mission(difficulty: String) -> void:
+	if not progress.model.VARIANTS.has(difficulty): return
 	progress = Progress.new()
 	progress.model.difficulty = difficulty
 	progress.introduced = true

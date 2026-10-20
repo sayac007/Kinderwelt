@@ -7,7 +7,7 @@ var introduced := false
 var proof := {} # Persist a valid solution, not an unverified unlocked flag.
 func unlocked() -> bool:
 	var check := Model.new()
-	return check.restore(proof) and check.evaluate().solved
+	return check.restore(proof) and check.difficulty==model.difficulty and check.evaluate().solved
 func capture() -> Dictionary:
 	return {"schema":1,"puzzle":model.snapshot(),"room":room,"position":[position.x,position.y],"introduced":introduced,"proof":proof.duplicate(true)}
 func restore(value: Variant) -> bool:
