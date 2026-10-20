@@ -77,6 +77,16 @@ def elf_alignment(data):
     loads=[struct.unpack_from('<IIQQQQQQ',data,offset+i*size) for i in range(count) if struct.unpack_from('<I',data,offset+i*size)[0]==1]
     assert loads and all(p[7]>=16384 and (p[2]-p[3])%16384==0 for p in loads),'ELF not compatible with 16 KB pages'
 
+def check_packaged_data(archive):
+    """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
+    app_root=Path(__file__).resolve().parents[2]
+    data_files=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json']
+    data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+    for name in data_files:
+        candidates=[n for n in archive.namelist() if 'assets/' in n and n.split('assets/',1)[1]==name]
+        assert len(candidates)==1,'Missing or duplicate packaged content: '+name
+        assert archive.read(candidates[0])==(app_root/name).read_bytes(),'Packaged content differs from tested source: '+name
+
 def inspect_zip(path,aab=False):
     with zipfile.ZipFile(path) as z:
         assert z.testzip() is None,'Corrupt ZIP'
@@ -84,13 +94,7 @@ def inspect_zip(path,aab=False):
         assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names),'Unsafe archive path'
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
         if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
-        # Plain data files must match the tested sources, not just their names.
-        app_root=Path(__file__).resolve().parents[2]
-        prefix='base/assets/' if aab else 'assets/'
-        data_files=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json']
-        data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
-        for name in data_files:
-            assert z.read(prefix+name)==(app_root/name).read_bytes(),'Packaged content differs from tested source: '+name
+        check_packaged_data(z)
         abis=set();native_methods=set()
         for n in names:
             if n.endswith('.so'):

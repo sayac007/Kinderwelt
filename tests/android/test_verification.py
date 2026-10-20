@@ -1,5 +1,5 @@
 """Negative fixtures ensure release checks reject realistic packaging drift."""
-import importlib.util, json, struct, unittest, xml.etree.ElementTree as ET
+import importlib.util, io, json, struct, zipfile, unittest, xml.etree.ElementTree as ET
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
@@ -50,6 +50,26 @@ class VerificationTests(unittest.TestCase):
     def test_every_resource_category_and_family_character_is_checked(self):
         for required in [p for p in PAYLOAD if 'voice_' not in p]+[next(p for p in PAYLOAD if 'voice_'+locale+'_' in p and p.endswith(ext)) for locale in ['de','en','ru'] for ext in ['.import','.oggvorbisstr']]:
             with self.subTest(required=required),self.assertRaises(AssertionError):v.check_payload([p for p in PAYLOAD if p!=required])
+    def data_archive(self,prefix='assets/',change=None):
+        memory=io.BytesIO()
+        root=Path(__file__).resolve().parents[2]
+        files=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json']
+        files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+        with zipfile.ZipFile(memory,'w') as archive:
+            for name in files:
+                if change=='missing' and name==files[0]:continue
+                data=(root/name).read_bytes()
+                if change=='modified' and name==files[0]:data=b'{"tasks":[]}'
+                archive.writestr(prefix+name,data)
+            if change=='duplicate':archive.writestr('unexpected/assets/'+files[0],(root/files[0]).read_bytes())
+        memory.seek(0)
+        return zipfile.ZipFile(memory)
+    def test_content_integrity_supports_apk_base_and_install_time_aab_assets(self):
+        for prefix in ['assets/','base/assets/','assetPackInstallTime/assets/']:
+            with self.subTest(prefix=prefix),self.data_archive(prefix) as archive:v.check_packaged_data(archive)
+    def test_changed_missing_or_duplicate_data_is_rejected(self):
+        for change in ['modified','missing','duplicate']:
+            with self.subTest(change=change),self.data_archive(change=change) as archive,self.assertRaises(AssertionError):v.check_packaged_data(archive)
     def test_elf_16kb(self):
         data=bytearray(120);data[:5]=b'\x7fELF\x02';struct.pack_into('<Q',data,32,64);struct.pack_into('<HH',data,54,56,1);struct.pack_into('<IIQQQQQQ',data,64,1,0,0,0,0,0,0,16384)
         v.elf_alignment(data)
