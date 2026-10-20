@@ -38,7 +38,7 @@ func _ready() -> void:
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	title.add_theme_font_size_override("font_size",27)
 	header.add_child(title)
-	sound_button = button("Ton aus", toggle_sound, header)
+	sound_button = button("Ton an" if store.data.muted else "Ton aus", toggle_sound, header)
 	sound_button.size_flags_horizontal = Control.SIZE_SHRINK_END
 	sound_button.custom_minimum_size.x = 128
 	var scroll := ScrollContainer.new()
@@ -207,6 +207,8 @@ func advance() -> void:
 		button("⌂ ★", hub)
 
 func settings() -> void:
+	audio.sync_settings()
+	sound_button.text = "Ton an" if store.data.muted else "Ton aus"
 	clear()
 	button("⌂", hub)
 	label("Erwachsene · gemeinsam spielen ist freiwillig")

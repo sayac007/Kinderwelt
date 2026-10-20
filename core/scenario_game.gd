@@ -92,7 +92,8 @@ func toggle_adult() -> void:
 	# No password, modal, confirmation, second player or exclusive action.
 	adult_visible = not adult_visible
 	build()
-	adult_button.grab_focus()
+	if is_instance_valid(adult_button): adult_button.grab_focus()
+	else: get_child(0).get_child(0).grab_focus()
 
 func finish_if_complete() -> void:
 	if model.complete() and not recorded:

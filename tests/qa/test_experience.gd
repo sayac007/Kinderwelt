@@ -152,3 +152,22 @@ func test_large_text_keeps_all_tasks_readable() -> void:
 	app.save()
 	var saved:=Store.new();saved.load_save()
 	assert_almost_eq(float(saved.data.text_scale),1.15,0.001,"Large text persists")
+
+func test_saved_mute_label_and_optional_adult_dismissal() -> void:
+	var saved:=Store.new();saved.data.muted=true
+	assert_eq(saved.persist(),OK)
+	var app:=app_instance()
+	assert_eq(app.sound_button.text,"Ton an","Saved mute has the correct available action")
+	for entry in Catalog.modules().slice(2):
+		app.open_module(entry)
+		var game: Control=app.learning_game
+		game.start_level(0);game.cancel_demonstration()
+		game.toggle_adult()
+		assert_true(is_instance_valid(game.adult_button),"Explicit parent prompt opens")
+		game.toggle_adult()
+		assert_false(is_instance_valid(game.adult_button),"Prompt can be dismissed without a permanent strip")
+		assert_true(game.is_ancestor_of(get_tree().root.gui_get_focus_owner()),"Dismissal preserves keyboard navigation")
+	app.store.reset()
+	app.settings()
+	assert_eq(app.sound_button.text,"Ton aus","Reset refreshes the mute action")
+	app.store.data.muted=true;app.audio.sync_settings()
