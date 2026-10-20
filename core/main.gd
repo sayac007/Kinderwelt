@@ -72,7 +72,7 @@ func hub() -> void:
 		var b := button("", func(): open_module(entry), grid)
 		b.tooltip_text = entry.name
 		var caption := Label.new()
-		caption.text = entry.name
+		caption.text = preload("res://core/localization.gd").message(entry.name_key) if entry.has("name_key") else entry.name
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		caption.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)

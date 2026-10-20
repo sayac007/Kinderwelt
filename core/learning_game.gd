@@ -55,18 +55,21 @@ func art_button(spec: Dictionary, tooltip: String, action: Callable, parent: Nod
 	b.tooltip_text = tooltip
 	b.pressed.connect(action)
 	parent.add_child(b)
-	var art := Art.new()
+	var art := create_art()
 	art.spec = spec.merged({"reduced_motion": host.store.data.reduced_motion})
 	art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	b.add_child(art)
 	return b
 
 func picture(spec: Dictionary, height := 84.0) -> Control:
-	var art := Art.new()
+	var art := create_art()
 	art.spec = spec.merged({"reduced_motion": host.store.data.reduced_motion})
 	art.custom_minimum_size.y = height
 	add_child(art)
 	return art
+
+func create_art() -> Control:
+	return Art.new()
 
 func row() -> HBoxContainer:
 	var result := HBoxContainer.new()

@@ -144,3 +144,21 @@ Das Layout verwendet die tatsächliche Fenstergröße statt einer festen virtuel
 900-Pixel-Breite. Der Fokus folgt zwischen Vorrat und Ziel, wodurch auch kleinere
 Hochformatfenster mit Scrollansicht bedienbar bleiben. Tests prüfen 360×800 und
 1024×600; physische DPI, Bildschirmleser und Android-Geräte bleiben manuelle Checks.
+
+# Erweiterung · Aufgabe 03
+
+Alle fünf Registrierungen besitzen jetzt ein eigenes Spiel. Die beschriebenen
+Fundament-Demos bleiben für Kompatibilität und ihre ursprünglichen Regressionen
+als expliziter Fallback ohne `runtime` verfügbar. Im normalen Hub werden sie
+nicht mehr anstelle der Spiele gestartet. Bestehende Logik-/Mathematik-Modelle,
+Leveldaten, Progression und Tests bleiben erhalten.
+
+`core/scenario_game.gd` erweitert die vorhandene Oberfläche; eine Art-Fabrik in
+`learning_game.gd` ermöglicht neue Grafiken ohne Austausch der bisherigen Art.
+Die drei neuen `model.gd`/`game.gd`-Paare, `scenario_catalog.gd` und die zentrale
+Lokalisierung halten Daten, Regeln und Darstellung getrennt. Neue Spielstände
+verwenden weiterhin das optionale `learning`-Feld, mit Abschlussmarkierungen ohne
+Rangstufen oder soziale Bewertungen. Natürliche Sprachausgabe ist nicht enthalten.
+
+Vollständiger [Datenvertrag, Bedienung, Audio-Slots und Content-Anleitung](scenario-authoring.md)
+sowie [aktuelle Prüfungen und manuelle Abnahme](scenario-test-report.md).

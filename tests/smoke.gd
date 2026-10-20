@@ -20,8 +20,13 @@ func run() -> void:
 	await process_frame
 	check(app.grid.get_child_count() == 5, "Hub has five buttons")
 	for entry in entries.slice(2):
+		# Retain every original assertion for the supported foundation fallback.
+		# The new registered runtimes are exercised in tests/scenarios.gd.
+		var foundation_entry: Dictionary = entry.duplicate()
+		foundation_entry.erase("runtime")
+		foundation_entry.erase("levels")
 		check(not catalog.level(entry).is_empty(), "Valid level: " + entry.id)
-		app.open_module(entry)
+		app.open_module(foundation_entry)
 		check(app.taps == 0, "Fresh module")
 		app.store.data.reduced_motion = true
 		app.hint()
@@ -30,7 +35,7 @@ func run() -> void:
 		check(app.store.data.completed.get(entry.id, false), "Completion: " + entry.id)
 		app.advance()
 		check(app.taps == 3, "Completion is idempotent")
-		app.open_module(entry)
+		app.open_module(foundation_entry)
 		check(app.taps == 0, "Retry resets activity")
 		app.hub()
 		check(app.grid.get_child_count() == 5, "Return to hub")
