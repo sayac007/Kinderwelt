@@ -40,8 +40,13 @@ Telemetrie oder Netzwerk-APIs. Tests verwenden eigene temporäre XDG-Verzeichnis
 Co-Play ist eine optionale, nicht persistente Gesprächshilfe ohne exklusive
 Steuerung oder zweiten Spieler. Reduzierte Bewegung unterbindet Hinweistweens.
 
-`android/` enthält ausschließlich den Scope-Hinweis. Export-/Release-Konfiguration
-ist bewusst Aufgabe 05 und wird hier nicht implementiert.
+Aufgabe 05 ergänzt `export_presets.cfg` und `scripts/android/`: eine isolierte,
+versionierte Gradle-Pipeline für Debug-APK und unsigniertes AAB. Der App-Export
+übernimmt nur core/games/content/assets und Projekt-/Exportkonfiguration; Tests,
+GUT, Dokumentation und Signaturmaterial gehören nicht ins Paket. Android nutzt
+explizit OpenGL Compatibility, API 24–36 und `fullUser`-Orientierung.
+[Build/Signaturverfahren](android-build.md) und [reale Prüfergebnisse](release-report.md)
+trennen technische Verifikation von noch fehlenden Geräte- und Play-Freigaben.
 
 ## Lizenzen
 

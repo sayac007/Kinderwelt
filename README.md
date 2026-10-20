@@ -4,8 +4,9 @@ Offline nutzbares Godot-Projekt mit Fundament, Logik und Mathematik sowie den
 Modulen aus `03_language_autonomy_social.yaml`. Brückenwerkstatt und Marktstand
 enthalten je neun Level. Bildergeschichte, Entdeckerwerkstatt und gemeinsames
 Dorf enthalten jeweils sechs frei wählbare Geschichten, Experimente und Szenarien.
-Alle fünf Bereiche sind solo spielbar; Begleitung ist freiwillig. Aufgaben 04 und
-05 wurden noch nicht umgesetzt.
+Alle fünf Bereiche sind solo spielbar; Begleitung ist freiwillig. Das Qualitätssystem
+aus Aufgabe 04 und die Android-Verifikationspipeline aus Aufgabe 05 sind ergänzt.
+Google-Play-Freigabe und Geräteprüfungen stehen aus.
 
 ## Starten
 

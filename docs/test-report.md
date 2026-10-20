@@ -1,5 +1,9 @@
 # Qualitätsbericht · Aufgabe 04
 
+Der nachfolgende Bericht hält den Stand von Aufgabe 04 fest. Aktuelle Android-
+Builds und erneut ausgeführte Qualitätstests aus Aufgabe 05 stehen im
+[Release-Bericht](release-report.md).
+
 Stand: 20.10.2026. Grundlage `04_quality_research.yaml`, vollständig gelesen und
 mit dem Upload bytegleich. Branch `feat/quality-research` basiert auf `origin/main`
 `6c10c24`, einschließlich Merge von PR #3. Aufgabe 05, alle YAML-Dateien und die
