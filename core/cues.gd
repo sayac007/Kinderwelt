@@ -11,7 +11,12 @@ func configure(saved: RefCounted) -> void:
 	sync_settings()
 
 func set_world(world: String) -> void:
-	music.set_world(world)
+	var registry = preload("res://core/modern/tracks.gd")
+	var next: String = registry.resolve(world)
+	if store.data.music_locked and registry.ITEMS.has(store.data.music_track): next = store.data.music_track
+	elif store.data.music_shuffle and registry.WORLDS.has(world): next = registry.ITEMS.keys().pick_random()
+	music.set_world(next)
+
 
 func sync_settings() -> void:
 	if store == null: return

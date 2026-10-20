@@ -4,10 +4,15 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
-MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="3" android:versionName="0.3.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
+MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="4" android:versionName="0.4.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/project.binary','assets/core/main.gdc','assets/content/modules.json','assets/content/locales/de.json']+['assets/games/'+m+'/levels.json' for m in ['logic','math','language','autonomy','social']]
 PAYLOAD += ['assets/assets/music/manifest.json']+['assets/assets/music/'+m+'.wav.import' for m in ['logic','math','language','autonomy','social']]+['assets/.godot/imported/'+m+'.wav-fixture.sample' for m in ['logic','math','language','autonomy','social']]
 PAYLOAD += ['assets/assets/music/adventure/manifest.json']+['assets/assets/music/adventure/'+t+'.wav.import' for t in ['workshop','stars']]+['assets/.godot/imported/'+t+'.wav-fixture.sample' for t in ['workshop','stars']]+['assets/games/adventure/'+s+'.gdc' for s in ['game','power','world']]
+
+PAYLOAD += ['assets/games/water/'+s+'.gdc' for s in ['game','model','board']]+['assets/core/modern/hero.gdc']
+for folder,names in [('music/modern',['meadow','gears','market','stories','garden','together','rain','victory']),('voice',['logic','math','language','autonomy','social','heroes','musicbox','settings','parents','mina','leo','sam','jule','water_0','water_1','water_2','water_help','water_success'])]:
+    PAYLOAD += ['assets/assets/'+folder+'/'+n+'.ogg.import' for n in names]+['assets/.godot/imported/'+n+'.ogg-fixture.oggvorbisstr' for n in names]
+PAYLOAD += ['assets/assets/voice/manifest.json','assets/assets/music/modern/manifest.json']
 
 class VerificationTests(unittest.TestCase):
     def test_valid_manifest(self):self.assertEqual(v.check_manifest(ET.fromstring(MANIFEST))['permissions'],[])
@@ -15,9 +20,9 @@ class VerificationTests(unittest.TestCase):
         root=ET.fromstring(MANIFEST);ET.SubElement(root,'uses-permission',{v.ANDROID+'name':'android.permission.INTERNET'})
         with self.assertRaises(AssertionError):v.check_manifest(root)
     def test_identity_version_sdk_backup_rotation_drift_rejected(self):
-        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="3"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait')]:
+        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="4"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
             with self.subTest(before=before),self.assertRaises(AssertionError):v.check_manifest(ET.fromstring(MANIFEST.replace(before,after)))
-    def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),28)
+    def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),86)
     def test_development_and_key_files_rejected(self):
         for name in ['assets/addons/gut/test.gdc','assets/tests/smoke.gdc','assets/private.jks','assets/release.yaml','assets/docs/study.txt']:
             with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+[name])

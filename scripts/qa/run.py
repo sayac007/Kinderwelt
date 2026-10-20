@@ -109,7 +109,10 @@ def main():
         adventure=re.findall(r"^ADVENTURE RESULT: (\d+) checks, (\d+) failures$",log,re.M)
         if len(adventure)!=1 or int(adventure[0][0])==0 or int(adventure[0][1])!=0:
             raise ValueError("Adventure suite must execute nonzero checks and pass")
-        return {"adventure_checks":int(adventure[0][0]),"checks":sum(int(n) for _,n,_ in outcomes),"suites":[{"name":n,"checks":int(c),"failed":int(f)} for n,c,f in outcomes]}
+        modern=re.findall(r"^MODERN RESULT: (\d+) checks, (\d+) failures$",log,re.M)
+        if len(modern)!=1 or int(modern[0][0])==0 or int(modern[0][1])!=0:
+            raise ValueError("Modern experience suite must execute nonzero checks and pass")
+        return {"modern_checks":int(modern[0][0]),"adventure_checks":int(adventure[0][0]),"checks":sum(int(n) for _,n,_ in outcomes),"suites":[{"name":n,"checks":int(c),"failed":int(f)} for n,c,f in outcomes]}
 
     def python_check(log):
         match=re.search(r"Ran (\d+) tests?",log)
@@ -131,7 +134,7 @@ def main():
             shutil.copy2(ROOT/"project.godot",fresh/"project.godot")
             for name in ["core","games","content","assets"]: (fresh/name).symlink_to(ROOT/name,target_is_directory=True)
             step("fresh-import",[command,"--headless","--path",fresh,"--editor","--import","--quit"])
-            step("fresh-startup",[command,"--headless","--path",fresh,"--quit-after","60"])
+            step("fresh-startup",[command,"--headless","--path",fresh,"--script",ROOT/"tests/boot.gd"])
             step("existing-suite",["bash","tests/run.sh"],timeout=600,check=existing_check)
             if installed:
                 # Framework classes must be imported; the editor plugin remains off.

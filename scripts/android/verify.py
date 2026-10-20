@@ -12,13 +12,14 @@ def command(args):
 
 def check_manifest(root):
     assert root.get('package')==PACKAGE,'Unexpected package'
-    assert root.get(ANDROID+'versionCode')=='3','Unexpected version code'
-    assert root.get(ANDROID+'versionName')=='0.3.0','Unexpected version name'
+    assert root.get(ANDROID+'versionCode')=='4','Unexpected version code'
+    assert root.get(ANDROID+'versionName')=='0.4.0','Unexpected version name'
     sdk=root.find('uses-sdk')
     assert sdk is not None and sdk.get(ANDROID+'minSdkVersion')=='24' and sdk.get(ANDROID+'targetSdkVersion')=='36','SDK mismatch'
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
     app=root.find('application');assert app is not None
     assert app.get(ANDROID+'allowBackup')=='false','Backup must be disabled'
+    assert app.get(ANDROID+'extractNativeLibs')=='true','Compressed libraries must be extracted'
     assert app.get(ANDROID+'debuggable','false')=='false','Release bundle must not be debuggable'
     launcher=[a for a in list(app.findall('activity'))+list(app.findall('activity-alias')) if a.find('intent-filter/category[@'+ANDROID+'name="android.intent.category.LAUNCHER"]') is not None]
     assert len(launcher)==1,'Missing launcher'
@@ -28,7 +29,7 @@ def check_manifest(root):
         assert len(targets)==1,'Invalid launcher target'
         activity=targets[0]
     assert activity.get(ANDROID+'screenOrientation') in {'13','fullUser'},'Expected deliberate portrait and landscape rotation'
-    return {'package':PACKAGE,'version_name':'0.3.0','version_code':3,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
+    return {'package':PACKAGE,'version_name':'0.4.0','version_code':4,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
 
 def check_payload(names):
     assets=[n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')]
@@ -48,6 +49,17 @@ def check_payload(names):
     assert 'assets/music/adventure/manifest.json' in assets,'Missing adventure music provenance'
     for script in ['game','power','world']:
         assert any(n.startswith('games/adventure/'+script+'.gd') for n in assets),'Missing adventure runtime: '+script
+    for script in ['game','model','board']:
+        assert any(n.startswith('games/water/'+script+'.gd') for n in assets),'Missing water mission: '+script
+    assert any(n.startswith('core/modern/hero.gd') for n in assets),'Missing children'
+    for name in ['meadow','gears','market','stories','garden','together','rain','victory']:
+        assert 'assets/music/modern/'+name+'.ogg.import' in assets,'Missing modern music import: '+name
+        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing playable modern track: '+name
+    for name in ['logic','math','language','autonomy','social','heroes','musicbox','settings','parents','mina','leo','sam','jule','water_0','water_1','water_2','water_help','water_success']:
+        assert 'assets/voice/'+name+'.ogg.import' in assets,'Missing voice import: '+name
+        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing offline voice: '+name
+    for manifest in ['assets/voice/manifest.json','assets/music/modern/manifest.json']:
+        assert manifest in assets,'Missing modern provenance: '+manifest
     assert 'content/modules.json' in assets and 'content/locales/de.json' in assets,'Missing registry/locale'
     assert any('core/main.gd' in n for n in assets),'Missing application code'
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
@@ -66,12 +78,13 @@ def inspect_zip(path,aab=False):
         assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names),'Unsafe archive path'
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
         if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
-        abis=set()
+        abis=set();native_methods=set()
         for n in names:
             if n.endswith('.so'):
-                abis.add(n.split('/')[-2]);elf_alignment(z.read(n))
+                abis.add(n.split('/')[-2]);elf_alignment(z.read(n));native_methods.add(z.getinfo(n).compress_type)
         assert abis=={'arm64-v8a','x86_64'},'Unexpected native ABI set'
-        return {'assets_checked':check_payload(names),'abis':sorted(abis),'elf_16kb_alignment':'PASS'}
+        assert native_methods=={zipfile.ZIP_DEFLATED},'Expected lossless native library compression'
+        return {'assets_checked':check_payload(names),'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);a=p.parse_args()
@@ -80,16 +93,17 @@ def main():
     apk=out/'kinderwelt-debug.apk';aab=out/'kinderwelt-unsigned.aab'
     apk_data=inspect_zip(apk)
     badging=command([bt/'aapt2','dump','badging',apk]);(out/'apk-badging.txt').write_text(badging)
-    for pattern in [r"package: name='org.example.kinderwelt' versionCode='3' versionName='0.3.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
+    for pattern in [r"package: name='org.example.kinderwelt' versionCode='4' versionName='0.4.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
         assert re.search(pattern,badging),'APK manifest mismatch'
     permissions=command([bt/'aapt2','dump','permissions',apk]);assert 'uses-permission' not in permissions,'Unexpected APK permissions'
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
+    assert re.search(r'android:extractNativeLibs[^\n]*=true\b',xmltree),'Compressed native libraries must be extracted'
     assert re.search(r'android:allowBackup[^\n]*=false\b',xmltree),'APK backup enabled'
     assert re.search(r'android:screenOrientation[^\n]*=13\b',xmltree),'APK orientation mismatch'
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':PACKAGE,'version_name':'0.3.0','version_code':3,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':PACKAGE,'version_name':'0.4.0','version_code':4,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
     aab_data=inspect_zip(aab,True);aab_data.update(check_manifest(ET.fromstring(manifest)));aab_data['signature']='UNSIGNED'

@@ -7,7 +7,7 @@ var simulated_dpi := 0.0
 var store = Store.new()
 var audio = preload("res://core/cues.gd").new()
 var body: VBoxContainer
-var grid: GridContainer
+var grid
 var active: Dictionary = {}
 var level: Dictionary = {}
 var taps := 0
@@ -21,14 +21,20 @@ const Mobile = preload("res://core/mobile.gd")
 var sound_button: Button
 var scroll_view: ScrollContainer
 var adventure: Control
+var closing := false
+var modern_view: Control
+var narration = preload("res://core/modern/narration.gd").new()
 var top_bar: HBoxContainer
 
 func _ready() -> void:
+	get_tree().auto_accept_quit = false
 	theme = Design.make_theme()
 	Mobile.configure(get_window(),simulated_dpi)
 	store.load_save()
 	add_child(audio)
 	audio.configure(store)
+	add_child(narration)
+	narration.configure(store,audio.music)
 	var header := HBoxContainer.new()
 	top_bar = header
 	header.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
@@ -77,10 +83,17 @@ func update_mobile() -> void:
 func toggle_sound() -> void:
 	store.data.muted = not store.data.muted
 	audio.sync_settings()
+	narration.sync_settings()
 	sound_button.text = "Ton an" if store.data.muted else "Ton aus"
 	save()
 
 func clear() -> void:
+	narration.cancel()
+	if is_instance_valid(modern_view):
+		if modern_view.has_method("persist"): modern_view.persist()
+		remove_child(modern_view)
+		modern_view.queue_free()
+		modern_view = null
 	if is_instance_valid(adventure):
 		adventure.persist()
 		remove_child(adventure)
@@ -124,44 +137,52 @@ func save() -> void:
 func hub() -> void:
 	active = {}
 	clear()
-	audio.set_world("logic")
-	label("Worauf hast du heute Lust?")
-	button("⚡ Picos Kraftwerk testen", open_adventure)
-	grid = GridContainer.new()
+	audio.set_world("map")
+	label("Dein Abenteuer")
+	var tools := GridContainer.new()
+	tools.columns = 2
+	body.add_child(tools)
+	preload("res://core/modern/icons.gd").apply(button("Figur",heroes,tools),"hero")
+	preload("res://core/modern/icons.gd").apply(button("Musik",musicbox,tools),"music")
+	preload("res://core/modern/icons.gd").apply(button("Klang",settings,tools),"gear")
+	preload("res://core/modern/icons.gd").apply(button("Eltern",parents,tools),"parents")
+	grid = preload("res://core/modern/map.gd").new()
 	body.add_child(grid)
 	for entry in Catalog.modules():
-		var b := button("", func(): open_module(entry), grid)
+		var b := button("",func(): open_module(entry),grid)
 		b.tooltip_text = entry.name
-		b.add_theme_stylebox_override("normal",Design.style(Design.SURFACE,Color(Design.ACCENTS[entry.id])))
-		var art := preload("res://core/world_art.gd").new()
-		art.spec = {"kind":"world","world":entry.id}
-		art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var transparent := StyleBoxEmpty.new()
+		b.add_theme_stylebox_override("normal",transparent)
+		b.add_theme_stylebox_override("hover",transparent)
+		b.add_theme_stylebox_override("pressed",transparent)
+		var art := preload("res://core/modern/place_art.gd").new()
+		art.place = entry.id
 		art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		art.offset_bottom = -54
+		art.offset_bottom = -40
 		b.add_child(art)
 		var caption := Label.new()
-		caption.text = preload("res://core/localization.gd").message(entry.name_key) if entry.has("name_key") else entry.name
+		caption.text = {"logic":"Brücken","math":"Markt","language":"Geschichten","autonomy":"Werkstatt","social":"Dorf"}[entry.id]
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		caption.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-		caption.offset_top = -60
-		caption.add_theme_font_size_override("font_size",Design.font_size(23,float(store.data.text_scale)))
+		caption.offset_top = -44
+		caption.add_theme_font_size_override("font_size",Design.font_size(18,float(store.data.text_scale)))
 		b.add_child(caption)
-		b.custom_minimum_size.y = 230
-		b.alignment = HORIZONTAL_ALIGNMENT_CENTER
-		b.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
-	button("Erwachsene & Klang", settings)
+	button("💧 Die durstige Pflanze",open_water)
+	button("Picos Kraftwerk · Prototyp",open_adventure)
 	responsive()
-	grid.get_child(0).grab_focus()
 
 func responsive() -> void:
-	if is_instance_valid(grid): grid.columns = 1 if size.x < 600 else 2
+	if is_instance_valid(grid):
+		grid.columns = 1 if size.x < 600 else 2
+		grid.arrange.call_deferred()
 
 func open_module(entry: Dictionary) -> void:
 	active = entry
 	audio.set_world(entry.id)
 	clear()
+	narration.play_clip(entry.id,true)
 	if entry.has("runtime"):
 		learning_game = load(entry.runtime).new()
 		body.add_child(learning_game)
@@ -229,6 +250,16 @@ func settings() -> void:
 		settings())
 	volume_control("Musik", "music_volume")
 	volume_control("Spielklänge", "effects_volume")
+	volume_control("Sprache", "voice_volume")
+	label("Sprachstimme: synthetischer Prototyp")
+	button("Automatisch vorlesen: "+("an" if store.data.voice_auto else "aus"),func():
+		store.data.voice_auto = not store.data.voice_auto
+		save()
+		settings())
+	button("Aufgabentext: "+("an" if store.data.show_instructions else "aus"),func():
+		store.data.show_instructions = not store.data.show_instructions
+		save()
+		settings())
 	button("Weniger Bewegung: " + str(store.data.reduced_motion), func():
 		store.data.reduced_motion = not store.data.reduced_motion
 		save()
@@ -237,7 +268,7 @@ func settings() -> void:
 		co_play = not co_play
 		settings())
 	if co_play: label("Begleiten: Was siehst du? Lass das Kind selbst tippen.")
-	button("Spielstand zurücksetzen …", confirm_reset)
+	button("Elternbereich",parents)
 
 func volume_control(title: String, key: String) -> void:
 	label(title)
@@ -253,6 +284,7 @@ func volume_control(title: String, key: String) -> void:
 	slider.value_changed.connect(func(value: float):
 		store.data[key] = value
 		audio.sync_settings()
+		narration.sync_settings()
 		save())
 
 func confirm_reset() -> void:
@@ -269,6 +301,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _notification(what: int) -> void:
+	if what==NOTIFICATION_WM_CLOSE_REQUEST and is_instance_valid(body):
+		shutdown()
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST and is_instance_valid(body):
 		hub()
 
@@ -279,3 +313,86 @@ func open_adventure() -> void:
 	adventure = preload("res://games/adventure/game.gd").new()
 	add_child(adventure)
 	adventure.setup(self)
+
+func open_water() -> void:
+	clear()
+	active = {}
+	scroll_view.hide()
+	modern_view = preload("res://games/water/game.gd").new()
+	add_child(modern_view)
+	modern_view.setup(self)
+
+func heroes() -> void:
+	clear()
+	button("⌂ Karte",hub)
+	label("Wer begleitet dich?")
+	narration.play_clip("heroes",true)
+	var choices := GridContainer.new()
+	choices.columns = 2
+	body.add_child(choices)
+	for id in preload("res://core/modern/hero.gd").PEOPLE:
+		var data: Dictionary = preload("res://core/modern/hero.gd").PEOPLE[id]
+		var b := button("",func():
+			store.data.hero = id
+			save()
+			heroes()
+			narration.play_clip(id),choices)
+		b.custom_minimum_size = Vector2(140,230)
+		b.tooltip_text = data.name
+		if store.data.hero==id: b.add_theme_stylebox_override("normal",Design.style(Color("e3ead4"),Design.FOCUS))
+		var hero := preload("res://core/modern/hero.tscn").instantiate()
+		hero.person = id
+		hero.animation = "success" if store.data.hero==id else "idle"
+		hero.reduced_motion = store.data.reduced_motion
+		hero.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		hero.offset_bottom = -44
+		b.add_child(hero)
+		if store.data.hero==id:
+			var preview: WeakRef = weakref(hero)
+			get_tree().create_timer(1.0).timeout.connect(func():
+				var figure = preview.get_ref()
+				if figure!=null: figure.animation = "idle")
+		var name_label := Label.new()
+		name_label.text = ("✓ " if store.data.hero==id else "")+data.name
+		name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		name_label.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+		name_label.offset_top = -40
+		name_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		b.add_child(name_label)
+	button("Vorschau: laufen / denken",func():
+		for b in choices.get_children():
+			var hero: Control = b.get_child(0)
+			hero.animation = "think" if hero.animation=="move" else "move")
+
+func musicbox() -> void:
+	clear()
+	var box := preload("res://core/modern/musicbox.gd").new()
+	body.add_child(box)
+	box.setup(self)
+	narration.play_clip("musicbox",true)
+
+func parents() -> void:
+	clear()
+	button("⌂ Karte",hub)
+	label("Für Begleitende")
+	narration.play_clip("parents",true)
+	label("Begleitung ist freiwillig. Lass das Kind ausprobieren. Fehler sind Hinweise.")
+	button("Klang und Bedienung",settings)
+	button("Lokal und offline",func():
+		clear()
+		button("Zurück",parents)
+		label("Keine Konten, Werbung, Mikrofonaufnahmen oder Laufzeit-Netzwerkverbindungen. Spielstände bleiben auf diesem Gerät."))
+	button("Spielstand zurücksetzen …",confirm_reset)
+
+func shutdown() -> void:
+	if closing: return
+	closing = true
+	if is_instance_valid(modern_view) and modern_view.has_method("persist"): modern_view.persist()
+	if is_instance_valid(adventure): adventure.persist()
+	narration.cancel()
+	audio.stop()
+	audio.stream = null
+	audio.music.shutdown()
+	# Let the audio mixer release queued streaming playbacks before engine teardown.
+	await get_tree().create_timer(.25).timeout
+	get_tree().quit()

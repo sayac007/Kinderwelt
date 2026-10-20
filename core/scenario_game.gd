@@ -21,6 +21,7 @@ func chooser() -> void:
 	art_button({"kind":"home"}, L.message("nav.home"), host.hub).grab_focus()
 	text(L.message(entry.name_key))
 	text(L.message("common.choose"))
+	if entry.id=="autonomy": host.button("💧 Die durstige Pflanze",host.open_water,self)
 	if levels.is_empty():
 		text(L.message("common.unavailable"))
 		return
