@@ -47,7 +47,7 @@ def check_payload(names):
     for script in ['game','world','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
-    for child in ['mina','leo','sam','jule']:
+    for child in ['mischa','du','mama','katze']:
         assert 'assets/quest/'+child+'.png.import' in assets,'Missing character: '+child
         assert any(n.startswith('.godot/imported/'+child+'.png-') and n.endswith('.ctex') for n in assets),'Missing character texture: '+child
     for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
@@ -60,6 +60,7 @@ def check_payload(names):
         assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing playable neural speech: '+name
     assert not any(n.startswith(('games/adventure/','games/water/','core/modern/','content/')) for n in assets),'Obsolete runtime packaged'
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
+    assert not any(any(old+'.png' in n for old in ['mina','leo','sam','jule']) for n in assets),'Replaced character artwork packaged'
     return len(assets)
 
 def elf_alignment(data):

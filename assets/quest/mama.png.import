@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyhralqxxuqlf"
-path="res://.godot/imported/jule.png-f7dfd61e557a77dfe9ddac3b1f64a1a5.ctex"
+uid="uid://wd76m5y88e0c"
+path="res://.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quest/jule.png"
-dest_files=["res://.godot/imported/jule.png-f7dfd61e557a77dfe9ddac3b1f64a1a5.ctex"]
+source_file="res://assets/quest/mama.png"
+dest_files=["res://.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex"]
 
 [params]
 

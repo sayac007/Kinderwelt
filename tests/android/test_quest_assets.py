@@ -55,7 +55,7 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(actual[task['id']+'_hint'],task['tip'])
     def test_graphics_are_real_png_and_individual_heroes_differ(self):
         hashes=set()
-        for name in ['mina','leo','sam','jule','icons','objects','landscape']:
+        for name in ['mischa','du','mama','katze','icons','objects','landscape']:
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])

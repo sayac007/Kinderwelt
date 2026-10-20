@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c13kfb1vhbqpg"
-path="res://.godot/imported/mina.png-d5ae41455348a4f723b10689c86ea71b.ctex"
+uid="uid://bap50qichwnv"
+path="res://.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quest/mina.png"
-dest_files=["res://.godot/imported/mina.png-d5ae41455348a4f723b10689c86ea71b.ctex"]
+source_file="res://assets/quest/katze.png"
+dest_files=["res://.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex"]
 
 [params]
 

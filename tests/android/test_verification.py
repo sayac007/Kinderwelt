@@ -9,7 +9,7 @@ TASK_IDS=['math_count','math_add','math_take','math_ten','math_compare','math_st
 PAYLOAD=['assets/project.binary','assets/core/quest/main.gdc']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','task','picture','progress','choice']]
-for name in ['mina','leo','sam','jule']:
+for name in ['mischa','du','mama','katze']:
     PAYLOAD += ['assets/assets/quest/'+name+'.png.import','assets/.godot/imported/'+name+'.png-fixture.ctex']
 for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
     ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
@@ -36,6 +36,9 @@ class VerificationTests(unittest.TestCase):
             with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+[name])
     def test_missing_modules_rejected(self):
         with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/games/quest/tasks.json"])
+    def test_replaced_character_artwork_rejected(self):
+        for name in ['mina','leo','sam','jule']:
+            with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+['assets/assets/quest/'+name+'.png.import'])
     def test_missing_music_payload_rejected(self):
         with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/stars.wav-fixture.sample"])
     def test_every_required_runtime_asset_is_checked(self):

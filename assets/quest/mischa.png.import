@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bck1yi7nxv8ns"
-path="res://.godot/imported/sam.png-a8f2261527ab9b3f45b947a457e9fff7.ctex"
+uid="uid://ogm5ktfuol5l"
+path="res://.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quest/sam.png"
-dest_files=["res://.godot/imported/sam.png-a8f2261527ab9b3f45b947a457e9fff7.ctex"]
+source_file="res://assets/quest/mischa.png"
+dest_files=["res://.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex"]
 
 [params]
 
