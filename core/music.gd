@@ -25,7 +25,9 @@ func set_world(next: String) -> void:
 	active = 1-active
 	var player := players[active]
 	player.stop()
-	var track := load(str(BANKS.get(palette,BANKS.retro))+next+".wav") as AudioStreamWAV
+	var registry = preload("res://games/adventure/tracks.gd").ITEMS
+	var path: String = registry[next].path if registry.has(next) else str(BANKS.get(palette,BANKS.retro))+next+".wav"
+	var track := load(path) as AudioStreamWAV
 	if track == null: return
 	track = track.duplicate()
 	track.loop_mode = AudioStreamWAV.LOOP_FORWARD

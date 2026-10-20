@@ -19,4 +19,5 @@ run_checked --headless --path . --script tests/smoke.gd
 run_checked --headless --path . --script tests/learning.gd
 run_checked --headless --path . --script tests/input.gd
 run_checked --headless --path . --script tests/scenarios.gd
+run_checked --headless --path . --script tests/adventure.gd
 run_checked --headless --path . --quit-after 60
