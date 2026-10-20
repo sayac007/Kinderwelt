@@ -152,6 +152,6 @@ func run() -> void:
 		app.hub()
 		await process_frame
 	app.free()
-	await create_timer(.15).timeout
+	await create_timer(.4).timeout
 	print("ADVENTURE RESULT: %d checks, %d failures" % [checks,failures])
 	quit(1 if failures else 0)

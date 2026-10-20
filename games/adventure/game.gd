@@ -77,9 +77,9 @@ func build() -> void:
 	feedback.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	navigation = HBoxContainer.new()
 	layout.add_child(navigation)
-	button(navigation,"← Raum",func(): world.move_to("left"))
+	button(navigation,"Bauplan",guide)
 	button(navigation,"⚡ Pult",func(): world.move_to("circuits" if progress.room==1 else ("sources" if progress.room==0 else "reward")))
-	button(navigation,"Raum →",func(): world.move_to("right"))
+	button(navigation,"Pico",introduction)
 	refresh()
 
 func refresh() -> void:

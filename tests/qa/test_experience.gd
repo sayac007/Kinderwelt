@@ -89,10 +89,13 @@ func test_audio_controls_playback_mute_and_persistence() -> void:
 		app.audio.set_world(entry.id)
 		await wait_process_frames(2)
 		var music: Node = app.audio.music
-		var stream: AudioStreamWAV = music.players[music.active].stream
+		var stream: AudioStream = music.players[music.active].stream
 		assert_not_null(stream,"Real offline music for "+entry.id)
 		assert_gt(stream.get_length(),15.0,"A full musical miniature exists")
-		assert_eq(stream.loop_end,roundi(stream.get_length()*stream.mix_rate),"Loop covers entire decoded track")
+		if stream is AudioStreamWAV:
+			assert_eq(stream.loop_end,roundi(stream.get_length()*stream.mix_rate),"Loop covers entire decoded track")
+		else:
+			assert_true(stream is AudioStreamOggVorbis and stream.loop and stream.loop_offset==0,"Loop covers entire Vorbis track")
 		assert_true(music.players[music.active].playing,"Playback started")
 	app.audio.music._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
 	assert_true(app.audio.music.players[app.audio.music.active].stream_paused,"Background pause")
@@ -102,7 +105,7 @@ func test_audio_controls_playback_mute_and_persistence() -> void:
 	var sliders := []
 	for child in app.body.get_children():
 		if child is HSlider: sliders.append(child)
-	assert_eq(sliders.size(),2,"Separate music and effect sliders")
+	assert_eq(sliders.size(),3,"Separate music, effect and voice sliders")
 	sliders[0].value=0.2
 	sliders[1].value=0.0
 	app.sound(true)

@@ -1,11 +1,11 @@
 extends RefCounted
 # Logical UI units. Android maps these to density-independent units in mobile.gd.
-const BACKGROUND := Color("fbf8f0")
-const SURFACE := Color("ffffff")
-const INK := Color("26372f")
-const SECONDARY := Color("46584e")
-const BORDER := Color("687c70")
-const FOCUS := Color("285c46")
+const BACKGROUND := Color("f7f1e3")
+const SURFACE := Color("fffdf6")
+const INK := Color("283b4b")
+const SECONDARY := Color("45596a")
+const BORDER := Color("617581")
+const FOCUS := Color("2e5b69")
 const ACCENTS := {"logic":"3c654e", "math":"814421", "language":"675080", "autonomy":"285d78", "social":"8b4255"}
 const FONT := 23
 const CAPTION := 18
@@ -19,7 +19,7 @@ static func style(fill: Color, border := BORDER) -> StyleBoxFlat:
 	box.bg_color = fill
 	box.border_color = border
 	box.set_border_width_all(2)
-	box.set_corner_radius_all(18)
+	box.set_corner_radius_all(14)
 	box.content_margin_left = 10
 	box.content_margin_right = 10
 	box.content_margin_top = 10
@@ -36,8 +36,8 @@ static func make_theme() -> Theme:
 		theme.set_color("font_focus_color",kind,INK)
 		theme.set_color("font_disabled_color",kind,SECONDARY)
 	for state in ["normal","hover","pressed","disabled"]:
-		var color := SURFACE if state == "normal" else Color("e4eee4")
-		if state == "pressed": color = Color("c8dfce")
+		var color := SURFACE if state == "normal" else Color("e5eee7")
+		if state == "pressed": color = Color("d2e1d3")
 		theme.set_stylebox(state,"Button",style(color))
 	var focus := style(Color(0,0,0,0),FOCUS)
 	focus.set_border_width_all(4)

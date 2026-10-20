@@ -19,6 +19,8 @@ jobs:
           xvfb-run -a bash tests/qa/render.sh qa-results/visual-all-tasks
           xvfb-run -a bash tests/qa/experience-render.sh qa-results/visual-experience
           xvfb-run -a bash tests/qa/adventure-render.sh qa-results/visual-adventure
+          xvfb-run -a bash tests/qa/modern-render.sh qa-results/visual-modern
+          bash tests/qa/modern-performance.sh qa-results/modern-performance
       - name: Retain synthetic technical evidence only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
