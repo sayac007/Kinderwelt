@@ -175,3 +175,10 @@ Das neue [Design-, Skalierungs- und Audiosystem](child-friendly-experience.md)
 Aufgabenverträge bleiben erhalten. Aktuelle technische Ergebnisse stehen im
 [0.2-Testbericht](child-friendly-test-report.md); ältere Abschnitte dokumentieren
 die vorangegangenen Meilensteine.
+
+## Experimentelles Adventure 0.3
+
+Eine separate Testmission verwendet das vorhandene Hauptmenü, Design, sichere
+Displayfläche, SaveStore und Audio. Die fünf registrierten Module bleiben unverändert.
+Simulation, Bewegung, Welt und versionierter Fortschritt sind unter `games/adventure/`
+getrennt. Regeln, Wiederverwendung und Grenzen: [Adventure-Mission](adventure-mission.md).

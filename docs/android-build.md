@@ -1,3 +1,7 @@
+> Aktueller Testexport: **0.3.0 / Code 3**, eine Adventure-Mission.
+> Tatsächliche Artefakte und aktuelle Nachweise: [Adventure-Testbericht](adventure-test-report.md).
+> Ältere Ergebnisangaben unten sind historische Nachweise. Build-Befehle bleiben gültig.
+
 # Reproducible Android verification builds
 
 Linux x86_64, Python >=3.12, curl, unzip, git. From the repository root:
