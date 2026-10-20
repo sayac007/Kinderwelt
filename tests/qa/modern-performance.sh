@@ -24,5 +24,6 @@ python3 - "$KINDERWELT_PERF_OUTPUT" <<'PY'
 import json,sys
 r=json.load(open(sys.argv[1]));assert r['max_music_stream_slots']<=2
 assert r['samples'] and r['background_state_resumed'] and r['startup_to_two_frames_ms']>0
+p=json.load(open(sys.argv[1].replace('performance.json','process.json')));assert p['startup_to_ready_wall_seconds']>0 and p['startup_to_ready_wall_seconds']<p['elapsed_seconds']
 print('PASS: desktop measurements recorded; Android measurements remain open')
 PY

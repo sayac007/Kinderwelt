@@ -12,6 +12,7 @@ func run() -> void:
 	await process_frame
 	await process_frame
 	var startup_ms := (Time.get_ticks_usec()-start)/1000.0
+	print("MODERN READY: two project frames")
 	app.store.reset()
 	app.store.data.muted = true
 	app.audio.sync_settings()
