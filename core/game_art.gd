@@ -43,15 +43,25 @@ func fruit(center: Vector2, radius: float, kind: String, ghost := false) -> void
 		draw_circle(center+Vector2(0, radius*0.2), radius*0.85, color)
 		draw_colored_polygon(PackedVector2Array([center+Vector2(-radius*0.7,0), center+Vector2(0,-radius*1.3), center+Vector2(radius*0.7,0)]), color)
 	else:
-		draw_circle(center, radius, color)
-		line(center+Vector2(-radius*0.45,0), center+Vector2(radius*0.45,0), Color("6f422e"), 2)
+		draw_circle(center-Vector2(radius*0.22,0), radius*0.84, color)
+		draw_circle(center+Vector2(radius*0.22,0), radius*0.84, color)
+		draw_arc(center-Vector2(radius*0.16,0),radius*0.5,PI,PI*1.5,12,Color("fff4dd"),2,true)
 	line(center+Vector2(0,-radius), center+Vector2(radius*0.25,-radius*1.45), INK, 2)
+	if not ghost: draw_circle(center+Vector2(radius*0.5,-radius*1.1),radius*0.22,Color("456e36"))
 
 func person(c: Vector2, r: float) -> void:
-	draw_circle(c+Vector2(0,-r*0.6), r*0.4, GOLD)
-	draw_arc(c+Vector2(0,-r*0.65),r*0.23,0.2,PI-0.2,12,Color("322820"),1.5,true)
-	line(c, c+Vector2(0,r*0.8), GOLD, r*0.35)
-	line(c+Vector2(-r*0.5,r*0.1), c+Vector2(r*0.5,r*0.1), GOLD, 3)
+	var head := c+Vector2(0,-r*0.6)
+	draw_circle(head,r*0.42,Color("b98258"))
+	draw_arc(head,r*0.41,PI,TAU,20,Color("67442b"),r*0.15,true)
+	for x in [-0.14,0.14]: draw_circle(head+Vector2(x*r,-r*0.04),maxf(1.0,r*0.045),Color("26372f"))
+	draw_arc(head+Vector2(0,r*0.02),r*0.18,0.2,PI-0.2,12,Color("463023"),1.5,true)
+	var shirt := preload("res://core/design.gd").style(Color("4d7864"))
+	shirt.set_border_width_all(0)
+	shirt.set_corner_radius_all(int(r*0.15))
+	draw_style_box(shirt,Rect2(c+Vector2(-r*0.34,-r*0.12),Vector2(r*0.68,r*0.7)))
+	for side in [-1,1]:
+		line(c+Vector2(side*r*0.18,r*0.55),c+Vector2(side*r*0.27,r*0.96),Color("425164"),maxf(3,r*0.15))
+		line(c+Vector2(side*r*0.3,r*0.05),c+Vector2(side*r*0.65,r*0.35),Color("b98258"),maxf(3,r*0.14))
 
 func pointer(c: Vector2) -> void:
 	line(c+Vector2(0,15), c, GOLD, 6)

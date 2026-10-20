@@ -88,7 +88,7 @@ func short_caption(spec: Dictionary, tooltip: String) -> String:
 	var captions := {"home":"Start", "levels":"Aufgaben", "retry":"Nochmal", "undo":"Zurück", "replay":"Anleitung", "hint":"Hilfe", "next":"Weiter", "test":"Los!", "previous":"Zurück", "forward":"Weiter"}
 	var kind: String = spec.get("kind","")
 	if captions.has(kind): return captions[kind]
-	if kind == "piece": return "%d Felder" % int(spec.amount)
+	if kind == "piece": return "1 Feld" if int(spec.amount)==1 else "%d Felder" % int(spec.amount)
 	if kind == "fruit": return tooltip
 	if kind == "bridge": return "Hier bauen"
 	if kind == "basket": return "%d von %d" % [int(spec.get("amount",0)),int(spec.target)]

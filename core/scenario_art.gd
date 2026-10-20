@@ -232,11 +232,11 @@ func experiment_view() -> void:
 				for i in range(int(values[side])): draw_circle(Vector2(x+(i-1)*17,y-15),7,INK)
 
 func identity(at: Vector2, index: int) -> void:
-	person(at,22)
+	person(at,30)
 	if index==0:
-		draw_colored_polygon(PackedVector2Array([at+Vector2(-13,-30),at+Vector2(0,-43),at+Vector2(13,-30)]),INK)
+		draw_colored_polygon(PackedVector2Array([at+Vector2(-13,-31),at+Vector2(0,-40),at+Vector2(13,-31)]),INK)
 	else:
-		line(at+Vector2(-12,-30),at+Vector2(12,-30),INK,5)
+		line(at+Vector2(-12,-31),at+Vector2(12,-31),INK,5)
 		line(at+Vector2(-12,-37),at+Vector2(12,-37),INK,3)
 
 func symbol(key: String, at: Vector2, outline := false) -> void:
