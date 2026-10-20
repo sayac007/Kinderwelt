@@ -109,7 +109,18 @@ func parents() -> void:
 	label("Ausprobieren und noch einmal versuchen. Fehler kosten keine Sterne. Keine Zeitvorgaben, Ranglisten oder Käufe.")
 	label("24 eigene Aufgaben. Keine Konten, Werbung, Mikrofonaufnahmen oder Netzwerkverbindungen. Figur und Spielstand bleiben auf diesem Gerät.")
 	button("Klang & Bedienung",settings)
+	button("Musik & Quellen",music_credits)
 	button("Lokalen Spielstand löschen …",confirm_reset)
+func music_credits() -> void:
+	clear();button("Zurück",parents)
+	label("Musik & Quellen")
+	label("Eigene Instrumentalwiedergaben nach Noten. Wiener Blut und O mio babbino caro sind gekürzte Themenauszüge.")
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/music/manifest.json"))
+	for track in manifest.tracks:
+		label(track.composer+" · "+track.title)
+		label(track.arranger+"\n"+track.license)
+		label(track.source.repository+"\n"+track.source.path)
+	label("Klavierklang: GeneralUser GS 2.0.3 · S. Christian Collins. Musikproduktion gemäß beiliegender Lizenz. Bearbeitungen und Audiodateien mit ihren jeweiligen Lizenzen und Quellen liegen der App bei.")
 func confirm_reset() -> void:
 	clear();label("Figur, Sterne und Einstellungen auf diesem Gerät löschen?")
 	button("Abbrechen",parents)

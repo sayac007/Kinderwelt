@@ -39,7 +39,7 @@ def check_payload(names):
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml')),'Sensitive or specification file packaged'
     required=['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
-    for notice in ['assets/quest/OFL.txt','assets/voice/quest/MODEL_CARD.txt']:
+    for notice in ['assets/quest/OFL.txt','assets/voice/quest/MODEL_CARD.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
         assert notice in assets,'Missing bundled notice: '+notice
     for image in ['landscape','icons','objects','appicon']:
         assert any(n.startswith('.godot/imported/'+image+'.png-') and n.endswith('.ctex') for n in assets),'Missing actual image texture: '+image
@@ -50,8 +50,8 @@ def check_payload(names):
     for child in ['mischa','du','mama','katze']:
         assert 'assets/quest/'+child+'.png.import' in assets,'Missing character: '+child
         assert any(n.startswith('.godot/imported/'+child+'.png-') and n.endswith('.ctex') for n in assets),'Missing character texture: '+child
-    for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
-        ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
+    for track in ['wiener_blut','babbino','french_song','consolation']:
+        ext='.ogg'
         assert 'assets/music/'+track+ext+'.import' in assets,'Missing music import: '+track
         assert any(n.startswith('.godot/imported/'+track+ext+'-') and n.endswith('.sample' if ext=='.wav' else '.oggvorbisstr') for n in assets),'Missing playable music: '+track
     tasks=json.loads((Path(__file__).resolve().parents[2]/'games/quest/tasks.json').read_text())['tasks']
@@ -61,6 +61,7 @@ def check_payload(names):
     assert not any(n.startswith(('games/adventure/','games/water/','core/modern/','content/')) for n in assets),'Obsolete runtime packaged'
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
     assert not any(any(old+'.png' in n for old in ['mina','leo','sam','jule']) for n in assets),'Replaced character artwork packaged'
+    assert any(n.startswith('core/quest/pet.gdshader') for n in assets),'Missing animated cat shader'
     return len(assets)
 
 def elf_alignment(data):

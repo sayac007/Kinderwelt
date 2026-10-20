@@ -1,5 +1,6 @@
 extends Node
-# Bounded two-player cache; both original WAVs and compressed Vorbis are supported.
+signal track_changed(id: String)
+# Bounded two-player cache; tracks advance when their actual audio ends.
 var store: RefCounted
 var players: Array[AudioStreamPlayer] = []
 var active := 0
@@ -13,6 +14,7 @@ func _ready() -> void:
 		player.volume_db = -60
 		add_child(player)
 		players.append(player)
+		player.finished.connect(func(): on_finished(i))
 func target_db() -> float:
 	return linear_to_db(maxf(.0001,float(store.data.music_volume)))+(-13.0 if ducked else 0.0)
 func set_ducked(value: bool) -> void:
@@ -21,8 +23,8 @@ func set_ducked(value: bool) -> void:
 	if is_inside_tree() and store!=null and not players.is_empty():
 		# Cancel an in-progress crossfade too: narration always wins over its target.
 		sync_settings()
-func set_world(next: String) -> void:
-	if next==world: return
+func set_world(next: String,restart := false) -> void:
+	if next==world and not restart: return
 	if not is_inside_tree() or store==null: return
 	var registry = preload("res://core/quest/tracks.gd").ITEMS
 	if not registry.has(next): return
@@ -32,13 +34,11 @@ func set_world(next: String) -> void:
 	if track==null: return
 	track = track.duplicate()
 	if track is AudioStreamWAV:
-		track.loop_mode = AudioStreamWAV.LOOP_FORWARD
-		track.loop_begin = 0
-		track.loop_end = roundi(track.get_length()*track.mix_rate)
+		track.loop_mode = AudioStreamWAV.LOOP_DISABLED
 	elif track is AudioStreamOggVorbis:
-		track.loop = true
-		track.loop_offset = 0
+		track.loop = false
 	world = next
+	store.data.music_track = next
 	if transition: transition.kill()
 	var previous := active
 	active = 1-active
@@ -46,6 +46,7 @@ func set_world(next: String) -> void:
 	player.stop()
 	player.stream = track
 	player.volume_db = -60
+	track_changed.emit(next)
 	if store.data.muted or float(store.data.music_volume)<=0:
 		players[previous].stop()
 		players[previous].stream = null
@@ -56,6 +57,11 @@ func set_world(next: String) -> void:
 	transition.tween_property(player,"volume_db",target_db(),.6)
 	transition.tween_property(players[previous],"volume_db",-60,.6)
 	transition.chain().tween_callback(func(): players[previous].stop(); players[previous].stream = null)
+func on_finished(index: int) -> void:
+	if index!=active or store==null or suspended or store.data.muted or float(store.data.music_volume)<=0: return
+	var id: String = preload("res://core/quest/tracks.gd").next(world,1,store.data.music_shuffle,store.data.music_locked)
+	set_world(id,true)
+	if store.persist()!=OK: push_warning("Music preference could not be saved")
 func sync_settings() -> void:
 	if store==null or players.is_empty(): return
 	if transition: transition.kill()

@@ -1,6 +1,7 @@
 extends SceneTree
 const Progress = preload("res://games/quest/progress.gd")
 const Store = preload("res://core/save_store.gd")
+const Tracks = preload("res://core/quest/tracks.gd")
 var checks := 0
 var failures := 0
 func check(value: bool,message: String) -> void:
@@ -27,6 +28,10 @@ func run() -> void:
 	for pair in [["mina","mischa"],["leo","du"],["sam","mama"],["jule","katze"]]:
 		var migrated := Store.clean({"hero":pair[0],"quest":{"solved":{"math_count":true},"hero_chosen":true}})
 		check(migrated.hero==pair[1] and migrated.quest.solved.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
+	check(Store.clean({"music_track":"stars","music_locked":true}).music_track==Tracks.DEFAULT and not Store.clean({"music_track":"stars","music_locked":true}).music_locked,"Unavailable old favourites migrate to an alternating classical playlist")
+	check(Tracks.next("consolation")=="wiener_blut" and Tracks.next("wiener_blut",-1)=="consolation","Playlist wraps in both directions")
+	check(Tracks.next("babbino",1,false,true)=="babbino","Repeat preserves a chosen track")
+	for i in range(8): check(Tracks.next("babbino",1,true)!="babbino","Shuffle excludes the current piece")
 	var expected := {"math_count":6,"math_add":5,"math_take":4,"math_ten":6,"math_compare":"right","math_steps":8,"math_twenty":14,"math_split":3,"german_sun":"S","german_mouse":"M","german_apple":"A","german_rhyme":"mouse","german_robot":3,"german_read":"BALL","german_flower":2,"german_fish":"F","logic_repeat":"leaf","logic_triple":"moon","logic_odd":"ball","logic_shadow":"tree","logic_size":"large","logic_double":"sun","logic_shape":"robot","logic_rule":"flower"}
 	var state := Progress.clean({"solved":{"fake":true,"math_count":true,"math_add":false},"subject":"market","hero_chosen":"yes","stars":9999})
 	check(state.solved.size()==1 and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
@@ -103,10 +108,31 @@ func run() -> void:
 	app.store.data.muted=false;app.audio.sync_settings()
 	app.musicbox()
 	var box: Control=app.body.get_child(0)
-	check(box.covers.size()==10,"All ten current tracks are selectable")
+	check(box.covers.size()==4,"All four classical tracks are selectable")
 	for id in preload("res://core/quest/tracks.gd").ITEMS:
 		box.select(id)
 		check(app.audio.music.players[app.audio.music.active].stream!=null,"Track really loads: "+id)
+	# Test the actual AudioStreamPlayer.finished path with a short real stream.
+	var music: Node = app.audio.music
+	var previous: String = music.world
+	var short_clip := AudioStreamWAV.new()
+	short_clip.format = AudioStreamWAV.FORMAT_16_BITS
+	short_clip.mix_rate = 22050
+	var silent_samples := PackedByteArray()
+	silent_samples.resize(4410)
+	short_clip.data = silent_samples
+	music.players[music.active].stream=short_clip
+	music.players[music.active].play()
+	await create_timer(.25).timeout
+	check(music.world==Tracks.next(previous) and app.store.data.music_track==music.world,"Real audio completion advances and saves the playlist")
+	check(box.current.text.contains(Tracks.ITEMS[music.world].title),"Music box follows automatic title changes")
+	var now: String = music.world
+	music.on_finished(1-music.active)
+	check(music.world==now,"A stale crossfade player cannot advance the playlist")
+	music._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
+	music.on_finished(music.active)
+	check(music.world==now,"Background suspension cannot consume a track")
+	music._notification(Node.NOTIFICATION_APPLICATION_RESUMED)
 	box.toggle_favorite()
 	var locked: String=app.store.data.music_track
 	app.audio.set_world("math")

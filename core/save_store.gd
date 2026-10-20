@@ -3,7 +3,7 @@ const PATH="user://progress.json"
 const Progress=preload("res://games/quest/progress.gd")
 var data: Dictionary=defaults()
 static func defaults() -> Dictionary:
-	return {"schema":2,"muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"mischa","music_track":"funkenflug","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
+	return {"schema":2,"muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"mischa","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
 static func clean(value: Variant) -> Dictionary:
 	var result:=defaults()
 	if not value is Dictionary: return result
@@ -18,6 +18,7 @@ static func clean(value: Variant) -> Dictionary:
 		var id: String = {"mina":"mischa","leo":"du","sam":"mama","jule":"katze"}.get(value.hero,value.hero)
 		if id in ["mischa","du","mama","katze"]: result.hero=id
 	if value.get("music_track") is String and preload("res://core/quest/tracks.gd").ITEMS.has(value.music_track): result.music_track=value.music_track
+	else: result.music_locked=false
 	result.quest=Progress.clean(value.get("quest"))
 	return result
 func load_save() -> void:

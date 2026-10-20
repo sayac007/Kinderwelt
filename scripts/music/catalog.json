@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "tracks": [
+    {
+      "id": "wiener_blut",
+      "title": "Wiener Blut · Walzerauszug",
+      "composer": "Johann Strauss II",
+      "year": 1873,
+      "arranger": "Christian F. Coors / OpenRCT2 OpenMusic contributors; Kinderwelt instrumental rendering",
+      "license": "CC-BY-SA-4.0",
+      "kind": "lilypond_wiener",
+      "source": {
+        "repository": "https://github.com/OpenRCT2/OpenMusic.git",
+        "commit": "b8f4d46e6775326219bad58fec728da5dc740433",
+        "path": "fairground_style/strauss_waltzes/wiener_blut.ly",
+        "file": "wiener_blut.ly",
+        "sha256": "c1e73344004ea3bca42a3f98089209657d82c9f3e93bfcdd6e5a25095de4f4a0"
+      },
+      "tempo": 180
+    },
+    {
+      "id": "babbino",
+      "title": "O mio babbino caro · Thema",
+      "composer": "Giacomo Puccini",
+      "year": 1918,
+      "arranger": "tnm; Kinderwelt instrumental rendering",
+      "license": "MIT (MIDI arrangement); public domain composition",
+      "kind": "midi",
+      "source": {
+        "repository": "https://github.com/tnm/mbot.git",
+        "commit": "9058a1ca64aa51b8837cd6ec267ed638b5e4b9a2",
+        "path": "midi/o_mio_babbino_caro.mid",
+        "file": "o_mio_babbino_caro.mid",
+        "sha256": "398782eaf782fdc03d1a19077927bed71b33883d288a2124ef836e6812f3d72e"
+      },
+      "time_scale": 1.65
+    },
+    {
+      "id": "french_song",
+      "title": "Altes französisches Lied",
+      "composer": "P. I. Tschaikowski",
+      "year": 1878,
+      "arranger": "David McNamara / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly",
+        "file": "old_french_song.ly",
+        "sha256": "b65b68630d04552ff7d6f56d0282a219feba407f1038ad544eb4f7d716876628"
+      }
+    },
+    {
+      "id": "consolation",
+      "title": "Consolation Nr. 1",
+      "composer": "Franz Liszt",
+      "year": 1850,
+      "arranger": "Ryan Prince / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-3.0",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/LisztF/S.172/liszt-consolation-no1/liszt-consolation-no1.ly",
+        "file": "consolation1.ly",
+        "sha256": "731440571b3fabc86f8056a056ab211b5b50471899d38e4ba8fb0d909b46977c"
+      }
+    }
+  ]
+}

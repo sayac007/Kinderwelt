@@ -11,11 +11,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 class QuestAssetsTests(unittest.TestCase):
-    def test_ten_distinct_music_tracks_are_real_playable_audio(self):
+    def test_classical_tracks_are_real_playable_audio(self):
         folder=ROOT/'assets/music'
         tracks=json.loads((folder/'manifest.json').read_text())['tracks']
-        self.assertEqual(len(tracks),10)
-        self.assertEqual(len({t['sha256'] for t in tracks}),10)
+        self.assertEqual(len(tracks),4)
+        self.assertEqual(len({t['sha256'] for t in tracks}),4)
         for track in tracks:
             path=folder/track['file']
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),track['sha256'])
@@ -63,5 +63,21 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertGreaterEqual(height,1024)
             hashes.add(hashlib.sha256(raw).hexdigest())
         self.assertEqual(len(hashes),7)
+    def test_approved_family_art_is_used_without_changes(self):
+        for name in ['mischa','du','mama','katze']:
+            self.assertEqual((ROOT/'assets/quest'/f'{name}.png').read_bytes(),(ROOT/'docs/character-proposals'/f'{name}.png').read_bytes())
+        for name in ['mina','leo','sam','jule']:
+            self.assertFalse((ROOT/'assets/quest'/f'{name}.png').exists())
+    def test_classical_sources_and_notices_are_present(self):
+        data=json.loads((ROOT/'assets/music/manifest.json').read_text())
+        composers={'wiener_blut':'Johann Strauss II','babbino':'Giacomo Puccini','french_song':'P. I. Tschaikowski','consolation':'Franz Liszt'}
+        self.assertEqual({t['id']:t['composer'] for t in data['tracks']},composers)
+        for track in data['tracks']:
+            source=ROOT/'scripts/music/scores'/track['source']['file']
+            self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),track['source']['sha256'])
+            self.assertTrue(track['license'] and track['arranger'])
+            self.assertGreater(track['midi_notes'],40)
+        for name in ['CC-BY-SA-4.0.txt','tnm-MIT.txt','GeneralUser-GS.txt']:
+            self.assertGreater((ROOT/'assets/music/licenses'/name).stat().st_size,500)
 
 if __name__=='__main__':unittest.main()

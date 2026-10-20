@@ -1,0 +1,33 @@
+Kinderwelt: neue Instrumentalwiedergaben klassischer Kompositionen.
+Wiener Blut und O mio babbino caro sind Themenauszüge; keine vollständigen Aufführungen.
+Alle Renderings verwenden GeneralUser GS 2.0.3 von S. Christian Collins. Die Lizenz gestattet private und kommerzielle Musikproduktion; siehe licenses/GeneralUser-GS.txt.
+
+Johann Strauss II: Wiener Blut · Walzerauszug
+Christian F. Coors / OpenRCT2 OpenMusic contributors; Kinderwelt instrumental rendering
+Lizenz: CC-BY-SA-4.0
+Quelle: https://github.com/OpenRCT2/OpenMusic.git/blob/b8f4d46e6775326219bad58fec728da5dc740433/fairground_style/strauss_waltzes/wiener_blut.ly
+Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+
+Giacomo Puccini: O mio babbino caro · Thema
+tnm; Kinderwelt instrumental rendering
+Lizenz: MIT (MIDI arrangement); public domain composition
+Quelle: https://github.com/tnm/mbot.git/blob/9058a1ca64aa51b8837cd6ec267ed638b5e4b9a2/midi/o_mio_babbino_caro.mid
+Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+
+P. I. Tschaikowski: Altes französisches Lied
+David McNamara / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain
+Quelle: https://github.com/MutopiaProject/MutopiaProject.git/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly
+Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+
+Franz Liszt: Consolation Nr. 1
+Ryan Prince / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-3.0
+Quelle: https://github.com/MutopiaProject/MutopiaProject.git/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/LisztF/S.172/liszt-consolation-no1/liszt-consolation-no1.ly
+Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+Wiener-Blut-Audiodatei: Bearbeitung unter CC BY-SA4.0. Liszt-Audiodatei: Bearbeitung unter CC BY3.0.
+Puccini: zugrunde liegende Komposition gemeinfrei; MIDI-Bearbeitung unter MIT (siehe tnm-MIT.txt).
+Tschaikowski: gemeinfreie Komposition und als Public Domain freigegebene Notentranskription (David McNamara / Mutopia).

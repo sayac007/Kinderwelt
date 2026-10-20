@@ -11,12 +11,13 @@ PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','assets/voice/quest/m
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','task','picture','progress','choice']]
 for name in ['mischa','du','mama','katze']:
     PAYLOAD += ['assets/assets/quest/'+name+'.png.import','assets/.godot/imported/'+name+'.png-fixture.ctex']
-for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
-    ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
+for track in ['wiener_blut','babbino','french_song','consolation']:
+    ext='.ogg'
     PAYLOAD += ['assets/assets/music/'+track+ext+'.import','assets/.godot/imported/'+track+ext+'-fixture'+('.sample' if ext=='.wav' else '.oggvorbisstr')]
 for name in ['choose','walk','success','again']+[task+suffix for task in TASK_IDS for suffix in ['', '_hint']]:
     PAYLOAD += ['assets/assets/voice/quest/'+name+'.ogg.import','assets/.godot/imported/'+name+'.ogg-fixture.oggvorbisstr']
 PAYLOAD += ['assets/assets/quest/OFL.txt','assets/assets/voice/quest/MODEL_CARD.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon']]
+PAYLOAD += ['assets/core/quest/pet.gdshader']+['assets/assets/music/'+name for name in ['licenses/CC-BY-SA-4.0.txt','licenses/tnm-MIT.txt','licenses/GeneralUser-GS.txt','NOTICES.txt']]
 
 class VerificationTests(unittest.TestCase):
     def test_preview_identity_is_explicit_and_preserves_main_app(self):
@@ -40,7 +41,7 @@ class VerificationTests(unittest.TestCase):
         for name in ['mina','leo','sam','jule']:
             with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+['assets/assets/quest/'+name+'.png.import'])
     def test_missing_music_payload_rejected(self):
-        with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/stars.wav-fixture.sample"])
+        with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/babbino.ogg-fixture.oggvorbisstr"])
     def test_every_required_runtime_asset_is_checked(self):
         for required in PAYLOAD:
             with self.subTest(required=required),self.assertRaises(AssertionError):v.check_payload([p for p in PAYLOAD if p!=required])
