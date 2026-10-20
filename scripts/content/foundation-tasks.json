@@ -1,0 +1,407 @@
+{
+  "schema": 1,
+  "authorship": "Original Kinderwelt exercises; no retrieved or copied Sofatutor tasks.",
+  "tasks": [
+    {
+      "id": "math_count",
+      "subject": "math",
+      "kind": "count",
+      "prompt": "Wie viele Äpfel siehst du?",
+      "answer": 6,
+      "options": [
+        5,
+        6,
+        7
+      ],
+      "object": "apple",
+      "count": 6,
+      "tip": "Tippe jeden Apfel einmal an. Zähle dabei mit."
+    },
+    {
+      "id": "math_add",
+      "subject": "math",
+      "kind": "add",
+      "prompt": "Drei Äpfel und zwei Äpfel. Wie viele sind es zusammen?",
+      "answer": 5,
+      "options": [
+        4,
+        5,
+        6
+      ],
+      "object": "apple",
+      "left": 3,
+      "right": 2,
+      "tip": "Zähle erst links. Zähle dann rechts weiter."
+    },
+    {
+      "id": "math_take",
+      "subject": "math",
+      "kind": "subtract",
+      "prompt": "Sieben Blätter. Drei fliegen weg. Wie viele bleiben?",
+      "answer": 4,
+      "options": [
+        3,
+        5,
+        4
+      ],
+      "object": "leaf",
+      "left": 7,
+      "right": 3,
+      "tip": "Zähle nur die Blätter ohne Kreuz."
+    },
+    {
+      "id": "math_ten",
+      "subject": "math",
+      "kind": "complete",
+      "prompt": "Vier Sterne sind schon da. Wie viele fehlen bis zehn?",
+      "answer": 6,
+      "options": [
+        5,
+        6,
+        7
+      ],
+      "object": "star",
+      "left": 4,
+      "right": 10,
+      "tip": "Zähle die leeren Sternplätze."
+    },
+    {
+      "id": "math_compare",
+      "subject": "math",
+      "kind": "compare",
+      "prompt": "Wo sind mehr Äpfel?",
+      "answer": "right",
+      "options": [
+        "left",
+        "right"
+      ],
+      "object": "apple",
+      "left": 5,
+      "right": 7,
+      "tip": "Vergleiche die beiden Mengen. Tippe die größere an."
+    },
+    {
+      "id": "math_steps",
+      "subject": "math",
+      "kind": "sequence",
+      "prompt": "Zwei, vier, sechs. Welche Zahl kommt als Nächstes?",
+      "answer": 8,
+      "options": [
+        7,
+        8,
+        9
+      ],
+      "sequence": [
+        2,
+        4,
+        6
+      ],
+      "tip": "Es kommen jedes Mal zwei dazu."
+    },
+    {
+      "id": "math_twenty",
+      "subject": "math",
+      "kind": "add",
+      "prompt": "Zehn und vier. Wie viel ist das zusammen?",
+      "answer": 14,
+      "options": [
+        12,
+        14,
+        16
+      ],
+      "object": "star",
+      "left": 10,
+      "right": 4,
+      "tip": "Die erste Menge ist zehn. Zähle vier weiter."
+    },
+    {
+      "id": "math_split",
+      "subject": "math",
+      "kind": "complete",
+      "prompt": "Fünf Sterne sind schon da. Wie viele fehlen bis acht?",
+      "answer": 3,
+      "options": [
+        2,
+        4,
+        3
+      ],
+      "object": "star",
+      "left": 5,
+      "right": 8,
+      "tip": "Zähle die leeren Sternplätze."
+    },
+    {
+      "id": "german_sun",
+      "subject": "german",
+      "kind": "initial",
+      "prompt": "Sonne. Welcher Buchstabe passt am Anfang?",
+      "answer": "S",
+      "options": [
+        "M",
+        "S",
+        "L"
+      ],
+      "object": "sun",
+      "word": "SONNE",
+      "tip": "Das Wort Sonne beginnt mit S. Suche das S."
+    },
+    {
+      "id": "german_mouse",
+      "subject": "german",
+      "kind": "initial",
+      "prompt": "Maus. Welcher Buchstabe passt am Anfang?",
+      "answer": "M",
+      "options": [
+        "M",
+        "B",
+        "A"
+      ],
+      "object": "mouse",
+      "word": "MAUS",
+      "tip": "Maus beginnt mit M. Suche das M."
+    },
+    {
+      "id": "german_apple",
+      "subject": "german",
+      "kind": "initial",
+      "prompt": "Apfel. Welcher Buchstabe passt am Anfang?",
+      "answer": "A",
+      "options": [
+        "O",
+        "E",
+        "A"
+      ],
+      "object": "apple",
+      "word": "APFEL",
+      "tip": "Apfel beginnt mit A. Suche das A."
+    },
+    {
+      "id": "german_rhyme",
+      "subject": "german",
+      "kind": "rhyme",
+      "prompt": "Was reimt sich auf Haus?",
+      "answer": "mouse",
+      "options": [
+        "sun",
+        "mouse",
+        "ball"
+      ],
+      "object": "house",
+      "word": "HAUS",
+      "tip": "Haus und Maus klingen hinten gleich.",
+      "option_words": [
+        "Sonne",
+        "Maus",
+        "Ball"
+      ]
+    },
+    {
+      "id": "german_robot",
+      "subject": "german",
+      "kind": "syllables",
+      "prompt": "Roboter. Wie viele Silben hörst du?",
+      "answer": 3,
+      "options": [
+        2,
+        3,
+        4
+      ],
+      "object": "robot",
+      "word": "ROBOTER",
+      "syllables": [
+        "RO",
+        "BO",
+        "TER"
+      ],
+      "tip": "Sprich und klatsche: Ro. Bo. Ter. Das sind drei Silben."
+    },
+    {
+      "id": "german_read",
+      "subject": "german",
+      "kind": "word",
+      "prompt": "Welches Wort gehört zum Ball?",
+      "answer": "BALL",
+      "options": [
+        "BAUM",
+        "BALL",
+        "MAUS"
+      ],
+      "object": "ball",
+      "word": "BALL",
+      "tip": "B. A. L. L. Suche das Wort Ball."
+    },
+    {
+      "id": "german_flower",
+      "subject": "german",
+      "kind": "syllables",
+      "prompt": "Blume. Wie viele Silben hörst du?",
+      "answer": 2,
+      "options": [
+        1,
+        2,
+        3
+      ],
+      "object": "flower",
+      "word": "BLUME",
+      "syllables": [
+        "BLU",
+        "ME"
+      ],
+      "tip": "Sprich und klatsche: Blu. Me. Das sind zwei Silben."
+    },
+    {
+      "id": "german_fish",
+      "subject": "german",
+      "kind": "initial",
+      "prompt": "Fisch. Welcher Buchstabe passt am Anfang?",
+      "answer": "F",
+      "options": [
+        "S",
+        "B",
+        "F"
+      ],
+      "object": "fish",
+      "word": "FISCH",
+      "tip": "Fisch beginnt mit F. Suche das F."
+    },
+    {
+      "id": "logic_repeat",
+      "subject": "logic",
+      "kind": "pattern",
+      "prompt": "Was kommt als Nächstes?",
+      "answer": "leaf",
+      "options": [
+        "apple",
+        "leaf",
+        "moon"
+      ],
+      "sequence": [
+        "apple",
+        "leaf",
+        "apple",
+        "leaf",
+        "apple"
+      ],
+      "tip": "Apfel, Blatt. Apfel, Blatt. Nach dem Apfel kommt ein Blatt."
+    },
+    {
+      "id": "logic_triple",
+      "subject": "logic",
+      "kind": "pattern",
+      "prompt": "Wie geht das Muster weiter?",
+      "answer": "moon",
+      "options": [
+        "moon",
+        "star",
+        "sun"
+      ],
+      "sequence": [
+        "star",
+        "star",
+        "moon",
+        "star",
+        "star"
+      ],
+      "tip": "Zwei Sterne, dann ein Mond. Jetzt kommt wieder ein Mond."
+    },
+    {
+      "id": "logic_odd",
+      "subject": "logic",
+      "kind": "odd",
+      "prompt": "Was passt hier nicht dazu?",
+      "answer": "ball",
+      "options": [
+        "apple",
+        "ball",
+        "leaf"
+      ],
+      "sequence": [
+        "apple",
+        "leaf",
+        "flower"
+      ],
+      "tip": "Apfel, Blatt und Blume wachsen. Ein Ball wächst nicht."
+    },
+    {
+      "id": "logic_shadow",
+      "subject": "logic",
+      "kind": "shadow",
+      "prompt": "Welcher Gegenstand passt zum Schatten?",
+      "answer": "tree",
+      "options": [
+        "flower",
+        "tree",
+        "robot"
+      ],
+      "object": "tree",
+      "tip": "Vergleiche die Umrisse. Der Schatten zeigt einen Baum."
+    },
+    {
+      "id": "logic_size",
+      "subject": "logic",
+      "kind": "size",
+      "prompt": "Welcher Baum ist am größten?",
+      "answer": "large",
+      "options": [
+        "small",
+        "large",
+        "medium"
+      ],
+      "object": "tree",
+      "tip": "Der höchste Baum ist gesucht. Tippe ihn an."
+    },
+    {
+      "id": "logic_double",
+      "subject": "logic",
+      "kind": "pattern",
+      "prompt": "Was kommt in die Lücke?",
+      "answer": "sun",
+      "options": [
+        "moon",
+        "sun",
+        "star"
+      ],
+      "sequence": [
+        "sun",
+        "moon",
+        "moon",
+        "sun",
+        "moon",
+        "moon"
+      ],
+      "tip": "Eine Sonne und zwei Monde. Dann beginnt das Muster von vorn."
+    },
+    {
+      "id": "logic_shape",
+      "subject": "logic",
+      "kind": "shadow",
+      "prompt": "Welcher Gegenstand passt zum Schatten?",
+      "answer": "robot",
+      "options": [
+        "robot",
+        "house",
+        "ball"
+      ],
+      "object": "robot",
+      "tip": "Achte auf den eckigen Kopf und die beiden Arme."
+    },
+    {
+      "id": "logic_rule",
+      "subject": "logic",
+      "kind": "odd",
+      "prompt": "Was gehört nicht zu den Himmelskörpern?",
+      "answer": "flower",
+      "options": [
+        "sun",
+        "flower",
+        "moon"
+      ],
+      "sequence": [
+        "sun",
+        "moon",
+        "star"
+      ],
+      "tip": "Sonne, Mond und Sterne stehen am Himmel. Eine Blume wächst am Boden."
+    }
+  ]
+}

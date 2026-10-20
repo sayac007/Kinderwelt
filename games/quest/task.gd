@@ -17,21 +17,21 @@ var complete := false
 var companion: Control
 func setup(owner_host: Control,data: Dictionary) -> void:
 	host = owner_host
-	task = data
+	task = preload("res://core/quest/language.gd").task(data,host.store.data.locale)
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	mouse_filter = MOUSE_FILTER_STOP
 	close_button = make_button("×",func(): host.narration.cancel();closed.emit())
-	close_button.tooltip_text = "Zurück zum Weg"
+	close_button.tooltip_text = host.t("walk_back")
 	speaker = make_button("",repeat)
 	preload("res://core/quest/transport_icons.gd").apply(speaker,"speaker",28)
-	speaker.tooltip_text = "Aufgabe noch einmal hören"
+	speaker.tooltip_text = host.t("repeat")
 	heading = Label.new()
-	heading.text = {"count":"Wie viele Äpfel?","add":"Wie viele zusammen?","subtract":"Wie viele bleiben?","complete":"Wie viele fehlen?","compare":"Wo sind mehr?","sequence":"Welche Zahl kommt jetzt?","initial":"Wie fängt es an?","rhyme":"Was reimt sich?","syllables":"Wie viele Silben?","word":"Welches Wort passt?","pattern":"Was kommt als Nächstes?","odd":"Was passt nicht dazu?","shadow":"Was passt zum Schatten?","size":"Welcher ist am größten?"}.get(task.kind,task.prompt)
-	heading.max_lines_visible = 2
+	heading.text = task.prompt if task.kind=="discovery" else host.t(task.kind)
+	heading.max_lines_visible = 6 if task.kind=="discovery" else 2
 	heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	heading.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	heading.add_theme_font_size_override("font_size",roundi(20*host.store.data.text_scale))
+	heading.add_theme_font_size_override("font_size",roundi((18 if task.kind=="discovery" else 20)*host.store.data.text_scale))
 	add_child(heading)
 	picture = preload("res://games/quest/picture.gd").new()
 	picture.task = task
@@ -45,10 +45,11 @@ func setup(owner_host: Control,data: Dictionary) -> void:
 	companion.hide()
 	for option in task.options:
 		var b := make_button("",func(): answer(option))
-		b.tooltip_text = str(option)
+		b.tooltip_text = preload("res://core/quest/language.gd").object_name(str(option),host.store.data.locale)
 		var visual := preload("res://games/quest/choice.gd").new()
 		visual.value = option
 		visual.kind = task.kind
+		if task.kind=="discovery": visual.caption = b.tooltip_text
 		visual.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 		b.add_child(visual)
 		choices.append(b)
@@ -56,10 +57,10 @@ func setup(owner_host: Control,data: Dictionary) -> void:
 	feedback.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	feedback.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	feedback.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	feedback.add_theme_font_size_override("font_size",18)
+	feedback.add_theme_font_size_override("font_size",15)
 	add_child(feedback)
-	help_button = make_button("Zeig mal",help)
-	next_button = make_button("Weiter  →",func(): host.narration.cancel();closed.emit())
+	help_button = make_button(host.t("help"),help)
+	next_button = make_button(host.t("next"),func(): host.narration.cancel();closed.emit())
 	next_button.hide()
 	resized.connect(arrange)
 	arrange.call_deferred()
@@ -77,10 +78,12 @@ func arrange() -> void:
 	var landscape := size.x>size.y*1.3
 	close_button.position = Vector2(18,18);close_button.size = Vector2(52,52)
 	speaker.position = Vector2(size.x-70,18);speaker.size = Vector2(52,52)
-	heading.position = Vector2(78,14);heading.size = Vector2(size.x-156,80 if not landscape else 56)
-	var picture_top := 108.0 if not landscape else 83.0
+	heading.max_lines_visible = (3 if landscape else 6) if task.kind=="discovery" else (2 if landscape else 3)
+	heading.position = Vector2(20,76) if not landscape else Vector2(78,14)
+	heading.size = Vector2(size.x-40 if not landscape else size.x-156,0)
+	var picture_top := heading.get_rect().end.y+12
 	var picture_width := size.x-40 if not landscape else size.x*.55
-	var picture_height := size.y-310 if not landscape else size.y-104
+	var picture_height := size.y-186-picture_top if not landscape else size.y-picture_top-21
 	picture.position = Vector2(20,picture_top)
 	picture.size = Vector2(picture_width,maxf(90,picture_height))
 	var hero_height := minf(290,picture.size.y)
@@ -98,8 +101,8 @@ func arrange() -> void:
 			choices[i].size = Vector2(picture.size.x*.43,picture.size.y)
 			choices[i].get_child(0).hide()
 			for state in ["normal","hover","pressed","disabled"]: choices[i].add_theme_stylebox_override(state,StyleBoxEmpty.new())
-	feedback.position = Vector2(20,size.y-88 if not landscape else 198)
-	feedback.size = Vector2(size.x-40 if not landscape else size.x*.42,32)
+	feedback.position = Vector2(20,size.y-102 if not landscape else 192)
+	feedback.size = Vector2(size.x-40 if not landscape else size.x*.42,46)
 	if landscape: feedback.position.x = size.x*.57
 	help_button.position = Vector2(size.x/2-84,size.y-57)
 	help_button.size = Vector2(168,48)
@@ -119,7 +122,7 @@ func help() -> void:
 			frame.set_border_width_all(4)
 			frame.set_corner_radius_all(38)
 			choices[i].add_theme_stylebox_override("normal",frame)
-	feedback.text = "Schau genau. Du kannst es ausprobieren."
+	feedback.text = host.t("encourage")
 func answer(value: Variant) -> void:
 	if complete: return
 	if Progress.correct(task,value):
@@ -130,7 +133,7 @@ func answer(value: Variant) -> void:
 		host.sound(true)
 		var fresh := Progress.award(host.store.data.quest,task.id)
 		host.save()
-		feedback.text = "+1 Stern · +10 Punkte" if fresh else "Schon geschafft · gut erinnert!"
+		feedback.text = host.t("reward" if fresh else "remembered")
 		for i in range(choices.size()):
 			choices[i].disabled=true
 			if task.kind=="compare": choices[i].hide()
@@ -145,7 +148,7 @@ func answer(value: Variant) -> void:
 		host.narration.play_clip("quest/success")
 		solved.emit(task.id)
 	else:
-		feedback.text = "Probier es noch einmal."
+		feedback.text = host.t("again")
 		host.narration.play_clip("quest/again")
 	queue_redraw()
 func _draw() -> void:
@@ -154,5 +157,3 @@ func _draw() -> void:
 	panel.bg_color = Color("fff9eb")
 	panel.set_corner_radius_all(30)
 	draw_style_box(panel,Rect2(Vector2(8,8),size-Vector2(16,16)))
-	if complete:
-		Art.star(self,Vector2(size.x/2,94),20,Color("d89f2e"))

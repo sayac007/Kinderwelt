@@ -11,11 +11,11 @@ python3 scripts/android/build.py --tools /workspace/tools --preview --output bui
 
 Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzeptiert. Jedes Ausgabeverzeichnis muss neu sein. Das Skript baut aus einer isolierten Kopie ausschließlich der App-Verzeichnisse. Beide Android-SDK-Umgebungsvariablen zeigen auf dasselbe geprüfte SDK. Fehlerblöcke aus Godot und Gradle werden direkt ausgegeben; vollständige Logs bleiben im Ausgabeverzeichnis.
 
-Standardpaket: `org.example.kinderwelt`, Version **0.5.0 / 5**. Testvariante: `org.example.kinderwelt.preview`, Launchername **Kinderwelt 0.5 Test**, eigener lokaler Spielstand. Sie enthält dieselbe neue App und kann neben einer vorhandenen Installation stehen.
+Standardpaket: `org.example.kinderwelt`, Version **0.6.0 / 6**. Testvariante: `org.example.kinderwelt.preview`, Launchername **Kinderwelt 0.6 Test**, eigener lokaler Spielstand. Sie enthält dieselbe neue App und kann neben einer vorhandenen Installation stehen.
 
 Jeder Build liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird nur mit einem temporären Godot-Entwicklungsschlüssel signiert. Dieser ist keine dauerhafte Update-Identität; normale APK-Updates benötigen denselben Schlüssel wie die installierte App. Keine privaten Schlüssel werden eingecheckt. Eine vorhandene App nicht unbedacht deinstallieren, wenn deren lokale Daten erhalten bleiben sollen.
 
-Die Prüfung kontrolliert Paket, Version, API 24–36, Berechtigungsfreiheit, deaktiviertes Backup, Bildschirmrotation, alle erforderlichen Spiel-/Audio-/Grafikressourcen, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierten Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt.
+Die Prüfung kontrolliert Paket, Version, API 24–36, Berechtigungsfreiheit, deaktiviertes Backup, Bildschirmrotation, alle acht Fächer, drei Sprachmanifeste und sämtliche tatsächlich spielbaren Sprach-/Musik- und Grafikressourcen, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierten Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt.
 
 GitHub Actions führt die aktuelle Testsuite, echte Software-Renderings und Android-Exporte aus. Das ist keine Geräteprüfung.
 

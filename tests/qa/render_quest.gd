@@ -30,16 +30,26 @@ func run() -> void:
 				b.get_child(0).clock=.21
 			await snap(profile.id+"-heroes-"+pose)
 		game.finish_hero()
-		for subject in ["math","german","logic"]:
+		for subject in preload("res://games/quest/progress.gd").SUBJECTS:
 			game.switch_subject(subject)
 			await snap(profile.id+"-"+subject+"-world")
-			for index in range(8):
+			for index in (range(8) if subject in ["math","german","logic"] else [0,19,39]):
 				game.open_task(index)
 				await snap(profile.id+"-"+subject+"-task-"+str(index))
 				if index==0:
 					game.task_panel.answer(game.task_panel.task.answer)
 					await snap(profile.id+"-"+subject+"-solved")
 				game.close_task()
+		game.world.set_page(3)
+		await snap(profile.id+"-last-trail")
+		for locale in ["en","ru"]:
+			app.store.data.locale=locale;app.hub();game=app.game_view
+			game.switch_subject("physics");game.open_task(19)
+			await snap(profile.id+"-"+locale+"-physics")
+			game.close_task();game.switch_subject("german");game.open_task(20)
+			await snap(profile.id+"-"+locale+"-german")
+			app.languages();await snap(profile.id+"-"+locale+"-languages")
+		app.store.data.locale="de"
 		app.musicbox()
 		await snap(profile.id+"-musicbox")
 		app.settings()

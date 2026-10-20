@@ -1,3 +1,7 @@
+# Frühere Beschreibung 0.5
+
+Dieser Text beschreibt den früheren technischen Stand. Aktuelle Figuren, acht Fächer, Sprachen und Musik: [Kinderwelt 0.6](subjects-family-v06.md).
+
 # Kinderwelt: Mathe, Deutsch und Logik
 
 ## Spielen

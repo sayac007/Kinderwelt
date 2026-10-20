@@ -2,11 +2,20 @@ extends Control
 const Art = preload("res://core/quest/art.gd")
 var value: Variant
 var kind := ""
+var caption := ""
 func _ready() -> void: mouse_filter = MOUSE_FILTER_IGNORE
 func _draw() -> void:
 	var rect := Rect2(Vector2(9,8),size-Vector2(18,16))
-	if value is String and Art.REGIONS.has(value):
+	if value is String and Art.has_object(value):
+		if kind=="discovery": rect.size.y-=20
 		Art.object(self,value,rect)
+		if kind=="discovery":
+			var px := 14
+			while px>10 and Art.font().get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>size.x-8: px-=1
+			var shown := caption
+			while shown.length()>2 and Art.font().get_string_size(shown,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>size.x-8:
+				shown=shown.left(shown.length()-2)+"…"
+			Art.text(self,shown,Vector2(size.x/2,size.y-13),px)
 	elif kind=="size":
 		var scale_factor: float = {"small":.45,"medium":.7,"large":1.0}.get(value,1.0)
 		rect.position.y += rect.size.y*(1-scale_factor)

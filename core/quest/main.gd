@@ -1,6 +1,7 @@
 extends Control
 const Store = preload("res://core/save_store.gd")
 const Mobile = preload("res://core/mobile.gd")
+const Lang = preload("res://core/quest/language.gd")
 var simulated_dpi := 0.0
 var store = Store.new()
 var audio = preload("res://core/cues.gd").new()
@@ -73,7 +74,7 @@ func sound(success:=false) -> void: audio.cue(success)
 func save() -> void:
 	if store.persist()!=OK:
 		push_warning("Local progress could not be saved")
-		if scroll_view.visible: label("Spielstand konnte nicht gespeichert werden.")
+		if scroll_view.visible: label(t("save_error"))
 func toggle_sound() -> void:
 	store.data.muted=not store.data.muted
 	audio.sync_settings();narration.sync_settings();save()
@@ -81,20 +82,33 @@ func musicbox() -> void:
 	clear()
 	var box:=preload("res://core/quest/musicbox.gd").new()
 	body.add_child(box);box.setup(self)
+func t(key: String) -> String: return Lang.text(key,store.data.locale)
+func flag(key: String,value: bool) -> String: return t(key)+": "+t("on" if value else "off")
+func subjects() -> void:
+	clear();button(t("back"),hub)
+	for subject in preload("res://games/quest/progress.gd").SUBJECTS:
+		button(t(subject),func(): hub();game_view.switch_subject(subject))
+func languages() -> void:
+	clear();button(t("back"),hub)
+	label(t("select_language"))
+	for locale in Lang.LOCALES:
+		button(("✓ " if locale==store.data.locale else "")+Lang.NAMES[locale],func():
+			store.data.locale=locale;save();hub())
 func settings() -> void:
-	clear();button("Zurück zum Spiel",hub)
-	label("Kinderwelt 0.5.0")
-	button("Ton: "+("aus" if store.data.muted else "an"),func(): toggle_sound();settings())
-	volume_control("Musik","music_volume")
-	volume_control("Spielklänge","effects_volume")
-	volume_control("Sprache","voice_volume")
-	button("Vorlesen: "+("an" if store.data.voice_auto else "aus"),func():
+	clear();button(t("back"),hub)
+	label("Kinderwelt 0.6.0")
+	button(t("language"),languages)
+	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())
+	volume_control(t("music"),"music_volume")
+	volume_control(t("effects"),"effects_volume")
+	volume_control(t("voice"),"voice_volume")
+	button(flag("autovoice",store.data.voice_auto),func():
 		store.data.voice_auto=not store.data.voice_auto;save();settings())
-	button("Weniger Bewegung: "+("an" if store.data.reduced_motion else "aus"),func():
+	button(flag("less_motion",store.data.reduced_motion),func():
 		store.data.reduced_motion=not store.data.reduced_motion;save();settings())
-	button("Große Schrift: "+("an" if store.data.text_scale>1 else "aus"),func():
+	button(flag("large_text",store.data.text_scale>1),func():
 		store.data.text_scale=1.0 if store.data.text_scale>1 else 1.15;save();settings())
-	button("Für Erwachsene",parents)
+	button(t("adults"),parents)
 func volume_control(title: String,key: String) -> void:
 	label(title)
 	var s:=HSlider.new();s.name=key
@@ -104,29 +118,29 @@ func volume_control(title: String,key: String) -> void:
 	s.value_changed.connect(func(value):
 		store.data[key]=value;audio.sync_settings();narration.sync_settings();save())
 func parents() -> void:
-	clear();button("Zurück zum Spiel",hub)
-	label("Gemeinsam spielen ist freiwillig")
-	label("Ausprobieren und noch einmal versuchen. Fehler kosten keine Sterne. Keine Zeitvorgaben, Ranglisten oder Käufe.")
-	label("24 eigene Aufgaben. Keine Konten, Werbung, Mikrofonaufnahmen oder Netzwerkverbindungen. Figur und Spielstand bleiben auf diesem Gerät.")
-	button("Klang & Bedienung",settings)
-	button("Musik & Quellen",music_credits)
-	button("Lokalen Spielstand löschen …",confirm_reset)
+	clear();button(t("back"),hub)
+	label(t("voluntary"))
+	label(t("respect"))
+	label(t("privacy"))
+	button(t("controls"),settings)
+	button(t("music_sources"),music_credits)
+	button(t("reset"),confirm_reset)
 func music_credits() -> void:
-	clear();button("Zurück",parents)
-	label("Musik & Quellen")
-	label("Eigene Instrumentalwiedergaben nach Noten. Wiener Blut und O mio babbino caro sind gekürzte Themenauszüge.")
+	clear();button(t("return"),parents)
+	label(t("music_sources"))
+	label(t("classical_note"))
 	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/music/manifest.json"))
 	for track in manifest.tracks:
 		label(track.composer+" · "+track.title)
 		label(track.arranger+"\n"+track.license)
 		label(track.source.repository+"\n"+track.source.path)
-	label("Klavierklang: GeneralUser GS 2.0.3 · S. Christian Collins. Musikproduktion gemäß beiliegender Lizenz. Bearbeitungen und Audiodateien mit ihren jeweiligen Lizenzen und Quellen liegen der App bei.")
+	label(t("piano_credit"))
 func confirm_reset() -> void:
-	clear();label("Figur, Sterne und Einstellungen auf diesem Gerät löschen?")
-	button("Abbrechen",parents)
-	button("Ja, zurücksetzen",func():
+	clear();label(t("reset_question"))
+	button(t("cancel"),parents)
+	button(t("reset_yes"),func():
 		if store.reset()==OK: hub()
-		else: label("Zurücksetzen fehlgeschlagen"))
+		else: label(t("reset_error")))
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"): hub();get_viewport().set_input_as_handled()
 func _notification(what: int) -> void:

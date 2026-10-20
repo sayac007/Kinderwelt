@@ -10,12 +10,12 @@ for folder in ['core','games']:
 for line in (ROOT/'export_presets.cfg').read_text().splitlines():
  if re.search(r'permissions/\w+\s*=true',line):findings.append('enabled Android permission')
 tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
-assert len(tasks)==24 and len({t['id'] for t in tasks})==24
-assert {t['subject'] for t in tasks}=={'math','german','logic'}
-for s in ['math','german','logic']:assert sum(t['subject']==s for t in tasks)==8
+assert len(tasks)==320 and len({t['id'] for t in tasks})==320
+assert {t['subject'] for t in tasks}=={'math','german','logic','physics','biology','chemistry','body','geography'}
+for s in ['math','german','logic','physics','biology','chemistry','body','geography']:assert sum(t['subject']==s for t in tasks)==40
 for path in ['core/main.gd','core/modern','games/adventure','games/water','content']:
  if (ROOT/path).exists():findings.append('obsolete project component: '+path)
-report={'technical_status':'PASS' if not findings else 'FAIL','task_count':24,'subjects':3,'findings':findings,'scope':'Bounded runtime network/permission/source checks, not a security certification','device_testing':'OPEN','child_usability':'NOT EMPIRICALLY EVALUATED','learning_effect':'NOT ESTABLISHED'}
+report={'technical_status':'PASS' if not findings else 'FAIL','task_count':320,'subjects':8,'findings':findings,'scope':'Bounded runtime network/permission/source checks, not a security certification','device_testing':'OPEN','child_usability':'NOT EMPIRICALLY EVALUATED','learning_effect':'NOT ESTABLISHED'}
 output=ROOT/'qa-results';output.mkdir(exist_ok=True)
 (output/'audit.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

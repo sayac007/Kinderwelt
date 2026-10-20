@@ -1,7 +1,7 @@
 extends Control
 const Progress = preload("res://games/quest/progress.gd")
 const Art = preload("res://core/quest/art.gd")
-const NAMES := {"math":"Mathe","german":"Deutsch","logic":"Logik"}
+const Lang = preload("res://core/quest/language.gd")
 const COLORS := {"math":"b75a32","german":"3f7192","logic":"70568b"}
 var host: Control
 var world: Control
@@ -14,7 +14,8 @@ var score: Label
 var hero_button: Button
 var menu_button: Button
 var tabs: Array[Button] = []
-var footer: Control
+var footer: ScrollContainer
+var tab_row: HBoxContainer
 var choosing := false
 var hero_choices: Array[Button] = []
 var start_button: Button
@@ -35,28 +36,36 @@ func setup(owner_host: Control) -> void:
 		style.set_border_width_all(2 if state!="focus" else 4)
 		local_theme.set_stylebox(state,"Button",style)
 	theme = local_theme
-	hero_button = button("Figur",choose_hero)
-	hero_button.tooltip_text = "Spielfigur wählen"
+	hero_button = button(host.t("figure"),choose_hero)
+	hero_button.tooltip_text = host.t("choose_figure")
 	menu_button = button("☰",open_menu)
 	menu_button.text = ""
 	var gear := preload("res://core/quest/icon.gd").new()
 	gear.cell = Vector2i(0,1)
 	gear.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	menu_button.add_child(gear)
-	menu_button.tooltip_text = "Musik und Einstellungen"
+	menu_button.tooltip_text = host.t("menu_tip")
 	title = label("")
 	score = label("")
 	score.add_theme_font_size_override("font_size",16)
-	footer = Control.new()
+	footer = ScrollContainer.new()
+	footer.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	footer.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	footer.follow_focus = true
 	add_child(footer)
+	tab_row = HBoxContainer.new()
+	tab_row.add_theme_constant_override("separation",5)
+	footer.add_child(tab_row)
 	for id in Progress.SUBJECTS:
-		var b := button("",func(): switch_subject(id),footer)
-		b.tooltip_text = NAMES[id]
+		var b := button("",func(): switch_subject(id),tab_row)
+		b.tooltip_text = host.t(id)
 		var icon := preload("res://core/quest/icon.gd").new()
-		icon.cell = Vector2i(Progress.SUBJECTS.find(id),0)
+		if Progress.SUBJECTS.find(id)<3: icon.cell = Vector2i(Progress.SUBJECTS.find(id),0)
+		else: icon.object = {"physics":"gear","biology":"leaf","chemistry":"water","body":"heart","geography":"globe"}[id]
 		b.add_child(icon)
-		var caption := label(NAMES[id],b)
-		caption.add_theme_font_size_override("font_size",18)
+		var caption := label(host.t(id),b)
+		caption.add_theme_font_size_override("font_size",16)
+		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		b.add_theme_font_size_override("font_size",20)
 		tabs.append(b)
 	resized.connect(arrange)
@@ -91,21 +100,24 @@ func switch_subject(id: String) -> void:
 	move_child(world,0)
 	world.setup(host,subject)
 	world.station_requested.connect(open_task)
-	title.text = NAMES[id]
+	title.text = host.t(id)
 	var done := Progress.tasks(subject).filter(func(t): return host.store.data.quest.solved.has(t.id)).size()
-	if done>0 and done<8:
+	if done>0 and done<Progress.tasks(subject).size():
 		var first: int = Progress.tasks(subject).find_custom(func(t): return not host.store.data.quest.solved.has(t.id))
+		world.set_page(first/world.PAGE_SIZE)
 		world.hero_x = world.station_x(first)-140
 		world.target_x = world.hero_x
 		world.camera_x = maxf(0,world.hero_x-size.x*.3)
 	world.first_hint = done==0
-	host.audio.set_world({"math":"math","german":"german","logic":"logic"}[id])
+	host.audio.set_world(id)
+	host.narration.play_clip("quest/area_"+id,true)
+	footer.ensure_control_visible.call_deferred(tabs[Progress.SUBJECTS.find(id)])
 	update_score()
 	arrange()
 func update_score() -> void:
 	var stars := Progress.stars(host.store.data.quest)
-	score.text = "★ %d   ·   %d Punkte" % [stars,stars*10]
-	hero_button.text = preload("res://core/quest/hero.gd").NAMES[host.store.data.hero]
+	score.text = "★ %d · %d %s" % [stars,stars*10,host.t("points")]
+	hero_button.text = hero_name(host.store.data.hero)
 	for i in range(tabs.size()):
 		var style := StyleBoxFlat.new()
 		style.bg_color = Color("fae3b4") if Progress.SUBJECTS[i]==subject else Color("fff8e9")
@@ -131,17 +143,21 @@ func arrange() -> void:
 	title.position = Vector2(96,2);title.size = Vector2(size.x-159,33)
 	score.position = Vector2(96,34);score.size = Vector2(size.x-159,28)
 	footer.position = Vector2(0,size.y-102);footer.size = Vector2(size.x,102)
-	for i in range(3):
-		tabs[i].position = Vector2(8+i*(size.x-16)/3,5)
-		tabs[i].size = Vector2((size.x-16)/3-5,90)
-		tabs[i].get_child(0).position = Vector2((tabs[i].size.x-66)/2,-2)
+	tab_row.custom_minimum_size = Vector2(0,90)
+	for i in range(tabs.size()):
+		tabs[i].custom_minimum_size = Vector2(maxf(104,(size.x-16)/3-5),90)
+		tabs[i].get_child(0).position = Vector2((tabs[i].custom_minimum_size.x-66)/2,-2)
 		tabs[i].get_child(0).size = Vector2(66,66)
-		tabs[i].get_child(1).position = Vector2(0,61)
-		tabs[i].get_child(1).size = Vector2(tabs[i].size.x,25)
+		tabs[i].get_child(1).position = Vector2(0,57)
+		tabs[i].get_child(1).size = Vector2(tabs[i].custom_minimum_size.x,32)
 	world.position = Vector2(0,68)
 	world.size = Vector2(size.x,maxf(170,size.y-170))
 	if is_instance_valid(chooser): arrange_chooser()
 	queue_redraw()
+func hero_name(id: String) -> String:
+	if id=="du": return host.t("self_hero")
+	if id=="katze": return Lang.object_name("cat",host.store.data.locale)
+	return preload("res://core/quest/hero.gd").NAMES[id]
 func open_task(index: int) -> void:
 	if is_instance_valid(task_panel) or choosing: return
 	last_station=index
@@ -176,12 +192,12 @@ func choose_hero() -> void:
 	panel.bg_color = Color("19384f")
 	chooser.add_theme_stylebox_override("panel",panel)
 	add_child(chooser)
-	chooser_label = label("Wer bist du heute?",chooser)
+	chooser_label = label(host.t("choose"),chooser)
 	chooser_label.add_theme_color_override("font_color",Color("fff4dc"))
 	hero_choices.clear()
 	for id in preload("res://core/quest/hero.gd").IDS:
 		var b := button("",func(): select_hero(id),chooser)
-		b.tooltip_text = preload("res://core/quest/hero.gd").NAMES[id]
+		b.tooltip_text = hero_name(id)
 		var figure := preload("res://core/quest/hero.gd").new()
 		figure.person = id
 		figure.animation = "idle"
@@ -191,7 +207,7 @@ func choose_hero() -> void:
 		name_tag.add_theme_color_override("font_color",Color("fff4dc"))
 		name_tag.add_theme_font_size_override("font_size",22)
 		hero_choices.append(b)
-	start_button = button("Los geht’s!  →",finish_hero,chooser)
+	start_button = button(host.t("start"),finish_hero,chooser)
 	arrange_chooser()
 	select_hero(host.store.data.hero)
 	host.narration.play_clip("quest/choose",true)
@@ -254,12 +270,12 @@ func open_menu() -> void:
 	add_child(menu)
 	var box := VBoxContainer.new()
 	box.set_anchors_and_offsets_preset(PRESET_CENTER)
-	box.offset_left=-130;box.offset_right=130;box.offset_top=-142;box.offset_bottom=142
+	box.offset_left=-130;box.offset_right=130;box.offset_top=-164;box.offset_bottom=164
 	box.add_theme_constant_override("separation",12)
 	menu.add_child(box)
-	for entry in [["Zurück",func(): remove_child(menu);menu.queue_free();menu=null],["Figur wählen",func(): remove_child(menu);menu.queue_free();menu=null;choose_hero()],["Musikbox",host.musicbox],["Einstellungen",host.settings]]:
+	for entry in [[host.t("return"),func(): remove_child(menu);menu.queue_free();menu=null],[host.t("subjects"),host.subjects],[host.t("musicbox"),host.musicbox],[host.t("settings"),host.settings],[host.t("language"),host.languages]]:
 		var b := button(entry[0],entry[1],box)
-		b.custom_minimum_size = Vector2(240,56)
+		b.custom_minimum_size = Vector2(240,52)
 func persist() -> void: host.save()
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_PAUSED and host!=null:

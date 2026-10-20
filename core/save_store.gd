@@ -3,10 +3,11 @@ const PATH="user://progress.json"
 const Progress=preload("res://games/quest/progress.gd")
 var data: Dictionary=defaults()
 static func defaults() -> Dictionary:
-	return {"schema":2,"muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
+	return {"schema":2,"locale":"de","muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
 static func clean(value: Variant) -> Dictionary:
 	var result:=defaults()
 	if not value is Dictionary: return result
+	if value.get("locale") is String and value.locale in ["de","en","ru"]: result.locale=value.locale
 	# Only current whitelisted preferences/tasks are retained, never obsolete data.
 	for key in ["muted","reduced_motion","voice_auto","music_locked","music_shuffle"]:
 		if value.get(key) is bool: result[key]=value[key]

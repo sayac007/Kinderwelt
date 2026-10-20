@@ -7,21 +7,21 @@ var favorite: Button
 var shuffle: Button
 func setup(parent: Control) -> void:
 	host = parent
-	host.button("Zurück zum Spiel",host.hub,self)
+	host.button(host.t("back"),host.hub,self)
 	current = Label.new()
 	current.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	current.add_theme_font_size_override("font_size",22)
 	add_child(current)
 	var note := Label.new()
-	note.text = "Instrumental · nach jedem Stück folgt das nächste.\n♥ schaltet die Wiederholung eines Stücks ein."
+	note.text = host.t("playlist_note")
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	note.add_theme_font_size_override("font_size",18)
 	add_child(note)
 	var controls := HBoxContainer.new()
 	add_child(controls)
-	transport(controls,"previous","Voriger Titel",func(): step(-1))
-	transport(controls,"play","Titel anhören",func(): select(selected()))
-	transport(controls,"next","Nächster Titel",func(): step(1))
+	transport(controls,"previous",host.t("previous_track"),func(): step(-1))
+	transport(controls,"play",host.t("play_track"),func(): select(selected()))
+	transport(controls,"next",host.t("next_track"),func(): step(1))
 	var options := HBoxContainer.new()
 	add_child(options)
 	shuffle = host.button("",toggle_shuffle,options)
@@ -72,8 +72,8 @@ func toggle_favorite() -> void:
 	refresh()
 func refresh() -> void:
 	current.text = "♫ "+Tracks.ITEMS[selected()].composer+" · "+Tracks.ITEMS[selected()].title
-	favorite.text = "♥ Wiederholen" if host.store.data.music_locked else "♡ Wiederholen"
-	shuffle.text = "✓ Zufall" if host.store.data.music_shuffle else "⤨ Zufall"
+	favorite.text = host.t("favorite_on" if host.store.data.music_locked else "favorite_off")
+	shuffle.text = ("✓ " if host.store.data.music_shuffle else "⤨ ")+host.t("shuffle")
 	for id in covers:
 		covers[id].add_theme_stylebox_override("normal",preload("res://core/quest/theme.gd").style(Color("e1ead3") if selected()==id else Color("fffdf6")))
 		covers[id].get_child(1).text = ("✓ " if selected()==id else "")+Tracks.ITEMS[id].composer+"\n"+Tracks.ITEMS[id].title+"\n"+Tracks.ITEMS[id].detail

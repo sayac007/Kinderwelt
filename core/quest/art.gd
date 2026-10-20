@@ -1,6 +1,9 @@
 extends RefCounted
 const INK := Color("293b4c")
 const OBJECTS = preload("res://assets/quest/objects.png")
+const SCIENCE_A = preload("res://assets/quest/science-a.png")
+const SCIENCE_B = preload("res://assets/quest/science-b.png")
+const SCIENCE_IDS := ["gear","wheel","bridge","magnet","bulb","battery","scissors","hammer","screwdriver","lever","pulley","helmet","bird","butterfly","bee","frog","turtle","cat","seed","roots","mushroom","egg","nest","worm","water","ice","steam","salt","sand","oil","glass","metal","wood","paper","fabric","soap","eye","ear","nose","tongue","hand","heart","lungs","brain","bone","tooth","foot","stomach","globe","map","compass","mountain","river","island","cloud","rain","snow","desert","forest","sea"]
 const REGIONS := {"apple":Rect2(18,0,349,334),"leaf":Rect2(399,0,358,334),"star":Rect2(783,0,358,334),"moon":Rect2(1164,0,360,334),"sun":Rect2(20,339,350,296),"ball":Rect2(405,340,350,296),"house":Rect2(785,341,350,297),"mouse":Rect2(1164,340,360,299),"robot":Rect2(20,636,350,370),"flower":Rect2(405,649,350,357),"fish":Rect2(784,643,350,363),"tree":Rect2(1164,643,360,363)}
 static var face: FontVariation
 static func font() -> Font:
@@ -16,6 +19,17 @@ static func object(canvas: CanvasItem,id: String,rect: Rect2,tint := Color.WHITE
 	if REGIONS.has(id):
 		canvas.draw_texture_rect_region(OBJECTS,rect,REGIONS[id],tint)
 		return
+	var index := SCIENCE_IDS.find(id)
+	if index>=0:
+		var atlas: Texture2D = SCIENCE_A if index<30 else SCIENCE_B
+		index = index%30
+		var cell := Vector2(atlas.get_width()/6.0,atlas.get_height()/5.0)
+		var region := Rect2(Vector2(index%6,index/6)*cell+Vector2.ONE*3,cell-Vector2.ONE*6)
+		var fit := region.size*minf(rect.size.x/region.size.x,rect.size.y/region.size.y)
+		canvas.draw_texture_rect_region(atlas,Rect2(rect.get_center()-fit/2,fit),region,tint)
+
+static func has_object(id: String) -> bool:
+	return REGIONS.has(id) or id in SCIENCE_IDS
 
 static func star(canvas: CanvasItem,center: Vector2,radius: float,color: Color) -> void:
 	var points := PackedVector2Array()

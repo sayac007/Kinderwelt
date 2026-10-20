@@ -40,16 +40,20 @@ func run() -> void:
 	check(state.solved.size()==1 and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
 	check(state.subject=="math" and not state.hero_chosen,"Invalid subject/hero-chosen types rejected")
 	state = Progress.clean(null)
-	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==8,"Eight real tasks in "+subject)
+	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==40,"Forty real tasks in "+subject)
 	for task in Progress.tasks():
-		check(expected.has(task.id) and expected[task.id]==task.answer,"Independent authored answer fixture "+task.id)
-		check(Progress.correct(task,expected[task.id]),"Accept correct answer")
+		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent original answer fixture "+task.id)
+		if task.kind=="add": check(task.answer==task.left+task.right,"Addition is arithmetically correct")
+		if task.kind=="subtract": check(task.answer==task.left-task.right,"Subtraction is arithmetically correct")
+		if task.kind=="complete": check(task.answer==task.right-task.left,"Complement is arithmetically correct")
+		if task.kind=="count": check(task.answer==task.count,"Count is correct")
+		check(Progress.correct(task,task.answer),"Accept correct answer")
 		for option in task.options:
-			if option!=expected[task.id]: check(not Progress.correct(task,option),"Reject distractor "+task.id)
+			if option!=task.answer: check(not Progress.correct(task,option),"Reject distractor "+task.id)
 		check(not Progress.correct(task,"forged"),"Reject unknown option")
 		check(Progress.award(state,task.id),"First completion earns a star")
 		check(not Progress.award(state,task.id),"Repeated completion cannot farm stars")
-	check(Progress.stars(state)==24 and not Progress.award(state,"unknown"),"Finite 24-star progression")
+	check(Progress.stars(state)==320 and not Progress.award(state,"unknown"),"Finite 320-star progression")
 	var app: Control = load("res://core/quest/main.tscn").instantiate()
 	root.add_child(app)
 	app.store.reset();app.store.data.muted=true;app.audio.sync_settings()
@@ -73,12 +77,18 @@ func run() -> void:
 		await touch_button(game.tabs[1]);check(game.subject=="german","Deutsch is reachable directly")
 		await touch_button(game.tabs[2]);check(game.subject=="logic","Logik is reachable directly")
 		await touch_button(game.tabs[0]);check(game.subject=="math","Mathe is reachable directly")
+		for index in range(3,8):
+			game.footer.ensure_control_visible(game.tabs[index])
+			await touch_button(game.tabs[index])
+			check(game.subject==Progress.SUBJECTS[index],"Real touch reaches additional subject "+Progress.SUBJECTS[index])
+		game.footer.ensure_control_visible(game.tabs[0])
+		await touch_button(game.tabs[0])
 		var start: float=game.world.hero_x
 		await touch(game.world.get_global_rect().position+game.world.station_center(0))
 		await create_timer(.85).timeout
 		check(game.world.hero_x>start+40 and is_instance_valid(game.task_panel),"Touching station walks character and opens actual task")
 		var panel: Control=game.task_panel
-		check(panel.heading.get_rect().end.y<panel.picture.position.y,"Instruction does not cover task picture")
+		check(panel.heading.get_rect().end.y<panel.picture.position.y,"Instruction does not cover task picture: %s %s %s" % [str(viewport),str(panel.heading.get_rect()),str(panel.picture.position)])
 		for b in panel.choices:
 			check(b.size.x>=48 and b.size.y>=48,"Answer hit areas at least 48 units")
 			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"Answers fit viewport")
@@ -99,15 +109,56 @@ func run() -> void:
 	for subject in Progress.SUBJECTS:
 		game_subject(app,subject)
 		var game: Control=app.game_view
-		for index in range(8):
+		for index in range(Progress.tasks(subject).size()):
 			game.open_task(index)
 			await process_frame
 			var panel: Control=game.task_panel
 			panel.help()
 			check(panel.picture.hint,"Visual hint exists for every task")
-			panel.answer(expected[panel.task.id])
+			panel.answer(panel.task.answer)
 			check(panel.complete,"Every authored task is completable in presenter")
 			game.close_task()
+	# All four route pages expose ten tasks, without stale movement on page changes.
+	for subject in Progress.SUBJECTS:
+		app.game_view.switch_subject(subject)
+		for page in range(4):
+			app.game_view.world.set_page(page)
+			var world: Control=app.game_view.world
+			check(world.first_station()==page*10 and world.last_station()==page*10+9,"Every route page has ten reachable stations")
+			world.request_station(page*10+9)
+			check(world.pending==page*10+9,"Last task on every page is reachable")
+			world.set_page(0)
+			check(world.pending==-1 and world.target_x==100,"Page change cancels pending arrival")
+	for locale in ["de","en","ru"]:
+		app.store.data.locale=locale;app.save();app.hub()
+		var saved_locale:=Store.new();saved_locale.load_save()
+		check(saved_locale.data.locale==locale,"Language persists locally")
+		app.store.data.muted=false;app.audio.sync_settings()
+		check(app.game_view.title.text==app.t(app.game_view.subject),"Subject caption uses selected language")
+		check(app.narration.play_clip("quest/german_sun"),"Localized German instruction loads")
+		check(app.narration.queue.size()==(0 if locale=="de" else 1),"German learning targets retain native German pronunciation")
+		app.narration.cancel()
+		check(app.narration.queue.is_empty() and not app.audio.music.ducked,"Cancellation clears multilingual queue and ducking")
+		app.game_view.switch_subject("geography");app.game_view.open_task(39)
+		check(app.game_view.task_panel.heading.text==Progress.tasks("geography")[39].texts[locale].prompt,"Science task uses translated question")
+		app.game_view.close_task()
+	# Inspect every localized question at the smallest supported portrait size.
+	root.content_scale_size=Vector2i.ZERO;root.size=Vector2i(320,568)
+	app.simulated_dpi=0;app.update_mobile()
+	for locale in ["de","en","ru"]:
+		app.store.data.locale=locale;app.store.data.text_scale=1.15;app.hub()
+		for subject in Progress.SUBJECTS:
+			app.game_view.switch_subject(subject)
+			for index in range(40):
+				app.game_view.open_task(index)
+				await process_frame
+				var panel: Control=app.game_view.task_panel
+				check(panel.heading.get_line_count()<=panel.heading.max_lines_visible,"Full localized instruction fits: "+locale+"/"+panel.task.id)
+				check(panel.heading.get_rect().end.y<panel.picture.position.y and panel.picture.get_rect().end.y<panel.choices[0].position.y if panel.task.kind!="compare" else true,"No heading/picture/answer overlap: "+locale+"/"+panel.task.id)
+				app.game_view.close_task()
+	app.store.data.text_scale=1.0
+	app.store.data.locale="de"
+	check(Store.clean({"locale":"xx"}).locale=="de","Unknown locale falls back to German")
 	app.store.data.muted=false;app.audio.sync_settings()
 	app.musicbox()
 	var box: Control=app.body.get_child(0)

@@ -78,9 +78,9 @@ def main():
             else:shutil.copy2(src,dest)
         if a.preview:
             preset=app/'export_presets.cfg'
-            preset.write_text(preset.read_text().replace('package/unique_name="org.example.kinderwelt"','package/unique_name="org.example.kinderwelt.preview"').replace('package/name="Kinderwelt"','package/name="Kinderwelt 0.5 Test"'))
+            preset.write_text(preset.read_text().replace('package/unique_name="org.example.kinderwelt"','package/unique_name="org.example.kinderwelt.preview"').replace('package/name="Kinderwelt"','package/name="Kinderwelt 0.6 Test"'))
             project=app/'project.godot'
-            project.write_text(project.read_text().replace('config/name="Kinderwelt"','config/name="Kinderwelt 0.5 Test"'))
+            project.write_text(project.read_text().replace('config/name="Kinderwelt"','config/name="Kinderwelt 0.6 Test"'))
         for file in sorted(app.rglob('*')):
             if file.is_file():source.update(str(file.relative_to(app)).encode()+b'\0'+file.read_bytes())
         env=os.environ.copy()
