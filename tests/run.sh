@@ -17,7 +17,11 @@ checked() {
 checked --headless --path . --editor --import --quit
 checked --headless --path . -s tests/quest.gd
 checked --headless --path . -s tests/boot.gd
+mkdir -p qa-results
+export KINDERWELT_SPEECH_REPORT=${KINDERWELT_SPEECH_REPORT:-"$PROJECT/qa-results/speech-playback.json"}
+export KINDERWELT_SEQUENCE_REPORT=${KINDERWELT_SEQUENCE_REPORT:-"$PROJECT/qa-results/speech-sequences.json"}
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_playback.gd
+checked --headless --audio-driver Dummy --path . -s tests/qa/speech_sequences.gd
 # Verify a shipping-files-only project with an entirely empty import cache.
 mkdir "$STATE/fresh"
 cp -R core games assets project.godot export_presets.cfg "$STATE/fresh/"

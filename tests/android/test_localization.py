@@ -33,3 +33,15 @@ class LocalizationTests(unittest.TestCase):
         self.assertEqual((ROOT/'docs/localization-review.md').read_text(),review.markdown())
         for c in json.loads((ROOT/'scripts/content/localization-changes.json').read_text())['changes']:
             self.assertEqual(self.tasks[c['id']]['texts'][c['locale']][c['field']],c['after'])
+
+    def test_spoken_choices_are_connected_and_keep_every_option(self):
+        voice=load('voice_lists','scripts/generate-quest-voice.py')
+        languages=json.loads((ROOT/'games/quest/languages.json').read_text())
+        for locale,connector in [('en',' or ')]:
+            texts=voice.narration_texts(locale)
+            for t in self.tasks.values():
+                if t['kind']!='discovery':continue
+                clause=texts[t['id']][len(t['texts'][locale]['prompt']):]
+                self.assertIn(connector,clause)
+                self.assertEqual(clause.count('.'),1)
+                for choice in t['options']:self.assertIn(languages['objects'][choice][locale],clause)

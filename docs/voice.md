@@ -38,3 +38,7 @@ GODOT=/pfad/Godot bash tests/run.sh
 ```
 
 Entwicklungswerkzeuge: Piper 1.4.2, ONNX Runtime 1.31.0, ONNX 1.23.2, NumPy 2.5.4, FFmpeg. Generierung lädt keine Modelle selbst nach. Das ASR-Screening ist optional und offline; die reguläre Suite benötigt keine Modelle.
+
+## Ergänzung 0.7.3
+
+Englische Auswahlansagen sind jetzt zusammenhängend. Aktuelle feste ASR-Stichprobe: DE 4,189 %, EN 1,987 %, RU 7,464 %. Deutsch/Russisch bleiben unverändert; der russische Änderungsversuch wurde verworfen. Neue Vorbis-Ergebnisse bekommen eine nach Decodierung geprüfte Pegelreserve. Insgesamt 96 tatsächliche Audiolaufprüfungen sichern vollständige mehrsprachige Folgen. [Änderungen, Messgrenzen und Offline-Hörpaket](experience-polish-v073.md).

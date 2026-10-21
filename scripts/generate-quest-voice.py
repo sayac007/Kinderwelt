@@ -4,6 +4,7 @@
 Development only: piper-tts1.4.2, onnxruntime, FFmpeg. Supply a licensed local
 model; no download or speech engine in the Android application.
 """
+import array,math
 import argparse,hashlib,json,subprocess,tempfile,wave,shutil,unicodedata,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -96,6 +97,7 @@ def narration_texts(locale):
             texts['area_'+subject]='Hier entdecken wir die '+languages['ui'][subject][locale]+'.'
     elif locale=='en':
         texts['area_math']='Mathematics.'
+        texts['area_logic']='This is logic.'
         texts['area_geography']="Let's explore geography."
     else:
         for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
@@ -108,6 +110,7 @@ def narration_texts(locale):
         if task['kind']=='discovery' or (locale=='de' and task['subject']=='german' and task['kind']=='rhyme'):
             names=[languages['objects'][o][locale] for o in task['options']]
             if locale=='de':prompt+=' Zur Auswahl stehen '+', '.join(names[:-1])+' und '+names[-1]+'.'
+            elif locale=='en':prompt+=' Choose from '+', '.join(names[:-1])+' or '+names[-1]+'.'
             else:prompt+=' '+languages['ui']['choices'][locale]+' '+'. '.join(names)+'.'
         hint=values['tip']
         if locale!='de' and task['subject']=='german':
@@ -136,6 +139,31 @@ def normalized_phonemes(phonemes,id_map):
     unknown=set(result)-set(id_map)
     if unknown:raise ValueError('Unsupported speech phonemes, refusing incomplete pronunciation: '+repr(sorted(unknown)))
     return result
+
+def decoded_peak(path):
+    raw=subprocess.check_output(['ffmpeg','-nostdin','-v','error','-i',str(path),'-ac','1','-ar','22050','-f','f32le','-'])
+    pcm=array.array('f');pcm.frombytes(raw)
+    if not pcm or not all(math.isfinite(v) for v in pcm):raise ValueError('Empty or non-finite encoded speech')
+    return max(abs(v) for v in pcm)
+
+def valid_cached_audio(path,expected_hash):
+    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=expected_hash:return False
+    try:return .005<decoded_peak(path)<=.999
+    except (subprocess.CalledProcessError,ValueError):return False
+
+
+def encode_speech(wav,output,ceiling=.95):
+    """Measure Vorbis overshoot; attenuate from the original WAV, never trim."""
+    gain=1.0
+    for attempt in range(4):
+        subprocess.run(['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-y','-i',str(wav),'-af',f'volume={gain:.10f}','-ac','1','-ar','22050','-c:a','libvorbis','-q:a','4',str(output)],check=True)
+        peak=decoded_peak(output)
+        if .005<peak<=ceiling:
+            return {'policy':'decoded-vorbis-peak-1','uniform_gain':gain,'decoded_peak':peak,'ceiling':ceiling,'encodes':attempt+1}
+        if peak<=.005:raise ValueError('Speech too quiet after encoding')
+        gain*=ceiling/peak*.98
+    raise ValueError('Encoded speech still exceeds safe peak after four attempts')
+
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -172,7 +200,7 @@ def main():
             applied=clip_profile(args.locale,id,text)
             cache_key=(text,json.dumps(applied,sort_keys=True))
             if cache_key in done:row=dict(done[cache_key])
-            elif text in old and old[text].get('generation_profile',old_profile)==applied and (dest/old[text]['file']).exists() and hashlib.sha256((dest/old[text]['file']).read_bytes()).hexdigest()==old[text]['sha256']:
+            elif text in old and old[text].get('generation_profile',old_profile)==applied and valid_cached_audio(dest/old[text]['file'],old[text]['sha256']):
                 row=dict(old[text]);done[cache_key]=row
             else:
                 filename='voice_'+args.locale+'_'+hashlib.sha256((text+manifest['model_sha256']+json.dumps(applied,sort_keys=True)).encode()).hexdigest()[:20]+'.ogg'
@@ -193,9 +221,10 @@ def main():
                         if n<len(chunks)-1:out.writeframes(b'\0'*(round(rate*profile['sentence_pause_seconds'])*2))
                     out.writeframes(b'\0'*(round(rate*profile['tail_seconds'])*2))
                 output=dest/filename
-                subprocess.run(['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-y','-i',str(wav),'-ac','1','-ar','22050','-c:a','libvorbis','-q:a','4',str(output)],check=True)
+                encoding=encode_speech(wav,output)
                 with wave.open(str(wav)) as out:seconds=out.getnframes()/out.getframerate()
                 row={'text':text,'file':filename,'seconds':seconds,'bytes':output.stat().st_size,'sha256':hashlib.sha256(output.read_bytes()).hexdigest()}
+                row['encoding']=encoding
                 row['phonetic_units']=units
                 row['generation_profile']=applied
                 done[cache_key]=dict(row)

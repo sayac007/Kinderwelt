@@ -11,11 +11,11 @@ class ReleaseConfigTests(unittest.TestCase):
                 app=Path(d)
                 for n in ['export_presets.cfg','project.godot']:(app/n).write_bytes((ROOT/n).read_bytes())
                 chosen=identity.configure(app,'de.kinderwelt.test',True,variant)
-                self.assertEqual(chosen,'de.kinderwelt.test.preview.'+('family' if variant=='family' else 'neutral')+'.v072')
+                self.assertEqual(chosen,'de.kinderwelt.test.preview.'+('family' if variant=='family' else 'neutral')+'.v073')
                 text=(app/'export_presets.cfg').read_text()
                 self.assertNotIn(identity.TOKEN,text)
                 self.assertEqual(text.count('package/unique_name="'+chosen+'"'),2)
-                self.assertIn('version/code=9',text)
+                self.assertIn('version/code=10',text)
     def test_invalid_package_ids_rejected_before_export(self):
         for value in ['','single','com..app','com.App','com.1app','com.public.app','com.test-app','com.app;echo','com.app\nother','a.'+'a'*180]:
             with self.subTest(value=value),self.assertRaises(ValueError):identity.validate_package(value)

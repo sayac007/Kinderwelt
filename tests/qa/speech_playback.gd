@@ -14,13 +14,17 @@ func drain() -> Dictionary:
  var peak:=0.0
  for frame in samples:peak=maxf(peak,maxf(absf(frame.x),absf(frame.y)))
  return {"frames":samples.size(),"peak":peak}
-func completed(expected_seconds: float,ids: Array[String]) -> void:
+func completed(expected_seconds: float,ids: Array[String],expected_paths: Array[String]=[]) -> void:
  capture.clear_buffer()
  var frames:=0;var peak:=0.0
  var seen: Array[String]=[]
+ var paths: Array[String]=[]
  var start:=Time.get_ticks_msec()
- while app.narration.playing or not app.narration.queue.is_empty() or not app.narration.pending_feedback.is_empty():
+ while app.narration.playing or not app.narration.queue.is_empty() or not app.narration.pending_feedback.is_empty() or not app.narration.clip.is_empty():
   if not app.narration.clip.is_empty() and app.narration.clip not in seen:seen.append(app.narration.clip)
+  if app.narration.stream!=null:
+   var path: String=app.narration.stream.resource_path
+   if paths.is_empty() or paths[-1]!=path:paths.append(path)
   await process_frame
   var block:=drain();frames+=block.frames;peak=maxf(peak,block.peak)
   if Time.get_ticks_msec()-start>int((expected_seconds+3)*1000):
@@ -31,7 +35,8 @@ func completed(expected_seconds: float,ids: Array[String]) -> void:
  check(float(frames)/AudioServer.get_mix_rate()>=expected_seconds-.35,"Audio bus contains the complete recording sequence")
  check(peak>.01,"Audio bus contains audible speech, not just silence")
  for id in ids:check(id in seen,"Actual playback reaches "+id)
- results.append({"locale":app.store.data.locale,"expected_seconds":expected_seconds,"elapsed_seconds":elapsed,"captured_seconds":float(frames)/AudioServer.get_mix_rate(),"peak":peak,"clips":seen})
+ if not expected_paths.is_empty():check(paths==expected_paths,"Actual recording order matches localized instruction, German target and feedback")
+ results.append({"stream_paths":paths,"locale":app.store.data.locale,"expected_seconds":expected_seconds,"elapsed_seconds":elapsed,"captured_seconds":float(frames)/AudioServer.get_mix_rate(),"peak":peak,"clips":seen})
 func length(id: String) -> float:
  var stream: AudioStream=load(app.narration.resolve(id,app.store.data.locale))
  return stream.get_length()

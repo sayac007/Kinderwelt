@@ -6,7 +6,7 @@ Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine 
 
 Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
 
-**0.7.2:** Private und öffentliche Figurenvarianten, überarbeitete Antwortalternativen, vollständigere Sprachfassungen und kleinere Grafikressourcen. [Änderungen und Prüfungen](docs/phases.md), [Stimme und Hörprüfung](docs/voice.md), [Android bauen](docs/android.md).
+**0.7.3:** Zusammenhängende englische Auswahlansagen, zusätzliche Audiobusprüfungen für mehrsprachige Folgen und geprüfte Android-Builds aus öffentlichen Quellschnappschüssen. [Änderungen](docs/experience-polish-v073.md), [Prüfungen und APKs](docs/test-report.md).
 
 ## Entwickeln und prüfen
 

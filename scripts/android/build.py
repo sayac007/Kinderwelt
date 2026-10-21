@@ -18,6 +18,21 @@ FAILURE = re.compile(r"^ERROR:|SCRIPT ERROR:|BUILD FAILED", re.M)
 CAUSE = re.compile(r"^ERROR:|SCRIPT ERROR:|FAILURE:|\* What went wrong:|Caused by:|Execution failed for task|^.*Exception:")
 
 
+def git_provenance(root):
+    """Do not borrow a parent repository's clean status for an ignored capsule."""
+    def git(*args):
+        try:
+            return subprocess.run(['git','-C',str(root),*args],text=True,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=False)
+        except FileNotFoundError:return None
+    top=git('rev-parse','--show-toplevel')
+    if top is None or top.returncode or Path(top.stdout.strip()).resolve()!=root.resolve():
+        return {'source_tracking':'unversioned-snapshot','source_commit':None,'source_dirty':None}
+    commit=git('rev-parse','HEAD');status=git('status','--porcelain')
+    if commit.returncode or status.returncode:
+        return {'source_tracking':'git-unresolved','source_commit':None,'source_dirty':None}
+    return {'source_tracking':'git-worktree','source_commit':commit.stdout.strip(),'source_dirty':bool(status.stdout.strip())}
+
+
 def report_failure(log, reason):
     """Expose bounded, useful Gradle/Godot context; retain the complete artifact."""
     lines = ANSI.sub('', log.read_text(errors='replace')).splitlines()
@@ -77,6 +92,7 @@ def main():
     version=subprocess.check_output([str(java/'bin/java'),'-version'],stderr=subprocess.STDOUT,text=True)
     if 'Temurin-17.0.16+8' not in version:raise ValueError('Wrong JDK')
     source=hashlib.sha256()
+    tracking=git_provenance(ROOT)
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
         temp=Path(directory);app=temp/'app'
         variants.snapshot(app,a.variant)
@@ -122,7 +138,7 @@ def main():
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
         run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-        evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
         (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
         subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)],check=True)
         subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)

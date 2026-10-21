@@ -121,7 +121,7 @@ func languages() -> void:
 			store.data.locale=locale;save();hub())
 func settings() -> void:
 	clear();button(t("back"),hub)
-	label("Kinderwelt 0.7.2")
+	label("Kinderwelt 0.7.3")
 	button(t("language"),languages)
 	button(t("scenery"),sceneries)
 	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())
