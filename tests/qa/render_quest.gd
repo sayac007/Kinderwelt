@@ -61,14 +61,21 @@ func run() -> void:
 		await snap(profile.id+"-restored-live-task")
 		game.close_task()
 		app.simulated_dpi=profile.dpi;app.update_mobile()
-		for scene in ["mountains","home","castle"]:
-			app.store.data.scenery=scene
+		for scene in preload("res://core/quest/scenery.gd").IDS:
+			app.store.data.subject_sceneries[game.subject]=scene
+			game.world.set_page(0)
 			game.world.clock=0.2
 			await snap(profile.id+"-scene-"+scene)
-			if scene=="castle":
+			if scene in ["castle","tree","seabed","city","moon"]:
 				game.world.clock=4.2
-				await snap(profile.id+"-scene-castle-floating")
-		app.store.data.scenery="auto"
+				game.world.hero.animation=game.world.motion_mode(true)
+				game.world.target_x=game.world.hero_x+80
+				await snap(profile.id+"-scene-"+scene+"-floating")
+			if scene=="tree":
+				game.world.hero_x=game.world.arrival_distance(0);game.world.target_x=game.world.hero_x
+				game.world.camera_x=game.world.follow_camera();game.world._process(0)
+				await snap(profile.id+"-scene-tree-branch")
+		app.store.data.subject_sceneries[game.subject]="auto"
 		game.world.set_page(3)
 		await snap(profile.id+"-last-trail")
 		var previous_progress: Dictionary=app.store.data.quest.duplicate(true)
@@ -91,6 +98,8 @@ func run() -> void:
 		await snap(profile.id+"-musicbox")
 		app.settings()
 		await snap(profile.id+"-settings")
+		app.sceneries()
+		await snap(profile.id+"-scenery-picker")
 		app.narration.cancel();app.audio.music.shutdown();app.audio.stop()
 		await create_timer(.15).timeout
 		app.free()

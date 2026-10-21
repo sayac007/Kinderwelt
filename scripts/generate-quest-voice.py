@@ -15,6 +15,23 @@ GLOBALS={
  'en':{'choose':'Who will you be today? Choose a character. Then tap Start.','walk':'Tap a sign. Your character walks there. Tap any of the eight subjects along the bottom.','success':'That is right! You did it.','again':'Take another look. You can try again.'},
  'ru':{'choose':'Кем ты будешь сегодня? Выбери персонажа. Затем нажми «Начать».','walk':'Нажми на табличку. Персонаж подойдёт к ней. Нажми на любой из восьми разделов внизу.','success':'Правильно! У тебя получилось.','again':'Посмотри ещё раз. Можно попробовать снова.'}}
 
+WORLD_HINTS={
+ 'de':{
+  'tree':'Hier sind Nüsse mit Aufgaben. Suche eine Nuss aus. Wir klettern nach oben. Ziehe nach unten, um höher zu schauen.',
+  'seabed':'Hier sind die Schätze. Suche ein Bild auf einer Truhe. Wir schwimmen zur Aufgabe.',
+  'city':'Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.',
+  'moon':'Wir sind auf dem Mond. Tippe auf ein Bild. Wir hüpfen zur Aufgabe.'},
+ 'en':{
+  'tree':'Tap a nut beside a squirrel. Your character climbs to the task. Drag down to look higher up the tree.',
+  'seabed':'Look for treasure chests. Tap a picture on a chest. Your character swims to the task.',
+  'city':'Tap a task picture at the bus stop or under the bridge. Your character drives there in a car.',
+  'moon':'Discover tasks on the moon. Tap a picture on a moon station. Your character hops there.'},
+ 'ru':{
+  'tree':'Это дерево. Найди орех у белки. Нажми на картинку. Мы поднимемся к заданию.',
+  'seabed':'Мы под водой. Ищи сундук с картинкой. Нажми на неё. Мы поплывём к заданию.',
+  'city':'Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.',
+  'moon':'Мы на Луне. Нажми на картинку на станции. Мы прыгнем к заданию.'}}
+
 PRAISE={
 'de':['Wunderbar! Das hast du gut gemacht.','Sehr klug entschieden!','Super cool, das gefällt mir!','Toll gelöst! Weiter so!','Du hast genau hingeschaut. Klasse!','Prima! Du hast es herausgefunden.'],
 'en':['Wonderful! You did that really well.','That was a clever choice!','Super cool! I like that!','Great work! Keep going!','You looked carefully. Well done!','Brilliant! You worked it out.'],
@@ -85,6 +102,7 @@ def narration_texts(locale):
     languages=json.loads((ROOT/'games/quest/languages.json').read_text())
     tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
     texts=dict(GLOBALS[locale])
+    texts.update({"world_"+id:text for id,text in WORLD_HINTS[locale].items()})
     texts.update({"praise_"+str(i):text for i,text in enumerate(PRAISE[locale])})
     for look in ['classic','hero','alien','astronaut','scientist']:
         texts['look_'+look]=languages['ui']['look_'+look][locale]+'.'

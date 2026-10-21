@@ -119,6 +119,432 @@
       "id": "again"
     },
     {
+      "text": "Это дерево. Найди орех у белки. Нажми на картинку. Мы поднимемся к заданию.",
+      "file": "voice_ru_e398b818efed23bde0be.ogg",
+      "seconds": 7.75546485260771,
+      "bytes": 42772,
+      "sha256": "d510663e1c8a417a58bc9507772de44ca6b903d5538b729f7ee624465b482ce2",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6877769231796265,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.30771,
+          "end": 0.516689,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "dʲˈerʲivʌ.",
+          "start": 0.574739,
+          "end": 1.329388,
+          "seconds": 0.754649
+        },
+        {
+          "phonemes": "najdʲˈɪ",
+          "start": 1.737098,
+          "end": 2.108617,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ʌrʲˈex",
+          "start": 2.166667,
+          "end": 2.456916,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "u",
+          "start": 2.526576,
+          "end": 2.573016,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "bʲˈeɭkʲɪ.",
+          "start": 2.619456,
+          "end": 3.374104,
+          "seconds": 0.754649
+        },
+        {
+          "phonemes": "naʒmʲˈɪ",
+          "start": 3.828254,
+          "end": 4.199773,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "nə",
+          "start": 4.246213,
+          "end": 4.304263,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "kartʲˈinku.",
+          "start": 4.373923,
+          "end": 5.267891,
+          "seconds": 0.893968
+        },
+        {
+          "phonemes": "mˈy",
+          "start": 5.663991,
+          "end": 5.780091,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "pʌdnʲˈimʲimsʲʌ",
+          "start": 5.849751,
+          "end": 6.488299,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "k",
+          "start": 6.511519,
+          "end": 6.546349,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "zadˈɑnʲiju.",
+          "start": 6.581179,
+          "end": 7.370658,
+          "seconds": 0.789478
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_tree"
+    },
+    {
+      "text": "Мы под водой. Ищи сундук с картинкой. Нажми на неё. Мы поплывём к заданию.",
+      "file": "voice_ru_ce760a22f52b0b33a6f4.ogg",
+      "seconds": 7.697414965986394,
+      "bytes": 41924,
+      "sha256": "b22c519ab15a0b442de2d57f304297a4e7d923f3b2b54c259e29fc62242bbf7c",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6878130435943604,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "mˈy",
+          "start": 0.22644,
+          "end": 0.35415,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "pˈot",
+          "start": 0.42381,
+          "end": 0.644399,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "vʌdˈoj.",
+          "start": 0.679229,
+          "end": 1.294558,
+          "seconds": 0.615329
+        },
+        {
+          "phonemes": "ɪɕˈɪ",
+          "start": 1.853197,
+          "end": 2.097007,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "sundˈuk",
+          "start": 2.201497,
+          "end": 2.631066,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "s",
+          "start": 2.689116,
+          "end": 2.735556,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kartʲˈinkʌj.",
+          "start": 2.758776,
+          "end": 3.594694,
+          "seconds": 0.835918
+        },
+        {
+          "phonemes": "naʒmʲˈɪ",
+          "start": 4.037234,
+          "end": 4.443583,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "nə",
+          "start": 4.478413,
+          "end": 4.582902,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "nʲijˈɵ.",
+          "start": 4.664172,
+          "end": 5.314331,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "mˈy",
+          "start": 5.687211,
+          "end": 5.814921,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "pʌpɭyvʲˈɵm",
+          "start": 5.872971,
+          "end": 6.418639,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "k",
+          "start": 6.453469,
+          "end": 6.523129,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "zadˈɑnʲiju.",
+          "start": 6.557959,
+          "end": 7.300998,
+          "seconds": 0.743039
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_seabed"
+    },
+    {
+      "text": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+      "file": "voice_ru_25c3ec5058c423e6f994.ogg",
+      "seconds": 7.080725623582766,
+      "bytes": 40115,
+      "sha256": "5192584f251f4ec0d17a05c72edae2f4fb3c1019f67483472df3f19d28b8826e",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6844906806945801,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "mˈy",
+          "start": 0.23805,
+          "end": 0.37737,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "jˈedʲim",
+          "start": 0.42381,
+          "end": 0.690839,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 0.737279,
+          "end": 0.876599,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "ɡˈorʌdu.",
+          "start": 0.946259,
+          "end": 1.654467,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "ɪɕˈɪ",
+          "start": 2.097007,
+          "end": 2.375646,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "kartʲˈinkʲɪ",
+          "start": 2.410476,
+          "end": 3.025805,
+          "seconds": 0.615329
+        },
+        {
+          "phonemes": "nə",
+          "start": 3.083855,
+          "end": 3.176735,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ʌstanˈofkʲi",
+          "start": 3.223175,
+          "end": 3.873333,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 3.908163,
+          "end": 3.931383,
+          "seconds": 0.02322
+        },
+        {
+          "phonemes": "pˈot",
+          "start": 3.989433,
+          "end": 4.186803,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "mʌstˈom.",
+          "start": 4.221633,
+          "end": 4.871791,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "naʒmʲˈɪ",
+          "start": 5.279501,
+          "end": 5.65102,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "nə",
+          "start": 5.68585,
+          "end": 5.75551,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "kartʲˈinku.",
+          "start": 5.81356,
+          "end": 6.684308,
+          "seconds": 0.870748
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_city"
+    },
+    {
+      "text": "Мы на Луне. Нажми на картинку на станции. Мы прыгнем к заданию.",
+      "file": "voice_ru_9132ddd624febb2d4225.ogg",
+      "seconds": 6.059047619047619,
+      "bytes": 34562,
+      "sha256": "82f56c2142b6ba05d41e9237a06028d9637e361dbae6df5b75365bd3f965a34e",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6955100297927856,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "mˈy",
+          "start": 0.27288,
+          "end": 0.43542,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "nə",
+          "start": 0.470249,
+          "end": 0.551519,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ɭunʲˈe.",
+          "start": 0.621179,
+          "end": 1.143628,
+          "seconds": 0.522449
+        },
+        {
+          "phonemes": "naʒmʲˈɪ",
+          "start": 1.609388,
+          "end": 1.992517,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "nə",
+          "start": 2.027347,
+          "end": 2.097007,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "kartʲˈinku",
+          "start": 2.143447,
+          "end": 2.712336,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nə",
+          "start": 2.770385,
+          "end": 2.874875,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "stˈɑntsyɪ.",
+          "start": 2.921315,
+          "end": 3.803673,
+          "seconds": 0.882358
+        },
+        {
+          "phonemes": "mˈy",
+          "start": 4.211383,
+          "end": 4.350703,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "prˈyɡnʲim",
+          "start": 4.408753,
+          "end": 4.826712,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "k",
+          "start": 4.849932,
+          "end": 4.896372,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "zadˈɑnʲiju.",
+          "start": 4.931202,
+          "end": 5.67424,
+          "seconds": 0.743039
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_moon"
+    },
+    {
       "text": "Замечательно! У тебя отлично получилось.",
       "file": "voice_ru_880f0e5adc2c36cbb6b8.ogg",
       "seconds": 3.8169614512471655,

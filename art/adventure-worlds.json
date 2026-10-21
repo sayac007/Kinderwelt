@@ -1,0 +1,18 @@
+{
+  "asset": "assets/quest/adventure-worlds.png",
+  "origin": "Original AI-generated background atlas for Kinderwelt; no third-party reference images",
+  "layout": [
+    [
+      "tree",
+      "seabed"
+    ],
+    [
+      "city",
+      "moon"
+    ]
+  ],
+  "runtime": "Single shared texture, cropped regions; fish and squirrel textures reused; car, chests, branches and task stations drawn in Godot",
+  "animation": "No video or per-frame image sequences; reduced-motion setting supported",
+  "sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+  "source_budget_bytes": 4194304
+}

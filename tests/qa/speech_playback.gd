@@ -43,6 +43,7 @@ func length(id: String) -> float:
 func run() -> void:
  app=load("res://core/quest/main.tscn").instantiate();root.add_child(app)
  app.store.reset();app.store.data.muted=false;app.store.data.music_volume=0;app.store.data.effects_volume=0;app.store.data.voice_volume=1;app.store.data.quest.hero_chosen=true
+ app.store.data.subject_sceneries.physics="mountains"
  app.audio.sync_settings();app.narration.cancel()
  AudioServer.add_bus()
  var index:=AudioServer.bus_count-1

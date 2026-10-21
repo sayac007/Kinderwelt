@@ -327,6 +327,494 @@
       "id": "again"
     },
     {
+      "text": "Hier sind Nüsse mit Aufgaben. Suche eine Nuss aus. Wir klettern nach oben. Ziehe nach unten, um höher zu schauen.",
+      "file": "voice_de_3d329e9a9767efaf7d2a.ogg",
+      "seconds": 9.636281179138322,
+      "bytes": 52429,
+      "sha256": "ce1c45a6ae8fa9ae2f233fc5d6a841f5bbbe27c34de1cf5e6449af98a510db62",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6943477392196655,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "hˈiːɾ",
+          "start": 0.30771,
+          "end": 0.621179,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "zɪnt",
+          "start": 0.690839,
+          "end": 0.899819,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "nˈʏsə",
+          "start": 0.957868,
+          "end": 1.248118,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "mɪt",
+          "start": 1.282948,
+          "end": 1.399048,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "ˈaʊfɡˌɑːbən.",
+          "start": 1.468707,
+          "end": 2.281406,
+          "seconds": 0.812698
+        },
+        {
+          "phonemes": "zˈuːxə",
+          "start": 2.840045,
+          "end": 3.281224,
+          "seconds": 0.441179
+        },
+        {
+          "phonemes": "ˌaɪnə",
+          "start": 3.316054,
+          "end": 3.490204,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "nˈʊs",
+          "start": 3.513424,
+          "end": 3.664354,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "ˈaʊs.",
+          "start": 3.745624,
+          "end": 4.279683,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "viːɾ",
+          "start": 4.699002,
+          "end": 4.873152,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "klˈɛtɜn",
+          "start": 4.942812,
+          "end": 5.314331,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "nɑːx",
+          "start": 5.360771,
+          "end": 5.546531,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ˈoːbən.",
+          "start": 5.60458,
+          "end": 6.05737,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "tsˈiːə",
+          "start": 6.557959,
+          "end": 6.929478,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "nɑːx",
+          "start": 6.987528,
+          "end": 7.219728,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ˈʊntən,",
+          "start": 7.266168,
+          "end": 7.904717,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "ʊm",
+          "start": 7.974376,
+          "end": 8.113696,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈøːɜ",
+          "start": 8.148526,
+          "end": 8.427166,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tsuː",
+          "start": 8.461995,
+          "end": 8.670975,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ʃˈaʊən.",
+          "start": 8.740635,
+          "end": 9.228254,
+          "seconds": 0.487619
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
+      "id": "world_tree"
+    },
+    {
+      "text": "Hier sind die Schätze. Suche ein Bild auf einer Truhe. Wir schwimmen zur Aufgabe.",
+      "file": "voice_de_81136076eb2c4db836da.ogg",
+      "seconds": 6.221587301587301,
+      "bytes": 34833,
+      "sha256": "3ded6a1e691510b0457a9daaa5284dc7dc4a7b248da6fb5f254b24168840ef12",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6746110916137695,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "hˈiːɾ",
+          "start": 0.27288,
+          "end": 0.551519,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "zɪnt",
+          "start": 0.609569,
+          "end": 0.748889,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "diː",
+          "start": 0.818549,
+          "end": 0.888209,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ʃˈɛtsə.",
+          "start": 0.946259,
+          "end": 1.503537,
+          "seconds": 0.557279
+        },
+        {
+          "phonemes": "zˈuːxə",
+          "start": 2.073787,
+          "end": 2.573016,
+          "seconds": 0.499229
+        },
+        {
+          "phonemes": "aɪn",
+          "start": 2.619456,
+          "end": 2.735556,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "bˈɪlt",
+          "start": 2.781995,
+          "end": 2.990975,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "aʊf",
+          "start": 3.037415,
+          "end": 3.107075,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ˌaɪnɜ",
+          "start": 3.130295,
+          "end": 3.339274,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "trˈuːə.",
+          "start": 3.420544,
+          "end": 3.908163,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "viːɾ",
+          "start": 4.304263,
+          "end": 4.501633,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʃvˈɪmən",
+          "start": 4.571293,
+          "end": 4.896372,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tsuːɾ",
+          "start": 4.919592,
+          "end": 5.047302,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "ˈaʊfɡˌɑːbə.",
+          "start": 5.082132,
+          "end": 5.82517,
+          "seconds": 0.743039
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
+      "id": "world_seabed"
+    },
+    {
+      "text": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+      "file": "voice_de_cb9ba255d40dda2b10cf.ogg",
+      "seconds": 6.092517006802721,
+      "bytes": 37011,
+      "sha256": "4a36f87a6715bb54e302486fb2bba6c69a0ae32c4ac640b89310d51bc1252dc7",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6900472640991211,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "viːɾ",
+          "start": 0.23805,
+          "end": 0.40059,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɑːrən",
+          "start": 0.470249,
+          "end": 0.841769,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "dʊɐç",
+          "start": 0.876599,
+          "end": 0.992698,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "diː",
+          "start": 1.015918,
+          "end": 1.085578,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ʃtˈat.",
+          "start": 1.108798,
+          "end": 1.619637,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "zˈuːxə",
+          "start": 2.247937,
+          "end": 2.747166,
+          "seconds": 0.499229
+        },
+        {
+          "phonemes": "aɪn",
+          "start": 2.805215,
+          "end": 2.944535,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈɪlt",
+          "start": 3.014195,
+          "end": 3.304444,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "an",
+          "start": 3.362494,
+          "end": 3.455374,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "dɛɾ",
+          "start": 3.490204,
+          "end": 3.559864,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "hˈaltɛʃtˌɛlə",
+          "start": 3.583084,
+          "end": 4.372562,
+          "seconds": 0.789478
+        },
+        {
+          "phonemes": "ˌoːdɜ",
+          "start": 4.453832,
+          "end": 4.720862,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ˌʊntɜ",
+          "start": 4.778912,
+          "end": 4.976281,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "dɛɾ",
+          "start": 4.999501,
+          "end": 5.092381,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "brˈʏkə.",
+          "start": 5.162041,
+          "end": 5.68449,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
+      "id": "world_city"
+    },
+    {
+      "text": "Wir sind auf dem Mond. Tippe auf ein Bild. Wir hüpfen zur Aufgabe.",
+      "file": "voice_de_ffbdc3fff36b8d2e7401.ogg",
+      "seconds": 5.327619047619048,
+      "bytes": 30125,
+      "sha256": "7e44d7936f96395452924901a5b55ac9ac34d3083b8eb2d9629ddec2f32cf3be",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.695631742477417,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "viːɾ",
+          "start": 0.21483,
+          "end": 0.4122,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "zɪnt",
+          "start": 0.505079,
+          "end": 0.725669,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "aʊf",
+          "start": 0.772109,
+          "end": 0.911429,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "deːm",
+          "start": 0.946259,
+          "end": 1.039138,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "mˈoːnt.",
+          "start": 1.062358,
+          "end": 1.491927,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "tˈɪpə",
+          "start": 1.888027,
+          "end": 2.213107,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "aʊf",
+          "start": 2.271156,
+          "end": 2.422086,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "aɪn",
+          "start": 2.456916,
+          "end": 2.619456,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "bˈɪlt.",
+          "start": 2.654286,
+          "end": 3.107075,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "viːɾ",
+          "start": 3.468345,
+          "end": 3.584444,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "hˈʏpfən",
+          "start": 3.607664,
+          "end": 4.002404,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "tsuːɾ",
+          "start": 4.025624,
+          "end": 4.141723,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "ˈaʊfɡˌɑːbə.",
+          "start": 4.176553,
+          "end": 4.942812,
+          "seconds": 0.766259
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
+      "id": "world_moon"
+    },
+    {
       "text": "Wunderbar! Das hast du gut gemacht.",
       "file": "voice_de_6b8b284be00e6bed4177.ogg",
       "seconds": 3.015873015873016,

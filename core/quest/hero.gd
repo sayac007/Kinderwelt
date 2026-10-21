@@ -65,7 +65,8 @@ func _draw() -> void:
 			var bolt := PackedVector2Array([origin,origin+Vector2(-direction*9,15),origin+Vector2(direction*5,13),origin+Vector2(-direction*6,29)])
 			draw_polyline(bolt,Color(glow,.85),3,true)
 	var bob := sin(clock*2.5)*1.5
-	if animation=="move": bob = -absf(sin(clock*9))*4
+	if animation in ["move","climb"]: bob = -absf(sin(clock*9))*4
+	if animation=="swim": bob=sin(clock*2)*4
 	if animation=="success": bob = -absf(sin(clock*5))*14
 	if reduced_motion: bob = 0
 	var lean := -.08 if animation=="think" else sin(clock*4)*.025
@@ -93,14 +94,14 @@ func _draw() -> void:
 			pet.scale = Vector2(facing,1)
 			pet.modulate = tint
 			pet.material.set_shader_parameter("phase",clock)
-			pet.material.set_shader_parameter("walking",animation=="move" and not reduced_motion)
+			pet.material.set_shader_parameter("walking",animation in ["move","climb","swim","moon"] and not reduced_motion)
 			pet.material.set_shader_parameter("still",reduced_motion)
 			pet.material.set_shader_parameter("sprite_size",pet_size)
 			pet.material.set_shader_parameter("squirrel",person=="squirrel")
 			pet.material.set_shader_parameter("human",person not in ["katze","squirrel"])
 			return
 	draw_set_transform(base,lean,Vector2(facing,1))
-	var swing := sin(clock*9)*.22 if animation=="move" and not reduced_motion else 0.0
+	var swing := sin(clock*9)*.22 if animation in ["move","climb","swim","moon"] and not reduced_motion else 0.0
 	for leg in range(2):
 		var hip := Vector2((-1 if leg==0 else 1)*scale_size.x*.13,0)
 		draw_set_transform(base+Vector2(hip.x*facing,0),lean+swing*(1 if leg==0 else -1),Vector2(facing,1))

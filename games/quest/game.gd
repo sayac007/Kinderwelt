@@ -105,10 +105,12 @@ func switch_subject(id: String) -> void:
 		world.set_page(first/world.PAGE_SIZE)
 		world.hero_x = world.station_x(first)-140
 		world.target_x = world.hero_x
-		world.camera_x = maxf(0,world.hero_x-size.x*.3)
+		world.camera_x = world.follow_camera()
 	world.first_hint = done==0
 	host.audio.set_world(id)
 	host.narration.play_clip("quest/area_"+id,true)
+	if host.store.data.voice_auto and world.scene_id() in ["tree","seabed","city","moon"]:
+		host.narration.speak_feedback("quest/world_"+world.scene_id())
 	update_score()
 	arrange()
 func update_score(animate := false) -> void:
@@ -303,7 +305,7 @@ func finish_hero() -> void:
 	world.hero.costume = host.store.data.looks[host.store.data.hero]
 	world.set_process(true)
 	update_score()
-	host.narration.play_clip("quest/walk",true)
+	host.narration.play_clip("quest/world_"+world.scene_id() if world.scene_id() in ["tree","seabed","city","moon"] else "quest/walk",true)
 func open_menu() -> void:
 	if is_instance_valid(menu): return
 	menu = Panel.new()
@@ -314,12 +316,13 @@ func open_menu() -> void:
 	add_child(menu)
 	var box := VBoxContainer.new()
 	box.set_anchors_and_offsets_preset(PRESET_CENTER)
-	box.offset_left=-130;box.offset_right=130;box.offset_top=-164;box.offset_bottom=164
-	box.add_theme_constant_override("separation",12)
+	box.offset_left=-130;box.offset_right=130;box.offset_top=-159;box.offset_bottom=159
+	box.add_theme_constant_override("separation",6)
 	menu.add_child(box)
-	for entry in [[host.t("return"),func(): remove_child(menu);menu.queue_free();menu=null],[host.t("subjects"),host.subjects],[host.t("musicbox"),host.musicbox],[host.t("settings"),host.settings],[host.t("language"),host.languages]]:
+	for entry in [[host.t("return"),func(): remove_child(menu);menu.queue_free();menu=null],[host.t("subjects"),host.subjects],[host.t("scenery"),host.sceneries],[host.t("musicbox"),host.musicbox],[host.t("settings"),host.settings],[host.t("language"),host.languages]]:
 		var b := button(entry[0],entry[1],box)
-		b.custom_minimum_size = Vector2(240,52)
+		b.custom_minimum_size = Vector2(240,48)
+		b.add_theme_font_size_override("font_size",18)
 func persist() -> void: host.save()
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_PAUSED and host!=null:

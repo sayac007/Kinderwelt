@@ -259,22 +259,22 @@ func run() -> void:
 	for id in preload("res://core/quest/hero.gd").IDS:check(wardrobe_save.data.looks[id]=="scientist","All seven independent wardrobe choices survive disk roundtrip")
 	var invalid_looks:=Store.clean({"scenery":"bad","looks":{"wanja":"fake","george":"hero","intruder":"alien"}})
 	check(invalid_looks.scenery=="auto" and invalid_looks.looks.wanja=="classic" and invalid_looks.looks.george=="hero" and not invalid_looks.looks.has("intruder"),"Invalid scenery and clothing data are whitelisted")
-	app.store.data.scenery="auto";app.game_view.switch_subject("math")
+	app.store.data.subject_sceneries.math="auto";app.game_view.switch_subject("math")
 	for page in range(3):
 		app.game_view.world.set_page(page)
 		check(app.game_view.world.scene_id()==["mountains","home","castle"][page],"Automatic scenery changes between trail pages")
 	for scene in ["mountains","home","castle"]:
-		app.store.data.scenery=scene;app.save()
+		app.store.data.subject_sceneries.math=scene;app.save()
 		check(app.game_view.world.scene_id()==scene,"Manual scenery choice overrides the automatic cycle")
 	var scenery_save:=Store.new();scenery_save.load_save()
-	check(scenery_save.data.scenery=="castle","Manual scenery persists locally")
+	check(scenery_save.data.subject_sceneries.math=="castle","Manual scenery persists locally")
 	app.game_view.world.reduced_motion=false;app.game_view.world.clock=0
 	var ghosts: Array=app.game_view.world.ghost_centers()
 	app.game_view.world.clock=4
 	check(ghosts!=app.game_view.world.ghost_centers(),"Castle ghosts really float with time")
 	app.game_view.world.reduced_motion=true;ghosts=app.game_view.world.ghost_centers();app.game_view.world.clock=8
 	check(ghosts==app.game_view.world.ghost_centers(),"Reduced motion holds ghosts still")
-	app.store.data.scenery="auto"
+	app.store.data.subject_sceneries.math="auto"
 	var praises: Array=[]
 	for n in range(12):praised(app,praises)
 	check(praises.slice(0,6).size()==6 and praises[0]==praises[6] and praises[0]!=praises[1],"Six praise variants rotate without immediate repetition")

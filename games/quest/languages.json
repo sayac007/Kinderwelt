@@ -485,6 +485,31 @@
       "de": "Schloss",
       "en": "Castle",
       "ru": "Замок"
+    },
+    "scenery_per_subject": {
+      "de": "Deine Wahl gilt nur für dieses Fach.",
+      "en": "Your choice applies to this subject.",
+      "ru": "Этот мир только для этого предмета."
+    },
+    "scene_tree": {
+      "de": "Kletterbaum",
+      "en": "Climbing tree",
+      "ru": "Дерево"
+    },
+    "scene_seabed": {
+      "de": "Meeresgrund",
+      "en": "Seabed",
+      "ru": "Морское дно"
+    },
+    "scene_city": {
+      "de": "Autofahrt",
+      "en": "City drive",
+      "ru": "Поездка по городу"
+    },
+    "scene_moon": {
+      "de": "Mond",
+      "en": "Moon",
+      "ru": "Луна"
     }
   },
   "objects": {

@@ -6,6 +6,7 @@ var simulated_dpi := 0.0
 var store = Store.new()
 var audio = preload("res://core/cues.gd").new()
 var narration = preload("res://core/quest/narration.gd").new()
+var scenery_grid: GridContainer
 var body: VBoxContainer
 var scroll_view: ScrollContainer
 var game_view: Control
@@ -57,6 +58,7 @@ func update_mobile() -> void:
 		scroll_view.offset_left+=inset.x;scroll_view.offset_top+=inset.y
 		scroll_view.offset_right-=inset.z;scroll_view.offset_bottom-=inset.w
 	if is_instance_valid(game_view): game_view.arrange.call_deferred()
+	if is_instance_valid(scenery_grid): scenery_grid.columns=2 if scroll_view.size.x<640 else 4
 	updating_layout=false
 func praise_id() -> String:
 	var result := "praise_"+str(praise_cursor)
@@ -110,9 +112,32 @@ func subjects() -> void:
 	for subject in preload("res://games/quest/progress.gd").SUBJECTS:
 		button(t(subject),func(): hub();game_view.switch_subject(subject))
 func sceneries() -> void:
+	var subject: String=store.data.quest.subject
 	clear();button(t("back"),hub)
-	for id in ["auto","mountains","home","castle"]:
-		button(("✓ " if store.data.scenery==id else "")+t("scene_"+id),func():store.data.scenery=id;save();hub())
+	label(t("scenery")+" · "+t(subject))
+	label(t("scenery_per_subject"))
+	scenery_grid=GridContainer.new();scenery_grid.columns=2 if scroll_view.size.x<640 else 4
+	scenery_grid.add_theme_constant_override("h_separation",10)
+	scenery_grid.add_theme_constant_override("v_separation",10)
+	body.add_child(scenery_grid)
+	for id in preload("res://core/quest/scenery.gd").CHOICES:
+		var card:=preload("res://core/quest/scenery_card.gd").new()
+		card.scenery=id;card.chosen=store.data.subject_sceneries[subject]==id
+		card.custom_minimum_size=Vector2(130,138)
+		card.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		card.tooltip_text=t("scene_"+id)
+		card.accessibility_name=t("scene_"+id)
+		card.accessibility_description=t(subject)
+		card.pressed.connect(func():store.data.subject_sceneries[subject]=id;save();hub())
+		scenery_grid.add_child(card)
+		var caption:=Label.new();caption.text=t("scene_"+id)
+		caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		caption.add_theme_font_size_override("font_size",16)
+		caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+		caption.mouse_filter=Control.MOUSE_FILTER_IGNORE
+		caption.set_anchors_and_offsets_preset(PRESET_BOTTOM_WIDE)
+		caption.offset_top=-52;caption.offset_bottom=-5
+		card.add_child(caption)
 func languages() -> void:
 	clear();button(t("back"),hub)
 	label(t("select_language"))
@@ -121,7 +146,7 @@ func languages() -> void:
 			store.data.locale=locale;save();hub())
 func settings() -> void:
 	clear();button(t("back"),hub)
-	label("Kinderwelt 0.7.3")
+	label("Kinderwelt 0.8.0")
 	button(t("language"),languages)
 	button(t("scenery"),sceneries)
 	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())

@@ -59,7 +59,7 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(manifest['voice_gender'],'female' if locale=='en' else 'male')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
-            self.assertEqual(len(expected),663)
+            self.assertEqual(len(expected),667)
             self.assertEqual({c['id']:c['text'] for c in manifest['clips']},expected)
             unique={c['file']:c for c in manifest['clips']}
             self.assertEqual({p.name for p in folder.glob('*.ogg')},set(unique))
@@ -134,14 +134,22 @@ class QuestAssetsTests(unittest.TestCase):
         self.assertEqual(before,[p.read_bytes() for p in paths])
     def test_graphics_are_real_png_and_individual_heroes_differ(self):
         hashes=set()
-        for name in ['squirrel','icons','objects','landscape','science-a','science-b','home','castle']:
+        for name in ['squirrel','icons','objects','landscape','science-a','science-b','home','castle','adventure-worlds']:
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])
             self.assertGreaterEqual(width,512 if name=='squirrel' else 1024)
             self.assertGreaterEqual(height,768)
             hashes.add(hashlib.sha256(raw).hexdigest())
-        self.assertEqual(len(hashes),8)
+        self.assertEqual(len(hashes),9)
+    def test_shared_world_atlas_has_provenance_and_bounded_source_size(self):
+        metadata=json.loads((ROOT/'art/adventure-worlds.json').read_text())
+        data=(ROOT/metadata['asset']).read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(),metadata['sha256'])
+        self.assertEqual(metadata['layout'],[['tree','seabed'],['city','moon']])
+        self.assertLessEqual(len(data),metadata['source_budget_bytes'])
+        self.assertEqual(metadata['source_budget_bytes'],4*1024*1024)
+
     def test_costume_atlases_and_visible_frames(self):
         # Metadata must match the optimized source pixels and visible crops.
         data=json.loads((ROOT/'assets/quest/looks.json').read_text())

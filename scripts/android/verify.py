@@ -49,13 +49,13 @@ def check_payload(names,app_root=None):
     for item in required: assert item in assets,'Missing quest asset: '+item
     for notice in ['assets/quest/OFL.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/CC-BY-3.0.txt','assets/music/licenses/CC-BY-SA-3.0.txt','assets/music/licenses/CC-BY-SA-2.5.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
         assert notice in assets,'Missing bundled notice: '+notice
-    for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle']:
+    for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds']:
         assert 'assets/quest/'+image+'.png.import' in assets,'Missing image import: '+image
         assert any(n.startswith('.godot/imported/'+image+'.png-') and n.endswith('.ctex') for n in assets),'Missing actual image texture: '+image
     assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'
-    for script in ['game','world','task','picture','progress','choice']:
+    for script in ['game','world','world_props','vehicle','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
-    for script in ['core/quest/score_badge.gd','core/mobile.gd','core/quest/wardrobe.gd']:
+    for script in ['core/quest/score_badge.gd','core/quest/scenery.gd','core/quest/scenery_card.gd','core/mobile.gd','core/quest/wardrobe.gd']:
         assert any(n.startswith(script) for n in assets),'Missing score or adaptive screen layout: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
     cast=json.loads((app_root/'assets/quest/cast.json').read_text())

@@ -7,7 +7,7 @@ learning samples play the same localized/native sequence as the application.
 import argparse,base64,hashlib,html,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-IDS=['area_'+s for s in ['math','german','logic','physics','biology','chemistry','body','geography']]+['math_count','german_sun','german_robot_hint','physics_05_hint','chemistry_20','praise_1']
+IDS=['area_'+s for s in ['math','german','logic','physics','biology','chemistry','body','geography']]+['math_count','german_sun','german_robot_hint','physics_05_hint','chemistry_20','praise_1']+['world_'+s for s in ['tree','seabed','city','moon']]
 STYLE='body{font:18px system-ui;max-width:980px;margin:2rem auto;padding:0 1rem;color:#17384c;background:#fff9eb}h1{font-size:1.8rem}button,select{font:inherit;padding:.65rem;margin:.3rem;border-radius:1rem;border:2px solid #407087;background:#fff}button:focus{outline:3px solid #d68d1c}article{border-top:1px solid #bdc6c9;padding:1rem 0}audio{width:100%;position:sticky;top:0;background:#fff9eb}summary{cursor:pointer}small{overflow-wrap:anywhere}p{line-height:1.5}'
 SCRIPT=r'''
 const clips=JSON.parse(document.getElementById('data').textContent);

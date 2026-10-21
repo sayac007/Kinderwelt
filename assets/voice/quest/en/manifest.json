@@ -131,6 +131,534 @@
       "id": "again"
     },
     {
+      "text": "Tap a nut beside a squirrel. Your character climbs to the task. Drag down to look higher up the tree.",
+      "file": "voice_en_c3226fe8a96072514531.ogg",
+      "seconds": 7.870204081632653,
+      "bytes": 45550,
+      "sha256": "fd85bc3d2176cff32cf04f1248aac4879f4d8b573cac9b0b85f1b3124488e200",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.7054700255393982,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "tˈap",
+          "start": 0.22644,
+          "end": 0.470249,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 0.493469,
+          "end": 0.563129,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "nˈʌt",
+          "start": 0.609569,
+          "end": 0.795329,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "bɪsˌaɪd",
+          "start": 0.864989,
+          "end": 1.259728,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 1.317778,
+          "end": 1.399048,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "skwˈɪɹəl.",
+          "start": 1.457098,
+          "end": 1.979546,
+          "seconds": 0.522449
+        },
+        {
+          "phonemes": "jɔː",
+          "start": 2.352426,
+          "end": 2.468526,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "kˈaɹɪktə",
+          "start": 2.526576,
+          "end": 3.060635,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "klˈaɪmz",
+          "start": 3.130295,
+          "end": 3.699184,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "tə",
+          "start": 3.768844,
+          "end": 3.850113,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 3.896553,
+          "end": 3.977823,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "tˈask.",
+          "start": 4.035873,
+          "end": 4.686032,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "dɹˈaɡ",
+          "start": 5.093741,
+          "end": 5.476871,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "dˌaʊn",
+          "start": 5.523311,
+          "end": 5.80195,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 5.86,
+          "end": 5.98771,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈʊk",
+          "start": 6.06898,
+          "end": 6.231519,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˈaɪəɹ",
+          "start": 6.336009,
+          "end": 6.730748,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ˌʌp",
+          "start": 6.753968,
+          "end": 6.881678,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "ðə",
+          "start": 6.928118,
+          "end": 7.009388,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "tɹˈiː.",
+          "start": 7.079048,
+          "end": 7.485397,
+          "seconds": 0.406349
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_tree"
+    },
+    {
+      "text": "Look for treasure chests. Tap a picture on a chest. Your character swims to the task.",
+      "file": "voice_en_88a5fd90816aa24b4385.ogg",
+      "seconds": 7.115555555555556,
+      "bytes": 42962,
+      "sha256": "ceb7ebd522f035de6c5b78abea086bfea259b45d261dd3c852bb0ba96514dab3",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6913937330245972,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "lˈʊk",
+          "start": 0.24966,
+          "end": 0.4122,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fɔː",
+          "start": 0.470249,
+          "end": 0.586349,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "tɹˈɛʒə",
+          "start": 0.644399,
+          "end": 1.027528,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "tʃˈɛsts.",
+          "start": 1.120408,
+          "end": 1.863447,
+          "seconds": 0.743039
+        },
+        {
+          "phonemes": "tˈap",
+          "start": 2.224717,
+          "end": 2.445306,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 2.480136,
+          "end": 2.549796,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "pˈɪktʃəɹ",
+          "start": 2.596236,
+          "end": 3.025805,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ˌɒn",
+          "start": 3.107075,
+          "end": 3.188345,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 3.258005,
+          "end": 3.304444,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "tʃˈɛst.",
+          "start": 3.350884,
+          "end": 4.001043,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "jɔː",
+          "start": 4.350703,
+          "end": 4.478413,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "kˈaɹɪktə",
+          "start": 4.524853,
+          "end": 5.105351,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "swˈɪmz",
+          "start": 5.233061,
+          "end": 5.65102,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "tə",
+          "start": 5.73229,
+          "end": 5.83678,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "ðə",
+          "start": 5.87161,
+          "end": 5.96449,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "tˈask.",
+          "start": 6.04576,
+          "end": 6.730748,
+          "seconds": 0.684989
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_seabed"
+    },
+    {
+      "text": "Tap a task picture at the bus stop or under the bridge. Your character drives there in a car.",
+      "file": "voice_en_1dabd829902122e25f31.ogg",
+      "seconds": 7.334784580498866,
+      "bytes": 44416,
+      "sha256": "e1d767393c0ea8cf13ba43b30b34da4f2188cfee4fcf495107cd34f6f1817700",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.7076347470283508,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "tˈap",
+          "start": 0.23805,
+          "end": 0.563129,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 0.609569,
+          "end": 0.656009,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "tˈask",
+          "start": 0.725669,
+          "end": 1.143628,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈɪktʃəɹ",
+          "start": 1.201678,
+          "end": 1.967937,
+          "seconds": 0.766259
+        },
+        {
+          "phonemes": "at",
+          "start": 2.014376,
+          "end": 2.118866,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "ðə",
+          "start": 2.165306,
+          "end": 2.246576,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "bˈʌs",
+          "start": 2.293016,
+          "end": 2.490385,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "stˈɒp",
+          "start": 2.606485,
+          "end": 2.978005,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ɔːɹ",
+          "start": 3.152154,
+          "end": 3.314694,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "ˌʌndə",
+          "start": 3.337914,
+          "end": 3.570113,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ðə",
+          "start": 3.604943,
+          "end": 3.662993,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "bɹˈɪdʒ.",
+          "start": 3.744263,
+          "end": 4.336372,
+          "seconds": 0.592109
+        },
+        {
+          "phonemes": "jɔː",
+          "start": 4.697642,
+          "end": 4.825351,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "kˈaɹɪktə",
+          "start": 4.883401,
+          "end": 5.45229,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "dɹˈaɪvz",
+          "start": 5.49873,
+          "end": 5.986349,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "ðeəɹ",
+          "start": 6.032789,
+          "end": 6.241769,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ɪn",
+          "start": 6.299819,
+          "end": 6.357868,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 6.404308,
+          "end": 6.439138,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "kˈɑː.",
+          "start": 6.497188,
+          "end": 6.915147,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_city"
+    },
+    {
+      "text": "Discover tasks on the moon. Tap a picture on a moon station. Your character hops there.",
+      "file": "voice_en_14ed929ff4b9e03b3108.ogg",
+      "seconds": 6.883356009070295,
+      "bytes": 40328,
+      "sha256": "34b9c30ac966c9403395e035b2f31d0ef31c9fc9b5219a9bbfc57cef2ee8884b",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.76996910572052,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
+      "phonetic_units": [
+        {
+          "phonemes": "dɪskˈʌvə",
+          "start": 0.22644,
+          "end": 0.702449,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈasks",
+          "start": 0.795329,
+          "end": 1.329388,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "ɒnðə",
+          "start": 1.375828,
+          "end": 1.608027,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "mˈuːn.",
+          "start": 1.666077,
+          "end": 2.049206,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "tˈap",
+          "start": 2.433696,
+          "end": 2.840045,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 2.874875,
+          "end": 2.921315,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "pˈɪktʃəɹ",
+          "start": 2.979365,
+          "end": 3.362494,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "ˌɒn",
+          "start": 3.385714,
+          "end": 3.466984,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 3.490204,
+          "end": 3.548254,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "mˈuːn",
+          "start": 3.571474,
+          "end": 3.850113,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "stˈeɪʃən.",
+          "start": 3.931383,
+          "end": 4.523492,
+          "seconds": 0.592109
+        },
+        {
+          "phonemes": "jɔː",
+          "start": 4.873152,
+          "end": 5.012472,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "kˈaɹɪktə",
+          "start": 5.082132,
+          "end": 5.569751,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "hˈɒps",
+          "start": 5.6278,
+          "end": 6.03415,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ðˈeə.",
+          "start": 6.0922,
+          "end": 6.463719,
+          "seconds": 0.371519
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
+      "id": "world_moon"
+    },
+    {
       "text": "Wonderful! You did that really well.",
       "file": "voice_en_e57ddf11ba1168147b14.ogg",
       "seconds": 3.1319727891156464,
