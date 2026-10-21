@@ -1,6 +1,7 @@
 extends Control
 signal station_requested(index: int)
 const Art = preload("res://core/quest/art.gd")
+const SCENES={"mountains":preload("res://assets/quest/landscape.png"),"home":preload("res://assets/quest/home.png"),"castle":preload("res://assets/quest/castle.png")}
 const Progress = preload("res://games/quest/progress.gd")
 var host: Control
 var subject := "math"
@@ -33,6 +34,7 @@ func setup(owner_host: Control,area: String) -> void:
 	reduced_motion = host.store.data.reduced_motion
 	hero = preload("res://core/quest/hero.gd").new()
 	hero.person = host.store.data.hero
+	hero.costume = host.store.data.looks[host.store.data.hero]
 	hero.selected = true
 	hero.reduced_motion = reduced_motion
 	add_child(hero)
@@ -49,7 +51,10 @@ func setup(owner_host: Control,area: String) -> void:
 	page_label = Label.new()
 	page_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	page_label.mouse_filter = MOUSE_FILTER_IGNORE
-	page_label.add_theme_font_size_override("font_size",17)
+	page_label.add_theme_font_size_override("font_size",15)
+	var badge:=StyleBoxFlat.new();badge.bg_color=Color("fff8e5");badge.border_color=Color("9a927e")
+	badge.set_corner_radius_all(16);badge.set_border_width_all(1)
+	page_label.add_theme_stylebox_override("normal",badge)
 	add_child(page_label)
 	resized.connect(arrange_pages)
 	set_page(0)
@@ -70,8 +75,8 @@ func arrange_pages() -> void:
 	next_page.position=Vector2(size.x-58,8);next_page.size=Vector2(48,48)
 	previous_page.disabled=page==0
 	next_page.disabled=last_station()==missions.size()-1
-	page_label.position=Vector2(60,14);page_label.size=Vector2(size.x-120,36)
-	page_label.text="%s %d · %d–%d / %d" % [host.t("page"),page+1,first_station()+1,last_station()+1,missions.size()]
+	page_label.position=Vector2(60,8);page_label.size=Vector2(size.x-120,48)
+	page_label.text="%s %d\n%d–%d / %d" % [host.t("page"),page+1,first_station()+1,last_station()+1,missions.size()]
 func station_x(index: int) -> float: return 245.0+(index-first_station())*SPACING
 func ground(x: float) -> float: return size.y*.71+sin(x/200.0)*size.y*.035
 func station_center(index: int) -> Vector2:
@@ -97,25 +102,45 @@ func _process(delta: float) -> void:
 	manual_camera = maxf(0,manual_camera-delta)
 	if manual_camera<=0: camera_x = move_toward(camera_x,target_camera,300.0*minf(delta,.05))
 	var height := minf(250,maxf(140,size.y*.43))
-	hero.size = Vector2(height*.67,height)
+	hero.size = Vector2(height*hero.aspect(),height)
 	hero.position = Vector2(hero_x-camera_x-hero.size.x/2,ground(hero_x)-height+18)
 	if not moving and pending>=0:
 		var station := pending
 		pending = -1
 		station_requested.emit(station)
 	queue_redraw()
+func scene_id() -> String:
+	if host.store.data.scenery!="auto":return host.store.data.scenery
+	return ["mountains","home","castle"][(Progress.SUBJECTS.find(subject)+page)%3]
+func ghost_centers() -> Array[Vector2]:
+	var result: Array[Vector2]=[]
+	var phase:=0.0 if reduced_motion else clock
+	for i in range(3):
+		result.append(Vector2(fposmod(size.x*(.18+i*.34)+sin(phase*.45+i)*size.x*.12,size.x+40)-20,80+sin(phase*.8+i*1.7)*24))
+	return result
+func draw_ghost(center: Vector2) -> void:
+	var col:=Color(.94,.98,1,.76)
+	draw_circle(center,15,col)
+	var body:=PackedVector2Array([center+Vector2(-15,0),center+Vector2(-16,24),center+Vector2(-8,18),center+Vector2(0,25),center+Vector2(8,18),center+Vector2(16,24),center+Vector2(15,0)])
+	draw_colored_polygon(body,col)
+	for x in [-5,5]:draw_circle(center+Vector2(x,0),2.5,Color("38577a"))
+	draw_arc(center+Vector2(0,5),4,0,PI,12,Color("38577a"),1.5,true)
 func _draw() -> void:
 	if host==null: return
-	var bg: Texture2D = preload("res://assets/quest/landscape.png")
+	var scene:=scene_id()
+	var bg: Texture2D = SCENES[scene]
 	var factor := maxf(size.x/bg.get_width(),size.y/bg.get_height())
 	var dim := bg.get_size()*factor
 	var tint: Color = {"math":Color(1,.98,.94),"german":Color(.90,.97,1),"logic":Color(.96,.91,1)}.get(subject,Color(.96,1,.95))
+	if scene!="mountains":tint=Color.WHITE
 	draw_texture_rect(bg,Rect2(Vector2((size.x-dim.x)*.5-camera_x*.025,-(dim.y-size.y)*.35),dim+Vector2(camera_x*.025,0)),false,tint)
+	if scene=="castle":
+		for center in ghost_centers():draw_ghost(center)
 	# The tangible walking trail scrolls independently of the distant painted sky.
 	var trail := PackedVector2Array()
 	for x in range(-50,int(size.x)+70,14): trail.append(Vector2(x,ground(x+camera_x)))
-	draw_polyline(trail,Color("a47855"),66,true)
-	draw_polyline(trail,Color("f5d5a2"),58,true)
+	draw_polyline(trail,Color("76528c") if scene=="home" else Color("a47855"),66,true)
+	draw_polyline(trail,Color("c6a2d3") if scene=="home" else Color("c5c2ca") if scene=="castle" else Color("f5d5a2"),58,true)
 	draw_polyline(trail,Color("ffe5b7"),3,true)
 	for n in range(first_station(),last_station()+1):
 		var center := station_center(n)
@@ -137,7 +162,7 @@ func _draw() -> void:
 		draw_circle(c+Vector2(0,hop),27,Color("fff9e9"))
 		Art.text(self,"☝",c+Vector2(0,hop),32)
 	# Foreground flowers and grass give walking depth, without occluding targets.
-	for i in range(8):
+	for i in range(8 if scene=="mountains" else 0):
 		var x := fposmod(i*197-camera_x*.8,size.x+100)-50
 		Art.object(self,"flower",Rect2(Vector2(x,size.y-56),Vector2(45,55)))
 func input_event(event: InputEvent) -> void:

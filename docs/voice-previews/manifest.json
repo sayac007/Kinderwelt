@@ -1,0 +1,44 @@
+[
+  {
+    "locale": "de",
+    "kind": "lob",
+    "text": "Super cool, das gefällt mir!",
+    "file": "de-lob.mp3",
+    "sha256": "83a8e91786bc518c7db1cc2af00a5e0a6292fd2ebd2518066ee5d4c21cbbfa0e"
+  },
+  {
+    "locale": "de",
+    "kind": "frage",
+    "text": "Was zieht ein Magnet an: Eisen, Holz oder Papier? Zur Auswahl: Holz. Papier. Eisen.",
+    "file": "de-frage.mp3",
+    "sha256": "f198e362bbfa0107a58cdb7ad2d477184c5144c3cf21a82ffbb21ae2ee69e8e0"
+  },
+  {
+    "locale": "en",
+    "kind": "lob",
+    "text": "Super cool! I like that!",
+    "file": "en-lob.mp3",
+    "sha256": "fbf29eb71a21e25dbcd50cb1636a2c185a5993663f65612222c0aff6bee0c2b8"
+  },
+  {
+    "locale": "en",
+    "kind": "frage",
+    "text": "What does a magnet attract: iron, wood or paper? Choose from: wood. paper. iron.",
+    "file": "en-frage.mp3",
+    "sha256": "25e66aa6d0468a8f3e08fa10995423b5c31f03dc2e87fdffe16d73d2f1f1377c"
+  },
+  {
+    "locale": "ru",
+    "kind": "lob",
+    "text": "Супер! Мне нравится!",
+    "file": "ru-lob.mp3",
+    "sha256": "45c5c13bbe0a1c6b3ea2ead8d8f34f6a9e56f2d69dabc5f455f784256f2fd3c6"
+  },
+  {
+    "locale": "ru",
+    "kind": "frage",
+    "text": "Что притягивает магнит: железо, дерево или бумагу? На выбор: древесина. бумага. железо.",
+    "file": "ru-frage.mp3",
+    "sha256": "38d5ac85754b7a8e01dac835b77eccf9b32f4c3e652cdd5376f7c11f7009aaf1"
+  }
+]

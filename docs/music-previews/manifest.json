@@ -1,0 +1,205 @@
+{
+  "kind": "30-second listening previews, not complete tracks",
+  "tracks": [
+    {
+      "id": "wiener_blut",
+      "composer": "Johann Strauss II",
+      "title": "Wiener Blut · Walzerauszug",
+      "file": "wiener_blut.mp3",
+      "seconds": 30,
+      "sha256": "698e004d83abbd1c775696d1e1d614d6d49583b27290f657ceb2dcc0b4d702e2",
+      "app_audio_sha256": "8aafc0293807f9651e53969ac16a7de450a68d6ff8847e60d052c0b63a01b3fe",
+      "licence": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "babbino",
+      "composer": "Giacomo Puccini",
+      "title": "O mio babbino caro · Thema",
+      "file": "babbino.mp3",
+      "seconds": 30,
+      "sha256": "03d74388e0b5642fe3c8acdfcca9d5b8a8964b7d3c08bd2db031516100743218",
+      "app_audio_sha256": "24648508301c985a7fa96c8e26a032c9340fd022b93d31b73dbcda235b5c9d03",
+      "licence": "MIT (MIDI arrangement); public domain composition"
+    },
+    {
+      "id": "french_song",
+      "composer": "P. I. Tschaikowski",
+      "title": "Altes französisches Lied",
+      "file": "french_song.mp3",
+      "seconds": 30,
+      "sha256": "66fb3a762e86a497ff63ac25cefdb4567e54fd66b534b6d7c5db7b83116898ea",
+      "app_audio_sha256": "435a5f71b0b51af02bb3bbd5f158752efceabafdaad45f98ea356b797c6b6d65",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "consolation",
+      "composer": "Franz Liszt",
+      "title": "Consolation Nr. 1",
+      "file": "consolation.mp3",
+      "seconds": 30,
+      "sha256": "a0c2f3f325d65ed8d376c8df9db4b9fdfa018c08055dbe078772ffecb87c8750",
+      "app_audio_sha256": "9aff15de4a7b76fbf31c58b7c615beb4a67b559ed43a8b65e4e94e42f9e34688",
+      "licence": "CC-BY-3.0"
+    },
+    {
+      "id": "elise",
+      "composer": "Ludwig van Beethoven",
+      "title": "Für Elise",
+      "file": "elise.mp3",
+      "seconds": 30,
+      "sha256": "b1878491aa897aa38639637e9f06d090bbe016a32537deb095ada5bdcc81a92f",
+      "app_audio_sha256": "5191d1dcd01ffb4a7170269d745fc2ed0d3075af088b7ee0703884036fb08b17",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "bach_prelude",
+      "composer": "Johann Sebastian Bach",
+      "title": "Präludium C-Dur · BWV 846",
+      "file": "bach_prelude.mp3",
+      "seconds": 30,
+      "sha256": "d682c79e92d845f36d3721801bd008e922191a0d327526f9f4595229f5bfd4a4",
+      "app_audio_sha256": "e08c5850355ac0b38b6936db6a0192d403ee0b55a30eb9921bcbb0ad14f8ea85",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "gymnopedie",
+      "composer": "Erik Satie",
+      "title": "Gymnopédie Nr. 1",
+      "file": "gymnopedie.mp3",
+      "seconds": 30,
+      "sha256": "49a79b7b542e758599910dec0f396293c4843ab0de21cadc8f057eb1cd56bf9f",
+      "app_audio_sha256": "edd0d7be9e8dc7cd63b1e882aba1568813b9344bb32f0643d0d4533624275f8c",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "clair",
+      "composer": "Claude Debussy",
+      "title": "Clair de lune",
+      "file": "clair.mp3",
+      "seconds": 30,
+      "sha256": "4ca09d23f2a1def717f2cade43c404080aebc836409d136dc5e673f4b30b94d9",
+      "app_audio_sha256": "88b52f52535036096d64fd75bae1e3b4b2ad009b1cb6e6cef74a0281059a9812",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "nocturne",
+      "composer": "Frédéric Chopin",
+      "title": "Nocturne · Op. 9 Nr. 2",
+      "file": "nocturne.mp3",
+      "seconds": 30,
+      "sha256": "11586e53d79ec9f0925772e228cdfc0d11cfc5d69e562e129ffe42f4cd4342ba",
+      "app_audio_sha256": "9bb3af311360bb070f3643fce13d2f05fae89121adf6197574e7ea3939cbb4e3",
+      "licence": "CC-BY-SA-3.0"
+    },
+    {
+      "id": "traeumerei",
+      "composer": "Robert Schumann",
+      "title": "Träumerei · Op. 15 Nr. 7",
+      "file": "traeumerei.mp3",
+      "seconds": 30,
+      "sha256": "0334d9821132cba7fd91c16a0b037899cc2138312cff2db4c42d54b26508d1fd",
+      "app_audio_sha256": "db6ff245df1e1784f76ef3c6fcc1e0c2dd8e8c6e03496434e2772ab370a2601b",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "mozart_sonata",
+      "composer": "Wolfgang Amadeus Mozart",
+      "title": "Sonata facile · Allegro",
+      "file": "mozart_sonata.mp3",
+      "seconds": 30,
+      "sha256": "77d3b1e594b0f63c87f547ee07aeea3537b14bfb0f0b9720c6b6bd819b38d369",
+      "app_audio_sha256": "fd6dcafbd55fd984f03816e2ca02f1bcbca1462ce09744f08d0cdceabf3dca22",
+      "licence": "CC-BY-SA-3.0"
+    },
+    {
+      "id": "arabesque",
+      "composer": "Claude Debussy",
+      "title": "Arabesque Nr. 1",
+      "file": "arabesque.mp3",
+      "seconds": 30,
+      "sha256": "05bd8233fa30f2164a6caf35412be03d87347297c5ac4695899d1ff61f7cc382",
+      "app_audio_sha256": "c15293437bc21b7f6df712d3f5d0cc7d0f05cd6dfeca3bde112b9c0c1a603d99",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "brahms_waltz",
+      "composer": "Johannes Brahms",
+      "title": "Walzer · Op. 39 Nr. 15",
+      "file": "brahms_waltz.mp3",
+      "seconds": 30,
+      "sha256": "55b202e6f35f1528e54bf860cba54848275e58e66b8e3776305d6c0d785a2c71",
+      "app_audio_sha256": "cceb4bd41ee61f37f1343ec60a53aae7ab635091a4e06ee7344c21cc81af3498",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "canon",
+      "composer": "Johann Pachelbel",
+      "title": "Kanon in D",
+      "file": "canon.mp3",
+      "seconds": 30,
+      "sha256": "23a0e0bec6c523ebdfdf68795766e200c01ea2f32aab0418f93356f5f22b4642",
+      "app_audio_sha256": "3767082e5ff9fbb0789737012f8340d34acd0da2030b11def90763397bc362d3",
+      "licence": "CC-BY-3.0"
+    },
+    {
+      "id": "impromptu",
+      "composer": "Franz Schubert",
+      "title": "Impromptu · D 899 Nr. 3",
+      "file": "impromptu.mp3",
+      "seconds": 30,
+      "sha256": "ca46a712397e651c3f07fcbe579fa2f3306d598ebb690951b5b4648c9c8dc4b7",
+      "app_audio_sha256": "a5c410964aac9555d9cca4ec6ff00d90612738582652df376ef428ad44419dcd",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "invention",
+      "composer": "Johann Sebastian Bach",
+      "title": "Invention Nr. 1 · BWV 772",
+      "file": "invention.mp3",
+      "seconds": 30,
+      "sha256": "dae41cd5d9ee3ffc36f39687c271880785e983aea1be01f518c88e3cc2ec3d6c",
+      "app_audio_sha256": "bcd1b60b4c0eb49329d6bb3ef258162cf33fb4e29429e2067ff77975d50e9b58",
+      "licence": "CC-BY-SA-3.0"
+    },
+    {
+      "id": "chopin_prelude",
+      "composer": "Frédéric Chopin",
+      "title": "Prélude e-Moll · Op. 28 Nr. 4",
+      "file": "chopin_prelude.mp3",
+      "seconds": 30,
+      "sha256": "a6bf3a618fa3d7b404d79174ec65e340959b47338b25586cbca4c84a7fd9eab5",
+      "app_audio_sha256": "122befd5348b8215cceb009e7fefb27940e2d489789bf6106454b7f47fc00d9e",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "minuet",
+      "composer": "Christian Petzold",
+      "title": "Menuett G-Dur · BWV Anh. 114",
+      "file": "minuet.mp3",
+      "seconds": 30,
+      "sha256": "6aecd04fc4ea17fc3a986f11afdde1cc9ff57560ebb8ea63cc867e61ac9fbadd",
+      "app_audio_sha256": "8963db35fddd9e1a09cc3498f7b5937fc72636f08768752fcab98a47e9ed8788",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "turca",
+      "composer": "Wolfgang Amadeus Mozart",
+      "title": "Rondo alla turca",
+      "file": "turca.mp3",
+      "seconds": 30,
+      "sha256": "e590095b618bd458ad417ccba5c9c7a99217d8db105840829cc1c355fb1f44dc",
+      "app_audio_sha256": "6b77891e9d9cb22ca440d6d6f8bb2dfdbe5a99c5bccbad13ae9c4766fc518bbd",
+      "licence": "Public Domain"
+    },
+    {
+      "id": "moonlight",
+      "composer": "Ludwig van Beethoven",
+      "title": "Mondscheinsonate · Adagio sostenuto",
+      "file": "moonlight.mp3",
+      "seconds": 30,
+      "sha256": "729f8f11a4b446af63647aedefdced5e18c68dde02d2fc93269f738b80a494ed",
+      "app_audio_sha256": "36686c3c2c5f6fa5aadff3a1071256181c7d12a68f0ac8b23770d798c0e57243",
+      "licence": "CC-BY-SA-2.5"
+    }
+  ]
+}

@@ -10,6 +10,9 @@ var body: VBoxContainer
 var scroll_view: ScrollContainer
 var game_view: Control
 var closing := false
+var layout_pending := false
+var updating_layout := false
+var praise_cursor := randi()%6
 func _ready() -> void:
 	get_tree().auto_accept_quit=false
 	theme=preload("res://core/quest/theme.gd").make_theme()
@@ -25,23 +28,41 @@ func _ready() -> void:
 	body.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	body.add_theme_constant_override("separation",14)
 	scroll_view.add_child(body)
-	get_window().size_changed.connect(update_mobile)
+	get_window().size_changed.connect(request_layout)
 	hub()
 	update_mobile.call_deferred()
+func request_layout() -> void:
+	if layout_pending or closing: return
+	layout_pending=true
+	settle_layout.call_deferred()
+func settle_layout() -> void:
+	await get_tree().process_frame
+	if not is_inside_tree() or closing: return
+	update_mobile()
+	await get_tree().process_frame
+	if not is_inside_tree() or closing: return
+	update_mobile()
+	layout_pending=false
 func update_mobile() -> void:
+	if updating_layout: return
+	updating_layout=true
 	Mobile.configure(get_window(),simulated_dpi)
-	if not is_instance_valid(scroll_view): return
+	if not is_instance_valid(scroll_view):
+		updating_layout=false
+		return
 	scroll_view.offset_left=12;scroll_view.offset_right=-12
 	scroll_view.offset_top=8;scroll_view.offset_bottom=-8
 	if OS.get_name()=="Android":
-		var safe:=DisplayServer.get_display_safe_area()
-		var ratio:=Vector2(get_window().content_scale_size)/Vector2(get_window().size)
-		var origin:=Vector2(get_window().position)
-		var a: Vector2=(Vector2(safe.position)-origin).max(Vector2.ZERO)*ratio
-		var b: Vector2=(Vector2(get_window().size)-Vector2(safe.end)+origin).max(Vector2.ZERO)*ratio
-		scroll_view.offset_left+=a.x;scroll_view.offset_top+=a.y
-		scroll_view.offset_right-=b.x;scroll_view.offset_bottom-=b.y
+		var inset:=Mobile.safe_insets(get_window().size,get_window().content_scale_size,DisplayServer.get_display_safe_area(),get_window().position)
+		scroll_view.offset_left+=inset.x;scroll_view.offset_top+=inset.y
+		scroll_view.offset_right-=inset.z;scroll_view.offset_bottom-=inset.w
 	if is_instance_valid(game_view): game_view.arrange.call_deferred()
+	updating_layout=false
+func praise_id() -> String:
+	var result := "praise_"+str(praise_cursor)
+	praise_cursor=(praise_cursor+1)%6
+	return result
+
 func clear() -> void:
 	narration.cancel()
 	if is_instance_valid(game_view):
@@ -88,6 +109,10 @@ func subjects() -> void:
 	clear();button(t("back"),hub)
 	for subject in preload("res://games/quest/progress.gd").SUBJECTS:
 		button(t(subject),func(): hub();game_view.switch_subject(subject))
+func sceneries() -> void:
+	clear();button(t("back"),hub)
+	for id in ["auto","mountains","home","castle"]:
+		button(("✓ " if store.data.scenery==id else "")+t("scene_"+id),func():store.data.scenery=id;save();hub())
 func languages() -> void:
 	clear();button(t("back"),hub)
 	label(t("select_language"))
@@ -96,8 +121,9 @@ func languages() -> void:
 			store.data.locale=locale;save();hub())
 func settings() -> void:
 	clear();button(t("back"),hub)
-	label("Kinderwelt 0.6.0")
+	label("Kinderwelt 0.7.0")
 	button(t("language"),languages)
+	button(t("scenery"),sceneries)
 	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())
 	volume_control(t("music"),"music_volume")
 	volume_control(t("effects"),"effects_volume")

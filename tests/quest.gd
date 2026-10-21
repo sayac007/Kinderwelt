@@ -2,6 +2,8 @@ extends SceneTree
 const Progress = preload("res://games/quest/progress.gd")
 const Store = preload("res://core/save_store.gd")
 const Tracks = preload("res://core/quest/tracks.gd")
+const Wardrobe = preload("res://core/quest/wardrobe.gd")
+const Mobile = preload("res://core/mobile.gd")
 var checks := 0
 var failures := 0
 func check(value: bool,message: String) -> void:
@@ -21,18 +23,26 @@ func touch_button(b: Button) -> void:
 	for i in range(3): await process_frame
 	await touch(b.get_global_rect().get_center())
 func run() -> void:
+	for dpi in [0.0,160.0,420.0,640.0,1200.0]:
+		for pixels in [Vector2i(1080,1920),Vector2i(1080,2400),Vector2i(720,1280)]:
+			var portrait:=Mobile.logical_size(pixels,dpi)
+			var landscape:=Mobile.logical_size(Vector2i(pixels.y,pixels.x),dpi)
+			check(portrait.x>=360 and landscape.y>=360,"Rotation preserves usable short side")
+			check(portrait==Vector2i(landscape.y,landscape.x),"Density mapping is symmetric under rotation")
+	check(Mobile.safe_insets(Vector2i(1080,2400),Vector2i(360,800),Rect2i(0,0,2400,1080))==Vector4.ZERO,"Ignore stale Android safe-area geometry during rotation")
+	check(Mobile.safe_insets(Vector2i(1080,2400),Vector2i(360,800),Rect2i(0,90,1080,2220))==Vector4(0,30,0,30),"Convert valid insets to logical units")
 	check(not Progress.same("6",6) and not Progress.same(true,1) and not Progress.same(NAN,NAN),"No coercion of strings, booleans or invalid numbers")
 	check(Progress.same(6,6.0),"JSON float and integer answers agree")
 	var sanitized:=Store.clean({"hero":"unknown","music_volume":INF,"effects_volume":-99,"voice_auto":"yes","private_name":"discard","stars":9999})
 	check(sanitized.hero=="wanja" and sanitized.music_volume==.35 and sanitized.effects_volume==0 and not sanitized.has("private_name") and not sanitized.has("stars"),"Save whitelist rejects unknown/invalid fields")
 	check(Store.defaults().hero=="wanja" and preload("res://core/quest/hero.gd").IDS[0]=="wanja","Wanja is the default and first main hero")
-	for id in ["wanja","mischa","du","mama","katze"]:
-		check(Store.clean({"hero":id}).hero==id,"All five family members remain independently selectable and persistent: "+id)
+	for id in ["wanja","mischa","du","mama","katze","george","squirrel"]:
+		check(Store.clean({"hero":id}).hero==id,"All seven family members remain independently selectable and persistent: "+id)
 	for pair in [["mina","wanja"],["leo","du"],["sam","mama"],["jule","katze"]]:
 		var migrated := Store.clean({"hero":pair[0],"quest":{"solved":{"math_count":true},"hero_chosen":true}})
 		check(migrated.hero==pair[1] and migrated.quest.solved.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
 	check(Store.clean({"music_track":"stars","music_locked":true}).music_track==Tracks.DEFAULT and not Store.clean({"music_track":"stars","music_locked":true}).music_locked,"Unavailable old favourites migrate to an alternating classical playlist")
-	check(Tracks.next("consolation")=="wiener_blut" and Tracks.next("wiener_blut",-1)=="consolation","Playlist wraps in both directions")
+	check(Tracks.next("moonlight")=="wiener_blut" and Tracks.next("wiener_blut",-1)=="moonlight","Playlist wraps in both directions")
 	check(Tracks.next("babbino",1,false,true)=="babbino","Repeat preserves a chosen track")
 	for i in range(8): check(Tracks.next("babbino",1,true)!="babbino","Shuffle excludes the current piece")
 	var expected := {"math_count":6,"math_add":5,"math_take":4,"math_ten":6,"math_compare":"right","math_steps":8,"math_twenty":14,"math_split":3,"german_sun":"S","german_mouse":"M","german_apple":"A","german_rhyme":"mouse","german_robot":3,"german_read":"BALL","german_flower":2,"german_fish":"F","logic_repeat":"leaf","logic_triple":"moon","logic_odd":"ball","logic_shadow":"tree","logic_size":"large","logic_double":"sun","logic_shape":"robot","logic_rule":"flower"}
@@ -65,7 +75,7 @@ func run() -> void:
 		for i in range(3): await process_frame
 		var game: Control=app.game_view
 		var logical := Vector2(root.content_scale_size) if root.content_scale_size.x>0 else Vector2(viewport)
-		check(game.choosing and game.hero_choices.size()==5,"Visible five-hero first-run choice with Wanja")
+		check(game.choosing and game.hero_choices.size()==7,"Visible seven-hero first-run choice with Wanja")
 		for b in game.hero_choices:
 			check(b.get_global_rect().size.x>=64 and b.get_global_rect().size.y>=100,"Large character targets")
 			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"Hero choice fits viewport")
@@ -73,15 +83,15 @@ func run() -> void:
 		check(app.store.data.hero=="mama" and game.hero_choices[3].get_child(0).reaction>0,"Real touch selects hero and triggers colored reaction")
 		await touch_button(game.start_button)
 		check(not game.choosing and game.world.hero.person=="mama","Chosen hero enters the playable world")
-		for b in game.tabs: check(b.size.y>=48,"Subject touch areas at least 48 units")
+		for b in game.tabs:
+			check(b.size.y>=48 and b.size.x>=64,"Subject touch areas remain usable")
+			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"All eight subjects visible without swiping")
 		await touch_button(game.tabs[1]);check(game.subject=="german","Deutsch is reachable directly")
 		await touch_button(game.tabs[2]);check(game.subject=="logic","Logik is reachable directly")
 		await touch_button(game.tabs[0]);check(game.subject=="math","Mathe is reachable directly")
 		for index in range(3,8):
-			game.footer.ensure_control_visible(game.tabs[index])
 			await touch_button(game.tabs[index])
 			check(game.subject==Progress.SUBJECTS[index],"Real touch reaches additional subject "+Progress.SUBJECTS[index])
-		game.footer.ensure_control_visible(game.tabs[0])
 		await touch_button(game.tabs[0])
 		var start: float=game.world.hero_x
 		await touch(game.world.get_global_rect().position+game.world.station_center(0))
@@ -97,6 +107,8 @@ func run() -> void:
 		check(not panel.complete and Progress.stars(app.store.data.quest)==before,"Wrong tap retains task and costs nothing")
 		await touch_button(panel.choices[1])
 		check(panel.complete and Progress.stars(app.store.data.quest)==before+1,"Correct real touch awards exactly one star")
+		check(panel.score.points==(before+1)*10 and panel.score.pulse>0,"Task counter is visible and animates a new ten-point award")
+		check(panel.heading.text==app.t(panel.praise),"Success has varied visible praise")
 		panel.answer(panel.task.answer)
 		check(Progress.stars(app.store.data.quest)==before+1,"Repeated touches after success do not award again")
 		await touch_button(panel.next_button)
@@ -159,13 +171,98 @@ func run() -> void:
 	app.store.data.text_scale=1.0
 	app.store.data.locale="de"
 	check(Store.clean({"locale":"xx"}).locale=="de","Unknown locale falls back to German")
+	# Reflow one live task across real Window rotations; do not recreate the scene.
+	app.store.data.muted=true;app.store.data.locale="ru";app.store.data.text_scale=1.15;app.hub()
+	app.store.data.quest.solved.erase("physics_20")
+	app.game_view.switch_subject("physics");app.game_view.open_task(19)
+	var rotated_panel: Control=app.game_view.task_panel
+	var before_rotation:=Progress.stars(app.store.data.quest)
+	app.simulated_dpi=420
+	for pixels in [Vector2i(1080,2400),Vector2i(2400,1080),Vector2i(1080,2400),Vector2i(1920,1080),Vector2i(1080,1920)]:
+		root.size=pixels;app.update_mobile()
+		for frame in range(5):await process_frame
+		check(app.game_view.task_panel==rotated_panel and not rotated_panel.complete,"Rotation preserves the open task and answer state")
+		check(rotated_panel.heading.get_line_count()<=rotated_panel.heading.max_lines_visible,"Rotated question remains fully visible")
+		for b in rotated_panel.choices:
+			check(Rect2(Vector2.ZERO,Vector2(root.content_scale_size)).encloses(b.get_global_rect()) and b.size.x>=48,"Rotated answers stay on screen and tappable")
+		check(rotated_panel.score.get_global_rect().end.y<rotated_panel.heading.get_global_rect().position.y,"Score and question remain separate after rotation")
+	await touch_button(rotated_panel.choices[rotated_panel.task.options.find(rotated_panel.task.answer)])
+	check(rotated_panel.complete and Progress.stars(app.store.data.quest)==before_rotation+1,"Actual touch solves a task after repeated rotation")
+	app.game_view.close_task()
+	root.content_scale_size=Vector2i.ZERO;root.size=Vector2i(360,800);app.simulated_dpi=0;app.update_mobile()
+	app.store.data.text_scale=1.0;app.store.data.locale="de"
+	# New family choices survive selection, disk save and game re-entry.
+	for id in ["george","squirrel"]:
+		app.game_view.choose_hero()
+		var index: int=preload("res://core/quest/hero.gd").IDS.find(id)
+		await touch_button(app.game_view.hero_choices[index]);await touch_button(app.game_view.start_button)
+		check(app.game_view.world.hero.person==id,"New hero enters actual world: "+id)
+		var saved_hero:=Store.new();saved_hero.load_save()
+		check(saved_hero.data.hero==id,"New hero persists: "+id)
+	# Exercise every real wardrobe button and keep each family member's own look.
+	app.store.data.muted=true
+	for id in preload("res://core/quest/hero.gd").IDS:
+		app.game_view.choose_hero();app.game_view.select_hero(id)
+		for index in range(Wardrobe.LOOKS.size()):
+			var look: String=Wardrobe.LOOKS[index]
+			await touch_button(app.game_view.look_buttons[index])
+			check(app.store.data.looks[id]==look,"Native wardrobe selection persists per character: "+id+"/"+look)
+			var figure: Control=app.game_view.hero_choices[preload("res://core/quest/hero.gd").IDS.find(id)].get_child(0)
+			check(figure.costume==look and ((figure.current_texture() is AtlasTexture)==(look!="classic")),"Actual preview uses selected outfit texture")
+			for button in app.game_view.look_buttons:
+				check(button.size.x>=48 and button.size.y>=48 and Rect2(Vector2.ZERO,Vector2(360,800)).encloses(button.get_global_rect()),"Wardrobe touch targets fit the phone")
+		var mask: Image=Wardrobe.mask(id).get_image()
+		var data: Dictionary=Wardrobe.catalog.heroes[id]
+		for look_index in range(1,5):
+			var look: String=Wardrobe.LOOKS[look_index]
+			var probe: Array=data.probes[look]
+			check(roundi(mask.get_pixel(probe[0],probe[1]).r*255)==look_index,"Native atlas ownership prevents fragments from neighboring outfits")
+		app.game_view.finish_hero()
+		check(app.game_view.world.hero.costume=="scientist","Walking figure keeps selected clothing")
+		app.game_view.open_task(0)
+		check(app.game_view.task_panel.companion.costume=="scientist","Success companion keeps selected clothing")
+		app.game_view.close_task()
+	app.hub()
+	check(app.game_view.score.pulse==0 and app.game_view.score.points==Progress.stars(app.store.data.quest)*10,"Re-entry shows saved points without inventing a new award")
+	var wardrobe_save:=Store.new();wardrobe_save.load_save()
+	for id in preload("res://core/quest/hero.gd").IDS:check(wardrobe_save.data.looks[id]=="scientist","All seven independent wardrobe choices survive disk roundtrip")
+	var invalid_looks:=Store.clean({"scenery":"bad","looks":{"wanja":"fake","george":"hero","intruder":"alien"}})
+	check(invalid_looks.scenery=="auto" and invalid_looks.looks.wanja=="classic" and invalid_looks.looks.george=="hero" and not invalid_looks.looks.has("intruder"),"Invalid scenery and clothing data are whitelisted")
+	app.store.data.scenery="auto";app.game_view.switch_subject("math")
+	for page in range(3):
+		app.game_view.world.set_page(page)
+		check(app.game_view.world.scene_id()==["mountains","home","castle"][page],"Automatic scenery changes between trail pages")
+	for scene in ["mountains","home","castle"]:
+		app.store.data.scenery=scene;app.save()
+		check(app.game_view.world.scene_id()==scene,"Manual scenery choice overrides the automatic cycle")
+	var scenery_save:=Store.new();scenery_save.load_save()
+	check(scenery_save.data.scenery=="castle","Manual scenery persists locally")
+	app.game_view.world.reduced_motion=false;app.game_view.world.clock=0
+	var ghosts: Array=app.game_view.world.ghost_centers()
+	app.game_view.world.clock=4
+	check(ghosts!=app.game_view.world.ghost_centers(),"Castle ghosts really float with time")
+	app.game_view.world.reduced_motion=true;ghosts=app.game_view.world.ghost_centers();app.game_view.world.clock=8
+	check(ghosts==app.game_view.world.ghost_centers(),"Reduced motion holds ghosts still")
+	app.store.data.scenery="auto"
+	var praises: Array=[]
+	for n in range(12):praised(app,praises)
+	check(praises.slice(0,6).size()==6 and praises[0]==praises[6] and praises[0]!=praises[1],"Six praise variants rotate without immediate repetition")
 	app.store.data.muted=false;app.audio.sync_settings()
+	# Feedback waits for the entire current utterance instead of swallowing its tail.
+	app.narration.play_clip("quest/math_count")
+	var spoken: AudioStream=app.narration.stream
+	app.narration.speak_feedback("quest/again");app.narration.speak_feedback("quest/praise_2")
+	check(app.narration.stream==spoken and app.narration.pending_feedback=="praise_2","Successful feedback replaces pending retry without cutting the question")
+	app.narration.stop();app.narration.on_finished()
+	check(app.narration.clip=="quest/praise_2" and app.narration.playing,"Finished question starts complete praise")
+	app.narration.cancel()
+	check(app.narration.pending_feedback.is_empty() and app.narration.queue.is_empty(),"Explicit navigation clears stale queued praise")
 	app.musicbox()
 	var box: Control=app.body.get_child(0)
-	check(box.covers.size()==4,"All four classical tracks are selectable")
+	check(box.covers.size()==20,"All twenty classical tracks are selectable")
 	for id in preload("res://core/quest/tracks.gd").ITEMS:
 		box.select(id)
-		check(app.audio.music.players[app.audio.music.active].stream!=null,"Track really loads: "+id)
+		check(app.audio.music.world==id and app.audio.music.players[app.audio.music.active].stream!=null,"Track really loads: "+id)
 	# Test the actual AudioStreamPlayer.finished path with a short real stream.
 	var music: Node = app.audio.music
 	var previous: String = music.world
@@ -177,8 +274,10 @@ func run() -> void:
 	short_clip.data = silent_samples
 	music.players[music.active].stream=short_clip
 	music.players[music.active].play()
-	await create_timer(.25).timeout
-	check(music.world==Tracks.next(previous) and app.store.data.music_track==music.world,"Real audio completion advances and saves the playlist")
+	for attempt in range(30):
+		if music.world!=previous: break
+		await create_timer(.05).timeout
+	check(music.world==Tracks.next(previous) and app.store.data.music_track==music.world,"Real audio completion advances and saves the playlist: previous=%s current=%s saved=%s playing=%s" % [previous,music.world,app.store.data.music_track,str(music.players[music.active].playing)])
 	check(box.current.text.contains(Tracks.ITEMS[music.world].title),"Music box follows automatic title changes")
 	var now: String = music.world
 	music.on_finished(1-music.active)
@@ -212,3 +311,6 @@ func run() -> void:
 	quit(1 if failures else 0)
 func game_subject(app: Control,subject: String) -> void:
 	app.game_view.switch_subject(subject)
+
+func praised(app: Control,values: Array) -> void:
+	values.append(app.praise_id())

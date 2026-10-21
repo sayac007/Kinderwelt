@@ -1,6 +1,6 @@
 {
-  "status": "Four approved family characters plus Wanja as the main hero",
-  "references": "User-provided photographs; originals not redistributed",
+  "status": "Seven playable characters, with classic plus four independently selectable looks each",
+  "references": "User photographs and original illustrations; uploaded photos and actor recording not redistributed",
   "files": [
     {
       "file": "wanja.png",
@@ -51,6 +51,26 @@
       "format": "PNG RGBA",
       "bytes": 2985497,
       "sha256": "a8c8dc3fc5d7a61a0a170a96d0d0f4b0e20f8fb0159e4c4175a9d5f07b816b4c"
+    },
+    {
+      "file": "george.png",
+      "pixels": [
+        1024,
+        1536
+      ],
+      "format": "PNG RGBA",
+      "bytes": 1807425,
+      "sha256": "fe7a72e6903e63de84b114be09156b657ba7ae1a2be1fbc1f2482333940c8eab"
+    },
+    {
+      "file": "squirrel.png",
+      "pixels": [
+        1145,
+        1373
+      ],
+      "format": "PNG RGBA",
+      "bytes": 2213795,
+      "sha256": "77f0c3a781fadeaf60eb231aa72877169c85cd1fdc0ef7079ad6324a55a10ee2"
     }
   ]
 }

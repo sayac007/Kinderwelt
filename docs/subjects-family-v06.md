@@ -1,3 +1,5 @@
+> Diese Datei beschreibt Version 0.6. Aktuelle Looks, Kulissen, Stimmen und 20 Musiktitel: [Version 0.7](experience-v07.md).
+
 # Kinderwelt 0.6: Familie, acht Fächer und drei Sprachen
 
 Wanja ist der Hauptheld, steht zuerst in der Auswahl und ist bei neuen Spielständen vorausgewählt. Mischa, Du, Mama und die Katze bleiben unabhängig wählbar. Die bisherigen vier Figurenbilder sind vollständig ersetzt. Bereits gespeicherte Familienfiguren und die ursprünglichen 24 Aufgabenfortschritte bleiben erhalten. Die Katze hat eine eigene Pfoten-/Schwanzverformung; alle fünf Figuren behalten Lichtkranz, Klickreaktion, Bewegung und Jubel. Originalfotos und ZIP-Uploads gehören nicht zum Repository.

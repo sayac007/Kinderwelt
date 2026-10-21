@@ -31,21 +31,21 @@ func setup(parent: Control) -> void:
 	add_child(grid)
 	for id in Tracks.ITEMS:
 		var b: Button = host.button("",func(): select(id),grid)
-		b.custom_minimum_size = Vector2(140,208)
+		b.custom_minimum_size = Vector2(140,252)
 		b.tooltip_text = Tracks.ITEMS[id].composer+" · "+Tracks.ITEMS[id].title+" · "+Tracks.ITEMS[id].detail
 		var art := preload("res://core/quest/cover.gd").new()
 		art.track = id
 		art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		art.offset_bottom = -88
+		art.offset_bottom = -128
 		b.add_child(art)
 		var title := Label.new()
 		title.text = Tracks.ITEMS[id].title
 		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		title.add_theme_font_size_override("font_size",17)
+		title.add_theme_font_size_override("font_size",15)
 		title.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-		title.offset_top = -88
+		title.offset_top = -128
 		b.add_child(title)
 		covers[id] = b
 	host.audio.music.set_world(selected())

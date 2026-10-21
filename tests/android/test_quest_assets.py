@@ -18,8 +18,8 @@ class QuestAssetsTests(unittest.TestCase):
     def test_classical_tracks_are_real_playable_audio(self):
         folder=ROOT/'assets/music'
         tracks=json.loads((folder/'manifest.json').read_text())['tracks']
-        self.assertEqual(len(tracks),4)
-        self.assertEqual(len({t['sha256'] for t in tracks}),4)
+        self.assertEqual(len(tracks),20)
+        self.assertEqual(len({t['sha256'] for t in tracks}),20)
         for track in tracks:
             path=folder/track['file']
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),track['sha256'])
@@ -47,15 +47,19 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertAlmostEqual(len(pcm)/22050,clip['seconds'],delta=.06,msg=str(path))
             self.assertGreater(math.sqrt(sum(v*v for v in pcm)/len(pcm)),.005,msg=str(path))
             self.assertLess(max(abs(v) for v in pcm),1.001,msg=str(path))
+            self.assertLess(max(abs(v) for v in pcm[:2205]),.001,msg='Speech has a complete quiet lead-in: '+str(path))
+            self.assertLess(max(abs(v) for v in pcm[-3307:]),.001,msg='Speech has a complete quiet ending: '+str(path))
         for locale,model in [('de','de_DE-kerstin-low'),('en','en_US-ljspeech-medium'),('ru','ru_RU-denis-medium')]:
             folder=ROOT/'assets/voice/quest'/locale
             manifest=json.loads((folder/'manifest.json').read_text())
             self.assertEqual(manifest['model'],model)
+            self.assertEqual(manifest['synthesis']['length_scale'],1.18)
+            self.assertGreaterEqual(manifest['synthesis']['sentence_pause_seconds'],.25)
             self.assertIn(manifest['dataset_license'],['CC0','Public Domain'])
             self.assertEqual(manifest['voice_gender'],'male' if locale=='ru' else 'female')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
-            self.assertEqual(len(expected),652)
+            self.assertEqual(len(expected),663)
             self.assertEqual({c['id']:c['text'] for c in manifest['clips']},expected)
             unique={c['file']:c for c in manifest['clips']}
             self.assertEqual({p.name for p in folder.glob('*.ogg')},set(unique))
@@ -66,6 +70,13 @@ class QuestAssetsTests(unittest.TestCase):
         # Decode each delivered recording once, even if several exercises share it.
         with ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(decode,decoded))
         print('Decoded all',len(decoded),'unique localized voice recordings')
+    def test_phoneme_normalization_keeps_the_german_ich_sound_and_rejects_unknowns(self):
+        spec=importlib.util.spec_from_file_location('speech_source',ROOT/'scripts/generate-quest-voice.py')
+        source=importlib.util.module_from_spec(spec);spec.loader.exec_module(source)
+        self.assertEqual(source.normalized_phonemes(list('ɪc\u0327'),{'ɪ':[1],'ç':[2]}),['ɪ','ç'])
+        with self.assertRaises(ValueError):source.normalized_phonemes(['?'],{'ɪ':[1]})
+        model=json.loads((ROOT/'assets/voice/quest/de/manifest.json').read_text())
+        self.assertEqual(model['synthesis']['phoneme_normalization'],'supported-nfc')
     def test_translations_images_and_original_content_remain_complete(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())
@@ -91,16 +102,38 @@ class QuestAssetsTests(unittest.TestCase):
         self.assertEqual(before,[p.read_bytes() for p in paths])
     def test_graphics_are_real_png_and_individual_heroes_differ(self):
         hashes=set()
-        for name in ['wanja','mischa','du','mama','katze','icons','objects','landscape','science-a','science-b']:
+        for name in ['wanja','mischa','du','mama','katze','george','squirrel','icons','objects','landscape','science-a','science-b']:
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])
             self.assertGreaterEqual(width,1024)
             self.assertGreaterEqual(height,1024)
             hashes.add(hashlib.sha256(raw).hexdigest())
-        self.assertEqual(len(hashes),10)
+        self.assertEqual(len(hashes),12)
+    def test_costume_atlases_and_visible_frames(self):
+        # Metadata describes crops only; the generated atlas PNGs are never rewritten.
+        data=json.loads((ROOT/'assets/quest/looks.json').read_text())
+        self.assertEqual(set(data['heroes']),{'wanja','mischa','du','mama','katze','george','squirrel'})
+        for id,hero in data['heroes'].items():
+            raw=(ROOT/'assets/quest'/hero['file']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(),hero['sha256'])
+            width,height=struct.unpack('>II',raw[16:24])
+            self.assertEqual(raw[25],6)
+            self.assertEqual(set(hero['frames']),{'hero','alien','astronaut','scientist'})
+            self.assertEqual(set(hero['probes']),{'hero','alien','astronaut','scientist'})
+            self.assertGreater(len(hero['mask_runs']),height)
+            for row,left,length,owner in hero['mask_runs']:
+                self.assertTrue(0<=row<height and 0<=left<left+length<=width and owner in [1,2,3,4])
+            for look,rect in hero['frames'].items():
+                x,y,w,h=rect
+                self.assertGreater(w,80);self.assertGreater(h,160)
+                self.assertTrue(0<=x<x+w<=width and 0<=y<y+h<=height)
+        for name in ['home','castle']:
+            raw=(ROOT/'assets/quest'/(name+'.png')).read_bytes()
+            self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
+            self.assertGreater(len(raw),100000)
     def test_approved_family_art_is_used_without_changes(self):
-        for name in ['wanja','mischa','du','mama','katze']:
+        for name in ['wanja','mischa','du','mama','katze','george','squirrel']:
             self.assertEqual((ROOT/'assets/quest'/f'{name}.png').read_bytes(),(ROOT/'docs/character-proposals'/f'{name}.png').read_bytes())
         for name in ['mina','leo','sam','jule']:
             self.assertFalse((ROOT/'assets/quest'/f'{name}.png').exists())
@@ -117,12 +150,16 @@ class QuestAssetsTests(unittest.TestCase):
     def test_classical_sources_and_notices_are_present(self):
         data=json.loads((ROOT/'assets/music/manifest.json').read_text())
         composers={'wiener_blut':'Johann Strauss II','babbino':'Giacomo Puccini','french_song':'P. I. Tschaikowski','consolation':'Franz Liszt'}
-        self.assertEqual({t['id']:t['composer'] for t in data['tracks']},composers)
+        self.assertEqual({t['id']:t['composer'] for t in data['tracks'] if t['id'] in composers},composers)
+        self.assertEqual(len(data['tracks']),20)
+        self.assertTrue(data['complete'])
         for track in data['tracks']:
             source=ROOT/'scripts/music/scores'/track['source']['file']
             self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),track['source']['sha256'])
             self.assertTrue(track['license'] and track['arranger'])
             self.assertGreater(track['midi_notes'],40)
+            for dependency in track.get('dependencies',[]):
+                self.assertEqual(hashlib.sha256((ROOT/'scripts/music/scores'/dependency['file']).read_bytes()).hexdigest(),dependency['sha256'])
         for name in ['CC-BY-SA-4.0.txt','tnm-MIT.txt','GeneralUser-GS.txt']:
             self.assertGreater((ROOT/'assets/music/licenses'/name).stat().st_size,500)
 

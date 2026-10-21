@@ -19,12 +19,15 @@ python3 - "$OUTPUT" <<'PY'
 import hashlib,json,struct,sys
 from pathlib import Path
 p=Path(sys.argv[1]);frames=json.loads((p/'renders.json').read_text())
-assert len(frames)==272
+assert len(frames)==335
 for frame in frames:
  data=(p/(frame['name']+'.png')).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
  assert list(struct.unpack('>II',data[16:24]))==frame['pixels']
 for profile in ['phone','small','landscape','dense']:
  assert len({hashlib.sha256((p/(profile+'-heroes'+suffix+'.png')).read_bytes()).hexdigest() for suffix in ['', '-move','-think','-success']})==4
-print('PASS: 272 real frames; original 24 tasks, 15 science tasks, eight worlds, all three languages, route paging and menus at four profiles; distinct animated poses')
+for profile in ['phone','small','landscape','dense']:
+ assert (p/(profile+'-scene-castle.png')).read_bytes()!=(p/(profile+'-scene-castle-floating.png')).read_bytes()
+ assert len({hashlib.sha256((p/(profile+'-looks-'+look+'.png')).read_bytes()).hexdigest() for look in ['hero','alien','astronaut','scientist']})==4
+print('PASS: 335 real frames; independent looks and three sceneries; seven heroes, live task rotations, score animations; original 24 tasks, 15 science tasks, eight worlds, all three languages, route paging and menus at four profiles; distinct animated poses')
 PY

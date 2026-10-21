@@ -9,6 +9,7 @@ import ctypes
 import hashlib
 import importlib.metadata
 import json
+import re
 from pathlib import Path
 import subprocess
 import tempfile
@@ -83,15 +84,29 @@ def main():
     fluidsynth.fluid_version(ctypes.byref(fluid_major), ctypes.byref(fluid_minor), ctypes.byref(fluid_micro))
     fluid_library_version = f'{fluid_major.value}.{fluid_minor.value}.{fluid_micro.value}'
     catalog = json.loads((ROOT / 'scripts/music/catalog.json').read_text())
-    manifest = {'schema': 2, 'authorship': 'Own instrumental renderings of named public-domain compositions; score and arrangement licences are listed per track.',
+    prior=json.loads((ROOT/'assets/music/manifest.json').read_text())
+    cached={t['id']:t for t in prior.get('tracks',[])}
+    manifest = {'schema': 3, 'complete':False, 'authorship': 'Own instrumental renderings of named public-domain compositions; score and arrangement licences are listed per track.',
                 'renderer': {'lilypond': version, 'fluidsynth': fluid_library_version, 'ffmpeg': subprocess.check_output(['ffmpeg','-version'],text=True).splitlines()[0], 'mido': importlib.metadata.version('mido'), 'pyfluidsynth': importlib.metadata.version('pyfluidsynth'), 'soundfont_sha256': FONT_SHA}, 'tracks': []}
     with tempfile.TemporaryDirectory(prefix='kinderwelt-classical.') as directory:
         temp = Path(directory)
         for track in catalog['tracks']:
             original = ROOT / 'scripts/music/scores' / track['source']['file']
             assert hashlib.sha256(original.read_bytes()).hexdigest() == track['source']['sha256']
+            old=cached.get(track['id'],{})
+            audio=ROOT/'assets/music'/(track['id']+'.ogg')
+            if old.get('render_profile')=='score-modernization-1' and old.get('source')==track['source'] and audio.exists() and hashlib.sha256(audio.read_bytes()).hexdigest()==old.get('sha256'):
+                manifest['tracks'].append(old)
+                print('Cached:',track['title'],flush=True)
+                continue
             source = temp / original.name
-            source.write_bytes(original.read_bytes())
+            source.write_bytes(re.sub(rb"(?m)^%[^\n]*old-relative[^\n]*\n",b"",original.read_bytes()))
+            for dependency in track.get('dependencies',[]):
+                raw=(ROOT/'scripts/music/scores'/dependency['file']).read_bytes()
+                assert hashlib.sha256(raw).hexdigest()==dependency['sha256']
+                dep=temp/dependency['file'];dep.write_bytes(raw)
+                converted=subprocess.check_output([args.lilypond_root/'bin/convert-ly',str(dep)],stderr=subprocess.PIPE)
+                dep.write_bytes(converted)
             midi = source
             if track['kind'].startswith('lilypond'):
                 if track['kind'] == 'lilypond_wiener':
@@ -103,6 +118,9 @@ def main():
                     source.write_text(wrapper + ' >> \\midi {} }\n')
                 else:
                     converted = subprocess.check_output([args.lilypond_root / 'bin/convert-ly', str(source)], stderr=subprocess.PIPE)
+                    converted=re.sub(rb"#\s*\(set-octavation\s+(-?\d+)\)",lambda m:b"\\ottava #"+m.group(1),converted)
+                    # Obsolete beam-engraving settings affect notation only, not sound.
+                    converted=re.sub(rb"#\s*\(override-auto-beam-setting[^\n]*\n",b"",converted)
                     source.write_bytes(converted)
                 result = subprocess.run([lily, '-dno-print-pages', '-o', str(temp / track['id']), str(source)], cwd=temp, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                 (temp / (track['id']+'.log')).write_text(result.stdout)
@@ -116,9 +134,12 @@ def main():
             output = ROOT / 'assets/music' / (track['id']+'.ogg')
             subprocess.run(['ffmpeg', '-nostdin', '-hide_banner', '-loglevel', 'error', '-y', '-i', str(wav), '-c:a', 'libvorbis', '-q:a', '5', '-metadata', 'title='+track['title'], '-metadata', 'artist='+track['composer'], str(output)], check=True)
             data.update(track)
+            data["render_profile"]="score-modernization-1"
             data.update(file=output.name, bytes=output.stat().st_size, sha256=hashlib.sha256(output.read_bytes()).hexdigest())
             manifest['tracks'].append(data)
+            (ROOT/'assets/music/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
             print(track['title'], round(data['seconds'], 2), 'seconds', flush=True)
+    manifest['complete']=len(manifest['tracks'])==len(catalog['tracks'])
     (ROOT / 'assets/music/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
 
 

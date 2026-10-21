@@ -1,33 +1,126 @@
-Kinderwelt: neue Instrumentalwiedergaben klassischer Kompositionen.
-Wiener Blut und O mio babbino caro sind Themenauszüge; keine vollständigen Aufführungen.
-Alle Renderings verwenden GeneralUser GS 2.0.3 von S. Christian Collins. Die Lizenz gestattet private und kommerzielle Musikproduktion; siehe licenses/GeneralUser-GS.txt.
+Kinderwelt: 20 eigene Klavierwiedergaben klassischer Kompositionen.
+Wiener Blut und O mio babbino caro sind Themenauszüge. Die anderen Titel sind Klavierfassungen der jeweiligen Noten-/MIDI-Ausgabe; keine fremden Orchesteraufnahmen.
+GeneralUser GS 2.0.3: S. Christian Collins; Lizenz siehe licenses/GeneralUser-GS.txt.
+Die Auswahl ist eine kuratierte Sammlung, keine objektive Rangliste.
 
 Johann Strauss II: Wiener Blut · Walzerauszug
 Christian F. Coors / OpenRCT2 OpenMusic contributors; Kinderwelt instrumental rendering
-Lizenz: CC-BY-SA-4.0
-Quelle: https://github.com/OpenRCT2/OpenMusic.git/blob/b8f4d46e6775326219bad58fec728da5dc740433/fairground_style/strauss_waltzes/wiener_blut.ly
-Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+Lizenz: CC-BY-SA-4.0 · https://creativecommons.org/licenses/by-sa/4.0/
+Quelle: https://github.com/OpenRCT2/OpenMusic/blob/b8f4d46e6775326219bad58fec728da5dc740433/fairground_style/strauss_waltzes/wiener_blut.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
 
 Giacomo Puccini: O mio babbino caro · Thema
 tnm; Kinderwelt instrumental rendering
-Lizenz: MIT (MIDI arrangement); public domain composition
-Quelle: https://github.com/tnm/mbot.git/blob/9058a1ca64aa51b8837cd6ec267ed638b5e4b9a2/midi/o_mio_babbino_caro.mid
-Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+Lizenz: MIT (MIDI arrangement); public domain composition · https://opensource.org/license/mit/
+Quelle: https://github.com/tnm/mbot/blob/9058a1ca64aa51b8837cd6ec267ed638b5e4b9a2/midi/o_mio_babbino_caro.mid
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+Zeitfaktor: 1.65
 
 P. I. Tschaikowski: Altes französisches Lied
 David McNamara / Mutopia; Kinderwelt piano rendering
-Lizenz: Public Domain
-Quelle: https://github.com/MutopiaProject/MutopiaProject.git/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly
-Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
 
 Franz Liszt: Consolation Nr. 1
 Ryan Prince / Mutopia; Kinderwelt piano rendering
-Lizenz: CC-BY-3.0
-Quelle: https://github.com/MutopiaProject/MutopiaProject.git/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/LisztF/S.172/liszt-consolation-no1/liszt-consolation-no1.ly
-Bearbeitung: Klavierklang neu gerendert; Tempo bei Wiener Blut180 Viertel/min; Puccini-MIDI um Faktor1.65 verlangsamt.
+Lizenz: CC-BY-3.0 · https://creativecommons.org/licenses/by/3.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/LisztF/S.172/liszt-consolation-no1/liszt-consolation-no1.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
 
-CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
-CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
-Wiener-Blut-Audiodatei: Bearbeitung unter CC BY-SA4.0. Liszt-Audiodatei: Bearbeitung unter CC BY3.0.
-Puccini: zugrunde liegende Komposition gemeinfrei; MIDI-Bearbeitung unter MIT (siehe tnm-MIT.txt).
-Tschaikowski: gemeinfreie Komposition und als Public Domain freigegebene Notentranskription (David McNamara / Mutopia).
+Ludwig van Beethoven: Für Elise
+Stelios Samelis / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Johann Sebastian Bach: Präludium C-Dur · BWV 846
+Tobias Erbsland / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Erik Satie: Gymnopédie Nr. 1
+Evin Robertson / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/SatieE/gymnopedie_1/gymnopedie_1.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Claude Debussy: Clair de lune
+Keith OHara / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Frédéric Chopin: Nocturne · Op. 9 Nr. 2
+Renato Biolcati Rinaldi / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Robert Schumann: Träumerei · Op. 15 Nr. 7
+Ying-Chun Liu / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/SchumannR/O15/SchumannOp15No07/SchumannOp15No07.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Wolfgang Amadeus Mozart: Sonata facile · Allegro
+Alejandro Sierra / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/MozartWA/KV545/K545-1/K545-1.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Claude Debussy: Arabesque Nr. 1
+Keith OHara / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Johannes Brahms: Walzer · Op. 39 Nr. 15
+Brian D. Rude / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BrahmsJ/O39/waltz-op39-15/waltz-op39-15.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Johann Pachelbel: Kanon in D
+Anonymous / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-3.0 · https://creativecommons.org/licenses/by/3.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/PachelbelJ/CanonInD/CanonInD.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Franz Schubert: Impromptu · D 899 Nr. 3
+Ph. Raynaud / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Johann Sebastian Bach: Invention Nr. 1 · BWV 772
+jeff covey / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Frédéric Chopin: Prélude e-Moll · Op. 28 Nr. 4
+Magnus Lewis-Smith / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ChopinFF/O28/Chop-28-4/Chop-28-4.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Christian Petzold: Menuett G-Dur · BWV Anh. 114
+Shamim Mohamed / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWVAnh114/Minuet-xpose/Minuet-xpose.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+Historically attributed to Bach in the source; now attributed to Christian Petzold.
+
+Wolfgang Amadeus Mozart: Rondo alla turca
+Rune Zedeler and Chris Sawer / Mutopia; Kinderwelt piano rendering
+Lizenz: Public Domain · https://creativecommons.org/publicdomain/mark/1.0/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca-lys/KV331_3_RondoAllaTurca.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
+
+Ludwig van Beethoven: Mondscheinsonate · Adagio sostenuto
+Stewart Holmes / Mutopia; Kinderwelt piano rendering
+Lizenz: CC-BY-SA-2.5 · https://creativecommons.org/licenses/by-sa/2.5/
+Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BeethovenLv/O27/moonlight/moonlight-lys/moonlight1-a4.ly
+Bearbeitung: eigene instrumentale Klavierwiedergabe; Grand Piano; ältere LilyPond-Syntax modernisiert.
