@@ -1,0 +1,21 @@
+test_activity_alias_target_is_checked (test_verification.VerificationTests.test_activity_alias_target_is_checked) ... ok
+test_changed_missing_or_duplicate_data_is_rejected (test_verification.VerificationTests.test_changed_missing_or_duplicate_data_is_rejected) ... ok
+test_content_integrity_supports_apk_base_and_install_time_aab_assets (test_verification.VerificationTests.test_content_integrity_supports_apk_base_and_install_time_aab_assets) ... ok
+test_debuggable_release_is_rejected (test_verification.VerificationTests.test_debuggable_release_is_rejected) ... ok
+test_development_and_key_files_rejected (test_verification.VerificationTests.test_development_and_key_files_rejected) ... ok
+test_elf_16kb (test_verification.VerificationTests.test_elf_16kb) ... ok
+test_every_resource_category_and_family_character_is_checked (test_verification.VerificationTests.test_every_resource_category_and_family_character_is_checked) ... ok
+test_identity_version_sdk_backup_rotation_drift_rejected (test_verification.VerificationTests.test_identity_version_sdk_backup_rotation_drift_rejected) ... ok
+test_missing_modules_rejected (test_verification.VerificationTests.test_missing_modules_rejected) ... ok
+test_missing_music_payload_rejected (test_verification.VerificationTests.test_missing_music_payload_rejected) ... ok
+test_non_elf_rejected (test_verification.VerificationTests.test_non_elf_rejected) ... ok
+test_permission_rejected (test_verification.VerificationTests.test_permission_rejected) ... ok
+test_preview_identity_is_explicit_and_preserves_main_app (test_verification.VerificationTests.test_preview_identity_is_explicit_and_preserves_main_app) ... ok
+test_replaced_character_artwork_rejected (test_verification.VerificationTests.test_replaced_character_artwork_rejected) ... ok
+test_valid_manifest (test_verification.VerificationTests.test_valid_manifest) ... ok
+test_valid_payload (test_verification.VerificationTests.test_valid_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.143s
+
+OK

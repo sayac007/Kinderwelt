@@ -1,12 +1,121 @@
 {
   "schema": 3,
   "version": "0.7.0",
+  "date": "2026-10-21",
   "functional_checks": 5378,
   "python_tests": 34,
   "render_frames": 335,
-  "status": "PASS for local suite and desktop renderings",
-  "android_export": "PENDING",
+  "decoded_unique_voice_files": 1621,
+  "decoded_music_files": 20,
+  "status": "PASS for local automated suite, desktop renderings and Android artifact verification",
+  "android_builds": {
+    "standard": {
+      "output": "build/android-v07",
+      "source_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "source_dirty": false,
+      "application_source_sha256": "6728079b91a2b8a0c92d4b5f3d7c00698f2c2641e8fa20d788a7ea6917703b6d",
+      "status": "PASS",
+      "artifacts": {
+        "kinderwelt-debug.apk": {
+          "assets_checked": 3413,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "native_packaging": "deflated; extracted by Android on installation",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.7.0",
+          "version_code": 7,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "verified Godot development certificate, v2",
+          "zip_16kb_alignment": "PASS",
+          "bytes": 197707702,
+          "sha256": "98548390d1d694163d66a1c0bed7caa4c336d176ad328c1c636a951779ab759d"
+        },
+        "kinderwelt-unsigned.aab": {
+          "assets_checked": 3413,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "native_packaging": "deflated; extracted by Android on installation",
+          "package": "org.example.kinderwelt",
+          "version_name": "0.7.0",
+          "version_code": 7,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "UNSIGNED",
+          "rendering": "gl_compatibility",
+          "bytes": 186388224,
+          "sha256": "727f50ec2a77dd949df39472c8e1d9e32b2d32998ab33696dfb6289ddb0f8016"
+        }
+      }
+    },
+    "preview": {
+      "output": "build/android-v07-test",
+      "source_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "source_dirty": false,
+      "application_source_sha256": "470a20e30a4b6f41ab265f6129e9281397fe1c54a3824a225a7894189181dc7b",
+      "status": "PASS",
+      "artifacts": {
+        "kinderwelt-debug.apk": {
+          "assets_checked": 3413,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "native_packaging": "deflated; extracted by Android on installation",
+          "package": "org.example.kinderwelt.preview.v07",
+          "version_name": "0.7.0",
+          "version_code": 7,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "verified Godot development certificate, v2",
+          "zip_16kb_alignment": "PASS",
+          "bytes": 197707754,
+          "sha256": "597d462f8bd1a86c42d928a0bafe4e1179790db31704ccca20600f51899547ff"
+        },
+        "kinderwelt-unsigned.aab": {
+          "assets_checked": 3413,
+          "abis": [
+            "arm64-v8a",
+            "x86_64"
+          ],
+          "elf_16kb_alignment": "PASS",
+          "native_packaging": "deflated; extracted by Android on installation",
+          "package": "org.example.kinderwelt.preview.v07",
+          "version_name": "0.7.0",
+          "version_code": 7,
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "permissions": [],
+          "allow_backup": false,
+          "orientation": "fullUser",
+          "signature": "UNSIGNED",
+          "rendering": "gl_compatibility",
+          "bytes": 186388350,
+          "sha256": "df11888448252363a913abe5b27c8d21c6588f248ded9ffac32301b83b2f138a"
+        }
+      }
+    }
+  },
+  "remote_ci": "NOT OBSERVED",
   "device_testing": "OPEN",
   "human_listening": "OPEN",
-  "learning_effect": "NOT ESTABLISHED"
+  "child_usability": "NOT EMPIRICALLY EVALUATED",
+  "learning_effect": "NOT ESTABLISHED",
+  "play_upload_readiness": "BLOCKED"
 }

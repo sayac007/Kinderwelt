@@ -1,0 +1,10 @@
+{
+  "technical_status": "PASS",
+  "task_count": 320,
+  "subjects": 8,
+  "findings": [],
+  "scope": "Bounded runtime network/permission/source checks, not a security certification",
+  "device_testing": "OPEN",
+  "child_usability": "NOT EMPIRICALLY EVALUATED",
+  "learning_effect": "NOT ESTABLISHED"
+}

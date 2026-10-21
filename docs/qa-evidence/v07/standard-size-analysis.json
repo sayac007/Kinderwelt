@@ -1,0 +1,340 @@
+{
+  "artifacts": [
+    {
+      "path": "/workspace/Kinderwelt/build/android-v07/kinderwelt-debug.apk",
+      "bytes": 197707702,
+      "sha256": "98548390d1d694163d66a1c0bed7caa4c336d176ad328c1c636a951779ab759d",
+      "groups": {
+        "audio": {
+          "raw_bytes": 94420379,
+          "stored_bytes": 89172829,
+          "files": 1641
+        },
+        "fonts": {
+          "raw_bytes": 150581,
+          "stored_bytes": 149683,
+          "files": 1
+        },
+        "graphics": {
+          "raw_bytes": 44250357,
+          "stored_bytes": 44084738,
+          "files": 70
+        },
+        "application/imports/other": {
+          "raw_bytes": 2393965,
+          "stored_bytes": 965433,
+          "files": 1742
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 6188161,
+          "stored_bytes": 2407334,
+          "files": 70
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 77555944,
+          "stored_bytes": 28340126,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 82524296,
+          "stored_bytes": 31735164,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 852395,
+      "largest": [
+        {
+          "file": "lib/x86_64/libgodot_android.so",
+          "raw_bytes": 81186808,
+          "stored_bytes": 31226056,
+          "zip_method": 8,
+          "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+        },
+        {
+          "file": "lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 76181608,
+          "stored_bytes": 27838354,
+          "zip_method": 8,
+          "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+        },
+        {
+          "file": "assets/.godot/imported/impromptu.ogg-cfeb0709d896c2cf16439ac1f486c734.oggvorbisstr",
+          "raw_bytes": 5295728,
+          "stored_bytes": 5158859,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/clair.ogg-bdb851560393b262dbb791055d449b49.oggvorbisstr",
+          "raw_bytes": 4965153,
+          "stored_bytes": 4775143,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/moonlight.ogg-5b2c5772e30b561ddc19ceb1f63f3a85.oggvorbisstr",
+          "raw_bytes": 4184222,
+          "stored_bytes": 4021660,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/turca.ogg-9d1daff1ecdd781d0cfc03a1d2cc8006.oggvorbisstr",
+          "raw_bytes": 4077665,
+          "stored_bytes": 3887588,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/nocturne.ogg-cda54624de2beb0fc5598dbb4c77cd00.oggvorbisstr",
+          "raw_bytes": 3149354,
+          "stored_bytes": 3028044,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/canon.ogg-a26523f875d2b5e93c40bc9e35819a54.oggvorbisstr",
+          "raw_bytes": 2732260,
+          "stored_bytes": 2585250,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/arabesque.ogg-95be8b8e746418d3ad8f9d0f7880366a.oggvorbisstr",
+          "raw_bytes": 2696519,
+          "stored_bytes": 2578375,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/assets/quest/appicon.png",
+          "raw_bytes": 2472297,
+          "stored_bytes": 2472297,
+          "zip_method": 0
+        },
+        {
+          "file": "assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+          "raw_bytes": 2356054,
+          "stored_bytes": 2356718,
+          "zip_method": 8
+        },
+        {
+          "file": "classes.dex",
+          "raw_bytes": 6043992,
+          "stored_bytes": 2332621,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/looks-katze.png-dad6d7cd0de80abe640121bb8d551f94.ctex",
+          "raw_bytes": 2273344,
+          "stored_bytes": 2270235,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/looks-squirrel.png-5e511f424388f197ebd38f34327698f2.ctex",
+          "raw_bytes": 2193890,
+          "stored_bytes": 2190865,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/gymnopedie.ogg-626e92c899f6d7e9199e4cbdbcc0cbf1.oggvorbisstr",
+          "raw_bytes": 2184277,
+          "stored_bytes": 2131395,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/castle.png-a0dff9aedb268e68672168b9ecb25484.ctex",
+          "raw_bytes": 2112980,
+          "stored_bytes": 2113601,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/bach_prelude.ogg-35b9f6a9ac7ebbb42129ade0d8995157.oggvorbisstr",
+          "raw_bytes": 2132354,
+          "stored_bytes": 2009586,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/mozart_sonata.ogg-6e889b62671459e2910e671ec8bc8289.oggvorbisstr",
+          "raw_bytes": 2091669,
+          "stored_bytes": 1996033,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+          "raw_bytes": 1984326,
+          "stored_bytes": 1983879,
+          "zip_method": 8
+        },
+        {
+          "file": "assets/.godot/imported/looks-mischa.png-86f8c42048ca67d8eeec32e3880743a8.ctex",
+          "raw_bytes": 1923714,
+          "stored_bytes": 1918420,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    },
+    {
+      "path": "/workspace/Kinderwelt/build/android-v07/kinderwelt-unsigned.aab",
+      "bytes": 186388224,
+      "sha256": "727f50ec2a77dd949df39472c8e1d9e32b2d32998ab33696dfb6289ddb0f8016",
+      "groups": {
+        "audio": {
+          "raw_bytes": 94420379,
+          "stored_bytes": 88090260,
+          "files": 1641
+        },
+        "fonts": {
+          "raw_bytes": 150581,
+          "stored_bytes": 149930,
+          "files": 1
+        },
+        "graphics": {
+          "raw_bytes": 44250357,
+          "stored_bytes": 44017653,
+          "files": 70
+        },
+        "application/imports/other": {
+          "raw_bytes": 2393965,
+          "stored_bytes": 876041,
+          "files": 1742
+        },
+        "Android/metadata/classes": {
+          "raw_bytes": 5252763,
+          "stored_bytes": 1825150,
+          "files": 78
+        },
+        "native/arm64-v8a": {
+          "raw_bytes": 72489280,
+          "stored_bytes": 24478799,
+          "files": 2
+        },
+        "native/x86_64": {
+          "raw_bytes": 75398760,
+          "stored_bytes": 25835633,
+          "files": 2
+        }
+      },
+      "zip_alignment_signing_overhead_bytes": 1114758,
+      "largest": [
+        {
+          "file": "base/lib/x86_64/libgodot_android.so",
+          "raw_bytes": 74061272,
+          "stored_bytes": 25373224,
+          "zip_method": 8,
+          "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+        },
+        {
+          "file": "base/lib/arm64-v8a/libgodot_android.so",
+          "raw_bytes": 71114944,
+          "stored_bytes": 24023949,
+          "zip_method": 8,
+          "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/impromptu.ogg-cfeb0709d896c2cf16439ac1f486c734.oggvorbisstr",
+          "raw_bytes": 5295728,
+          "stored_bytes": 5113263,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/clair.ogg-bdb851560393b262dbb791055d449b49.oggvorbisstr",
+          "raw_bytes": 4965153,
+          "stored_bytes": 4724977,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/moonlight.ogg-5b2c5772e30b561ddc19ceb1f63f3a85.oggvorbisstr",
+          "raw_bytes": 4184222,
+          "stored_bytes": 3980816,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/turca.ogg-9d1daff1ecdd781d0cfc03a1d2cc8006.oggvorbisstr",
+          "raw_bytes": 4077665,
+          "stored_bytes": 3841160,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/nocturne.ogg-cda54624de2beb0fc5598dbb4c77cd00.oggvorbisstr",
+          "raw_bytes": 3149354,
+          "stored_bytes": 2995007,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/canon.ogg-a26523f875d2b5e93c40bc9e35819a54.oggvorbisstr",
+          "raw_bytes": 2732260,
+          "stored_bytes": 2552536,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/arabesque.ogg-95be8b8e746418d3ad8f9d0f7880366a.oggvorbisstr",
+          "raw_bytes": 2696519,
+          "stored_bytes": 2549156,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/assets/quest/appicon.png",
+          "raw_bytes": 2472297,
+          "stored_bytes": 2430103,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+          "raw_bytes": 2356054,
+          "stored_bytes": 2356717,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/looks-katze.png-dad6d7cd0de80abe640121bb8d551f94.ctex",
+          "raw_bytes": 2273344,
+          "stored_bytes": 2269473,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/looks-squirrel.png-5e511f424388f197ebd38f34327698f2.ctex",
+          "raw_bytes": 2193890,
+          "stored_bytes": 2189905,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/castle.png-a0dff9aedb268e68672168b9ecb25484.ctex",
+          "raw_bytes": 2112980,
+          "stored_bytes": 2113591,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/gymnopedie.ogg-626e92c899f6d7e9199e4cbdbcc0cbf1.oggvorbisstr",
+          "raw_bytes": 2184277,
+          "stored_bytes": 2113478,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/bach_prelude.ogg-35b9f6a9ac7ebbb42129ade0d8995157.oggvorbisstr",
+          "raw_bytes": 2132354,
+          "stored_bytes": 1985285,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+          "raw_bytes": 1984326,
+          "stored_bytes": 1983300,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/mozart_sonata.ogg-6e889b62671459e2910e671ec8bc8289.oggvorbisstr",
+          "raw_bytes": 2091669,
+          "stored_bytes": 1972932,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/looks-mischa.png-86f8c42048ca67d8eeec32e3880743a8.ctex",
+          "raw_bytes": 1923714,
+          "stored_bytes": 1916705,
+          "zip_method": 8
+        },
+        {
+          "file": "assetPackInstallTime/assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
+          "raw_bytes": 1896562,
+          "stored_bytes": 1896682,
+          "zip_method": 8
+        }
+      ],
+      "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+    }
+  ]
+}

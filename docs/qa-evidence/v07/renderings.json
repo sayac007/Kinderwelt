@@ -1,0 +1,2682 @@
+[
+  {
+    "name": "phone-heroes",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "003788ade9b3dc23408edb76e55022a7f17d45834350fc4043ec77d1b5582772"
+  },
+  {
+    "name": "phone-heroes-move",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a8b16cd2570b4bbe4da73d9b616b25364fd18b037504a306efcfd0d3dad8c141"
+  },
+  {
+    "name": "phone-heroes-think",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "6c03b0976521784b17de9363de8a410385b0a7b95eb8ce37de7f1e2dd89c0851"
+  },
+  {
+    "name": "phone-heroes-success",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8a542ab01e9d878b4e6ba948c2123c81043ce5e750bd38515321076452e11bde"
+  },
+  {
+    "name": "phone-looks-hero",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "7965d816e8c46687101dc9cc8e145c661f11f9b0be28652e32699d231c2e24d1"
+  },
+  {
+    "name": "phone-looks-alien",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "56298f017e02d38ebe1ca8846c3c3ebb9c333eef243baca76dd2a836ba84ccf3"
+  },
+  {
+    "name": "phone-looks-astronaut",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "2937491126e39fcaa7c9b5ab8adbeaf9efde86c5faddfa7bb8ae8e753604c1ca"
+  },
+  {
+    "name": "phone-looks-scientist",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "1eb6592ef28336ed951a33b861b5a7d2da12da978c05ae86c8198d0054cce1b0"
+  },
+  {
+    "name": "phone-math-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "d775642e4649f2a37e3aa5e64533e14fa23467ce2a7032f190b3df17e819d9e4"
+  },
+  {
+    "name": "phone-math-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "aa5bbbc34564a4bd284c89b127f152c086bf1c2c7d7effd84ec4057e75ecd4cc"
+  },
+  {
+    "name": "phone-math-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "5dc0b66e86d97eb106436e28203afc2ca31ec434eecd89a0682e5c17da138ccf"
+  },
+  {
+    "name": "phone-math-task-1",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "acf674f31a228674b694905c1665b70b394ea22cf7fc9e10a4958bb104053b7e"
+  },
+  {
+    "name": "phone-math-task-2",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "9b338614d1e539260ca5fd6f93299f210a0b50d27d055c9a5d7bb9e57a5eefeb"
+  },
+  {
+    "name": "phone-math-task-3",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "4497e5f68c07c5b7094f8f7b201f939112993d808195eb0640b12833b658e227"
+  },
+  {
+    "name": "phone-math-task-4",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "d1ba8358cf5e0d417a8ef4731dc9d5f416a8286ea815720135e4d6d13d6b0675"
+  },
+  {
+    "name": "phone-math-task-5",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a4386febf2a7503b52f1d92ee89d97912fb9f1887d91007c555475c164f6b6d8"
+  },
+  {
+    "name": "phone-math-task-6",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "6b4d676c40cbd18efcb69c1764b35ae1de2e3d2eb17869389e81309127d13818"
+  },
+  {
+    "name": "phone-math-task-7",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "44cc35a47bd682d7b19a2fed76662425e4f1db00f329a71c3bf013268b7a9eb8"
+  },
+  {
+    "name": "phone-german-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "f9e32d8d01e82b4739ec4db596b9ec8784c6b7810e527919a5cea41115ba9ef5"
+  },
+  {
+    "name": "phone-german-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "05f80c39dc001b565625eb971f931b4fac8245e8aec69fad8a0a0e5054b220f2"
+  },
+  {
+    "name": "phone-german-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "dc2644a6d17eb860fd32b38c086cdf2dec622d1263e0fe660267f84c3700f7af"
+  },
+  {
+    "name": "phone-german-task-1",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "984eee2d4c093726b14672eb0e9888eac60d9b0dc08ba71a4b0a06505d787c8e"
+  },
+  {
+    "name": "phone-german-task-2",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "1d494467358663fd87c7f729532cad861e8cc2efb75130d3d5b1143b79b24dd5"
+  },
+  {
+    "name": "phone-german-task-3",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "d7e7e00fd2aab7526273aab9e74e1a30c761110945b5e84faef452202a635c71"
+  },
+  {
+    "name": "phone-german-task-4",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "0ea9df6e98c9551d01d5c343d4fb21520f0e94d403b8c0a5cabd2c2a0f428ad0"
+  },
+  {
+    "name": "phone-german-task-5",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "f9d0d31827f8e9745f0badc3ba2bcab6fe5787080ecb095c2cbfb67ebfb0bbca"
+  },
+  {
+    "name": "phone-german-task-6",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "93387c25de06629642ed4c082fb69070eb63173785fdbd4fde2573ce0484c8da"
+  },
+  {
+    "name": "phone-german-task-7",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "084110e253b54b14b1e6cb1d0ce7a89eb831327764e51b71c4e55c5ce38a5e81"
+  },
+  {
+    "name": "phone-logic-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "bc61ff09a5dbc86b460c526c81144b4b88d110a51b9ed61ee380d1df9970d401"
+  },
+  {
+    "name": "phone-logic-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "32f9be80b42bd8184cfd570e40487ed87c2b2302bf9a514583248b59aa77e19b"
+  },
+  {
+    "name": "phone-logic-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "b5a67e0f81254765450c11e311b7ad961f7bec5888db26c89f8422c9f6672f04"
+  },
+  {
+    "name": "phone-logic-task-1",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "80eecc135249ec17d0dab585fc9e5a0965fdaddae1ae64dd65d65e6727d09318"
+  },
+  {
+    "name": "phone-logic-task-2",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "670e3bbb7dab573228ff0925e6672c050b177280cc1c014bb7e1354989119b64"
+  },
+  {
+    "name": "phone-logic-task-3",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "3998e403f7d0b6c0288732f377a5c350333773b06b90af3e6afcafef124fbbe7"
+  },
+  {
+    "name": "phone-logic-task-4",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "cfabcadca57a7c1fad31e1275bed20416eb2173e36395fc92380efc4b9fc9b39"
+  },
+  {
+    "name": "phone-logic-task-5",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "abb4f3d8746c7251ee09263a5b302cdd1f063fbe6abc6ba8e3bf0d7993533aa4"
+  },
+  {
+    "name": "phone-logic-task-6",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "f6e98b263cd7d2c20f90618784ab6efe2275ae4aa58c137e2f02f24c99ce45b6"
+  },
+  {
+    "name": "phone-logic-task-7",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a929affb5674d9a0dd5f5604ad63341bcf037e555336206c526c2df3adce1055"
+  },
+  {
+    "name": "phone-physics-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "23a304fba3725ded2ec34b24efa25fc25d13f3cc3af3ab12719c94a90f9f99cb"
+  },
+  {
+    "name": "phone-physics-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "4e53d0689ccaa8c2ff89e7b0553e90fd7905d7b7825f8bea80d69cae6d779aae"
+  },
+  {
+    "name": "phone-physics-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "e5a3fdb31a90b9cfbcd5478c4636521e21dfb16b5a02d332f46a68adbc3da21b"
+  },
+  {
+    "name": "phone-physics-task-19",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "6ca900d463e8cec3b91c24aa590a6b80fe4d1f4a0bb4f65e93b6d6b182b51184"
+  },
+  {
+    "name": "phone-physics-task-39",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "444e8aa8c4647b41882e695d6cc4c1144e8679022e0febd6a6e7d5caa15015f7"
+  },
+  {
+    "name": "phone-biology-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8b9b3c179f49f1ba46ac5017c0a66f926669cf15c8d725e0097836fc9aed2370"
+  },
+  {
+    "name": "phone-biology-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "97f6515865cff60a849f078304e5a9026bf9a8cb3ca153e8287bd09b52c3e758"
+  },
+  {
+    "name": "phone-biology-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a09dcea96b00c83ff55c6cfac422a18889e5dd656b7f5801558120ff3760827c"
+  },
+  {
+    "name": "phone-biology-task-19",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "ddca043ea40a49a8f951e3cdecd8c6d176a8b02ab6b7b6d9e59a9430020bea90"
+  },
+  {
+    "name": "phone-biology-task-39",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "6f985ab291e46017473ba12a5496dcf37c34a5e0d6058ddaf4c999e3bf47a79f"
+  },
+  {
+    "name": "phone-chemistry-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "d361b7a3f492e88e5630f2a4dd72119e7b969722c3167f9173992a3898a8e3ca"
+  },
+  {
+    "name": "phone-chemistry-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "e46a06d902dc8f1553cdbf0b9d3783d1dbaef4004453d9fd18cac98aa062675b"
+  },
+  {
+    "name": "phone-chemistry-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "f6994ec9454e52bfdd52939cd8d0c4816aecb790f3e4f02d674b26decacc695c"
+  },
+  {
+    "name": "phone-chemistry-task-19",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "482dfbe68db2aa6f310f64206cde7f04c777ed432e345893196cb94014022623"
+  },
+  {
+    "name": "phone-chemistry-task-39",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "87f070e44bb18d0c4fb8e95a59d0291425eeca730755efd0ecd8fc7911b209b8"
+  },
+  {
+    "name": "phone-body-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8116f55632ae4d13c5fdf7923bc7f4f6710271cc2535d706f16e917cd5de591b"
+  },
+  {
+    "name": "phone-body-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "cc698edadd225ceb36db82adb85bac730ea2951069606a31fe07489cc725cac4"
+  },
+  {
+    "name": "phone-body-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "276e127d3b7411b704aa0f6cb1146218597b9708af8f2bff27fb549d8def559a"
+  },
+  {
+    "name": "phone-body-task-19",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "2f1c39a43e02757e9f9cf2fe26123eb6dd4fdab1454875e62aaebed3e0b4beed"
+  },
+  {
+    "name": "phone-body-task-39",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "53103bad6a9e7ab15e56917c7a67ccb2be7039bdcd84a726d7cf2c5619017d49"
+  },
+  {
+    "name": "phone-geography-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "28f6bf8a031bce2d7940e486ce92ef8419659fd7a7b16f3ca1c91290592a5217"
+  },
+  {
+    "name": "phone-geography-task-0",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "80ce67677cba83a606f561ced6baa7cb470e9ba035dca3d9c0034327be6e1ee8"
+  },
+  {
+    "name": "phone-geography-solved",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "5bbca099e119934671b3b114ea5e1012a1ea7f325d5723a60cd0f555c6950ebf"
+  },
+  {
+    "name": "phone-geography-task-19",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "6d424eaec142d7b08ee695b0510033788c594e4883d2e5a07732e22f814578a9"
+  },
+  {
+    "name": "phone-geography-task-39",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8b432ec50b01647a71cb87bd7500466691780c95600c13c73e41c2a3d3e0988d"
+  },
+  {
+    "name": "phone-george-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "3d5788041a0d291d3679b33790580597cdda9a4de5fcf247b3d5f4ae6818c237"
+  },
+  {
+    "name": "phone-george-success",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "c73b9fe07fb9007dbe74fd51a184c0df54708b55e867a57c95705c1728948f37"
+  },
+  {
+    "name": "phone-squirrel-world",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "38641fd7df5557850e5dfc19545a845a8a90e26b9539ea9305c4f4a10a57e6e4"
+  },
+  {
+    "name": "phone-squirrel-success",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "72d5a6fa025010d6207dcc3bd92710455844422709a5fff2028768c0e67ad5bc"
+  },
+  {
+    "name": "phone-rotated-live-task",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "8d2d675f0d015b92d5ce79c7b40d7c705d5a5b149d9a775b5be556182ca21506"
+  },
+  {
+    "name": "phone-restored-live-task",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "ad2c0355df2ad0099d39ae3853a3d9965f81a63b0e8a7a1196fe004c69fc3990"
+  },
+  {
+    "name": "phone-scene-mountains",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "ceb0ba74b2cc14b7616b2b1a0cb19081cc1dfe53ea8d79c3ca280e55f15829c4"
+  },
+  {
+    "name": "phone-scene-home",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "82cd2cf8f0dc70a67517fcd5be370c4dc5b88342d373561e428fc411e1c78aa2"
+  },
+  {
+    "name": "phone-scene-castle",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8b4eef91a8d7fc437582b9129fbbbbbab03a4a9655046162aa9059170dd0e4bc"
+  },
+  {
+    "name": "phone-scene-castle-floating",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "55325182c90d3b4990ae6c17a2c620c8af786de3072d0d6a8796d535a267aaac"
+  },
+  {
+    "name": "phone-last-trail",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "fb164bed860829205d32a600592617a3bd8c3023a4e395fd0b4ffa05ec5f4667"
+  },
+  {
+    "name": "phone-en-physics",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "1b7acc30bb851e16e0cac11339f0bba861ec81960ac26f291b64ca9b209a2a8e"
+  },
+  {
+    "name": "phone-en-german",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "0a924748727846fc6324448cf4ce270eebcc1085b7e2cd6000210ce4071f2929"
+  },
+  {
+    "name": "phone-en-languages",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a747ab743e7d8c7a6990c641467762a62ca6a9474ce7325933c34f3c0d86970b"
+  },
+  {
+    "name": "phone-ru-physics",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "c6d355a061dfceb1d21bb3d043956e7adffa069371307454a4e7f57d0c4c741f"
+  },
+  {
+    "name": "phone-ru-german",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "8ebf921734c560dc55179392b012562ed5b105381fd1a019fa693602bb688468"
+  },
+  {
+    "name": "phone-ru-languages",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "3ce019ff240f6dd452ac6663b8865196887cd84b05ceee9b6a740935be813efb"
+  },
+  {
+    "name": "phone-musicbox",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "a1500aed39d8be519c44c3292126435c3f72970d7bd428a86446c6a321d3162c"
+  },
+  {
+    "name": "phone-settings",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "5bff1f0d05d47dc988bf6329f315dbd9be32e7b062b3377dabb333cac9b63193"
+  },
+  {
+    "name": "small-heroes",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "c1187a690ebf5d0a1e9159fc879528f1382acd2a5781bde7bf7ae34559b95af6"
+  },
+  {
+    "name": "small-heroes-move",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "560db3a72c83280d77d60114b677a280c13ccb23143340a4deebbcf437212d11"
+  },
+  {
+    "name": "small-heroes-think",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5bb2e5152ad9f28809b30da70fbd33515f688a242db90e5360ad9b1834809314"
+  },
+  {
+    "name": "small-heroes-success",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "095a007528410c02ac9a28305025814d9a5f1a9bab88c8ecb29a5b3fc77c419f"
+  },
+  {
+    "name": "small-looks-hero",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "983c1e04ef262ba19e40489079712fbadd7cec3e9665bbd1b3ae9aea59ebbc18"
+  },
+  {
+    "name": "small-looks-alien",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "d11718b73d3a42fef0cae9246b400c603ba3256050b0cd4f3c9d7cccdb3d73f1"
+  },
+  {
+    "name": "small-looks-astronaut",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "9362799be1fbe3da995809a8112fa3db4546f5b1aded2fd655def66aa089b9d1"
+  },
+  {
+    "name": "small-looks-scientist",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "eb2ad62e3ac72ed393d9226206abac5055eed44751133b68773b30c3c869db3d"
+  },
+  {
+    "name": "small-math-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "7866a6e8768a06cef6ab3df21e5caa1c10228b08015e5363c40f882a2f137508"
+  },
+  {
+    "name": "small-math-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "6a98ec4cddfafab8435832052e4f0734c8f7b01ba540f61e121ff54d1891fded"
+  },
+  {
+    "name": "small-math-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "151b2540bb778a76e8f91187252e5fc4864f43b8ff06eebbd8254185a2ddefcc"
+  },
+  {
+    "name": "small-math-task-1",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "acda8c72680dd7c63becf2424eb2fe17965fdd4a7c532a590a124fdffcfbe6b7"
+  },
+  {
+    "name": "small-math-task-2",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e37eb496ed9dee23e4a235a72bbb4f01cbd8bea6af4e7b27233bd3a7ca56da8e"
+  },
+  {
+    "name": "small-math-task-3",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5a3ece4b98796d7d593a95b0679e2fb38a23a1004a8a500b837c14091fe3bde7"
+  },
+  {
+    "name": "small-math-task-4",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "798efbc68cc77f18933771ec382ad922849e226bd514eafea9f940a6280ddba4"
+  },
+  {
+    "name": "small-math-task-5",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "c339681ae0c30e185d02c2ed760f208147b3d022b507100b40e6e477129099fd"
+  },
+  {
+    "name": "small-math-task-6",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "afdb97f87fce74c5db4d013d1f033e1f9ef70c8d0953a9d2746c54b1ee10f759"
+  },
+  {
+    "name": "small-math-task-7",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e0b159e6f48c4c3676120926b9529670ce75802173f2508bec9818bb4ad2563e"
+  },
+  {
+    "name": "small-german-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "79e379028b1c1c8a560a50a3fb79337f9c8db36c53d1ee847edad4e9e78fdff3"
+  },
+  {
+    "name": "small-german-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0547fe7791c2a5c541ae99c237b1413554a043d87f45ddb7c30003fb4c67041d"
+  },
+  {
+    "name": "small-german-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "77dc8d223b50d965d8966ef2ec985b35e00fd6b6b24f2121f5ba423a1ba8c221"
+  },
+  {
+    "name": "small-german-task-1",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "46d19bda039704e385251230989ff7f16cf5779f29e4782107a6f1bc38113b66"
+  },
+  {
+    "name": "small-german-task-2",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "d91661791287778734b2ccfd82cefd0fdf822caeabbb82c49aae63b283ffbe48"
+  },
+  {
+    "name": "small-german-task-3",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "50ad658168e72ce36b611cc7a7f66a34d92194662a249441fb7e9c3e91276ddc"
+  },
+  {
+    "name": "small-german-task-4",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "4ec007d037565d584d9d6ba5acee6377ab9a965af6fc86a74b8f07e96a1474eb"
+  },
+  {
+    "name": "small-german-task-5",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "431ce9c50bc3e6972f08abc121cbb8cdfd0e7d96fbe3d884d5dc7f550a27d476"
+  },
+  {
+    "name": "small-german-task-6",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5b458aa32aee88984130234219c7a725f4e4ecfd5d2c8571f60598a47b51bea3"
+  },
+  {
+    "name": "small-german-task-7",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "21c03f54fa7a9355f503c2380428cf9d6ea1504f282bda68c9dc734a62547b34"
+  },
+  {
+    "name": "small-logic-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "f11cbc8a23ed6fd16786522937837db34506c6a38e0d0ae2ae0013ab52918d38"
+  },
+  {
+    "name": "small-logic-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "1031412c7c5195094c9896a4aa68095057d0d6c583c0dd38133bd92f30aa480a"
+  },
+  {
+    "name": "small-logic-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0faa8d82984f2b2670ba850188c491355418796e0fc3d3adc961a0cdbde2db1c"
+  },
+  {
+    "name": "small-logic-task-1",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "dcd2ebe8d25ffb6ff8bb4f3850c7ba99b26490c5efb15f8dfc7558d99d613f61"
+  },
+  {
+    "name": "small-logic-task-2",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "f4895e673fb48e234d777f52c98533d0c94ad162ba49966dcaa9fcc9e716c624"
+  },
+  {
+    "name": "small-logic-task-3",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "6d0046c804b4fbd13cd46fb5660b8e478490cae11de993d2d3370292713a141e"
+  },
+  {
+    "name": "small-logic-task-4",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "1a975f9e99d9e026e8dd284f6125d37fc41a98f9eedb9c4eda3ad440f9f18bb1"
+  },
+  {
+    "name": "small-logic-task-5",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0eb59eff6a13704afcfc2f77cc9a8d8e1c5821f42dfbf75da8ea5e9d770185e0"
+  },
+  {
+    "name": "small-logic-task-6",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "9c9d89eedd71be3582d6d90446895864d2d29d8d60d6b90ab77e95d387a9eaa0"
+  },
+  {
+    "name": "small-logic-task-7",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "80d4bd3105c1089e96b455bb485fdc504eb33605b225f6e379eec1a50a2adba4"
+  },
+  {
+    "name": "small-physics-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e5af4e037b13f5c9699d4483f936d052f0c884a9920142a017672a6ca3bb13a3"
+  },
+  {
+    "name": "small-physics-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "a734d7e77514ef139a5aa72db1272eb76ad695a3a24f41103cc50f015c68f67e"
+  },
+  {
+    "name": "small-physics-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "6cfeba5fb7056baa5c4147e787103907ebed48f493facf4210a7bdbd68a0d801"
+  },
+  {
+    "name": "small-physics-task-19",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "7de4ea1d43fd747a12a916daf29902ddcabe8d6b5e8a9ad5356695354b0ed10c"
+  },
+  {
+    "name": "small-physics-task-39",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "1dd07ac5eb843edec5ac3669cc0a4e6d395a4d137c9b757c279d9d7d94ae73a9"
+  },
+  {
+    "name": "small-biology-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "ae9aec6ec7f22e300c6117b3417cfded49fa02a29724dbe975e41062d31a519e"
+  },
+  {
+    "name": "small-biology-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "31c386b920abc58108d2fc31305164b543da9283979b23c4eae5f3cfdd5b6a4b"
+  },
+  {
+    "name": "small-biology-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "ba8e7cfcd1e7febe3b1f6f2155f00c6fd73b2e599b823ac7bb509a66cd1bb8e1"
+  },
+  {
+    "name": "small-biology-task-19",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e3f99342853518cd445be83c7b7e19dc30f4690e19bbf60db90e245fd0df8a5b"
+  },
+  {
+    "name": "small-biology-task-39",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5a504192b2f407a771d7f98107e34232d64ad9dbc1218362dd40ffa37484fbf5"
+  },
+  {
+    "name": "small-chemistry-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "2c701519d97a15076170740bf0843b9f53fc2193985c9486a4ef02f28775330e"
+  },
+  {
+    "name": "small-chemistry-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0957f5f23953c23d30e91cd39677660c48e1c9d68599ea34d5bac0c00dd6c6f2"
+  },
+  {
+    "name": "small-chemistry-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "15ed9de93c7bc93017eedd2cf00998bdc7100d57bd47371a0a87d27889ad2193"
+  },
+  {
+    "name": "small-chemistry-task-19",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e9a5226a4d0023bc7ea4539c2cd9eaff8c4cf2247ab511a868f8e579bdcbff7e"
+  },
+  {
+    "name": "small-chemistry-task-39",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "c5d2abcdc59d85ed1faea2de7620198bb361551995b95d7f373f419b641d8e09"
+  },
+  {
+    "name": "small-body-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "2e50e03aaa8027a31e842b59c239e6b37ede1811d958513eb16e19b6b136e55d"
+  },
+  {
+    "name": "small-body-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5bcae2cce05a52d083f5626300e6d21f5870cd9de4862602e4b0b399f5edb282"
+  },
+  {
+    "name": "small-body-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "69ec5830838f04224fdd38515335b54c2939b3ede2cf18e41d18c5d628ebafae"
+  },
+  {
+    "name": "small-body-task-19",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "dee7ee511487c0ebaa961a0126f8d7eb5e5e3c1ee2e3ecce41232d130ce2205d"
+  },
+  {
+    "name": "small-body-task-39",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0ab3cb382bdecd035f1f0365f2aa7d01da5d353132e0f17822e5d0c956248603"
+  },
+  {
+    "name": "small-geography-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "4618f450d6e7aae46bc5925538f8d8b8b125bbb2d3d115b04bbc0b9bc87fafe3"
+  },
+  {
+    "name": "small-geography-task-0",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "2eca46ce89a193afc2fbb1a42ee6cee23fe9b96a66beface2a158acf0de23d1e"
+  },
+  {
+    "name": "small-geography-solved",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5244a12b4c77d213272cb03728ea7132196adc2b1cfbf8dfb85608695ff68800"
+  },
+  {
+    "name": "small-geography-task-19",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "7ab2bc7aed1ee3fab8fef03fa3ed3a0388954d70846cc701cb7dafb5bc0f263b"
+  },
+  {
+    "name": "small-geography-task-39",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "5c9735b4395a081a6acb5fb5399cc610a887951aab80f47dd18233dea8251ee0"
+  },
+  {
+    "name": "small-george-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "8b5097e69ab63485ee0005ec99c941f9517984dc557514dfc9787df58e461f6c"
+  },
+  {
+    "name": "small-george-success",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "6b6770d729377b259a3e88e6c102e32864770e2dae7eb2decbce568463167db4"
+  },
+  {
+    "name": "small-squirrel-world",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "4cc515c5d63c870116db4db7f5af03cd236d73c7a5a78da5c0ba40e43744eb76"
+  },
+  {
+    "name": "small-squirrel-success",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "a140e2047e9e95691002d6d3ddf20ab4d2e563d9bb59620457adec0225bc1b75"
+  },
+  {
+    "name": "small-rotated-live-task",
+    "pixels": [
+      568,
+      320
+    ],
+    "sha256": "3e7403f6d93efc6dda5232691ae804ae23a19efdd98a5a3a9fabf5a4c014ed3d"
+  },
+  {
+    "name": "small-restored-live-task",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "aea50215bead63de58a8c5557dc664950441619d1bd47b1aaab048057a93be5a"
+  },
+  {
+    "name": "small-scene-mountains",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "3f301819d4ac80bee5884ee200b863a7ce415a1c77339cb34b6fca351426a126"
+  },
+  {
+    "name": "small-scene-home",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "7145e09f563320717bebc6fe53ea52a6441fc04a2264a80937f659fe47b0d2b2"
+  },
+  {
+    "name": "small-scene-castle",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "c5ea876c4011346dceede43c8115e7cdfd331b24fc7e5a50467c5a8ebb791aa9"
+  },
+  {
+    "name": "small-scene-castle-floating",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "d3736aeb1c24e9e7ce2c373c32b705342dff8577cddeff49b6b85e72cb900c43"
+  },
+  {
+    "name": "small-last-trail",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "ca67188dad84ff72ffc0529f36ae75f0b104afafaa66a843337e0422950b03e9"
+  },
+  {
+    "name": "small-en-physics",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "de3c4f571d4223388dc5c027839530f307895afa63979190e5637468ada4a953"
+  },
+  {
+    "name": "small-en-german",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "6d9ace48cd053dc37a61e65c0df961724ee25e698534a81009bcee01e828bb43"
+  },
+  {
+    "name": "small-en-languages",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "4cb90e76eab6481f78a4786e957555550dfd146352902329c68d45e70461038e"
+  },
+  {
+    "name": "small-ru-physics",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "e4c44589819957dacdccf46da0e1323f1d1fe7c254da8d89ff66d75a109a7d9e"
+  },
+  {
+    "name": "small-ru-german",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "f37c83edf46a40d52a6d3ad1ee2b6fd4ad720866111e14570a3181627336844b"
+  },
+  {
+    "name": "small-ru-languages",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "0255a25e866d2ed920a82270fdd9fb123bf7da59511f725bca15ec82cd46604b"
+  },
+  {
+    "name": "small-musicbox",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "02985d125f081501dc091bd5c6af9a5ed3ed2818742dacd45c5ce3a51dfd347d"
+  },
+  {
+    "name": "small-settings",
+    "pixels": [
+      320,
+      568
+    ],
+    "sha256": "3639506c691e8c834dd5604aad9bde9e833594f9e9c4baf6841950b38e06c296"
+  },
+  {
+    "name": "landscape-heroes",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "8264a31778d9e28c6aecaebc72ca5e6653f0b3e8ba8b63aef38eea459ac3db25"
+  },
+  {
+    "name": "landscape-heroes-move",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "5d5d06164fd482a73bfb9770e1147c26f1bcf515162a2ca0986199991819ef1a"
+  },
+  {
+    "name": "landscape-heroes-think",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "b8441d69c5d396bfbb4814f3e3b452c3efc9c44f94adb2529347a96684b5aabb"
+  },
+  {
+    "name": "landscape-heroes-success",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "137c045d94ad770fa812e00e46569129ff5c0ed2f77d0c728455786aa33a8bd6"
+  },
+  {
+    "name": "landscape-looks-hero",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "3bdb7be7c228c04ac911973aeb6afd82bc478cddad9a135d7a163ce8870e43ce"
+  },
+  {
+    "name": "landscape-looks-alien",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "e07a21fff7bc1ee12c37866459c19bafd8030d7b8afe84ea560b6b168bf4c8aa"
+  },
+  {
+    "name": "landscape-looks-astronaut",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "3539746e3d09b117f76adc56dc00c1e616b036bdcfe6f640217a0048ea91abce"
+  },
+  {
+    "name": "landscape-looks-scientist",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "0b5d28ce25b2f302e177cb0cf217b2d3d3c3a3545d9a806684bbb00a38f0c2d8"
+  },
+  {
+    "name": "landscape-math-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "d485864c46b57d32b97aefffbfdf88621bc3302e0031ed4d9b0b6b0efc5acbe6"
+  },
+  {
+    "name": "landscape-math-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "0343364c9179e154c522d24b416a2f4886a16c50514bb8975b537db3b29a2470"
+  },
+  {
+    "name": "landscape-math-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f54d6007eaae268dee09a8b8431ee7c405358b63f53ddbef7ab25c7112d36194"
+  },
+  {
+    "name": "landscape-math-task-1",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "4cc6f4f690443acd442b337e1e20ac4f51bc2b855b2dc8be85861cf79ceaef80"
+  },
+  {
+    "name": "landscape-math-task-2",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "4de80d3e8e845e026bec1a8f6e5fd826c05f0597e8e6ba933e494074d5bede1b"
+  },
+  {
+    "name": "landscape-math-task-3",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "485e947f357791aa73ea2e266f6b80ef9e125305129f23dbe2893de1b568bf23"
+  },
+  {
+    "name": "landscape-math-task-4",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "3829a11697c0664954b5dd7b3dde20b4c365b636a35d629c4929976af78e2b47"
+  },
+  {
+    "name": "landscape-math-task-5",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "458f5669b4faf67db4b100b9f7eecde385076da7c77d74b340a64fe6f5afe24f"
+  },
+  {
+    "name": "landscape-math-task-6",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "db661e350b9801cffdb0f4bd2bea9dac8d5ad2c81f6efeee69b53cc6090bbae5"
+  },
+  {
+    "name": "landscape-math-task-7",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9d7df31b74929aec1086731445ae9ca4e010a848cc84e71e0d79cfbd5bbd160b"
+  },
+  {
+    "name": "landscape-german-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "40217a424b256b40ff4fd39c64b266f9cb19e2e4978e776ce43075acd5bb5476"
+  },
+  {
+    "name": "landscape-german-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "e90d5ac02e67afc22ccb11c6b4c5d25f7999c5f56c5edce96984ea42de553858"
+  },
+  {
+    "name": "landscape-german-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "732069e171f82e725e5e4ffb8f7c2a7f472edf903a5aac594aca2154e0c4186b"
+  },
+  {
+    "name": "landscape-german-task-1",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "832ea4b05d5823eb168a5ea515712c8f3a9e61ff4b8b7c023470f843f15d613a"
+  },
+  {
+    "name": "landscape-german-task-2",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9854f68b6d33d3e08d7ddf20cf91ca531e14232d0b7a1a2a0acd18cbd3e5ee3c"
+  },
+  {
+    "name": "landscape-german-task-3",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "856c9803d1ca9ae5732804d21d3248c6043880e5442210f38e27bdf3b9e33d70"
+  },
+  {
+    "name": "landscape-german-task-4",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "c71671d960757b8c2ade035686a7130549e0d79b41b2138af6e1a54c5e803f74"
+  },
+  {
+    "name": "landscape-german-task-5",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "31a2aa11823b1c81594d80a1922f2cb113186a1a6efd9e54cb2afe40f64630de"
+  },
+  {
+    "name": "landscape-german-task-6",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "cb3c195b5e804fe2f0722de56d6f638e84adddd62e02f334eba2cfbdfdcd136f"
+  },
+  {
+    "name": "landscape-german-task-7",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "2dcac1ea0a0ec6fc2087c5c732984a730b62dbddbca5c38e5e73d93a3f340875"
+  },
+  {
+    "name": "landscape-logic-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "6f276b1faf0fb72a985fb178325c14de75de8754ff51fbf19b8d8d13cb51a21a"
+  },
+  {
+    "name": "landscape-logic-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f546574da0c4fb1a6f6a535163930a318eb9fd5ca6122b35dd66d00308c1ce49"
+  },
+  {
+    "name": "landscape-logic-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "417e5b86ac30b233ca55da7005909eec619d7bf4b7de88106bf860d2b87097a6"
+  },
+  {
+    "name": "landscape-logic-task-1",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f0e9a123e4641cb582a020daa35bcd35708eddc76c8539dcaf587cb54e8f5198"
+  },
+  {
+    "name": "landscape-logic-task-2",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "80995305301870b07fcf7a5555ba9d9c032478fbfbbdc8206a6e48e761601d7d"
+  },
+  {
+    "name": "landscape-logic-task-3",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "8252ce87c2bf57e0a8dde1d9a41741130b21a35af7dd35dcb485f14e9ff9e6c3"
+  },
+  {
+    "name": "landscape-logic-task-4",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "6702103bdfec56419ac7e629b9c4f65fb82fdcb5dbf0fe1c16dcf65916f592af"
+  },
+  {
+    "name": "landscape-logic-task-5",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9c0becaad413b154d36b3ef7b2b93f7b76f8a1fb591e4b3ce93ff4126f0f35c9"
+  },
+  {
+    "name": "landscape-logic-task-6",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "1e1c0869de7b2e49e4b6ee242a189cc5f241c762b917b1fd3fbe0fffdf6175a0"
+  },
+  {
+    "name": "landscape-logic-task-7",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "69191f9b9e679527e049cbec4f8f9f410191996137053e176fb9d7d1bda31548"
+  },
+  {
+    "name": "landscape-physics-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "6e4b50653e465ce4811e287dfc20c1c5333994425bb00ad2425c4ec9101ca00c"
+  },
+  {
+    "name": "landscape-physics-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9e9f7380d2061bbeb3f55a016c553f61eeb5764281bfd6d965a5c20866454071"
+  },
+  {
+    "name": "landscape-physics-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "2868c4fc9f2628047d7d10aaf77aa52137f465827a242d140881a7b67fcd5bcd"
+  },
+  {
+    "name": "landscape-physics-task-19",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "2326241b6d6d41a5c58185b1df59911a0c14ac8f65a7393c94c1c7c1d640b6bf"
+  },
+  {
+    "name": "landscape-physics-task-39",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "493cca1ffdee84296c470d8c8c6da7be9bf8240ca302566559a7cf5f57d25811"
+  },
+  {
+    "name": "landscape-biology-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "a6beeaba0616ff07ddbaf321a6f18c7c6f6585a5bb1b3d1de268c0e2f5fa7485"
+  },
+  {
+    "name": "landscape-biology-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "4780a80057b9e18ab1b6115e627bd93daa9a0cd79af2adf4a5fa5609439b5665"
+  },
+  {
+    "name": "landscape-biology-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f0b288eaa4c4461714f05812d4f02c1a120ac67d9bdbc14f5414ea8462d0adf7"
+  },
+  {
+    "name": "landscape-biology-task-19",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9f97a5b193ab2a46466b9539536b61f5d10f0460236d33b59ea5f64502d78c2d"
+  },
+  {
+    "name": "landscape-biology-task-39",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "b958befcdc3ffe4f7762840b8fc0976965c399bf8d315d10aa4e3647967bb9a8"
+  },
+  {
+    "name": "landscape-chemistry-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f7ae0fe866f695dad4d5cec155e742aec1605efba5179b3d493412550639cdd1"
+  },
+  {
+    "name": "landscape-chemistry-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "d11f5cf3dbddcd30047c0ac138cbb980d418a0dc3c52476dad3b02b9eda9b0fa"
+  },
+  {
+    "name": "landscape-chemistry-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9de33e5893e253f4e583e6c07e397fbc78cb1bba68bf2683a9178f06ea78f12a"
+  },
+  {
+    "name": "landscape-chemistry-task-19",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "688528bfc1e2908c600ca40f547b68ee0be4ca9ec0ffbbe22ef5f2a82f12bc0d"
+  },
+  {
+    "name": "landscape-chemistry-task-39",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "2edf7eb6e2c606d2460a401c8724b349184bc48a3690cf84493c62db1cfa1dfa"
+  },
+  {
+    "name": "landscape-body-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "1e8a2eb81f708ee689faa78d78951c1cf7c3f948e1298f4dbf6e40b909a7916b"
+  },
+  {
+    "name": "landscape-body-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "af5f1dc91de6b83d3aca212ee84919a51a19ff7f1a35519afe54967bcabb5dbb"
+  },
+  {
+    "name": "landscape-body-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "a2c55ac8fbdcd24a3637dc656a9a673c827a83ea18ef7fd539a7b9b3fd363d77"
+  },
+  {
+    "name": "landscape-body-task-19",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "fe2bc396cc23c6cac24eac15f5463c4c535910f62a11e0ef8c163c947f78de94"
+  },
+  {
+    "name": "landscape-body-task-39",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "42e6477b94a8b658402815a4571ef3cb973ef275d45de809d5058d855a8b01eb"
+  },
+  {
+    "name": "landscape-geography-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "17ed61aef9fa89c0d3d74f3807eb50592e4204c97a88b0b303e5ebf06169215b"
+  },
+  {
+    "name": "landscape-geography-task-0",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "768225b6759b0164d7c4494469e307ac05325c142f6b3dda1f39337f755e550f"
+  },
+  {
+    "name": "landscape-geography-solved",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "0ea45b1121c7a5c0d525cb00eee180f5cce6d14f48aacac53f93f260696487a7"
+  },
+  {
+    "name": "landscape-geography-task-19",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "e712167b2954bab541e12be508c4212480bd519aa7d650673cbcaec4fb81dc6c"
+  },
+  {
+    "name": "landscape-geography-task-39",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "8e3901f33f82aca7873e427d7942487ce3c58d545968ba4bae955755f78daa73"
+  },
+  {
+    "name": "landscape-george-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "ffec63f0b1eeea112a0cfddfa8b4f33dcf7b1311d6399142781301bda2559291"
+  },
+  {
+    "name": "landscape-george-success",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "a85705f2e9b5bca7a8a72c53a3cc2475e6b60f859ab5d4d87a9eb94af963f7c4"
+  },
+  {
+    "name": "landscape-squirrel-world",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "03ce7c48c72450f254f3158b113efe106dfdb693ebdbf7cbefa80ee5076a1350"
+  },
+  {
+    "name": "landscape-squirrel-success",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "333dc4dd169bb27c628ef239ed470b104c8cc9b218d66a1ef3d92d2291e82455"
+  },
+  {
+    "name": "landscape-rotated-live-task",
+    "pixels": [
+      360,
+      800
+    ],
+    "sha256": "57d03745c5373f3660a33d288e693c4e16d77a4c2ffe6554e37ec280919987ab"
+  },
+  {
+    "name": "landscape-restored-live-task",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "69211e9f009e1f35c6043537b0a4519d9a8e73155a7cb86f614da62812a9398e"
+  },
+  {
+    "name": "landscape-scene-mountains",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "7e07ed7a6ca346003955b871f4782f1a3569e09b2c1ee1ed5e673ac3452d588c"
+  },
+  {
+    "name": "landscape-scene-home",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "94f96c4dc8b9f8ee0c9c44e1886c70ccb5206f448ecbc821ae1e02fa631ca99a"
+  },
+  {
+    "name": "landscape-scene-castle",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "99d4a18854ff8bc6de178edc9046a75112163b8d8f95e2091a4bd15c1f916c45"
+  },
+  {
+    "name": "landscape-scene-castle-floating",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "4cf6c9c2bd5be6b37090ab3f21e1bbffabe5fe2b270f53b7ab89565f030af190"
+  },
+  {
+    "name": "landscape-last-trail",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "f7ac4875599974e8f9c4365129d85ef63785ddedc61f632bf64bf0dbc756b263"
+  },
+  {
+    "name": "landscape-en-physics",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "9996bfc13019871652aeaaf32f2374df8da9a68fdcdcb570af31e40849673375"
+  },
+  {
+    "name": "landscape-en-german",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "884cda40ed98615dc68ab76016b6db2de878941cf3dc2809585c927426a39a1b"
+  },
+  {
+    "name": "landscape-en-languages",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "2c7bcfe46ade5d74689950815b6f4d721a123ddf0e2ded5c4c92b2c6d6de3b82"
+  },
+  {
+    "name": "landscape-ru-physics",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "088f062da816f828b5b545b6d857ec9f3f369fee4a58e21ffa9234de7656edd2"
+  },
+  {
+    "name": "landscape-ru-german",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "82205399a4530d23a5a82f71adc19be056f09b91d12d1c91e46a7151618dcf73"
+  },
+  {
+    "name": "landscape-ru-languages",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "b76ec6af931a888d0be26df6ab5ceef515f0b3ca9ae28ec332a69d6b21255701"
+  },
+  {
+    "name": "landscape-musicbox",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "30bc07661bf81d196e851579cfdab9fa447009b07651cd841ac56ba33c48ba86"
+  },
+  {
+    "name": "landscape-settings",
+    "pixels": [
+      800,
+      360
+    ],
+    "sha256": "bed2cf2dcfa06e24a4876d0017c55659a00784571341bbe5ab0ecc25b67e0a70"
+  },
+  {
+    "name": "dense-heroes",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "a886f4fae5891b16c962a1e510c7304e610bafb8932116efd62a2ad9eebef86b"
+  },
+  {
+    "name": "dense-heroes-move",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "14ee7e876280e7e146649e0e387c2be6a481eab0c25ba5c12ea4392cdb8e96e1"
+  },
+  {
+    "name": "dense-heroes-think",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "431c8aae077bc681b82204c9f7cd0833513a43718cca8f2acf6a12cdaa7f4549"
+  },
+  {
+    "name": "dense-heroes-success",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "d9a499ca0874f071104c83fab16bf4741a46ad065f289e8d2354de5a807bb5c5"
+  },
+  {
+    "name": "dense-looks-hero",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "75872bb9d7f02a13da107d3e260a4c5db6b6dfb58fd64d5ef51f46bda7479051"
+  },
+  {
+    "name": "dense-looks-alien",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "dfb295fed79b16114af0f7d83b36abc8cda39c5eba407833beef1f5a42499fc0"
+  },
+  {
+    "name": "dense-looks-astronaut",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "d20ef4024f86f07ff5ff8ec041df54777bfd7f22b747040c5d82e78da98668b0"
+  },
+  {
+    "name": "dense-looks-scientist",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "0809ae354159b0e67c90a21e465dc8a36b60b43c23559fe10e157fdd9a81c106"
+  },
+  {
+    "name": "dense-math-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "54d0ac0b2167f6385340a1044e6de27e92040f287da9e34ce8233a4061eb7199"
+  },
+  {
+    "name": "dense-math-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "06f74b4c1a153a545a0740d0fa24758ef5e40f79cffca92e5c8fd100c21ab765"
+  },
+  {
+    "name": "dense-math-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "ff3a35f4b084006421cfb95652b36922fba30a6e9730fd4d9f7b5e27633d918b"
+  },
+  {
+    "name": "dense-math-task-1",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "04047836f0b85ca40a5c20f3c81d6a818f1327a22fff27c1a21e7b7496ae5c6c"
+  },
+  {
+    "name": "dense-math-task-2",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "fdf9e04fad42fe07fbaf4257a23f38cd74b3d8336d95cdbf2c9896d7033cf464"
+  },
+  {
+    "name": "dense-math-task-3",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "3919c0292582a888744f23f3020f38fa61665fec2ec4720d9cf84069ff604d87"
+  },
+  {
+    "name": "dense-math-task-4",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "2d1358091feade1baced992b62bb01cceec8c35397df742653a61929d305f9b1"
+  },
+  {
+    "name": "dense-math-task-5",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "cbcda083603646f345082958478e8b5aa1274ef116953dce10228467c5e20436"
+  },
+  {
+    "name": "dense-math-task-6",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "a7bdc86ff44b64415af55b211871c8676fbcbfa553c870bb90ce589cf3d8867e"
+  },
+  {
+    "name": "dense-math-task-7",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "64a9159977f2f883ac7585537b1b2c58e2fb090a6f78eedcad5f8822b6fb5832"
+  },
+  {
+    "name": "dense-german-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "4c7d6ab6423f78ca4f2e7070ebb3d173f93b2661f81fb74aeff81f8c14cf4358"
+  },
+  {
+    "name": "dense-german-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "21cb73233822f7b2681a7d35fa33cf409bbb07002fcee7ff3d354c89e7f32d73"
+  },
+  {
+    "name": "dense-german-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "f6f3b2b794b3b9c42c71c42d2220f510ec9d6e9cbc95b6a6bf510355a7714a3b"
+  },
+  {
+    "name": "dense-german-task-1",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "641a9e2f1d583dccd53c4275514702f8e284f100dcd8a937e74003a6b04b3bc3"
+  },
+  {
+    "name": "dense-german-task-2",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "5864fe2d705cc7bd2a00293466eb44410ac546323c045a8f81e3e90cffb8bc03"
+  },
+  {
+    "name": "dense-german-task-3",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "6cc8fdefc2628b029462e3defe0704e64f2b6bfd48e281595d22461fc790fd84"
+  },
+  {
+    "name": "dense-german-task-4",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "39264d903992bb14fa2099fdffbddd7f069172e0a1f9b6daa51aa1c0c82976ba"
+  },
+  {
+    "name": "dense-german-task-5",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "59aa23490ea24f7e273ab14cf18061943bb52ea48fb34ce86d4f8ba95a22f356"
+  },
+  {
+    "name": "dense-german-task-6",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "b1a261743cc93945254a1e3d8e4853613fcc71698fd5a19eac7f31f033e5028b"
+  },
+  {
+    "name": "dense-german-task-7",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "7b8551fba22c154ed166fd2a340a96914d3495a1777bf1f8e4ebfe7d936c90e8"
+  },
+  {
+    "name": "dense-logic-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "fc508029e345b625bdeb5a4ad22342b207912a9649de0ea77b4882ab58a8d0b2"
+  },
+  {
+    "name": "dense-logic-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "743f7e5c52c67bab38870387ce85fbcd0dfd1abd8c549da4ff7052577ac07672"
+  },
+  {
+    "name": "dense-logic-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "801417b719acd4f4ca05fa5c83a5374de9785f2f4320a429103b0afb6660f9b5"
+  },
+  {
+    "name": "dense-logic-task-1",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "5468ffecfd09024256b6eafd80f2632fe3185431e3ef7f643f9f42b479596ce6"
+  },
+  {
+    "name": "dense-logic-task-2",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "570de947b2470baec02ae1ef3cbfa839564edf1356e49756324a49a6bec50668"
+  },
+  {
+    "name": "dense-logic-task-3",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "f0963a8aa886d8b0bee5a781eb90dd2b671911206ff61e35ed6014c518e74f4f"
+  },
+  {
+    "name": "dense-logic-task-4",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "efbce651f4c381bd120ccff610a5e9a4c29962971006a00853a19bbaa47be237"
+  },
+  {
+    "name": "dense-logic-task-5",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "00ab062ccb27f23b799f54634210779c7b71c9f0d414907e7bf087235f6c9073"
+  },
+  {
+    "name": "dense-logic-task-6",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "9bce5a1f2352d6539be2372354abfc505cb9c429aa74057deff5c6511a220d73"
+  },
+  {
+    "name": "dense-logic-task-7",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "905a923874c125a5976400107c28c75ae5ab4a1bf8cad8bf185bbd5cf251cc09"
+  },
+  {
+    "name": "dense-physics-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "03d82287c4e9c5c05838eae5ddafd1be8629e3f49d748c75f91cda6cbd99720f"
+  },
+  {
+    "name": "dense-physics-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "193a52686c1f31e55d3abe7ca1bb0e0ea6cced8bc0fad87b7e5e9210f44ef397"
+  },
+  {
+    "name": "dense-physics-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "86aa3de3f60fb912ab3c853c78ceb6c4439dd9734271ecc317be95b02a4b3597"
+  },
+  {
+    "name": "dense-physics-task-19",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "2179ea8f09cf33f1699e6afae92b2ee8301ee5ab8e3e0e61e96c559f2c5b3d30"
+  },
+  {
+    "name": "dense-physics-task-39",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "fb0bffc753fb5d3167fddbcc6ba83a77109c9013d7731379917d03b8ed68052a"
+  },
+  {
+    "name": "dense-biology-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "284336378640645bf1a1df083611be44b8eab11228cef6758a7d1f4d886b81ec"
+  },
+  {
+    "name": "dense-biology-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "f5bbbf347bd8acacc915e22f2fd0fd1fbaccff969ef8f686af028391c26ec2d4"
+  },
+  {
+    "name": "dense-biology-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "2771a26137c13b4b556e9b000ab5fd279bf47afe9e46423d7447a20126dfe28c"
+  },
+  {
+    "name": "dense-biology-task-19",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "0b822e7ccf309613e8730b166f25ef514e38a4e5824f698ab4122b04e23bace4"
+  },
+  {
+    "name": "dense-biology-task-39",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "44cd2badb59fcc817c9985307a0987135467b164dc44b5b3a2b0143586deab32"
+  },
+  {
+    "name": "dense-chemistry-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "0acd7d1337fe993a747d07a4b63f4d0075faf1ff2dd6ca5882253f96e48db307"
+  },
+  {
+    "name": "dense-chemistry-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "0b82b4464552f7ce8a8b7e82a0a03dcd40b8f964a1123b1aacfdaaa4b0b17d31"
+  },
+  {
+    "name": "dense-chemistry-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "61589fac77702f1e49a857a0e9f1b826e80117c2aaf2dde2048916d7866fae14"
+  },
+  {
+    "name": "dense-chemistry-task-19",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "76bc9a2a78dfd389b09b4cb75f9c4c77e6d03a0246ed14e17e0f24ffc34a32da"
+  },
+  {
+    "name": "dense-chemistry-task-39",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "508cb3b6767a2186df367853cab95480840ec050e60856efe204ece33ef70ae3"
+  },
+  {
+    "name": "dense-body-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "bed3ed59db83509e880286a7058c1df54a3d134b7c61313b0dc3c67598333ff5"
+  },
+  {
+    "name": "dense-body-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "12ea667d621cd6ceab51200ed078d02ba50213e97cc48d9e969083408dddb33f"
+  },
+  {
+    "name": "dense-body-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "25feca250efc99cdb034ea020455a52f6ab08ec208b664e1bab3720aac4eed29"
+  },
+  {
+    "name": "dense-body-task-19",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "6d707668aa105e86c6abea18b3695cb487458657fb32b4ce278cf7249c333499"
+  },
+  {
+    "name": "dense-body-task-39",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "bdfb2272d18f5723763bb3bd8da2c60e8b5fc7444a140d87f67c639e573862d7"
+  },
+  {
+    "name": "dense-geography-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "0c4b6acb038ca1e71324ac6962b4aff545cbde4e90d58253dcbb555094715835"
+  },
+  {
+    "name": "dense-geography-task-0",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "805c46aa96efb3486211bbf96968f23af9bb855c1c6754ac5d06596cc7f2f2d7"
+  },
+  {
+    "name": "dense-geography-solved",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "eb1dfbec94a33944dbcb7816950d18f0bbe3e5786bfc50d5e4f6ac774b681b05"
+  },
+  {
+    "name": "dense-geography-task-19",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "da745d10fb03720ff0a9cd8b4b7080bec5c8ba3e5d316d4b49464f4176c91a9f"
+  },
+  {
+    "name": "dense-geography-task-39",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "4278bd32d6378389d22d4e075eb31c23fb0c9f2f57d147c5ad7609adbe05f222"
+  },
+  {
+    "name": "dense-george-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "7c666af5c0ac452576e36283845a7bb9f63bef9fbed2049c7f6b6bfec59efda5"
+  },
+  {
+    "name": "dense-george-success",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "cdbaae3ee76416eb35580283355ce7047f889a7db618d8c2a21440886403da9a"
+  },
+  {
+    "name": "dense-squirrel-world",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "bfaf5253e9c080be9760fbac81765d34a3a3767511984199e1fc9c195ed29cd4"
+  },
+  {
+    "name": "dense-squirrel-success",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "8db587bd8789678768a76698d0d52699f4f27c38e97fceb972d9324353569c4e"
+  },
+  {
+    "name": "dense-rotated-live-task",
+    "pixels": [
+      2400,
+      1080
+    ],
+    "sha256": "424a0694176324f4f35e3123347485ec406457d097c59d1ac37cdae28bfa333b"
+  },
+  {
+    "name": "dense-restored-live-task",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "fe147e544d3d6da96a64df8af8555eff59227ac31a77cd7c6e2f4b16daa82781"
+  },
+  {
+    "name": "dense-scene-mountains",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "cc5ece9f2bce577ab4ccc4b938d568d59306ac6d07c0751bdbd0a72e609bb8e4"
+  },
+  {
+    "name": "dense-scene-home",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "9807883a00d1edb086fed15f40611a6191b853c83f92292395675b34179095f6"
+  },
+  {
+    "name": "dense-scene-castle",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "25a995a719a04c9489a22c9ca24a90de8d43a751ee96cf2677fbc1058fcd2e1f"
+  },
+  {
+    "name": "dense-scene-castle-floating",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "5ecd9c27147f3e72be4ceb58f8dc7832972b5bde47e8b28058554d6e0d6b18ea"
+  },
+  {
+    "name": "dense-last-trail",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "5855a614c9111e1057b302e91cbf509e639da6608ab473833d061c026f356c53"
+  },
+  {
+    "name": "dense-en-physics",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "87dcefa31670d69d18e425b061b778310c8328c12c1468e74121db5518771cb7"
+  },
+  {
+    "name": "dense-en-german",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "dfa912c39698be11b1ac334c09c5cea445fcdfd5f0e5c2c60d37e6e31c30776a"
+  },
+  {
+    "name": "dense-en-languages",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "5fe2e28c0732cc35d52d7871bd1aaacf740da468fddb6890fcc1472a8242b436"
+  },
+  {
+    "name": "dense-ru-physics",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "2f105d20546407fd8f1f7c5f40b4c7aa85b9bd7b46f4f10cef0e4ff5ea19ea18"
+  },
+  {
+    "name": "dense-ru-german",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "1148fa86331b36fd50eaf4a2c358103ea4be4710f11ab244898bc4f7f6a80ac7"
+  },
+  {
+    "name": "dense-ru-languages",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "03acf0ff942b50367409ede2cf2e8a23e12eff86c263b930af2cf1327e758f1b"
+  },
+  {
+    "name": "dense-musicbox",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "b758df78957c795feddcfc2019998ba478333391ad3f83c74e8c6fe2a535e165"
+  },
+  {
+    "name": "dense-settings",
+    "pixels": [
+      1080,
+      2400
+    ],
+    "sha256": "7ba91a3be1438c1408da4033008a2b602613b02fab8b728be86405052ab0aabb"
+  },
+  {
+    "name": "gallery-wanja",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "c67f67b03a0b368d8b8809bcd8f8681a4e914256f70a3eed882edcafcb2cdc5d"
+  },
+  {
+    "name": "gallery-mischa",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "8643067443263bdc6c193a3f6c670f2594cceee5e3ee86dd842be7550ad46de0"
+  },
+  {
+    "name": "gallery-du",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "59fde87620f135431320f61760e0bd7926fdd84b0879e4190a0db38c77e96f4c"
+  },
+  {
+    "name": "gallery-mama",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "fecabb44d03e238a624c123aa3d438e117f04d54bde1f8fe4f856977d21c5657"
+  },
+  {
+    "name": "gallery-katze",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "d465734bba3a78b0c27c2691ca62910e0b6daf5762b4b8ed6fcbb360f794551b"
+  },
+  {
+    "name": "gallery-george",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "385be81414ada2213724f5450e83c8c4898c6e8770cb929180fcc8794a33e44a"
+  },
+  {
+    "name": "gallery-squirrel",
+    "pixels": [
+      1200,
+      800
+    ],
+    "sha256": "82b27e0c7395617a22a59b7f646768b2a42277fb5c5f536609c1070855b498f0"
+  }
+]
