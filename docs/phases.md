@@ -11,3 +11,11 @@ Gefundener und behobener Fehler: Nach erneutem Varianten-Materialisieren fehlten
 Teständerungen: Figurenquellen werden anhand des gewählten Variantenmanifests und tatsächlicher Hashes geprüft; private Originalbytes bleiben abgesichert. Öffentliche Normaloutfits sind absichtlich AtlasTexture-Rahmen. Speicher-ID-/Kleider-/Lösungsregressionen kamen hinzu. Es wurden keine Tests entfernt oder akzeptierte falsche Antworten eingeführt.
 
 Rohprotokolle: `docs/qa/phase1-family.log`, `phase1-public.log`, `phase1-python.log`, `phase1-variants.log`, `phase1-public-render.log`. Echte Geräte-/Hörabnahme und Kinderbeobachtung offen. Private Grafiken in früherer Git-Historie wurden nicht rückwirkend entfernt; siehe `variants.md`.
+
+## Phase 2 – Antwortalternativen
+
+93 Aufgaben über TSV-Quellen und Generator überarbeitet. Alle 200 bestehenden Sachantworten und Fachzuordnungen bleiben durch eine unabhängige Referenzdatei abgesichert. `biology_32` hatte eine lebendige Pflanze als falsche Lebewesen-Antwort; jetzt stehen Maus, Papier und Glas zur Wahl. Präzisierungen in allen drei Sprachen vermeiden mehrere richtige Antworten. Kein neues Bild, keine Umsortierung, keine neue Spielmechanik.
+
+Die dokumentierte Kategorienheuristik markierte am Ausgangsstand 83, jetzt 33 Aufgaben. Dies ist keine fachliche Zertifizierung. Unveränderte Aufgaben mit Bildbedarf, mögliche Fachzuordnungen und alle Änderungen stehen in `distractor-review.md`.
+
+Ausgeführt: `tests/run.sh` einschließlich **6.085 Spielprüfungen, 30 Audiobusprüfungen, frischem Import/Start, allen 45 Python-Tests**, Quellaudit und reproduzierbarem Ablenkerbericht: **bestanden**. Rohprotokoll: `docs/qa/phase2.log`. Alle geänderten Sprachaufnahmen wurden mit den bisherigen lizenzierten Modellen erzeugt und tatsächlich decodiert. Fünf neue Tests sichern Antworten, Fachzuordnung, lebendige Pflanze, bewusst unveränderte Aufgaben und Bericht-Reproduktion. Keine bestehende Prüfung entfernt. Fachliche, muttersprachliche und kindliche Abnahme bleiben offen.

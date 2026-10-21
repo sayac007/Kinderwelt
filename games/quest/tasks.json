@@ -3747,8 +3747,8 @@
       "object": "wheel",
       "options": [
         "wheel",
-        "leaf",
-        "egg"
+        "gear",
+        "lever"
       ],
       "answer": "wheel",
       "texts": {
@@ -3775,7 +3775,7 @@
       "object": "paper",
       "options": [
         "hammer",
-        "magnet",
+        "screwdriver",
         "scissors"
       ],
       "answer": "scissors",
@@ -3802,7 +3802,7 @@
       "kind": "discovery",
       "object": "hammer",
       "options": [
-        "soap",
+        "scissors",
         "hammer",
         "screwdriver"
       ],
@@ -3832,7 +3832,7 @@
       "options": [
         "screwdriver",
         "hammer",
-        "fabric"
+        "scissors"
       ],
       "answer": "screwdriver",
       "texts": {
@@ -3915,8 +3915,8 @@
       "object": "bulb",
       "options": [
         "bulb",
-        "wheel",
-        "sand"
+        "battery",
+        "gear"
       ],
       "answer": "bulb",
       "texts": {
@@ -3942,8 +3942,8 @@
       "kind": "discovery",
       "object": "battery",
       "options": [
-        "leaf",
-        "soap",
+        "bulb",
+        "gear",
         "battery"
       ],
       "answer": "battery",
@@ -3999,8 +3999,8 @@
       "object": "gear",
       "options": [
         "gear",
-        "egg",
-        "glass"
+        "wheel",
+        "lever"
       ],
       "answer": "gear",
       "texts": {
@@ -4054,9 +4054,9 @@
       "kind": "discovery",
       "object": "pulley",
       "options": [
-        "seed",
+        "gear",
         "pulley",
-        "soap"
+        "lever"
       ],
       "answer": "pulley",
       "texts": {
@@ -4110,8 +4110,8 @@
       "kind": "discovery",
       "object": "wood",
       "options": [
-        "water",
-        "steam",
+        "metal",
+        "glass",
         "wood"
       ],
       "answer": "wood",
@@ -4251,25 +4251,25 @@
       "object": "ice",
       "options": [
         "water",
-        "sand",
-        "wood"
+        "oil",
+        "steam"
       ],
       "answer": "water",
       "texts": {
         "de": {
-          "prompt": "Was entsteht aus Eis beim Erwärmen?",
+          "prompt": "Was entsteht, wenn Eis gerade schmilzt?",
           "tip": "Beim Schmelzen wird festes Eis zu flüssigem Wasser."
         },
         "en": {
-          "prompt": "What does ice become as it warms and melts?",
+          "prompt": "What forms when ice is melting?",
           "tip": "Melting changes solid ice into liquid water."
         },
         "ru": {
-          "prompt": "Во что превращается лёд при нагревании и таянии?",
+          "prompt": "Что образуется, когда лёд тает?",
           "tip": "При таянии твёрдый лёд становится жидкой водой."
         }
       },
-      "prompt": "Was entsteht aus Eis beim Erwärmen?",
+      "prompt": "Was entsteht, wenn Eis gerade schmilzt?",
       "tip": "Beim Schmelzen wird festes Eis zu flüssigem Wasser."
     },
     {
@@ -4474,9 +4474,9 @@
       "kind": "discovery",
       "object": "water",
       "options": [
-        "wood",
+        "water",
         "steam",
-        "metal"
+        "ice"
       ],
       "answer": "steam",
       "texts": {
@@ -4504,24 +4504,24 @@
       "options": [
         "sun",
         "moon",
-        "rain"
+        "cloud"
       ],
       "answer": "sun",
       "texts": {
         "de": {
-          "prompt": "Was liefert Wärme, durch die Eis draußen schmelzen kann?",
+          "prompt": "Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?",
           "tip": "Die Sonne liefert Energie. Wenn Eis warm genug wird, schmilzt es."
         },
         "en": {
-          "prompt": "What supplies warmth that can melt ice outdoors?",
+          "prompt": "What gives off light and warmth that can melt ice outdoors?",
           "tip": "The sun supplies energy. Ice melts when it warms enough."
         },
         "ru": {
-          "prompt": "Что даёт тепло, от которого на улице может таять лёд?",
+          "prompt": "Что излучает свет и тепло, от которых лёд на улице может растаять?",
           "tip": "Солнце даёт энергию. При достаточном нагревании лёд тает."
         }
       },
-      "prompt": "Was liefert Wärme, durch die Eis draußen schmelzen kann?",
+      "prompt": "Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?",
       "tip": "Die Sonne liefert Energie. Wenn Eis warm genug wird, schmilzt es."
     },
     {
@@ -4530,8 +4530,8 @@
       "kind": "discovery",
       "object": "globe",
       "options": [
-        "soap",
-        "salt",
+        "globe",
+        "compass",
         "map"
       ],
       "answer": "map",
@@ -4558,7 +4558,7 @@
       "kind": "discovery",
       "object": "ear",
       "options": [
-        "foot",
+        "nose",
         "ear",
         "eye"
       ],
@@ -4587,25 +4587,25 @@
       "object": "wheel",
       "options": [
         "metal",
-        "steam",
-        "paper"
+        "glass",
+        "wood"
       ],
       "answer": "metal",
       "texts": {
         "de": {
-          "prompt": "Welches Material eignet sich für eine feste Radachse?",
+          "prompt": "Welches Material ist für eine stabile Fahrrad-Radachse üblich?",
           "tip": "Eine Achse aus Metall kann ein Rad tragen und führen."
         },
         "en": {
-          "prompt": "Which material can make a strong wheel axle?",
+          "prompt": "Which material is normally used for a strong bicycle wheel axle?",
           "tip": "A metal axle can support and guide a wheel."
         },
         "ru": {
-          "prompt": "Из чего можно сделать прочную ось колеса?",
+          "prompt": "Из какого материала обычно делают прочную ось велосипедного колеса?",
           "tip": "Металлическая ось удерживает колесо и направляет его вращение."
         }
       },
-      "prompt": "Welches Material eignet sich für eine feste Radachse?",
+      "prompt": "Welches Material ist für eine stabile Fahrrad-Radachse üblich?",
       "tip": "Eine Achse aus Metall kann ein Rad tragen und führen."
     },
     {
@@ -4756,25 +4756,25 @@
       "options": [
         "fabric",
         "glass",
-        "mountain"
+        "metal"
       ],
       "answer": "fabric",
       "texts": {
         "de": {
-          "prompt": "Was kann eine Schere schneiden: Stoff, Glas oder Stein?",
-          "tip": "Eine passende Schere kann Stoff schneiden. Glas und Stein nicht."
+          "prompt": "Welches Material kannst du mit einer Stoffschere schneiden?",
+          "tip": "Eine Stoffschere schneidet Stoff. Glas und einen Eisenblock schneidet sie nicht."
         },
         "en": {
-          "prompt": "What can scissors cut: fabric, glass or stone?",
-          "tip": "Suitable scissors can cut fabric, but not glass or stone."
+          "prompt": "Which material can fabric scissors cut?",
+          "tip": "Fabric scissors cut fabric. They do not cut glass or an iron block."
         },
         "ru": {
-          "prompt": "Что режут ножницами: ткань, стекло или камень?",
-          "tip": "Подходящими ножницами режут ткань, но не стекло и камень."
+          "prompt": "Какой материал можно разрезать ножницами для ткани?",
+          "tip": "Ножницы для ткани режут ткань. Они не режут стекло или железный брусок."
         }
       },
-      "prompt": "Was kann eine Schere schneiden: Stoff, Glas oder Stein?",
-      "tip": "Eine passende Schere kann Stoff schneiden. Glas und Stein nicht."
+      "prompt": "Welches Material kannst du mit einer Stoffschere schneiden?",
+      "tip": "Eine Stoffschere schneidet Stoff. Glas und einen Eisenblock schneidet sie nicht."
     },
     {
       "id": "physics_38",
@@ -4810,9 +4810,9 @@
       "kind": "discovery",
       "object": "battery",
       "options": [
-        "wood",
+        "gear",
         "battery",
-        "ice"
+        "bulb"
       ],
       "answer": "battery",
       "texts": {
@@ -4922,9 +4922,9 @@
       "kind": "discovery",
       "object": "bee",
       "options": [
-        "ice",
+        "roots",
         "flower",
-        "metal"
+        "seed"
       ],
       "answer": "flower",
       "texts": {
@@ -4951,8 +4951,8 @@
       "object": "tree",
       "options": [
         "roots",
-        "wheel",
-        "ear"
+        "leaf",
+        "flower"
       ],
       "answer": "roots",
       "texts": {
@@ -5090,9 +5090,9 @@
       "kind": "discovery",
       "object": "egg",
       "options": [
-        "soap",
+        "fish",
         "bird",
-        "tree"
+        "frog"
       ],
       "answer": "bird",
       "texts": {
@@ -5230,8 +5230,8 @@
       "kind": "discovery",
       "object": "apple",
       "options": [
-        "wheel",
-        "soap",
+        "leaf",
+        "flower",
         "seed"
       ],
       "answer": "seed",
@@ -5287,25 +5287,25 @@
       "object": "tree",
       "options": [
         "leaf",
-        "glass",
-        "wheel"
+        "roots",
+        "seed"
       ],
       "answer": "leaf",
       "texts": {
         "de": {
-          "prompt": "Was gehört zu einem Baum?",
+          "prompt": "Welche grünen Pflanzenteile bilden hier die Baumkrone?",
           "tip": "Viele Bäume tragen Blätter, die Licht aufnehmen."
         },
         "en": {
-          "prompt": "Which of these is part of a tree?",
+          "prompt": "Which green plant parts form the tree crown here?",
           "tip": "Many trees have leaves that absorb light."
         },
         "ru": {
-          "prompt": "Что является частью дерева?",
+          "prompt": "Какие зелёные части растения образуют здесь крону дерева?",
           "tip": "У многих деревьев листья поглощают свет."
         }
       },
-      "prompt": "Was gehört zu einem Baum?",
+      "prompt": "Welche grünen Pflanzenteile bilden hier die Baumkrone?",
       "tip": "Viele Bäume tragen Blätter, die Licht aufnehmen."
     },
     {
@@ -5371,8 +5371,8 @@
       "object": "bird",
       "options": [
         "worm",
-        "metal",
-        "glass"
+        "fish",
+        "turtle"
       ],
       "answer": "worm",
       "texts": {
@@ -5398,8 +5398,8 @@
       "kind": "discovery",
       "object": "butterfly",
       "options": [
-        "battery",
-        "hammer",
+        "seed",
+        "roots",
         "flower"
       ],
       "answer": "flower",
@@ -5455,8 +5455,8 @@
       "object": "frog",
       "options": [
         "water",
-        "desert",
-        "metal"
+        "leaf",
+        "sand"
       ],
       "answer": "water",
       "texts": {
@@ -5510,9 +5510,9 @@
       "kind": "discovery",
       "object": "roots",
       "options": [
-        "metal",
+        "sand",
         "water",
-        "paper"
+        "oil"
       ],
       "answer": "water",
       "texts": {
@@ -5566,26 +5566,26 @@
       "kind": "discovery",
       "object": "leaf",
       "options": [
-        "metal",
-        "glass",
+        "roots",
+        "seed",
         "leaf"
       ],
       "answer": "leaf",
       "texts": {
         "de": {
-          "prompt": "Was kann sich bei vielen Laubbäumen im Herbst verfärben?",
+          "prompt": "Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?",
           "tip": "Die Blätter vieler Laubbäume werden im Herbst gelb, rot oder braun."
         },
         "en": {
-          "prompt": "What changes colour on many trees in autumn?",
+          "prompt": "Which parts of the tree crown often turn yellow or red in autumn?",
           "tip": "Many broadleaf trees have leaves that turn yellow, red or brown in autumn."
         },
         "ru": {
-          "prompt": "Что меняет цвет у многих деревьев осенью?",
+          "prompt": "Какие части кроны дерева осенью часто становятся жёлтыми или красными?",
           "tip": "Осенью листья многих лиственных деревьев желтеют, краснеют или буреют."
         }
       },
-      "prompt": "Was kann sich bei vielen Laubbäumen im Herbst verfärben?",
+      "prompt": "Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?",
       "tip": "Die Blätter vieler Laubbäume werden im Herbst gelb, rot oder braun."
     },
     {
@@ -5707,8 +5707,8 @@
       "object": "cat",
       "options": [
         "ear",
-        "wheel",
-        "leaf"
+        "eye",
+        "nose"
       ],
       "answer": "ear",
       "texts": {
@@ -5734,8 +5734,8 @@
       "kind": "discovery",
       "object": "mouse",
       "options": [
-        "flower",
         "paper",
+        "glass",
         "mouse"
       ],
       "answer": "mouse",
@@ -5791,8 +5791,8 @@
       "object": "flower",
       "options": [
         "roots",
-        "wheel",
-        "bone"
+        "leaf",
+        "seed"
       ],
       "answer": "roots",
       "texts": {
@@ -5902,7 +5902,7 @@
       "kind": "discovery",
       "object": "fish",
       "options": [
-        "paper",
+        "sand",
         "oil",
         "water"
       ],
@@ -5959,8 +5959,8 @@
       "object": "butterfly",
       "options": [
         "butterfly",
-        "cat",
-        "worm"
+        "bird",
+        "cat"
       ],
       "answer": "butterfly",
       "texts": {
@@ -6210,26 +6210,26 @@
       "kind": "discovery",
       "object": "magnet",
       "options": [
-        "fabric",
+        "scissors",
         "magnet",
-        "wood"
+        "lever"
       ],
       "answer": "magnet",
       "texts": {
         "de": {
-          "prompt": "Was hilft, Eisen aus einer Mischung zu holen?",
+          "prompt": "Welcher Gegenstand zieht Eisen aus einer Mischung an?",
           "tip": "Ein Magnet zieht Eisen an. Hier zeigt das Metallbild das Eisen."
         },
         "en": {
-          "prompt": "What can help pick iron out of a mixture?",
+          "prompt": "Which object attracts iron out of a mixture?",
           "tip": "A magnet attracts iron. The metal picture here stands for iron."
         },
         "ru": {
-          "prompt": "Что помогает достать железо из смеси?",
+          "prompt": "Какой предмет притягивает железо из смеси?",
           "tip": "Магнит притягивает железо. На картинке с металлом здесь изображено железо."
         }
       },
-      "prompt": "Was hilft, Eisen aus einer Mischung zu holen?",
+      "prompt": "Welcher Gegenstand zieht Eisen aus einer Mischung an?",
       "tip": "Ein Magnet zieht Eisen an. Hier zeigt das Metallbild das Eisen."
     },
     {
@@ -6239,8 +6239,8 @@
       "object": "water",
       "options": [
         "steam",
-        "wood",
-        "salt"
+        "ice",
+        "water"
       ],
       "answer": "steam",
       "texts": {
@@ -6266,8 +6266,8 @@
       "kind": "discovery",
       "object": "steam",
       "options": [
-        "sand",
-        "metal",
+        "steam",
+        "ice",
         "water"
       ],
       "answer": "water",
@@ -6294,9 +6294,9 @@
       "kind": "discovery",
       "object": "ice",
       "options": [
-        "paper",
+        "steam",
         "ice",
-        "steam"
+        "water"
       ],
       "answer": "ice",
       "texts": {
@@ -6323,8 +6323,8 @@
       "object": "steam",
       "options": [
         "steam",
-        "ice",
-        "wood"
+        "water",
+        "ice"
       ],
       "answer": "steam",
       "texts": {
@@ -6525,19 +6525,19 @@
       "answer": "soap",
       "texts": {
         "de": {
-          "prompt": "Was hilft, fettigen Schmutz mit Wasser abzuwaschen?",
+          "prompt": "Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?",
           "tip": "Seife hilft, Fett und Schmutz mit Wasser zu entfernen."
         },
         "en": {
-          "prompt": "What helps water wash away greasy dirt?",
+          "prompt": "What helps grease mix with water so it can be washed away?",
           "tip": "Soap helps water remove grease and dirt."
         },
         "ru": {
-          "prompt": "Что помогает воде смывать жирную грязь?",
+          "prompt": "Что помогает смешать жир с водой и смыть его?",
           "tip": "Мыло помогает воде смывать жир и грязь."
         }
       },
-      "prompt": "Was hilft, fettigen Schmutz mit Wasser abzuwaschen?",
+      "prompt": "Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?",
       "tip": "Seife hilft, Fett und Schmutz mit Wasser zu entfernen."
     },
     {
@@ -6630,9 +6630,9 @@
       "kind": "discovery",
       "object": "water",
       "options": [
-        "wheel",
+        "moon",
         "cloud",
-        "bone"
+        "sun"
       ],
       "answer": "cloud",
       "texts": {
@@ -6798,26 +6798,26 @@
       "kind": "discovery",
       "object": "water",
       "options": [
-        "battery",
+        "salt",
         "soap",
-        "hammer"
+        "oil"
       ],
       "answer": "soap",
       "texts": {
         "de": {
-          "prompt": "Was gehört zum sicheren Händewaschen mit Wasser?",
+          "prompt": "Welches Mittel ist zum Händewaschen mit Wasser gedacht?",
           "tip": "Seife ist für die Haut gedacht. Unbekannte Reinigungsmittel sind kein Spielzeug."
         },
         "en": {
-          "prompt": "What belongs with water for safe handwashing?",
+          "prompt": "Which product is intended for washing hands with water?",
           "tip": "Soap is made for skin. Unknown cleaning products are not toys."
         },
         "ru": {
-          "prompt": "Что нужно вместе с водой для безопасного мытья рук?",
+          "prompt": "Какое средство предназначено для мытья рук с водой?",
           "tip": "Мыло предназначено для кожи. Незнакомые чистящие средства — не игрушки."
         }
       },
-      "prompt": "Was gehört zum sicheren Händewaschen mit Wasser?",
+      "prompt": "Welches Mittel ist zum Händewaschen mit Wasser gedacht?",
       "tip": "Seife ist für die Haut gedacht. Unbekannte Reinigungsmittel sind kein Spielzeug."
     },
     {
@@ -6827,8 +6827,8 @@
       "object": "salt",
       "options": [
         "salt",
-        "oil",
-        "wood"
+        "sand",
+        "ice"
       ],
       "answer": "salt",
       "texts": {
@@ -6854,26 +6854,26 @@
       "kind": "discovery",
       "object": "metal",
       "options": [
-        "soap",
-        "cloud",
+        "scissors",
+        "hammer",
         "magnet"
       ],
       "answer": "magnet",
       "texts": {
         "de": {
-          "prompt": "Womit trennt man eiserne Teile von Sand?",
+          "prompt": "Welcher Gegenstand zieht Eisenstücke aus Sand an?",
           "tip": "Ein Magnet zieht die Eisenstücke an, den Sand normalerweise nicht."
         },
         "en": {
-          "prompt": "What can separate iron pieces from sand?",
+          "prompt": "Which object attracts iron pieces out of sand?",
           "tip": "A magnet attracts the iron pieces, but normally not the sand."
         },
         "ru": {
-          "prompt": "Чем можно отделить железные частички от песка?",
+          "prompt": "Какой предмет притягивает кусочки железа из песка?",
           "tip": "Магнит притягивает железные частички, но обычно не песок."
         }
       },
-      "prompt": "Womit trennt man eiserne Teile von Sand?",
+      "prompt": "Welcher Gegenstand zieht Eisenstücke aus Sand an?",
       "tip": "Ein Magnet zieht die Eisenstücke an, den Sand normalerweise nicht."
     },
     {
@@ -6911,8 +6911,8 @@
       "object": "wood",
       "options": [
         "paper",
-        "ice",
-        "water"
+        "glass",
+        "metal"
       ],
       "answer": "paper",
       "texts": {
@@ -6938,8 +6938,8 @@
       "kind": "discovery",
       "object": "steam",
       "options": [
+        "steam",
         "oil",
-        "paper",
         "ice"
       ],
       "answer": "ice",
@@ -6966,9 +6966,9 @@
       "kind": "discovery",
       "object": "glass",
       "options": [
-        "egg",
+        "metal",
         "sand",
-        "flower"
+        "wood"
       ],
       "answer": "sand",
       "texts": {
@@ -7079,25 +7079,25 @@
       "object": "ice",
       "options": [
         "water",
-        "battery",
+        "steam",
         "oil"
       ],
       "answer": "water",
       "texts": {
         "de": {
-          "prompt": "Ein Eiswürfel schmilzt im Glas. Was ist danach mehr im Glas?",
+          "prompt": "Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?",
           "tip": "Beim Schmelzen wird festes Eis zu flüssigem Wasser. Es ist kein neuer Stoff."
         },
         "en": {
-          "prompt": "An ice cube melts in a glass. What is there more of afterwards?",
+          "prompt": "What does an ice cube become when it melts in a glass?",
           "tip": "Melting changes solid ice to liquid water. It does not make a new substance."
         },
         "ru": {
-          "prompt": "Кубик льда тает в стакане. Чего становится больше?",
+          "prompt": "Во что превращается кубик льда, когда тает в стакане?",
           "tip": "При таянии твёрдый лёд становится жидкой водой. Новое вещество не образуется."
         }
       },
-      "prompt": "Ein Eiswürfel schmilzt im Glas. Was ist danach mehr im Glas?",
+      "prompt": "Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?",
       "tip": "Beim Schmelzen wird festes Eis zu flüssigem Wasser. Es ist kein neuer Stoff."
     },
     {
@@ -7108,7 +7108,7 @@
       "options": [
         "eye",
         "ear",
-        "foot"
+        "nose"
       ],
       "answer": "eye",
       "texts": {
@@ -7135,7 +7135,7 @@
       "object": "ear",
       "options": [
         "nose",
-        "hand",
+        "eye",
         "ear"
       ],
       "answer": "ear",
@@ -7162,7 +7162,7 @@
       "kind": "discovery",
       "object": "nose",
       "options": [
-        "foot",
+        "tongue",
         "nose",
         "eye"
       ],
@@ -7191,8 +7191,8 @@
       "object": "tongue",
       "options": [
         "tongue",
-        "ear",
-        "bone"
+        "nose",
+        "ear"
       ],
       "answer": "tongue",
       "texts": {
@@ -7218,8 +7218,8 @@
       "kind": "discovery",
       "object": "hand",
       "options": [
-        "tooth",
-        "leaf",
+        "eye",
+        "ear",
         "hand"
       ],
       "answer": "hand",
@@ -7246,9 +7246,9 @@
       "kind": "discovery",
       "object": "heart",
       "options": [
-        "tooth",
+        "stomach",
         "heart",
-        "stomach"
+        "lungs"
       ],
       "answer": "heart",
       "texts": {
@@ -7275,25 +7275,25 @@
       "object": "lungs",
       "options": [
         "lungs",
-        "brain",
-        "bone"
+        "heart",
+        "stomach"
       ],
       "answer": "lungs",
       "texts": {
         "de": {
-          "prompt": "Welche Organe helfen beim Atmen?",
+          "prompt": "Welche Organe nehmen beim Atmen Luft auf?",
           "tip": "In der Lunge gelangt Sauerstoff aus der Luft ins Blut."
         },
         "en": {
-          "prompt": "Which organs help you breathe?",
+          "prompt": "Which organs take in air when you breathe?",
           "tip": "In the lungs, oxygen moves from the air into the blood."
         },
         "ru": {
-          "prompt": "Какие органы помогают дышать?",
+          "prompt": "Какие органы принимают воздух при дыхании?",
           "tip": "В лёгких кислород из воздуха поступает в кровь."
         }
       },
-      "prompt": "Welche Organe helfen beim Atmen?",
+      "prompt": "Welche Organe nehmen beim Atmen Luft auf?",
       "tip": "In der Lunge gelangt Sauerstoff aus der Luft ins Blut."
     },
     {
@@ -7302,8 +7302,8 @@
       "kind": "discovery",
       "object": "brain",
       "options": [
-        "foot",
-        "tooth",
+        "heart",
+        "stomach",
         "brain"
       ],
       "answer": "brain",
@@ -7330,9 +7330,9 @@
       "kind": "discovery",
       "object": "bone",
       "options": [
-        "water",
+        "lungs",
         "bone",
-        "soap"
+        "heart"
       ],
       "answer": "bone",
       "texts": {
@@ -7359,8 +7359,8 @@
       "object": "tooth",
       "options": [
         "tooth",
-        "ear",
-        "foot"
+        "tongue",
+        "ear"
       ],
       "answer": "tooth",
       "texts": {
@@ -7386,8 +7386,8 @@
       "kind": "discovery",
       "object": "stomach",
       "options": [
-        "eye",
-        "ear",
+        "heart",
+        "lungs",
         "stomach"
       ],
       "answer": "stomach",
@@ -7470,26 +7470,26 @@
       "kind": "discovery",
       "object": "eye",
       "options": [
-        "bulb",
-        "gear",
+        "sun",
+        "cloud",
         "moon"
       ],
       "answer": "moon",
       "texts": {
         "de": {
-          "prompt": "Wann wird es draußen meist dunkel und Zeit zum Schlafen?",
+          "prompt": "Welches Bild steht hier für die Nacht und die Schlafenszeit?",
           "tip": "Nachts ist es dunkel. Schlaf gibt dem Körper Zeit zur Erholung."
         },
         "en": {
-          "prompt": "What do you often see outside when it is dark at bedtime?",
+          "prompt": "Which picture here stands for nighttime and bedtime?",
           "tip": "Night is dark. Sleep gives the body time to rest."
         },
         "ru": {
-          "prompt": "Что часто видно на небе в тёмное время перед сном?",
+          "prompt": "Какая картинка здесь обозначает ночь и время сна?",
           "tip": "Ночью темно. Сон даёт организму время на восстановление."
         }
       },
-      "prompt": "Wann wird es draußen meist dunkel und Zeit zum Schlafen?",
+      "prompt": "Welches Bild steht hier für die Nacht und die Schlafenszeit?",
       "tip": "Nachts ist es dunkel. Schlaf gibt dem Körper Zeit zur Erholung."
     },
     {
@@ -7498,9 +7498,9 @@
       "kind": "discovery",
       "object": "foot",
       "options": [
-        "nose",
+        "eye",
         "foot",
-        "ear"
+        "hand"
       ],
       "answer": "foot",
       "texts": {
@@ -7554,8 +7554,8 @@
       "kind": "discovery",
       "object": "ear",
       "options": [
-        "tooth",
-        "stomach",
+        "eye",
+        "nose",
         "ear"
       ],
       "answer": "ear",
@@ -7611,8 +7611,8 @@
       "object": "nose",
       "options": [
         "nose",
-        "tooth",
-        "bone"
+        "ear",
+        "tongue"
       ],
       "answer": "nose",
       "texts": {
@@ -7666,9 +7666,9 @@
       "kind": "discovery",
       "object": "hand",
       "options": [
-        "stomach",
+        "ear",
         "hand",
-        "eye"
+        "foot"
       ],
       "answer": "hand",
       "texts": {
@@ -7695,8 +7695,8 @@
       "object": "heart",
       "options": [
         "heart",
-        "ear",
-        "foot"
+        "lungs",
+        "stomach"
       ],
       "answer": "heart",
       "texts": {
@@ -7722,8 +7722,8 @@
       "kind": "discovery",
       "object": "lungs",
       "options": [
-        "tooth",
-        "bone",
+        "heart",
+        "stomach",
         "lungs"
       ],
       "answer": "lungs",
@@ -7750,9 +7750,9 @@
       "kind": "discovery",
       "object": "brain",
       "options": [
-        "ear",
+        "stomach",
         "brain",
-        "hand"
+        "heart"
       ],
       "answer": "brain",
       "texts": {
@@ -7779,8 +7779,8 @@
       "object": "bone",
       "options": [
         "bone",
-        "water",
-        "soap"
+        "brain",
+        "heart"
       ],
       "answer": "bone",
       "texts": {
@@ -7806,8 +7806,8 @@
       "kind": "discovery",
       "object": "stomach",
       "options": [
-        "ear",
-        "nose",
+        "heart",
+        "lungs",
         "stomach"
       ],
       "answer": "stomach",
@@ -7834,26 +7834,26 @@
       "kind": "discovery",
       "object": "tongue",
       "options": [
-        "foot",
+        "ear",
         "nose",
-        "bone"
+        "tongue"
       ],
       "answer": "nose",
       "texts": {
         "de": {
-          "prompt": "Was hilft zusätzlich zur Zunge, Aromen zu erkennen?",
+          "prompt": "Welcher Körperteil nimmt beim Essen Duftstoffe wahr?",
           "tip": "Beim Essen arbeiten Geruchssinn und Geschmackssinn zusammen."
         },
         "en": {
-          "prompt": "What helps the tongue recognise flavours?",
+          "prompt": "Which part of the body senses smells while you eat?",
           "tip": "Smell and taste work together when you eat."
         },
         "ru": {
-          "prompt": "Что помогает языку различать аромат пищи?",
+          "prompt": "Какая часть тела чувствует запахи во время еды?",
           "tip": "Во время еды обоняние и вкус работают вместе."
         }
       },
-      "prompt": "Was hilft zusätzlich zur Zunge, Aromen zu erkennen?",
+      "prompt": "Welcher Körperteil nimmt beim Essen Duftstoffe wahr?",
       "tip": "Beim Essen arbeiten Geruchssinn und Geschmackssinn zusammen."
     },
     {
@@ -7918,9 +7918,9 @@
       "kind": "discovery",
       "object": "foot",
       "options": [
-        "water",
+        "heart",
         "bone",
-        "cloud"
+        "tooth"
       ],
       "answer": "bone",
       "texts": {
@@ -7947,25 +7947,25 @@
       "object": "ear",
       "options": [
         "brain",
-        "stomach",
-        "tooth"
+        "heart",
+        "stomach"
       ],
       "answer": "brain",
       "texts": {
         "de": {
-          "prompt": "Wohin gelangen Signale von den Ohren?",
+          "prompt": "Welches Organ verarbeitet die Signale der Ohren, damit du Geräusche erkennst?",
           "tip": "Die Signale gelangen zum Gehirn, das Geräusche verarbeitet."
         },
         "en": {
-          "prompt": "Where do signals from the ears go?",
+          "prompt": "Which organ processes signals from your ears so you recognize sounds?",
           "tip": "The signals go to the brain, which processes sounds."
         },
         "ru": {
-          "prompt": "Куда поступают сигналы от ушей?",
+          "prompt": "Какой орган обрабатывает сигналы от ушей, чтобы ты узнавал звуки?",
           "tip": "Сигналы поступают в мозг, где обрабатываются звуки."
         }
       },
-      "prompt": "Wohin gelangen Signale von den Ohren?",
+      "prompt": "Welches Organ verarbeitet die Signale der Ohren, damit du Geräusche erkennst?",
       "tip": "Die Signale gelangen zum Gehirn, das Geräusche verarbeitet."
     },
     {
@@ -7974,8 +7974,8 @@
       "kind": "discovery",
       "object": "eye",
       "options": [
-        "foot",
-        "tooth",
+        "heart",
+        "stomach",
         "brain"
       ],
       "answer": "brain",
@@ -8002,9 +8002,9 @@
       "kind": "discovery",
       "object": "heart",
       "options": [
-        "ear",
+        "stomach",
         "lungs",
-        "tooth"
+        "heart"
       ],
       "answer": "lungs",
       "texts": {
@@ -8031,8 +8031,8 @@
       "object": "bone",
       "options": [
         "heart",
-        "tooth",
-        "eye"
+        "lungs",
+        "stomach"
       ],
       "answer": "heart",
       "texts": {
@@ -8115,8 +8115,8 @@
       "object": "lungs",
       "options": [
         "nose",
-        "foot",
-        "hand"
+        "eye",
+        "ear"
       ],
       "answer": "nose",
       "texts": {
@@ -8142,8 +8142,8 @@
       "kind": "discovery",
       "object": "brain",
       "options": [
-        "tooth",
-        "stomach",
+        "eye",
+        "nose",
         "ear"
       ],
       "answer": "ear",
@@ -8227,8 +8227,8 @@
       "object": "globe",
       "options": [
         "globe",
-        "wheel",
-        "egg"
+        "map",
+        "compass"
       ],
       "answer": "globe",
       "texts": {
@@ -8254,26 +8254,26 @@
       "kind": "discovery",
       "object": "map",
       "options": [
-        "paper",
-        "soap",
+        "globe",
+        "compass",
         "map"
       ],
       "answer": "map",
       "texts": {
         "de": {
-          "prompt": "Was zeigt Orte und Wege von oben?",
+          "prompt": "Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?",
           "tip": "Eine Karte zeigt einen Ausschnitt der Welt von oben und verkleinert."
         },
         "en": {
-          "prompt": "What shows places and paths from above?",
+          "prompt": "Which drawing on a flat sheet shows places and paths from above?",
           "tip": "A map shows part of the world from above on a smaller scale."
         },
         "ru": {
-          "prompt": "Что показывает места и дороги сверху?",
+          "prompt": "Какой рисунок на плоском листе показывает места и дороги сверху?",
           "tip": "Карта показывает часть мира сверху в уменьшенном виде."
         }
       },
-      "prompt": "Was zeigt Orte und Wege von oben?",
+      "prompt": "Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?",
       "tip": "Eine Karte zeigt einen Ausschnitt der Welt von oben und verkleinert."
     },
     {
@@ -8282,26 +8282,26 @@
       "kind": "discovery",
       "object": "compass",
       "options": [
-        "glass",
+        "globe",
         "compass",
-        "hammer"
+        "map"
       ],
       "answer": "compass",
       "texts": {
         "de": {
-          "prompt": "Womit kannst du dich an Himmelsrichtungen orientieren?",
+          "prompt": "Welches Gerät hat eine Nadel, die nach Norden zeigt?",
           "tip": "Ein Kompass hilft, Norden und die anderen Himmelsrichtungen zu finden."
         },
         "en": {
-          "prompt": "What helps you find compass directions?",
+          "prompt": "Which instrument has a needle that points north?",
           "tip": "A compass helps you find north and the other directions."
         },
         "ru": {
-          "prompt": "Что помогает определять стороны света?",
+          "prompt": "У какого прибора есть стрелка, показывающая на север?",
           "tip": "Компас помогает находить север и другие стороны света."
         }
       },
-      "prompt": "Womit kannst du dich an Himmelsrichtungen orientieren?",
+      "prompt": "Welches Gerät hat eine Nadel, die nach Norden zeigt?",
       "tip": "Ein Kompass hilft, Norden und die anderen Himmelsrichtungen zu finden."
     },
     {
@@ -8479,8 +8479,8 @@
       "object": "cloud",
       "options": [
         "rain",
-        "wood",
-        "metal"
+        "sun",
+        "moon"
       ],
       "answer": "rain",
       "texts": {
@@ -8506,8 +8506,8 @@
       "kind": "discovery",
       "object": "snow",
       "options": [
-        "sand",
-        "oil",
+        "rain",
+        "cloud",
         "snow"
       ],
       "answer": "snow",
@@ -8563,8 +8563,8 @@
       "object": "moon",
       "options": [
         "moon",
-        "tree",
-        "fish"
+        "sun",
+        "cloud"
       ],
       "answer": "moon",
       "texts": {
@@ -8647,25 +8647,25 @@
       "object": "mountain",
       "options": [
         "snow",
-        "oil",
-        "soap"
+        "rain",
+        "cloud"
       ],
       "answer": "snow",
       "texts": {
         "de": {
-          "prompt": "Was liegt auf manchen hohen Bergen sogar im Sommer?",
+          "prompt": "Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?",
           "tip": "Hoch oben ist es oft kälter. Deshalb kann dort Schnee liegen bleiben."
         },
         "en": {
-          "prompt": "What can stay on some high mountains even in summer?",
+          "prompt": "What can remain as a frozen white layer on high mountains even in summer?",
           "tip": "High up it is often colder, so snow can remain there."
         },
         "ru": {
-          "prompt": "Что даже летом лежит на некоторых высоких горах?",
+          "prompt": "Что может лежать замёрзшим белым слоем на высоких горах даже летом?",
           "tip": "На большой высоте часто холоднее, поэтому снег может не таять."
         }
       },
-      "prompt": "Was liegt auf manchen hohen Bergen sogar im Sommer?",
+      "prompt": "Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?",
       "tip": "Hoch oben ist es oft kälter. Deshalb kann dort Schnee liegen bleiben."
     },
     {
@@ -8674,8 +8674,8 @@
       "kind": "discovery",
       "object": "sea",
       "options": [
-        "paper",
-        "metal",
+        "forest",
+        "desert",
         "water"
       ],
       "answer": "water",
@@ -8702,7 +8702,7 @@
       "kind": "discovery",
       "object": "map",
       "options": [
-        "sand",
+        "mountain",
         "forest",
         "sea"
       ],
@@ -8731,8 +8731,8 @@
       "object": "map",
       "options": [
         "bridge",
-        "egg",
-        "soap"
+        "river",
+        "mountain"
       ],
       "answer": "bridge",
       "texts": {
@@ -8758,26 +8758,26 @@
       "kind": "discovery",
       "object": "globe",
       "options": [
-        "fabric",
-        "paper",
+        "forest",
+        "desert",
         "sea"
       ],
       "answer": "sea",
       "texts": {
         "de": {
-          "prompt": "Was bedeckt mehr von der Erdoberfläche: Meere oder Land?",
+          "prompt": "Was bedeckt den größten Teil der Erdoberfläche?",
           "tip": "Die Meere bedecken mehr als die Hälfte der Erdoberfläche."
         },
         "en": {
-          "prompt": "What covers more of Earth's surface: seas or land?",
+          "prompt": "What covers most of Earth’s surface?",
           "tip": "Seas cover more than half of Earth's surface."
         },
         "ru": {
-          "prompt": "Чего больше на поверхности Земли: морей или суши?",
+          "prompt": "Что покрывает большую часть поверхности Земли?",
           "tip": "Моря покрывают больше половины поверхности Земли."
         }
       },
-      "prompt": "Was bedeckt mehr von der Erdoberfläche: Meere oder Land?",
+      "prompt": "Was bedeckt den größten Teil der Erdoberfläche?",
       "tip": "Die Meere bedecken mehr als die Hälfte der Erdoberfläche."
     },
     {
@@ -8816,24 +8816,24 @@
       "options": [
         "sun",
         "moon",
-        "paper"
+        "cloud"
       ],
       "answer": "sun",
       "texts": {
         "de": {
-          "prompt": "Was liefert Energie für Verdunstung im Wasserkreislauf?",
+          "prompt": "Was erwärmt das Wasser im Wasserkreislauf vor allem?",
           "tip": "Sonnenwärme hilft, Wasser verdunsten zu lassen."
         },
         "en": {
-          "prompt": "What supplies energy for evaporation in the water cycle?",
+          "prompt": "What mainly warms water in Earth’s water cycle?",
           "tip": "Warmth from the sun helps water evaporate."
         },
         "ru": {
-          "prompt": "Что даёт энергию для испарения в круговороте воды?",
+          "prompt": "Что в основном нагревает воду в круговороте воды на Земле?",
           "tip": "Солнечное тепло помогает воде испаряться."
         }
       },
-      "prompt": "Was liefert Energie für Verdunstung im Wasserkreislauf?",
+      "prompt": "Was erwärmt das Wasser im Wasserkreislauf vor allem?",
       "tip": "Sonnenwärme hilft, Wasser verdunsten zu lassen."
     },
     {
@@ -8899,8 +8899,8 @@
       "object": "sea",
       "options": [
         "sand",
-        "soap",
-        "metal"
+        "water",
+        "wood"
       ],
       "answer": "sand",
       "texts": {
@@ -9011,7 +9011,7 @@
       "object": "map",
       "options": [
         "globe",
-        "ice",
+        "compass",
         "map"
       ],
       "answer": "map",
@@ -9038,9 +9038,9 @@
       "kind": "discovery",
       "object": "globe",
       "options": [
-        "wheel",
+        "compass",
         "globe",
-        "bridge"
+        "map"
       ],
       "answer": "globe",
       "texts": {
@@ -9206,26 +9206,26 @@
       "kind": "discovery",
       "object": "map",
       "options": [
-        "salt",
+        "globe",
         "compass",
-        "soap"
+        "map"
       ],
       "answer": "compass",
       "texts": {
         "de": {
-          "prompt": "Was hilft beim Ausrichten einer Karte nach Norden?",
+          "prompt": "Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?",
           "tip": "Mit einem Kompass kannst du die Nordrichtung der Karte passend ausrichten."
         },
         "en": {
-          "prompt": "What helps you line a map up with north?",
+          "prompt": "Which instrument uses a magnetic needle to show north for your map?",
           "tip": "A compass helps you align the map's north direction."
         },
         "ru": {
-          "prompt": "Что помогает сориентировать карту на север?",
+          "prompt": "Какой прибор магнитной стрелкой показывает север для твоей карты?",
           "tip": "Компас помогает повернуть карту так, чтобы её север совпал с направлением на север."
         }
       },
-      "prompt": "Was hilft beim Ausrichten einer Karte nach Norden?",
+      "prompt": "Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?",
       "tip": "Mit einem Kompass kannst du die Nordrichtung der Karte passend ausrichten."
     },
     {
@@ -9236,7 +9236,7 @@
       "options": [
         "rain",
         "snow",
-        "sand"
+        "cloud"
       ],
       "answer": "rain",
       "texts": {
@@ -9290,26 +9290,26 @@
       "kind": "discovery",
       "object": "moon",
       "options": [
-        "paper",
+        "cloud",
         "sun",
-        "forest"
+        "moon"
       ],
       "answer": "sun",
       "texts": {
         "de": {
-          "prompt": "Woher kommt das Licht, das der Mond zurückwirft?",
+          "prompt": "Welcher Himmelskörper liefert das meiste Licht, das der Mond zurückwirft?",
           "tip": "Der Mond leuchtet nicht selbst. Er reflektiert Sonnenlicht."
         },
         "en": {
-          "prompt": "Where does the light reflected by the moon come from?",
+          "prompt": "Which celestial body supplies most of the light reflected by the Moon?",
           "tip": "The moon does not make its own light. It reflects sunlight."
         },
         "ru": {
-          "prompt": "Откуда свет, который отражает Луна?",
+          "prompt": "Какое небесное тело даёт большую часть света, отражаемого Луной?",
           "tip": "Луна не светится сама. Она отражает солнечный свет."
         }
       },
-      "prompt": "Woher kommt das Licht, das der Mond zurückwirft?",
+      "prompt": "Welcher Himmelskörper liefert das meiste Licht, das der Mond zurückwirft?",
       "tip": "Der Mond leuchtet nicht selbst. Er reflektiert Sonnenlicht."
     },
     {

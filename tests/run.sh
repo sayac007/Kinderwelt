@@ -25,3 +25,4 @@ checked --headless --path "$STATE/fresh" --editor --import --quit
 checked --headless --path "$STATE/fresh" -s "$PROJECT/tests/boot.gd"
 python3 -m unittest discover -s tests/android -v
 python3 scripts/qa/audit.py
+python3 scripts/qa/distractors.py --check
