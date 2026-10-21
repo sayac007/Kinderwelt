@@ -77,8 +77,12 @@ class SourceProvenanceTests(unittest.TestCase):
     def test_nested_ignored_capsule_does_not_inherit_parent_git_identity(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);subprocess.run(['git','init','--quiet',str(root)],check=True)
+            (root/'.gitignore').write_text('build/\n')
+            subprocess.run(['git','-C',str(root),'add','.gitignore'],check=True)
+            subprocess.run(['git','-C',str(root),'-c','user.name=Regression Fixture','-c','user.email=fixture@example.invalid','commit','--quiet','-m','fixture'],check=True)
             capsule=root/'build/capsule';capsule.mkdir(parents=True)
-            self.assertEqual(build.git_provenance(capsule)['source_tracking'],'unversioned-snapshot')
+            self.assertFalse(build.git_provenance(root)['source_dirty'])
+            self.assertEqual(build.git_provenance(capsule),{'source_tracking':'unversioned-snapshot','source_commit':None,'source_dirty':None})
     def test_real_worktree_tracks_clean_and_modified_sources(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);subprocess.run(['git','init','--quiet',str(root)],check=True)
