@@ -1,0 +1,767 @@
+{
+  "schema": 1,
+  "locales": [
+    "de",
+    "en",
+    "ru"
+  ],
+  "ui": {
+    "math": {
+      "de": "Mathe",
+      "en": "Maths",
+      "ru": "Математика"
+    },
+    "german": {
+      "de": "Deutsch",
+      "en": "German",
+      "ru": "Немецкий"
+    },
+    "logic": {
+      "de": "Logik",
+      "en": "Logic",
+      "ru": "Логика"
+    },
+    "physics": {
+      "de": "Physik",
+      "en": "Physics",
+      "ru": "Физика"
+    },
+    "biology": {
+      "de": "Biologie",
+      "en": "Biology",
+      "ru": "Биология"
+    },
+    "chemistry": {
+      "de": "Chemie",
+      "en": "Chemistry",
+      "ru": "Химия"
+    },
+    "body": {
+      "de": "Mensch",
+      "en": "Human body",
+      "ru": "Человек"
+    },
+    "geography": {
+      "de": "Geografie",
+      "en": "Geography",
+      "ru": "География"
+    },
+    "back": {
+      "de": "Zurück zum Spiel",
+      "en": "Back to the game",
+      "ru": "Вернуться в игру"
+    },
+    "return": {
+      "de": "Zurück",
+      "en": "Back",
+      "ru": "Назад"
+    },
+    "figure": {
+      "de": "Figur",
+      "en": "Character",
+      "ru": "Персонаж"
+    },
+    "choose_figure": {
+      "de": "Figur wählen",
+      "en": "Choose a character",
+      "ru": "Выбрать персонажа"
+    },
+    "menu_tip": {
+      "de": "Musik und Einstellungen",
+      "en": "Music and settings",
+      "ru": "Музыка и настройки"
+    },
+    "points": {
+      "de": "Punkte",
+      "en": "points",
+      "ru": "очков"
+    },
+    "choose": {
+      "de": "Wer bist du heute?",
+      "en": "Who are you today?",
+      "ru": "Кем ты будешь сегодня?"
+    },
+    "start": {
+      "de": "Los geht’s! →",
+      "en": "Let's go! →",
+      "ru": "Вперёд! →"
+    },
+    "musicbox": {
+      "de": "Musikbox",
+      "en": "Music box",
+      "ru": "Музыка"
+    },
+    "settings": {
+      "de": "Einstellungen",
+      "en": "Settings",
+      "ru": "Настройки"
+    },
+    "language": {
+      "de": "Sprache wählen",
+      "en": "Choose a language",
+      "ru": "Выбрать язык"
+    },
+    "music": {
+      "de": "Musik",
+      "en": "Music",
+      "ru": "Музыка"
+    },
+    "effects": {
+      "de": "Spielklänge",
+      "en": "Game sounds",
+      "ru": "Звуки игры"
+    },
+    "voice": {
+      "de": "Vorlesestimme",
+      "en": "Narration",
+      "ru": "Озвучивание"
+    },
+    "sound": {
+      "de": "Ton",
+      "en": "Sound",
+      "ru": "Звук"
+    },
+    "on": {
+      "de": "an",
+      "en": "on",
+      "ru": "вкл."
+    },
+    "off": {
+      "de": "aus",
+      "en": "off",
+      "ru": "выкл."
+    },
+    "autovoice": {
+      "de": "Automatisch vorlesen",
+      "en": "Automatic narration",
+      "ru": "Автоматическая озвучка"
+    },
+    "less_motion": {
+      "de": "Weniger Bewegung",
+      "en": "Reduce motion",
+      "ru": "Меньше движения"
+    },
+    "large_text": {
+      "de": "Große Schrift",
+      "en": "Large text",
+      "ru": "Крупный шрифт"
+    },
+    "adults": {
+      "de": "Für Erwachsene",
+      "en": "For adults",
+      "ru": "Для взрослых"
+    },
+    "voluntary": {
+      "de": "Gemeinsam spielen ist freiwillig",
+      "en": "Playing together is optional",
+      "ru": "Совместная игра по желанию"
+    },
+    "respect": {
+      "de": "Ausprobieren und noch einmal versuchen. Fehler kosten keine Sterne. Keine Zeitvorgaben, Ranglisten oder Käufe.",
+      "en": "Explore and try again. Mistakes never cost stars. No timers, leaderboards or purchases.",
+      "ru": "Пробуй снова. За ошибки звёзды не отнимаются. Нет таймеров, рейтингов и покупок."
+    },
+    "privacy": {
+      "de": "320 eigene Aufgaben. Keine Konten, Werbung, Mikrofonaufnahmen oder Netzwerkverbindungen. Figur und Spielstand bleiben auf diesem Gerät.",
+      "en": "320 original tasks. No accounts, adverts, microphone recording or network connections. Character and progress stay on this device.",
+      "ru": "320 собственных заданий. Нет аккаунтов, рекламы, записи микрофона и сетевых соединений. Персонаж и прогресс хранятся на этом устройстве."
+    },
+    "controls": {
+      "de": "Klang & Bedienung",
+      "en": "Sound and controls",
+      "ru": "Звук и управление"
+    },
+    "reset": {
+      "de": "Lokalen Spielstand löschen …",
+      "en": "Delete local progress …",
+      "ru": "Удалить локальный прогресс …"
+    },
+    "reset_question": {
+      "de": "Figur, Sterne und Einstellungen auf diesem Gerät löschen?",
+      "en": "Delete this device's character, stars and settings?",
+      "ru": "Удалить персонажа, звёзды и настройки на этом устройстве?"
+    },
+    "cancel": {
+      "de": "Abbrechen",
+      "en": "Cancel",
+      "ru": "Отмена"
+    },
+    "reset_yes": {
+      "de": "Ja, zurücksetzen",
+      "en": "Yes, reset",
+      "ru": "Да, сбросить"
+    },
+    "reset_error": {
+      "de": "Zurücksetzen fehlgeschlagen",
+      "en": "Could not reset",
+      "ru": "Не удалось сбросить"
+    },
+    "save_error": {
+      "de": "Spielstand konnte nicht gespeichert werden.",
+      "en": "Could not save your progress.",
+      "ru": "Не удалось сохранить прогресс."
+    },
+    "walk_back": {
+      "de": "Zurück zum Weg",
+      "en": "Back to the trail",
+      "ru": "Вернуться на дорожку"
+    },
+    "repeat": {
+      "de": "Aufgabe noch einmal hören",
+      "en": "Hear the task again",
+      "ru": "Послушать задание ещё раз"
+    },
+    "help": {
+      "de": "Zeig mal",
+      "en": "Show me",
+      "ru": "Покажи"
+    },
+    "next": {
+      "de": "Weiter →",
+      "en": "Continue →",
+      "ru": "Дальше →"
+    },
+    "encourage": {
+      "de": "Schau genau. Du kannst es ausprobieren.",
+      "en": "Take a look. You can try it out.",
+      "ru": "Посмотри внимательно. Можно попробовать."
+    },
+    "reward": {
+      "de": "+1 Stern · +10 Punkte",
+      "en": "+1 star · +10 points",
+      "ru": "+1 звезда · +10 очков"
+    },
+    "remembered": {
+      "de": "Schon geschafft · gut erinnert!",
+      "en": "Already solved · well remembered!",
+      "ru": "Уже решено · хорошо помнишь!"
+    },
+    "again": {
+      "de": "Probier es noch einmal.",
+      "en": "Try once more.",
+      "ru": "Попробуй ещё раз."
+    },
+    "previous_track": {
+      "de": "Voriger Titel",
+      "en": "Previous track",
+      "ru": "Предыдущее произведение"
+    },
+    "play_track": {
+      "de": "Titel anhören",
+      "en": "Play track",
+      "ru": "Послушать"
+    },
+    "next_track": {
+      "de": "Nächster Titel",
+      "en": "Next track",
+      "ru": "Следующее произведение"
+    },
+    "favorite_on": {
+      "de": "♥ Wiederholen",
+      "en": "♥ Repeat",
+      "ru": "♥ Повторять"
+    },
+    "favorite_off": {
+      "de": "♡ Wiederholen",
+      "en": "♡ Repeat",
+      "ru": "♡ Повторять"
+    },
+    "shuffle": {
+      "de": "Zufall",
+      "en": "Shuffle",
+      "ru": "Случайный порядок"
+    },
+    "alternating": {
+      "de": "Nach jedem Stück geht es automatisch weiter.",
+      "en": "The next piece plays automatically when one ends.",
+      "ru": "После окончания автоматически играет следующее произведение."
+    },
+    "classical_note": {
+      "de": "Eigene Klavierwiedergaben echter Noten. Keine Orchesteraufnahmen.",
+      "en": "Our piano renderings of actual scores. Not orchestral recordings.",
+      "ru": "Наши фортепианные исполнения по нотам. Это не оркестровые записи."
+    },
+    "page": {
+      "de": "Weg",
+      "en": "Trail",
+      "ru": "Дорожка"
+    },
+    "subjects": {
+      "de": "Alle Bereiche",
+      "en": "All subjects",
+      "ru": "Все разделы"
+    },
+    "select_language": {
+      "de": "Tippe auf deine Sprache.",
+      "en": "Choose your language.",
+      "ru": "Выбери язык."
+    },
+    "count": {
+      "de": "Wie viele siehst du?",
+      "en": "How many can you see?",
+      "ru": "Сколько ты видишь?"
+    },
+    "add": {
+      "de": "Wie viele zusammen?",
+      "en": "How many altogether?",
+      "ru": "Сколько всего?"
+    },
+    "subtract": {
+      "de": "Wie viele bleiben?",
+      "en": "How many are left?",
+      "ru": "Сколько осталось?"
+    },
+    "complete": {
+      "de": "Wie viele fehlen?",
+      "en": "How many are missing?",
+      "ru": "Сколько не хватает?"
+    },
+    "compare": {
+      "de": "Wo sind mehr?",
+      "en": "Which group has more?",
+      "ru": "Где больше?"
+    },
+    "sequence": {
+      "de": "Welche Zahl kommt jetzt?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "initial": {
+      "de": "Wie fängt das deutsche Wort an?",
+      "en": "How does the German word start?",
+      "ru": "Как начинается немецкое слово?"
+    },
+    "rhyme": {
+      "de": "Was reimt sich auf Deutsch?",
+      "en": "Which German words rhyme?",
+      "ru": "Какие немецкие слова рифмуются?"
+    },
+    "syllables": {
+      "de": "Wie viele Silben im deutschen Wort?",
+      "en": "How many syllables in the German word?",
+      "ru": "Сколько слогов в немецком слове?"
+    },
+    "word": {
+      "de": "Welches deutsche Wort passt?",
+      "en": "Which German word matches?",
+      "ru": "Какое немецкое слово подходит?"
+    },
+    "pattern": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "odd": {
+      "de": "Was passt nicht dazu?",
+      "en": "Which one does not belong?",
+      "ru": "Что лишнее?"
+    },
+    "shadow": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "size": {
+      "de": "Welcher ist am größten?",
+      "en": "Which is the biggest?",
+      "ru": "Что самое большое?"
+    },
+    "choices": {
+      "de": "Zur Auswahl:",
+      "en": "Choose from:",
+      "ru": "На выбор:"
+    },
+    "self_hero": {
+      "de": "Du",
+      "en": "You",
+      "ru": "Ты"
+    },
+    "music_sources": {
+      "de": "Musik & Quellen",
+      "en": "Music and sources",
+      "ru": "Музыка и источники"
+    },
+    "playlist_note": {
+      "de": "Nach jedem Stück folgt das nächste. ♥ wiederholt ein Stück.",
+      "en": "The next piece plays automatically. ♥ repeats one piece.",
+      "ru": "Произведения сменяются автоматически. ♥ повторяет одно произведение."
+    },
+    "piano_credit": {
+      "de": "Klavierklang: GeneralUser GS 2.0.3 · S. Christian Collins. Lizenzen und Quellen liegen der App bei.",
+      "en": "Piano sound: GeneralUser GS 2.0.3 · S. Christian Collins. Licences and sources are included in the app.",
+      "ru": "Фортепиано: GeneralUser GS 2.0.3 · S. Christian Collins. Лицензии и источники включены в приложение."
+    },
+    "previous_page": {
+      "de": "Voriger Weg",
+      "en": "Previous trail",
+      "ru": "Предыдущая дорожка"
+    },
+    "next_page": {
+      "de": "Nächster Weg",
+      "en": "Next trail",
+      "ru": "Следующая дорожка"
+    }
+  },
+  "objects": {
+    "apple": {
+      "de": "Apfel",
+      "en": "apple",
+      "ru": "яблоко"
+    },
+    "leaf": {
+      "de": "Blatt",
+      "en": "leaf",
+      "ru": "лист"
+    },
+    "star": {
+      "de": "Stern",
+      "en": "star",
+      "ru": "звезда"
+    },
+    "moon": {
+      "de": "Mond",
+      "en": "moon",
+      "ru": "Луна"
+    },
+    "sun": {
+      "de": "Sonne",
+      "en": "sun",
+      "ru": "Солнце"
+    },
+    "ball": {
+      "de": "Ball",
+      "en": "ball",
+      "ru": "мяч"
+    },
+    "house": {
+      "de": "Haus",
+      "en": "house",
+      "ru": "дом"
+    },
+    "mouse": {
+      "de": "Maus",
+      "en": "mouse",
+      "ru": "мышь"
+    },
+    "robot": {
+      "de": "Roboter",
+      "en": "robot",
+      "ru": "робот"
+    },
+    "flower": {
+      "de": "Blume",
+      "en": "flower",
+      "ru": "цветок"
+    },
+    "fish": {
+      "de": "Fisch",
+      "en": "fish",
+      "ru": "рыба"
+    },
+    "tree": {
+      "de": "Baum",
+      "en": "tree",
+      "ru": "дерево"
+    },
+    "gear": {
+      "de": "Zahnrad",
+      "en": "gear",
+      "ru": "шестерёнка"
+    },
+    "wheel": {
+      "de": "Rad",
+      "en": "wheel",
+      "ru": "колесо"
+    },
+    "bridge": {
+      "de": "Brücke",
+      "en": "bridge",
+      "ru": "мост"
+    },
+    "magnet": {
+      "de": "Magnet",
+      "en": "magnet",
+      "ru": "магнит"
+    },
+    "bulb": {
+      "de": "Lampe",
+      "en": "lamp",
+      "ru": "лампа"
+    },
+    "battery": {
+      "de": "Batterie",
+      "en": "battery",
+      "ru": "батарейка"
+    },
+    "scissors": {
+      "de": "Schere",
+      "en": "scissors",
+      "ru": "ножницы"
+    },
+    "hammer": {
+      "de": "Hammer",
+      "en": "hammer",
+      "ru": "молоток"
+    },
+    "screwdriver": {
+      "de": "Schraubendreher",
+      "en": "screwdriver",
+      "ru": "отвёртка"
+    },
+    "lever": {
+      "de": "Hebel",
+      "en": "lever",
+      "ru": "рычаг"
+    },
+    "pulley": {
+      "de": "Seilrolle",
+      "en": "pulley",
+      "ru": "блок"
+    },
+    "helmet": {
+      "de": "Helm",
+      "en": "helmet",
+      "ru": "шлем"
+    },
+    "bird": {
+      "de": "Vogel",
+      "en": "bird",
+      "ru": "птица"
+    },
+    "butterfly": {
+      "de": "Schmetterling",
+      "en": "butterfly",
+      "ru": "бабочка"
+    },
+    "bee": {
+      "de": "Biene",
+      "en": "bee",
+      "ru": "пчела"
+    },
+    "frog": {
+      "de": "Frosch",
+      "en": "frog",
+      "ru": "лягушка"
+    },
+    "turtle": {
+      "de": "Schildkröte",
+      "en": "turtle",
+      "ru": "черепаха"
+    },
+    "cat": {
+      "de": "Katze",
+      "en": "cat",
+      "ru": "кошка"
+    },
+    "seed": {
+      "de": "Samen",
+      "en": "seed",
+      "ru": "семя"
+    },
+    "roots": {
+      "de": "Wurzeln",
+      "en": "roots",
+      "ru": "корни"
+    },
+    "mushroom": {
+      "de": "Pilz",
+      "en": "mushroom",
+      "ru": "гриб"
+    },
+    "egg": {
+      "de": "Ei",
+      "en": "egg",
+      "ru": "яйцо"
+    },
+    "nest": {
+      "de": "Nest",
+      "en": "nest",
+      "ru": "гнездо"
+    },
+    "worm": {
+      "de": "Regenwurm",
+      "en": "earthworm",
+      "ru": "дождевой червь"
+    },
+    "water": {
+      "de": "Wasser",
+      "en": "water",
+      "ru": "вода"
+    },
+    "ice": {
+      "de": "Eis",
+      "en": "ice",
+      "ru": "лёд"
+    },
+    "steam": {
+      "de": "Wasserdampf",
+      "en": "water vapour",
+      "ru": "водяной пар"
+    },
+    "salt": {
+      "de": "Salz",
+      "en": "salt",
+      "ru": "соль"
+    },
+    "sand": {
+      "de": "Sand",
+      "en": "sand",
+      "ru": "песок"
+    },
+    "oil": {
+      "de": "Öl",
+      "en": "oil",
+      "ru": "масло"
+    },
+    "glass": {
+      "de": "Glas",
+      "en": "glass",
+      "ru": "стекло"
+    },
+    "metal": {
+      "de": "Eisen",
+      "en": "iron",
+      "ru": "железо"
+    },
+    "wood": {
+      "de": "Holz",
+      "en": "wood",
+      "ru": "древесина"
+    },
+    "paper": {
+      "de": "Papier",
+      "en": "paper",
+      "ru": "бумага"
+    },
+    "fabric": {
+      "de": "Stoff",
+      "en": "fabric",
+      "ru": "ткань"
+    },
+    "soap": {
+      "de": "Seife",
+      "en": "soap",
+      "ru": "мыло"
+    },
+    "eye": {
+      "de": "Auge",
+      "en": "eye",
+      "ru": "глаз"
+    },
+    "ear": {
+      "de": "Ohr",
+      "en": "ear",
+      "ru": "ухо"
+    },
+    "nose": {
+      "de": "Nase",
+      "en": "nose",
+      "ru": "нос"
+    },
+    "tongue": {
+      "de": "Zunge",
+      "en": "tongue",
+      "ru": "язык"
+    },
+    "hand": {
+      "de": "Hand",
+      "en": "hand",
+      "ru": "кисть"
+    },
+    "heart": {
+      "de": "Herz",
+      "en": "heart",
+      "ru": "сердце"
+    },
+    "lungs": {
+      "de": "Lunge",
+      "en": "lungs",
+      "ru": "лёгкие"
+    },
+    "brain": {
+      "de": "Gehirn",
+      "en": "brain",
+      "ru": "мозг"
+    },
+    "bone": {
+      "de": "Knochen",
+      "en": "bone",
+      "ru": "кость"
+    },
+    "tooth": {
+      "de": "Zahn",
+      "en": "tooth",
+      "ru": "зуб"
+    },
+    "foot": {
+      "de": "Fuß",
+      "en": "foot",
+      "ru": "стопа"
+    },
+    "stomach": {
+      "de": "Magen",
+      "en": "stomach",
+      "ru": "желудок"
+    },
+    "globe": {
+      "de": "Globus",
+      "en": "globe",
+      "ru": "глобус"
+    },
+    "map": {
+      "de": "Karte",
+      "en": "map",
+      "ru": "карта"
+    },
+    "compass": {
+      "de": "Kompass",
+      "en": "compass",
+      "ru": "компас"
+    },
+    "mountain": {
+      "de": "Berg",
+      "en": "mountain",
+      "ru": "гора"
+    },
+    "river": {
+      "de": "Fluss",
+      "en": "river",
+      "ru": "река"
+    },
+    "island": {
+      "de": "Insel",
+      "en": "island",
+      "ru": "остров"
+    },
+    "cloud": {
+      "de": "Wolke",
+      "en": "cloud",
+      "ru": "облако"
+    },
+    "rain": {
+      "de": "Regen",
+      "en": "rain",
+      "ru": "дождь"
+    },
+    "snow": {
+      "de": "Schnee",
+      "en": "snow",
+      "ru": "снег"
+    },
+    "desert": {
+      "de": "Wüste",
+      "en": "desert",
+      "ru": "пустыня"
+    },
+    "forest": {
+      "de": "Wald",
+      "en": "forest",
+      "ru": "лес"
+    },
+    "sea": {
+      "de": "Meer",
+      "en": "sea",
+      "ru": "море"
+    }
+  }
+}

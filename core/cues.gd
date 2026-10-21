@@ -12,9 +12,10 @@ func configure(saved: RefCounted) -> void:
 
 func set_world(world: String) -> void:
 	var registry = preload("res://core/quest/tracks.gd")
-	var next: String = registry.resolve(world)
-	if store.data.music_locked and registry.ITEMS.has(store.data.music_track): next = store.data.music_track
-	elif store.data.music_shuffle and registry.WORLDS.has(world): next = registry.ITEMS.keys().pick_random()
+	# Walking between subjects does not restart the selected playlist.
+	if not music.world.is_empty(): return
+	var next: String = store.data.music_track
+	if not registry.ITEMS.has(next): next = registry.resolve(world)
 	music.set_world(next)
 
 

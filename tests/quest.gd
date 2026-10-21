@@ -1,6 +1,7 @@
 extends SceneTree
 const Progress = preload("res://games/quest/progress.gd")
 const Store = preload("res://core/save_store.gd")
+const Tracks = preload("res://core/quest/tracks.gd")
 var checks := 0
 var failures := 0
 func check(value: bool,message: String) -> void:
@@ -23,22 +24,36 @@ func run() -> void:
 	check(not Progress.same("6",6) and not Progress.same(true,1) and not Progress.same(NAN,NAN),"No coercion of strings, booleans or invalid numbers")
 	check(Progress.same(6,6.0),"JSON float and integer answers agree")
 	var sanitized:=Store.clean({"hero":"unknown","music_volume":INF,"effects_volume":-99,"voice_auto":"yes","private_name":"discard","stars":9999})
-	check(sanitized.hero=="mina" and sanitized.music_volume==.35 and sanitized.effects_volume==0 and not sanitized.has("private_name") and not sanitized.has("stars"),"Save whitelist rejects unknown/invalid fields")
+	check(sanitized.hero=="wanja" and sanitized.music_volume==.35 and sanitized.effects_volume==0 and not sanitized.has("private_name") and not sanitized.has("stars"),"Save whitelist rejects unknown/invalid fields")
+	check(Store.defaults().hero=="wanja" and preload("res://core/quest/hero.gd").IDS[0]=="wanja","Wanja is the default and first main hero")
+	for id in ["wanja","mischa","du","mama","katze"]:
+		check(Store.clean({"hero":id}).hero==id,"All five family members remain independently selectable and persistent: "+id)
+	for pair in [["mina","wanja"],["leo","du"],["sam","mama"],["jule","katze"]]:
+		var migrated := Store.clean({"hero":pair[0],"quest":{"solved":{"math_count":true},"hero_chosen":true}})
+		check(migrated.hero==pair[1] and migrated.quest.solved.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
+	check(Store.clean({"music_track":"stars","music_locked":true}).music_track==Tracks.DEFAULT and not Store.clean({"music_track":"stars","music_locked":true}).music_locked,"Unavailable old favourites migrate to an alternating classical playlist")
+	check(Tracks.next("consolation")=="wiener_blut" and Tracks.next("wiener_blut",-1)=="consolation","Playlist wraps in both directions")
+	check(Tracks.next("babbino",1,false,true)=="babbino","Repeat preserves a chosen track")
+	for i in range(8): check(Tracks.next("babbino",1,true)!="babbino","Shuffle excludes the current piece")
 	var expected := {"math_count":6,"math_add":5,"math_take":4,"math_ten":6,"math_compare":"right","math_steps":8,"math_twenty":14,"math_split":3,"german_sun":"S","german_mouse":"M","german_apple":"A","german_rhyme":"mouse","german_robot":3,"german_read":"BALL","german_flower":2,"german_fish":"F","logic_repeat":"leaf","logic_triple":"moon","logic_odd":"ball","logic_shadow":"tree","logic_size":"large","logic_double":"sun","logic_shape":"robot","logic_rule":"flower"}
 	var state := Progress.clean({"solved":{"fake":true,"math_count":true,"math_add":false},"subject":"market","hero_chosen":"yes","stars":9999})
 	check(state.solved.size()==1 and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
 	check(state.subject=="math" and not state.hero_chosen,"Invalid subject/hero-chosen types rejected")
 	state = Progress.clean(null)
-	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==8,"Eight real tasks in "+subject)
+	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==40,"Forty real tasks in "+subject)
 	for task in Progress.tasks():
-		check(expected.has(task.id) and expected[task.id]==task.answer,"Independent authored answer fixture "+task.id)
-		check(Progress.correct(task,expected[task.id]),"Accept correct answer")
+		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent original answer fixture "+task.id)
+		if task.kind=="add": check(task.answer==task.left+task.right,"Addition is arithmetically correct")
+		if task.kind=="subtract": check(task.answer==task.left-task.right,"Subtraction is arithmetically correct")
+		if task.kind=="complete": check(task.answer==task.right-task.left,"Complement is arithmetically correct")
+		if task.kind=="count": check(task.answer==task.count,"Count is correct")
+		check(Progress.correct(task,task.answer),"Accept correct answer")
 		for option in task.options:
-			if option!=expected[task.id]: check(not Progress.correct(task,option),"Reject distractor "+task.id)
+			if option!=task.answer: check(not Progress.correct(task,option),"Reject distractor "+task.id)
 		check(not Progress.correct(task,"forged"),"Reject unknown option")
 		check(Progress.award(state,task.id),"First completion earns a star")
 		check(not Progress.award(state,task.id),"Repeated completion cannot farm stars")
-	check(Progress.stars(state)==24 and not Progress.award(state,"unknown"),"Finite 24-star progression")
+	check(Progress.stars(state)==320 and not Progress.award(state,"unknown"),"Finite 320-star progression")
 	var app: Control = load("res://core/quest/main.tscn").instantiate()
 	root.add_child(app)
 	app.store.reset();app.store.data.muted=true;app.audio.sync_settings()
@@ -50,24 +65,30 @@ func run() -> void:
 		for i in range(3): await process_frame
 		var game: Control=app.game_view
 		var logical := Vector2(root.content_scale_size) if root.content_scale_size.x>0 else Vector2(viewport)
-		check(game.choosing and game.hero_choices.size()==4,"Visible four-hero first-run choice")
+		check(game.choosing and game.hero_choices.size()==5,"Visible five-hero first-run choice with Wanja")
 		for b in game.hero_choices:
 			check(b.get_global_rect().size.x>=64 and b.get_global_rect().size.y>=100,"Large character targets")
 			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"Hero choice fits viewport")
-		await touch_button(game.hero_choices[2])
-		check(app.store.data.hero=="sam" and game.hero_choices[2].get_child(0).reaction>0,"Real touch selects hero and triggers colored reaction")
+		await touch_button(game.hero_choices[3])
+		check(app.store.data.hero=="mama" and game.hero_choices[3].get_child(0).reaction>0,"Real touch selects hero and triggers colored reaction")
 		await touch_button(game.start_button)
-		check(not game.choosing and game.world.hero.person=="sam","Chosen hero enters the playable world")
+		check(not game.choosing and game.world.hero.person=="mama","Chosen hero enters the playable world")
 		for b in game.tabs: check(b.size.y>=48,"Subject touch areas at least 48 units")
 		await touch_button(game.tabs[1]);check(game.subject=="german","Deutsch is reachable directly")
 		await touch_button(game.tabs[2]);check(game.subject=="logic","Logik is reachable directly")
 		await touch_button(game.tabs[0]);check(game.subject=="math","Mathe is reachable directly")
+		for index in range(3,8):
+			game.footer.ensure_control_visible(game.tabs[index])
+			await touch_button(game.tabs[index])
+			check(game.subject==Progress.SUBJECTS[index],"Real touch reaches additional subject "+Progress.SUBJECTS[index])
+		game.footer.ensure_control_visible(game.tabs[0])
+		await touch_button(game.tabs[0])
 		var start: float=game.world.hero_x
 		await touch(game.world.get_global_rect().position+game.world.station_center(0))
 		await create_timer(.85).timeout
 		check(game.world.hero_x>start+40 and is_instance_valid(game.task_panel),"Touching station walks character and opens actual task")
 		var panel: Control=game.task_panel
-		check(panel.heading.get_rect().end.y<panel.picture.position.y,"Instruction does not cover task picture")
+		check(panel.heading.get_rect().end.y<panel.picture.position.y,"Instruction does not cover task picture: %s %s %s" % [str(viewport),str(panel.heading.get_rect()),str(panel.picture.position)])
 		for b in panel.choices:
 			check(b.size.x>=48 and b.size.y>=48,"Answer hit areas at least 48 units")
 			check(Rect2(Vector2.ZERO,logical).encloses(b.get_global_rect()),"Answers fit viewport")
@@ -81,29 +102,91 @@ func run() -> void:
 		await touch_button(panel.next_button)
 		check(not is_instance_valid(game.task_panel),"Continue returns to walking world")
 		var saved := Store.new();saved.load_save()
-		check(saved.data.hero=="sam" and saved.data.quest.solved.has("math_count"),"Local hero/progress survive disk roundtrip")
+		check(saved.data.hero=="mama" and saved.data.quest.solved.has("math_count"),"Local hero/progress survive disk roundtrip")
 		game._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
 		check(not game.world.pressed,"Interruption cancels incomplete gesture")
 	# Exercise every task through its actual presenter, help, wrong answer and reward.
 	for subject in Progress.SUBJECTS:
 		game_subject(app,subject)
 		var game: Control=app.game_view
-		for index in range(8):
+		for index in range(Progress.tasks(subject).size()):
 			game.open_task(index)
 			await process_frame
 			var panel: Control=game.task_panel
 			panel.help()
 			check(panel.picture.hint,"Visual hint exists for every task")
-			panel.answer(expected[panel.task.id])
+			panel.answer(panel.task.answer)
 			check(panel.complete,"Every authored task is completable in presenter")
 			game.close_task()
+	# All four route pages expose ten tasks, without stale movement on page changes.
+	for subject in Progress.SUBJECTS:
+		app.game_view.switch_subject(subject)
+		for page in range(4):
+			app.game_view.world.set_page(page)
+			var world: Control=app.game_view.world
+			check(world.first_station()==page*10 and world.last_station()==page*10+9,"Every route page has ten reachable stations")
+			world.request_station(page*10+9)
+			check(world.pending==page*10+9,"Last task on every page is reachable")
+			world.set_page(0)
+			check(world.pending==-1 and world.target_x==100,"Page change cancels pending arrival")
+	for locale in ["de","en","ru"]:
+		app.store.data.locale=locale;app.save();app.hub()
+		var saved_locale:=Store.new();saved_locale.load_save()
+		check(saved_locale.data.locale==locale,"Language persists locally")
+		app.store.data.muted=false;app.audio.sync_settings()
+		check(app.game_view.title.text==app.t(app.game_view.subject),"Subject caption uses selected language")
+		check(app.narration.play_clip("quest/german_sun"),"Localized German instruction loads")
+		check(app.narration.queue.size()==(0 if locale=="de" else 1),"German learning targets retain native German pronunciation")
+		app.narration.cancel()
+		check(app.narration.queue.is_empty() and not app.audio.music.ducked,"Cancellation clears multilingual queue and ducking")
+		app.game_view.switch_subject("geography");app.game_view.open_task(39)
+		check(app.game_view.task_panel.heading.text==Progress.tasks("geography")[39].texts[locale].prompt,"Science task uses translated question")
+		app.game_view.close_task()
+	# Inspect every localized question at the smallest supported portrait size.
+	root.content_scale_size=Vector2i.ZERO;root.size=Vector2i(320,568)
+	app.simulated_dpi=0;app.update_mobile()
+	for locale in ["de","en","ru"]:
+		app.store.data.locale=locale;app.store.data.text_scale=1.15;app.hub()
+		for subject in Progress.SUBJECTS:
+			app.game_view.switch_subject(subject)
+			for index in range(40):
+				app.game_view.open_task(index)
+				await process_frame
+				var panel: Control=app.game_view.task_panel
+				check(panel.heading.get_line_count()<=panel.heading.max_lines_visible,"Full localized instruction fits: "+locale+"/"+panel.task.id)
+				check(panel.heading.get_rect().end.y<panel.picture.position.y and panel.picture.get_rect().end.y<panel.choices[0].position.y if panel.task.kind!="compare" else true,"No heading/picture/answer overlap: "+locale+"/"+panel.task.id)
+				app.game_view.close_task()
+	app.store.data.text_scale=1.0
+	app.store.data.locale="de"
+	check(Store.clean({"locale":"xx"}).locale=="de","Unknown locale falls back to German")
 	app.store.data.muted=false;app.audio.sync_settings()
 	app.musicbox()
 	var box: Control=app.body.get_child(0)
-	check(box.covers.size()==10,"All ten current tracks are selectable")
+	check(box.covers.size()==4,"All four classical tracks are selectable")
 	for id in preload("res://core/quest/tracks.gd").ITEMS:
 		box.select(id)
 		check(app.audio.music.players[app.audio.music.active].stream!=null,"Track really loads: "+id)
+	# Test the actual AudioStreamPlayer.finished path with a short real stream.
+	var music: Node = app.audio.music
+	var previous: String = music.world
+	var short_clip := AudioStreamWAV.new()
+	short_clip.format = AudioStreamWAV.FORMAT_16_BITS
+	short_clip.mix_rate = 22050
+	var silent_samples := PackedByteArray()
+	silent_samples.resize(4410)
+	short_clip.data = silent_samples
+	music.players[music.active].stream=short_clip
+	music.players[music.active].play()
+	await create_timer(.25).timeout
+	check(music.world==Tracks.next(previous) and app.store.data.music_track==music.world,"Real audio completion advances and saves the playlist")
+	check(box.current.text.contains(Tracks.ITEMS[music.world].title),"Music box follows automatic title changes")
+	var now: String = music.world
+	music.on_finished(1-music.active)
+	check(music.world==now,"A stale crossfade player cannot advance the playlist")
+	music._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
+	music.on_finished(music.active)
+	check(music.world==now,"Background suspension cannot consume a track")
+	music._notification(Node.NOTIFICATION_APPLICATION_RESUMED)
 	box.toggle_favorite()
 	var locked: String=app.store.data.music_track
 	app.audio.set_world("math")

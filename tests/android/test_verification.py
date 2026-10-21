@@ -1,22 +1,28 @@
 """Negative fixtures ensure release checks reject realistic packaging drift."""
-import importlib.util, struct, unittest, xml.etree.ElementTree as ET
+import importlib.util, io, json, struct, zipfile, unittest, xml.etree.ElementTree as ET
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
-MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="5" android:versionName="0.5.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
-TASK_IDS=['math_count','math_add','math_take','math_ten','math_compare','math_steps','math_twenty','math_split','german_sun','german_mouse','german_apple','german_rhyme','german_robot','german_read','german_flower','german_fish','logic_repeat','logic_triple','logic_odd','logic_shadow','logic_size','logic_double','logic_shape','logic_rule']
+MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="6" android:versionName="0.6.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/project.binary','assets/core/quest/main.gdc']
-PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
+PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','task','picture','progress','choice']]
-for name in ['mina','leo','sam','jule']:
+for name in ['wanja','mischa','du','mama','katze']:
     PAYLOAD += ['assets/assets/quest/'+name+'.png.import','assets/.godot/imported/'+name+'.png-fixture.ctex']
-for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
-    ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
+for track in ['wiener_blut','babbino','french_song','consolation']:
+    ext='.ogg'
     PAYLOAD += ['assets/assets/music/'+track+ext+'.import','assets/.godot/imported/'+track+ext+'-fixture'+('.sample' if ext=='.wav' else '.oggvorbisstr')]
-for name in ['choose','walk','success','again']+[task+suffix for task in TASK_IDS for suffix in ['', '_hint']]:
-    PAYLOAD += ['assets/assets/voice/quest/'+name+'.ogg.import','assets/.godot/imported/'+name+'.ogg-fixture.oggvorbisstr']
-PAYLOAD += ['assets/assets/quest/OFL.txt','assets/assets/voice/quest/MODEL_CARD.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon']]
+for locale in ['de','en','ru']:
+    folder='assets/voice/quest/'+locale+'/'
+    manifest=json.loads((Path(__file__).resolve().parents[2]/folder/'manifest.json').read_text())
+    PAYLOAD += ['assets/'+folder+name for name in ['manifest.json','MODEL_CARD.txt']]
+    for filename in sorted({c['file'] for c in manifest['clips']}):
+        PAYLOAD += ['assets/'+folder+filename+'.import','assets/.godot/imported/'+filename+'-fixture.oggvorbisstr']
+PAYLOAD += ['assets/core/quest/language.gdc']
+PAYLOAD += ['assets/assets/quest/'+name+'.png.import' for name in ['science-a','science-b']]
+PAYLOAD += ['assets/assets/quest/OFL.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon','science-a','science-b']]
+PAYLOAD += ['assets/core/quest/pet.gdshader']+['assets/assets/music/'+name for name in ['licenses/CC-BY-SA-4.0.txt','licenses/tnm-MIT.txt','licenses/GeneralUser-GS.txt','NOTICES.txt']]
 
 class VerificationTests(unittest.TestCase):
     def test_preview_identity_is_explicit_and_preserves_main_app(self):
@@ -28,7 +34,7 @@ class VerificationTests(unittest.TestCase):
         root=ET.fromstring(MANIFEST);ET.SubElement(root,'uses-permission',{v.ANDROID+'name':'android.permission.INTERNET'})
         with self.assertRaises(AssertionError):v.check_manifest(root)
     def test_identity_version_sdk_backup_rotation_drift_rejected(self):
-        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="5"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
+        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="6"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
             with self.subTest(before=before),self.assertRaises(AssertionError):v.check_manifest(ET.fromstring(MANIFEST.replace(before,after)))
     def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),len(PAYLOAD))
     def test_development_and_key_files_rejected(self):
@@ -36,11 +42,34 @@ class VerificationTests(unittest.TestCase):
             with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+[name])
     def test_missing_modules_rejected(self):
         with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/games/quest/tasks.json"])
+    def test_replaced_character_artwork_rejected(self):
+        for name in ['mina','leo','sam','jule']:
+            with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+['assets/assets/quest/'+name+'.png.import'])
     def test_missing_music_payload_rejected(self):
-        with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/stars.wav-fixture.sample"])
-    def test_every_required_runtime_asset_is_checked(self):
-        for required in PAYLOAD:
+        with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/.godot/imported/babbino.ogg-fixture.oggvorbisstr"])
+    def test_every_resource_category_and_family_character_is_checked(self):
+        for required in [p for p in PAYLOAD if 'voice_' not in p]+[next(p for p in PAYLOAD if 'voice_'+locale+'_' in p and p.endswith(ext)) for locale in ['de','en','ru'] for ext in ['.import','.oggvorbisstr']]:
             with self.subTest(required=required),self.assertRaises(AssertionError):v.check_payload([p for p in PAYLOAD if p!=required])
+    def data_archive(self,prefix='assets/',change=None):
+        memory=io.BytesIO()
+        root=Path(__file__).resolve().parents[2]
+        files=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json']
+        files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+        with zipfile.ZipFile(memory,'w') as archive:
+            for name in files:
+                if change=='missing' and name==files[0]:continue
+                data=(root/name).read_bytes()
+                if change=='modified' and name==files[0]:data=b'{"tasks":[]}'
+                archive.writestr(prefix+name,data)
+            if change=='duplicate':archive.writestr('unexpected/assets/'+files[0],(root/files[0]).read_bytes())
+        memory.seek(0)
+        return zipfile.ZipFile(memory)
+    def test_content_integrity_supports_apk_base_and_install_time_aab_assets(self):
+        for prefix in ['assets/','base/assets/','assetPackInstallTime/assets/']:
+            with self.subTest(prefix=prefix),self.data_archive(prefix) as archive:v.check_packaged_data(archive)
+    def test_changed_missing_or_duplicate_data_is_rejected(self):
+        for change in ['modified','missing','duplicate']:
+            with self.subTest(change=change),self.data_archive(change=change) as archive,self.assertRaises(AssertionError):v.check_packaged_data(archive)
     def test_elf_16kb(self):
         data=bytearray(120);data[:5]=b'\x7fELF\x02';struct.pack_into('<Q',data,32,64);struct.pack_into('<HH',data,54,56,1);struct.pack_into('<IIQQQQQQ',data,64,1,0,0,0,0,0,0,16384)
         v.elf_alignment(data)

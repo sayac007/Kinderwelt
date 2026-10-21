@@ -38,7 +38,7 @@ func _draw() -> void:
 				group(task.right,Rect2(Vector2(rect.position.x+rect.size.x*.56,rect.position.y),Vector2(rect.size.x*.44,rect.size.y)))
 				Art.text(self,"+",rect.get_center(),30)
 		"complete": group(task.right,rect,0,task.right-task.left)
-		"initial","rhyme","syllables","word","shadow":
+		"initial","rhyme","syllables","word","shadow","discovery":
 			var side := minf(size.x*.56,size.y-12)
 			var picture := Rect2(rect.get_center()-Vector2.ONE*side/2,Vector2.ONE*side)
 			symbol(task.object,picture,Color("283d50") if task.kind=="shadow" else Color.WHITE)

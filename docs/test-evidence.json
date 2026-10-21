@@ -1,1614 +1,3118 @@
 {
-  "schema": 1,
-  "application_commit": "19b2d2e5359e0cd465040684c31bb59784f11c4d",
-  "application_sha256": "2fe06fdd7fbc75f646c71eaf20e8531aa4ca8f0a6a186d9f11e940f432f97acb",
-  "current_application_matches_export": true,
-  "functional_checks": 397,
-  "python_tests": 24,
-  "technical_status": "PASS",
-  "functional_log": "/tmp/kinderwelt-current-cold-tests.log",
-  "render_log": "/tmp/kinderwelt-delivery-render.log",
-  "render_scope": "Real Godot OpenGL llvmpipe desktop frames; simulated density, not Android hardware",
+  "schema": 2,
+  "date": "2026-10-20",
+  "version": "0.6.0",
+  "verifier_commit": "98f79c4bf0a9aaf7e93c8542ce7c771412b0884f",
+  "functional_checks": 4914,
+  "python_tests": 32,
+  "functional_status": "PASS",
+  "functional_log": "/tmp/kinderwelt-06-complete-tests.log",
+  "render_log": "/tmp/kinderwelt-06-render-final.log",
+  "render_scope": "272 real desktop OpenGL llvmpipe frames; not Android hardware; original 24 tasks and 15 science samples at four profiles, language screens and five-character poses",
   "render_manifest": [
     {
       "name": "phone-heroes",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "2b69d93e731333b2610434e3ca89664e18ff600f4ec1d17d79a2634a628b3c64"
     },
     {
       "name": "phone-heroes-move",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "fb9ad26fe58da969777d3f59def321374b4796f35d814f0728e792d82c33dd24"
     },
     {
       "name": "phone-heroes-think",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "aa43814c9a58743b9286da1a45313fdaaedc2b781e54c7c7b8fd80711af7dab6"
     },
     {
       "name": "phone-heroes-success",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "c695a16917b93796d57ea21563ab3e2fea25ef995c4940822dbc614f59343ee5"
     },
     {
       "name": "phone-math-world",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "2c42ba365e673b43b005ca647c5aa58b846649dbac57d83e731c62d5b6d7aba3"
     },
     {
       "name": "phone-math-task-0",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "820fc4aed4e452e10c89810a2b9449fc973145381f4f7af8cb2d7c0c6e6b09ae"
     },
     {
       "name": "phone-math-solved",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "1befacfc3fa8a9ff1ed394d84809409c9d024f704a1d6755cb69d6262768916d"
     },
     {
       "name": "phone-math-task-1",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "8fbfa7ea94f2ce3dcc8c55b8109bcd4479fda39b4d491a02f68565112d9f26e7"
     },
     {
       "name": "phone-math-task-2",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "b6d3345fc9c8fe8ba2fee65da20021ff82be09aba7ff54f98260ad6687aac85c"
     },
     {
       "name": "phone-math-task-3",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "3485f0376dfd65507c91c1f767a37caebf0bff24cd5d5498a3b3f9c601beb53e"
     },
     {
       "name": "phone-math-task-4",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "93500e320327422aa7bd9366c9881b5e2757d41f1fd9290846a90bd6103f2632"
     },
     {
       "name": "phone-math-task-5",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "6e2d254587f559f5aafd36a69d8a1802ec5335e83f6757b75d854e60e23cbb5c"
     },
     {
       "name": "phone-math-task-6",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "639a08dd185c1c7d4b0decbe1256c18e21c2b062f1a13e939ca779f1c998007c"
     },
     {
       "name": "phone-math-task-7",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "e0434135ad6d75fe0f54c1ab7b023945558b55258b4bae4d54f41b4d7ec19e36"
     },
     {
       "name": "phone-german-world",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "c1130b28b593ebed08b3beb483d5b9d536a3100b8fbfb02042e91bfd98f21a80"
     },
     {
       "name": "phone-german-task-0",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "9d51de4b342f36d170b41d489208f8f383f8858560f1e03c85bf43033add3944"
     },
     {
       "name": "phone-german-solved",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "b5ae30f2896d938ba4f424c0b9beaffdd8667e33303dab3c31cf77a03d697610"
     },
     {
       "name": "phone-german-task-1",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "e307104ff82acbfaf8c7feb5d028a7f3ac483a4c31dfc9a23330327f3a710b38"
     },
     {
       "name": "phone-german-task-2",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "7fa4b326c7908d91750b89fa25e643492fbc80ef5fc30e48fca00d278c96b2ea"
     },
     {
       "name": "phone-german-task-3",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "385418cbc02fa5b9e8d6f5abec4ca478db4d837bfb6681c19e36747ca3bb8eb9"
     },
     {
       "name": "phone-german-task-4",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "4693226e64f5efbbf3745dbbe787d37855bc067c2ec525f0e629c0a3808c1577"
     },
     {
       "name": "phone-german-task-5",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "9dabe6c0f558037432fe07e4c4970250e3ac0c9e96dc3abf47f1dfe3180f90c5"
     },
     {
       "name": "phone-german-task-6",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "965e926b5ff6d6be266d2f770baf77c2a4271e1a92d7f1e309ca4f5267dd4c38"
     },
     {
       "name": "phone-german-task-7",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "e8f64ff7185ec2ac2e2eb0d60746d4f68f3f4bfb1f2076c32d4f3d61a16d0382"
     },
     {
       "name": "phone-logic-world",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "6750d9cad7b75e9eb493c3232af8a2fd589c4b133a6107b327bd4257b36ed933"
     },
     {
       "name": "phone-logic-task-0",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "a2898e6010f43369b01cbcb14354b7b70e362f5331c8da0c22824cf9c92ae0b7"
     },
     {
       "name": "phone-logic-solved",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "27f5d47179c9afad21691eb2764080d1e3fc7a59dd9d2244e2030ef1cf5043dd"
     },
     {
       "name": "phone-logic-task-1",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "41cab1051d2c72aa01150103be182f435535c4752e5e3ebd51f42fd54af8810b"
     },
     {
       "name": "phone-logic-task-2",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "be76409928e0e97744669c16136a5cc20d493f3f99d2aa0c44fc8ba5fadd2e7c"
     },
     {
       "name": "phone-logic-task-3",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "14baedf0393bb766a4fdf8983e1231fc21b1e301481a82eb0d389904c7ea88f0"
     },
     {
       "name": "phone-logic-task-4",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "9f189acccec6e14633148b52f3e5624481e2f24e88cf46576c067a82741d185c"
     },
     {
       "name": "phone-logic-task-5",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "8672636972b9a3ef39d65375dd92986dea008e53ab69bcfde7ee0fce82282516"
     },
     {
       "name": "phone-logic-task-6",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "07ed1b7bdd2486d39d94c5f67fff1da119f9d33f65e667a1efe84f537c3e33b7"
     },
     {
       "name": "phone-logic-task-7",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "c61c7f6469e4817d55ded0e052c01ecfffa7a7cfc21159a4b2e4b4f964205e4f"
+    },
+    {
+      "name": "phone-physics-world",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "3fb971a3f4a5f09de9fcc9c0d504eac7c05f1088b8268d24ad3d0cad2b09c673"
+    },
+    {
+      "name": "phone-physics-task-0",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "19b666eee70b82179f0135a8ca26143f73397cab30e0b0801cc74bacdd30a1ec"
+    },
+    {
+      "name": "phone-physics-solved",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "1145a0239be1eb7542a090d1e58956b0b232ac0dc3982ff2e6c204ac7782250e"
+    },
+    {
+      "name": "phone-physics-task-19",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "d9aefb79eae54c7f7d60c1fbac824307508f43c4aa9f5d8355d51dabc249e748"
+    },
+    {
+      "name": "phone-physics-task-39",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "7b645396badfe2fafc96fc4b975076b16b035e06e68f50215eea7155ff3e90d8"
+    },
+    {
+      "name": "phone-biology-world",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "db999bdf1ba157442a2ef83fd1166f8c2c6af3dd47b263bd20036119e9191eb2"
+    },
+    {
+      "name": "phone-biology-task-0",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "d8a1c84e4cf80ecbe5f4c29abdcddff7ea406220ff3362b195d2c6212ad99cf8"
+    },
+    {
+      "name": "phone-biology-solved",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "bbfb8a3c355ecdfc7237fc97d76f406d602a630a6dbd62395deb9426c7cdb8f2"
+    },
+    {
+      "name": "phone-biology-task-19",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "49dec61e6e1e53a2b732f399d1c42cb8e62f44acb8a32ef70c30b4ac0bc438a1"
+    },
+    {
+      "name": "phone-biology-task-39",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "a24438aedc9103ec608abf6208c930d092f0d736b8bc5b6b23386e1e4ba254a6"
+    },
+    {
+      "name": "phone-chemistry-world",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "96c7ecaacdd7c4dd8c98ac96163bd134e8828f2f99006d833213d44f300cfe21"
+    },
+    {
+      "name": "phone-chemistry-task-0",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "8543cfdc63b8dd960be29191f9a7a79b4421435b0fde5ce911c84e85d65a62b9"
+    },
+    {
+      "name": "phone-chemistry-solved",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "892e041fb828609ef2b94da5dbab7d097e5a147d5611b3a48ee06146e3e1680d"
+    },
+    {
+      "name": "phone-chemistry-task-19",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "0af51a0b32bbec1e55a93b0ced57f22ca629e8ed731ceabb28127738e9e65264"
+    },
+    {
+      "name": "phone-chemistry-task-39",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "4447361f5f5c049fa6c2b1d2f8a75517f6542a61a8433d5b737dc3d0397120e7"
+    },
+    {
+      "name": "phone-body-world",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "7cab539158d49f32b5212fd7fc55333157683aacbf4499c6776dd84d663227f3"
+    },
+    {
+      "name": "phone-body-task-0",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "1c8ee81bd220730f108e65239e3e30cafad3221999bcf973aaf44c26d4b26261"
+    },
+    {
+      "name": "phone-body-solved",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "5ea88ef9ecea0229b1453bb1fb03d1c52fff13a04a2e7e6c967bff372e829c5a"
+    },
+    {
+      "name": "phone-body-task-19",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "a19b34458f7ea2dece59f75278f7c1f8845eaaadc500d2af45205d499c2dcf1e"
+    },
+    {
+      "name": "phone-body-task-39",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "29355187c64c8a9d653c464b8247da6a2fe2d61d2ac278b6548eac8d214371d0"
+    },
+    {
+      "name": "phone-geography-world",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "19f9300ecf74fa3bf999d1c78ee04102df93ab56f9bdf98b1f0fb54c6ebe5d9a"
+    },
+    {
+      "name": "phone-geography-task-0",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "432678119e2180cdcdd4251ac93d9f2b0c1906e81aac6aaab10f31531c1941bf"
+    },
+    {
+      "name": "phone-geography-solved",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "c66efdf260e0b8ba3dfaf92b4821ebb2a1ea98a137965835793bf1f50eb94b99"
+    },
+    {
+      "name": "phone-geography-task-19",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "a801fe51224b786422459f56dbaacece5db7a9ecfd39d8313df0fe6a576e898c"
+    },
+    {
+      "name": "phone-geography-task-39",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "e8498566c5ef4be3abc125512e70c86d6ac292f393702aa274dc8dc7c742f52b"
+    },
+    {
+      "name": "phone-last-trail",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "ab19b7d5159eb02b8347aa0a321a4ff7761231d2414cabe26e465514cc156bba"
+    },
+    {
+      "name": "phone-en-physics",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "e167edf6a3d8251e7086ed07db57f89fe03539f3d5dd1d1fc18b489a2d5fc693"
+    },
+    {
+      "name": "phone-en-german",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "33085aa54a58c94e5c0deb8ccfd7099dd55152fcdd80f0077adc193b1afd1e09"
+    },
+    {
+      "name": "phone-en-languages",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "a747ab743e7d8c7a6990c641467762a62ca6a9474ce7325933c34f3c0d86970b"
+    },
+    {
+      "name": "phone-ru-physics",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "7cdf59772af5caca1c59ae7417de60a7b676da2002b5560a493f1e6d865d4001"
+    },
+    {
+      "name": "phone-ru-german",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "e53fbb2626bc76b0b1cff2aa12c6469ffa1f840702c5f4a2520a6440d9b2ebfc"
+    },
+    {
+      "name": "phone-ru-languages",
+      "pixels": [
+        360,
+        800
+      ],
+      "sha256": "3ce019ff240f6dd452ac6663b8865196887cd84b05ceee9b6a740935be813efb"
     },
     {
       "name": "phone-musicbox",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "e8d9bfe96546f93496c4addbf58d65becdc745e3ee4dc14851fe404b5d00e55e"
     },
     {
       "name": "phone-settings",
       "pixels": [
         360,
         800
-      ]
+      ],
+      "sha256": "ff1881bfd3f10d220bca5ed95b62030cee5afd5b1c8bfce350e767ac43093ed8"
     },
     {
       "name": "small-heroes",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "308250447120514a63ca363be7a7acb40906e49f3b31a148e86d851e518fd338"
     },
     {
       "name": "small-heroes-move",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "d6ae222562d32b734e31db4291f17e95138f22a04e6e78d973962d2c5f22ad8b"
     },
     {
       "name": "small-heroes-think",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "b1b618dfbe4dc5f5a12bdf93b6f141f87793637dd1023569dad8484dfd399850"
     },
     {
       "name": "small-heroes-success",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "a81e99bf03892e3be607ee871eae7a445c4875d35ac088268ef6c8fb5183b973"
     },
     {
       "name": "small-math-world",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "8fefe7e6b3be0d1855cdfe41cb3780fd25b789eac55a99d5aae6947149669a55"
     },
     {
       "name": "small-math-task-0",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "4be06a87ef380f82fb588131106e1d795d9a645bb9b8e2e2717647f913a8a740"
     },
     {
       "name": "small-math-solved",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "c62aa285eb65fe4bcd93e71aefc28c1be4c5bdc7f1557da506310f3b4f7c271c"
     },
     {
       "name": "small-math-task-1",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "a8745f6bfbbff207bdb8f08fc4214913581c5cea141379ca29482838fa0aefaa"
     },
     {
       "name": "small-math-task-2",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "061075fc8e3f2fbe346d1d7bc22eb946b0c9ee71fe6b464ca5e25324a4a48c6f"
     },
     {
       "name": "small-math-task-3",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "f491de3638ac9585709acdd8a10f844dc752d0f96ca95b746a3c2acdba18e446"
     },
     {
       "name": "small-math-task-4",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "c17d126b011a7a9ff6d4796a5e3684d088697b982f471f27600a6d9e90d5a23d"
     },
     {
       "name": "small-math-task-5",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "f42543a669390daac364d4878d8de88f949d6d761005df8516a1d75ab0365ea9"
     },
     {
       "name": "small-math-task-6",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "5282ad393f3f7a49a22521f063d4f2200ee14c820af83be70b62451fdc9cab8f"
     },
     {
       "name": "small-math-task-7",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "c834318bed58695f41f138da10cf6520f6bdb8229126dc72817d1df159511e5e"
     },
     {
       "name": "small-german-world",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "9aba53d9ae0ebe20e171d7ac9f450c084b58b921ef75252263e291d915998442"
     },
     {
       "name": "small-german-task-0",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "c24c0673f9af787779e14a40e5206364cdb36f372f1e679b1b790a297199dfcf"
     },
     {
       "name": "small-german-solved",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "7de8178eabb7ea5be70aadf525aeee96a354f3a39999b6736e8c8cac343614c2"
     },
     {
       "name": "small-german-task-1",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "8f5a05d1c497d7c811d4291ffb4b8aab6ab3f217f4a4fcff131dc1000fb3d961"
     },
     {
       "name": "small-german-task-2",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "89e09444b49a42d4d2b7db4c48e95e2a9d6b32612922b0ecc94912ce3bf4e35b"
     },
     {
       "name": "small-german-task-3",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "83b5df813889648c1639c1e3a42916955c715a3ae694aa9cd59dc1cd130568b6"
     },
     {
       "name": "small-german-task-4",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "c4a9fadf0ecd3092c6212bd77cd4896678289670401b09bc4086500b1c90bad9"
     },
     {
       "name": "small-german-task-5",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "f33fd5930623409b2a56ac42c5584601c68801346e96f9d3b76f93e90376bd2e"
     },
     {
       "name": "small-german-task-6",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "5945bd8827127bf8c571cf9597aa29c3ec746e51a736b6f5e9f70e0ab4d3aed9"
     },
     {
       "name": "small-german-task-7",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "4fbaec85da4d95e29f67504318da5d6cc92348b59de313553238e68632c5385d"
     },
     {
       "name": "small-logic-world",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "52080ba6ed263a5d1a37c4458e491d305c7ac2704b31ee8fec342195bd0e0924"
     },
     {
       "name": "small-logic-task-0",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "b1905fd6376a6917ee50001744704aa22d15674199a853acd7e9984f53feaf00"
     },
     {
       "name": "small-logic-solved",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "51149b43cffb036a58f1c4c08c66c0307f191c2b53ee4462867d271ce47600bb"
     },
     {
       "name": "small-logic-task-1",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "45fdbc001fb25b8fb30833c823e1a7d37252161a6e773138c82a09155ad8e417"
     },
     {
       "name": "small-logic-task-2",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "65065c290fa43f52e4bd4f1fa28f397fb45bde16f4aae1c0848c6d24f37f0ccb"
     },
     {
       "name": "small-logic-task-3",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "53f091315e61bdbd49ebdc8dec0eafd3c0db9f20da0961d4cedd3eadbb1c75f0"
     },
     {
       "name": "small-logic-task-4",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "bb9fc43a6b57ac32cde4c606e1b008e9acc4f7a80dfb2eb56711134596c1f1ca"
     },
     {
       "name": "small-logic-task-5",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "1c876de7b2a96f0811f14fef0448db002a149274529915b5bf57f9475d228e71"
     },
     {
       "name": "small-logic-task-6",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "10c53e4779cc6ce3ae36fcbe353e1b195719de8512cfa196c52fbf8d118cbda2"
     },
     {
       "name": "small-logic-task-7",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "82deaef6524a61116f7c6a4f3038ab7f2bed6a06916c5a7d9e3088e4dcb21d51"
+    },
+    {
+      "name": "small-physics-world",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "0b6584d28bf7bf9680d86bdccada80ef22c6d8ed89336180aedc6989aefe745b"
+    },
+    {
+      "name": "small-physics-task-0",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "0b9e17ceb1bd4a7c1a5ce02d28e4397d29a0c4f5fd36a8dbe9b0b770e521ad32"
+    },
+    {
+      "name": "small-physics-solved",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "48c258ca35848e048115278f333fb0a10e30ac250434b27b4e8db11aa7d121e8"
+    },
+    {
+      "name": "small-physics-task-19",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "2c41e22515056d5bf53d42f98a59b0ba135925d751c50cff42c2ad1b7cf760ba"
+    },
+    {
+      "name": "small-physics-task-39",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "1211a5f9228ac4f913215f76a00e857c1a28f545f2c4d51e6804ee909c70eddf"
+    },
+    {
+      "name": "small-biology-world",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "442870efe843d19b13231bd879a393c8cced60704062c6d70bd55a70ec112bbe"
+    },
+    {
+      "name": "small-biology-task-0",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "2197a944fefc4b8296f600bc5b0e8857882d22c4a5e5ee8f280e8bb9f7a0acf5"
+    },
+    {
+      "name": "small-biology-solved",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "e7bd6fd31d9405208a7a78f4bfd05593f978700319c879c483e0ebbce43732cf"
+    },
+    {
+      "name": "small-biology-task-19",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "193107f8957e2721a7af2e7944373462d7916a36086bf2fc6abbe153aab2239b"
+    },
+    {
+      "name": "small-biology-task-39",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "3e0a6e1cc4124b3463667eb644d48950b9d9fb7446fda627bc830e3ad2ac574f"
+    },
+    {
+      "name": "small-chemistry-world",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "cef3b8415cf475803d823e7e7b50f40f6766b71e96309e38c45e0a1ab25c0efd"
+    },
+    {
+      "name": "small-chemistry-task-0",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "5e2d2f420857afe97e20321aa236413da3c2c1016c257cb38fcf7ce96fcc3737"
+    },
+    {
+      "name": "small-chemistry-solved",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "f4e7cfa3e627c9dc26941a642eba5a4b60cfcac3180c14b39ef581032d1eac5b"
+    },
+    {
+      "name": "small-chemistry-task-19",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "9b1e38501ed743124214b40c73b61c898e9f833dfc28f46db24f26ab816a6531"
+    },
+    {
+      "name": "small-chemistry-task-39",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "380071971917ef19d4bb5367213568349b003428faca4b246cbebd2616abead6"
+    },
+    {
+      "name": "small-body-world",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "864fb2fb0906376852f6f75999a7c276d552db6d4db1a012876c2d4b91ac8858"
+    },
+    {
+      "name": "small-body-task-0",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "81f2c6a8444b961d25891907b79630a7287294cde2cbbfb7223fc88d97b94ce7"
+    },
+    {
+      "name": "small-body-solved",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "de8b4e9e83a5ecad365e18b056216c5e257e2b5875ebd65c2c466a2a56f8e347"
+    },
+    {
+      "name": "small-body-task-19",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "305ff394101f4b06fb045d46375d13325c9630683aba2e05cc94edc414f65bef"
+    },
+    {
+      "name": "small-body-task-39",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "50470946688c5d7af55a028c5e52e2193573543dc6f74faf0a20f7eca902b499"
+    },
+    {
+      "name": "small-geography-world",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "48b097aff1c78534c9fbde00d3c1b057600de422b4eecfb0c8b6a23c9823fa11"
+    },
+    {
+      "name": "small-geography-task-0",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "455cd23fd935097bb103af26fa67e53f390c6035cb07f3244c1ccc27629518dc"
+    },
+    {
+      "name": "small-geography-solved",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "e696a315a1b3a4c16821df93b73aa4e02412ee9275fb94a3105e85c275fe7920"
+    },
+    {
+      "name": "small-geography-task-19",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "d5542b832f99cc0fbe33f759e3588dc5f07c3a37497bcf5918f5bc5f4bfef5fe"
+    },
+    {
+      "name": "small-geography-task-39",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "3b1e652f12144a808d1dab56d887a9f254e74d59f74079e2982210b850c45300"
+    },
+    {
+      "name": "small-last-trail",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "93da54a70b36d82aabdadb4f2c79b6b1fd82e2997537513412a6bb02ac82c2b7"
+    },
+    {
+      "name": "small-en-physics",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "a2a0342ee1a5ffeecaea2e613c7b33a6f56a412a192e736104147d15abc37a4b"
+    },
+    {
+      "name": "small-en-german",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "197ce11be9997e72220a09dcf383759bf23d9a7e2aa0419b2eafe347043483e2"
+    },
+    {
+      "name": "small-en-languages",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "4cb90e76eab6481f78a4786e957555550dfd146352902329c68d45e70461038e"
+    },
+    {
+      "name": "small-ru-physics",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "7b010e2d2d2cae5eb8883cf6a369ca3773f0fbd13f988df866e0887c2ac94b0f"
+    },
+    {
+      "name": "small-ru-german",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "c1cab20ff86074880666bb08a9c79984a62b869766ccc8d314f894d93295f6cf"
+    },
+    {
+      "name": "small-ru-languages",
+      "pixels": [
+        320,
+        568
+      ],
+      "sha256": "0255a25e866d2ed920a82270fdd9fb123bf7da59511f725bca15ec82cd46604b"
     },
     {
       "name": "small-musicbox",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "cb5ede7a90d693384ccf465e64c3ccf48cb8391473e165a10b22f4956af566a5"
     },
     {
       "name": "small-settings",
       "pixels": [
         320,
         568
-      ]
+      ],
+      "sha256": "0398f3cd37e90cc6fe0ba0c198fd766f73e0682a2e073eb5f79db3974c497924"
     },
     {
       "name": "landscape-heroes",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "067ced99138ea07cedb5108715ad522d5d146467df5b66785be5454a96ad67a5"
     },
     {
       "name": "landscape-heroes-move",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "298f046bedb44075d51b6bc6bcb06c72dbaa3038881a297cce48af52884e116a"
     },
     {
       "name": "landscape-heroes-think",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "2d4d412070952d652353fd5fb892258d4d325ef36d0ab19f7b9cf6ebc6e7e6c8"
     },
     {
       "name": "landscape-heroes-success",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "25247b93310d971b3731508a37f24236da3a5e944d1d6b481b35fb1f9a1d3dc3"
     },
     {
       "name": "landscape-math-world",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "15a61a13df29bdc2aedd4829d61cc3f88987a58a66b772e6d25a6ecb316bdaec"
     },
     {
       "name": "landscape-math-task-0",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "67ef6616e9bd714e888e79b42a964356fe728645db2267c9acd8c0c813b123d6"
     },
     {
       "name": "landscape-math-solved",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "7a4c5f7665319861d6c8b04bf0b948babca476ae3b037be0c600fb4fdf3dbea8"
     },
     {
       "name": "landscape-math-task-1",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "d3426900cff9df16594028b8bb0327727bbe4d3f066a620921e83e8d8275c7c5"
     },
     {
       "name": "landscape-math-task-2",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "bf27311fd92c443a09fcfd16c9edeeff57f81f3ab4f9eb103308837dc9258ae5"
     },
     {
       "name": "landscape-math-task-3",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "3f17a39f2da0ce0f0b68effe211cac839a73264084e440f363d07ea306377683"
     },
     {
       "name": "landscape-math-task-4",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "029ba6734371d948b626fa642bb6305b467e9966fcc5f023378e5b0102d0718b"
     },
     {
       "name": "landscape-math-task-5",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "b2a59c1ceb76841e86211fc917d3e4e719b2ae17453189632b1f2dbe743d35ef"
     },
     {
       "name": "landscape-math-task-6",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "48012aae0dd9d74de26eb3cd9d77a3a8a5521fbc6cb4d88f870486e6e2d6d7fb"
     },
     {
       "name": "landscape-math-task-7",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "8e1f872cbd554642ba214c1d32f5b3d0e8d2064d405687d678ac02fe7afa39cd"
     },
     {
       "name": "landscape-german-world",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "f2130892294b31d2a24b1b914564112b786cb172d1f6d9a2847b624fb616c709"
     },
     {
       "name": "landscape-german-task-0",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "3dd5e0adbdc38fa54e97f1c5e7bce375254ea9f7459da433a72495d8304802e4"
     },
     {
       "name": "landscape-german-solved",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "2acf6ca1cf3e79c441b9cf5cdc5db0409e454870de218aca2b421794535ca10b"
     },
     {
       "name": "landscape-german-task-1",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "b5b00d64e5492a3e82b592ae66c48fb7aa169115be9f54ac1f8b0f37ff5b6203"
     },
     {
       "name": "landscape-german-task-2",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "37f875b75a0027a8f290a2f44a94b5840fce78b9d28f5d2ea38946fd8f83d697"
     },
     {
       "name": "landscape-german-task-3",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "e72f0927415b0e96882c7b85292cac2147819201751b6b5a318c8a06a320555f"
     },
     {
       "name": "landscape-german-task-4",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "6bf9c30c58a73ddf0d46fa3444007837a3ad10a417f824b780f32ce79e167841"
     },
     {
       "name": "landscape-german-task-5",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "7ce1bfc1e18579cc10d8ca313686a25e6ebceb3cb26fa907ab0bb906e0a7b6e4"
     },
     {
       "name": "landscape-german-task-6",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "da5f6df745698917e1014e6bbb5ffaf544ad1a4d09cdfc47e4370c502373a055"
     },
     {
       "name": "landscape-german-task-7",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "65f6fae595acb885ec3ae0969bca5e1de20633d0cbf658848dc806b3bcaf7328"
     },
     {
       "name": "landscape-logic-world",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "4eff5f4e8934022b20a0b3ca8f4fc75a5017243d1fb00ba0172ed9d32f5b4201"
     },
     {
       "name": "landscape-logic-task-0",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "fe0458003405578de01a272b9bcc6298815c67ab5299883ad9a8a31f55bc64b9"
     },
     {
       "name": "landscape-logic-solved",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "5c6306155a1433040a349cae1385a84faafae4c2e313a5578f88e4ec225f4f46"
     },
     {
       "name": "landscape-logic-task-1",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "05467c31fc68e0ee7bd223f6de45462c48597abe72c45ee9d3125b0e97ba5350"
     },
     {
       "name": "landscape-logic-task-2",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "602b343fd885192546ebeeb4e5c89096bd6137247d3de8ee9c8ca45ac801ac92"
     },
     {
       "name": "landscape-logic-task-3",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "55ecd77526c33959d50e338eb69c82f4ec46eb4b01d40a41e5223c61622c44fd"
     },
     {
       "name": "landscape-logic-task-4",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "23f98b347c0a93e328823787ae894a1dfc480f17760463974907c3881bba32e5"
     },
     {
       "name": "landscape-logic-task-5",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "d22c0af11566945961dc6c55de893734b0370920261cc22a36af55dc8f1e6ffa"
     },
     {
       "name": "landscape-logic-task-6",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "3009698324923200be7dff7acf94d07ac6198a7fc1b58cd0156bdc69a536ff69"
     },
     {
       "name": "landscape-logic-task-7",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "77c0af0dbba66b07d3f1b3e435fde0e80f2aa186632a720ae5b14783e46a680e"
+    },
+    {
+      "name": "landscape-physics-world",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "9c633be80f91a243ecdb2e22ea16781110540241d16394b531fd81306eb0e312"
+    },
+    {
+      "name": "landscape-physics-task-0",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "40a8583d7e58a17cd14fdbf47452d517e72c042ba9aabecd59c37c94b6bef4f8"
+    },
+    {
+      "name": "landscape-physics-solved",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "046600621b80b8706c3dfe36573dd048385836d0788e281e43fc046c4901a800"
+    },
+    {
+      "name": "landscape-physics-task-19",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "710909802f37663d3983e9306ad84ffc4fa46b0895caee91f8fc02eb49efc90d"
+    },
+    {
+      "name": "landscape-physics-task-39",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "e721f1830f867c614ba76d0fed507bd624ddc2724293ded9b88e78f2bcd6dc21"
+    },
+    {
+      "name": "landscape-biology-world",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "1808c7552cb0dd3c1f6ee849005ee396f7223dcf8910d3f37a72ab129c36397b"
+    },
+    {
+      "name": "landscape-biology-task-0",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "14b742e498066cdc65aeb4448f8e1460dd9c8bba52a49d3640f05e91cc791591"
+    },
+    {
+      "name": "landscape-biology-solved",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "f3828732f27302566ce1a253942cfbca6375787bd38768e86fe63c04efab0a86"
+    },
+    {
+      "name": "landscape-biology-task-19",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "77fc5414b660833cc9e3b0fc04ff35c6672c63039e90654cdf72e14d192e6813"
+    },
+    {
+      "name": "landscape-biology-task-39",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "d11cd80a3fae55c10e510471418e1d326c53f7d8a807d3de9aa39f3b43010ee3"
+    },
+    {
+      "name": "landscape-chemistry-world",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "4499088d03a23b81de252056d92982ca30bca74290d486c9808d5121e5da6123"
+    },
+    {
+      "name": "landscape-chemistry-task-0",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "8087a6604866627cc34c11fb444129caca17ee771a9259db0280c6a0b9ea8192"
+    },
+    {
+      "name": "landscape-chemistry-solved",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "dea7d5abc5d97c5205f5a2b6ca54a503662ddc972de028d63664c6106d51643a"
+    },
+    {
+      "name": "landscape-chemistry-task-19",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "f217a9f7e26153e145b65e001105a1bdd0c8ebfbb9bf443eb26730f5858464b9"
+    },
+    {
+      "name": "landscape-chemistry-task-39",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "29f61a9e42c07577ef3749f926290ccafa90a583d2d059f0eb51f0d0b68ecfcc"
+    },
+    {
+      "name": "landscape-body-world",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "d019ea5472c22c7b92a3c48cd0fdd9580ab7d8502bc01bbbc117d8b4d67620cc"
+    },
+    {
+      "name": "landscape-body-task-0",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "87fb3ae2c8457271639ab87731115cf5846055237119211b68ce9978152567fd"
+    },
+    {
+      "name": "landscape-body-solved",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "956fc48deac31bf48e3fba902227a760d5f2ac8f53f8f35caaf6118578cacfe7"
+    },
+    {
+      "name": "landscape-body-task-19",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "f72836ac0b8b248ae714a4e8339ee0d56be234834064a2f7b43ee59f8558bcdb"
+    },
+    {
+      "name": "landscape-body-task-39",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "92b115342f1afa26b2282706902a6de4600d7d1c1605694ba9168ec3e8b421ec"
+    },
+    {
+      "name": "landscape-geography-world",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "5c0e8d0f03e3733bfc707e9e5bc5829051ad12ac9c1657b0191c7ad34cd2a9d2"
+    },
+    {
+      "name": "landscape-geography-task-0",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "9b6a0061b11456b3b7484cb9fb4cd728d5e484d404f4c2e1f3c6852031781f7d"
+    },
+    {
+      "name": "landscape-geography-solved",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "b4f5953a0b3f43948be38c633e3655d9e26348b2f60e086da8ff87d29010a5a9"
+    },
+    {
+      "name": "landscape-geography-task-19",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "d689ec7ff429719c4bca74115903b7ff226cc729dde23c8c23e067aa8719b673"
+    },
+    {
+      "name": "landscape-geography-task-39",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "13e0ff01cf4d7b1eb2763aea193a78d6bbe4b457e465fec5d5a40727076dd94e"
+    },
+    {
+      "name": "landscape-last-trail",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "0fcdaecbd933d4385251c1a7d97496baecc42a8446f9253f3485c55b55e06d53"
+    },
+    {
+      "name": "landscape-en-physics",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "609dc57d7ae830d577649561f56bcf3dc96225383064cbc66c9b7a45a9165053"
+    },
+    {
+      "name": "landscape-en-german",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "4850d2741b538c4f1f7f4286e2be71c1a52606c5fe883473b3e3b283114603ca"
+    },
+    {
+      "name": "landscape-en-languages",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "2c7bcfe46ade5d74689950815b6f4d721a123ddf0e2ded5c4c92b2c6d6de3b82"
+    },
+    {
+      "name": "landscape-ru-physics",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "dda862e172506102cdfb159df79676ea6f77c9617c2bb8fd88455d46e50441fc"
+    },
+    {
+      "name": "landscape-ru-german",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "a4e7ecb95cd6f666f8a6e4224f7a00a17c53c8f66f876dd1211c7ffb12755d8d"
+    },
+    {
+      "name": "landscape-ru-languages",
+      "pixels": [
+        800,
+        360
+      ],
+      "sha256": "b76ec6af931a888d0be26df6ab5ceef515f0b3ca9ae28ec332a69d6b21255701"
     },
     {
       "name": "landscape-musicbox",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "cf3e5c0d0ed0642b181715a60ad25055c4ee6bfa6101a418b08da4429f82b00d"
     },
     {
       "name": "landscape-settings",
       "pixels": [
         800,
         360
-      ]
+      ],
+      "sha256": "108bcac9c0eb41a40366a0ac6d01837cf3a11da98a0c16f11ae18b1d016939d0"
     },
     {
       "name": "dense-heroes",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "0e292c5d87c27e48e211cb16d14f07fbed485227b21d3ecfd4f8adbc037a075b"
     },
     {
       "name": "dense-heroes-move",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "62978309db77308bdd6f5c0e61943e6abd0bc41d8407479c1b634f341ffca32b"
     },
     {
       "name": "dense-heroes-think",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "77d635b2bf77c0490fb1a408070e965f738b1bec5b8c4bfe30881d9b4bd3fc5a"
     },
     {
       "name": "dense-heroes-success",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "05d8710ae29311cce38a9b565bd57ab93b699d496d23cf638c6ad071ca790d47"
     },
     {
       "name": "dense-math-world",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "7f42002572ecafed66dd835c21e0fe696fda49771a7c4dc37c0c8b7e6b37d3b3"
     },
     {
       "name": "dense-math-task-0",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "b47067f69d602396b7dbbe067d14d5fdd8ddb5cdc9f704229c9ecc4246f2b920"
     },
     {
       "name": "dense-math-solved",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "67b581d76f4b7acd37d84eb642b8c433e3a8c8de7c1b5c5dbdae2b550aa5e3f2"
     },
     {
       "name": "dense-math-task-1",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "d4b74822b3a8bab688b7b294a9ee1f2523249b89137a05d375710c33e6e3d5de"
     },
     {
       "name": "dense-math-task-2",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "eced792e9953583fb95cef008ad73eec0c12fdcd5d6a8a8f94942646ca4e69ff"
     },
     {
       "name": "dense-math-task-3",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "b8b12673e429e5a3681747257b90e1f4a2254a9c781aaabced5360da0252c034"
     },
     {
       "name": "dense-math-task-4",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "bf13f657000a77a2dd7d56babbf6fe4ee7f2aca9a47f686c7843c1856fa6b932"
     },
     {
       "name": "dense-math-task-5",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "29affc66ce005f9bd5cd353322375948e07f57b97e10ab992c328d0d17355d54"
     },
     {
       "name": "dense-math-task-6",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "b3a0eedda14b5ce4ce90934d272156321b14bf457d1311c5eda1fdccdaa83342"
     },
     {
       "name": "dense-math-task-7",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "24047199c150714a825585186097550aa8c3ba7f14d523108063e8ce9d1a05de"
     },
     {
       "name": "dense-german-world",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "c8e969ea4839397e05e7f0e1de9fee40ba37de853f029f5c6f72a2bfd0101d81"
     },
     {
       "name": "dense-german-task-0",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "b77d741400d641b2f380689c248604064ad27aef08a3d55545b5d7a4c3ee40d0"
     },
     {
       "name": "dense-german-solved",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "e794537376460fec3df6745453a12693745cbf457b5920e794170e2e83ced626"
     },
     {
       "name": "dense-german-task-1",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "98fa73e0f80dc96f77d4a1dfc5310433c844765a5e3ffe9f01d17322688a3a41"
     },
     {
       "name": "dense-german-task-2",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "761ed374b9bd488981b2a799b084ad347201910ed8ad47a2ae73f0a614fb109f"
     },
     {
       "name": "dense-german-task-3",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "3e98e3e138c4c74a9ee396dd1fb12baedc7353a322d89d62498cad17fb35799c"
     },
     {
       "name": "dense-german-task-4",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "8eb2974aa7587a260b6e8f04b1c971af1133ee1d47ce789c81608bd19ebeb6a4"
     },
     {
       "name": "dense-german-task-5",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "398301436bb5ba6f4388217aacd939bf0463b5f8abf9cac574207a448efac732"
     },
     {
       "name": "dense-german-task-6",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "cb4679a6bfcb7d7772233552970233a7c8f80332b49dc20a042a9adf3cccbb5f"
     },
     {
       "name": "dense-german-task-7",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "e4f5999b7aa03cdef92f7097947e9930190f2ffad2630c07565945313b79bb16"
     },
     {
       "name": "dense-logic-world",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "f254a8c412cfe0715ebc5a019aea211ac6d71648d8ab7216a00d3326bf1dc343"
     },
     {
       "name": "dense-logic-task-0",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "24920c12f041997af89aa046ea23a28444edb3d8ddcd3ac95ba1982af562d903"
     },
     {
       "name": "dense-logic-solved",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "c925f6925e03258b33432d0180c6e067913492644795ba3fd6f0c95e94402f66"
     },
     {
       "name": "dense-logic-task-1",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "0d032049827d33b92c83b3bb62982f19c9e4473227968a9d1d2a836694c7d19c"
     },
     {
       "name": "dense-logic-task-2",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "3889cd6fb4500c96cabd8b16510a167d247b12e9a95d84dc6e016d53ccf7c843"
     },
     {
       "name": "dense-logic-task-3",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "4da37c9c8cc4a1cc40c93d6d1bf7111882ec4531d0f3cb9ad07429e71a73c0fd"
     },
     {
       "name": "dense-logic-task-4",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "0723e14957f656fa75a70f61342b8d25f2946d8d83ba7d903a996539a656a351"
     },
     {
       "name": "dense-logic-task-5",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "29fef07acfdee1dc4ade147e3ae068ecce64254d6ca82ee0dbfd602159da7056"
     },
     {
       "name": "dense-logic-task-6",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "7fe1bfec8dca7420051c8a9971401c1e9dae46eb26a6b6c42df56f7c43e1826a"
     },
     {
       "name": "dense-logic-task-7",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "980f182cc2661b404cf56de621574c884d1fd670baaf178cb5858415874b85ee"
+    },
+    {
+      "name": "dense-physics-world",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "f687c26467646802bc762a205bb90981ac18d0f6945e44560cd832c5d6fce7d0"
+    },
+    {
+      "name": "dense-physics-task-0",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "965be778f21806f26319b0e80e135da79265b74f0bd16435adbd10f2a06f4df8"
+    },
+    {
+      "name": "dense-physics-solved",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "fa0c270dc6ee0a526fec6e3d1d2cf03caa340e6f3082a67ce96f1c91949ed63f"
+    },
+    {
+      "name": "dense-physics-task-19",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "3da74c5804c9e77293f8a106236af753251c76f468ddd4ec500524d4925eca97"
+    },
+    {
+      "name": "dense-physics-task-39",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "951ee8147e0587cdc4af4904af4dc0cafd0a7dc46b37ad4f842b06fe26f2ccee"
+    },
+    {
+      "name": "dense-biology-world",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "e1228c2669e1607decaa558fda0a9ce40975f786216c4b6b4de6675a224a5ec0"
+    },
+    {
+      "name": "dense-biology-task-0",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "fb87cd6efa3f79e6b3cb287b3114b9d4248deaf1334ba7c18773e68a00d9b99b"
+    },
+    {
+      "name": "dense-biology-solved",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "f5d1d1008d9ddf6352c559887981eaba9867eaef33a0852dafcdfacab1130b2b"
+    },
+    {
+      "name": "dense-biology-task-19",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "0c460216439cc6ceb0c86f9101c92b7f603413169b380759ae3848eac0d85642"
+    },
+    {
+      "name": "dense-biology-task-39",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "eb6c206c251b9285c365c46e6b1c059618196626ae33b1f30c6e8c4bcd6a8ff4"
+    },
+    {
+      "name": "dense-chemistry-world",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "5cf1794618303236017823d409362e58505fb8b708a808eb229afefccc614d95"
+    },
+    {
+      "name": "dense-chemistry-task-0",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "f2d7a1db3519aad66168ffeb2fcb4c9a52206e4f915caa5d0e57d368e068c069"
+    },
+    {
+      "name": "dense-chemistry-solved",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "bba15444ec5370008264ec47e9d9082bbf9ff6f241ff4a8de94ff3ba171cf5a7"
+    },
+    {
+      "name": "dense-chemistry-task-19",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "297c3c078316cc3df2e044da7aa7e3348371547d24d4e4a8737e71ba51908993"
+    },
+    {
+      "name": "dense-chemistry-task-39",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "975cd55060e5c19a0734c7b4ed276cb83863d7e57528a20fb2cc51cb78164637"
+    },
+    {
+      "name": "dense-body-world",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "7d861802c05ec7f22d5efc4761300be06e99f47b597b55c27cfcca9daead578c"
+    },
+    {
+      "name": "dense-body-task-0",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "90be48f4bb02c3427a700877b7227a6bb47906ff3e93751794394e36e265eb2b"
+    },
+    {
+      "name": "dense-body-solved",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "5e4b9190d55661edc26a833551c18458c423c9586a51af33b15ba08c3efb562e"
+    },
+    {
+      "name": "dense-body-task-19",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "e0371fad15e148c09fb4572da72b6e372ccbe445266f5c14d49fb1bc4d89ef56"
+    },
+    {
+      "name": "dense-body-task-39",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "95c282c916dbe249fe0cbabf0ac0622dee16f8cb0e52a19b442f6e1e8c623db0"
+    },
+    {
+      "name": "dense-geography-world",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "7b221c99d559b46d4b5ec4a53689a5576b68827154c340f2aeef5a04b8d11808"
+    },
+    {
+      "name": "dense-geography-task-0",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "0f9b611a6fad79cf8d21ba17fce2412ac96fc6ca2878c9b78a9d8e01f7a4099d"
+    },
+    {
+      "name": "dense-geography-solved",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "8a4346ed46d79e08ed97a776c0cfc8ab1b7699d4af1031f5e5eba35a199a0104"
+    },
+    {
+      "name": "dense-geography-task-19",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "01ec46017ead8042179ff335fb1c3790e6559585422771c1e5430be0ab13b806"
+    },
+    {
+      "name": "dense-geography-task-39",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "de38b6d29acf3fdf7cc9f2bd0243d43a767cb724136eb4ed9aef1b3f33bc4281"
+    },
+    {
+      "name": "dense-last-trail",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "660d374056053638f5cd67422ef08fd409119e406fb7dc98342c3dfa1c9a1c83"
+    },
+    {
+      "name": "dense-en-physics",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "419e1956241a96daaaff397dd9aaa235c56e4732690a1704ba68d2db98dfad6f"
+    },
+    {
+      "name": "dense-en-german",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "1a7436915e0e721a84e4bcbb6bd43fee652a81fdfa7fabb4858d08064a2083b8"
+    },
+    {
+      "name": "dense-en-languages",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "c8096456bf805d7840529ba52e93f7d70510ed159457002265b0f570c715eeb6"
+    },
+    {
+      "name": "dense-ru-physics",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "ef63cc12659ae1d9e03300d27d1340cf27b5d6f2157ffddc2d7f3bcce482ec99"
+    },
+    {
+      "name": "dense-ru-german",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "6ef3e4d7dffc828c3de5ec45ef623f314e109008db7c2817208c24c09e4f1a72"
+    },
+    {
+      "name": "dense-ru-languages",
+      "pixels": [
+        1080,
+        2398
+      ],
+      "sha256": "2814d9105f24077350ff6fc50bd8927e91db6fd4b7ceb7e4ca721a4cf28a1051"
     },
     {
       "name": "dense-musicbox",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "a0bc9dacdba0a932adc22d04df8af2bf1c66bc77fc2c6f3030b8e4d7bd67402a"
     },
     {
       "name": "dense-settings",
       "pixels": [
         1080,
         2398
-      ]
+      ],
+      "sha256": "0c1a7bb1cc52790c0d778db156d79e668a93914da2c12ac6b94a17e3dfadb00f"
     }
   ],
-  "screenshots": {
-    "small-math-task-3.png": "97ec210cfdbbacf099a8c98da449c0e74d7f690e957a8a0748466edd13737f5c",
-    "landscape-math-task-4.png": "e0be4d41c5ac8f9a20b2a768c28e02a83d126f094b477fa3bc428ce301d8c917",
-    "small-settings.png": "5c29c1f66ed908e410571e46aa430b3b7dc98dda22e91ce0403eb31d31f86d6d",
-    "phone-math-task-0.png": "c1f18ad6ae104da4ade58975c544bc6a680ebbd43006a684990d34bc24b0bb0e",
-    "phone-math-solved.png": "231ccf6ff873b02d568bed2a5bc5b4d7f1c150f02fb888b5f882bc70ef87c2ca",
-    "phone-musicbox.png": "52eac9133dc5e1d47504d90eb0642a664b0543795bf817a8b875fb26a6a5b60b",
-    "phone-math-world.png": "9c7682f2518993a5af108c7d56704b3795c4ad47c20100158a20f00bd669c51c",
-    "phone-logic-task-0.png": "b502dd6855800698ec161c3af3f516399ae84dd22d2e830e50c8c0890966c30d",
-    "small-heroes.png": "0412f62b48ea56da49533c101ac9f8f238857daa68ca54e67335ec5fc1347556",
-    "dense-heroes.png": "cd37349f3e287c9580a22339d37da85691673042acd04b41662b992e21efff8d",
-    "phone-german-task-3.png": "e2592d31441c9dc35035602d7a5cd9f0c81d499c4be2a44f7e88d131b4a6d836",
-    "phone-heroes.png": "8d39a1e2e8ca546811cdac2e3614a8c5a21f0b9e11a7ab6bfddc8c51d3d25d7f"
-  },
-  "canonical": {
-    "provenance": {
-      "schema": 1,
-      "built_utc": "2026-10-20T18:42:22.700123+00:00",
-      "source_commit": "19b2d2e5359e0cd465040684c31bb59784f11c4d",
-      "source_dirty": false,
-      "application_source_sha256": "2fe06fdd7fbc75f646c71eaf20e8531aa4ca8f0a6a186d9f11e940f432f97acb",
-      "toolchain": {
-        "godot": "4.7.2.stable.official.ed1daf0bf",
-        "java": "17.0.16+8",
-        "min_sdk": 24,
-        "target_sdk": 36,
-        "build_tools": "36.1.0",
-        "gradle": "8.11.1",
-        "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
-        "sdk_archives": [
-          {
-            "name": "commandline",
-            "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
-            "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
-            "destination": "cmdline-tools/19.0"
+  "unique_voice_recordings_decoded": 1589,
+  "tasks": 320,
+  "subjects": 8,
+  "locales": [
+    "de",
+    "en",
+    "ru"
+  ],
+  "artifacts": {
+    "standard": {
+      "output": "/workspace/Kinderwelt/build/android-v06-verified",
+      "provenance": {
+        "schema": 1,
+        "built_utc": "2026-10-20T21:12:24.683750+00:00",
+        "source_commit": "0df0b941306de348cc110a25b5ab01faca297acd",
+        "source_dirty": false,
+        "application_source_sha256": "49b6bfba8bdbacbc3f1f3f772f6f10a07f68e8c981bc9d75817a11960f2d942c",
+        "toolchain": {
+          "godot": "4.7.2.stable.official.ed1daf0bf",
+          "java": "17.0.16+8",
+          "min_sdk": 24,
+          "target_sdk": 36,
+          "build_tools": "36.1.0",
+          "gradle": "8.11.1",
+          "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+          "sdk_archives": [
+            {
+              "name": "commandline",
+              "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+              "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+              "destination": "cmdline-tools/19.0"
+            },
+            {
+              "name": "platform",
+              "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+              "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+              "destination": "platforms/android-36"
+            },
+            {
+              "name": "build-tools",
+              "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+              "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+              "destination": "build-tools/36.1.0"
+            },
+            {
+              "name": "platform-tools",
+              "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+              "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+              "destination": "platform-tools"
+            }
+          ],
+          "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+          "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+          "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+          "bundletool_version": "1.18.2",
+          "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
+        },
+        "package": "org.example.kinderwelt",
+        "signing": {
+          "apk": "ephemeral Godot development key; not a release identity",
+          "aab": "UNSIGNED"
+        },
+        "upload_readiness": "BLOCKED",
+        "artifacts": {
+          "kinderwelt-unsigned.aab": {
+            "bytes": 123325267,
+            "sha256": "ba340066434aea88ad3014a74b77e5079e90e6838c8221eb63f9e3e9db301178"
           },
-          {
-            "name": "platform",
-            "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
-            "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
-            "destination": "platforms/android-36"
-          },
-          {
-            "name": "build-tools",
-            "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
-            "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
-            "destination": "build-tools/36.1.0"
-          },
-          {
-            "name": "platform-tools",
-            "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
-            "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
-            "destination": "platform-tools"
+          "kinderwelt-debug.apk": {
+            "bytes": 134111498,
+            "sha256": "d64a15c01d2d9a1d415d2cce4aa9def416438b77d91847c947fab290c50e459e"
           }
-        ],
-        "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
-        "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
-        "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
-        "bundletool_version": "1.18.2",
-        "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
-      },
-      "package": "org.example.kinderwelt",
-      "signing": {
-        "apk": "ephemeral Godot development key; not a release identity",
-        "aab": "UNSIGNED"
-      },
-      "upload_readiness": "BLOCKED",
-      "artifacts": {
-        "kinderwelt-unsigned.aab": {
-          "bytes": 73702869,
-          "sha256": "32102725a1ce0163f43a8f2f018ee85481f04aaca68c3aa5e357e647cc352f60"
-        },
-        "kinderwelt-debug.apk": {
-          "bytes": 84117406,
-          "sha256": "d0d02573951ef251c0430540b98136ec1df0b7062f740e32b1b4fbf3eb805910"
         }
-      }
+      },
+      "verification": {
+        "status": "PASS",
+        "upload_readiness": "BLOCKED",
+        "artifacts": {
+          "kinderwelt-debug.apk": {
+            "assets_checked": 3287,
+            "abis": [
+              "arm64-v8a",
+              "x86_64"
+            ],
+            "elf_16kb_alignment": "PASS",
+            "native_packaging": "deflated; extracted by Android on installation",
+            "package": "org.example.kinderwelt",
+            "version_name": "0.6.0",
+            "version_code": 6,
+            "min_sdk": 24,
+            "target_sdk": 36,
+            "permissions": [],
+            "allow_backup": false,
+            "orientation": "fullUser",
+            "signature": "verified Godot development certificate, v2",
+            "zip_16kb_alignment": "PASS",
+            "bytes": 134111498,
+            "sha256": "d64a15c01d2d9a1d415d2cce4aa9def416438b77d91847c947fab290c50e459e"
+          },
+          "kinderwelt-unsigned.aab": {
+            "assets_checked": 3287,
+            "abis": [
+              "arm64-v8a",
+              "x86_64"
+            ],
+            "elf_16kb_alignment": "PASS",
+            "native_packaging": "deflated; extracted by Android on installation",
+            "package": "org.example.kinderwelt",
+            "version_name": "0.6.0",
+            "version_code": 6,
+            "min_sdk": 24,
+            "target_sdk": 36,
+            "permissions": [],
+            "allow_backup": false,
+            "orientation": "fullUser",
+            "signature": "UNSIGNED",
+            "rendering": "gl_compatibility",
+            "bytes": 123325267,
+            "sha256": "ba340066434aea88ad3014a74b77e5079e90e6838c8221eb63f9e3e9db301178"
+          }
+        }
+      },
+      "size_analysis": {
+        "artifacts": [
+          {
+            "path": "build/android-v06-verified/kinderwelt-debug.apk",
+            "bytes": 134111498,
+            "sha256": "d64a15c01d2d9a1d415d2cce4aa9def416438b77d91847c947fab290c50e459e",
+            "groups": {
+              "audio": {
+                "raw_bytes": 48696904,
+                "stored_bytes": 45835992,
+                "files": 1593
+              },
+              "fonts": {
+                "raw_bytes": 150581,
+                "stored_bytes": 149683,
+                "files": 1
+              },
+              "graphics": {
+                "raw_bytes": 24150957,
+                "stored_bytes": 24029434,
+                "files": 59
+              },
+              "application/imports/other": {
+                "raw_bytes": 1869575,
+                "stored_bytes": 788899,
+                "files": 1675
+              },
+              "Android/metadata/classes": {
+                "raw_bytes": 6188161,
+                "stored_bytes": 2407335,
+                "files": 70
+              },
+              "native/arm64-v8a": {
+                "raw_bytes": 77555944,
+                "stored_bytes": 28340126,
+                "files": 2
+              },
+              "native/x86_64": {
+                "raw_bytes": 82524296,
+                "stored_bytes": 31735164,
+                "files": 2
+              }
+            },
+            "zip_alignment_signing_overhead_bytes": 824865,
+            "largest": [
+              {
+                "file": "lib/x86_64/libgodot_android.so",
+                "raw_bytes": 81186808,
+                "stored_bytes": 31226056,
+                "zip_method": 8,
+                "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+              },
+              {
+                "file": "lib/arm64-v8a/libgodot_android.so",
+                "raw_bytes": 76181608,
+                "stored_bytes": 27838354,
+                "zip_method": 8,
+                "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+              },
+              {
+                "file": "assets/assets/quest/appicon.png",
+                "raw_bytes": 2472297,
+                "stored_bytes": 2472297,
+                "zip_method": 0
+              },
+              {
+                "file": "assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+                "raw_bytes": 2356054,
+                "stored_bytes": 2356718,
+                "zip_method": 8
+              },
+              {
+                "file": "classes.dex",
+                "raw_bytes": 6043992,
+                "stored_bytes": 2332621,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+                "raw_bytes": 1984326,
+                "stored_bytes": 1983879,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
+                "raw_bytes": 1896562,
+                "stored_bytes": 1896699,
+                "zip_method": 8
+              },
+              {
+                "file": "res/drawable/splash_icon.webp",
+                "raw_bytes": 1896506,
+                "stored_bytes": 1896506,
+                "zip_method": 0
+              },
+              {
+                "file": "assets/.godot/imported/science-b.png-5131e5a6320643c4c00823adef2e9852.ctex",
+                "raw_bytes": 1830542,
+                "stored_bytes": 1824862,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/science-a.png-f5ea911e0b0e6837e5ea021ed5bc013e.ctex",
+                "raw_bytes": 1806130,
+                "stored_bytes": 1793834,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/consolation.ogg-21e465c93698144f41c783f34e9c0d91.oggvorbisstr",
+                "raw_bytes": 1569646,
+                "stored_bytes": 1514275,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/wanja.png-7162e0d70296a7985048fa90e644295f.ctex",
+                "raw_bytes": 1523846,
+                "stored_bytes": 1511724,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
+                "raw_bytes": 1509460,
+                "stored_bytes": 1484617,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
+                "raw_bytes": 1475364,
+                "stored_bytes": 1449215,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/du.png-b0d77594c8858a8a25e95a909069d42a.ctex",
+                "raw_bytes": 1450424,
+                "stored_bytes": 1440156,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex",
+                "raw_bytes": 1429650,
+                "stored_bytes": 1414394,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex",
+                "raw_bytes": 1316150,
+                "stored_bytes": 1300857,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/babbino.ogg-dd643eca0c1f34bb903e2baad688d796.oggvorbisstr",
+                "raw_bytes": 1097060,
+                "stored_bytes": 1036217,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/french_song.ogg-ace875708c9b20d461667cf6b88e9b70.oggvorbisstr",
+                "raw_bytes": 882065,
+                "stored_bytes": 839758,
+                "zip_method": 8
+              },
+              {
+                "file": "lib/x86_64/libc++_shared.so",
+                "raw_bytes": 1337488,
+                "stored_bytes": 509108,
+                "zip_method": 8,
+                "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+              }
+            ],
+            "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+          },
+          {
+            "path": "build/android-v06-verified/kinderwelt-unsigned.aab",
+            "bytes": 123325267,
+            "sha256": "ba340066434aea88ad3014a74b77e5079e90e6838c8221eb63f9e3e9db301178",
+            "groups": {
+              "audio": {
+                "raw_bytes": 48696904,
+                "stored_bytes": 45254275,
+                "files": 1593
+              },
+              "fonts": {
+                "raw_bytes": 150581,
+                "stored_bytes": 149930,
+                "files": 1
+              },
+              "graphics": {
+                "raw_bytes": 24150957,
+                "stored_bytes": 23972750,
+                "files": 59
+              },
+              "application/imports/other": {
+                "raw_bytes": 1869575,
+                "stored_bytes": 731075,
+                "files": 1675
+              },
+              "Android/metadata/classes": {
+                "raw_bytes": 5252764,
+                "stored_bytes": 1825151,
+                "files": 78
+              },
+              "native/arm64-v8a": {
+                "raw_bytes": 72489280,
+                "stored_bytes": 24478799,
+                "files": 2
+              },
+              "native/x86_64": {
+                "raw_bytes": 75398760,
+                "stored_bytes": 25835633,
+                "files": 2
+              }
+            },
+            "zip_alignment_signing_overhead_bytes": 1077654,
+            "largest": [
+              {
+                "file": "base/lib/x86_64/libgodot_android.so",
+                "raw_bytes": 74061272,
+                "stored_bytes": 25373224,
+                "zip_method": 8,
+                "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+              },
+              {
+                "file": "base/lib/arm64-v8a/libgodot_android.so",
+                "raw_bytes": 71114944,
+                "stored_bytes": 24023949,
+                "zip_method": 8,
+                "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+              },
+              {
+                "file": "assetPackInstallTime/assets/assets/quest/appicon.png",
+                "raw_bytes": 2472297,
+                "stored_bytes": 2430103,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+                "raw_bytes": 2356054,
+                "stored_bytes": 2356717,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+                "raw_bytes": 1984326,
+                "stored_bytes": 1983300,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
+                "raw_bytes": 1896562,
+                "stored_bytes": 1896682,
+                "zip_method": 8
+              },
+              {
+                "file": "base/res/drawable/splash_icon.webp",
+                "raw_bytes": 1896506,
+                "stored_bytes": 1896650,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/science-b.png-5131e5a6320643c4c00823adef2e9852.ctex",
+                "raw_bytes": 1830542,
+                "stored_bytes": 1823469,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/science-a.png-f5ea911e0b0e6837e5ea021ed5bc013e.ctex",
+                "raw_bytes": 1806130,
+                "stored_bytes": 1792243,
+                "zip_method": 8
+              },
+              {
+                "file": "base/dex/classes.dex",
+                "raw_bytes": 5136056,
+                "stored_bytes": 1785571,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/wanja.png-7162e0d70296a7985048fa90e644295f.ctex",
+                "raw_bytes": 1523846,
+                "stored_bytes": 1510082,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/consolation.ogg-21e465c93698144f41c783f34e9c0d91.oggvorbisstr",
+                "raw_bytes": 1569646,
+                "stored_bytes": 1499351,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
+                "raw_bytes": 1509460,
+                "stored_bytes": 1482377,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
+                "raw_bytes": 1475364,
+                "stored_bytes": 1447229,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/du.png-b0d77594c8858a8a25e95a909069d42a.ctex",
+                "raw_bytes": 1450424,
+                "stored_bytes": 1438763,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex",
+                "raw_bytes": 1429650,
+                "stored_bytes": 1412853,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex",
+                "raw_bytes": 1316150,
+                "stored_bytes": 1299221,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/babbino.ogg-dd643eca0c1f34bb903e2baad688d796.oggvorbisstr",
+                "raw_bytes": 1097060,
+                "stored_bytes": 1023480,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/french_song.ogg-ace875708c9b20d461667cf6b88e9b70.oggvorbisstr",
+                "raw_bytes": 882065,
+                "stored_bytes": 830132,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/wiener_blut.ogg-0eadff7cb9e16fc086c3006ed33508b4.oggvorbisstr",
+                "raw_bytes": 524366,
+                "stored_bytes": 496399,
+                "zip_method": 8
+              }
+            ],
+            "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+          }
+        ]
+      },
+      "current_application_matches_export": true
     },
-    "verification": {
-      "status": "PASS",
-      "upload_readiness": "BLOCKED",
-      "artifacts": {
-        "kinderwelt-debug.apk": {
-          "assets_checked": 207,
-          "abis": [
-            "arm64-v8a",
-            "x86_64"
-          ],
-          "elf_16kb_alignment": "PASS",
-          "native_packaging": "deflated; extracted by Android on installation",
-          "package": "org.example.kinderwelt",
-          "version_name": "0.5.0",
-          "version_code": 5,
+    "preview": {
+      "output": "/workspace/Kinderwelt/build/android-v06-preview",
+      "provenance": {
+        "schema": 1,
+        "built_utc": "2026-10-20T21:14:22.451489+00:00",
+        "source_commit": "98f79c4bf0a9aaf7e93c8542ce7c771412b0884f",
+        "source_dirty": false,
+        "application_source_sha256": "9f0d868602b23b1a69250b24bb6c007908061353d971726a45672473cf1cd1c0",
+        "toolchain": {
+          "godot": "4.7.2.stable.official.ed1daf0bf",
+          "java": "17.0.16+8",
           "min_sdk": 24,
           "target_sdk": 36,
-          "permissions": [],
-          "allow_backup": false,
-          "orientation": "fullUser",
-          "signature": "verified Godot development certificate, v2",
-          "zip_16kb_alignment": "PASS",
-          "bytes": 84117406,
-          "sha256": "d0d02573951ef251c0430540b98136ec1df0b7062f740e32b1b4fbf3eb805910"
+          "build_tools": "36.1.0",
+          "gradle": "8.11.1",
+          "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+          "sdk_archives": [
+            {
+              "name": "commandline",
+              "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+              "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+              "destination": "cmdline-tools/19.0"
+            },
+            {
+              "name": "platform",
+              "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+              "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+              "destination": "platforms/android-36"
+            },
+            {
+              "name": "build-tools",
+              "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+              "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+              "destination": "build-tools/36.1.0"
+            },
+            {
+              "name": "platform-tools",
+              "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+              "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+              "destination": "platform-tools"
+            }
+          ],
+          "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+          "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+          "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+          "bundletool_version": "1.18.2",
+          "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
         },
-        "kinderwelt-unsigned.aab": {
-          "assets_checked": 207,
-          "abis": [
-            "arm64-v8a",
-            "x86_64"
-          ],
-          "elf_16kb_alignment": "PASS",
-          "native_packaging": "deflated; extracted by Android on installation",
-          "package": "org.example.kinderwelt",
-          "version_name": "0.5.0",
-          "version_code": 5,
-          "min_sdk": 24,
-          "target_sdk": 36,
-          "permissions": [],
-          "allow_backup": false,
-          "orientation": "fullUser",
-          "signature": "UNSIGNED",
-          "rendering": "gl_compatibility",
-          "bytes": 73702869,
-          "sha256": "32102725a1ce0163f43a8f2f018ee85481f04aaca68c3aa5e357e647cc352f60"
-        }
-      }
-    },
-    "size": {
-      "artifacts": [
-        {
-          "path": "build/android-delivery/kinderwelt-debug.apk",
-          "bytes": 84117406,
-          "sha256": "d0d02573951ef251c0430540b98136ec1df0b7062f740e32b1b4fbf3eb805910",
-          "groups": {
-            "audio": {
-              "raw_bytes": 2949662,
-              "stored_bytes": 2744740,
-              "files": 62
-            },
-            "fonts": {
-              "raw_bytes": 150581,
-              "stored_bytes": 149683,
-              "files": 1
-            },
-            "graphics": {
-              "raw_bytes": 18685361,
-              "stored_bytes": 18588629,
-              "files": 56
-            },
-            "application/imports/other": {
-              "raw_bytes": 124734,
-              "stored_bytes": 90594,
-              "files": 129
-            },
-            "Android/metadata/classes": {
-              "raw_bytes": 6188161,
-              "stored_bytes": 2407337,
-              "files": 70
-            },
-            "native/arm64-v8a": {
-              "raw_bytes": 77555944,
-              "stored_bytes": 28340126,
-              "files": 2
-            },
-            "native/x86_64": {
-              "raw_bytes": 82524296,
-              "stored_bytes": 31735164,
-              "files": 2
-            }
-          },
-          "zip_alignment_signing_overhead_bytes": 61133,
-          "largest": [
-            {
-              "file": "lib/x86_64/libgodot_android.so",
-              "raw_bytes": 81186808,
-              "stored_bytes": 31226056,
-              "zip_method": 8,
-              "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
-            },
-            {
-              "file": "lib/arm64-v8a/libgodot_android.so",
-              "raw_bytes": 76181608,
-              "stored_bytes": 27838354,
-              "zip_method": 8,
-              "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
-            },
-            {
-              "file": "assets/assets/quest/appicon.png",
-              "raw_bytes": 2472297,
-              "stored_bytes": 2472297,
-              "zip_method": 0
-            },
-            {
-              "file": "assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
-              "raw_bytes": 2356054,
-              "stored_bytes": 2356718,
-              "zip_method": 8
-            },
-            {
-              "file": "classes.dex",
-              "raw_bytes": 6043992,
-              "stored_bytes": 2332621,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
-              "raw_bytes": 1896562,
-              "stored_bytes": 1896699,
-              "zip_method": 8
-            },
-            {
-              "file": "res/drawable/splash_icon.webp",
-              "raw_bytes": 1896506,
-              "stored_bytes": 1896506,
-              "zip_method": 0
-            },
-            {
-              "file": "assets/.godot/imported/jule.png-f7dfd61e557a77dfe9ddac3b1f64a1a5.ctex",
-              "raw_bytes": 1532264,
-              "stored_bytes": 1521898,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/mina.png-d5ae41455348a4f723b10689c86ea71b.ctex",
-              "raw_bytes": 1506942,
-              "stored_bytes": 1496013,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
-              "raw_bytes": 1509460,
-              "stored_bytes": 1484617,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
-              "raw_bytes": 1475364,
-              "stored_bytes": 1449215,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/leo.png-133d22a96d40d8dc43e9d0ca5a50ae0f.ctex",
-              "raw_bytes": 1457494,
-              "stored_bytes": 1447345,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/sam.png-a8f2261527ab9b3f45b947a457e9fff7.ctex",
-              "raw_bytes": 1378772,
-              "stored_bytes": 1363645,
-              "zip_method": 8
-            },
-            {
-              "file": "lib/x86_64/libc++_shared.so",
-              "raw_bytes": 1337488,
-              "stored_bytes": 509108,
-              "zip_method": 8,
-              "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
-            },
-            {
-              "file": "lib/arm64-v8a/libc++_shared.so",
-              "raw_bytes": 1374336,
-              "stored_bytes": 501772,
-              "zip_method": 8,
-              "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
-            },
-            {
-              "file": "res/mipmap-xxxhdpi-v4/icon_foreground.webp",
-              "raw_bytes": 294520,
-              "stored_bytes": 294520,
-              "zip_method": 0
-            },
-            {
-              "file": "res/mipmap/icon_foreground.webp",
-              "raw_bytes": 294520,
-              "stored_bytes": 294520,
-              "zip_method": 0
-            },
-            {
-              "file": "assets/.godot/imported/funkenflug.wav-7d2cf68c9abea067b5e606fb79c9989e.sample",
-              "raw_bytes": 259999,
-              "stored_bytes": 245756,
-              "zip_method": 8
-            },
-            {
-              "file": "assets/.godot/imported/stars.wav-742771d50b09ddcc4c09c6619e949991.sample",
-              "raw_bytes": 235111,
-              "stored_bytes": 225478,
-              "zip_method": 8
-            },
-            {
-              "file": "res/mipmap-xxhdpi-v4/icon_foreground.webp",
-              "raw_bytes": 179440,
-              "stored_bytes": 179440,
-              "zip_method": 0
-            }
-          ],
-          "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+        "package": "org.example.kinderwelt.preview",
+        "signing": {
+          "apk": "ephemeral Godot development key; not a release identity",
+          "aab": "UNSIGNED"
         },
-        {
-          "path": "build/android-delivery/kinderwelt-unsigned.aab",
-          "bytes": 73702869,
-          "sha256": "32102725a1ce0163f43a8f2f018ee85481f04aaca68c3aa5e357e647cc352f60",
-          "groups": {
-            "audio": {
-              "raw_bytes": 2949662,
-              "stored_bytes": 2708962,
-              "files": 62
-            },
-            "fonts": {
-              "raw_bytes": 150581,
-              "stored_bytes": 149930,
-              "files": 1
-            },
-            "graphics": {
-              "raw_bytes": 18685361,
-              "stored_bytes": 18535781,
-              "files": 56
-            },
-            "application/imports/other": {
-              "raw_bytes": 124734,
-              "stored_bytes": 88800,
-              "files": 129
-            },
-            "Android/metadata/classes": {
-              "raw_bytes": 5252657,
-              "stored_bytes": 1825126,
-              "files": 78
-            },
-            "native/arm64-v8a": {
-              "raw_bytes": 72489280,
-              "stored_bytes": 24478799,
-              "files": 2
-            },
-            "native/x86_64": {
-              "raw_bytes": 75398760,
-              "stored_bytes": 25835633,
-              "files": 2
-            }
+        "upload_readiness": "BLOCKED",
+        "artifacts": {
+          "kinderwelt-unsigned.aab": {
+            "bytes": 123325303,
+            "sha256": "c486bd65a9134d92fb943635f1ad29eac5904bd26b0fe1fc8795fa45128f8012"
           },
-          "zip_alignment_signing_overhead_bytes": 79838,
-          "largest": [
-            {
-              "file": "base/lib/x86_64/libgodot_android.so",
-              "raw_bytes": 74061272,
-              "stored_bytes": 25373224,
-              "zip_method": 8,
-              "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
-            },
-            {
-              "file": "base/lib/arm64-v8a/libgodot_android.so",
-              "raw_bytes": 71114944,
-              "stored_bytes": 24023949,
-              "zip_method": 8,
-              "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
-            },
-            {
-              "file": "assetPackInstallTime/assets/assets/quest/appicon.png",
-              "raw_bytes": 2472297,
-              "stored_bytes": 2430103,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
-              "raw_bytes": 2356054,
-              "stored_bytes": 2356717,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
-              "raw_bytes": 1896562,
-              "stored_bytes": 1896682,
-              "zip_method": 8
-            },
-            {
-              "file": "base/res/drawable/splash_icon.webp",
-              "raw_bytes": 1896506,
-              "stored_bytes": 1896650,
-              "zip_method": 8
-            },
-            {
-              "file": "base/dex/classes.dex",
-              "raw_bytes": 5136056,
-              "stored_bytes": 1785568,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/jule.png-f7dfd61e557a77dfe9ddac3b1f64a1a5.ctex",
-              "raw_bytes": 1532264,
-              "stored_bytes": 1520348,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/mina.png-d5ae41455348a4f723b10689c86ea71b.ctex",
-              "raw_bytes": 1506942,
-              "stored_bytes": 1494629,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
-              "raw_bytes": 1509460,
-              "stored_bytes": 1482377,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
-              "raw_bytes": 1475364,
-              "stored_bytes": 1447229,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/leo.png-133d22a96d40d8dc43e9d0ca5a50ae0f.ctex",
-              "raw_bytes": 1457494,
-              "stored_bytes": 1446099,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/sam.png-a8f2261527ab9b3f45b947a457e9fff7.ctex",
-              "raw_bytes": 1378772,
-              "stored_bytes": 1361886,
-              "zip_method": 8
-            },
-            {
-              "file": "base/lib/x86_64/libc++_shared.so",
-              "raw_bytes": 1337488,
-              "stored_bytes": 462409,
-              "zip_method": 8,
-              "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
-            },
-            {
-              "file": "base/lib/arm64-v8a/libc++_shared.so",
-              "raw_bytes": 1374336,
-              "stored_bytes": 454850,
-              "zip_method": 8,
-              "raw_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b"
-            },
-            {
-              "file": "base/res/mipmap/icon_foreground.webp",
-              "raw_bytes": 294520,
-              "stored_bytes": 294610,
-              "zip_method": 8
-            },
-            {
-              "file": "base/res/mipmap-xxxhdpi-v4/icon_foreground.webp",
-              "raw_bytes": 294520,
-              "stored_bytes": 294610,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/funkenflug.wav-7d2cf68c9abea067b5e606fb79c9989e.sample",
-              "raw_bytes": 259999,
-              "stored_bytes": 245567,
-              "zip_method": 8
-            },
-            {
-              "file": "assetPackInstallTime/assets/.godot/imported/stars.wav-742771d50b09ddcc4c09c6619e949991.sample",
-              "raw_bytes": 235111,
-              "stored_bytes": 225278,
-              "zip_method": 8
-            },
-            {
-              "file": "base/res/mipmap-xxhdpi-v4/icon_foreground.webp",
-              "raw_bytes": 179440,
-              "stored_bytes": 179495,
-              "zip_method": 8
-            }
-          ],
-          "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+          "kinderwelt-debug.apk": {
+            "bytes": 134111538,
+            "sha256": "af1a06a123cebff496f8fdb2c63cd4c1b19501bed98d9e15e29cea0770f4eee6"
+          }
         }
-      ]
+      },
+      "verification": {
+        "status": "PASS",
+        "upload_readiness": "BLOCKED",
+        "artifacts": {
+          "kinderwelt-debug.apk": {
+            "assets_checked": 3287,
+            "abis": [
+              "arm64-v8a",
+              "x86_64"
+            ],
+            "elf_16kb_alignment": "PASS",
+            "native_packaging": "deflated; extracted by Android on installation",
+            "package": "org.example.kinderwelt.preview",
+            "version_name": "0.6.0",
+            "version_code": 6,
+            "min_sdk": 24,
+            "target_sdk": 36,
+            "permissions": [],
+            "allow_backup": false,
+            "orientation": "fullUser",
+            "signature": "verified Godot development certificate, v2",
+            "zip_16kb_alignment": "PASS",
+            "bytes": 134111538,
+            "sha256": "af1a06a123cebff496f8fdb2c63cd4c1b19501bed98d9e15e29cea0770f4eee6"
+          },
+          "kinderwelt-unsigned.aab": {
+            "assets_checked": 3287,
+            "abis": [
+              "arm64-v8a",
+              "x86_64"
+            ],
+            "elf_16kb_alignment": "PASS",
+            "native_packaging": "deflated; extracted by Android on installation",
+            "package": "org.example.kinderwelt.preview",
+            "version_name": "0.6.0",
+            "version_code": 6,
+            "min_sdk": 24,
+            "target_sdk": 36,
+            "permissions": [],
+            "allow_backup": false,
+            "orientation": "fullUser",
+            "signature": "UNSIGNED",
+            "rendering": "gl_compatibility",
+            "bytes": 123325303,
+            "sha256": "c486bd65a9134d92fb943635f1ad29eac5904bd26b0fe1fc8795fa45128f8012"
+          }
+        }
+      },
+      "size_analysis": {
+        "artifacts": [
+          {
+            "path": "/workspace/Kinderwelt/build/android-v06-preview/kinderwelt-debug.apk",
+            "bytes": 134111538,
+            "sha256": "af1a06a123cebff496f8fdb2c63cd4c1b19501bed98d9e15e29cea0770f4eee6",
+            "groups": {
+              "audio": {
+                "raw_bytes": 48696904,
+                "stored_bytes": 45835992,
+                "files": 1593
+              },
+              "fonts": {
+                "raw_bytes": 150581,
+                "stored_bytes": 149683,
+                "files": 1
+              },
+              "graphics": {
+                "raw_bytes": 24150957,
+                "stored_bytes": 24029434,
+                "files": 59
+              },
+              "application/imports/other": {
+                "raw_bytes": 1869583,
+                "stored_bytes": 788906,
+                "files": 1675
+              },
+              "Android/metadata/classes": {
+                "raw_bytes": 6188225,
+                "stored_bytes": 2407366,
+                "files": 70
+              },
+              "native/arm64-v8a": {
+                "raw_bytes": 77555944,
+                "stored_bytes": 28340126,
+                "files": 2
+              },
+              "native/x86_64": {
+                "raw_bytes": 82524296,
+                "stored_bytes": 31735164,
+                "files": 2
+              }
+            },
+            "zip_alignment_signing_overhead_bytes": 824867,
+            "largest": [
+              {
+                "file": "lib/x86_64/libgodot_android.so",
+                "raw_bytes": 81186808,
+                "stored_bytes": 31226056,
+                "zip_method": 8,
+                "raw_sha256": "7a103707ecbf1d24a053f59b90ddcd9945f4524e9ebbe87d513e0d60eff80443"
+              },
+              {
+                "file": "lib/arm64-v8a/libgodot_android.so",
+                "raw_bytes": 76181608,
+                "stored_bytes": 27838354,
+                "zip_method": 8,
+                "raw_sha256": "6517cb725565b0b3f009e6a559d8c0a5f66093384a6f48b5d18e2dc0998e1159"
+              },
+              {
+                "file": "assets/assets/quest/appicon.png",
+                "raw_bytes": 2472297,
+                "stored_bytes": 2472297,
+                "zip_method": 0
+              },
+              {
+                "file": "assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+                "raw_bytes": 2356054,
+                "stored_bytes": 2356718,
+                "zip_method": 8
+              },
+              {
+                "file": "classes.dex",
+                "raw_bytes": 6043992,
+                "stored_bytes": 2332621,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+                "raw_bytes": 1984326,
+                "stored_bytes": 1983879,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
+                "raw_bytes": 1896562,
+                "stored_bytes": 1896699,
+                "zip_method": 8
+              },
+              {
+                "file": "res/drawable/splash_icon.webp",
+                "raw_bytes": 1896506,
+                "stored_bytes": 1896506,
+                "zip_method": 0
+              },
+              {
+                "file": "assets/.godot/imported/science-b.png-5131e5a6320643c4c00823adef2e9852.ctex",
+                "raw_bytes": 1830542,
+                "stored_bytes": 1824862,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/science-a.png-f5ea911e0b0e6837e5ea021ed5bc013e.ctex",
+                "raw_bytes": 1806130,
+                "stored_bytes": 1793834,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/consolation.ogg-21e465c93698144f41c783f34e9c0d91.oggvorbisstr",
+                "raw_bytes": 1569646,
+                "stored_bytes": 1514275,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/wanja.png-7162e0d70296a7985048fa90e644295f.ctex",
+                "raw_bytes": 1523846,
+                "stored_bytes": 1511724,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
+                "raw_bytes": 1509460,
+                "stored_bytes": 1484617,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
+                "raw_bytes": 1475364,
+                "stored_bytes": 1449215,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/du.png-b0d77594c8858a8a25e95a909069d42a.ctex",
+                "raw_bytes": 1450424,
+                "stored_bytes": 1440156,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex",
+                "raw_bytes": 1429650,
+                "stored_bytes": 1414394,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex",
+                "raw_bytes": 1316150,
+                "stored_bytes": 1300857,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/babbino.ogg-dd643eca0c1f34bb903e2baad688d796.oggvorbisstr",
+                "raw_bytes": 1097060,
+                "stored_bytes": 1036217,
+                "zip_method": 8
+              },
+              {
+                "file": "assets/.godot/imported/french_song.ogg-ace875708c9b20d461667cf6b88e9b70.oggvorbisstr",
+                "raw_bytes": 882065,
+                "stored_bytes": 839758,
+                "zip_method": 8
+              },
+              {
+                "file": "lib/x86_64/libc++_shared.so",
+                "raw_bytes": 1337488,
+                "stored_bytes": 509108,
+                "zip_method": 8,
+                "raw_sha256": "683a1c7cd2f6829fd40bf805739166c5fce35235bf60d2c4e4a95e9f65a342ef"
+              }
+            ],
+            "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+          },
+          {
+            "path": "/workspace/Kinderwelt/build/android-v06-preview/kinderwelt-unsigned.aab",
+            "bytes": 123325303,
+            "sha256": "c486bd65a9134d92fb943635f1ad29eac5904bd26b0fe1fc8795fa45128f8012",
+            "groups": {
+              "audio": {
+                "raw_bytes": 48696904,
+                "stored_bytes": 45254275,
+                "files": 1593
+              },
+              "fonts": {
+                "raw_bytes": 150581,
+                "stored_bytes": 149930,
+                "files": 1
+              },
+              "graphics": {
+                "raw_bytes": 24150957,
+                "stored_bytes": 23972750,
+                "files": 59
+              },
+              "application/imports/other": {
+                "raw_bytes": 1869583,
+                "stored_bytes": 731086,
+                "files": 1675
+              },
+              "Android/metadata/classes": {
+                "raw_bytes": 5253189,
+                "stored_bytes": 1825176,
+                "files": 78
+              },
+              "native/arm64-v8a": {
+                "raw_bytes": 72489280,
+                "stored_bytes": 24478799,
+                "files": 2
+              },
+              "native/x86_64": {
+                "raw_bytes": 75398760,
+                "stored_bytes": 25835633,
+                "files": 2
+              }
+            },
+            "zip_alignment_signing_overhead_bytes": 1077654,
+            "largest": [
+              {
+                "file": "base/lib/x86_64/libgodot_android.so",
+                "raw_bytes": 74061272,
+                "stored_bytes": 25373224,
+                "zip_method": 8,
+                "raw_sha256": "7ce311ee6319c21d11740c29d636720ab219db13c7d17de4847fb6dd778e860f"
+              },
+              {
+                "file": "base/lib/arm64-v8a/libgodot_android.so",
+                "raw_bytes": 71114944,
+                "stored_bytes": 24023949,
+                "zip_method": 8,
+                "raw_sha256": "6b1cbfa830c7f6addec89bb5a4a444be53b3527472668fede03ca8637e040198"
+              },
+              {
+                "file": "assetPackInstallTime/assets/assets/quest/appicon.png",
+                "raw_bytes": 2472297,
+                "stored_bytes": 2430103,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/landscape.png-653e1709644f9c3e6a53aae874048239.ctex",
+                "raw_bytes": 2356054,
+                "stored_bytes": 2356717,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/katze.png-be7dadf36b8e2131430d85efde520645.ctex",
+                "raw_bytes": 1984326,
+                "stored_bytes": 1983300,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/appicon.png-577247640a04669fc073fb51a4fba51b.ctex",
+                "raw_bytes": 1896562,
+                "stored_bytes": 1896682,
+                "zip_method": 8
+              },
+              {
+                "file": "base/res/drawable/splash_icon.webp",
+                "raw_bytes": 1896506,
+                "stored_bytes": 1896650,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/science-b.png-5131e5a6320643c4c00823adef2e9852.ctex",
+                "raw_bytes": 1830542,
+                "stored_bytes": 1823469,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/science-a.png-f5ea911e0b0e6837e5ea021ed5bc013e.ctex",
+                "raw_bytes": 1806130,
+                "stored_bytes": 1792243,
+                "zip_method": 8
+              },
+              {
+                "file": "base/dex/classes.dex",
+                "raw_bytes": 5136064,
+                "stored_bytes": 1785562,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/wanja.png-7162e0d70296a7985048fa90e644295f.ctex",
+                "raw_bytes": 1523846,
+                "stored_bytes": 1510082,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/consolation.ogg-21e465c93698144f41c783f34e9c0d91.oggvorbisstr",
+                "raw_bytes": 1569646,
+                "stored_bytes": 1499351,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/objects.png-febf76915dda39281ce3cd62e35af63c.ctex",
+                "raw_bytes": 1509460,
+                "stored_bytes": 1482377,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/icons.png-780bd9e2c29f33280cc246abf7f1c09d.ctex",
+                "raw_bytes": 1475364,
+                "stored_bytes": 1447229,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/du.png-b0d77594c8858a8a25e95a909069d42a.ctex",
+                "raw_bytes": 1450424,
+                "stored_bytes": 1438763,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/mischa.png-d114fa8e41da95b42120eec084866b27.ctex",
+                "raw_bytes": 1429650,
+                "stored_bytes": 1412853,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/mama.png-bcebaa7284ba9d1de7210d0cef0a37f5.ctex",
+                "raw_bytes": 1316150,
+                "stored_bytes": 1299221,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/babbino.ogg-dd643eca0c1f34bb903e2baad688d796.oggvorbisstr",
+                "raw_bytes": 1097060,
+                "stored_bytes": 1023480,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/french_song.ogg-ace875708c9b20d461667cf6b88e9b70.oggvorbisstr",
+                "raw_bytes": 882065,
+                "stored_bytes": 830132,
+                "zip_method": 8
+              },
+              {
+                "file": "assetPackInstallTime/assets/.godot/imported/wiener_blut.ogg-0eadff7cb9e16fc086c3006ed33508b4.oggvorbisstr",
+                "raw_bytes": 524366,
+                "stored_bytes": 496399,
+                "zip_method": 8
+              }
+            ],
+            "note": "APK/AAB archive bytes, not installed footprint or measured Play device download"
+          }
+        ]
+      },
+      "current_application_matches_export": true
     }
   },
-  "test_package": {
-    "provenance": {
-      "schema": 1,
-      "built_utc": "2026-10-20T18:44:33.205306+00:00",
-      "source_commit": "19b2d2e5359e0cd465040684c31bb59784f11c4d",
-      "source_dirty": false,
-      "application_source_sha256": "56bc88511b48f0ca1017ee5400a66e799c0ca15e8a9ac0e8b6133086f0cc1e78",
-      "toolchain": {
-        "godot": "4.7.2.stable.official.ed1daf0bf",
-        "java": "17.0.16+8",
-        "min_sdk": 24,
-        "target_sdk": 36,
-        "build_tools": "36.1.0",
-        "gradle": "8.11.1",
-        "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
-        "sdk_archives": [
-          {
-            "name": "commandline",
-            "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
-            "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
-            "destination": "cmdline-tools/19.0"
-          },
-          {
-            "name": "platform",
-            "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
-            "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
-            "destination": "platforms/android-36"
-          },
-          {
-            "name": "build-tools",
-            "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
-            "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
-            "destination": "build-tools/36.1.0"
-          },
-          {
-            "name": "platform-tools",
-            "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
-            "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
-            "destination": "platform-tools"
-          }
-        ],
-        "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
-        "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
-        "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
-        "bundletool_version": "1.18.2",
-        "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
-      },
-      "package": "org.example.kinderwelt.preview",
-      "signing": {
-        "apk": "ephemeral Godot development key; not a release identity",
-        "aab": "UNSIGNED"
-      },
-      "upload_readiness": "BLOCKED",
-      "artifacts": {
-        "kinderwelt-unsigned.aab": {
-          "bytes": 73702909,
-          "sha256": "6130d058bb9cef8957bebb06866e4474f010d4553fea9ac5a3a9bd7af41053c4"
-        },
-        "kinderwelt-debug.apk": {
-          "bytes": 84117442,
-          "sha256": "945a67183e1d03a3ba9ac5273d825b321678a264b7bcbf3b0cf58cb40509e1b9"
-        }
-      }
-    },
-    "verification": {
-      "status": "PASS",
-      "upload_readiness": "BLOCKED",
-      "artifacts": {
-        "kinderwelt-debug.apk": {
-          "assets_checked": 207,
-          "abis": [
-            "arm64-v8a",
-            "x86_64"
-          ],
-          "elf_16kb_alignment": "PASS",
-          "native_packaging": "deflated; extracted by Android on installation",
-          "package": "org.example.kinderwelt.preview",
-          "version_name": "0.5.0",
-          "version_code": 5,
-          "min_sdk": 24,
-          "target_sdk": 36,
-          "permissions": [],
-          "allow_backup": false,
-          "orientation": "fullUser",
-          "signature": "verified Godot development certificate, v2",
-          "zip_16kb_alignment": "PASS",
-          "bytes": 84117442,
-          "sha256": "945a67183e1d03a3ba9ac5273d825b321678a264b7bcbf3b0cf58cb40509e1b9"
-        },
-        "kinderwelt-unsigned.aab": {
-          "assets_checked": 207,
-          "abis": [
-            "arm64-v8a",
-            "x86_64"
-          ],
-          "elf_16kb_alignment": "PASS",
-          "native_packaging": "deflated; extracted by Android on installation",
-          "package": "org.example.kinderwelt.preview",
-          "version_name": "0.5.0",
-          "version_code": 5,
-          "min_sdk": 24,
-          "target_sdk": 36,
-          "permissions": [],
-          "allow_backup": false,
-          "orientation": "fullUser",
-          "signature": "UNSIGNED",
-          "rendering": "gl_compatibility",
-          "bytes": 73702909,
-          "sha256": "6130d058bb9cef8957bebb06866e4474f010d4553fea9ac5a3a9bd7af41053c4"
-        }
-      }
-    }
-  },
-  "manual_status": {
-    "physical_android": "NOT RUN",
-    "human_listening": "NOT RUN",
-    "child_usability": "NOT RUN",
-    "learning_transfer": "NOT ESTABLISHED",
-    "sofatutor_source_access": "BLOCKED: HTTP 403"
-  },
-  "github_ci": "Remote status unconfirmed: GitHub Actions API GET returned Forbidden; local suites and exports passed"
+  "normal_and_cache_free_boot": "PASS: 60 frames each",
+  "device_testing": "OPEN",
+  "child_usability": "NOT EMPIRICALLY EVALUATED",
+  "learning_effect": "NOT ESTABLISHED",
+  "remote_ci": "NOT VERIFIED; GitHub API Forbidden",
+  "google_play_readiness": "BLOCKED"
 }

@@ -1,7 +1,7 @@
 extends Control
 const Tracks=preload("res://core/quest/tracks.gd")
 const Art=preload("res://core/quest/art.gd")
-var track:="meadow"
+var track:="wiener_blut"
 func _ready() -> void: mouse_filter=MOUSE_FILTER_IGNORE
 func _draw() -> void:
 	var data: Dictionary=Tracks.ITEMS[track]

@@ -1,6 +1,6 @@
 extends RefCounted
 # Reward state is derived from known, solved tasks, never from supplied totals.
-const SUBJECTS := ["math", "german", "logic"]
+const SUBJECTS := ["math", "german", "logic", "physics", "biology", "chemistry", "body", "geography"]
 static var registry: Array = []
 static func tasks(subject: String = "") -> Array:
 	if registry.is_empty(): registry = JSON.parse_string(FileAccess.get_file_as_string("res://games/quest/tasks.json")).tasks

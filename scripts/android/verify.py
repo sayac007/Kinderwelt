@@ -12,8 +12,8 @@ def command(args):
 
 def check_manifest(root,package=PACKAGE):
     assert root.get('package')==package,'Unexpected package'
-    assert root.get(ANDROID+'versionCode')=='5','Unexpected version code'
-    assert root.get(ANDROID+'versionName')=='0.5.0','Unexpected version name'
+    assert root.get(ANDROID+'versionCode')=='6','Unexpected version code'
+    assert root.get(ANDROID+'versionName')=='0.6.0','Unexpected version name'
     sdk=root.find('uses-sdk')
     assert sdk is not None and sdk.get(ANDROID+'minSdkVersion')=='24' and sdk.get(ANDROID+'targetSdkVersion')=='36','SDK mismatch'
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
@@ -29,37 +29,46 @@ def check_manifest(root,package=PACKAGE):
         assert len(targets)==1,'Invalid launcher target'
         activity=targets[0]
     assert activity.get(ANDROID+'screenOrientation') in {'13','fullUser'},'Expected deliberate portrait and landscape rotation'
-    return {'package':package,'version_name':'0.5.0','version_code':5,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
+    return {'package':package,'version_name':'0.6.0','version_code':6,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
 
 def check_payload(names):
-    assets=[n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')]
+    assets={n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')}
+    imported={n.split('/')[-1].rsplit('-',1)[0] for n in assets if n.startswith('.godot/imported/') and n.endswith('.oggvorbisstr')}
     assert any(n.endswith('project.binary') for n in assets),'Missing Godot project'
     for n in assets:
         assert not re.search(r'(^|/)(tests|scripts|docs|addons|qa-results|android|build)(/|$)',n),'Development files packaged: '+n
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml')),'Sensitive or specification file packaged'
-    required=['games/quest/tasks.json','assets/voice/quest/manifest.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
+    required=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
-    for notice in ['assets/quest/OFL.txt','assets/voice/quest/MODEL_CARD.txt']:
+    for notice in ['assets/quest/OFL.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
         assert notice in assets,'Missing bundled notice: '+notice
-    for image in ['landscape','icons','objects','appicon']:
+    for image in ['landscape','icons','objects','appicon','science-a','science-b']:
+        assert 'assets/quest/'+image+'.png.import' in assets,'Missing image import: '+image
         assert any(n.startswith('.godot/imported/'+image+'.png-') and n.endswith('.ctex') for n in assets),'Missing actual image texture: '+image
     assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'
     for script in ['game','world','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
-    for child in ['mina','leo','sam','jule']:
+    for child in ['wanja','mischa','du','mama','katze']:
         assert 'assets/quest/'+child+'.png.import' in assets,'Missing character: '+child
         assert any(n.startswith('.godot/imported/'+child+'.png-') and n.endswith('.ctex') for n in assets),'Missing character texture: '+child
-    for track in ['funkenflug','stars','meadow','gears','bounce','stories','garden','friends','rain','victory']:
-        ext='.wav' if track in ['funkenflug','stars'] else '.ogg'
+    for track in ['wiener_blut','babbino','french_song','consolation']:
+        ext='.ogg'
         assert 'assets/music/'+track+ext+'.import' in assets,'Missing music import: '+track
         assert any(n.startswith('.godot/imported/'+track+ext+'-') and n.endswith('.sample' if ext=='.wav' else '.oggvorbisstr') for n in assets),'Missing playable music: '+track
-    tasks=json.loads((Path(__file__).resolve().parents[2]/'games/quest/tasks.json').read_text())['tasks']
-    for name in ['choose','walk','success','again']+[t['id']+suffix for t in tasks for suffix in ['', '_hint']]:
-        assert 'assets/voice/quest/'+name+'.ogg.import' in assets,'Missing neural speech: '+name
-        assert any(n.startswith('.godot/imported/'+name+'.ogg-') and n.endswith('.oggvorbisstr') for n in assets),'Missing playable neural speech: '+name
+    for locale in ['de','en','ru']:
+        folder='assets/voice/quest/'+locale+'/'
+        for filename in ['manifest.json','MODEL_CARD.txt']:
+            assert folder+filename in assets,'Missing localized speech metadata: '+locale+'/'+filename
+        manifest=json.loads((Path(__file__).resolve().parents[2]/folder/'manifest.json').read_text())
+        for filename in {c['file'] for c in manifest['clips']}:
+            assert folder+filename+'.import' in assets,'Missing neural speech: '+locale+'/'+filename
+            assert filename in imported,'Missing playable neural speech: '+filename
+    assert any(n.startswith('core/quest/language.gd') for n in assets),'Missing localization runtime'
     assert not any(n.startswith(('games/adventure/','games/water/','core/modern/','content/')) for n in assets),'Obsolete runtime packaged'
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
+    assert not any(any(old+'.png' in n for old in ['mina','leo','sam','jule']) for n in assets),'Replaced character artwork packaged'
+    assert any(n.startswith('core/quest/pet.gdshader') for n in assets),'Missing animated cat shader'
     return len(assets)
 
 def elf_alignment(data):
@@ -68,6 +77,16 @@ def elf_alignment(data):
     loads=[struct.unpack_from('<IIQQQQQQ',data,offset+i*size) for i in range(count) if struct.unpack_from('<I',data,offset+i*size)[0]==1]
     assert loads and all(p[7]>=16384 and (p[2]-p[3])%16384==0 for p in loads),'ELF not compatible with 16 KB pages'
 
+def check_packaged_data(archive):
+    """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
+    app_root=Path(__file__).resolve().parents[2]
+    data_files=['games/quest/tasks.json','games/quest/languages.json','assets/music/manifest.json']
+    data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+    for name in data_files:
+        candidates=[n for n in archive.namelist() if 'assets/' in n and n.split('assets/',1)[1]==name]
+        assert len(candidates)==1,'Missing or duplicate packaged content: '+name
+        assert archive.read(candidates[0])==(app_root/name).read_bytes(),'Packaged content differs from tested source: '+name
+
 def inspect_zip(path,aab=False):
     with zipfile.ZipFile(path) as z:
         assert z.testzip() is None,'Corrupt ZIP'
@@ -75,6 +94,7 @@ def inspect_zip(path,aab=False):
         assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names),'Unsafe archive path'
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
         if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
+        check_packaged_data(z)
         abis=set();native_methods=set()
         for n in names:
             if n.endswith('.so'):
@@ -90,7 +110,7 @@ def main():
     apk=out/'kinderwelt-debug.apk';aab=out/'kinderwelt-unsigned.aab'
     apk_data=inspect_zip(apk)
     badging=command([bt/'aapt2','dump','badging',apk]);(out/'apk-badging.txt').write_text(badging)
-    for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='5' versionName='0.5.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
+    for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='6' versionName='0.6.0'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
         assert re.search(pattern,badging),'APK manifest mismatch'
     permissions=command([bt/'aapt2','dump','permissions',apk]);assert 'uses-permission' not in permissions,'Unexpected APK permissions'
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
@@ -100,7 +120,7 @@ def main():
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':a.package,'version_name':'0.5.0','version_code':5,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':a.package,'version_name':'0.6.0','version_code':6,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
     aab_data=inspect_zip(aab,True);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'

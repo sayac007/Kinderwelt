@@ -1,21 +1,30 @@
 extends Control
 # Each sprite is split at the hips: legs swing around their hip independently.
 # The upper body, head and backpack remain readable during walking/celebration.
-const NAMES := {"mina":"Mina","leo":"Leo","sam":"Sam","jule":"Jule"}
-const IDS := ["mina","leo","sam","jule"]
-const SPRITES = {"mina":preload("res://assets/quest/mina.png"),"leo":preload("res://assets/quest/leo.png"),"sam":preload("res://assets/quest/sam.png"),"jule":preload("res://assets/quest/jule.png")}
-var person := "mina"
+const NAMES := {"wanja":"Wanja","mischa":"Mischa","du":"Du","mama":"Mama","katze":"Katze"}
+const IDS := ["wanja","mischa","du","mama","katze"]
+const SPRITES = {"wanja":preload("res://assets/quest/wanja.png"),"mischa":preload("res://assets/quest/mischa.png"),"du":preload("res://assets/quest/du.png"),"mama":preload("res://assets/quest/mama.png"),"katze":preload("res://assets/quest/katze.png")}
+var person := "wanja"
 var animation := "idle"
 var clock := 0.0
 var reduced_motion := false
 var facing := 1.0
 var selected := false
 var reaction := 0.0
+var pet: MeshInstance2D
+var pet_size := Vector2.ZERO
 func react() -> void:
 	reaction = 1.2
 	animation = "success"
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_IGNORE
+	pet = MeshInstance2D.new()
+	pet.texture = SPRITES.katze
+	var shader_material := ShaderMaterial.new()
+	shader_material.shader = preload("res://core/quest/pet.gdshader")
+	pet.material = shader_material
+	pet.hide()
+	add_child(pet)
 func _process(delta: float) -> void:
 	if not reduced_motion: clock += delta
 	if reaction>0:
@@ -23,12 +32,12 @@ func _process(delta: float) -> void:
 		if reaction==0: animation="idle"
 	queue_redraw()
 func _draw() -> void:
-	var texture: Texture2D = SPRITES.get(person,SPRITES.mina)
+	var texture: Texture2D = SPRITES.get(person,SPRITES.wanja)
 	var col := maxi(IDS.find(person),0)
 	var w := float(texture.get_width())
 	var h := float(texture.get_height())
 	var scale_size := Vector2(size.x,size.y)
-	var hue: float = [.02,.51,.12,.77][col]
+	var hue: float = [.02,.51,.61,.35,.77][col]
 	if reaction>0 and not reduced_motion: hue+=reaction*.16
 	var glow := Color.from_hsv(fposmod(hue+(.08*sin(clock*1.7) if selected and not reduced_motion else 0),1),.68,1)
 	var intensity := .8 if selected else .24
@@ -54,6 +63,19 @@ func _draw() -> void:
 	if reduced_motion: lean = 0
 	var base := Vector2(size.x/2,size.y*.72+bob)
 	var tint := Color.WHITE.lerp(glow,minf(.18,reaction*.12)) if not reduced_motion else Color.WHITE
+	if is_instance_valid(pet):
+		pet.visible = person=="katze"
+		if pet.visible:
+			if pet_size!=size: build_pet_mesh()
+			pet.position = Vector2(size.x/2,size.y/2+bob)
+			pet.rotation = lean
+			pet.scale = Vector2(facing,1)
+			pet.modulate = tint
+			pet.material.set_shader_parameter("phase",clock)
+			pet.material.set_shader_parameter("walking",animation=="move" and not reduced_motion)
+			pet.material.set_shader_parameter("still",reduced_motion)
+			pet.material.set_shader_parameter("sprite_size",size)
+			return
 	draw_set_transform(base,lean,Vector2(facing,1))
 	var swing := sin(clock*9)*.22 if animation=="move" and not reduced_motion else 0.0
 	for leg in range(2):
@@ -64,3 +86,31 @@ func _draw() -> void:
 	draw_set_transform(base,lean,Vector2(facing,1))
 	draw_texture_rect_region(texture,Rect2(Vector2(-scale_size.x*.5,-scale_size.y*.72),Vector2(scale_size.x,scale_size.y*.72)),Rect2(Vector2.ZERO,Vector2(w,h*.72)),tint)
 	draw_set_transform(Vector2.ZERO)
+
+func build_pet_mesh() -> void:
+	# A continuous mesh keeps fur intact while four paws and the tail move.
+	# The cat never uses the two-legged human sprite cut.
+	pet_size = size
+	var vertices := PackedVector3Array()
+	var uvs := PackedVector2Array()
+	var indices := PackedInt32Array()
+	const COLS := 20
+	const ROWS := 28
+	for y in range(ROWS+1):
+		for x in range(COLS+1):
+			var uv := Vector2(float(x)/COLS,float(y)/ROWS)
+			uvs.append(uv)
+			var at := (uv-Vector2.ONE*.5)*size
+			vertices.append(Vector3(at.x,at.y,0))
+	for y in range(ROWS):
+		for x in range(COLS):
+			var i := y*(COLS+1)+x
+			indices.append_array(PackedInt32Array([i,i+1,i+COLS+1,i+1,i+COLS+2,i+COLS+1]))
+	var arrays := []
+	arrays.resize(Mesh.ARRAY_MAX)
+	arrays[Mesh.ARRAY_VERTEX] = vertices
+	arrays[Mesh.ARRAY_TEX_UV] = uvs
+	arrays[Mesh.ARRAY_INDEX] = indices
+	var mesh := ArrayMesh.new()
+	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays)
+	pet.mesh = mesh
