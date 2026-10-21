@@ -1,6 +1,6 @@
 # Musik: 20 Klavierwiedergaben
 
-Kuratierte Auswahl bekannter klassischer Stücke, keine objektive Rangliste der „besten aller Zeiten“. Rund 50 Minuten eigene Klavierwiedergaben aus benannten Noten-/MIDI-Ausgaben. Keine fremden Orchester- oder YouTube-Aufnahmen. Wiener Blut und O mio babbino caro sind ausdrücklich Themenauszüge.
+Kuratierte Auswahl bekannter klassischer Stücke, keine objektive Rangliste der „besten aller Zeiten“. Rund 50 Minuten eigene Klavierwiedergaben aus benannten Noten-/MIDI-Ausgaben. Eigene instrumentale Wiedergaben. Wiener Blut und O mio babbino caro sind ausdrücklich Themenauszüge.
 
 | Komponist | Stück / Fassung | Tatsächliche Dauer | Notenlizenz |
 | --- | --- | ---: | --- |
@@ -27,8 +27,6 @@ Kuratierte Auswahl bekannter klassischer Stücke, keine objektive Rangliste der 
 
 Die genauen Quellen, Upstream-Commits, Bearbeiter und SHA256 stehen in [catalog.json](../scripts/music/catalog.json), die erzeugten Audiodateien in [manifest.json](../assets/music/manifest.json). Vollständige Namensnennung, Links und Bearbeitungshinweise werden unter `assets/music/NOTICES.txt` mit der App ausgeliefert und unter „Für Erwachsene → Musik & Quellen“ angezeigt. Die Lizenztexte liegen unter `assets/music/licenses/` bei. Christian Petzolds Menuett wird in der alten Vorlage noch Bach zugeschrieben; die App nennt die heutige Zuschreibung und dokumentiert die Abweichung.
 
-Die tatsächlich gelesenen Vorlagen stammen aus dem gepinnten Mutopia-Repository. Für Elise, Gymnopédie Nr. 1 und Clair de lune wurden zusätzlich erneut direkt von GitHub abgerufen (HTTP 200; SHA256 passend). Classic FM und die Mutopia-Webseite waren direkt mit HTTP 403 gesperrt; eine daraus abgeleitete Bestenlistenrecherche wird nicht behauptet.
-
 ## Erzeugung
 
 Eigener Grand-Piano-Klang: GeneralUser GS 2.0.3 von S. Christian Collins, erlaubte Musikproduktion gemäß beigefügter Lizenz. SoundFont-SHA256 und tatsächlich verwendete Toolversionen stehen im Audiomanifest. SoundFont und Synthesizer werden nicht in die App eingebaut.
@@ -43,6 +41,4 @@ Werkzeuge: LilyPond 2.24.4, libfluidsynth 2.4.4, pyfluidsynth 1.4.0, mido 1.3.3 
 
 Nach jedem Stück folgt das nächste. Zufall und Wiederholung sind optional; Fach- und Kulissenwechsel starten die Musik nicht neu. Vorlesen senkt die Musik ab. Die Audio-Prüfungen dekodieren alle 20 Stücke und kontrollieren Dauer, Pegel und Hashes. Musikalische Abnahme und Balance auf Geräten bleiben offen.
 
-[Alle 20 Hörproben](music-previews/README.md) enthalten jeweils die ersten 30 Sekunden; die App enthält längere Fassungen. Die Clips tragen dieselben Quellen-/Lizenzhinweise.
-
-Die früher genannten YouTube-Links waren technisch gesperrt. Für „LITTLE BIG – SKIBIDI“ liegt keine Nutzungslizenz vor; es ist nicht enthalten. Die Schauspieleraufnahme wurde nicht für Musik oder Stimme übernommen.
+[Hörproben lokal erzeugen](music-previews/README.md); im Repository liegen die vollständigen Audiodateien jeweils einmal unter `assets/music/`.

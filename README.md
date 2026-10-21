@@ -6,7 +6,7 @@ Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine 
 
 Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
 
-**0.7.1:** Neue deutsche Stimme (Thorsten high), geprüfte Lautdauern und tatsächliche Audiobus-Wiedergabe; der Punktezähler überlagert auch lange Figurennamen nicht. [Korrekturen und Messverfahren](docs/speech-clarity-v071.md), [Hörproben](docs/voice-previews/README.md).
+**0.7.2:** Private und öffentliche Figurenvarianten, überarbeitete Antwortalternativen, vollständigere Sprachfassungen und kleinere Grafikressourcen. [Änderungen und Prüfungen](docs/phases.md), [Stimme und Hörprüfung](docs/voice.md), [Android bauen](docs/android.md).
 
 ## Entwickeln und prüfen
 
@@ -15,7 +15,7 @@ Godot **4.7.2** ist verbindlich. Python 3 und FFmpeg werden für die technischen
 ```sh
 GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 bash tests/run.sh
 # Mit grafischer Sitzung oder xvfb-run:
-GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 bash tests/qa/quest-render.sh /tmp/kinderwelt-bilder
+GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 bash tests/qa/quest-render.sh build/renderings
 ```
 
 Android-Builds und Installationshinweise: [docs/android.md](docs/android.md). Aktuelle Ergebnisse: [docs/test-report.md](docs/test-report.md). Bedienung, Inhalte und Quellen: [docs/experience.md](docs/experience.md).

@@ -13,7 +13,8 @@ root=Path(__file__).resolve().parents[2]
 variant=sys.argv[1] if len(sys.argv)>1 else "family"
 variants.prepare(root,variant)
 if variant=="public":
- print("Public cast uses the explicit, validated grid catalog.");raise SystemExit(0)
+ import compile_public
+ compile_public.main();variants.prepare(root,"public");raise SystemExit(0)
 p=Path(__file__).resolve().parents[2]/'assets/quest/looks.json';data=json.loads(p.read_text());data['layout']='Four generated costumes; visible frame bounds and nearest-figure ownership for native atlas sampling. Original PNG pixels unchanged.'
 for id,hero in data['heroes'].items():
  source=p.parent/hero['file'];image=Image.open(source);alpha=np.asarray(image)[:,:,3]

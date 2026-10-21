@@ -18,6 +18,7 @@ import wave
 import fluidsynth
 import mido
 import numpy as np
+from notices import render_notices
 
 ROOT = Path(__file__).resolve().parents[2]
 FONT_SHA = '9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe'
@@ -141,6 +142,7 @@ def main():
             print(track['title'], round(data['seconds'], 2), 'seconds', flush=True)
     manifest['complete']=len(manifest['tracks'])==len(catalog['tracks'])
     (ROOT / 'assets/music/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
+    (ROOT / 'assets/music/NOTICES.txt').write_text(render_notices())
 
 
 if __name__ == '__main__':

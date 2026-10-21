@@ -36,17 +36,11 @@ def prepare(output,variant='family',root=ROOT):
         source=root/'art/public/characters';catalog=json.loads((source/'catalog.json').read_text())
         image=source/catalog['source'];assert hashlib.sha256(image.read_bytes()).hexdigest()==catalog['sha256']
         shutil.copy2(image,destination/'neutral-cast.png');names=catalog['names']
+        compiled=json.loads((source/'frames.json').read_text())
+        assert compiled['source_sha256']==catalog['sha256'],'Public frame metadata is stale; run compile_public.py'
         for row,id in enumerate(IDS):
-            y0,y1=catalog['rows'][row:row+2];frames={};probes={}
-            for column,look in enumerate(LOOKS):
-                x0,x1=catalog['columns'][column:column+2]
-                frames[look]=[x0,y0,x1-x0,y1-y0];probes[look]=[(x0+x1)//2,(y0+y1)//2]
-            runs=[]
-            for y in range(catalog['pixels'][1]):
-                if not y0<=y<y1:runs.append([y,0,catalog['pixels'][0],1]);continue
-                for column,owner in [(0,1),(1,1),(2,2),(3,3),(4,4)]:
-                    left,right=catalog['columns'][column:column+2];runs.append([y,left,right-left,owner])
-            looks['heroes'][id]={'file':'characters/neutral-cast.png','sha256':catalog['sha256'],'pixels':catalog['pixels'],'frames':frames,'probes':probes,'mask_runs':runs}
+            data=compiled['heroes'][id];looks['heroes'][id]=data
+            frames=data['frames']
             x,y,w,h=frames['classic'];name=f'actor-{row+1}.tres'
             (destination/name).write_text('[gd_resource type="AtlasTexture" load_steps=2 format=3]\n\n[ext_resource type="Texture2D" path="res://assets/quest/characters/neutral-cast.png" id="1"]\n\n[resource]\natlas = ExtResource("1")\nregion = Rect2(%s, %s, %s, %s)\nfilter_clip = true\n'%(x,y,w,h))
             sprites[id]='assets/quest/characters/'+name;atlases[id]='assets/quest/characters/neutral-cast.png'

@@ -4,7 +4,7 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
-MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="8" android:versionName="0.7.1"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
+MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="9" android:versionName="0.7.2"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/core/quest/wardrobe.gdc','assets/core/quest/score_badge.gdc','assets/core/mobile.gdc','assets/project.binary','assets/core/quest/main.gdc']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','task','picture','progress','choice']]
@@ -30,15 +30,15 @@ PAYLOAD += ['assets/core/quest/pet.gdshader']+['assets/assets/music/'+name for n
 
 class VerificationTests(unittest.TestCase):
     def test_preview_identity_is_explicit_and_preserves_main_app(self):
-        preview=ET.fromstring(MANIFEST.replace('org.example.kinderwelt','org.example.kinderwelt.preview.v071'))
+        preview=ET.fromstring(MANIFEST.replace('org.example.kinderwelt','org.example.kinderwelt.preview.family.v072'))
         with self.assertRaises(AssertionError):v.check_manifest(preview)
-        self.assertEqual(v.check_manifest(preview,'org.example.kinderwelt.preview.v071')['package'],'org.example.kinderwelt.preview.v071')
+        self.assertEqual(v.check_manifest(preview,'org.example.kinderwelt.preview.family.v072')['package'],'org.example.kinderwelt.preview.family.v072')
     def test_valid_manifest(self):self.assertEqual(v.check_manifest(ET.fromstring(MANIFEST))['permissions'],[])
     def test_permission_rejected(self):
         root=ET.fromstring(MANIFEST);ET.SubElement(root,'uses-permission',{v.ANDROID+'name':'android.permission.INTERNET'})
         with self.assertRaises(AssertionError):v.check_manifest(root)
     def test_identity_version_sdk_backup_rotation_drift_rejected(self):
-        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="8"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
+        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="9"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
             with self.subTest(before=before),self.assertRaises(AssertionError):v.check_manifest(ET.fromstring(MANIFEST.replace(before,after)))
     def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),len(PAYLOAD))
     def test_development_and_key_files_rejected(self):

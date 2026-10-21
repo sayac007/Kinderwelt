@@ -138,12 +138,12 @@ class QuestAssetsTests(unittest.TestCase):
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])
-            self.assertGreaterEqual(width,1024)
-            self.assertGreaterEqual(height,1024)
+            self.assertGreaterEqual(width,512 if name=='squirrel' else 1024)
+            self.assertGreaterEqual(height,768)
             hashes.add(hashlib.sha256(raw).hexdigest())
         self.assertEqual(len(hashes),8)
     def test_costume_atlases_and_visible_frames(self):
-        # Metadata describes crops only; the generated atlas PNGs are never rewritten.
+        # Metadata must match the optimized source pixels and visible crops.
         data=json.loads((ROOT/'assets/quest/looks.json').read_text())
         self.assertEqual(set(data['heroes']),{'wanja','mischa','du','mama','katze','george','squirrel'})
         for id,hero in data['heroes'].items():

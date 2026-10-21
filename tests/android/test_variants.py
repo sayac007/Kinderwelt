@@ -41,3 +41,11 @@ class VariantTests(unittest.TestCase):
             self.assertFalse((target/'docs/internal').exists())
             self.assertTrue((target/'scripts/variants.py').exists())
             self.assertTrue((target/'art/public/characters/catalog.json').exists())
+
+    def test_public_cat_astronaut_frame_excludes_neighboring_tail(self):
+        data=json.loads((ROOT/'art/public/characters/frames.json').read_text())
+        frames=data['heroes']['katze']['frames']
+        x,y,w,h=frames['astronaut']
+        self.assertLessEqual(x+w,frames['scientist'][0])
+        self.assertLessEqual(x+w,805)
+        self.assertEqual(data['source_sha256'],hashlib.sha256((ROOT/'art/public/characters/neutral-cast.png').read_bytes()).hexdigest())

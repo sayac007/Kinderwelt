@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 """Fail closed on Android identity, permissions, packaging and signing drift."""
+import sys
+sys.path.insert(0,str(__import__('pathlib').Path(__file__).resolve().parent))
+import identity
 import argparse, hashlib, json, re, struct, subprocess, zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ANDROID='{http://schemas.android.com/apk/res/android}'
-PACKAGE='org.example.kinderwelt'
+PACKAGE=identity.CONFIG['test_package']
+VERSION=identity.CONFIG['version_name']
+CODE=identity.CONFIG['version_code']
 
 def command(args):
     return subprocess.check_output([str(x) for x in args],stderr=subprocess.STDOUT,text=True)
 
 def check_manifest(root,package=PACKAGE):
+    identity.validate_package(package)
     assert root.get('package')==package,'Unexpected package'
-    assert root.get(ANDROID+'versionCode')=='8','Unexpected version code'
-    assert root.get(ANDROID+'versionName')=='0.7.1','Unexpected version name'
+    assert root.get(ANDROID+'versionCode')==str(CODE),'Unexpected version code'
+    assert root.get(ANDROID+'versionName')==VERSION,'Unexpected version name'
     sdk=root.find('uses-sdk')
     assert sdk is not None and sdk.get(ANDROID+'minSdkVersion')=='24' and sdk.get(ANDROID+'targetSdkVersion')=='36','SDK mismatch'
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
@@ -29,7 +35,7 @@ def check_manifest(root,package=PACKAGE):
         assert len(targets)==1,'Invalid launcher target'
         activity=targets[0]
     assert activity.get(ANDROID+'screenOrientation') in {'13','fullUser'},'Expected deliberate portrait and landscape rotation'
-    return {'package':package,'version_name':'0.7.1','version_code':8,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
+    return {'package':package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser'}
 
 def check_payload(names,app_root=None):
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
@@ -114,13 +120,13 @@ def inspect_zip(path,aab=False,app_root=None):
         return {'assets_checked':check_payload(names,app_root),'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',choices=[PACKAGE,PACKAGE+'.preview.v071'],default=PACKAGE);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',type=identity.validate_package,default=PACKAGE);a=p.parse_args()
     tools=a.tools;out=a.output;bt=tools/'android-sdk/build-tools/36.1.0';java=tools/'android-jdk/bin/java';bundle=tools/'android-tools/bundletool-1.18.2.jar'
     report={'status':'PASS','upload_readiness':'BLOCKED','artifacts':{}}
     apk=out/'kinderwelt-debug.apk';aab=out/'kinderwelt-unsigned.aab'
     apk_data=inspect_zip(apk,app_root=a.source)
     badging=command([bt/'aapt2','dump','badging',apk]);(out/'apk-badging.txt').write_text(badging)
-    for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='8' versionName='0.7.1'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
+    for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='{CODE}' versionName='{re.escape(VERSION)}'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
         assert re.search(pattern,badging),'APK manifest mismatch'
     permissions=command([bt/'aapt2','dump','permissions',apk]);assert 'uses-permission' not in permissions,'Unexpected APK permissions'
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
@@ -130,7 +136,7 @@ def main():
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':a.package,'version_name':'0.7.1','version_code':8,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
     aab_data=inspect_zip(aab,True,app_root=a.source);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'

@@ -1,11 +1,11 @@
-# Sprachproben 0.7.1
+# Sprachvorschauen
 
-Deutsch verwendet nach der Entscheidung „Klarheit zuerst“ die unabhängige männliche Stimme **Thorsten high (CC0)**. Englisch bleibt LJSpeech (weiblich), Russisch Denis (männlich). Keine Schauspielerimitation. Menschliche Ausspracheabnahme bleibt offen.
+Die aktuellen Sprachdateien und Zuordnungen liegen einmal unter [assets/voice/quest](../../assets/voice/quest/de/manifest.json). Modellnachweise und offene Hörprüfungen: [Stimme](../voice.md).
 
-- [Physik, neue Stimme](de-physik.mp3?raw=true) · [alte 0.7-Stimme zum Vergleich](de-physik-v07-alt.mp3?raw=true)
-- [Sehr klug entschieden](de-lob-klug.mp3?raw=true) · [Super cool](de-lob.mp3?raw=true)
-- [Vollständige Magnetaufgabe](de-frage.mp3?raw=true) · [Magnet-Hinweis](de-hinweis.mp3?raw=true)
-- [Englische Frage](en-frage.mp3?raw=true) · [englisches Lob](en-lob.mp3?raw=true)
-- [Russische Frage](ru-frage.mp3?raw=true) · [russisches Lob](ru-lob.mp3?raw=true)
+Aktuelle Beispiele in drei Sprachen lokal erzeugen:
 
-[Alle Sprachproben als ZIP](kinderwelt-sprachproben.zip?raw=true). Dateihashes und exakte Quellaufnahmen stehen in `manifest.json`. Die alte Physik-Aufnahme ist ausdrücklich nur als Vergleich enthalten, nicht in der App.
+```sh
+python3 scripts/qa/previews.py voice --output build/voice-previews
+```
+
+FFmpeg ist erforderlich. Enthalten sind Physik, Frage, Hinweis und Lob; die originalen Modellkarten liegen bei.
