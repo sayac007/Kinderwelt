@@ -101,107 +101,372 @@
       "id": "praise_5"
     },
     {
-      "text": "Classic",
-      "file": "voice_en_cd4079d2e5fb15360e81.ogg",
-      "seconds": 1.2033560090702948,
-      "bytes": 8107,
-      "sha256": "3c2e82bbedb17868f63e8ed0b9d0dfb65dcf8b856e52fb15792c353fd6ec17a2",
+      "text": "Classic.",
+      "file": "voice_en_04d6f49c79b45f59b098.ogg",
+      "seconds": 1.3775056689342404,
+      "bytes": 9138,
+      "sha256": "67128252e7909723a1f74c186959724a9d37e70b2fff8c9a0a004dc710c49124",
+      "phonetic_units": [
+        {
+          "phonemes": "klˈasɪk.",
+          "start": 0.22644,
+          "end": 0.992698,
+          "seconds": 0.766259
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_classic"
     },
     {
-      "text": "Hero",
-      "file": "voice_en_bba3c215347939d71e4d.ogg",
+      "text": "Hero.",
+      "file": "voice_en_773ff5e72bbf956e423f.ogg",
       "seconds": 1.2033560090702948,
-      "bytes": 7562,
-      "sha256": "91b9840fefe20c2af420c2e5aaa6019fda1b749568daf96cb22d903c233323ee",
+      "bytes": 7602,
+      "sha256": "d4d08bfbc90540b489d23ef8a0229ea68460abcb54047c55289b017862d95299",
+      "phonetic_units": [
+        {
+          "phonemes": "hˈiəɹəʊ.",
+          "start": 0.22644,
+          "end": 0.806939,
+          "seconds": 0.580499
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_hero"
     },
     {
-      "text": "Alien",
-      "file": "voice_en_1124e7cf3edc2d1674a0.ogg",
-      "seconds": 1.1917460317460318,
-      "bytes": 7581,
-      "sha256": "f78c4ac020be511f844da5797c00ae58e83a07ccec1d717d09765e86755e7ebf",
+      "text": "Alien.",
+      "file": "voice_en_f28eb71b7f0adbe19c4c.ogg",
+      "seconds": 1.307845804988662,
+      "bytes": 8108,
+      "sha256": "f8d9b344425a76514b82be1f89853cea1a48074c826de36302a4607874d2cb09",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈeɪliən.",
+          "start": 0.21483,
+          "end": 0.911429,
+          "seconds": 0.696599
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_alien"
     },
     {
-      "text": "Astronaut",
-      "file": "voice_en_b663410a2913d7b80714.ogg",
-      "seconds": 1.609705215419501,
-      "bytes": 10303,
-      "sha256": "6bcfa2e2afa2a312d5a8d54dc16a470d012ff170099e316fc0723b4fbaafbd08",
+      "text": "Astronaut.",
+      "file": "voice_en_4366663375f34a26849e.ogg",
+      "seconds": 1.8302947845804989,
+      "bytes": 11491,
+      "sha256": "48fdbcd690ad94d84ee90c17d7bbc6cabe23fc2023dba282e58c645b2af91f74",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈastɹənˌɔːt.",
+          "start": 0.24966,
+          "end": 1.445488,
+          "seconds": 1.195828
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_astronaut"
     },
     {
-      "text": "Scientist",
-      "file": "voice_en_56f560f39261fe6b1031.ogg",
-      "seconds": 1.52843537414966,
-      "bytes": 10105,
-      "sha256": "8535ce105098ff1831386f33e0f7647b4824ae56f228ae0a46e1924acd085c30",
+      "text": "Scientist.",
+      "file": "voice_en_e01b65c79c5936714f86.ogg",
+      "seconds": 1.8186848072562358,
+      "bytes": 12053,
+      "sha256": "1a2de3fdc1c9fae8cb8a8817d435706a121b1346feff2d1807e38bdb9252a572",
+      "phonetic_units": [
+        {
+          "phonemes": "sˈaɪəntɪst.",
+          "start": 0.34254,
+          "end": 1.433878,
+          "seconds": 1.091338
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_scientist"
     },
     {
-      "text": "Maths",
-      "file": "voice_en_331a3d451225e75c1340.ogg",
-      "seconds": 1.1917460317460318,
-      "bytes": 7491,
-      "sha256": "7423d71a9cd7e5cd18e47e452642eff85ce3ffaf141a7ce95c5031cf7771dc2d",
+      "text": "Mathematics.",
+      "file": "voice_en_f7755248dd7917bb0f2c.ogg",
+      "seconds": 1.9696145124716553,
+      "bytes": 12371,
+      "sha256": "7e7e0b2bef266cfb458359dd1875267a3297aae46e8da79164c751594e2e706e",
+      "phonetic_units": [
+        {
+          "phonemes": "mˌaθɪmˈatɪks.",
+          "start": 0.22644,
+          "end": 1.573197,
+          "seconds": 1.346757
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_math"
     },
     {
-      "text": "German",
-      "file": "voice_en_68bcdcfa92b7e7040497.ogg",
-      "seconds": 1.296235827664399,
-      "bytes": 8326,
-      "sha256": "480fddd2d77cb134edff1732d8fc2f0a977c17ab10b1b9e57325c559e76f3644",
+      "text": "German.",
+      "file": "voice_en_677abe0b64d6b9a74e76.ogg",
+      "seconds": 1.3658956916099774,
+      "bytes": 8699,
+      "sha256": "e41968d5756a79b893f52eaff3b348648fc835d4aa1314fd065d34c7bdc8d603",
+      "phonetic_units": [
+        {
+          "phonemes": "dʒˈɜːmən.",
+          "start": 0.23805,
+          "end": 0.969478,
+          "seconds": 0.731429
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_german"
     },
     {
-      "text": "Logic",
-      "file": "voice_en_73d0e97cc1d5321895b2.ogg",
-      "seconds": 1.1569160997732426,
-      "bytes": 7380,
-      "sha256": "4f5a7e3738474950e524c991f0e4a183ba0491098b1b3b5716b27c61d92070b3",
+      "text": "Logic.",
+      "file": "voice_en_08f4b04e0d6093d07c4b.ogg",
+      "seconds": 1.4007256235827665,
+      "bytes": 8734,
+      "sha256": "794eec089f20dd5a9ca5629220843d706c23db6155332ae968ac1d3c7dcf7a1b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɒdʒɪk.",
+          "start": 0.26127,
+          "end": 1.004308,
+          "seconds": 0.743039
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_logic"
     },
     {
-      "text": "Physics",
-      "file": "voice_en_db932a4081f23e0b52de.ogg",
-      "seconds": 1.284625850340136,
-      "bytes": 8428,
-      "sha256": "eaa7aae0b31b30d8c28d047066fe6aff55d38ada62265f2542fa252051d268d0",
+      "text": "Physics.",
+      "file": "voice_en_7a69f8ff91297fa4e986.ogg",
+      "seconds": 1.52843537414966,
+      "bytes": 10218,
+      "sha256": "e7b2c8bb6188b164e033647327ad4eb421a638c9c4f9d25cc2b62990583892bf",
+      "phonetic_units": [
+        {
+          "phonemes": "fˈɪzɪks.",
+          "start": 0.23805,
+          "end": 1.132018,
+          "seconds": 0.893968
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_physics"
     },
     {
-      "text": "Biology",
-      "file": "voice_en_0a35edcfd66fe313679f.ogg",
-      "seconds": 1.4819954648526077,
-      "bytes": 9052,
-      "sha256": "0c80ca1c58dbae8a1410c3ed039a80a5a0d7c40a0268903c8fadcf1cfb99fa8e",
+      "text": "Biology.",
+      "file": "voice_en_c35bae1eeabbbe001159.ogg",
+      "seconds": 1.5748752834467121,
+      "bytes": 9902,
+      "sha256": "ad51c7945852d084da20081787df359bda168fa0e2e731931ad9b95feea1e041",
+      "phonetic_units": [
+        {
+          "phonemes": "baɪˈɒlədʒi.",
+          "start": 0.22644,
+          "end": 1.166848,
+          "seconds": 0.940408
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_biology"
     },
     {
-      "text": "Chemistry",
-      "file": "voice_en_00f0894c6f93559bfab8.ogg",
-      "seconds": 1.4587755102040816,
-      "bytes": 9443,
-      "sha256": "b82b8964edb7195b8ae4c3f7f6b88142aa49a2a57557d1519a0468c10c32976b",
+      "text": "Chemistry.",
+      "file": "voice_en_69d9a52099f4527ee494.ogg",
+      "seconds": 1.598095238095238,
+      "bytes": 10728,
+      "sha256": "6b73ffe494c6dfe7a66962e69dd284d8a64be61744a7e8159c6f7ed9d6547bf8",
+      "phonetic_units": [
+        {
+          "phonemes": "kˈɛmɪstɹi.",
+          "start": 0.23805,
+          "end": 1.190068,
+          "seconds": 0.952018
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_chemistry"
     },
     {
-      "text": "Human body",
-      "file": "voice_en_82fe28443bfa470a4151.ogg",
-      "seconds": 1.6561451247165533,
-      "bytes": 10389,
-      "sha256": "ec7f7b636f864017b82fed1ed78885eba452c9fbd64f4396acfd772620d2d6dc",
+      "text": "Human body.",
+      "file": "voice_en_5c4fd026aec4fc34e727.ogg",
+      "seconds": 1.7722448979591836,
+      "bytes": 11238,
+      "sha256": "ec95d2903aa2ff36a874beb7f35e4bbf82143d71c98cc97180ac4702c7e3a15f",
+      "phonetic_units": [
+        {
+          "phonemes": "hjˈuːmən",
+          "start": 0.22644,
+          "end": 0.702449,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "bˈɒdi.",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_body"
     },
     {
-      "text": "Geography",
-      "file": "voice_en_4a9bfd84c1a5a4eb4b20.ogg",
-      "seconds": 1.563265306122449,
-      "bytes": 9584,
-      "sha256": "ffe474c05d23a81cf8b7362b8f535de57756889f701210f7d8b7fa082eab1dd9",
+      "text": "Let's explore geography.",
+      "file": "voice_en_377e7dd7726af82352e6.ogg",
+      "seconds": 2.9332426303854877,
+      "bytes": 18424,
+      "sha256": "b012beb3927f93c4d4b3c6a8fa2d6f8467e8da8fa7a3853bdf6042025857992f",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɛts",
+          "start": 0.24966,
+          "end": 0.539909,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɛksplˈɔː",
+          "start": 0.597959,
+          "end": 1.364218,
+          "seconds": 0.766259
+        },
+        {
+          "phonemes": "dʒɪʲˈɒɡɹəfi.",
+          "start": 1.399048,
+          "end": 2.525215,
+          "seconds": 1.126168
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_geography"
     },
     {

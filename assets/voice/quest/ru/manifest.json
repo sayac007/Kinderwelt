@@ -101,107 +101,402 @@
       "id": "praise_5"
     },
     {
-      "text": "Обычный",
-      "file": "voice_ru_769e52453c33db00b744.ogg",
-      "seconds": 1.3891156462585035,
-      "bytes": 8696,
-      "sha256": "2dac1367ba8a9f022925d775189436a9f5ebc1e502a47eae44fd95a531a08fcc",
+      "text": "Обычный.",
+      "file": "voice_ru_39191982afe6ea870de4.ogg",
+      "seconds": 1.7490249433106575,
+      "bytes": 10282,
+      "sha256": "f4894e30b1c5dfaa75c060a55c46dacd07f03caf6f8cae4896c4a7a03038c685",
+      "phonetic_units": [
+        {
+          "phonemes": "ʌbˈytʃʲnyj.",
+          "start": 0.31932,
+          "end": 1.213288,
+          "seconds": 0.893968
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_classic"
     },
     {
-      "text": "Герой",
-      "file": "voice_ru_b04037eae42eeb4f1811.ogg",
-      "seconds": 1.249795918367347,
-      "bytes": 7716,
-      "sha256": "6fd10dd6ad6dd286037f96fc261993dfb955df8c3f69ae02eb4bada418c1153d",
+      "text": "Герой.",
+      "file": "voice_ru_a0245b97befcb81ee654.ogg",
+      "seconds": 1.6909750566893424,
+      "bytes": 10122,
+      "sha256": "c6d401167ad85f992b14f34eb6a29c40120391a966d4250badc324ec3f7b1b9b",
+      "phonetic_units": [
+        {
+          "phonemes": "ɡʲirˈoj.",
+          "start": 0.27288,
+          "end": 1.085578,
+          "seconds": 0.812698
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_hero"
     },
     {
-      "text": "Пришелец",
-      "file": "voice_ru_5ecb6dc790f5e6ecaa8d.ogg",
-      "seconds": 1.4936054421768707,
-      "bytes": 9615,
-      "sha256": "255fd434d927bd146c9a88c3fbc95d9a5c2a1bfef0241413c448958562f8b1c6",
+      "text": "Пришелец.",
+      "file": "voice_ru_d1ffbdff291f1a2e9c2c.ogg",
+      "seconds": 1.7025850340136055,
+      "bytes": 10367,
+      "sha256": "b5bb95d59f635b964da312e301fdddd71c6ffc257ecb231f69c9ed7506c249e8",
+      "phonetic_units": [
+        {
+          "phonemes": "prʲiʃˈɛɭʲits.",
+          "start": 0.23805,
+          "end": 1.294558,
+          "seconds": 1.056508
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_alien"
     },
     {
-      "text": "Космонавт",
-      "file": "voice_ru_92b0e496e411643d3124.ogg",
-      "seconds": 1.52843537414966,
-      "bytes": 9598,
-      "sha256": "9b802b9a1cec95e176f5fb8fb94bbb30b05e88510268b6c01afb036e5206a7e3",
+      "text": "Космонавт.",
+      "file": "voice_ru_3e4c2e23cc24e39ca56e.ogg",
+      "seconds": 1.876734693877551,
+      "bytes": 11482,
+      "sha256": "ed8781002755a2e0dd0d0baa88a7c3fcca222c44a31eba5f8072eeb6181511c4",
+      "phonetic_units": [
+        {
+          "phonemes": "kʌsmʌnˈɑft.",
+          "start": 0.28449,
+          "end": 1.468707,
+          "seconds": 1.184218
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_astronaut"
     },
     {
-      "text": "Учёный",
-      "file": "voice_ru_a33fad810e81d814ea93.ogg",
-      "seconds": 1.4123356009070296,
-      "bytes": 8879,
-      "sha256": "3c087a477ec688573a229ecec32412fcddb39269403e8ac33b2799ee2467392c",
+      "text": "Учёный.",
+      "file": "voice_ru_12b418b6c760e0acebda.ogg",
+      "seconds": 1.865124716553288,
+      "bytes": 11315,
+      "sha256": "0732dd3f5c3f28388f7cd429d94af9dcc12a057f42e5710382cd71677c541a58",
+      "phonetic_units": [
+        {
+          "phonemes": "utʃʲˈɵnyj.",
+          "start": 0.30771,
+          "end": 1.248118,
+          "seconds": 0.940408
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "look_scientist"
     },
     {
-      "text": "Математика",
-      "file": "voice_ru_b9d694d425687116d3ad.ogg",
-      "seconds": 1.6445351473922902,
-      "bytes": 10857,
-      "sha256": "b7ca4fac249f942d84ec9cab715a48a88d13e7dd3494644e952452a6b32d8d1a",
+      "text": "Это математика.",
+      "file": "voice_ru_e3bc65417ccbc7b6c262.ogg",
+      "seconds": 2.3991836734693877,
+      "bytes": 14822,
+      "sha256": "43509f11b5397219e0583531fbda5e058093f32cec7090583234169b1e76d9be",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.30771,
+          "end": 0.586349,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "mʌtʲimˈɑtʲika.",
+          "start": 0.667619,
+          "end": 1.991156,
+          "seconds": 1.323537
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_math"
     },
     {
-      "text": "Немецкий",
-      "file": "voice_ru_7a418a935d80be6fa3bd.ogg",
-      "seconds": 1.5052154195011338,
-      "bytes": 9533,
-      "sha256": "a1e07bed14746f4152feb308b3ef92087de3ef3d0f7bfc15a82366e87d22196e",
+      "text": "Это немецкий.",
+      "file": "voice_ru_7505aeab8f645c84be43.ogg",
+      "seconds": 2.201814058956916,
+      "bytes": 14103,
+      "sha256": "6e50129d4c52bb9608b4772a2802091b25351aa81f17e8de758b8c65c2ae5637",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.30771,
+          "end": 0.597959,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij.",
+          "start": 0.667619,
+          "end": 1.758957,
+          "seconds": 1.091338
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_german"
     },
     {
-      "text": "Логика",
-      "file": "voice_ru_10fed3f803e66ee4a46f.ogg",
-      "seconds": 1.4355555555555555,
-      "bytes": 9356,
-      "sha256": "95610bdb15659ae7b043fc26fecfd863355ebac0647b54c9c4491bb84a65b011",
+      "text": "Это логика.",
+      "file": "voice_ru_47bf13a08f193fb325d7.ogg",
+      "seconds": 2.0044444444444443,
+      "bytes": 12911,
+      "sha256": "aea9cd78d767330087969ab7c0641d47d843f3ab505142694c4986f2362a7e15",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.27288,
+          "end": 0.597959,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "ɭˈoɡʲika.",
+          "start": 0.656009,
+          "end": 1.596417,
+          "seconds": 0.940408
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_logic"
     },
     {
-      "text": "Физика",
-      "file": "voice_ru_4904aba6cf998dcb9bd8.ogg",
-      "seconds": 1.307845804988662,
-      "bytes": 8413,
-      "sha256": "c01ee91f7f64be1a1045d2e6952077bf81076775da977b5f229c92bdb0a6477c",
+      "text": "Это физика.",
+      "file": "voice_ru_198e9525d10503e97f49.ogg",
+      "seconds": 2.0508843537414965,
+      "bytes": 12989,
+      "sha256": "06db6b9361fd34c1543962d167aa247bcefe026e0c9ad283fbe52d4197f50dbd",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.31932,
+          "end": 0.597959,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "fʲˈiʑika.",
+          "start": 0.667619,
+          "end": 1.608027,
+          "seconds": 0.940408
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_physics"
     },
     {
-      "text": "Биология",
-      "file": "voice_ru_5ea05cbe4137f96c23df.ogg",
-      "seconds": 1.4703854875283446,
-      "bytes": 9460,
-      "sha256": "8b25593f199c2797f0e0035a58de3d11f89f1614ddec2efea9be731f49a4d5b3",
+      "text": "Это биология.",
+      "file": "voice_ru_b475154b07589876199e.ogg",
+      "seconds": 2.120544217687075,
+      "bytes": 12874,
+      "sha256": "e62d6826ed6ccae769497e56575ca3296a79777a59e3e22e1e09d5c671e7dcf3",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.31932,
+          "end": 0.586349,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "bʲiʌɭˈoɡʲija.",
+          "start": 0.656009,
+          "end": 1.724127,
+          "seconds": 1.068118
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_biology"
     },
     {
-      "text": "Химия",
-      "file": "voice_ru_f58d2cabc4c2120c50ab.ogg",
-      "seconds": 1.273015873015873,
-      "bytes": 8122,
-      "sha256": "b70db2d3176d6ec55a118b2f6a0e048910f955ba1a66ee6c1b692adc6036ff53",
+      "text": "Это химия.",
+      "file": "voice_ru_272adfdbdbe5d942a098.ogg",
+      "seconds": 2.0044444444444443,
+      "bytes": 12052,
+      "sha256": "df7b20ee27e3de4340944c8f077e8d0dc92d9fab5eab64286068453bac83e113",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.34254,
+          "end": 0.632789,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "xˈimʲija.",
+          "start": 0.725669,
+          "end": 1.619637,
+          "seconds": 0.893968
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_chemistry"
     },
     {
-      "text": "Человек",
-      "file": "voice_ru_48edba9c84b49e88385e.ogg",
-      "seconds": 1.3310657596371882,
-      "bytes": 8374,
-      "sha256": "f45deb16801d7d04ef3c10c9f0055897b2ba109cbcd5227644039e8bf4934fba",
+      "text": "Это человек.",
+      "file": "voice_ru_5d09418308bc2a94bd59.ogg",
+      "seconds": 2.17859410430839,
+      "bytes": 13167,
+      "sha256": "5ff04a11b1432ea8d70b5a6d53869d4fbc7f88365c64f9fd4851d60ae32f04fd",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.30771,
+          "end": 0.586349,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tʃʲiɭʌvʲˈek.",
+          "start": 0.644399,
+          "end": 1.608027,
+          "seconds": 0.963628
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_body"
     },
     {
-      "text": "География",
-      "file": "voice_ru_e2ca1b8a64beb1d0860a.ogg",
-      "seconds": 1.6213151927437641,
-      "bytes": 10361,
-      "sha256": "065bb61dad01d34808f0da7c506de803e5062f780e432e26d5d5fc21a2d67406",
+      "text": "Это география.",
+      "file": "voice_ru_0ac9f1b1e7580e8d918d.ogg",
+      "seconds": 2.3527437641723354,
+      "bytes": 14138,
+      "sha256": "0a7deef20c69fb250f793cffb87315531a786835d678b41440c64798b587da93",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈɛtʌ",
+          "start": 0.33093,
+          "end": 0.621179,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɡʲiʌɡrˈɑfʲija.",
+          "start": 0.690839,
+          "end": 1.863447,
+          "seconds": 1.172608
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-short-3",
+        "length_scale": 1.5,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "area_geography"
     },
     {

@@ -37,6 +37,9 @@ func setup(owner_host: Control) -> void:
 		local_theme.set_stylebox(state,"Button",style)
 	theme = local_theme
 	hero_button = button(host.t("figure"),choose_hero)
+	# Long localized names must not increase Button's minimum width into the score.
+	hero_button.clip_text = true
+	hero_button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	hero_button.tooltip_text = host.t("choose_figure")
 	menu_button = button("☰",open_menu)
 	menu_button.text = ""
@@ -112,6 +115,7 @@ func update_score(animate := false) -> void:
 	var stars := Progress.stars(host.store.data.quest)
 	score.set_total(stars,animate)
 	hero_button.text = hero_name(host.store.data.hero)
+	hero_button.tooltip_text = host.t("choose_figure")+": "+hero_button.text
 	for i in range(tabs.size()):
 		var style := StyleBoxFlat.new()
 		style.bg_color = Color("fae3b4") if Progress.SUBJECTS[i]==subject else Color("fff8e9")

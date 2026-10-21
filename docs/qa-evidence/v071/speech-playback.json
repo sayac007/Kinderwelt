@@ -1,0 +1,70 @@
+{
+  "checks": 30,
+  "failures": 0,
+  "results": [
+    {
+      "captured_seconds": 1.57895691609977,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 1.545,
+      "expected_seconds": 1.50521540641785,
+      "locale": "de",
+      "peak": 0.684067130088806
+    },
+    {
+      "captured_seconds": 8.6378231292517,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 8.64,
+      "expected_seconds": 8.54975032806396,
+      "locale": "de",
+      "peak": 0.685982584953308
+    },
+    {
+      "captured_seconds": 1.57895691609977,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 1.569,
+      "expected_seconds": 1.52843534946442,
+      "locale": "en",
+      "peak": 0.674225866794586
+    },
+    {
+      "captured_seconds": 7.43038548752835,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 7.445,
+      "expected_seconds": 7.35392308235168,
+      "locale": "en",
+      "peak": 0.692974209785461
+    },
+    {
+      "captured_seconds": 2.1362358276644,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 2.127,
+      "expected_seconds": 2.05088424682617,
+      "locale": "ru",
+      "peak": 0.69091922044754
+    },
+    {
+      "captured_seconds": 8.17342403628118,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 8.183,
+      "expected_seconds": 8.09696125984192,
+      "locale": "ru",
+      "peak": 0.701860547065735
+    }
+  ],
+  "scope": "Actual desktop Godot mixer capture; no Android speaker or human listening claim"
+}

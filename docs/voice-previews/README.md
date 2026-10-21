@@ -1,12 +1,11 @@
-# Sprachproben
+# Sprachproben 0.7.1
 
-Eigenständige synthetische Stimmen, keine Schauspielerimitation: Deutsch Kerstin (weiblich), Englisch LJSpeech (weiblich), Russisch Denis (männlich). Vollständige Frage und Lob zum Anhören; menschliche Ausspracheabnahme bleibt offen.
+Deutsch verwendet nach der Entscheidung „Klarheit zuerst“ die unabhängige männliche Stimme **Thorsten high (CC0)**. Englisch bleibt LJSpeech (weiblich), Russisch Denis (männlich). Keine Schauspielerimitation. Menschliche Ausspracheabnahme bleibt offen.
 
-- [de · lob](de-lob.mp3?raw=true)
-- [de · frage](de-frage.mp3?raw=true)
-- [en · lob](en-lob.mp3?raw=true)
-- [en · frage](en-frage.mp3?raw=true)
-- [ru · lob](ru-lob.mp3?raw=true)
-- [ru · frage](ru-frage.mp3?raw=true)
+- [Physik, neue Stimme](de-physik.mp3?raw=true) · [alte 0.7-Stimme zum Vergleich](de-physik-v07-alt.mp3?raw=true)
+- [Sehr klug entschieden](de-lob-klug.mp3?raw=true) · [Super cool](de-lob.mp3?raw=true)
+- [Vollständige Magnetaufgabe](de-frage.mp3?raw=true) · [Magnet-Hinweis](de-hinweis.mp3?raw=true)
+- [Englische Frage](en-frage.mp3?raw=true) · [englisches Lob](en-lob.mp3?raw=true)
+- [Russische Frage](ru-frage.mp3?raw=true) · [russisches Lob](ru-lob.mp3?raw=true)
 
-[Alle Sprachproben als ZIP](kinderwelt-sprachproben.zip?raw=true).
+[Alle Sprachproben als ZIP](kinderwelt-sprachproben.zip?raw=true). Dateihashes und exakte Quellaufnahmen stehen in `manifest.json`. Die alte Physik-Aufnahme ist ausdrücklich nur als Vergleich enthalten, nicht in der App.

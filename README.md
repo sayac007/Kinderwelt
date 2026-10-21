@@ -6,6 +6,8 @@ Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine 
 
 Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
 
+**0.7.1:** Neue deutsche Stimme (Thorsten high), geprüfte Lautdauern und tatsächliche Audiobus-Wiedergabe; der Punktezähler überlagert auch lange Figurennamen nicht. [Korrekturen und Messverfahren](docs/speech-clarity-v071.md), [Hörproben](docs/voice-previews/README.md).
+
 ## Entwickeln und prüfen
 
 Godot **4.7.2** ist verbindlich. Python 3 und FFmpeg werden für die technischen Prüfungen benötigt.

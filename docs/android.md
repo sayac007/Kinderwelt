@@ -11,7 +11,7 @@ python3 scripts/android/build.py --tools /workspace/tools --preview --output bui
 
 Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzeptiert. Jedes Ausgabeverzeichnis muss neu sein. Das Skript baut aus einer isolierten Kopie ausschließlich der App-Verzeichnisse. Beide Android-SDK-Umgebungsvariablen zeigen auf dasselbe geprüfte SDK. Fehlerblöcke aus Godot und Gradle werden direkt ausgegeben; vollständige Logs bleiben im Ausgabeverzeichnis.
 
-Standardpaket: `org.example.kinderwelt`, Version **0.7.0 / 7**. Testvariante: `org.example.kinderwelt.preview.v07`, Launchername **Kinderwelt 0.7 Test**, eigener lokaler Spielstand. Sie enthält dieselbe neue App und kann neben einer vorhandenen Installation stehen.
+Standardpaket: `org.example.kinderwelt`, Version **0.7.1 / 8**. Testvariante: `org.example.kinderwelt.preview.v071`, Launchername **Kinderwelt 0.7.1 Test**, eigener lokaler Spielstand. Sie enthält dieselbe neue App und kann neben einer vorhandenen Installation stehen.
 
 Jeder Build liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird nur mit einem temporären Godot-Entwicklungsschlüssel signiert. Dieser ist keine dauerhafte Update-Identität; normale APK-Updates benötigen denselben Schlüssel wie die installierte App. Keine privaten Schlüssel werden eingecheckt. Eine vorhandene App nicht unbedacht deinstallieren, wenn deren lokale Daten erhalten bleiben sollen.
 
@@ -25,7 +25,7 @@ Es gibt weder eine Release-Signatur noch eine Upload-Freigabe. Eine Betreiberent
 
 ## Fertige Testdateien und Actions-Downloads
 
-Die tatsächlich geprüften lokalen Dateien dieser Lieferung liegen unter `build/android-v07/` (Standard) und `build/android-v07-test/` (separate Test-App). Jeweils `kinderwelt-debug.apk` installieren; `kinderwelt-unsigned.aab` ist das unsignierte Prüfbundle. Größen, Hashes und Grenzen stehen in [test-report.md](test-report.md).
+Die tatsächlich geprüften lokalen Dateien dieser Lieferung liegen unter `build/android-v071/` (Standard) und `build/android-v071-test/` (separate Test-App). Jeweils `kinderwelt-debug.apk` installieren; `kinderwelt-unsigned.aab` ist das unsignierte Prüfbundle. Größen, Hashes und Grenzen stehen in [test-report.md](test-report.md).
 
 Nach einem erfolgreichen GitHub-Lauf lassen sich Dateien so herunterladen:
 
@@ -35,4 +35,4 @@ Nach einem erfolgreichen GitHub-Lauf lassen sich Dateien so herunterladen:
 
 Artefakte werden sieben Tage aufbewahrt und existieren erst nach erfolgreichem Export/Upload. Der Remote-Status kann aus dieser Umgebung wegen API-Forbidden nicht bestätigt werden. Lokale APK-/AAB-Prüfungen sind davon getrennt dokumentiert.
 
-Die neue lokale Testvariante verwendet absichtlich die eigene Versionskennung `org.example.kinderwelt.preview.v07`. Sie kann zusätzlich zu einer früheren Standard- oder 0.6-Testinstallation installiert werden. Ihr Spielstand ist getrennt; Daten werden nicht heimlich zwischen Apps übertragen.
+Die neue lokale Testvariante verwendet absichtlich die eigene Versionskennung `org.example.kinderwelt.preview.v071`. Sie kann zusätzlich zu einer früheren Standard- oder 0.6-Testinstallation installiert werden. Ihr Spielstand ist getrennt; Daten werden nicht heimlich zwischen Apps übertragen.

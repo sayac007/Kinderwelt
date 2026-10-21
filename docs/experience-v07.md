@@ -1,5 +1,7 @@
 # Kinderwelt 0.7: Looks, Kulissen und klarere Bedienung
 
+Diese Beschreibung dokumentiert 0.7. Die Korrektur **0.7.1** ersetzt die deutsche Kerstin-Stimme durch Thorsten high und ergänzt Lautdauer-, Audiobus- und Header-Prüfungen: [aktueller Nachtrag](speech-clarity-v071.md). Die unten beschriebenen Figuren, Looks, Inhalte und Kulissen bleiben erhalten.
+
 Sieben Figuren sind spielbar: Hauptheld Wanja, Mischa, Du, Mama, Katze, George und Eichhörnchen. George wurde anhand des bereitgestellten Bildes neu illustriert; die Eichhörnchenfigur ist eine eigene neue Gestaltung. Originalfotos und die beigefügte Schauspieleraufnahme werden nicht ausgeliefert.
 
 ## Kleidung und Kulissen

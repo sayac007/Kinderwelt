@@ -1,44 +1,93 @@
 [
   {
     "locale": "de",
-    "kind": "lob",
-    "text": "Super cool, das gefällt mir!",
-    "file": "de-lob.mp3",
-    "sha256": "83a8e91786bc518c7db1cc2af00a5e0a6292fd2ebd2518066ee5d4c21cbbfa0e"
+    "id": "area_physics",
+    "text": "Physik.",
+    "voice_model": "de_DE-thorsten-high",
+    "file": "de-physik.mp3",
+    "sha256": "d2a632e0517ae8e26453f0afef039b1f57ccb0da1708d560d4d0c0f96f0a8345",
+    "source_sha256": "ae577fffc95d78ac257306862c44f9757e99f11ba931d7824b4b4c6151fef83a"
   },
   {
     "locale": "de",
-    "kind": "frage",
-    "text": "Was zieht ein Magnet an: Eisen, Holz oder Papier? Zur Auswahl: Holz. Papier. Eisen.",
+    "id": "praise_1",
+    "text": "Sehr klug entschieden!",
+    "voice_model": "de_DE-thorsten-high",
+    "file": "de-lob-klug.mp3",
+    "sha256": "0eb15d0b6f476a8c060e9dec3a63f90b53b9a194af4970ba94d79cb237a42234",
+    "source_sha256": "581687e1c050d0354b7bdbf529628befbad1e6563f630c29d0855e61ad8c94f3"
+  },
+  {
+    "locale": "de",
+    "id": "praise_2",
+    "text": "Super cool, das gefällt mir!",
+    "voice_model": "de_DE-thorsten-high",
+    "file": "de-lob.mp3",
+    "sha256": "1baeaa15bd1b431c5312fbd4cd9775e31a5c7665a145e9e2fe6b699d5e73a678",
+    "source_sha256": "522516c8c9cfd2b0ee23cc12cbccb1dfb3293a730914243b692ccc1eaf823f47"
+  },
+  {
+    "locale": "de",
+    "id": "physics_05",
+    "text": "Was zieht ein Magnet an: Eisen, Holz oder Papier? Zur Auswahl stehen Holz, Papier und Eisen.",
+    "voice_model": "de_DE-thorsten-high",
     "file": "de-frage.mp3",
-    "sha256": "f198e362bbfa0107a58cdb7ad2d477184c5144c3cf21a82ffbb21ae2ee69e8e0"
+    "sha256": "c975e4422b953222fa86f47ad6f365f7496310e24788a53e8563c00f910cd107",
+    "source_sha256": "f511576e32f70ee2c765d085a2e99417b8e0ab36028ab4863a48afe30b06258d"
+  },
+  {
+    "locale": "de",
+    "id": "physics_05_hint",
+    "text": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+    "voice_model": "de_DE-thorsten-high",
+    "file": "de-hinweis.mp3",
+    "sha256": "49f438640af331800ede6c2995b9e78649f3320b78794dce44af5cf5fea086ec",
+    "source_sha256": "9281cd258427dcd28cc51dbf074b57cc5034cadca9dd6b6b72e74c4b793d0e46"
   },
   {
     "locale": "en",
-    "kind": "lob",
+    "id": "praise_2",
     "text": "Super cool! I like that!",
+    "voice_model": "en_US-ljspeech-medium",
     "file": "en-lob.mp3",
-    "sha256": "fbf29eb71a21e25dbcd50cb1636a2c185a5993663f65612222c0aff6bee0c2b8"
+    "sha256": "aa9173d7db36d828699dbf759989ebc067452f1a4ec5aea802c0ec8ceb5c4a55",
+    "source_sha256": "f1936ea183929b00a6bf2c3b05e7d359b93d3addffb61a574e432a9a085a2afc"
   },
   {
     "locale": "en",
-    "kind": "frage",
+    "id": "physics_05",
     "text": "What does a magnet attract: iron, wood or paper? Choose from: wood. paper. iron.",
+    "voice_model": "en_US-ljspeech-medium",
     "file": "en-frage.mp3",
-    "sha256": "25e66aa6d0468a8f3e08fa10995423b5c31f03dc2e87fdffe16d73d2f1f1377c"
+    "sha256": "7c98db9be325a1d1efef1edbf9199625cba45e073742ca8b35b3dd2a02c700cb",
+    "source_sha256": "da3660f84bf5af831978f8a77f00ff51f30b575a0e4b509bd6e87b42eb3d3bf4"
   },
   {
     "locale": "ru",
-    "kind": "lob",
+    "id": "praise_2",
     "text": "Супер! Мне нравится!",
+    "voice_model": "ru_RU-denis-medium",
     "file": "ru-lob.mp3",
-    "sha256": "45c5c13bbe0a1c6b3ea2ead8d8f34f6a9e56f2d69dabc5f455f784256f2fd3c6"
+    "sha256": "b4c980e4931685bd43f5cca74ed63d15a0846e8f6f382142e9b964664fab5cb6",
+    "source_sha256": "786707a733971dfa6d7de865166c123e154769cf9c68ac8e7468e22ee9ddaa47"
   },
   {
     "locale": "ru",
-    "kind": "frage",
+    "id": "physics_05",
     "text": "Что притягивает магнит: железо, дерево или бумагу? На выбор: древесина. бумага. железо.",
+    "voice_model": "ru_RU-denis-medium",
     "file": "ru-frage.mp3",
-    "sha256": "38d5ac85754b7a8e01dac835b77eccf9b32f4c3e652cdd5376f7c11f7009aaf1"
+    "sha256": "dcbad9cbac2a009bccd95aefc1bb4b3c8475be3a7cee454c10333f877f047645",
+    "source_sha256": "cc2f91f2ac2bf1814d008be679586d143dd688e9974874dd05f2b880fcf2b3f2"
+  },
+  {
+    "locale": "de",
+    "id": "area_physics_old_v07",
+    "text": "Physik",
+    "voice_model": "de_DE-kerstin-low",
+    "file": "de-physik-v07-alt.mp3",
+    "sha256": "4d256f905b630052f991e462398497434201ec993d91b2a96487d9d8f09c1a1e",
+    "source_sha256": "385ea5246d573adb1ed2e7d1b48dd7b93a62abb93ba8736ed121d00ce77cdf41",
+    "purpose": "Historical comparison only; not shipped in the Android app"
   }
 ]

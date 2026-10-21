@@ -1,0 +1,583 @@
+{
+  "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+  "model": "multilingual Whisper small, int8, sherpa-onnx",
+  "model_files": {
+    "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+    "small-decoder.int8.onnx": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+    "small-tokens.txt": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+  },
+  "locales": {
+    "en": {
+      "voice_model": "en_US-ljspeech-medium",
+      "samples": 31,
+      "character_error_rate": 0.01081,
+      "rows": [
+        {
+          "id": "area_math",
+          "reference": "Maths",
+          "recognized": "Mess.",
+          "character_errors": 3,
+          "reference_characters": 5,
+          "seconds": 1.1918,
+          "sha256": "7423d71a9cd7e5cd18e47e452642eff85ce3ffaf141a7ce95c5031cf7771dc2d"
+        },
+        {
+          "id": "area_german",
+          "reference": "German",
+          "recognized": "German",
+          "character_errors": 0,
+          "reference_characters": 6,
+          "seconds": 1.2962,
+          "sha256": "480fddd2d77cb134edff1732d8fc2f0a977c17ab10b1b9e57325c559e76f3644"
+        },
+        {
+          "id": "area_logic",
+          "reference": "Logic",
+          "recognized": "Logic",
+          "character_errors": 0,
+          "reference_characters": 5,
+          "seconds": 1.1569,
+          "sha256": "4f5a7e3738474950e524c991f0e4a183ba0491098b1b3b5716b27c61d92070b3"
+        },
+        {
+          "id": "area_physics",
+          "reference": "Physics",
+          "recognized": "physics",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.2847,
+          "sha256": "eaa7aae0b31b30d8c28d047066fe6aff55d38ada62265f2542fa252051d268d0"
+        },
+        {
+          "id": "area_biology",
+          "reference": "Biology",
+          "recognized": "biology",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.482,
+          "sha256": "0c80ca1c58dbae8a1410c3ed039a80a5a0d7c40a0268903c8fadcf1cfb99fa8e"
+        },
+        {
+          "id": "area_chemistry",
+          "reference": "Chemistry",
+          "recognized": "chemistry",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.4588,
+          "sha256": "b82b8964edb7195b8ae4c3f7f6b88142aa49a2a57557d1519a0468c10c32976b"
+        },
+        {
+          "id": "area_body",
+          "reference": "Human body",
+          "recognized": "human body",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.6562,
+          "sha256": "ec7f7b636f864017b82fed1ed78885eba452c9fbd64f4396acfd772620d2d6dc"
+        },
+        {
+          "id": "area_geography",
+          "reference": "Geography",
+          "recognized": "Geography",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.5633,
+          "sha256": "ffe474c05d23a81cf8b7362b8f535de57756889f701210f7d8b7fa082eab1dd9"
+        },
+        {
+          "id": "praise_0",
+          "reference": "Wonderful! You did that really well.",
+          "recognized": "Wonderful! You did that really well!",
+          "character_errors": 0,
+          "reference_characters": 29,
+          "seconds": 3.132,
+          "sha256": "5c4ba4216e01467510fefe661f29e946bb34bbe19786d9d0b07d558ee8e20c1f"
+        },
+        {
+          "id": "praise_1",
+          "reference": "That was a clever choice!",
+          "recognized": "That was a clever choice.",
+          "character_errors": 0,
+          "reference_characters": 20,
+          "seconds": 2.2251,
+          "sha256": "94be76bff11c52d9083dc9c839a03cd99da320601f5f4e301137b9cff5302a3a"
+        },
+        {
+          "id": "praise_2",
+          "reference": "Super cool! I like that!",
+          "recognized": "Super cool. I like that.",
+          "character_errors": 0,
+          "reference_characters": 18,
+          "seconds": 2.8998,
+          "sha256": "f1936ea183929b00a6bf2c3b05e7d359b93d3addffb61a574e432a9a085a2afc"
+        },
+        {
+          "id": "praise_3",
+          "reference": "Great work! Keep going!",
+          "recognized": "Rake work. Keep going.",
+          "character_errors": 4,
+          "reference_characters": 18,
+          "seconds": 2.7256,
+          "sha256": "97075033e59225a68356b0dca6305c6c22217b8f42dc02f6fe50659f47d9a92e"
+        },
+        {
+          "id": "praise_4",
+          "reference": "You looked carefully. Well done!",
+          "recognized": "You looked carefully. Well done!",
+          "character_errors": 0,
+          "reference_characters": 26,
+          "seconds": 2.9927,
+          "sha256": "821d14fed3faa7f7cf74e700d77ec51ade9ea24ef4410ea454668d843571e454"
+        },
+        {
+          "id": "praise_5",
+          "reference": "Brilliant! You worked it out.",
+          "recognized": "Brilliant! You worked it out.",
+          "character_errors": 0,
+          "reference_characters": 23,
+          "seconds": 2.8998,
+          "sha256": "1f4b77322dd5c00498ec62415fae98230c1bfc3d5eb0789816a2dab36f393dd2"
+        },
+        {
+          "id": "again",
+          "reference": "Take another look. You can try again.",
+          "recognized": "Take another look. You can try again.",
+          "character_errors": 0,
+          "reference_characters": 29,
+          "seconds": 3.341,
+          "sha256": "d5bd5138022fdafa3b5f32500ecd20985ea29daabe1c399f8bd1fba8186d454c"
+        },
+        {
+          "id": "math_count",
+          "reference": "How many can you see?",
+          "recognized": "How many can you see?",
+          "character_errors": 0,
+          "reference_characters": 16,
+          "seconds": 1.8767,
+          "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a"
+        },
+        {
+          "id": "german_sun",
+          "reference": "Listen to the German word. Which letter does it start with?",
+          "recognized": "Listen to the German word. Which letter does it start with?",
+          "character_errors": 0,
+          "reference_characters": 47,
+          "seconds": 4.7109,
+          "sha256": "eb1ff15e8642f9671cb5125e1965f4faa462a9fc8e5480cc0da63cf3e878ab9a"
+        },
+        {
+          "id": "logic_repeat",
+          "reference": "Apple, leaf. What comes next?",
+          "recognized": "Apple Leaf. What comes next?",
+          "character_errors": 0,
+          "reference_characters": 22,
+          "seconds": 3.4919,
+          "sha256": "d75665d6582fd8ddff13b799f06e8d9a62469d1756b38096e1178da91953606a"
+        },
+        {
+          "id": "physics_05",
+          "reference": "What does a magnet attract: iron, wood or paper? Choose from: wood. paper. iron.",
+          "recognized": "What does a magnet track? Iron, wood or paper? Choose from wood, paper, iron.",
+          "character_errors": 3,
+          "reference_characters": 60,
+          "seconds": 7.2767,
+          "sha256": "da3660f84bf5af831978f8a77f00ff51f30b575a0e4b509bd6e87b42eb3d3bf4"
+        },
+        {
+          "id": "biology_20",
+          "reference": "Where can a butterfly drink nectar? Choose from: battery. hammer. flower.",
+          "recognized": "Where can a butterfly drink nectar? Choose from Battery Hammer Flower.",
+          "character_errors": 0,
+          "reference_characters": 58,
+          "seconds": 6.4641,
+          "sha256": "5c9884bcd8f0c8a0299b583ea5b699d7622f0338fb75fcab2cdba09b98147d86"
+        },
+        {
+          "id": "chemistry_20",
+          "reference": "What helps water wash away greasy dirt? Choose from: sand. oil. soap.",
+          "recognized": "What helps water wash away greasy dirt? Choose from sand oil soap.",
+          "character_errors": 0,
+          "reference_characters": 53,
+          "seconds": 6.4409,
+          "sha256": "72622689f5be4e3708b2950c6045814452a930de1eb71bf536149cf2c9f6629f"
+        },
+        {
+          "id": "body_20",
+          "reference": "What do many children lose and replace as they grow? Choose from: bone. hand. tooth.",
+          "recognized": "What do many children lose and replace as they grow? Choose from Bonehand Tooth.",
+          "character_errors": 0,
+          "reference_characters": 65,
+          "seconds": 7.4277,
+          "sha256": "87991a4eda87d5010e9e3992ac1a94bc3d89cda339807c9d06aea7aede36e214"
+        },
+        {
+          "id": "geography_20",
+          "reference": "What covers more of Earth's surface: seas or land? Choose from: fabric. paper. sea.",
+          "recognized": "What covers more of Earth's surface? Seas or land? Choose from Fabric Paper Sea.",
+          "character_errors": 0,
+          "reference_characters": 63,
+          "seconds": 8.2288,
+          "sha256": "7aac469c63a12f420edc9aedad52bc9b626f454c7034e8283b8313135dd0828e"
+        },
+        {
+          "id": "math_count_hint",
+          "reference": "Tap each picture once and count.",
+          "recognized": "Tap each picture once and count.",
+          "character_errors": 0,
+          "reference_characters": 26,
+          "seconds": 3.0029,
+          "sha256": "d56e8db47eb78c9fd57569ac94fcda1c6fa0ec453f8a6b8a5c8c8533b39d2e08"
+        },
+        {
+          "id": "german_sun_hint",
+          "reference": "The German word starts with the letter S. Choose that letter.",
+          "recognized": "The German word starts with the letter S. Choose that letter.",
+          "character_errors": 0,
+          "reference_characters": 49,
+          "seconds": 4.7574,
+          "sha256": "333602064371aa291054989b5222bb8a39c67a95877d7eef4ae1250be3dc7405"
+        },
+        {
+          "id": "logic_repeat_hint",
+          "reference": "Apple and leaf alternate. The next picture is a leaf.",
+          "recognized": "Apple and leaf alternate. The next picture is a leaf.",
+          "character_errors": 0,
+          "reference_characters": 42,
+          "seconds": 4.4787,
+          "sha256": "b3f995386cc129ee27a88a2749f41e05fd474b51ada9275defedd9a378f393c9"
+        },
+        {
+          "id": "physics_05_hint",
+          "reference": "Magnets attract iron. Not every metal is magnetic.",
+          "recognized": "Magnets attract iron. Not every metal is magnetic.",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 4.7923,
+          "sha256": "f56e9d15b5914bf5507bf14f5c3b782dab46428d9031069e4502532e91a15e1c"
+        },
+        {
+          "id": "biology_20_hint",
+          "reference": "Many butterflies use a long mouthpart to drink nectar from flowers.",
+          "recognized": "Many butterflies use a long mouth part to drink nectar from flowers.",
+          "character_errors": 0,
+          "reference_characters": 56,
+          "seconds": 5.9286,
+          "sha256": "35935a28b4bdeebb50e93029fab420cce8da79748924f1e30a6d9e1831eef834"
+        },
+        {
+          "id": "chemistry_20_hint",
+          "reference": "Soap helps water remove grease and dirt.",
+          "recognized": "Soap helps water remove grease and dirt.",
+          "character_errors": 0,
+          "reference_characters": 33,
+          "seconds": 3.8621,
+          "sha256": "04f092bda2e12cae138fab73fac074ebd255bb8643baf268935b4413b39d9188"
+        },
+        {
+          "id": "body_20_hint",
+          "reference": "Baby teeth gradually make way for adult teeth.",
+          "recognized": "Baby teeth gradually make way for adult teeth.",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.9201,
+          "sha256": "54bca877416460b56773cb754836c4021f5e5641658410ee9642d8cff04410a9"
+        },
+        {
+          "id": "geography_20_hint",
+          "reference": "Seas cover more than half of Earth's surface.",
+          "recognized": "Seas cover more than half of Earth's surface.",
+          "character_errors": 0,
+          "reference_characters": 36,
+          "seconds": 3.6647,
+          "sha256": "2d26bac7c7cd5b4d2bd4ac47bd5dcf961bbd9aada986cdfb92d692c6491e461e"
+        }
+      ]
+    },
+    "ru": {
+      "voice_model": "ru_RU-denis-medium",
+      "samples": 31,
+      "character_error_rate": 0.08446,
+      "rows": [
+        {
+          "id": "area_math",
+          "reference": "Математика",
+          "recognized": "математика.",
+          "character_errors": 0,
+          "reference_characters": 10,
+          "seconds": 1.6446,
+          "sha256": "b7ca4fac249f942d84ec9cab715a48a88d13e7dd3494644e952452a6b32d8d1a"
+        },
+        {
+          "id": "area_german",
+          "reference": "Немецкий",
+          "recognized": "Немецкий",
+          "character_errors": 0,
+          "reference_characters": 8,
+          "seconds": 1.5052,
+          "sha256": "a1e07bed14746f4152feb308b3ef92087de3ef3d0f7bfc15a82366e87d22196e"
+        },
+        {
+          "id": "area_logic",
+          "reference": "Логика",
+          "recognized": "Водика.",
+          "character_errors": 2,
+          "reference_characters": 6,
+          "seconds": 1.4356,
+          "sha256": "95610bdb15659ae7b043fc26fecfd863355ebac0647b54c9c4491bb84a65b011"
+        },
+        {
+          "id": "area_physics",
+          "reference": "Физика",
+          "recognized": "Тизика.",
+          "character_errors": 1,
+          "reference_characters": 6,
+          "seconds": 1.3079,
+          "sha256": "c01ee91f7f64be1a1045d2e6952077bf81076775da977b5f229c92bdb0a6477c"
+        },
+        {
+          "id": "area_biology",
+          "reference": "Биология",
+          "recognized": "Беллоди",
+          "character_errors": 4,
+          "reference_characters": 8,
+          "seconds": 1.4704,
+          "sha256": "8b25593f199c2797f0e0035a58de3d11f89f1614ddec2efea9be731f49a4d5b3"
+        },
+        {
+          "id": "area_chemistry",
+          "reference": "Химия",
+          "recognized": "Синни!",
+          "character_errors": 4,
+          "reference_characters": 5,
+          "seconds": 1.2731,
+          "sha256": "b70db2d3176d6ec55a118b2f6a0e048910f955ba1a66ee6c1b692adc6036ff53"
+        },
+        {
+          "id": "area_body",
+          "reference": "Человек",
+          "recognized": "человек",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.3311,
+          "sha256": "f45deb16801d7d04ef3c10c9f0055897b2ba109cbcd5227644039e8bf4934fba"
+        },
+        {
+          "id": "area_geography",
+          "reference": "География",
+          "recognized": "Диаграти",
+          "character_errors": 5,
+          "reference_characters": 9,
+          "seconds": 1.6214,
+          "sha256": "065bb61dad01d34808f0da7c506de803e5062f780e432e26d5d5fc21a2d67406"
+        },
+        {
+          "id": "praise_0",
+          "reference": "Замечательно! У тебя отлично получилось.",
+          "recognized": "Замечательно, ведь у тебя отлично получилось.",
+          "character_errors": 4,
+          "reference_characters": 34,
+          "seconds": 3.817,
+          "sha256": "41749d72b97d558945a1845d17b4262d6e2be7e838e5b186bc01d57ee91c6902"
+        },
+        {
+          "id": "praise_1",
+          "reference": "Очень умное решение!",
+          "recognized": "Очень умное решение.",
+          "character_errors": 0,
+          "reference_characters": 17,
+          "seconds": 2.3063,
+          "sha256": "a9e4a42195f0c4740bf9276dbeaede68c4052f7613a40aa22477055b4384f109"
+        },
+        {
+          "id": "praise_2",
+          "reference": "Супер! Мне нравится!",
+          "recognized": "Сопер, мне нравится!",
+          "character_errors": 1,
+          "reference_characters": 16,
+          "seconds": 2.9927,
+          "sha256": "786707a733971dfa6d7de865166c123e154769cf9c68ac8e7468e22ee9ddaa47"
+        },
+        {
+          "id": "praise_3",
+          "reference": "Здорово решено! Так держать!",
+          "recognized": "здорово решено, так держать.",
+          "character_errors": 0,
+          "reference_characters": 23,
+          "seconds": 3.3061,
+          "sha256": "bf61f4e7e47d9569554532826ff3358a177665b6aa9f61a4eef8cbee24bc5f41"
+        },
+        {
+          "id": "praise_4",
+          "reference": "Ты внимательно посмотрел. Отлично!",
+          "recognized": "Ты внимательно посмотрел. Отлично!",
+          "character_errors": 0,
+          "reference_characters": 29,
+          "seconds": 3.7009,
+          "sha256": "3ad5392b0ecc2424b66da3ac6d864c9b91b5a9ecb76ea4a5290bf0ab4e4fc79d"
+        },
+        {
+          "id": "praise_5",
+          "reference": "Прекрасно! У тебя получилось разобраться.",
+          "recognized": "Прекрасно! Вы тебе получилось разобраться!",
+          "character_errors": 3,
+          "reference_characters": 35,
+          "seconds": 4.1769,
+          "sha256": "7580ef45cd95d14ffeb72015743b35cdb839c8ebb66c24a4eb51ab0239ea2593"
+        },
+        {
+          "id": "again",
+          "reference": "Посмотри ещё раз. Можно попробовать снова.",
+          "recognized": "Посмотри еще раз. Можно попробовать снова.",
+          "character_errors": 1,
+          "reference_characters": 35,
+          "seconds": 4.1189,
+          "sha256": "6b34e0506031942c42fbf9b4d84bba82c41c9376d2613081fe80906411355f18"
+        },
+        {
+          "id": "math_count",
+          "reference": "Сколько ты видишь?",
+          "recognized": "Колько ты видишь?",
+          "character_errors": 1,
+          "reference_characters": 15,
+          "seconds": 1.7491,
+          "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1"
+        },
+        {
+          "id": "german_sun",
+          "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+          "recognized": "Послушай немецкое слово, с какой буквы его пишет?",
+          "character_errors": 1,
+          "reference_characters": 40,
+          "seconds": 4.4091,
+          "sha256": "cb25a4a3ef8cd0d81d2177c46be348287818b3ac1d528d653c64be2a669e2a46"
+        },
+        {
+          "id": "logic_repeat",
+          "reference": "Яблоко, лист. Что дальше?",
+          "recognized": "Я был Акадлист, то дальше!",
+          "character_errors": 5,
+          "reference_characters": 19,
+          "seconds": 3.0856,
+          "sha256": "68c25fe34fad50f669cfa8cae5e329a60282516180102754c33720cda7fb1357"
+        },
+        {
+          "id": "physics_05",
+          "reference": "Что притягивает магнит: железо, дерево или бумагу? На выбор: древесина. бумага. железо.",
+          "recognized": "то прицягивает магнит, железы, деревы или бумагу. На выбор тревесина бумага железы.",
+          "character_errors": 6,
+          "reference_characters": 69,
+          "seconds": 7.1143,
+          "sha256": "cc2f91f2ac2bf1814d008be679586d143dd688e9974874dd05f2b880fcf2b3f2"
+        },
+        {
+          "id": "biology_20",
+          "reference": "Где бабочка может пить нектар? На выбор: батарейка. молоток. цветок.",
+          "recognized": "Где бабочка может пить никто? На выбор - батарейка молоток цветок.",
+          "character_errors": 3,
+          "reference_characters": 54,
+          "seconds": 5.8719,
+          "sha256": "062ac44d56ecf5ad8b3b27b663230f2da4dcadc2d00aa0b4b53a5c9e29210b58"
+        },
+        {
+          "id": "chemistry_20",
+          "reference": "Что помогает воде смывать жирную грязь? На выбор: песок. масло. мыло.",
+          "recognized": "кто помогает водить мовать жирную брязь на выбор и сок масла мыла",
+          "character_errors": 10,
+          "reference_characters": 54,
+          "seconds": 5.6746,
+          "sha256": "c707585c7938e71c6f991ac8eb79b261effa75336284e98e5ad0a82bad8e42a3"
+        },
+        {
+          "id": "body_20",
+          "reference": "Что у многих детей выпадает и заменяется новым? На выбор: кость. кисть. зуб.",
+          "recognized": "то много гердитива падает и заменяется новым. На выбор Кость-кисть Зук",
+          "character_errors": 11,
+          "reference_characters": 59,
+          "seconds": 5.9764,
+          "sha256": "81d5423a84e9ecc347243998f36c1bb9b2d6a23d81012ec63e7cd5dd309b0672"
+        },
+        {
+          "id": "geography_20",
+          "reference": "Чего больше на поверхности Земли: морей или суши? На выбор: ткань. бумага. море.",
+          "recognized": "Чего больше на поверхности земли, ореи или сушек? На выбор такан бумага моря.",
+          "character_errors": 7,
+          "reference_characters": 62,
+          "seconds": 6.7311,
+          "sha256": "b997a73bffaeabce9efd6f0db3b138bbfdc335407868be9e691cd16451f0d168"
+        },
+        {
+          "id": "math_count_hint",
+          "reference": "Коснись каждой картинки один раз и посчитай.",
+          "recognized": "Коснись каждой картинке один раз и посчитай.",
+          "character_errors": 1,
+          "reference_characters": 37,
+          "seconds": 3.9433,
+          "sha256": "6e01ea778286d793273a7437008bbc4edf0afbaf9857ee0d3dc38672bcaadcc4"
+        },
+        {
+          "id": "german_sun_hint",
+          "reference": "Немецкое слово начинается с буквы S. Выбери эту букву.",
+          "recognized": "Немецкое слово начинается с буквы РС. Выбери эту букву.",
+          "character_errors": 2,
+          "reference_characters": 44,
+          "seconds": 5.0941,
+          "sha256": "d8a91f35118a93bdb06b6200a9d17cbb913ee1884d8e780b906a58e158916a93"
+        },
+        {
+          "id": "logic_repeat_hint",
+          "reference": "Яблоко и лист чередуются. Дальше будет лист.",
+          "recognized": "Яблоко и листь чередуются. Дальше будет листь.",
+          "character_errors": 2,
+          "reference_characters": 36,
+          "seconds": 4.1304,
+          "sha256": "32fc9d104f898c6093b75057cfabb85f404ba2ea13aa301f8311d395a654fb92"
+        },
+        {
+          "id": "physics_05_hint",
+          "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+          "recognized": "Магнит притядивает железо, не каждый металл притядивается магнитом.",
+          "character_errors": 2,
+          "reference_characters": 58,
+          "seconds": 5.7326,
+          "sha256": "eb22fcaa2e7afb3511d4227fa0b420b19cb3df0406b66013c19e7f50354a9e0c"
+        },
+        {
+          "id": "biology_20_hint",
+          "reference": "Многие бабочки пьют нектар из цветков с помощью хоботка.",
+          "recognized": "Многие бабочки пьют нектар из цветков с помощью хабатка.",
+          "character_errors": 2,
+          "reference_characters": 47,
+          "seconds": 4.4774,
+          "sha256": "03c155f12bd500785f364710d3adf9c135bfedd746380f0e4cbcbf4a2b33f288"
+        },
+        {
+          "id": "chemistry_20_hint",
+          "reference": "Мыло помогает воде смывать жир и грязь.",
+          "recognized": "Мело помогает воде смывать жили грязь.",
+          "character_errors": 2,
+          "reference_characters": 32,
+          "seconds": 3.1887,
+          "sha256": "e7ba83c556046c02bda7d11461f9fc2e4b5af3893bb131258cf0f50ebce28484"
+        },
+        {
+          "id": "body_20_hint",
+          "reference": "Молочные зубы постепенно сменяются постоянными.",
+          "recognized": "Молочные зубы постепенно сменяются постоянными.",
+          "character_errors": 0,
+          "reference_characters": 42,
+          "seconds": 4.013,
+          "sha256": "d52d3d811b74f4298a7ee07d8d87af7bbdd75fbcdc01977d5310d9c9a68f451a"
+        },
+        {
+          "id": "geography_20_hint",
+          "reference": "Моря покрывают больше половины поверхности Земли.",
+          "recognized": "Море покрывают больше половины поверхности Земли.",
+          "character_errors": 1,
+          "reference_characters": 43,
+          "seconds": 3.9898,
+          "sha256": "990027e93710017ba8f755ac8f087d170d8ad4114c347d7469825b9e8c3284a2"
+        }
+      ]
+    }
+  }
+}

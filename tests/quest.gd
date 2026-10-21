@@ -117,6 +117,34 @@ func run() -> void:
 		check(saved.data.hero=="mama" and saved.data.quest.solved.has("math_count"),"Local hero/progress survive disk roundtrip")
 		game._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
 		check(not game.world.pressed,"Interruption cancels incomplete gesture")
+	# A long character name previously grew the actual Button over the score.
+	# Check actual engine rectangles, all names/locales and maximum saved points.
+	var saved_progress: Dictionary=app.store.data.quest.duplicate(true)
+	for task in Progress.tasks():Progress.award(app.store.data.quest,task.id)
+	for pixels in [Vector2i(320,568),Vector2i(360,800),Vector2i(800,360),Vector2i(1080,2400),Vector2i(2400,1080)]:
+		root.size=pixels;app.simulated_dpi=420 if pixels.x>1000 else 0;app.update_mobile()
+		for locale in ["de","en","ru"]:
+			app.store.data.locale=locale;app.hub()
+			var game: Control=app.game_view
+			for id in preload("res://core/quest/hero.gd").IDS:
+				app.store.data.hero=id;game.update_score();game.arrange()
+				for frame in range(2):await process_frame
+				for control in [game.hero_button,game.menu_button,game.title,game.world,game.footer]:
+					check(not game.score.get_global_rect().intersects(control.get_global_rect()),"Maximum score does not overlap controls: "+locale+"/"+id+"/"+str(pixels))
+				var screen := Vector2(root.content_scale_size if root.content_scale_size.x>0 else pixels)
+				check(Rect2(Vector2.ZERO,screen).encloses(game.score.get_global_rect()),"Score stays inside the viewport")
+			await touch_button(game.hero_button)
+			check(game.choosing,"Figure control stays touchable beside maximum score")
+			game.finish_hero()
+			await touch_button(game.menu_button)
+			check(is_instance_valid(game.menu),"Menu stays touchable beside maximum score")
+			game.remove_child(game.menu);game.menu.queue_free();game.menu=null
+			game.open_task(0)
+			await process_frame
+			for control in [game.task_panel.close_button,game.task_panel.speaker,game.task_panel.heading]:
+				check(not game.task_panel.score.get_global_rect().intersects(control.get_global_rect()),"Task score does not overlap close, repeat or question")
+			game.close_task()
+	app.store.data.quest=saved_progress;app.store.data.locale="de";app.hub()
 	# Exercise every task through its actual presenter, help, wrong answer and reward.
 	for subject in Progress.SUBJECTS:
 		game_subject(app,subject)

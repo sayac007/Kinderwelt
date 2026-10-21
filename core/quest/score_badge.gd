@@ -6,7 +6,9 @@ var shown := 0.0
 var pulse := 0.0
 var reduced_motion := false
 var caption := "Punkte"
-func _ready() -> void: mouse_filter = MOUSE_FILTER_IGNORE
+func _ready() -> void:
+	mouse_filter = MOUSE_FILTER_IGNORE
+	clip_contents = true
 func set_total(total: int,animate := false) -> void:
 	var changed := total>stars
 	stars=total;points=total*10

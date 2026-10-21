@@ -71,6 +71,14 @@ func run() -> void:
 		app.store.data.scenery="auto"
 		game.world.set_page(3)
 		await snap(profile.id+"-last-trail")
+		var previous_progress: Dictionary=app.store.data.quest.duplicate(true)
+		for task in preload("res://games/quest/progress.gd").tasks():preload("res://games/quest/progress.gd").award(app.store.data.quest,task.id)
+		app.store.data.hero="squirrel";game.world.hero.person="squirrel"
+		game.update_score();game.arrange()
+		await snap(profile.id+"-header-max-points")
+		game.open_task(0)
+		await snap(profile.id+"-header-max-points-task")
+		game.close_task();app.store.data.quest=previous_progress
 		for locale in ["en","ru"]:
 			app.store.data.locale=locale;app.hub();game=app.game_view
 			game.switch_subject("physics");game.open_task(19)
