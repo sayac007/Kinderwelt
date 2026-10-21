@@ -22,12 +22,12 @@
           "tip": "Tippe jeden Apfel einmal an. Zähle dabei mit."
         },
         "en": {
-          "prompt": "How many can you see?",
-          "tip": "Tap each picture once and count."
+          "prompt": "How many apples can you see?",
+          "tip": "Tap each apple once. Count as you go."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
-          "tip": "Коснись каждой картинки один раз и посчитай."
+          "prompt": "Сколько яблок ты видишь?",
+          "tip": "Коснись каждого яблока один раз. Считай при этом."
         }
       }
     },
@@ -52,12 +52,12 @@
           "tip": "Zähle erst links. Zähle dann rechts weiter."
         },
         "en": {
-          "prompt": "3 and 2. How many altogether?",
-          "tip": "Count the left group, then keep counting the right group."
+          "prompt": "Three apples and two apples. How many altogether?",
+          "tip": "Count the left group first. Then keep counting on the right."
         },
         "ru": {
-          "prompt": "3 и 2. Сколько всего?",
-          "tip": "Сначала посчитай слева, затем продолжи считать справа."
+          "prompt": "Три яблока и два яблока. Сколько всего?",
+          "tip": "Сначала посчитай слева. Затем продолжи считать справа."
         }
       }
     },
@@ -82,12 +82,12 @@
           "tip": "Zähle nur die Blätter ohne Kreuz."
         },
         "en": {
-          "prompt": "There are 7. Take away 3. How many remain?",
-          "tip": "Count only the pictures without a cross."
+          "prompt": "Seven leaves. Three fly away. How many remain?",
+          "tip": "Count only the leaves without a cross."
         },
         "ru": {
-          "prompt": "Было 7. Убрали 3. Сколько осталось?",
-          "tip": "Считай только картинки без крестика."
+          "prompt": "Семь листьев. Три улетают. Сколько осталось?",
+          "tip": "Считай только листья без крестика."
         }
       }
     },
@@ -112,11 +112,11 @@
           "tip": "Zähle die leeren Sternplätze."
         },
         "en": {
-          "prompt": "There are 4. How many more make 10?",
+          "prompt": "Four stars are already there. How many more make ten?",
           "tip": "Count the empty star spaces."
         },
         "ru": {
-          "prompt": "Есть 4. Сколько не хватает до 10?",
+          "prompt": "Уже есть четыре звезды. Сколько не хватает до десяти?",
           "tip": "Посчитай пустые места для звёзд."
         }
       }
@@ -141,12 +141,12 @@
           "tip": "Vergleiche die beiden Mengen. Tippe die größere an."
         },
         "en": {
-          "prompt": "Which group has more?",
-          "tip": "Count both groups and tap the larger one."
+          "prompt": "Where are there more apples?",
+          "tip": "Compare both groups. Tap the larger group."
         },
         "ru": {
-          "prompt": "Где больше?",
-          "tip": "Посчитай обе группы. Коснись той, где больше."
+          "prompt": "Где больше яблок?",
+          "tip": "Сравни обе группы. Коснись той, где больше."
         }
       }
     },
@@ -173,12 +173,12 @@
           "tip": "Es kommen jedes Mal zwei dazu."
         },
         "en": {
-          "prompt": "Which number comes next?",
-          "tip": "Add 2 each time."
+          "prompt": "Two, four, six. Which number comes next?",
+          "tip": "Add two each time."
         },
         "ru": {
-          "prompt": "Какое число следующее?",
-          "tip": "Каждый раз прибавляй 2."
+          "prompt": "Два, четыре, шесть. Какое число следующее?",
+          "tip": "Каждый раз прибавляй два."
         }
       }
     },
@@ -203,12 +203,12 @@
           "tip": "Die erste Menge ist zehn. Zähle vier weiter."
         },
         "en": {
-          "prompt": "10 and 4. How many altogether?",
-          "tip": "Count the left group, then keep counting the right group."
+          "prompt": "Ten and four. How many altogether?",
+          "tip": "The first group has ten. Count on four more."
         },
         "ru": {
-          "prompt": "10 и 4. Сколько всего?",
-          "tip": "Сначала посчитай слева, затем продолжи считать справа."
+          "prompt": "Десять и четыре. Сколько всего?",
+          "tip": "В первой группе десять. Отсчитай ещё четыре."
         }
       }
     },
@@ -233,11 +233,11 @@
           "tip": "Zähle die leeren Sternplätze."
         },
         "en": {
-          "prompt": "There are 5. How many more make 8?",
+          "prompt": "Five stars are already there. How many more make eight?",
           "tip": "Count the empty star spaces."
         },
         "ru": {
-          "prompt": "Есть 5. Сколько не хватает до 8?",
+          "prompt": "Уже есть пять звёзд. Сколько не хватает до восьми?",
           "tip": "Посчитай пустые места для звёзд."
         }
       }
@@ -262,12 +262,12 @@
           "tip": "Das Wort Sonne beginnt mit S. Suche das S."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter S. Choose that letter."
+          "prompt": "German word: Sonne. Which letter does it start with?",
+          "tip": "Sonne starts with the letter S. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы S. Выбери эту букву."
+          "prompt": "Немецкое слово: Sonne. С какой буквы его пишут?",
+          "tip": "Sonne начинается с буквы S. Выбери эту букву."
         }
       }
     },
@@ -291,12 +291,12 @@
           "tip": "Maus beginnt mit M. Suche das M."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter M. Choose that letter."
+          "prompt": "German word: Maus. Which letter does it start with?",
+          "tip": "Maus starts with the letter M. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы M. Выбери эту букву."
+          "prompt": "Немецкое слово: Maus. С какой буквы его пишут?",
+          "tip": "Maus начинается с буквы M. Выбери эту букву."
         }
       }
     },
@@ -320,12 +320,12 @@
           "tip": "Apfel beginnt mit A. Suche das A."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter A. Choose that letter."
+          "prompt": "German word: Apfel. Which letter does it start with?",
+          "tip": "Apfel starts with the letter A. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы A. Выбери эту букву."
+          "prompt": "Немецкое слово: Apfel. С какой буквы его пишут?",
+          "tip": "Apfel начинается с буквы A. Выбери эту букву."
         }
       }
     },
@@ -354,12 +354,12 @@
           "tip": "Haus und Maus klingen hinten gleich."
         },
         "en": {
-          "prompt": "Listen to the German words. Which one rhymes with the word for house?",
-          "tip": "The German words for house and mouse rhyme: listen to the German example."
+          "prompt": "Which German word rhymes with Haus?",
+          "tip": "Haus and Maus sound the same at the end."
         },
         "ru": {
-          "prompt": "Послушай немецкие слова. Какое рифмуется со словом «дом» по-немецки?",
-          "tip": "Немецкие слова «дом» и «мышь» рифмуются. Послушай пример по-немецки."
+          "prompt": "Какое немецкое слово рифмуется со словом Haus?",
+          "tip": "Haus и Maus звучат одинаково в конце."
         }
       }
     },
@@ -388,12 +388,12 @@
           "tip": "Sprich und klatsche: Ro. Bo. Ter. Das sind drei Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 3 syllables."
+          "prompt": "German word: Roboter. How many syllables can you hear?",
+          "tip": "Say and clap: Ro. Bo. Ter. That is 3 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога."
+          "prompt": "Немецкое слово: Roboter. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Ro. Bo. Ter. Это 3 слога."
         }
       }
     },
@@ -417,12 +417,12 @@
           "tip": "B. A. L. L. Suche das Wort Ball."
         },
         "en": {
-          "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "prompt": "Which German word belongs to the ball?",
+          "tip": "B. A. L. L. Find the word Ball."
         },
         "ru": {
-          "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "prompt": "Какое немецкое слово подходит к мячу?",
+          "tip": "B. A. L. L. Найди слово Ball."
         }
       }
     },
@@ -450,12 +450,12 @@
           "tip": "Sprich und klatsche: Blu. Me. Das sind zwei Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Blume. How many syllables can you hear?",
+          "tip": "Say and clap: Blu. Me. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Blume. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Blu. Me. Это 2 слога."
         }
       }
     },
@@ -479,12 +479,12 @@
           "tip": "Fisch beginnt mit F. Suche das F."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter F. Choose that letter."
+          "prompt": "German word: Fisch. Which letter does it start with?",
+          "tip": "Fisch starts with the letter F. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы F. Выбери эту букву."
+          "prompt": "Немецкое слово: Fisch. С какой буквы его пишут?",
+          "tip": "Fisch начинается с буквы F. Выбери эту букву."
         }
       }
     },
@@ -753,19 +753,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Bienen siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many bees can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько пчёл ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Bienen siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -782,19 +782,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Fische siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many fish can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько рыб ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Fische siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -811,19 +811,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Blumen siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many flowers can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько цветов ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Blumen siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -840,19 +840,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Blätter siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many leaves can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько листьев ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Blätter siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -869,19 +869,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Sterne siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many stars can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько звёзд ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Sterne siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -898,19 +898,19 @@
       ],
       "texts": {
         "de": {
-          "prompt": "Wie viele siehst du?",
+          "prompt": "Wie viele Äpfel siehst du?",
           "tip": "Tippe jedes Bild einmal an und zähle mit."
         },
         "en": {
-          "prompt": "How many can you see?",
+          "prompt": "How many apples can you see?",
           "tip": "Tap each picture once and count."
         },
         "ru": {
-          "prompt": "Сколько ты видишь?",
+          "prompt": "Сколько яблок ты видишь?",
           "tip": "Коснись каждой картинки один раз и посчитай."
         }
       },
-      "prompt": "Wie viele siehst du?",
+      "prompt": "Wie viele Äpfel siehst du?",
       "tip": "Tippe jedes Bild einmal an und zähle mit."
     },
     {
@@ -1711,12 +1711,12 @@
           "tip": "Biene beginnt mit B. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter B. Choose that letter."
+          "prompt": "German word: Biene. Which letter does it start with?",
+          "tip": "Biene starts with the letter B. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы B. Выбери эту букву."
+          "prompt": "Немецкое слово: Biene. С какой буквы его пишут?",
+          "tip": "Biene начинается с буквы B. Выбери эту букву."
         }
       },
       "prompt": "Biene. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1743,12 +1743,12 @@
           "tip": "Frosch beginnt mit F. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter F. Choose that letter."
+          "prompt": "German word: Frosch. Which letter does it start with?",
+          "tip": "Frosch starts with the letter F. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы F. Выбери эту букву."
+          "prompt": "Немецкое слово: Frosch. С какой буквы его пишут?",
+          "tip": "Frosch начинается с буквы F. Выбери эту букву."
         }
       },
       "prompt": "Frosch. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1776,12 +1776,12 @@
           "tip": "Katze beginnt mit K. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter K. Choose that letter."
+          "prompt": "German word: Katze. Which letter does it start with?",
+          "tip": "Katze starts with the letter K. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы K. Выбери эту букву."
+          "prompt": "Немецкое слово: Katze. С какой буквы его пишут?",
+          "tip": "Katze начинается с буквы K. Выбери эту букву."
         }
       },
       "prompt": "Katze. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1808,12 +1808,12 @@
           "tip": "Nest beginnt mit N. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter N. Choose that letter."
+          "prompt": "German word: Nest. Which letter does it start with?",
+          "tip": "Nest starts with the letter N. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы N. Выбери эту букву."
+          "prompt": "Немецкое слово: Nest. С какой буквы его пишут?",
+          "tip": "Nest начинается с буквы N. Выбери эту букву."
         }
       },
       "prompt": "Nest. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1840,12 +1840,12 @@
           "tip": "Wurm beginnt mit W. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter W. Choose that letter."
+          "prompt": "German word: Wurm. Which letter does it start with?",
+          "tip": "Wurm starts with the letter W. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы W. Выбери эту букву."
+          "prompt": "Немецкое слово: Wurm. С какой буквы его пишут?",
+          "tip": "Wurm начинается с буквы W. Выбери эту букву."
         }
       },
       "prompt": "Wurm. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1873,12 +1873,12 @@
           "tip": "Wasser beginnt mit W. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter W. Choose that letter."
+          "prompt": "German word: Wasser. Which letter does it start with?",
+          "tip": "Wasser starts with the letter W. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы W. Выбери эту букву."
+          "prompt": "Немецкое слово: Wasser. С какой буквы его пишут?",
+          "tip": "Wasser начинается с буквы W. Выбери эту букву."
         }
       },
       "prompt": "Wasser. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1905,12 +1905,12 @@
           "tip": "Salz beginnt mit S. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter S. Choose that letter."
+          "prompt": "German word: Salz. Which letter does it start with?",
+          "tip": "Salz starts with the letter S. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы S. Выбери эту букву."
+          "prompt": "Немецкое слово: Salz. С какой буквы его пишут?",
+          "tip": "Salz начинается с буквы S. Выбери эту букву."
         }
       },
       "prompt": "Salz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1937,12 +1937,12 @@
           "tip": "Sand beginnt mit S. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter S. Choose that letter."
+          "prompt": "German word: Sand. Which letter does it start with?",
+          "tip": "Sand starts with the letter S. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы S. Выбери эту букву."
+          "prompt": "Немецкое слово: Sand. С какой буквы его пишут?",
+          "tip": "Sand начинается с буквы S. Выбери эту букву."
         }
       },
       "prompt": "Sand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -1969,12 +1969,12 @@
           "tip": "Holz beginnt mit H. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter H. Choose that letter."
+          "prompt": "German word: Holz. Which letter does it start with?",
+          "tip": "Holz starts with the letter H. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы H. Выбери эту букву."
+          "prompt": "Немецкое слово: Holz. С какой буквы его пишут?",
+          "tip": "Holz начинается с буквы H. Выбери эту букву."
         }
       },
       "prompt": "Holz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -2002,12 +2002,12 @@
           "tip": "Nase beginnt mit N. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter N. Choose that letter."
+          "prompt": "German word: Nase. Which letter does it start with?",
+          "tip": "Nase starts with the letter N. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы N. Выбери эту букву."
+          "prompt": "Немецкое слово: Nase. С какой буквы его пишут?",
+          "tip": "Nase начинается с буквы N. Выбери эту букву."
         }
       },
       "prompt": "Nase. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -2034,12 +2034,12 @@
           "tip": "Hand beginnt mit H. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter H. Choose that letter."
+          "prompt": "German word: Hand. Which letter does it start with?",
+          "tip": "Hand starts with the letter H. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы H. Выбери эту букву."
+          "prompt": "Немецкое слово: Hand. С какой буквы его пишут?",
+          "tip": "Hand начинается с буквы H. Выбери эту букву."
         }
       },
       "prompt": "Hand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -2066,12 +2066,12 @@
           "tip": "Herz beginnt mit H. Suche diesen Buchstaben."
         },
         "en": {
-          "prompt": "Listen to the German word. Which letter does it start with?",
-          "tip": "The German word starts with the letter H. Choose that letter."
+          "prompt": "German word: Herz. Which letter does it start with?",
+          "tip": "Herz starts with the letter H. Choose that letter."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. С какой буквы его пишут?",
-          "tip": "Немецкое слово начинается с буквы H. Выбери эту букву."
+          "prompt": "Немецкое слово: Herz. С какой буквы его пишут?",
+          "tip": "Herz начинается с буквы H. Выбери эту букву."
         }
       },
       "prompt": "Herz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
@@ -2100,12 +2100,12 @@
           "tip": "Sprich und klatsche: Schmet. Ter. Ling. Das sind 3 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 3 syllables."
+          "prompt": "German word: Schmetterling. How many syllables can you hear?",
+          "tip": "Say and clap: Schmet. Ter. Ling. That is 3 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога."
+          "prompt": "Немецкое слово: Schmetterling. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Schmet. Ter. Ling. Это 3 слога."
         }
       },
       "prompt": "Schmetterling. Wie viele Silben hörst du?",
@@ -2134,12 +2134,12 @@
           "tip": "Sprich und klatsche: Schild. Krö. Te. Das sind 3 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 3 syllables."
+          "prompt": "German word: Schildkröte. How many syllables can you hear?",
+          "tip": "Say and clap: Schild. Krö. Te. That is 3 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога."
+          "prompt": "Немецкое слово: Schildkröte. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Schild. Krö. Te. Это 3 слога."
         }
       },
       "prompt": "Schildkröte. Wie viele Silben hörst du?",
@@ -2168,12 +2168,12 @@
           "tip": "Sprich und klatsche: Bat. Te. Rie. Das sind 3 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 3 syllables."
+          "prompt": "German word: Batterie. How many syllables can you hear?",
+          "tip": "Say and clap: Bat. Te. Rie. That is 3 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога."
+          "prompt": "Немецкое слово: Batterie. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Bat. Te. Rie. Это 3 слога."
         }
       },
       "prompt": "Batterie. Wie viele Silben hörst du?",
@@ -2201,12 +2201,12 @@
           "tip": "Sprich und klatsche: Pa. Pier. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Papier. How many syllables can you hear?",
+          "tip": "Say and clap: Pa. Pier. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Papier. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Pa. Pier. Это 2 слога."
         }
       },
       "prompt": "Papier. Wie viele Silben hörst du?",
@@ -2234,12 +2234,12 @@
           "tip": "Sprich und klatsche: Sei. Fe. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Seife. How many syllables can you hear?",
+          "tip": "Say and clap: Sei. Fe. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Seife. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Sei. Fe. Это 2 слога."
         }
       },
       "prompt": "Seife. Wie viele Silben hörst du?",
@@ -2267,12 +2267,12 @@
           "tip": "Sprich und klatsche: Au. Ge. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Auge. How many syllables can you hear?",
+          "tip": "Say and clap: Au. Ge. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Auge. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Au. Ge. Это 2 слога."
         }
       },
       "prompt": "Auge. Wie viele Silben hörst du?",
@@ -2300,12 +2300,12 @@
           "tip": "Sprich und klatsche: Ge. Hirn. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Gehirn. How many syllables can you hear?",
+          "tip": "Say and clap: Ge. Hirn. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Gehirn. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Ge. Hirn. Это 2 слога."
         }
       },
       "prompt": "Gehirn. Wie viele Silben hörst du?",
@@ -2333,12 +2333,12 @@
           "tip": "Sprich und klatsche: Ma. Gen. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Magen. How many syllables can you hear?",
+          "tip": "Say and clap: Ma. Gen. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Magen. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Ma. Gen. Это 2 слога."
         }
       },
       "prompt": "Magen. Wie viele Silben hörst du?",
@@ -2366,12 +2366,12 @@
           "tip": "Sprich und klatsche: Wol. Ke. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Wolke. How many syllables can you hear?",
+          "tip": "Say and clap: Wol. Ke. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Wolke. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Wol. Ke. Это 2 слога."
         }
       },
       "prompt": "Wolke. Wie viele Silben hörst du?",
@@ -2399,12 +2399,12 @@
           "tip": "Sprich und klatsche: Re. Gen. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Regen. How many syllables can you hear?",
+          "tip": "Say and clap: Re. Gen. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Regen. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Re. Gen. Это 2 слога."
         }
       },
       "prompt": "Regen. Wie viele Silben hörst du?",
@@ -2432,12 +2432,12 @@
           "tip": "Sprich und klatsche: In. Sel. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Insel. How many syllables can you hear?",
+          "tip": "Say and clap: In. Sel. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Insel. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: In. Sel. Это 2 слога."
         }
       },
       "prompt": "Insel. Wie viele Silben hörst du?",
@@ -2465,12 +2465,12 @@
           "tip": "Sprich und klatsche: Ham. Mer. Das sind 2 Silben."
         },
         "en": {
-          "prompt": "Listen to the German word. How many syllables does it have?",
-          "tip": "Clap along with the German word. It has 2 syllables."
+          "prompt": "German word: Hammer. How many syllables can you hear?",
+          "tip": "Say and clap: Ham. Mer. That is 2 syllables."
         },
         "ru": {
-          "prompt": "Послушай немецкое слово. Сколько в нём слогов?",
-          "tip": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога."
+          "prompt": "Немецкое слово: Hammer. Сколько слогов ты слышишь?",
+          "tip": "Произнеси и хлопай: Ham. Mer. Это 2 слога."
         }
       },
       "prompt": "Hammer. Wie viele Silben hörst du?",
@@ -2498,11 +2498,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Fisch: F. I. S. C. H."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Fisch: F. I. S. C. H."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2531,11 +2531,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Vogel: V. O. G. E. L."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Vogel: V. O. G. E. L."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2563,11 +2563,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Mond: M. O. N. D."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Mond: M. O. N. D."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2595,11 +2595,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Baum: B. A. U. M."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Baum: B. A. U. M."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2627,11 +2627,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Zahn: Z. A. H. N."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Zahn: Z. A. H. N."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2659,11 +2659,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Fuss: F. U. S. S."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Fuss: F. U. S. S."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2691,11 +2691,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Ei: E. I."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Ei: E. I."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -2723,11 +2723,11 @@
         },
         "en": {
           "prompt": "Which German word matches the picture?",
-          "tip": "Match the written German word to the picture. Listen to its German reading next."
+          "tip": "Find the letters of Meer: M. E. E. R."
         },
         "ru": {
           "prompt": "Какое немецкое слово подходит к картинке?",
-          "tip": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки."
+          "tip": "Найди буквы слова Meer: M. E. E. R."
         }
       },
       "prompt": "Welches deutsche Wort passt zum Bild?",
@@ -4234,11 +4234,11 @@
         },
         "en": {
           "prompt": "What can push a ball that is still?",
-          "tip": "A hand can push the ball and make it move."
+          "tip": "A hand can exert a force on the ball and make it move."
         },
         "ru": {
           "prompt": "Что может толкнуть неподвижный мяч?",
-          "tip": "Рука может подействовать на мяч и привести его в движение."
+          "tip": "Рука может подействовать на мяч с силой и привести его в движение."
         }
       },
       "prompt": "Was kann einen ruhenden Ball anschubsen?",
@@ -5549,11 +5549,11 @@
           "tip": "In einem Wald wachsen viele Bäume zusammen."
         },
         "en": {
-          "prompt": "Where do many trees grow together?",
+          "prompt": "Where do many trees grow close together?",
           "tip": "Many trees grow together in a forest."
         },
         "ru": {
-          "prompt": "Где много деревьев растёт рядом?",
+          "prompt": "Где много деревьев растёт близко друг к другу?",
           "tip": "В лесу рядом растёт много деревьев."
         }
       },
@@ -5890,7 +5890,7 @@
         },
         "ru": {
           "prompt": "Что дождевые черви могут затаскивать в землю?",
-          "tip": "Дождевые черви затаскивают опавшие листья в свои ходы."
+          "tip": "Дождевые черви затаскивают отмершие опавшие листья в свои ходы."
         }
       },
       "prompt": "Was können Regenwürmer in die Erde ziehen?",
@@ -7565,11 +7565,11 @@
           "tip": "Zu laute Töne können dem Gehör schaden. Drehe die Lautstärke herunter."
         },
         "en": {
-          "prompt": "Which body part needs protection from very loud sounds?",
+          "prompt": "Which sense needs protection from very loud sounds?",
           "tip": "Very loud sounds can harm hearing. Turn the volume down."
         },
         "ru": {
-          "prompt": "Что нужно защищать от очень громких звуков?",
+          "prompt": "Какое чувство нужно защищать от очень громких звуков?",
           "tip": "Слишком громкие звуки могут повредить слух. Уменьшай громкость."
         }
       },
@@ -7765,7 +7765,7 @@
           "tip": "The brain helps you learn and remember."
         },
         "ru": {
-          "prompt": "Где обрабатываются воспоминания?",
+          "prompt": "Где обрабатывается много воспоминаний?",
           "tip": "Мозг помогает учиться и запоминать."
         }
       },
@@ -9137,7 +9137,7 @@
           "tip": "A river flows between its two banks."
         },
         "ru": {
-          "prompt": "Что течёт, имеет русло и два берега?",
+          "prompt": "Что длинное, течёт и имеет два берега?",
           "tip": "Река течёт между двумя берегами."
         }
       },

@@ -548,59 +548,485 @@
       "id": "area_geography"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many apples can you see?",
+      "file": "voice_en_b1954f606bb8a847dd51.ogg",
+      "seconds": 2.503673469387755,
+      "bytes": 16169,
+      "sha256": "a96b521a398acbdd46f10d85c71a689d42455a4e87990e7e6d372f47c1805fd9",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.21483,
+          "end": 0.37737,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "mˈɛniʲ",
+          "start": 0.447029,
+          "end": 0.783719,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ˈapəlz",
+          "start": 0.830159,
+          "end": 1.259728,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.329388,
+          "end": 1.491927,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.526757,
+          "end": 1.654467,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.747347,
+          "end": 2.107256,
+          "seconds": 0.359909
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_count"
     },
     {
-      "text": "Tap each picture once and count.",
-      "file": "voice_en_7f0df59ae43343454729.ogg",
-      "seconds": 3.0029024943310656,
-      "bytes": 19402,
-      "sha256": "d56e8db47eb78c9fd57569ac94fcda1c6fa0ec453f8a6b8a5c8c8533b39d2e08",
+      "text": "Tap each apple once. Count as you go.",
+      "file": "voice_en_a0a431a74ba5fef2f9b6.ogg",
+      "seconds": 3.851791383219955,
+      "bytes": 22391,
+      "sha256": "39228d43bb920596fb529adf4b107cb7a3d990f0350daa1721810c1d5468d409",
+      "phonetic_units": [
+        {
+          "phonemes": "tˈap",
+          "start": 0.22644,
+          "end": 0.516689,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ˈiːtʃ",
+          "start": 0.586349,
+          "end": 0.818549,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ˈapəl",
+          "start": 0.911429,
+          "end": 1.259728,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "wˈʌns.",
+          "start": 1.352608,
+          "end": 1.898277,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kˈaʊnt",
+          "start": 2.294376,
+          "end": 2.619456,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "az",
+          "start": 2.677506,
+          "end": 2.805215,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "juː",
+          "start": 2.851655,
+          "end": 3.002585,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "ɡˈəʊ.",
+          "start": 3.060635,
+          "end": 3.466984,
+          "seconds": 0.406349
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_count_hint"
     },
     {
-      "text": "3 and 2. How many altogether?",
-      "file": "voice_en_c0c93a6293136a7ed259.ogg",
-      "seconds": 3.747301587301587,
-      "bytes": 21850,
-      "sha256": "0577b4dee40187b44dab7ac7d7fb7a9f823ee28723e24836b2330134b0182f16",
+      "text": "Three apples and two apples. How many altogether?",
+      "file": "voice_en_1c7e1ee24b8967a7d0f5.ogg",
+      "seconds": 4.803809523809524,
+      "bytes": 28768,
+      "sha256": "2594b8ddb1940184e4784d56b0d5683eae540227e5145576541e7b4a1025f552",
+      "phonetic_units": [
+        {
+          "phonemes": "θɹˈiːʲ",
+          "start": 0.24966,
+          "end": 0.632789,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "ˈapəlz",
+          "start": 0.702449,
+          "end": 1.259728,
+          "seconds": 0.557279
+        },
+        {
+          "phonemes": "and",
+          "start": 1.282948,
+          "end": 1.468707,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 1.584807,
+          "end": 1.770567,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ˈapəlz.",
+          "start": 1.840227,
+          "end": 2.548435,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.921315,
+          "end": 3.130295,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "mˈɛniʲ",
+          "start": 3.165125,
+          "end": 3.513424,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ˌɔːltəɡˈɛðə?",
+          "start": 3.559864,
+          "end": 4.395782,
+          "seconds": 0.835918
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_add"
     },
     {
-      "text": "Count the left group, then keep counting the right group.",
-      "file": "voice_en_5787b50730b70ebbbc2d.ogg",
-      "seconds": 4.372879818594105,
-      "bytes": 27322,
-      "sha256": "8ad850ac408fcb63e28aa2643a3dfe2a1a810a9222686e689a48e427c6988623",
+      "text": "Count the left group first. Then keep counting on the right.",
+      "file": "voice_en_24ecfd0a6e8a2444d741.ogg",
+      "seconds": 4.989569160997733,
+      "bytes": 29991,
+      "sha256": "26c1e901bb38f7802511570f65c320b8f77d4ff3886c161d572548b216c30182",
+      "phonetic_units": [
+        {
+          "phonemes": "kˈaʊnt",
+          "start": 0.23805,
+          "end": 0.632789,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.679229,
+          "end": 0.760499,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "lˈɛft",
+          "start": 0.806939,
+          "end": 1.097188,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɡɹˈuːp",
+          "start": 1.155238,
+          "end": 1.468707,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "fˈɜːst.",
+          "start": 1.561587,
+          "end": 2.142086,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ðˈɛn",
+          "start": 2.596236,
+          "end": 2.921315,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "kˈiːp",
+          "start": 3.014195,
+          "end": 3.234785,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "kˈaʊntɪŋ",
+          "start": 3.350884,
+          "end": 3.803673,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "ɒnðə",
+          "start": 3.850113,
+          "end": 4.035873,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ɹˈaɪt.",
+          "start": 4.082313,
+          "end": 4.604762,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_add_hint"
     },
     {
-      "text": "There are 7. Take away 3. How many remain?",
-      "file": "voice_en_7b55ee17849ce6b1de2c.ogg",
-      "seconds": 4.700680272108843,
-      "bytes": 26618,
-      "sha256": "015ee88518b017caca92cacb687b4a1e971b2f4510edddc84df2a79a5f3492f0",
+      "text": "Seven leaves. Three fly away. How many remain?",
+      "file": "voice_en_be3a18f8078dd79905b3.ogg",
+      "seconds": 5.083809523809524,
+      "bytes": 28215,
+      "sha256": "6b9770a877d9cd37075fc145b687e36e2b5b91dccce1faaef7cd8aa4cf4de0e6",
+      "phonetic_units": [
+        {
+          "phonemes": "sˈɛvən",
+          "start": 0.23805,
+          "end": 0.690839,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "lˈiːvz.",
+          "start": 0.760499,
+          "end": 1.387438,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "θɹˈiː",
+          "start": 1.806757,
+          "end": 2.120227,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "flˈaɪ",
+          "start": 2.224717,
+          "end": 2.619456,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ɐwˈeɪ.",
+          "start": 2.665896,
+          "end": 3.130295,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 3.526395,
+          "end": 3.665714,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 3.735374,
+          "end": 4.048844,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "ɹɪmˈeɪn?",
+          "start": 4.106893,
+          "end": 4.652562,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_take"
     },
     {
-      "text": "Count only the pictures without a cross.",
-      "file": "voice_en_b0fab3573e330630862e.ogg",
-      "seconds": 3.2002721088435373,
-      "bytes": 21051,
-      "sha256": "f691c1567cb506f9b2c2730b4a62c310f536a9066430ec38f9a14376ecde7b69",
+      "text": "Count only the leaves without a cross.",
+      "file": "voice_en_8c9640676e73af65287c.ogg",
+      "seconds": 3.119002267573696,
+      "bytes": 19956,
+      "sha256": "6d26c93f6f3bc202c0e1c4e7bea4326ddb7e6a5368e85f1bd54afd41927ee265",
+      "phonetic_units": [
+        {
+          "phonemes": "kˈaʊnt",
+          "start": 0.23805,
+          "end": 0.667619,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ˈəʊnli",
+          "start": 0.690839,
+          "end": 0.992698,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ðə",
+          "start": 1.039138,
+          "end": 1.132018,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "lˈiːvz",
+          "start": 1.190068,
+          "end": 1.515147,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "wɪðˌaʊt",
+          "start": 1.573197,
+          "end": 1.875057,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 1.898277,
+          "end": 1.933107,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "kɹˈɒs.",
+          "start": 2.002766,
+          "end": 2.699365,
+          "seconds": 0.696599
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_take_hint"
     },
     {
-      "text": "There are 4. How many more make 10?",
-      "file": "voice_en_e871bff81cdbfa742ede.ogg",
-      "seconds": 3.2712925170068026,
-      "bytes": 18537,
-      "sha256": "f73d359af05922eb0f1d9abad286d599dd4de6bb817fe5050afe7bb53fcb0d7e",
+      "text": "Four stars are already there. How many more make ten?",
+      "file": "voice_en_41733e5ae1008f69e7ad.ogg",
+      "seconds": 4.583219954648526,
+      "bytes": 26800,
+      "sha256": "2976dd732af7c4870faf3ecb0241664d6b530008a248756011b5f6763eeb906b",
+      "phonetic_units": [
+        {
+          "phonemes": "fˈɔː",
+          "start": 0.24966,
+          "end": 0.528299,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "stˈɑːz",
+          "start": 0.644399,
+          "end": 1.039138,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ɑːɹ",
+          "start": 1.073968,
+          "end": 1.259728,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ɔːlɹˌɛdi",
+          "start": 1.364218,
+          "end": 1.782177,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ðˈeə.",
+          "start": 1.840227,
+          "end": 2.211746,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.596236,
+          "end": 2.770385,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.805215,
+          "end": 3.083855,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "mˈɔː",
+          "start": 3.130295,
+          "end": 3.374104,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "mˌeɪk",
+          "start": 3.420544,
+          "end": 3.687574,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "tˈɛn?",
+          "start": 3.768844,
+          "end": 4.186803,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_ten"
     },
     {
@@ -612,59 +1038,431 @@
       "id": "math_ten_hint"
     },
     {
-      "text": "Which group has more?",
-      "file": "voice_en_fc3f1afa9e582f3891d8.ogg",
-      "seconds": 2.108934240362812,
-      "bytes": 13370,
-      "sha256": "311e8075f9b84fcc370b10ebefa9697177dc2c6d9df6613da6c037daeb456b6c",
+      "text": "Where are there more apples?",
+      "file": "voice_en_3a678b37855a7c65ac9f.ogg",
+      "seconds": 2.0160544217687075,
+      "bytes": 12643,
+      "sha256": "70c1acd16bf5066fe539c41a43d1442281ac5e34d2b33ab4fc5d33f6046f5aee",
+      "phonetic_units": [
+        {
+          "phonemes": "wˌeəɹ",
+          "start": 0.20322,
+          "end": 0.38898,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 0.4122,
+          "end": 0.458639,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðeə",
+          "start": 0.493469,
+          "end": 0.656009,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "mˈɔːɹ",
+          "start": 0.679229,
+          "end": 0.864989,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "ˈapəlz?",
+          "start": 0.911429,
+          "end": 1.642857,
+          "seconds": 0.731429
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_compare"
     },
     {
-      "text": "Count both groups and tap the larger one.",
-      "file": "voice_en_009e60ceddb22dfe4968.ogg",
-      "seconds": 3.339591836734694,
-      "bytes": 20668,
-      "sha256": "aa2b45bd29192e1ad8e885ffaa83e844de04645621029edffbdc9b209d928029",
+      "text": "Compare both groups. Tap the larger group.",
+      "file": "voice_en_c866048155510b85bd01.ogg",
+      "seconds": 3.944671201814059,
+      "bytes": 22826,
+      "sha256": "94c2e03655fc26b138185420c4a23416c709db208b03e7e4ecd20f2afe98d260",
+      "phonetic_units": [
+        {
+          "phonemes": "kəmpˈeə",
+          "start": 0.21483,
+          "end": 0.714059,
+          "seconds": 0.499229
+        },
+        {
+          "phonemes": "bˈəʊθ",
+          "start": 0.783719,
+          "end": 1.039138,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "ɡɹˈuːps.",
+          "start": 1.143628,
+          "end": 1.817007,
+          "seconds": 0.673379
+        },
+        {
+          "phonemes": "tˈap",
+          "start": 2.155057,
+          "end": 2.387256,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ðə",
+          "start": 2.433696,
+          "end": 2.526576,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "lˈɑːdʒə",
+          "start": 2.607846,
+          "end": 2.979365,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ɡɹˈuːp.",
+          "start": 3.095465,
+          "end": 3.548254,
+          "seconds": 0.452789
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_compare_hint"
     },
     {
-      "text": "Which number comes next?",
-      "file": "voice_en_171713fd23f2ef131f19.ogg",
-      "seconds": 2.3527437641723354,
-      "bytes": 15816,
-      "sha256": "e8687bb0130f230968f9fe006e3bad77eddb5c3a3f848c8559c09f650daed55d",
+      "text": "Two, four, six. Which number comes next?",
+      "file": "voice_en_4b4c0ad80224fd205ece.ogg",
+      "seconds": 4.2929705215419505,
+      "bytes": 25932,
+      "sha256": "29356f5ec8da3d9904056272c51140545e468d19a4eeadc3ff3777f55c4b83d2",
+      "phonetic_units": [
+        {
+          "phonemes": "tˈuː,",
+          "start": 0.26127,
+          "end": 0.597959,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "fˈɔː,",
+          "start": 0.679229,
+          "end": 1.166848,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sˈɪks.",
+          "start": 1.236508,
+          "end": 1.805397,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 2.166667,
+          "end": 2.410476,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "nˈʌmbə",
+          "start": 2.433696,
+          "end": 2.840045,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "kˈʌmz",
+          "start": 2.898095,
+          "end": 3.281224,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "nˈɛkst?",
+          "start": 3.327664,
+          "end": 3.919773,
+          "seconds": 0.592109
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_steps"
     },
     {
-      "text": "Add 2 each time.",
-      "file": "voice_en_dbdc2ff9b62038d33396.ogg",
-      "seconds": 2.108934240362812,
-      "bytes": 13313,
-      "sha256": "c453471acf3a65bf0ce91fb84ef5b2074c6ccac26567c5d67c0519efbe1f815c",
+      "text": "Add two each time.",
+      "file": "voice_en_990388f91f4f17c02c83.ogg",
+      "seconds": 2.085714285714286,
+      "bytes": 13451,
+      "sha256": "0519a3b3a243ba9b87214e7d65bcbf174a427e05be38fb0fd57659c7762fe075",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈad",
+          "start": 0.21483,
+          "end": 0.470249,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 0.574739,
+          "end": 0.806939,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ˈiːtʃ",
+          "start": 0.888209,
+          "end": 1.120408,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "tˈaɪm.",
+          "start": 1.213288,
+          "end": 1.724127,
+          "seconds": 0.510839
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_steps_hint"
     },
     {
-      "text": "10 and 4. How many altogether?",
-      "file": "voice_en_3e1445108f7ea8fe3c45.ogg",
-      "seconds": 3.364172335600907,
-      "bytes": 19826,
-      "sha256": "625f20fcb33564736683609e174228504508b4062862ac1a05e25a9d9bf8dcdb",
+      "text": "Ten and four. How many altogether?",
+      "file": "voice_en_6faed6ad92d5f2f869bf.ogg",
+      "seconds": 3.5963718820861676,
+      "bytes": 21001,
+      "sha256": "50553a8646d352bd46395de36c117855a8a9c372c9ee121b7627d6d4e7531b6a",
+      "phonetic_units": [
+        {
+          "phonemes": "tˈɛn",
+          "start": 0.26127,
+          "end": 0.597959,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "and",
+          "start": 0.725669,
+          "end": 0.841769,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "fˈɔː.",
+          "start": 1.027528,
+          "end": 1.480317,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 1.829977,
+          "end": 1.992517,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "mˈɛniʲ",
+          "start": 2.038957,
+          "end": 2.340816,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ˌɔːltəɡˈɛðə?",
+          "start": 2.364036,
+          "end": 3.199955,
+          "seconds": 0.835918
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_twenty"
     },
     {
-      "text": "Count the left group, then keep counting the right group.",
-      "file": "voice_en_5787b50730b70ebbbc2d.ogg",
-      "seconds": 4.372879818594105,
-      "bytes": 27322,
-      "sha256": "8ad850ac408fcb63e28aa2643a3dfe2a1a810a9222686e689a48e427c6988623",
+      "text": "The first group has ten. Count on four more.",
+      "file": "voice_en_e9fc7b10ce3f8ffb8be8.ogg",
+      "seconds": 4.246530612244898,
+      "bytes": 24834,
+      "sha256": "63d518e3eb7c523a33a7949e77af819aff3364af1618c128a68e2162d6766a7d",
+      "phonetic_units": [
+        {
+          "phonemes": "ðə",
+          "start": 0.36576,
+          "end": 0.470249,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 0.516689,
+          "end": 0.899819,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "ɡɹˈuːp",
+          "start": 0.946259,
+          "end": 1.259728,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "hɐz",
+          "start": 1.317778,
+          "end": 1.549977,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "tˈɛn.",
+          "start": 1.689297,
+          "end": 2.153696,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "kˈaʊnt",
+          "start": 2.514966,
+          "end": 2.851655,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ˌɒn",
+          "start": 2.874875,
+          "end": 3.014195,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "fˈɔː",
+          "start": 3.153515,
+          "end": 3.397324,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "mˈɔː.",
+          "start": 3.443764,
+          "end": 3.861723,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_twenty_hint"
     },
     {
-      "text": "There are 5. How many more make 8?",
-      "file": "voice_en_e01998e0081e0290a740.ogg",
-      "seconds": 3.8750113378684805,
-      "bytes": 22952,
-      "sha256": "e3a8d0ce3bff7a597c87af967bbe0d9f2121a9f94617964625936a3839194096",
+      "text": "Five stars are already there. How many more make eight?",
+      "file": "voice_en_7bf7ea019610ce34fd23.ogg",
+      "seconds": 4.803809523809524,
+      "bytes": 28627,
+      "sha256": "5613aa6c6a694d442c972f6f0c4cdd33c5ec9f09e624f6e6fe537ffe63eea882",
+      "phonetic_units": [
+        {
+          "phonemes": "fˈaɪv",
+          "start": 0.22644,
+          "end": 0.621179,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "stˈɑːz",
+          "start": 0.748889,
+          "end": 1.201678,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "ɑːɹ",
+          "start": 1.236508,
+          "end": 1.387438,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "ɔːlɹˌɛdi",
+          "start": 1.480317,
+          "end": 1.944717,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "ðˈeə.",
+          "start": 2.002766,
+          "end": 2.316236,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.700726,
+          "end": 2.863265,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.909705,
+          "end": 3.211565,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "mˈɔː",
+          "start": 3.258005,
+          "end": 3.536644,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "mˌeɪk",
+          "start": 3.559864,
+          "end": 3.768844,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ˈeɪt?",
+          "start": 3.826893,
+          "end": 4.407392,
+          "seconds": 0.580499
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_split"
     },
     {
@@ -684,11 +1482,77 @@
       "id": "german_sun"
     },
     {
-      "text": "The German word starts with the letter S. Choose that letter.",
-      "file": "voice_en_e8302123f9996c9c5571.ogg",
-      "seconds": 4.757369614512472,
-      "bytes": 28896,
-      "sha256": "333602064371aa291054989b5222bb8a39c67a95877d7eef4ae1250be3dc7405",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_sun_hint"
     },
     {
@@ -700,11 +1564,77 @@
       "id": "german_mouse"
     },
     {
-      "text": "The German word starts with the letter M. Choose that letter.",
-      "file": "voice_en_82bc60df48a0316866f0.ogg",
-      "seconds": 4.56,
-      "bytes": 27822,
-      "sha256": "c9ae0b376322b2ae2611b5020ce3228f1801a6d47c2365871cafe838c014e668",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_mouse_hint"
     },
     {
@@ -716,43 +1646,367 @@
       "id": "german_apple"
     },
     {
-      "text": "The German word starts with the letter A. Choose that letter.",
-      "file": "voice_en_d891d8ee03f296fbd4f2.ogg",
-      "seconds": 4.548390022675737,
-      "bytes": 27299,
-      "sha256": "f6240547aba38e7d27feaf178cb6562f104152410afb1aa16f02f3b1a8e041de",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_apple_hint"
     },
     {
-      "text": "Listen to the German words. Which one rhymes with the word for house?",
-      "file": "voice_en_6b608882071702bdf285.ogg",
-      "seconds": 5.488798185941043,
-      "bytes": 32313,
-      "sha256": "63659a34fbd5160546251a9bd0d4e5c907ce93a3edbf2c60184b848997aded7e",
+      "text": "Listen to the German words. Which ones rhyme?",
+      "file": "voice_en_6d30ef62ee40b743c9ec.ogg",
+      "seconds": 4.188480725623583,
+      "bytes": 24594,
+      "sha256": "5a26ba3eeb6e8f32bdd0ed3bd4d6c264c24b91ea4a052dfd4d2b379f50f3a786",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.586349,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.644399,
+          "end": 0.725669,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.422268,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "wˈɜːdz.",
+          "start": 1.480317,
+          "end": 2.211746,
+          "seconds": 0.731429
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 2.549796,
+          "end": 2.712336,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "wˈɒnz",
+          "start": 2.770385,
+          "end": 3.118685,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɹˈaɪm?",
+          "start": 3.234785,
+          "end": 3.780454,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_rhyme"
     },
     {
-      "text": "The German words for house and mouse rhyme: listen to the German example.",
-      "file": "voice_en_6f31cbd0b65dd78c6113.ogg",
-      "seconds": 5.684807256235827,
-      "bytes": 35329,
-      "sha256": "67ae76b8b87d5b4343cff67f0d916219c34e27b717d604ebfd94c95a33119e14",
+      "text": "Listen to the two German words that rhyme.",
+      "file": "voice_en_3d45da7f90cb052ea0e9.ogg",
+      "seconds": 3.1654421768707484,
+      "bytes": 20184,
+      "sha256": "c7798a08012fe8e0409a3f6a69b3164ce644c01e1639eb75621697228ed5be54",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.516689,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.574739,
+          "end": 0.644399,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.679229,
+          "end": 0.783719,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 0.853379,
+          "end": 1.027528,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 1.073968,
+          "end": 1.561587,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːdz",
+          "start": 1.619637,
+          "end": 1.979546,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ðat",
+          "start": 2.014376,
+          "end": 2.223356,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ɹˈaɪm.",
+          "start": 2.304626,
+          "end": 2.792245,
+          "seconds": 0.487619
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_rhyme_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_robot"
     },
     {
-      "text": "Clap along with the German word. It has 3 syllables.",
-      "file": "voice_en_dbb700320a73cd875fce.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 28438,
-      "sha256": "69a9a659be0bd8514c4fba01579da476a5bd6a5367b859918b39b5b1badb412b",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_robot_hint"
     },
     {
@@ -764,27 +2018,243 @@
       "id": "german_read"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_read_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_flower"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_flower_hint"
     },
     {
@@ -796,11 +2266,77 @@
       "id": "german_fish"
     },
     {
-      "text": "The German word starts with the letter F. Choose that letter.",
-      "file": "voice_en_c400724dcfe702550411.ogg",
-      "seconds": 4.629659863945578,
-      "bytes": 28618,
-      "sha256": "6d02b5e36eda763643a20d467bc3c5d3e20cd64edd2966b505f3890aca6f7588",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_fish_hint"
     },
     {
@@ -932,11 +2468,59 @@
       "id": "logic_rule_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many bees can you see?",
+      "file": "voice_en_c0b06a5d2fa424a2bfd7.ogg",
+      "seconds": 2.5849433106575965,
+      "bytes": 17060,
+      "sha256": "4e8424978e1b57ecd94be7303db6bea4c32a3c67dd182b7517ecb9d11b2bd984",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.22644,
+          "end": 0.4122,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.447029,
+          "end": 0.830159,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "bˈiːz",
+          "start": 0.853379,
+          "end": 1.306168,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.410658,
+          "end": 1.561587,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.584807,
+          "end": 1.724127,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.840227,
+          "end": 2.211746,
+          "seconds": 0.371519
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_09"
     },
     {
@@ -948,11 +2532,59 @@
       "id": "math_09_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many fish can you see?",
+      "file": "voice_en_ab55721afe90a88d0984.ogg",
+      "seconds": 2.2946938775510204,
+      "bytes": 14955,
+      "sha256": "76583927218cb3a3d06a792dbb000596b99fc6c4bcb0733610e634bc1d64ad80",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.23805,
+          "end": 0.470249,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.505079,
+          "end": 0.806939,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "fˈɪʃ",
+          "start": 0.888209,
+          "end": 1.132018,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.178458,
+          "end": 1.340998,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.364218,
+          "end": 1.526757,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.619637,
+          "end": 1.921497,
+          "seconds": 0.301859
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_10"
     },
     {
@@ -964,11 +2596,59 @@
       "id": "math_10_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many flowers can you see?",
+      "file": "voice_en_03e9a6d9e055454b35d4.ogg",
+      "seconds": 2.6429931972789116,
+      "bytes": 17244,
+      "sha256": "464b214d062863df97bd0cb072db2adad863ba89152846ffde1ff517691f8828",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.21483,
+          "end": 0.38898,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.447029,
+          "end": 0.748889,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "flˈaʊəz",
+          "start": 0.818549,
+          "end": 1.387438,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.457098,
+          "end": 1.642857,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.666077,
+          "end": 1.770567,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.875057,
+          "end": 2.258186,
+          "seconds": 0.383129
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_11"
     },
     {
@@ -980,11 +2660,59 @@
       "id": "math_11_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many leaves can you see?",
+      "file": "voice_en_baf77d5f7b0b491205a6.ogg",
+      "seconds": 2.3991836734693877,
+      "bytes": 15964,
+      "sha256": "b6c30f3ccdf34d9717b769d4d3f6684a0791e68ffd99b2645dd116fca41057ba",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.22644,
+          "end": 0.40059,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.447029,
+          "end": 0.725669,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "lˈiːvz",
+          "start": 0.795329,
+          "end": 1.132018,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.201678,
+          "end": 1.364218,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.387438,
+          "end": 1.561587,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.642857,
+          "end": 1.979546,
+          "seconds": 0.336689
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_12"
     },
     {
@@ -996,11 +2724,59 @@
       "id": "math_12_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many stars can you see?",
+      "file": "voice_en_fc88c305acfc7e5b35e2.ogg",
+      "seconds": 2.6778231292517005,
+      "bytes": 17494,
+      "sha256": "e0a59fa31effcdfccb2df98f713e28de04c612bde55bb7096ce5df7f439caa0d",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.21483,
+          "end": 0.43542,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.481859,
+          "end": 0.818549,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "stˈɑːz",
+          "start": 0.934649,
+          "end": 1.457098,
+          "seconds": 0.522449
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.538367,
+          "end": 1.700907,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.735737,
+          "end": 1.817007,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.909887,
+          "end": 2.258186,
+          "seconds": 0.348299
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_13"
     },
     {
@@ -1012,11 +2788,59 @@
       "id": "math_13_hint"
     },
     {
-      "text": "How many can you see?",
-      "file": "voice_en_22278913966e06682f20.ogg",
-      "seconds": 1.876734693877551,
-      "bytes": 12257,
-      "sha256": "cad29651f44c6b63519c38e72cff7654fea836e4caf3a8003c2b3a46e0fe6c6a",
+      "text": "How many apples can you see?",
+      "file": "voice_en_b1954f606bb8a847dd51.ogg",
+      "seconds": 2.503673469387755,
+      "bytes": 16169,
+      "sha256": "a96b521a398acbdd46f10d85c71a689d42455a4e87990e7e6d372f47c1805fd9",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌaʊ",
+          "start": 0.21483,
+          "end": 0.37737,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "mˈɛniʲ",
+          "start": 0.447029,
+          "end": 0.783719,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ˈapəlz",
+          "start": 0.830159,
+          "end": 1.259728,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "kan",
+          "start": 1.329388,
+          "end": 1.491927,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "juː",
+          "start": 1.526757,
+          "end": 1.654467,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "sˈiː?",
+          "start": 1.747347,
+          "end": 2.107256,
+          "seconds": 0.359909
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_14"
     },
     {
@@ -1452,11 +3276,77 @@
       "id": "german_09"
     },
     {
-      "text": "The German word starts with the letter B. Choose that letter.",
-      "file": "voice_en_1609cd4adff857c1714a.ogg",
-      "seconds": 5.256598639455782,
-      "bytes": 32096,
-      "sha256": "0e8093dae3229177b6e848deefe98771cdade90e8f8799e1e26df6b6d8929c30",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_09_hint"
     },
     {
@@ -1468,11 +3358,77 @@
       "id": "german_10"
     },
     {
-      "text": "The German word starts with the letter F. Choose that letter.",
-      "file": "voice_en_c400724dcfe702550411.ogg",
-      "seconds": 4.629659863945578,
-      "bytes": 28618,
-      "sha256": "6d02b5e36eda763643a20d467bc3c5d3e20cd64edd2966b505f3890aca6f7588",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_10_hint"
     },
     {
@@ -1484,11 +3440,77 @@
       "id": "german_11"
     },
     {
-      "text": "The German word starts with the letter K. Choose that letter.",
-      "file": "voice_en_94a67a87eedfe8f8ff3f.ogg",
-      "seconds": 5.0127891156462585,
-      "bytes": 30736,
-      "sha256": "0b61755edb5e29671e3eb0ab851179b60af188c68cbb56b59ed19fb0e7c4687c",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_11_hint"
     },
     {
@@ -1500,11 +3522,77 @@
       "id": "german_12"
     },
     {
-      "text": "The German word starts with the letter N. Choose that letter.",
-      "file": "voice_en_73cb65c13b00394f8a6c.ogg",
-      "seconds": 4.536780045351474,
-      "bytes": 27917,
-      "sha256": "90ec97772112d6d7af8317dd0692643fbadf5295f1ee2789e5f67c0187f3e322",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_12_hint"
     },
     {
@@ -1516,11 +3604,77 @@
       "id": "german_13"
     },
     {
-      "text": "The German word starts with the letter W. Choose that letter.",
-      "file": "voice_en_47323553cd66a2a2cfb9.ogg",
-      "seconds": 4.931519274376417,
-      "bytes": 29548,
-      "sha256": "d4ba614978e05fb0f3fb067b04c1640c2ea6fc7f56717e492fa6db7074ff9940",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_13_hint"
     },
     {
@@ -1532,11 +3686,77 @@
       "id": "german_14"
     },
     {
-      "text": "The German word starts with the letter W. Choose that letter.",
-      "file": "voice_en_47323553cd66a2a2cfb9.ogg",
-      "seconds": 4.931519274376417,
-      "bytes": 29548,
-      "sha256": "d4ba614978e05fb0f3fb067b04c1640c2ea6fc7f56717e492fa6db7074ff9940",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_14_hint"
     },
     {
@@ -1548,11 +3768,77 @@
       "id": "german_15"
     },
     {
-      "text": "The German word starts with the letter S. Choose that letter.",
-      "file": "voice_en_e8302123f9996c9c5571.ogg",
-      "seconds": 4.757369614512472,
-      "bytes": 28896,
-      "sha256": "333602064371aa291054989b5222bb8a39c67a95877d7eef4ae1250be3dc7405",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_15_hint"
     },
     {
@@ -1564,11 +3850,77 @@
       "id": "german_16"
     },
     {
-      "text": "The German word starts with the letter S. Choose that letter.",
-      "file": "voice_en_e8302123f9996c9c5571.ogg",
-      "seconds": 4.757369614512472,
-      "bytes": 28896,
-      "sha256": "333602064371aa291054989b5222bb8a39c67a95877d7eef4ae1250be3dc7405",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_16_hint"
     },
     {
@@ -1580,11 +3932,77 @@
       "id": "german_17"
     },
     {
-      "text": "The German word starts with the letter H. Choose that letter.",
-      "file": "voice_en_42ff7ac16157660aece6.ogg",
-      "seconds": 4.919909297052154,
-      "bytes": 29753,
-      "sha256": "7dad378bcbab5c471c57e3b5d933585b913d7a8fc214be426bc2e4c16feabd62",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_17_hint"
     },
     {
@@ -1596,11 +4014,77 @@
       "id": "german_18"
     },
     {
-      "text": "The German word starts with the letter N. Choose that letter.",
-      "file": "voice_en_73cb65c13b00394f8a6c.ogg",
-      "seconds": 4.536780045351474,
-      "bytes": 27917,
-      "sha256": "90ec97772112d6d7af8317dd0692643fbadf5295f1ee2789e5f67c0187f3e322",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_18_hint"
     },
     {
@@ -1612,11 +4096,77 @@
       "id": "german_19"
     },
     {
-      "text": "The German word starts with the letter H. Choose that letter.",
-      "file": "voice_en_42ff7ac16157660aece6.ogg",
-      "seconds": 4.919909297052154,
-      "bytes": 29753,
-      "sha256": "7dad378bcbab5c471c57e3b5d933585b913d7a8fc214be426bc2e4c16feabd62",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_19_hint"
     },
     {
@@ -1628,203 +4178,1925 @@
       "id": "german_20"
     },
     {
-      "text": "The German word starts with the letter H. Choose that letter.",
-      "file": "voice_en_42ff7ac16157660aece6.ogg",
-      "seconds": 4.919909297052154,
-      "bytes": 29753,
-      "sha256": "7dad378bcbab5c471c57e3b5d933585b913d7a8fc214be426bc2e4c16feabd62",
+      "text": "Listen to the German word and its first letter.",
+      "file": "voice_en_5934377185fbf18cac0a.ogg",
+      "seconds": 3.8388208616780046,
+      "bytes": 24189,
+      "sha256": "f1198339ef950de9a79c4d3af263ebb417e7077f545609bd5c1c1a10dd22c4c6",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.621179,
+          "end": 0.690839,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.737279,
+          "end": 0.818549,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.853379,
+          "end": 1.329388,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.399048,
+          "end": 1.793787,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "and",
+          "start": 2.037596,
+          "end": 2.327846,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.409116,
+          "end": 2.571655,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "fˈɜːst",
+          "start": 2.652925,
+          "end": 2.978005,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "lˈɛtə.",
+          "start": 3.047664,
+          "end": 3.465624,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_20_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_21"
     },
     {
-      "text": "Clap along with the German word. It has 3 syllables.",
-      "file": "voice_en_dbb700320a73cd875fce.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 28438,
-      "sha256": "69a9a659be0bd8514c4fba01579da476a5bd6a5367b859918b39b5b1badb412b",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_21_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_22"
     },
     {
-      "text": "Clap along with the German word. It has 3 syllables.",
-      "file": "voice_en_dbb700320a73cd875fce.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 28438,
-      "sha256": "69a9a659be0bd8514c4fba01579da476a5bd6a5367b859918b39b5b1badb412b",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_22_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_23"
     },
     {
-      "text": "Clap along with the German word. It has 3 syllables.",
-      "file": "voice_en_dbb700320a73cd875fce.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 28438,
-      "sha256": "69a9a659be0bd8514c4fba01579da476a5bd6a5367b859918b39b5b1badb412b",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_23_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_24"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_24_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_25"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_25_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_26"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_26_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_27"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_27_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_28"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_28_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_29"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_29_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_30"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_30_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_31"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_31_hint"
     },
     {
-      "text": "Listen to the German word. How many syllables does it have?",
-      "file": "voice_en_830286e7af0574522c30.ogg",
-      "seconds": 4.792199546485261,
-      "bytes": 29438,
-      "sha256": "b1d29a963010cb3e8773f87af028d99139b3affcafb07abbe11d8cb0c9b0d01f",
+      "text": "Listen to the German word. How many syllables can you hear?",
+      "file": "voice_en_c8d173bc552622b95cda.ogg",
+      "seconds": 4.734149659863945,
+      "bytes": 29031,
+      "sha256": "c017bc44b99cda9145d6c4ae62d8f8f73420b5ef5b00150e8a89aa52148e714d",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.22644,
+          "end": 0.574739,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.632789,
+          "end": 0.725669,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.783719,
+          "end": 0.841769,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.888209,
+          "end": 1.352608,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "wˈɜːd.",
+          "start": 1.445488,
+          "end": 1.979546,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.317596,
+          "end": 2.503356,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 2.538186,
+          "end": 2.840045,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "sˈɪləbəlz",
+          "start": 2.874875,
+          "end": 3.420544,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "kan",
+          "start": 3.478594,
+          "end": 3.652744,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "juː",
+          "start": 3.699184,
+          "end": 3.838503,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "hˈiə?",
+          "start": 3.908163,
+          "end": 4.337732,
+          "seconds": 0.429569
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_32"
     },
     {
-      "text": "Clap along with the German word. It has 2 syllables.",
-      "file": "voice_en_5879e08b5a95a36caea1.ogg",
-      "seconds": 4.815419501133787,
-      "bytes": 28386,
-      "sha256": "663b4f0895569dae1a0a74266ee1a84c354b1a8266a58f7991dc5f3a52f8d57f",
+      "text": "Listen to the German example and clap along.",
+      "file": "voice_en_ab788c2dcdd45ec482e2.ogg",
+      "seconds": 3.618231292517007,
+      "bytes": 23823,
+      "sha256": "50b901c963e393d67f112e9a1f9d07ecdd14b26b2b54a517f877972f8ac2b6f0",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.21483,
+          "end": 0.493469,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.539909,
+          "end": 0.621179,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.690839,
+          "end": 0.737279,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.783719,
+          "end": 1.364218,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ɛɡzˈampəl",
+          "start": 1.457098,
+          "end": 2.084036,
+          "seconds": 0.626939
+        },
+        {
+          "phonemes": "and",
+          "start": 2.142086,
+          "end": 2.258186,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "klˈap",
+          "start": 2.362676,
+          "end": 2.722585,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "ɐlˈɒŋ.",
+          "start": 2.780635,
+          "end": 3.198594,
+          "seconds": 0.417959
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_32_hint"
     },
     {
@@ -1836,11 +6108,89 @@
       "id": "german_33"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_33_hint"
     },
     {
@@ -1852,11 +6202,89 @@
       "id": "german_34"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_34_hint"
     },
     {
@@ -1868,11 +6296,89 @@
       "id": "german_35"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_35_hint"
     },
     {
@@ -1884,11 +6390,89 @@
       "id": "german_36"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_36_hint"
     },
     {
@@ -1900,11 +6484,89 @@
       "id": "german_37"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_37_hint"
     },
     {
@@ -1916,11 +6578,89 @@
       "id": "german_38"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_38_hint"
     },
     {
@@ -1932,11 +6672,89 @@
       "id": "german_39"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_39_hint"
     },
     {
@@ -1948,11 +6766,89 @@
       "id": "german_40"
     },
     {
-      "text": "Match the written German word to the picture. Listen to its German reading next.",
-      "file": "voice_en_1bfd1080be4cda257195.ogg",
-      "seconds": 5.790657596371882,
-      "bytes": 35637,
-      "sha256": "c99854b1cbd999fd95eb0133a0e61364fcbdee78d23cf2802be0cb7baaa7cb58",
+      "text": "Listen to the German word and how its letters are spelled.",
+      "file": "voice_en_2d6be8f54defb1e5cfdb.ogg",
+      "seconds": 4.442539682539683,
+      "bytes": 28247,
+      "sha256": "e4b5d7765d0827e8f1650643d0c2306d0960c4ee16ec00543f169da09595bc5b",
+      "phonetic_units": [
+        {
+          "phonemes": "lˈɪsən",
+          "start": 0.23805,
+          "end": 0.528299,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tə",
+          "start": 0.597959,
+          "end": 0.644399,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "ðə",
+          "start": 0.702449,
+          "end": 0.818549,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dʒˈɜːmən",
+          "start": 0.841769,
+          "end": 1.329388,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 1.364218,
+          "end": 1.747347,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "and",
+          "start": 1.979546,
+          "end": 2.142086,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "hˌaʊ",
+          "start": 2.211746,
+          "end": 2.443946,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "ɪts",
+          "start": 2.490385,
+          "end": 2.618095,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.687755,
+          "end": 3.105714,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 3.210204,
+          "end": 3.361134,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "spˈɛld.",
+          "start": 3.512063,
+          "end": 4.057732,
+          "seconds": 0.545669
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_40_hint"
     },
     {
@@ -3444,11 +8340,95 @@
       "id": "physics_18"
     },
     {
-      "text": "A hand can push the ball and make it move.",
-      "file": "voice_en_41ef8c7fcad08531b40c.ogg",
-      "seconds": 4.001360544217687,
-      "bytes": 24719,
-      "sha256": "1a999766fca0983215c73e730aba974d0f2477acb4a962ec28c1454744dc0c1f",
+      "text": "A hand can exert a force on the ball and make it move.",
+      "file": "voice_en_cbc69b0c16d836990b43.ogg",
+      "seconds": 4.454149659863946,
+      "bytes": 28278,
+      "sha256": "41e3ed7e8e1a49852e44cc17a5c1b6f87b4ae74656a7d11cda8e6aec06864268",
+      "phonetic_units": [
+        {
+          "phonemes": "ɐ",
+          "start": 0.22644,
+          "end": 0.26127,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "hˈand",
+          "start": 0.35415,
+          "end": 0.737279,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "kan",
+          "start": 0.795329,
+          "end": 0.923039,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "ɛɡzˈɜːt",
+          "start": 1.004308,
+          "end": 1.433878,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 1.480317,
+          "end": 1.561587,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "fˈɔːs",
+          "start": 1.654467,
+          "end": 2.025986,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ɒnðə",
+          "start": 2.084036,
+          "end": 2.327846,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "bˈɔːl",
+          "start": 2.374286,
+          "end": 2.885125,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "and",
+          "start": 3.082494,
+          "end": 3.198594,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "mˌeɪk",
+          "start": 3.233424,
+          "end": 3.407574,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "ɪt",
+          "start": 3.465624,
+          "end": 3.581723,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "mˈuːv.",
+          "start": 3.686213,
+          "end": 4.092562,
+          "seconds": 0.406349
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "physics_18_hint"
     },
     {
@@ -5736,11 +10716,95 @@
       "id": "biology_24_hint"
     },
     {
-      "text": "Where do many trees grow together? Choose from: forest. sea. desert.",
-      "file": "voice_en_9bbbf8e99584f6bae92c.ogg",
-      "seconds": 5.988027210884353,
-      "bytes": 36604,
-      "sha256": "a866fd1932a619372a6bf1a60b62a1ffe09b1785c44b87201f79b29924a6706f",
+      "text": "Where do many trees grow close together? Choose from: forest. sea. desert.",
+      "file": "voice_en_ec35d75ba385d171d35d.ogg",
+      "seconds": 6.847165532879819,
+      "bytes": 40713,
+      "sha256": "54334fbe6fd5c4438671cae41e5de6dc54ca4f3df695c845a82a1806997ac93c",
+      "phonetic_units": [
+        {
+          "phonemes": "wˌeə",
+          "start": 0.20322,
+          "end": 0.37737,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "dˈuː",
+          "start": 0.4122,
+          "end": 0.563129,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "mˈɛni",
+          "start": 0.586349,
+          "end": 0.876599,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "tɹˈiːz",
+          "start": 0.934649,
+          "end": 1.306168,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ɡɹˈəʊ",
+          "start": 1.410658,
+          "end": 1.631247,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "klˈəʊs",
+          "start": 1.700907,
+          "end": 2.037596,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "təɡˈɛðə?",
+          "start": 2.084036,
+          "end": 2.629705,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "tʃˈuːz",
+          "start": 3.025805,
+          "end": 3.513424,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "fɹɒm:",
+          "start": 3.606304,
+          "end": 4.465442,
+          "seconds": 0.859138
+        },
+        {
+          "phonemes": "fˈɒɹɪst",
+          "start": 4.825351,
+          "end": 5.4639,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "sˈiː",
+          "start": 5.54517,
+          "end": 5.80059,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "dˈɛzət.",
+          "start": 5.858639,
+          "end": 6.473968,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "biology_25"
     },
     {
@@ -9870,95 +14934,89 @@
       "id": "body_16_hint"
     },
     {
-      "text": "Which body part needs protection from very loud sounds? Choose from: eye. nose. ear.",
-      "file": "voice_en_c3a546ae2e44092ff59f.ogg",
-      "seconds": 7.369614512471656,
-      "bytes": 44152,
-      "sha256": "6b12166a85b9d68fec112b742d9dde11f20d0c7f44ec66fb7842e4ab846c2cb0",
+      "text": "Which sense needs protection from very loud sounds? Choose from: eye. nose. ear.",
+      "file": "voice_en_82b28c19db40e8581b9a.ogg",
+      "seconds": 7.450884353741497,
+      "bytes": 43867,
+      "sha256": "b5ce7ca67a68d2b628e93373881bf77a231c05219fc559d95c5be1c97e0a9f35",
       "phonetic_units": [
         {
           "phonemes": "wˌɪtʃ",
           "start": 0.20322,
-          "end": 0.37737,
-          "seconds": 0.17415
+          "end": 0.38898,
+          "seconds": 0.18576
         },
         {
-          "phonemes": "bˈɒdi",
-          "start": 0.470249,
-          "end": 0.830159,
-          "seconds": 0.359909
-        },
-        {
-          "phonemes": "pˈɑːt",
-          "start": 0.876599,
-          "end": 1.132018,
-          "seconds": 0.25542
+          "phonemes": "sˈɛns",
+          "start": 0.447029,
+          "end": 0.772109,
+          "seconds": 0.325079
         },
         {
           "phonemes": "nˈiːdz",
-          "start": 1.201678,
-          "end": 1.561587,
-          "seconds": 0.359909
+          "start": 0.818549,
+          "end": 1.143628,
+          "seconds": 0.325079
         },
         {
           "phonemes": "pɹətˈɛkʃən",
-          "start": 1.631247,
-          "end": 2.246576,
+          "start": 1.213288,
+          "end": 1.828617,
           "seconds": 0.615329
         },
         {
           "phonemes": "fɹɒm",
-          "start": 2.304626,
-          "end": 2.455556,
+          "start": 1.898277,
+          "end": 2.049206,
           "seconds": 0.15093
         },
         {
           "phonemes": "vˈɛɹi",
-          "start": 2.490385,
-          "end": 2.850295,
-          "seconds": 0.359909
+          "start": 2.095646,
+          "end": 2.490385,
+          "seconds": 0.394739
         },
         {
           "phonemes": "lˈaʊd",
-          "start": 2.896735,
-          "end": 3.186984,
+          "start": 2.548435,
+          "end": 2.838685,
           "seconds": 0.290249
         },
         {
           "phonemes": "sˈaʊndz?",
-          "start": 3.314694,
-          "end": 3.999683,
-          "seconds": 0.684989
+          "start": 3.001224,
+          "end": 3.825533,
+          "seconds": 0.824308
         },
         {
           "phonemes": "tʃˈuːz",
-          "start": 4.395782,
-          "end": 4.860181,
-          "seconds": 0.464399
+          "start": 4.221633,
+          "end": 4.651202,
+          "seconds": 0.429569
         },
         {
           "phonemes": "fɹɒm:",
-          "start": 4.941451,
-          "end": 5.58,
-          "seconds": 0.638549
+          "start": 4.720862,
+          "end": 5.905079,
+          "seconds": 1.184218
         },
         {
           "phonemes": "ˈaɪ",
-          "start": 5.858639,
-          "end": 6.090839,
-          "seconds": 0.2322
+          "start": 5.951519,
+          "end": 6.160499,
+          "seconds": 0.20898
         },
         {
           "phonemes": "nˈəʊz",
-          "start": 6.160499,
-          "end": 6.532018,
-          "seconds": 0.371519
+          "start": 6.230159,
+          "end": 6.648118,
+          "seconds": 0.417959
         },
         {
           "phonemes": "ˈiə.",
-          "start": 6.648118,
-          "end": 6.996417,
-          "seconds": 0.348299
+          "start": 6.740998,
+          "end": 7.077687,
+          "seconds": 0.336689
         }
       ],
       "generation_profile": {

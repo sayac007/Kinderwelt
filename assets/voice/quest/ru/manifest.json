@@ -566,59 +566,419 @@
       "id": "area_geography"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько яблок ты видишь?",
+      "file": "voice_ru_3c2569b73e4627e03783.ogg",
+      "seconds": 2.143764172335601,
+      "bytes": 13109,
+      "sha256": "1b596b399f08b2fd4fbec8bc2e6a8db508bb59d90f7af196095bafe204df7a83",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "ˈjabɭʌk",
+          "start": 0.597959,
+          "end": 1.004308,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 1.039138,
+          "end": 1.166848,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.190068,
+          "end": 1.712517,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_count"
     },
     {
-      "text": "Коснись каждой картинки один раз и посчитай.",
-      "file": "voice_ru_5928394dc8d51ecac542.ogg",
-      "seconds": 3.943310657596372,
-      "bytes": 23969,
-      "sha256": "6e01ea778286d793273a7437008bbc4edf0afbaf9857ee0d3dc38672bcaadcc4",
+      "text": "Коснись каждого яблока один раз. Считай при этом.",
+      "file": "voice_ru_9bdaa367b38bdf003354.ogg",
+      "seconds": 4.571609977324263,
+      "bytes": 26146,
+      "sha256": "55cfd5cdd82d7761e78b38727cd2ec0a716adac57ba0985b6803145e360a1fd2",
+      "phonetic_units": [
+        {
+          "phonemes": "kʌsʲnʲˈisʲ",
+          "start": 0.23805,
+          "end": 0.667619,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "kˈɑʒdʌvʌ",
+          "start": 0.702449,
+          "end": 1.155238,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "ˈjabɭʌka",
+          "start": 1.213288,
+          "end": 1.747347,
+          "seconds": 0.534059
+        },
+        {
+          "phonemes": "ʌdʲˈin",
+          "start": 1.793787,
+          "end": 2.072426,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "rˈɑs.",
+          "start": 2.118866,
+          "end": 2.548435,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ɕitˈɑj",
+          "start": 2.898095,
+          "end": 3.292834,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "prʲɪ",
+          "start": 3.339274,
+          "end": 3.513424,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "ˈɛtʌm.",
+          "start": 3.606304,
+          "end": 4.117143,
+          "seconds": 0.510839
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_count_hint"
     },
     {
-      "text": "3 и 2. Сколько всего?",
-      "file": "voice_ru_a4cacd5eafcb09e59789.ogg",
-      "seconds": 3.015873015873016,
-      "bytes": 16377,
-      "sha256": "3c6ccbf0e0d00ef6141a20f1b8f9572838031cea0669b443969c76667989a0c4",
+      "text": "Три яблока и два яблока. Сколько всего?",
+      "file": "voice_ru_d00a7f84de5226cdbfa6.ogg",
+      "seconds": 3.7589115646258504,
+      "bytes": 21216,
+      "sha256": "c32b34ba4229e10410420da5070d33d8d7c76e6a554b24f6da1b43153ed64cdc",
+      "phonetic_units": [
+        {
+          "phonemes": "trʲˈɪ",
+          "start": 0.22644,
+          "end": 0.38898,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "ˈjabɭʌka",
+          "start": 0.43542,
+          "end": 0.888209,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 0.911429,
+          "end": 0.946259,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "dvˈɑ",
+          "start": 0.992698,
+          "end": 1.213288,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "ˈjabɭʌka.",
+          "start": 1.236508,
+          "end": 1.921497,
+          "seconds": 0.684989
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.282766,
+          "end": 2.642676,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "fsʲivˈo?",
+          "start": 2.677506,
+          "end": 3.339274,
+          "seconds": 0.661769
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_add"
     },
     {
-      "text": "Сначала посчитай слева, затем продолжи считать справа.",
-      "file": "voice_ru_dfb4136ad08f580a6532.ogg",
-      "seconds": 4.28,
-      "bytes": 26683,
-      "sha256": "5db3877f02191d62430d4918690fbf7903c4308f4c5ff34f4bdbdd91b411ab1b",
+      "text": "Сначала посчитай слева. Затем продолжи считать справа.",
+      "file": "voice_ru_9c1fa4cd6e66034eeb2b.ogg",
+      "seconds": 4.885079365079365,
+      "bytes": 29124,
+      "sha256": "540ad125983b7a9db44f34a30230e4bd692654e310f61c575bb97572cadac589",
+      "phonetic_units": [
+        {
+          "phonemes": "snatʃʲˈɑɭa",
+          "start": 0.20322,
+          "end": 0.644399,
+          "seconds": 0.441179
+        },
+        {
+          "phonemes": "pʌɕitˈɑj",
+          "start": 0.725669,
+          "end": 1.294558,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "sɭʲˈeva.",
+          "start": 1.329388,
+          "end": 1.967937,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "zatʲˈem",
+          "start": 2.364036,
+          "end": 2.781995,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "prʌdˈoɭʒy",
+          "start": 2.816825,
+          "end": 3.362494,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "ɕitˈɑtʲ",
+          "start": 3.420544,
+          "end": 3.838503,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "sprˈɑva.",
+          "start": 3.884943,
+          "end": 4.442222,
+          "seconds": 0.557279
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_add_hint"
     },
     {
-      "text": "Было 7. Убрали 3. Сколько осталось?",
-      "file": "voice_ru_ee7fed6dd41a0270670c.ogg",
-      "seconds": 4.480090702947845,
-      "bytes": 24599,
-      "sha256": "669470129c775c6db4c568bf02357a3295b09e6a3f4f1397ba1d27de0df098ba",
+      "text": "Семь листьев. Три улетают. Сколько осталось?",
+      "file": "voice_ru_4887e52add712cf39ac3.ogg",
+      "seconds": 4.6774603174603175,
+      "bytes": 25544,
+      "sha256": "bcab3f58e8678a93edb33ff2e524010d93c3f655dec48c5ed09998323641b444",
+      "phonetic_units": [
+        {
+          "phonemes": "sʲˈemʲ",
+          "start": 0.21483,
+          "end": 0.505079,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɭʲˈistʲjjif.",
+          "start": 0.528299,
+          "end": 1.178458,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "trʲˈɪ",
+          "start": 1.586168,
+          "end": 1.829977,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "uɭʲitˈɑjut.",
+          "start": 1.864807,
+          "end": 2.712336,
+          "seconds": 0.847528
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 3.143265,
+          "end": 3.491565,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ʌstˈɑɭʌsʲ?",
+          "start": 3.538005,
+          "end": 4.292653,
+          "seconds": 0.754649
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_take"
     },
     {
-      "text": "Считай только картинки без крестика.",
-      "file": "voice_ru_56cc9adefd359956c8da.ogg",
-      "seconds": 2.9100226757369616,
-      "bytes": 19025,
-      "sha256": "f44e756e2233eb561ad51c476c2b8db5f46e8dcea885b5736b16c7077b6bd36a",
+      "text": "Считай только листья без крестика.",
+      "file": "voice_ru_00ec85efefc18844220d.ogg",
+      "seconds": 2.5849433106575965,
+      "bytes": 16876,
+      "sha256": "f7b553a73fe05745190eeedde8330e82a280d51de2e6110d994b6c23a8fed947",
+      "phonetic_units": [
+        {
+          "phonemes": "ɕitˈɑj",
+          "start": 0.21483,
+          "end": 0.574739,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "tˈoɭkʌ",
+          "start": 0.632789,
+          "end": 0.934649,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ɭʲˈistʲjja",
+          "start": 0.957868,
+          "end": 1.306168,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "bʲˈes",
+          "start": 1.340998,
+          "end": 1.503537,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "krʲˈesʲtʲika.",
+          "start": 1.549977,
+          "end": 2.223356,
+          "seconds": 0.673379
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_take_hint"
     },
     {
-      "text": "Есть 4. Сколько не хватает до 10?",
-      "file": "voice_ru_92c7fa44c4737b41650a.ogg",
-      "seconds": 3.8285714285714287,
-      "bytes": 21687,
-      "sha256": "4bd40c5193a62a3343f3dd6bfc26b6dd07bab5218b5160447df5a68d3f487569",
+      "text": "Уже есть четыре звезды. Сколько не хватает до десяти?",
+      "file": "voice_ru_f2fd90942acf72ebeebc.ogg",
+      "seconds": 4.896689342403628,
+      "bytes": 28975,
+      "sha256": "f8aba2178330ad4dd8459b1054ec50a319b393a836ebad7b6f83e191fdad120e",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈuʒy",
+          "start": 0.24966,
+          "end": 0.539909,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "jestʲ",
+          "start": 0.609569,
+          "end": 0.818549,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "tʃʲitˈyrʲi",
+          "start": 0.841769,
+          "end": 1.271338,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "zvʲˈezdy.",
+          "start": 1.317778,
+          "end": 2.002766,
+          "seconds": 0.684989
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.480136,
+          "end": 2.816825,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "nʲɪ",
+          "start": 2.851655,
+          "end": 2.944535,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "xvatˈɑjit",
+          "start": 2.979365,
+          "end": 3.501814,
+          "seconds": 0.522449
+        },
+        {
+          "phonemes": "dˈo",
+          "start": 3.536644,
+          "end": 3.606304,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "dʲisʲatʲˈɪ?",
+          "start": 3.641134,
+          "end": 4.384172,
+          "seconds": 0.743039
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_ten"
     },
     {
@@ -630,59 +990,389 @@
       "id": "math_ten_hint"
     },
     {
-      "text": "Где больше?",
-      "file": "voice_ru_2334a5c093e90c135aa9.ogg",
-      "seconds": 1.7606349206349206,
-      "bytes": 11020,
-      "sha256": "2da55a2a6ed2fa0ee388d3c950487400eef679e80d135948b15e167d588fcf7c",
+      "text": "Где больше яблок?",
+      "file": "voice_ru_2f17648328c4b222fd28.ogg",
+      "seconds": 1.853514739229025,
+      "bytes": 11387,
+      "sha256": "46d90744107ffb710f540de01b979692c50275f0faefa56f8f26e83c0913d2d4",
+      "phonetic_units": [
+        {
+          "phonemes": "ɡdʲˈe",
+          "start": 0.24966,
+          "end": 0.4122,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "bˈoɭʃy",
+          "start": 0.458639,
+          "end": 0.795329,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ˈjabɭʌk?",
+          "start": 0.876599,
+          "end": 1.445488,
+          "seconds": 0.568889
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_compare"
     },
     {
-      "text": "Посчитай обе группы. Коснись той, где больше.",
-      "file": "voice_ru_3ba7287e234eca18a67b.ogg",
-      "seconds": 4.200090702947846,
-      "bytes": 23884,
-      "sha256": "fb93db894065d92f770aa1cf3dd0594bb7a83946aaa32c4d4c49fcbc3f2f3fbd",
+      "text": "Сравни обе группы. Коснись той, где больше.",
+      "file": "voice_ru_cbf58a4ea497667208c7.ogg",
+      "seconds": 4.269750566893424,
+      "bytes": 24159,
+      "sha256": "f7f1d717a5269f7544e2f016ae9a77536d6de2c6a2adeb93c5221f62604da74c",
+      "phonetic_units": [
+        {
+          "phonemes": "sravnʲˈɪ",
+          "start": 0.22644,
+          "end": 0.632789,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ˈobʲi",
+          "start": 0.679229,
+          "end": 0.946259,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɡrˈuppy.",
+          "start": 0.981088,
+          "end": 1.619637,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "kʌsʲnʲˈisʲ",
+          "start": 2.015737,
+          "end": 2.491746,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈoj,",
+          "start": 2.549796,
+          "end": 2.793605,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "ɡdʲˈe",
+          "start": 2.840045,
+          "end": 3.025805,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "bˈoɭʃy.",
+          "start": 3.118685,
+          "end": 3.803673,
+          "seconds": 0.684989
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_compare_hint"
     },
     {
-      "text": "Какое число следующее?",
-      "file": "voice_ru_a2291e02264de688452f.ogg",
-      "seconds": 2.3063038548752837,
-      "bytes": 14213,
-      "sha256": "9fa49642d8a530117c776f8f9ad22bb84c04c3c53810036aef2f2e60bd746faf",
+      "text": "Два, четыре, шесть. Какое число следующее?",
+      "file": "voice_ru_cd3728aa415282861ef5.ogg",
+      "seconds": 4.409070294784581,
+      "bytes": 24547,
+      "sha256": "ebbf6efc8e90386180790cb422488a3722301b7f726428534b2ffa7a43e9c08d",
+      "phonetic_units": [
+        {
+          "phonemes": "dvˈɑ,",
+          "start": 0.2961,
+          "end": 0.690839,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "tʃʲitˈyrʲi,",
+          "start": 0.795329,
+          "end": 1.259728,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "ʃˈɛstʲ.",
+          "start": 1.317778,
+          "end": 1.886667,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "kakˈojɪ",
+          "start": 2.294376,
+          "end": 2.619456,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "tʃʲisɭˈo",
+          "start": 2.642676,
+          "end": 2.967755,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʲˈedujuɕijɪ?",
+          "start": 3.014195,
+          "end": 3.942993,
+          "seconds": 0.928798
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_steps"
     },
     {
-      "text": "Каждый раз прибавляй 2.",
-      "file": "voice_ru_c47d0a57362ea2f4466a.ogg",
-      "seconds": 2.410793650793651,
-      "bytes": 14614,
-      "sha256": "c089730a6539f525b5af683d3df5a2f3d44de45d7ab070f73011e4ee08e309d2",
+      "text": "Каждый раз прибавляй два.",
+      "file": "voice_ru_8a5927296f91e629a2ac.ogg",
+      "seconds": 2.3759637188208615,
+      "bytes": 14383,
+      "sha256": "a80fec7db77f6183b3cda6dd5f0b1214a164d5fda10e6a7ab92ba7be93555253",
+      "phonetic_units": [
+        {
+          "phonemes": "kˈɑʒdyj",
+          "start": 0.22644,
+          "end": 0.586349,
+          "seconds": 0.359909
+        },
+        {
+          "phonemes": "rˈɑs",
+          "start": 0.609569,
+          "end": 0.772109,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "prʲibavɭʲˈɑj",
+          "start": 0.841769,
+          "end": 1.422268,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "dvˈɑ.",
+          "start": 1.468707,
+          "end": 1.991156,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_steps_hint"
     },
     {
-      "text": "10 и 4. Сколько всего?",
-      "file": "voice_ru_1650283c5344c380534d.ogg",
-      "seconds": 3.2945124716553287,
-      "bytes": 18185,
-      "sha256": "a68811a54213558b62853d5cb88f9a80680ce96e31297d4b9a09680bc079590d",
+      "text": "Десять и четыре. Сколько всего?",
+      "file": "voice_ru_0b66b4a504eb61702a93.ogg",
+      "seconds": 3.282902494331066,
+      "bytes": 18339,
+      "sha256": "5c6b80621dfbf8f2ce40c8a990282b106b05550c16f3e7c99bfaae9ceb6cc28c",
+      "phonetic_units": [
+        {
+          "phonemes": "dʲˈesʲʌtʲ",
+          "start": 0.24966,
+          "end": 0.632789,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 0.667619,
+          "end": 0.702449,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "tʃʲitˈyrʲi.",
+          "start": 0.737279,
+          "end": 1.410658,
+          "seconds": 0.673379
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 1.818367,
+          "end": 2.166667,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "fsʲivˈo?",
+          "start": 2.213107,
+          "end": 2.863265,
+          "seconds": 0.650159
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_twenty"
     },
     {
-      "text": "Сначала посчитай слева, затем продолжи считать справа.",
-      "file": "voice_ru_dfb4136ad08f580a6532.ogg",
-      "seconds": 4.28,
-      "bytes": 26683,
-      "sha256": "5db3877f02191d62430d4918690fbf7903c4308f4c5ff34f4bdbdd91b411ab1b",
+      "text": "В первой группе десять. Отсчитай ещё четыре.",
+      "file": "voice_ru_40698c27cbd53f109a41.ogg",
+      "seconds": 3.967891156462585,
+      "bytes": 23147,
+      "sha256": "7b78cbdc9e05a102258637a1691af28611697c9d494787d5b98d9cf88763f64d",
+      "phonetic_units": [
+        {
+          "phonemes": "f",
+          "start": 0.21483,
+          "end": 0.23805,
+          "seconds": 0.02322
+        },
+        {
+          "phonemes": "pʲˈervʌj",
+          "start": 0.26127,
+          "end": 0.597959,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɡrˈuppʲi",
+          "start": 0.632789,
+          "end": 0.981088,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "dʲˈesʲʌtʲ.",
+          "start": 1.027528,
+          "end": 1.642857,
+          "seconds": 0.615329
+        },
+        {
+          "phonemes": "ʌtɕitˈɑj",
+          "start": 2.050567,
+          "end": 2.491746,
+          "seconds": 0.441179
+        },
+        {
+          "phonemes": "jɪɕˈɵ",
+          "start": 2.526576,
+          "end": 2.793605,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "tʃʲitˈyrʲi.",
+          "start": 2.851655,
+          "end": 3.559864,
+          "seconds": 0.708209
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_twenty_hint"
     },
     {
-      "text": "Есть 5. Сколько не хватает до 8?",
-      "file": "voice_ru_12af8d8eee3888bcb6bf.ogg",
-      "seconds": 3.666031746031746,
-      "bytes": 20978,
-      "sha256": "8d58dd1e01b4a27d2d3821c44de51437a178dfc3f787e045b35a1669a0e85467",
+      "text": "Уже есть пять звёзд. Сколько не хватает до восьми?",
+      "file": "voice_ru_024fb0571832213f59ec.ogg",
+      "seconds": 4.281360544217687,
+      "bytes": 24852,
+      "sha256": "a723c52072c8e059e69cb3efe206bedd5dc952e51913cb5f2d8c60c2cdb0bfa9",
+      "phonetic_units": [
+        {
+          "phonemes": "ˈuʒy",
+          "start": 0.26127,
+          "end": 0.539909,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "jestʲ",
+          "start": 0.632789,
+          "end": 0.864989,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "pʲˈɑtʲ",
+          "start": 0.911429,
+          "end": 1.132018,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "zvʲˈɵst.",
+          "start": 1.155238,
+          "end": 1.654467,
+          "seconds": 0.499229
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.062177,
+          "end": 2.375646,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "nʲɪ",
+          "start": 2.410476,
+          "end": 2.503356,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "xvatˈɑjit",
+          "start": 2.561406,
+          "end": 3.072245,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "dˈo",
+          "start": 3.118685,
+          "end": 3.211565,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "vʌsʲmʲˈɪ?",
+          "start": 3.246395,
+          "end": 3.908163,
+          "seconds": 0.661769
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_split"
     },
     {
@@ -702,11 +1392,65 @@
       "id": "german_sun"
     },
     {
-      "text": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "file": "voice_ru_be7a30875e44699a4904.ogg",
-      "seconds": 5.0940589569161,
-      "bytes": 29174,
-      "sha256": "d8a91f35118a93bdb06b6200a9d17cbb913ee1884d8e780b906a58e158916a93",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_sun_hint"
     },
     {
@@ -718,11 +1462,65 @@
       "id": "german_mouse"
     },
     {
-      "text": "Немецкое слово начинается с буквы M. Выбери эту букву.",
-      "file": "voice_ru_ea25b0025e06c4aa3ad9.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 30290,
-      "sha256": "0986fb65d14c9d2337643994a6b839201279477cbf9c50f52b3735baa9144382",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_mouse_hint"
     },
     {
@@ -734,43 +1532,307 @@
       "id": "german_apple"
     },
     {
-      "text": "Немецкое слово начинается с буквы A. Выбери эту букву.",
-      "file": "voice_ru_982191198512303adef4.ogg",
-      "seconds": 4.943129251700681,
-      "bytes": 27816,
-      "sha256": "147a0017edf232c5788234d0b9de5d3f84e43aab8f3229a7d54de0ede5a61f9d",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_apple_hint"
     },
     {
-      "text": "Послушай немецкие слова. Какое рифмуется со словом «дом» по-немецки?",
-      "file": "voice_ru_ff89e3a55b2970aa7660.ogg",
-      "seconds": 5.465578231292517,
-      "bytes": 30867,
-      "sha256": "0836c0b5f4759cb1afa63d6838833c68c45fa2f69d466b92ff95c9dbe78bebe1",
+      "text": "Послушай немецкие слова. Какие из них рифмуются?",
+      "file": "voice_ru_4c179cdf6d4d2e4f1891.ogg",
+      "seconds": 4.56,
+      "bytes": 25435,
+      "sha256": "c79e784d2fc2271a80ab035dd211e4deb2ba6d71bca34aae68d5fb717d1a6f2a",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.818549,
+          "seconds": 0.592109
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲijɪ",
+          "start": 0.864989,
+          "end": 1.422268,
+          "seconds": 0.557279
+        },
+        {
+          "phonemes": "sɭˈova.",
+          "start": 1.480317,
+          "end": 2.049206,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "kakʲˈijɪ",
+          "start": 2.468526,
+          "end": 2.921315,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "ɪs",
+          "start": 2.944535,
+          "end": 3.037415,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "nʲˈix",
+          "start": 3.060635,
+          "end": 3.258005,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "rʲifmˈujutsʌ?",
+          "start": 3.292834,
+          "end": 4.117143,
+          "seconds": 0.824308
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_rhyme"
     },
     {
-      "text": "Немецкие слова «дом» и «мышь» рифмуются. Послушай пример по-немецки.",
-      "file": "voice_ru_f3bbb7ed90d22328f587.ogg",
-      "seconds": 5.604897959183673,
-      "bytes": 31599,
-      "sha256": "b0828fc0facbd6a11d687388d4e6aac6e31d16221925fe91af3b5f8ac550b10e",
+      "text": "Послушай два немецких слова, которые рифмуются.",
+      "file": "voice_ru_fab3db05e6e89ea0546d.ogg",
+      "seconds": 3.7111111111111112,
+      "bytes": 21747,
+      "sha256": "80921c3ffe7e8120dd04fc906e6eac0c218edfc6e307d99e2d2b3bb0f23e5a63",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.795329,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "dvˈɑ",
+          "start": 0.830159,
+          "end": 1.039138,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲix",
+          "start": 1.062358,
+          "end": 1.631247,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "sɭˈova,",
+          "start": 1.677687,
+          "end": 2.014376,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "kʌtˈoryjɪ",
+          "start": 2.060816,
+          "end": 2.478776,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "rʲifmˈujutsʌ.",
+          "start": 2.513605,
+          "end": 3.326304,
+          "seconds": 0.812698
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_rhyme_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_robot"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "file": "voice_ru_915c073a23cda1a1a497.ogg",
-      "seconds": 5.384308390022675,
-      "bytes": 31648,
-      "sha256": "9c1e45a3eac93a0ed6cb6a592a2a568977d9632362fe45a7772856667065233a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_robot_hint"
     },
     {
@@ -782,27 +1844,201 @@
       "id": "german_read"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_read_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_flower"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_flower_hint"
     },
     {
@@ -814,11 +2050,65 @@
       "id": "german_fish"
     },
     {
-      "text": "Немецкое слово начинается с буквы F. Выбери эту букву.",
-      "file": "voice_ru_b4d321f7a653bc228854.ogg",
-      "seconds": 5.21015873015873,
-      "bytes": 30406,
-      "sha256": "bfb8d283ecbda8f878e5b6dc962cba6f0ec74589479b87e23c3683cda7ebfcfe",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_fish_hint"
     },
     {
@@ -950,11 +2240,47 @@
       "id": "logic_rule_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько пчёл ты видишь?",
+      "file": "voice_ru_85d8e0b7ffde99df3a88.ogg",
+      "seconds": 1.9696145124716553,
+      "bytes": 12293,
+      "sha256": "6d12921d60a1f6f32751e6b5bdba3bf2cdc8f95b71bd0d7ed75e55f1e45fc322",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.20322,
+          "end": 0.505079,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ptʃʲˈɵɭ",
+          "start": 0.539909,
+          "end": 0.783719,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 0.876599,
+          "end": 0.969478,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.004308,
+          "end": 1.538367,
+          "seconds": 0.534059
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_09"
     },
     {
@@ -966,11 +2292,47 @@
       "id": "math_09_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько рыб ты видишь?",
+      "file": "voice_ru_75c4bb06007e22eb905f.ogg",
+      "seconds": 1.923174603174603,
+      "bytes": 11638,
+      "sha256": "ebafb23c2be8b94e9e38984114f90b36eba21117cbbaf8bfba6a7af905f08ee7",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "rˈyp",
+          "start": 0.563129,
+          "end": 0.737279,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 0.772109,
+          "end": 0.876599,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 0.911429,
+          "end": 1.468707,
+          "seconds": 0.557279
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_10"
     },
     {
@@ -982,11 +2344,47 @@
       "id": "math_10_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько цветов ты видишь?",
+      "file": "voice_ru_f6d9a960eda0ee66e128.ogg",
+      "seconds": 2.2134240362811792,
+      "bytes": 13815,
+      "sha256": "7600decf2644144867ea740895a7cdf525843adc20d4d5e61bfdb8d50cc504c1",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.21483,
+          "end": 0.551519,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "tsvʲitˈof",
+          "start": 0.586349,
+          "end": 1.015918,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 1.097188,
+          "end": 1.190068,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.236508,
+          "end": 1.758957,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_11"
     },
     {
@@ -998,11 +2396,47 @@
       "id": "math_11_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько листьев ты видишь?",
+      "file": "voice_ru_fe1ae83460d2a3c8fd08.ogg",
+      "seconds": 2.2714739229024943,
+      "bytes": 13909,
+      "sha256": "4de650525056179eb1b52befbd59acd3ea907a8122d8d4d5082b4aabeba9fb3d",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.23805,
+          "end": 0.574739,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɭʲˈistʲjjif",
+          "start": 0.609569,
+          "end": 1.027528,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 1.085578,
+          "end": 1.190068,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.236508,
+          "end": 1.758957,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_12"
     },
     {
@@ -1014,11 +2448,47 @@
       "id": "math_12_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько звёзд ты видишь?",
+      "file": "voice_ru_430fa646f353e3dcf9e0.ogg",
+      "seconds": 2.0508843537414965,
+      "bytes": 12789,
+      "sha256": "3b07da8bd675da06e35a4e73a0a026b4260a92caf0aadc04c2ef3836f54f53fd",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.21483,
+          "end": 0.563129,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "zvʲˈɵst",
+          "start": 0.609569,
+          "end": 0.864989,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 0.911429,
+          "end": 1.027528,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.073968,
+          "end": 1.573197,
+          "seconds": 0.499229
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_13"
     },
     {
@@ -1030,11 +2500,47 @@
       "id": "math_13_hint"
     },
     {
-      "text": "Сколько ты видишь?",
-      "file": "voice_ru_f2d6f761e1f75841e8c8.ogg",
-      "seconds": 1.7490249433106575,
-      "bytes": 10962,
-      "sha256": "b641e247feb9c4c9e0d764da6c6548346e0d43da4abf552a3274c5a30dd1a2a1",
+      "text": "Сколько яблок ты видишь?",
+      "file": "voice_ru_3c2569b73e4627e03783.ogg",
+      "seconds": 2.143764172335601,
+      "bytes": 13109,
+      "sha256": "1b596b399f08b2fd4fbec8bc2e6a8db508bb59d90f7af196095bafe204df7a83",
+      "phonetic_units": [
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 0.21483,
+          "end": 0.539909,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "ˈjabɭʌk",
+          "start": 0.597959,
+          "end": 1.004308,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 1.039138,
+          "end": 1.166848,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "vʲˈidʲiʃ?",
+          "start": 1.190068,
+          "end": 1.712517,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "math_14"
     },
     {
@@ -1470,11 +2976,65 @@
       "id": "german_09"
     },
     {
-      "text": "Немецкое слово начинается с буквы B. Выбери эту букву.",
-      "file": "voice_ru_75cb186287b4c3580900.ogg",
-      "seconds": 5.0476190476190474,
-      "bytes": 29182,
-      "sha256": "9d010e664507b212fbc0091f14679365422e37400caf98c42c5a70ac102df801",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_09_hint"
     },
     {
@@ -1486,11 +3046,65 @@
       "id": "german_10"
     },
     {
-      "text": "Немецкое слово начинается с буквы F. Выбери эту букву.",
-      "file": "voice_ru_b4d321f7a653bc228854.ogg",
-      "seconds": 5.21015873015873,
-      "bytes": 30406,
-      "sha256": "bfb8d283ecbda8f878e5b6dc962cba6f0ec74589479b87e23c3683cda7ebfcfe",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_10_hint"
     },
     {
@@ -1502,11 +3116,65 @@
       "id": "german_11"
     },
     {
-      "text": "Немецкое слово начинается с буквы K. Выбери эту букву.",
-      "file": "voice_ru_ed2cea608c85aad24616.ogg",
-      "seconds": 5.024399092970522,
-      "bytes": 28638,
-      "sha256": "1e2b76f1fcf81613a190ae800bfc2a8bc064ebd9c2a1f7f7f2bef1c78dfab937",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_11_hint"
     },
     {
@@ -1518,11 +3186,65 @@
       "id": "german_12"
     },
     {
-      "text": "Немецкое слово начинается с буквы N. Выбери эту букву.",
-      "file": "voice_ru_f5399c956cb81b3c631e.ogg",
-      "seconds": 5.128888888888889,
-      "bytes": 29560,
-      "sha256": "ed62d3a568d8d780e0c88275d48a9ba5e0affca927c94fbceb337a3e5bcb3957",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_12_hint"
     },
     {
@@ -1534,11 +3256,65 @@
       "id": "german_13"
     },
     {
-      "text": "Немецкое слово начинается с буквы W. Выбери эту букву.",
-      "file": "voice_ru_d304db05b091d666436e.ogg",
-      "seconds": 5.059229024943311,
-      "bytes": 29157,
-      "sha256": "857eb108a244ae0e24114a09bb24ab6f412d7c419dc4879c305e1f002589dc88",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_13_hint"
     },
     {
@@ -1550,11 +3326,65 @@
       "id": "german_14"
     },
     {
-      "text": "Немецкое слово начинается с буквы W. Выбери эту букву.",
-      "file": "voice_ru_d304db05b091d666436e.ogg",
-      "seconds": 5.059229024943311,
-      "bytes": 29157,
-      "sha256": "857eb108a244ae0e24114a09bb24ab6f412d7c419dc4879c305e1f002589dc88",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_14_hint"
     },
     {
@@ -1566,11 +3396,65 @@
       "id": "german_15"
     },
     {
-      "text": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "file": "voice_ru_be7a30875e44699a4904.ogg",
-      "seconds": 5.0940589569161,
-      "bytes": 29174,
-      "sha256": "d8a91f35118a93bdb06b6200a9d17cbb913ee1884d8e780b906a58e158916a93",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_15_hint"
     },
     {
@@ -1582,11 +3466,65 @@
       "id": "german_16"
     },
     {
-      "text": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "file": "voice_ru_be7a30875e44699a4904.ogg",
-      "seconds": 5.0940589569161,
-      "bytes": 29174,
-      "sha256": "d8a91f35118a93bdb06b6200a9d17cbb913ee1884d8e780b906a58e158916a93",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_16_hint"
     },
     {
@@ -1598,11 +3536,65 @@
       "id": "german_17"
     },
     {
-      "text": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "file": "voice_ru_800bdba7733287406435.ogg",
-      "seconds": 5.036009070294784,
-      "bytes": 28993,
-      "sha256": "4d321dc7d034b7ae87884bb51c94dcd9d2edf45015f6d9a1c7bea9d8f1a89ff3",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_17_hint"
     },
     {
@@ -1614,11 +3606,65 @@
       "id": "german_18"
     },
     {
-      "text": "Немецкое слово начинается с буквы N. Выбери эту букву.",
-      "file": "voice_ru_f5399c956cb81b3c631e.ogg",
-      "seconds": 5.128888888888889,
-      "bytes": 29560,
-      "sha256": "ed62d3a568d8d780e0c88275d48a9ba5e0affca927c94fbceb337a3e5bcb3957",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_18_hint"
     },
     {
@@ -1630,11 +3676,65 @@
       "id": "german_19"
     },
     {
-      "text": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "file": "voice_ru_800bdba7733287406435.ogg",
-      "seconds": 5.036009070294784,
-      "bytes": 28993,
-      "sha256": "4d321dc7d034b7ae87884bb51c94dcd9d2edf45015f6d9a1c7bea9d8f1a89ff3",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_19_hint"
     },
     {
@@ -1646,203 +3746,1553 @@
       "id": "german_20"
     },
     {
-      "text": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "file": "voice_ru_800bdba7733287406435.ogg",
-      "seconds": 5.036009070294784,
-      "bytes": 28993,
-      "sha256": "4d321dc7d034b7ae87884bb51c94dcd9d2edf45015f6d9a1c7bea9d8f1a89ff3",
+      "text": "Послушай немецкое слово и его первую букву.",
+      "file": "voice_ru_2fbe38b0b1f421acf822.ogg",
+      "seconds": 3.444081632653061,
+      "bytes": 20153,
+      "sha256": "933201c31885ffb39b2330d436e9bcf4cfd0f7fc4770d0b40b5765fc6d4f974b",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.795329,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.875057,
+          "seconds": 0.05805
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 1.909887,
+          "end": 2.084036,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "pʲˈervuju",
+          "start": 2.165306,
+          "end": 2.536825,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "bˈukvu.",
+          "start": 2.618095,
+          "end": 3.059274,
+          "seconds": 0.441179
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_20_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_21"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "file": "voice_ru_915c073a23cda1a1a497.ogg",
-      "seconds": 5.384308390022675,
-      "bytes": 31648,
-      "sha256": "9c1e45a3eac93a0ed6cb6a592a2a568977d9632362fe45a7772856667065233a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_21_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_22"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "file": "voice_ru_915c073a23cda1a1a497.ogg",
-      "seconds": 5.384308390022675,
-      "bytes": 31648,
-      "sha256": "9c1e45a3eac93a0ed6cb6a592a2a568977d9632362fe45a7772856667065233a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_22_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_23"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "file": "voice_ru_915c073a23cda1a1a497.ogg",
-      "seconds": 5.384308390022675,
-      "bytes": 31648,
-      "sha256": "9c1e45a3eac93a0ed6cb6a592a2a568977d9632362fe45a7772856667065233a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_23_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_24"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_24_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_25"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_25_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_26"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_26_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_27"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_27_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_28"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_28_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_29"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_29_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_30"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_30_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_31"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_31_hint"
     },
     {
-      "text": "Послушай немецкое слово. Сколько в нём слогов?",
-      "file": "voice_ru_e1bf55ae13cc1f12bef9.ogg",
-      "seconds": 4.165260770975057,
-      "bytes": 23247,
-      "sha256": "43283509de079b84731ce4f5aa973754f1c831ef687844be60a8e86a92b3e9fa",
+      "text": "Послушай немецкое слово. Сколько слогов ты слышишь?",
+      "file": "voice_ru_0f9597699d2ffeec5cd9.ogg",
+      "seconds": 4.501950113378685,
+      "bytes": 25314,
+      "sha256": "73144a50f73b093907ef210f216bd1928a4127240d1d1b1fbdf420fef8069f20",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.21483,
+          "end": 0.783719,
+          "seconds": 0.568889
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.830159,
+          "end": 1.375828,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "sɭˈovʌ.",
+          "start": 1.433878,
+          "end": 2.014376,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "skˈoɭkʌ",
+          "start": 2.398866,
+          "end": 2.723946,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sɭʌɡˈof",
+          "start": 2.770385,
+          "end": 3.246395,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 3.292834,
+          "end": 3.397324,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭˈyʃyʃ?",
+          "start": 3.466984,
+          "end": 4.105533,
+          "seconds": 0.638549
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_32"
     },
     {
-      "text": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "file": "voice_ru_e2c2d4e31d8a0d80258a.ogg",
-      "seconds": 5.175328798185941,
-      "bytes": 29917,
-      "sha256": "fe8dde98e1383846325cf27b965cd6773b6ccda5dc4a50e7690b846054a1ce8a",
+      "text": "Послушай немецкий пример и хлопай по слогам.",
+      "file": "voice_ru_54680ce7602f45ced773.ogg",
+      "seconds": 3.5485714285714285,
+      "bytes": 21986,
+      "sha256": "a3c1e753ef448d4987a6381cf6ac29413e396010401cce7bb664a7718fde0e7d",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.20322,
+          "end": 0.783719,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "nʲimʲˈetskʲij",
+          "start": 0.841769,
+          "end": 1.317778,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "prʲimʲˈer",
+          "start": 1.364218,
+          "end": 1.770567,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.817007,
+          "end": 1.851837,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "xɭˈopʌj",
+          "start": 1.898277,
+          "end": 2.316236,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 2.374286,
+          "end": 2.478776,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "sɭʌɡˈɑm.",
+          "start": 2.525215,
+          "end": 3.140544,
+          "seconds": 0.615329
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_32_hint"
     },
     {
@@ -1854,11 +5304,77 @@
       "id": "german_33"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_33_hint"
     },
     {
@@ -1870,11 +5386,77 @@
       "id": "german_34"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_34_hint"
     },
     {
@@ -1886,11 +5468,77 @@
       "id": "german_35"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_35_hint"
     },
     {
@@ -1902,11 +5550,77 @@
       "id": "german_36"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_36_hint"
     },
     {
@@ -1918,11 +5632,77 @@
       "id": "german_37"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_37_hint"
     },
     {
@@ -1934,11 +5714,77 @@
       "id": "german_38"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_38_hint"
     },
     {
@@ -1950,11 +5796,77 @@
       "id": "german_39"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_39_hint"
     },
     {
@@ -1966,11 +5878,77 @@
       "id": "german_40"
     },
     {
-      "text": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "file": "voice_ru_37f98c5ccaa043b63312.ogg",
-      "seconds": 6.522086167800453,
-      "bytes": 39140,
-      "sha256": "2a1380e68e654bcaf85e8e0a5b6112b560f818869944181bf912580460881d3c",
+      "text": "Послушай немецкое слово и как оно произносится по буквам.",
+      "file": "voice_ru_9cbda916f4124117e2c2.ogg",
+      "seconds": 4.1755102040816325,
+      "bytes": 24996,
+      "sha256": "b22a25e02a9cf5ba1c526476286466ade9d45e25a136d4febabc08569839833e",
+      "phonetic_units": [
+        {
+          "phonemes": "pʌsɭˈuʃʌj",
+          "start": 0.22644,
+          "end": 0.772109,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "nʲimʲˈetskʌjɪ",
+          "start": 0.806939,
+          "end": 1.294558,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "sɭˈovʌ",
+          "start": 1.387438,
+          "end": 1.724127,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.747347,
+          "end": 1.793787,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "kˈɑk",
+          "start": 1.840227,
+          "end": 2.037596,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "ʌnˈo",
+          "start": 2.118866,
+          "end": 2.327846,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "prʌiznˈosʲitsʌ",
+          "start": 2.351066,
+          "end": 3.059274,
+          "seconds": 0.708209
+        },
+        {
+          "phonemes": "pˈo",
+          "start": 3.152154,
+          "end": 3.291474,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "bˈukvʌm.",
+          "start": 3.349524,
+          "end": 3.813923,
+          "seconds": 0.464399
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "german_40_hint"
     },
     {
@@ -3396,11 +7374,95 @@
       "id": "physics_18"
     },
     {
-      "text": "Рука может подействовать на мяч и привести его в движение.",
-      "file": "voice_ru_c6f7dfd9469f7706069f.ogg",
-      "seconds": 4.12907029478458,
-      "bytes": 25218,
-      "sha256": "160d05618944b02e5b42885c67e12635462f68cbf668521a347a7db130929f96",
+      "text": "Рука может подействовать на мяч с силой и привести его в движение.",
+      "file": "voice_ru_41405e2b5db389a78408.ogg",
+      "seconds": 4.697959183673469,
+      "bytes": 28965,
+      "sha256": "9d16a739636d9ea2475f89177dd1ec807ddafda5b3c33cc28545a0093ee952cd",
+      "phonetic_units": [
+        {
+          "phonemes": "rukˈɑ",
+          "start": 0.28449,
+          "end": 0.621179,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "mˌoʒyt",
+          "start": 0.679229,
+          "end": 1.004308,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "pʌdʲˈejstvʌvʌtʲ",
+          "start": 1.085578,
+          "end": 1.758957,
+          "seconds": 0.673379
+        },
+        {
+          "phonemes": "nə",
+          "start": 1.805397,
+          "end": 1.886667,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "mʲˈɑtʃʲ",
+          "start": 1.933107,
+          "end": 2.142086,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "s",
+          "start": 2.165306,
+          "end": 2.188526,
+          "seconds": 0.02322
+        },
+        {
+          "phonemes": "sʲˈiɭʌj",
+          "start": 2.223356,
+          "end": 2.571655,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 2.606485,
+          "end": 2.652925,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "prʲivʲisʲtʲˈɪ",
+          "start": 2.710975,
+          "end": 3.210204,
+          "seconds": 0.499229
+        },
+        {
+          "phonemes": "jɪvˈo",
+          "start": 3.233424,
+          "end": 3.442404,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "v",
+          "start": 3.465624,
+          "end": 3.512063,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "dvʲiʒˈɛnʲijɪ.",
+          "start": 3.546893,
+          "end": 4.301542,
+          "seconds": 0.754649
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "physics_18_hint"
     },
     {
@@ -5586,11 +9648,101 @@
       "id": "biology_24_hint"
     },
     {
-      "text": "Где много деревьев растёт рядом? На выбор: лес. море. пустыня.",
-      "file": "voice_ru_25ff2da7723028807bc2.ogg",
-      "seconds": 5.512018140589569,
-      "bytes": 32258,
-      "sha256": "4bae8069a0322294b237c950f6d80ceb2725ddf867e2730ca0d0814c1f7cdd49",
+      "text": "Где много деревьев растёт близко друг к другу? На выбор: лес. море. пустыня.",
+      "file": "voice_ru_da760b3285bff3a799cd.ogg",
+      "seconds": 6.0344671201814055,
+      "bytes": 35139,
+      "sha256": "4a60d8000ef664ad08f81bcc91287bd3cbd0f8be533ca25f55ebbb6bec861357",
+      "phonetic_units": [
+        {
+          "phonemes": "ɡdʲˈe",
+          "start": 0.24966,
+          "end": 0.43542,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "mnˈoɡʌ",
+          "start": 0.458639,
+          "end": 0.772109,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "dʲirʲˈevjjif",
+          "start": 0.830159,
+          "end": 1.387438,
+          "seconds": 0.557279
+        },
+        {
+          "phonemes": "rasʲtʲˈɵt",
+          "start": 1.422268,
+          "end": 1.770567,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "bɭʲˈiskʌ",
+          "start": 1.805397,
+          "end": 2.153696,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "drˈuk",
+          "start": 2.188526,
+          "end": 2.432336,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "k",
+          "start": 2.490385,
+          "end": 2.536825,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "drˈuɡu?",
+          "start": 2.571655,
+          "end": 3.059274,
+          "seconds": 0.487619
+        },
+        {
+          "phonemes": "nə",
+          "start": 3.455374,
+          "end": 3.594694,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "vˈybʌr:",
+          "start": 3.629524,
+          "end": 4.268073,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "ɭʲˈes",
+          "start": 4.349342,
+          "end": 4.581542,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "mˈorʲi",
+          "start": 4.604762,
+          "end": 4.871791,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "pustˈynʲʌ.",
+          "start": 4.964671,
+          "end": 5.63805,
+          "seconds": 0.673379
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "biology_25"
     },
     {
@@ -6110,11 +10262,77 @@
       "id": "biology_37"
     },
     {
-      "text": "Дождевые черви затаскивают опавшие листья в свои ходы.",
-      "file": "voice_ru_9c4dcc31092d8e51e770.ogg",
-      "seconds": 4.221950113378685,
-      "bytes": 25945,
-      "sha256": "fbe8b51c9687066c297cdb61625c882fee58e2d5d4047e3a45f6f3cad5238cb8",
+      "text": "Дождевые черви затаскивают отмершие опавшие листья в свои ходы.",
+      "file": "voice_ru_5462810b071eef6a407b.ogg",
+      "seconds": 4.883718820861678,
+      "bytes": 29450,
+      "sha256": "edc7a5f97da03d5683193a8b7008f682bd7e4ace55985f271d905a9a26c35d94",
+      "phonetic_units": [
+        {
+          "phonemes": "dʌʒdʲivˈyjɪ",
+          "start": 0.26127,
+          "end": 0.841769,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "tʃʲˈervʲɪ",
+          "start": 0.876599,
+          "end": 1.259728,
+          "seconds": 0.383129
+        },
+        {
+          "phonemes": "zʌtaskʲˈivʌjut",
+          "start": 1.294558,
+          "end": 2.084036,
+          "seconds": 0.789478
+        },
+        {
+          "phonemes": "ʌtmʲˈerʃyjɪ",
+          "start": 2.118866,
+          "end": 2.699365,
+          "seconds": 0.580499
+        },
+        {
+          "phonemes": "ʌpˈɑfʃyjɪ",
+          "start": 2.745805,
+          "end": 3.210204,
+          "seconds": 0.464399
+        },
+        {
+          "phonemes": "ɭʲˈistʲjja",
+          "start": 3.233424,
+          "end": 3.570113,
+          "seconds": 0.336689
+        },
+        {
+          "phonemes": "f",
+          "start": 3.593333,
+          "end": 3.639773,
+          "seconds": 0.04644
+        },
+        {
+          "phonemes": "svʌˈɪ",
+          "start": 3.662993,
+          "end": 3.906803,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "xʌdˈy.",
+          "start": 3.964853,
+          "end": 4.475692,
+          "seconds": 0.510839
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "biology_37_hint"
     },
     {
@@ -9438,83 +13656,89 @@
       "id": "body_16_hint"
     },
     {
-      "text": "Что нужно защищать от очень громких звуков? На выбор: глаз. нос. ухо.",
-      "file": "voice_ru_689365875129f965e06d.ogg",
-      "seconds": 5.686167800453514,
-      "bytes": 32959,
-      "sha256": "1b49bdf45479c1c2f044496d0e793c6296d7a2991d79c1931ff8250af07b0f84",
+      "text": "Какое чувство нужно защищать от очень громких звуков? На выбор: глаз. нос. ухо.",
+      "file": "voice_ru_83ffd3f5b30185892e22.ogg",
+      "seconds": 6.3363265306122445,
+      "bytes": 36564,
+      "sha256": "19f1d171247486a3116b3eda3346e1b304e003ef3ab26d8f814a9405d0af86dc",
       "phonetic_units": [
         {
-          "phonemes": "ʃto",
-          "start": 0.20322,
-          "end": 0.30771,
-          "seconds": 0.10449
+          "phonemes": "kakˈojɪ",
+          "start": 0.24966,
+          "end": 0.621179,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "tʃʲˈustvʌ",
+          "start": 0.656009,
+          "end": 1.062358,
+          "seconds": 0.406349
         },
         {
           "phonemes": "nˈuʒnʌ",
-          "start": 0.33093,
-          "end": 0.690839,
-          "seconds": 0.359909
+          "start": 1.108798,
+          "end": 1.433878,
+          "seconds": 0.325079
         },
         {
           "phonemes": "zʌɕiɕˈɑtʲ",
-          "start": 0.760499,
-          "end": 1.352608,
-          "seconds": 0.592109
+          "start": 1.503537,
+          "end": 2.072426,
+          "seconds": 0.568889
         },
         {
           "phonemes": "ot",
-          "start": 1.375828,
-          "end": 1.503537,
-          "seconds": 0.12771
+          "start": 2.118866,
+          "end": 2.223356,
+          "seconds": 0.10449
         },
         {
           "phonemes": "ˈotʃʲin",
-          "start": 1.526757,
-          "end": 1.817007,
+          "start": 2.246576,
+          "end": 2.536825,
           "seconds": 0.290249
         },
         {
           "phonemes": "ɡrˈomkʲix",
-          "start": 1.863447,
-          "end": 2.339456,
-          "seconds": 0.476009
+          "start": 2.571655,
+          "end": 3.012834,
+          "seconds": 0.441179
         },
         {
           "phonemes": "zvˈukʌf?",
-          "start": 2.397506,
-          "end": 2.908345,
-          "seconds": 0.510839
+          "start": 3.059274,
+          "end": 3.558503,
+          "seconds": 0.499229
         },
         {
           "phonemes": "nə",
-          "start": 3.281224,
-          "end": 3.432154,
-          "seconds": 0.15093
+          "start": 3.919773,
+          "end": 4.082313,
+          "seconds": 0.16254
         },
         {
           "phonemes": "vˈybʌr:",
-          "start": 3.478594,
-          "end": 4.082313,
-          "seconds": 0.603719
+          "start": 4.140363,
+          "end": 4.790522,
+          "seconds": 0.650159
         },
         {
           "phonemes": "ɡɭˈɑs",
-          "start": 4.175193,
-          "end": 4.442222,
-          "seconds": 0.267029
-        },
-        {
-          "phonemes": "nˈos",
-          "start": 4.488662,
-          "end": 4.767302,
+          "start": 4.860181,
+          "end": 5.138821,
           "seconds": 0.278639
         },
         {
+          "phonemes": "nˈos",
+          "start": 5.185261,
+          "end": 5.42907,
+          "seconds": 0.24381
+        },
+        {
           "phonemes": "ˈuxʌ.",
-          "start": 4.836961,
-          "end": 5.231701,
-          "seconds": 0.394739
+          "start": 5.51034,
+          "end": 5.870249,
+          "seconds": 0.359909
         }
       ],
       "generation_profile": {
@@ -9946,59 +14170,65 @@
       "id": "body_23_hint"
     },
     {
-      "text": "Где обрабатываются воспоминания? На выбор: желудок. мозг. сердце.",
-      "file": "voice_ru_bb7253ddde06e09b8ba5.ogg",
-      "seconds": 5.697777777777778,
-      "bytes": 33418,
-      "sha256": "d43d0f697c6153d04f57942062ad32ab98f0c4031ee63622ecbf1948011d8732",
+      "text": "Где обрабатывается много воспоминаний? На выбор: желудок. мозг. сердце.",
+      "file": "voice_ru_6610b5325538013f6bb7.ogg",
+      "seconds": 5.988027210884353,
+      "bytes": 34204,
+      "sha256": "300c291fb5745e4cbfb5950d45ee97b05abfe1cc28225c4c53ec80fed3805940",
       "phonetic_units": [
         {
           "phonemes": "ɡdʲˈe",
-          "start": 0.24966,
-          "end": 0.470249,
-          "seconds": 0.22059
+          "start": 0.23805,
+          "end": 0.447029,
+          "seconds": 0.20898
         },
         {
-          "phonemes": "ʌbrabˈɑtyvʌjutsʌ",
-          "start": 0.516689,
-          "end": 1.387438,
-          "seconds": 0.870748
+          "phonemes": "ʌbrabˈɑtyvʌjitsʌ",
+          "start": 0.481859,
+          "end": 1.375828,
+          "seconds": 0.893968
         },
         {
-          "phonemes": "vʌspʌmʲinˈɑnʲija?",
-          "start": 1.445488,
-          "end": 2.455556,
-          "seconds": 1.010068
+          "phonemes": "mnˈoɡʌ",
+          "start": 1.433878,
+          "end": 1.782177,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "vʌspʌmʲinˈɑnʲij?",
+          "start": 1.851837,
+          "end": 2.827075,
+          "seconds": 0.975238
         },
         {
           "phonemes": "nə",
-          "start": 2.851655,
-          "end": 2.990975,
-          "seconds": 0.13932
+          "start": 3.281224,
+          "end": 3.397324,
+          "seconds": 0.1161
         },
         {
           "phonemes": "vˈybʌr:",
-          "start": 3.025805,
-          "end": 3.664354,
-          "seconds": 0.638549
+          "start": 3.432154,
+          "end": 4.001043,
+          "seconds": 0.568889
         },
         {
           "phonemes": "ʒyɭˈudʌk",
-          "start": 3.734014,
-          "end": 4.210023,
-          "seconds": 0.476009
+          "start": 4.070703,
+          "end": 4.511882,
+          "seconds": 0.441179
         },
         {
           "phonemes": "mˈosk",
-          "start": 4.244853,
-          "end": 4.546712,
-          "seconds": 0.301859
+          "start": 4.558322,
+          "end": 4.836961,
+          "seconds": 0.278639
         },
         {
           "phonemes": "sʲˈertsy.",
-          "start": 4.604762,
-          "end": 5.266531,
-          "seconds": 0.661769
+          "start": 4.918231,
+          "end": 5.59161,
+          "seconds": 0.673379
         }
       ],
       "generation_profile": {
@@ -12950,11 +17180,95 @@
       "id": "geography_32_hint"
     },
     {
-      "text": "Что течёт, имеет русло и два берега? На выбор: остров. река. море.",
-      "file": "voice_ru_07be225fce7613dc32d6.ogg",
-      "seconds": 5.837097505668934,
-      "bytes": 34180,
-      "sha256": "3e863d1787ce4837e5ae25186cb7941294194fad230d9c1a1114fcca87bdb1c1",
+      "text": "Что длинное, течёт и имеет два берега? На выбор: остров. река. море.",
+      "file": "voice_ru_5a9df2b57c4f2da4b365.ogg",
+      "seconds": 5.570068027210884,
+      "bytes": 32237,
+      "sha256": "9904caa6d608777b9ba51919eaac47eeaaa7236b55b452968e73e6faa494916c",
+      "phonetic_units": [
+        {
+          "phonemes": "ʃto",
+          "start": 0.21483,
+          "end": 0.33093,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "dɭʲˈinnʌjɪ,",
+          "start": 0.38898,
+          "end": 0.841769,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "tʲitʃʲˈɵt",
+          "start": 0.876599,
+          "end": 1.271338,
+          "seconds": 0.394739
+        },
+        {
+          "phonemes": "ɪ",
+          "start": 1.329388,
+          "end": 1.364218,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "ɪmʲˈejit",
+          "start": 1.445488,
+          "end": 1.758957,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "dvˈɑ",
+          "start": 1.782177,
+          "end": 1.967937,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "bʲirʲˈeɡa?",
+          "start": 2.014376,
+          "end": 2.676145,
+          "seconds": 0.661769
+        },
+        {
+          "phonemes": "nə",
+          "start": 3.049025,
+          "end": 3.176735,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "vˈybʌr:",
+          "start": 3.246395,
+          "end": 3.792063,
+          "seconds": 0.545669
+        },
+        {
+          "phonemes": "ˈostrʌf",
+          "start": 3.884943,
+          "end": 4.302902,
+          "seconds": 0.417959
+        },
+        {
+          "phonemes": "rʲikˈɑ",
+          "start": 4.326122,
+          "end": 4.616372,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "mˈorʲi.",
+          "start": 4.697642,
+          "end": 5.173651,
+          "seconds": 0.476009
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "geography_33"
     },
     {

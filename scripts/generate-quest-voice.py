@@ -109,8 +109,18 @@ def narration_texts(locale):
             names=[languages['objects'][o][locale] for o in task['options']]
             if locale=='de':prompt+=' Zur Auswahl stehen '+', '.join(names[:-1])+' und '+names[-1]+'.'
             else:prompt+=' '+languages['ui']['choices'][locale]+' '+'. '.join(names)+'.'
+        hint=values['tip']
+        if locale!='de' and task['subject']=='german':
+            # Never teach German targets through an English/Russian phonemizer.
+            # The runtime queues the matching full German question/hint next.
+            leads={
+                'initial':('Listen to the German word. Which letter does it start with?', 'Послушай немецкое слово. С какой буквы его пишут?', 'Listen to the German word and its first letter.', 'Послушай немецкое слово и его первую букву.'),
+                'syllables':('Listen to the German word. How many syllables can you hear?', 'Послушай немецкое слово. Сколько слогов ты слышишь?', 'Listen to the German example and clap along.', 'Послушай немецкий пример и хлопай по слогам.'),
+                'word':('Which German word matches the picture?', 'Какое немецкое слово подходит к картинке?', 'Listen to the German word and how its letters are spelled.', 'Послушай немецкое слово и как оно произносится по буквам.'),
+                'rhyme':('Listen to the German words. Which ones rhyme?', 'Послушай немецкие слова. Какие из них рифмуются?', 'Listen to the two German words that rhyme.', 'Послушай два немецких слова, которые рифмуются.')}
+            leads=leads[task['kind']];prompt=leads[0 if locale=='en' else 1];hint=leads[2 if locale=='en' else 3]
         texts[task['id']]=prompt
-        texts[task['id']+'_hint']=values['tip']
+        texts[task['id']+'_hint']=hint
     return texts
 
 def normalized_phonemes(phonemes,id_map):

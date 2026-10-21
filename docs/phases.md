@@ -19,3 +19,9 @@ Rohprotokolle: `docs/qa/phase1-family.log`, `phase1-public.log`, `phase1-python.
 Die dokumentierte Kategorienheuristik markierte am Ausgangsstand 83, jetzt 33 Aufgaben. Dies ist keine fachliche Zertifizierung. Unveränderte Aufgaben mit Bildbedarf, mögliche Fachzuordnungen und alle Änderungen stehen in `distractor-review.md`.
 
 Ausgeführt: `tests/run.sh` einschließlich **6.085 Spielprüfungen, 30 Audiobusprüfungen, frischem Import/Start, allen 45 Python-Tests**, Quellaudit und reproduzierbarem Ablenkerbericht: **bestanden**. Rohprotokoll: `docs/qa/phase2.log`. Alle geänderten Sprachaufnahmen wurden mit den bisherigen lizenzierten Modellen erzeugt und tatsächlich decodiert. Fünf neue Tests sichern Antworten, Fachzuordnung, lebendige Pflanze, bewusst unveränderte Aufgaben und Bericht-Reproduktion. Keine bestehende Prüfung entfernt. Fachliche, muttersprachliche und kindliche Abnahme bleiben offen.
+
+## Phase 3 – Sprachfassungen
+
+Alle 320 Fragen/Hinweise in drei Sprachen abgeglichen. 199 Textfelder in 60 Aufgaben präzisiert; jedes geänderte Feld ist mit Vorher/Nachher in `localization-review.md` und maschinenlesbar protokolliert. Fehlende Gegenstände, Zahlen, Lernwörter, Buchstaben und Klatsch-Silben ergänzt. Deutsche Zielwörter werden weiterhin ausschließlich durch die deutsche Folgeaufnahme vermittelt; die EN/RU-Voraufnahme erklärt die Aktion. Kein Eingriff in Antworten, Bilder, Fachzuordnung oder Mechanik; ursprüngliche deutsche 24 Aufgaben bleiben erhalten.
+
+Ausgeführt: `tests/run.sh`, **6.085 Spielprüfungen, 30 tatsächliche Audiobusprüfungen, frischer Import/Start, alle 49 Python-Tests**, Inhalts-/Ablenker-/Lokalisierungsberichte: **bestanden**. Vier neue Regressionen prüfen konkrete Informationsverluste und Sprachrouting; bestehende Prüfungen bleiben unverändert. Rohprotokoll: `docs/qa/phase3.log`. Fachbegriffe und kindliche Verständlichkeit sind als offene muttersprachliche Prüfungen aufgeführt.

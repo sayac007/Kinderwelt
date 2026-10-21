@@ -3436,37 +3436,55 @@
       "id": "logic_rule_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Bienen siehst du?",
+      "file": "voice_de_88477da522cfb24ae563.ogg",
+      "seconds": 2.2598639455782314,
+      "bytes": 14096,
+      "sha256": "5e1ee4745365b8cb48cec7830aa05d4a4beb9e8fa4cd9e9fd32117dcd96090ec",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.481859,
+          "seconds": 0.22059
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
+          "start": 0.528299,
+          "end": 0.830159,
           "seconds": 0.301859
         },
         {
+          "phonemes": "bˈiːnən",
+          "start": 0.888209,
+          "end": 1.073968,
+          "seconds": 0.18576
+        },
+        {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
-          "seconds": 0.267029
+          "start": 1.097188,
+          "end": 1.329388,
+          "seconds": 0.2322
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
-          "seconds": 0.429569
+          "start": 1.375828,
+          "end": 1.851837,
+          "seconds": 0.476009
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "math_09"
     },
     {
@@ -3528,37 +3546,55 @@
       "id": "math_09_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Fische siehst du?",
+      "file": "voice_de_7df6ed08df178219a4b6.ogg",
+      "seconds": 2.492063492063492,
+      "bytes": 15444,
+      "sha256": "3bb2524887de9ca72b3025c67d47f10edc7c25033a8489f628ba8f4e6184f459",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.481859,
+          "seconds": 0.22059
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
-          "seconds": 0.301859
+          "start": 0.528299,
+          "end": 0.841769,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "fˈɪʃə",
+          "start": 0.888209,
+          "end": 1.259728,
+          "seconds": 0.371519
         },
         {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
-          "seconds": 0.267029
+          "start": 1.317778,
+          "end": 1.596417,
+          "seconds": 0.278639
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
-          "seconds": 0.429569
+          "start": 1.642857,
+          "end": 2.084036,
+          "seconds": 0.441179
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "math_10"
     },
     {
@@ -3620,37 +3656,55 @@
       "id": "math_10_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Blumen siehst du?",
+      "file": "voice_de_a4f14ce936d5ea973d50.ogg",
+      "seconds": 2.44562358276644,
+      "bytes": 15111,
+      "sha256": "23379a044088f3091c5855770931ebcb8efdeb4ee0d8c655637116cf91364e28",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.481859,
+          "seconds": 0.22059
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
-          "seconds": 0.301859
+          "start": 0.539909,
+          "end": 0.795329,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "blˈʊmən",
+          "start": 0.864989,
+          "end": 1.306168,
+          "seconds": 0.441179
         },
         {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
-          "seconds": 0.267029
+          "start": 1.340998,
+          "end": 1.573197,
+          "seconds": 0.2322
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
-          "seconds": 0.429569
+          "start": 1.631247,
+          "end": 2.037596,
+          "seconds": 0.406349
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "math_11"
     },
     {
@@ -3712,37 +3766,55 @@
       "id": "math_11_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Blätter siehst du?",
+      "file": "voice_de_2d11b0a4d0866c490da6.ogg",
+      "seconds": 2.457233560090703,
+      "bytes": 15739,
+      "sha256": "dea55f8a842fbd0f134a761808a4c3ee3b0650f1a0e09b36bbd170302df75088",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.493469,
+          "seconds": 0.2322
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
-          "seconds": 0.301859
+          "start": 0.551519,
+          "end": 0.830159,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "blˈɛtɜ",
+          "start": 0.876599,
+          "end": 1.248118,
+          "seconds": 0.371519
         },
         {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
+          "start": 1.306168,
+          "end": 1.573197,
           "seconds": 0.267029
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
+          "start": 1.619637,
+          "end": 2.049206,
           "seconds": 0.429569
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "math_12"
     },
     {
@@ -3804,37 +3876,55 @@
       "id": "math_12_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Sterne siehst du?",
+      "file": "voice_de_f5f276bda5b048d9779e.ogg",
+      "seconds": 2.6081632653061226,
+      "bytes": 16220,
+      "sha256": "25ca0b7aa4cc0baf159042498887aa6008e687538fa5e4aca2660cddbd9ba263",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.481859,
+          "seconds": 0.22059
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
-          "seconds": 0.301859
+          "start": 0.539909,
+          "end": 0.864989,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "ʃtˈɛɾnə",
+          "start": 0.911429,
+          "end": 1.340998,
+          "seconds": 0.429569
         },
         {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
-          "seconds": 0.267029
+          "start": 1.387438,
+          "end": 1.677687,
+          "seconds": 0.290249
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
-          "seconds": 0.429569
+          "start": 1.735737,
+          "end": 2.200136,
+          "seconds": 0.464399
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "math_13"
     },
     {
@@ -3896,35 +3986,41 @@
       "id": "math_13_hint"
     },
     {
-      "text": "Wie viele siehst du?",
-      "file": "voice_de_05b1cb2f1090918c4533.ogg",
-      "seconds": 2.0276643990929704,
-      "bytes": 12599,
-      "sha256": "a95a5b8e751291348004509746276d4b8696573a4559b3401c83cc544169f6ca",
+      "text": "Wie viele Äpfel siehst du?",
+      "file": "voice_de_879a14c2a2de160af9c6.ogg",
+      "seconds": 2.457233560090703,
+      "bytes": 14691,
+      "sha256": "99ddaf1716cf85b49454b7613b93621fd0e9f60b8a3ee59c4aa6a042976e7a48",
       "phonetic_units": [
         {
           "phonemes": "viː",
           "start": 0.26127,
-          "end": 0.470249,
-          "seconds": 0.20898
+          "end": 0.505079,
+          "seconds": 0.24381
         },
         {
           "phonemes": "fˈiːlə",
-          "start": 0.516689,
-          "end": 0.818549,
-          "seconds": 0.301859
+          "start": 0.563129,
+          "end": 0.841769,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "ˈɛpfəl",
+          "start": 0.876599,
+          "end": 1.271338,
+          "seconds": 0.394739
         },
         {
           "phonemes": "zˈiːst",
-          "start": 0.876599,
-          "end": 1.143628,
-          "seconds": 0.267029
+          "start": 1.329388,
+          "end": 1.584807,
+          "seconds": 0.25542
         },
         {
           "phonemes": "duː?",
-          "start": 1.190068,
-          "end": 1.619637,
-          "seconds": 0.429569
+          "start": 1.631247,
+          "end": 2.049206,
+          "seconds": 0.417959
         }
       ],
       "id": "math_14"

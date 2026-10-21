@@ -37,10 +37,15 @@ logic_old={
 'logic_shape':('What matches the shadow?','Что подходит к тени?','Look for the square head and two arms of the robot.','Найди квадратную голову и две руки робота.'),
 'logic_rule':('Which does not belong with the objects in the sky?','Что лишнее среди небесных тел?','The sun, moon and stars are in the sky. A flower grows on the ground.','Солнце, Луна и звёзды находятся в небе. Цветок растёт на земле.')}
 
+# Explicit plurals avoid dropping the pictured object in translations.
+PLURALS={
+ 'apple':('Äpfel','apples','яблок'), 'star':('Sterne','stars','звёзд'),
+ 'bee':('Bienen','bees','пчёл'), 'fish':('Fische','fish','рыб'),
+ 'leaf':('Blätter','leaves','листьев'), 'flower':('Blumen','flowers','цветов')}
 def math_text(t):
-    k=t['kind'];o=t.get('object','star');en=objects[o]['en'];ru=objects[o]['ru']
+    k=t['kind'];o=t.get('object','star');de,en,ru=PLURALS[o]
     if k=='count':
-        return ([f'Wie viele siehst du?',f'How many can you see?',f'Сколько ты видишь?'],['Tippe jedes Bild einmal an und zähle mit.','Tap each picture once and count.','Коснись каждой картинки один раз и посчитай.'])
+        return ([f'Wie viele {de} siehst du?',f'How many {en} can you see?',f'Сколько {ru} ты видишь?'],['Tippe jedes Bild einmal an und zähle mit.','Tap each picture once and count.','Коснись каждой картинки один раз и посчитай.'])
     if k=='add':
         a,b=t['left'],t['right'];return ([f'{a} und {b}. Wie viele zusammen?',f'{a} and {b}. How many altogether?',f'{a} и {b}. Сколько всего?'],['Zähle zuerst links und dann rechts weiter.','Count the left group, then keep counting the right group.','Сначала посчитай слева, затем продолжи считать справа.'])
     if k=='subtract':
@@ -53,12 +58,29 @@ def math_text(t):
     raise ValueError(k)
 
 def german_text(t):
-    word=t['word'];k=t['kind']
-    if k=='initial':return ([f'{word.capitalize()}. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?','Listen to the German word. Which letter does it start with?','Послушай немецкое слово. С какой буквы его пишут?'],[f'{word.capitalize()} beginnt mit {t["answer"]}. Suche diesen Buchstaben.',f'The German word starts with the letter {t["answer"]}. Choose that letter.',f'Немецкое слово начинается с буквы {t["answer"]}. Выбери эту букву.'])
-    if k=='syllables':return ([f'{word.capitalize()}. Wie viele Silben hörst du?', 'Listen to the German word. How many syllables does it have?','Послушай немецкое слово. Сколько в нём слогов?'],['Sprich und klatsche: '+'. '.join(x.capitalize() for x in t['syllables'])+f'. Das sind {t["answer"]} Silben.',f'Clap along with the German word. It has {t["answer"]} syllables.',f'Произнеси немецкое слово, хлопая по слогам. В нём {t["answer"]} слога.'])
-    if k=='word':return (['Welches deutsche Wort passt zum Bild?','Which German word matches the picture?','Какое немецкое слово подходит к картинке?'],[f'Suche die Buchstaben von {word.capitalize()}: '+'. '.join(word)+'.','Match the written German word to the picture. Listen to its German reading next.','Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.'])
-    if k=='rhyme':return (['Was reimt sich auf Haus?','Listen to the German words. Which one rhymes with the word for house?','Послушай немецкие слова. Какое рифмуется со словом «дом» по-немецки?'],['Haus und Maus klingen am Ende gleich.','The German words for house and mouse rhyme: listen to the German example.','Немецкие слова «дом» и «мышь» рифмуются. Послушай пример по-немецки.'])
+    word=t['word'];k=t['kind'];target=word.capitalize()
+    if k=='initial':return ([f'{target}. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?',f'German word: {target}. Which letter does it start with?',f'Немецкое слово: {target}. С какой буквы его пишут?'],[f'{target} beginnt mit {t["answer"]}. Suche diesen Buchstaben.',f'{target} starts with the letter {t["answer"]}. Choose that letter.',f'{target} начинается с буквы {t["answer"]}. Выбери эту букву.'])
+    if k=='syllables':
+        parts='. '.join(x.capitalize() for x in t['syllables']);count=t['answer'];ru_count='слог' if count==1 else ('слога' if count in [2,3,4] else 'слогов')
+        return ([f'{target}. Wie viele Silben hörst du?',f'German word: {target}. How many syllables can you hear?',f'Немецкое слово: {target}. Сколько слогов ты слышишь?'],[f'Sprich und klatsche: {parts}. Das sind {count} Silben.',f'Say and clap: {parts}. That is {count} '+('syllable.' if count==1 else 'syllables.'),f'Произнеси и хлопай: {parts}. Это {count} {ru_count}.'])
+    if k=='word':
+        letters='. '.join(word)+'.'
+        return (['Welches deutsche Wort passt zum Bild?','Which German word matches the picture?','Какое немецкое слово подходит к картинке?'],[f'Suche die Buchstaben von {target}: {letters}',f'Find the letters of {target}: {letters}',f'Найди буквы слова {target}: {letters}'])
+    if k=='rhyme':return (['Was reimt sich auf Haus?','Which German word rhymes with Haus?','Какое немецкое слово рифмуется со словом Haus?'],['Haus und Maus klingen am Ende gleich.','Haus and Maus sound the same at the end.','Haus и Maus звучат одинаково в конце.'])
     raise ValueError(k)
+
+# Preserve the original German wording while retaining every named object,
+# number, spelling and action in its localized instruction.
+FOUNDATION_TRANSLATIONS={
+ 'math_count':('How many apples can you see?','Сколько яблок ты видишь?','Tap each apple once. Count as you go.','Коснись каждого яблока один раз. Считай при этом.'),
+ 'math_add':('Three apples and two apples. How many altogether?','Три яблока и два яблока. Сколько всего?','Count the left group first. Then keep counting on the right.','Сначала посчитай слева. Затем продолжи считать справа.'),
+ 'math_take':('Seven leaves. Three fly away. How many remain?','Семь листьев. Три улетают. Сколько осталось?','Count only the leaves without a cross.','Считай только листья без крестика.'),
+ 'math_ten':('Four stars are already there. How many more make ten?','Уже есть четыре звезды. Сколько не хватает до десяти?','Count the empty star spaces.','Посчитай пустые места для звёзд.'),
+ 'math_compare':('Where are there more apples?','Где больше яблок?','Compare both groups. Tap the larger group.','Сравни обе группы. Коснись той, где больше.'),
+ 'math_steps':('Two, four, six. Which number comes next?','Два, четыре, шесть. Какое число следующее?','Add two each time.','Каждый раз прибавляй два.'),
+ 'math_twenty':('Ten and four. How many altogether?','Десять и четыре. Сколько всего?','The first group has ten. Count on four more.','В первой группе десять. Отсчитай ещё четыре.'),
+ 'math_split':('Five stars are already there. How many more make eight?','Уже есть пять звёзд. Сколько не хватает до восьми?','Count the empty star spaces.','Посчитай пустые места для звёзд.'),
+ 'german_read':('Which German word belongs to the ball?','Какое немецкое слово подходит к мячу?','B. A. L. L. Find the word Ball.','B. A. L. L. Найди слово Ball.')}
 
 # Translations change instructions only. German subject keeps German words and answers.
 for t in tasks:
@@ -67,6 +89,8 @@ for t in tasks:
     elif t['subject']=='german':q,h=german_text(t)
     else:
         en,ru,eh,rh=logic_old[t['id']];q=[de[0],en,ru];h=[de[1],eh,rh]
+    if t['id'] in FOUNDATION_TRANSLATIONS:
+        en,ru,eh,rh=FOUNDATION_TRANSLATIONS[t['id']];q[1:]=[en,ru];h[1:]=[eh,rh]
     q[0],h[0]=de
     local(t,q,h)
 
