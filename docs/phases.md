@@ -25,3 +25,11 @@ Ausgeführt: `tests/run.sh` einschließlich **6.085 Spielprüfungen, 30 Audiobus
 Alle 320 Fragen/Hinweise in drei Sprachen abgeglichen. 199 Textfelder in 60 Aufgaben präzisiert; jedes geänderte Feld ist mit Vorher/Nachher in `localization-review.md` und maschinenlesbar protokolliert. Fehlende Gegenstände, Zahlen, Lernwörter, Buchstaben und Klatsch-Silben ergänzt. Deutsche Zielwörter werden weiterhin ausschließlich durch die deutsche Folgeaufnahme vermittelt; die EN/RU-Voraufnahme erklärt die Aktion. Kein Eingriff in Antworten, Bilder, Fachzuordnung oder Mechanik; ursprüngliche deutsche 24 Aufgaben bleiben erhalten.
 
 Ausgeführt: `tests/run.sh`, **6.085 Spielprüfungen, 30 tatsächliche Audiobusprüfungen, frischer Import/Start, alle 49 Python-Tests**, Inhalts-/Ablenker-/Lokalisierungsberichte: **bestanden**. Vier neue Regressionen prüfen konkrete Informationsverluste und Sprachrouting; bestehende Prüfungen bleiben unverändert. Rohprotokoll: `docs/qa/phase3.log`. Fachbegriffe und kindliche Verständlichkeit sind als offene muttersprachliche Prüfungen aufgeführt.
+
+## Phase 4 – Deutsche Stimme
+
+Vorhandenen tatsächlichen Stand geprüft: Thorsten high statt des veralteten Kerstin-low-Verweises. Lokal vorliegende Thorsten-medium/high-Karten, Modellkonfigurationen und ONNX-Hashes geprüft; beide Datensätze CC0/22.050 Hz. Empfehlung: high beibehalten. Die widersprüchliche Qualitätszeile der originalen High-Karte ist dokumentiert, nicht verändert. Kein Modellwechsel; Lizenzdateien bleiben unverändert.
+
+Ausgeführt: unabhängiges ASR-Screening 31 Dateien je Sprache, ohne Referenzvorgabe; Zeichenabweichungen DE 4,189 %, EN 3,617 %, RU 7,464 %. Vollständige Rohbefunde in `docs/qa/phase4-asr.json`; tatsächliche lokale Modellprüfung in `phase4-models.json`. Kein Nachweis vollständiger Hörverständlichkeit. Hörprotokoll und auffällige Fälle in `voice.md`.
+
+`tests/run.sh` einschließlich **6.085 Spielprüfungen, 30 Audiobusprüfungen, frischem Start/Import und allen 51 Python-Tests**: **bestanden**. Zwei neue Provenienz-/Qualitätsregressionen; keine vorhandene Prüfung entfernt. Alle 1.633 unterschiedlichen Sprachdateien vollständig decodiert. Rohprotokoll: `docs/qa/phase4.log`. Muttersprachliche und kindliche Hörabnahme sowie Audio auf echten Geräten bleiben offen.

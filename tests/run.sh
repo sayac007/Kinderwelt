@@ -28,3 +28,5 @@ python3 scripts/qa/audit.py
 python3 scripts/qa/distractors.py --check
 
 python3 scripts/qa/localization.py --check
+
+python3 scripts/qa/voice_models.py
