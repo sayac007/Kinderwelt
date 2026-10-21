@@ -1,0 +1,9 @@
+test_explicit_package_override_and_isolated_previews (test_release_config.ReleaseConfigTests.test_explicit_package_override_and_isolated_previews) ... ok
+test_invalid_package_ids_rejected_before_export (test_release_config.ReleaseConfigTests.test_invalid_package_ids_rejected_before_export) ... ok
+test_music_arrangements_match_sources_and_preserve_licences (test_release_config.ReleaseConfigTests.test_music_arrangements_match_sources_and_preserve_licences) ... ok
+test_repo_review_assets_are_not_duplicated (test_release_config.ReleaseConfigTests.test_repo_review_assets_are_not_duplicated) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
