@@ -134,14 +134,14 @@ class QuestAssetsTests(unittest.TestCase):
         self.assertEqual(before,[p.read_bytes() for p in paths])
     def test_graphics_are_real_png_and_individual_heroes_differ(self):
         hashes=set()
-        for name in ['wanja','mischa','du','mama','katze','george','squirrel','icons','objects','landscape','science-a','science-b']:
+        for name in ['squirrel','icons','objects','landscape','science-a','science-b','home','castle']:
             raw=(ROOT/'assets/quest'/f'{name}.png').read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             width,height=struct.unpack('>II',raw[16:24])
             self.assertGreaterEqual(width,1024)
             self.assertGreaterEqual(height,1024)
             hashes.add(hashlib.sha256(raw).hexdigest())
-        self.assertEqual(len(hashes),12)
+        self.assertEqual(len(hashes),8)
     def test_costume_atlases_and_visible_frames(self):
         # Metadata describes crops only; the generated atlas PNGs are never rewritten.
         data=json.loads((ROOT/'assets/quest/looks.json').read_text())
@@ -151,8 +151,8 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(raw).hexdigest(),hero['sha256'])
             width,height=struct.unpack('>II',raw[16:24])
             self.assertEqual(raw[25],6)
-            self.assertEqual(set(hero['frames']),{'hero','alien','astronaut','scientist'})
-            self.assertEqual(set(hero['probes']),{'hero','alien','astronaut','scientist'})
+            self.assertTrue({'hero','alien','astronaut','scientist'}<=set(hero['frames']))
+            self.assertTrue({'hero','alien','astronaut','scientist'}<=set(hero['probes']))
             self.assertGreater(len(hero['mask_runs']),height)
             for row,left,length,owner in hero['mask_runs']:
                 self.assertTrue(0<=row<height and 0<=left<left+length<=width and owner in [1,2,3,4])
@@ -164,9 +164,19 @@ class QuestAssetsTests(unittest.TestCase):
             raw=(ROOT/'assets/quest'/(name+'.png')).read_bytes()
             self.assertEqual(raw[:8],b'\x89PNG\r\n\x1a\n')
             self.assertGreater(len(raw),100000)
-    def test_approved_family_art_is_used_without_changes(self):
-        for name in ['wanja','mischa','du','mama','katze','george','squirrel']:
-            self.assertEqual((ROOT/'assets/quest'/f'{name}.png').read_bytes(),(ROOT/'docs/character-proposals'/f'{name}.png').read_bytes())
+    def test_active_cast_resources_match_the_materialized_variant(self):
+        cast=json.loads((ROOT/'assets/quest/cast.json').read_text())
+        self.assertIn(cast['variant'],['family','public'])
+        for path,digest in cast['resource_sha256'].items():
+            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),digest)
+        self.assertEqual(len(cast['names']),7)
+        if cast['variant']=='public':
+            self.assertEqual(cast['names']['wanja'],'Nova')
+            self.assertFalse(list((ROOT/'assets/quest/characters').glob('outfits-*.png')))
+        else:
+            pack=ROOT/'.private/characters'
+            for index,id in enumerate(['wanja','mischa','du','mama','george','katze'],1):
+                self.assertEqual((ROOT/'assets/quest/characters'/f'actor-{index}.png').read_bytes(),(pack/(id+'.png')).read_bytes())
         for name in ['mina','leo','sam','jule']:
             self.assertFalse((ROOT/'assets/quest'/f'{name}.png').exists())
     def test_android_presets_include_all_nonresource_licence_texts(self):

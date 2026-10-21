@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "names": {
+    "wanja": "Nova",
+    "mischa": "Lumi",
+    "du": "Karo",
+    "mama": "Tavi",
+    "george": "Zora",
+    "katze": "Flocke"
+  },
+  "source": "neutral-cast.png",
+  "sha256": "00f203af531388bcd5f479c6093929385a8a20bc9b428c58048ed86daadadf71",
+  "pixels": [
+    1024,
+    1536
+  ],
+  "columns": [
+    0,
+    205,
+    410,
+    615,
+    820,
+    1024
+  ],
+  "rows": [
+    0,
+    256,
+    512,
+    770,
+    1024,
+    1320,
+    1536
+  ],
+  "authorship": "Original fictional character atlas, generated for this project; no family photo references."
+}

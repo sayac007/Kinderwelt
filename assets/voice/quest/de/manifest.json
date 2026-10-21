@@ -23,11 +23,11 @@
   "human_listening_review": "OPEN; independent synthetic voice, no actor imitation",
   "clips": [
     {
-      "text": "Wer bist du heute? Wanja und seine Familie freuen sich auf dich. Tippe auf eine Figur. Dann geht es los.",
-      "file": "voice_de_78719c8de050c34b3266.ogg",
-      "seconds": 8.661043083900227,
-      "bytes": 48102,
-      "sha256": "cc0a2693c37b3a649bb1cf1b9bb7794aff00c1ef5acbc171dc2b8a995d17bd51",
+      "text": "Wer bist du heute? Suche dir eine Figur aus. Tippe dann auf Start.",
+      "file": "voice_de_5dc904bd3069ee2fad2c.ogg",
+      "seconds": 5.884897959183673,
+      "bytes": 33007,
+      "sha256": "e7e88f3f2dcfcb21436b0876f6fb42f3500e258cff0ce049e3f31bd5f00775ec",
       "phonetic_units": [
         {
           "phonemes": "vˈeːɾ",
@@ -54,102 +54,72 @@
           "seconds": 0.650159
         },
         {
-          "phonemes": "vˈanjɑː",
-          "start": 1.934467,
-          "end": 2.514966,
-          "seconds": 0.580499
+          "phonemes": "zˈuːxə",
+          "start": 1.922857,
+          "end": 2.398866,
+          "seconds": 0.476009
         },
         {
-          "phonemes": "ʊnt",
-          "start": 2.573016,
-          "end": 2.700726,
+          "phonemes": "diːɾ",
+          "start": 2.480136,
+          "end": 2.607846,
           "seconds": 0.12771
-        },
-        {
-          "phonemes": "zˌaɪnə",
-          "start": 2.723946,
-          "end": 2.886485,
-          "seconds": 0.16254
-        },
-        {
-          "phonemes": "famˈiːlɪʲə",
-          "start": 2.932925,
-          "end": 3.513424,
-          "seconds": 0.580499
-        },
-        {
-          "phonemes": "frˈɔøən",
-          "start": 3.583084,
-          "end": 3.966213,
-          "seconds": 0.383129
-        },
-        {
-          "phonemes": "zɪç",
-          "start": 4.001043,
-          "end": 4.186803,
-          "seconds": 0.18576
-        },
-        {
-          "phonemes": "aʊf",
-          "start": 4.233243,
-          "end": 4.430612,
-          "seconds": 0.19737
-        },
-        {
-          "phonemes": "dˈɪç.",
-          "start": 4.511882,
-          "end": 4.860181,
-          "seconds": 0.348299
-        },
-        {
-          "phonemes": "tˈɪpə",
-          "start": 5.337551,
-          "end": 5.66263,
-          "seconds": 0.325079
-        },
-        {
-          "phonemes": "aʊf",
-          "start": 5.70907,
-          "end": 5.82517,
-          "seconds": 0.1161
         },
         {
           "phonemes": "ˌaɪnə",
-          "start": 5.84839,
-          "end": 5.9761,
-          "seconds": 0.12771
-        },
-        {
-          "phonemes": "fiːɡˈuːɾ.",
-          "start": 6.01093,
-          "end": 6.614649,
-          "seconds": 0.603719
-        },
-        {
-          "phonemes": "dan",
-          "start": 6.999138,
-          "end": 7.277778,
-          "seconds": 0.278639
-        },
-        {
-          "phonemes": "ɡˈeːt",
-          "start": 7.312608,
-          "end": 7.486757,
-          "seconds": 0.17415
-        },
-        {
-          "phonemes": "ɛs",
-          "start": 7.533197,
-          "end": 7.649297,
+          "start": 2.631066,
+          "end": 2.747166,
           "seconds": 0.1161
         },
         {
-          "phonemes": "lˈoːs.",
-          "start": 7.695737,
-          "end": 8.253016,
-          "seconds": 0.557279
+          "phonemes": "fiːɡˈuːɾ",
+          "start": 2.770385,
+          "end": 3.176735,
+          "seconds": 0.406349
+        },
+        {
+          "phonemes": "ˈaʊs.",
+          "start": 3.246395,
+          "end": 3.722404,
+          "seconds": 0.476009
+        },
+        {
+          "phonemes": "tˈɪpə",
+          "start": 4.199773,
+          "end": 4.455193,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "dan",
+          "start": 4.478413,
+          "end": 4.675782,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "aʊf",
+          "start": 4.710612,
+          "end": 4.861542,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "ʃtˈaɾt.",
+          "start": 4.884762,
+          "end": 5.500091,
+          "seconds": 0.615329
         }
       ],
+      "generation_profile": {
+        "revision": "articulated-3",
+        "length_scale": 1.6,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.0,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28,
+        "phoneme_normalization": "supported-nfc",
+        "duration_alignment": "vits-ceil-frames"
+      },
       "id": "choose"
     },
     {

@@ -155,6 +155,7 @@ func arrange() -> void:
 	if is_instance_valid(chooser): arrange_chooser()
 	queue_redraw()
 func hero_name(id: String) -> String:
+	if not preload("res://core/quest/cast.gd").FAMILY and id!="squirrel": return preload("res://core/quest/hero.gd").NAMES[id]
 	if id=="du": return host.t("self_hero")
 	if id=="katze": return Lang.object_name("cat",host.store.data.locale)
 	if id=="squirrel": return host.t("squirrel")
@@ -237,7 +238,7 @@ func arrange_chooser() -> void:
 	for i in range(hero_choices.size()):
 		var b := hero_choices[i]
 		if featured:
-			# Wanja leads the family, followed by four equally reachable choices.
+			# The first hero leads the selection; the remaining choices stay equally reachable.
 			b.position = Vector2(14,68) if i==0 else Vector2(14+((i-1)%columns)*width,68+(1+(i-1)/columns)*height)
 			b.size = Vector2(size.x-36 if i==0 else width-8,height-6)
 		else:

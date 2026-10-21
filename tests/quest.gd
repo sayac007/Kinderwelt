@@ -236,7 +236,7 @@ func run() -> void:
 			await touch_button(app.game_view.look_buttons[index])
 			check(app.store.data.looks[id]==look,"Native wardrobe selection persists per character: "+id+"/"+look)
 			var figure: Control=app.game_view.hero_choices[preload("res://core/quest/hero.gd").IDS.find(id)].get_child(0)
-			check(figure.costume==look and ((figure.current_texture() is AtlasTexture)==(look!="classic")),"Actual preview uses selected outfit texture")
+			check(figure.costume==look and ((figure.current_texture() is AtlasTexture)==(look!="classic" or not preload("res://core/quest/cast.gd").FAMILY and id!="squirrel")),"Actual preview uses selected outfit texture")
 			for button in app.game_view.look_buttons:
 				check(button.size.x>=48 and button.size.y>=48 and Rect2(Vector2.ZERO,Vector2(360,800)).encloses(button.get_global_rect()),"Wardrobe touch targets fit the phone")
 		var mask: Image=Wardrobe.mask(id).get_image()
@@ -252,6 +252,9 @@ func run() -> void:
 		app.game_view.close_task()
 	app.hub()
 	check(app.game_view.score.pulse==0 and app.game_view.score.points==Progress.stars(app.store.data.quest)*10,"Re-entry shows saved points without inventing a new award")
+	var legacy_cast_save:=Store.clean({"hero":"wanja","looks":{"wanja":"astronaut"},"quest":{"solved":{"math_count":true},"hero_chosen":true}})
+	check(legacy_cast_save.hero=="wanja" and legacy_cast_save.looks.wanja=="astronaut" and legacy_cast_save.quest.solved.has("math_count"),"Legacy family IDs, clothing and solved tasks survive either cast variant")
+	check(preload("res://core/quest/hero.gd").NAMES.wanja==("Wanja" if preload("res://core/quest/cast.gd").FAMILY else "Nova"),"Selected cast supplies display names independently of saved IDs")
 	var wardrobe_save:=Store.new();wardrobe_save.load_save()
 	for id in preload("res://core/quest/hero.gd").IDS:check(wardrobe_save.data.looks[id]=="scientist","All seven independent wardrobe choices survive disk roundtrip")
 	var invalid_looks:=Store.clean({"scenery":"bad","looks":{"wanja":"fake","george":"hero","intruder":"alien"}})

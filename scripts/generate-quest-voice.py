@@ -10,9 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 MODELS={'de':('de_DE-thorsten-high','CC0','male'),'en':('en_US-ljspeech-medium','Public Domain','female'),'ru':('ru_RU-denis-medium','CC0','male')}
 GLOBALS={
- 'de':{'choose':'Wer bist du heute? Wanja und seine Familie freuen sich auf dich. Tippe auf eine Figur. Dann geht es los.','walk':'Tippe auf ein Schild. Deine Figur läuft dorthin. Unten kannst du alle acht Bereiche direkt antippen.','success':'Wunderbar! Das hast du gut gemacht.','again':'Schau noch einmal. Du kannst es ausprobieren.'},
- 'en':{'choose':'Who are you today? Wanja and the family are ready. Tap a character, then let us go.','walk':'Tap a sign. Your character walks there. Tap any of the eight subjects along the bottom.','success':'That is right! You did it.','again':'Take another look. You can try again.'},
- 'ru':{'choose':'Кем ты будешь сегодня? Ваня и его семья ждут тебя. Нажми на персонажа, и начнём.','walk':'Нажми на табличку. Персонаж подойдёт к ней. Нажми на любой из восьми разделов внизу.','success':'Правильно! У тебя получилось.','again':'Посмотри ещё раз. Можно попробовать снова.'}}
+ 'de':{'choose':'Wer bist du heute? Suche dir eine Figur aus. Tippe dann auf Start.','walk':'Tippe auf ein Schild. Deine Figur läuft dorthin. Unten kannst du alle acht Bereiche direkt antippen.','success':'Wunderbar! Das hast du gut gemacht.','again':'Schau noch einmal. Du kannst es ausprobieren.'},
+ 'en':{'choose':'Who will you be today? Choose a character. Then tap Start.','walk':'Tap a sign. Your character walks there. Tap any of the eight subjects along the bottom.','success':'That is right! You did it.','again':'Take another look. You can try again.'},
+ 'ru':{'choose':'Кем ты будешь сегодня? Выбери персонажа. Затем нажми «Начать».','walk':'Нажми на табличку. Персонаж подойдёт к ней. Нажми на любой из восьми разделов внизу.','success':'Правильно! У тебя получилось.','again':'Посмотри ещё раз. Можно попробовать снова.'}}
 
 PRAISE={
 'de':['Wunderbar! Das hast du gut gemacht.','Sehr klug entschieden!','Super cool, das gefällt mir!','Toll gelöst! Weiter so!','Du hast genau hingeschaut. Klasse!','Prima! Du hast es herausgefunden.'],

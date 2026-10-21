@@ -21,11 +21,77 @@
   "human_listening_review": "OPEN; independent synthetic voice, no actor imitation",
   "clips": [
     {
-      "text": "Кем ты будешь сегодня? Ваня и его семья ждут тебя. Нажми на персонажа, и начнём.",
-      "file": "voice_ru_2a83ae043a5db0cb3f39.ogg",
-      "seconds": 7.103945578231293,
-      "bytes": 41072,
-      "sha256": "9e8335f0c1e5313fab77f58d0096e01b5d054398dbf509a08217906b3c44db03",
+      "text": "Кем ты будешь сегодня? Выбери персонажа. Затем нажми «Начать».",
+      "file": "voice_ru_963ea1956e2417bb5fbb.ogg",
+      "seconds": 5.861678004535148,
+      "bytes": 33471,
+      "sha256": "183f97282a927d1fa30b3555f18cf7ad9312285f0628044f8bc8903f67c55acf",
+      "phonetic_units": [
+        {
+          "phonemes": "kʲˈem",
+          "start": 0.20322,
+          "end": 0.35415,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "tˈy",
+          "start": 0.37737,
+          "end": 0.470249,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "bˌudʲiʃ",
+          "start": 0.505079,
+          "end": 0.830159,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "sʲivˈodnʲʌ?",
+          "start": 0.864989,
+          "end": 1.654467,
+          "seconds": 0.789478
+        },
+        {
+          "phonemes": "vˈybʲirʲɪ",
+          "start": 2.004127,
+          "end": 2.456916,
+          "seconds": 0.452789
+        },
+        {
+          "phonemes": "pʲirsʌnˈɑʒa.",
+          "start": 2.526576,
+          "end": 3.571474,
+          "seconds": 1.044898
+        },
+        {
+          "phonemes": "zatʲˈem",
+          "start": 3.955964,
+          "end": 4.397143,
+          "seconds": 0.441179
+        },
+        {
+          "phonemes": "naʒmʲˈɪ",
+          "start": 4.431973,
+          "end": 4.757052,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "natʃʲˈɑtʲ.",
+          "start": 4.791882,
+          "end": 5.465261,
+          "seconds": 0.673379
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "choose"
     },
     {

@@ -2,6 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PROJECT=$(pwd)
+python3 scripts/variants.py prepare --output "$PROJECT" --variant "${KINDERWELT_VARIANT:-auto}"
 STATE=$(mktemp -d /tmp/kinderwelt-tests.XXXXXX)
 trap 'rm -rf "$STATE"' EXIT
 export XDG_DATA_HOME="$STATE/data" XDG_CONFIG_HOME="$STATE/config" XDG_CACHE_HOME="$STATE/cache"

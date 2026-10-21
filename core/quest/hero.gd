@@ -1,9 +1,10 @@
 extends Control
 # Classic human sprites retain their hip animation. Animals and all costumes
 # use continuous meshes, keeping coats, capes, tails and faces intact.
-const NAMES := {"wanja":"Wanja","mischa":"Mischa","du":"Du","mama":"Mama","katze":"Katze","george":"George","squirrel":"Eichhörnchen"}
+const Cast = preload("res://core/quest/cast.gd")
+const NAMES = Cast.NAMES
 const IDS := ["wanja","mischa","du","mama","katze","george","squirrel"]
-const SPRITES = {"wanja":preload("res://assets/quest/wanja.png"),"mischa":preload("res://assets/quest/mischa.png"),"du":preload("res://assets/quest/du.png"),"mama":preload("res://assets/quest/mama.png"),"katze":preload("res://assets/quest/katze.png"),"george":preload("res://assets/quest/george.png"),"squirrel":preload("res://assets/quest/squirrel.png")}
+const SPRITES = Cast.SPRITES
 const Wardrobe=preload("res://core/quest/wardrobe.gd")
 var person := "wanja"
 var costume := "classic"

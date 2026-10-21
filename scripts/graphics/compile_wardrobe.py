@@ -6,6 +6,14 @@ from PIL import Image
 from scipy import ndimage
 from pathlib import Path
 import json,hashlib,numpy as np
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+import variants
+root=Path(__file__).resolve().parents[2]
+variant=sys.argv[1] if len(sys.argv)>1 else "family"
+variants.prepare(root,variant)
+if variant=="public":
+ print("Public cast uses the explicit, validated grid catalog.");raise SystemExit(0)
 p=Path(__file__).resolve().parents[2]/'assets/quest/looks.json';data=json.loads(p.read_text());data['layout']='Four generated costumes; visible frame bounds and nearest-figure ownership for native atlas sampling. Original PNG pixels unchanged.'
 for id,hero in data['heroes'].items():
  source=p.parent/hero['file'];image=Image.open(source);alpha=np.asarray(image)[:,:,3]
@@ -31,3 +39,10 @@ for id,hero in data['heroes'].items():
  hero['mask_runs']=runs
  print(id,'native mask runs',len(runs),'frames',hero['frames'])
 p.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+
+private=json.loads(json.dumps(data))
+for id,hero in private['heroes'].items():
+ if id!='squirrel':hero['file']='looks-'+id+'.png'
+(root/'.private/characters/looks.json').write_text(json.dumps(private,ensure_ascii=False,separators=(',',':'))+'\n')
+(root/'art/shared/squirrel-looks.json').write_text(json.dumps(data['heroes']['squirrel'],separators=(',',':'))+'\n')
+variants.prepare(root,'family')

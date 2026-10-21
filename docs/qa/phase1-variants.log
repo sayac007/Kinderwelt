@@ -1,0 +1,9 @@
+test_legacy_save_contract_is_shared_instead_of_rewriting_progress (test_variants.VariantTests.test_legacy_save_contract_is_shared_instead_of_rewriting_progress) ... ok
+test_missing_private_pack_is_an_explicit_error (test_variants.VariantTests.test_missing_private_pack_is_an_explicit_error) ... ok
+test_public_snapshot_has_all_looks_and_no_private_resource_files (test_variants.VariantTests.test_public_snapshot_has_all_looks_and_no_private_resource_files) ... ok
+test_public_source_export_excludes_history_and_private_notes (test_variants.VariantTests.test_public_source_export_excludes_history_and_private_notes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.404s
+
+OK

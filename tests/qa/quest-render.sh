@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+python3 scripts/variants.py prepare --output . --variant "${KINDERWELT_VARIANT:-auto}"
 OUTPUT=${1:?Pass a new output directory}
 if [[ -e "$OUTPUT" ]]; then echo 'Refusing existing output' >&2; exit 1; fi
 mkdir -p "$OUTPUT"
@@ -10,6 +11,9 @@ trap 'rm -rf "$STATE"' EXIT
 export XDG_DATA_HOME="$STATE/data" XDG_CONFIG_HOME="$STATE/config" XDG_CACHE_HOME="$STATE/cache"
 mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
 export KINDERWELT_RENDER_OUTPUT="$OUTPUT"
+# Variant preparation recreates source/import descriptors; rebuild the cache.
+"${GODOT:-godot}" --headless --path . --editor --import --quit >"$OUTPUT/import.log" 2>&1
+if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/import.log"; then cat "$OUTPUT/import.log"; exit 1; fi
 RESULT=0
 timeout 240 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/render_quest.gd >"$OUTPUT/render.log" 2>&1 || RESULT=$?
 cat "$OUTPUT/render.log"

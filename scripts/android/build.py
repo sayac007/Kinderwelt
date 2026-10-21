@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Build debug APK and UNSIGNED AAB from isolated allowlisted application files."""
+import sys
 import argparse, hashlib, json, os, re, shutil, subprocess, tempfile, zipfile
 from urllib.parse import urlsplit
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/'scripts'))
+import variants
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
@@ -58,6 +61,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tools',type=Path,default=Path('/workspace/tools'))
     p.add_argument('--output',type=Path,default=ROOT/'build/android')
+    p.add_argument('--variant',choices=['family','public'],default='family')
     p.add_argument('--preview',action='store_true',help='Build separate org.example.kinderwelt.preview.v071 app; preserves existing installations')
     a=p.parse_args();tools=a.tools.resolve();out=a.output.resolve()
     out.mkdir(parents=True,exist_ok=False) # no stale artifact may appear successful
@@ -71,11 +75,8 @@ def main():
     if 'Temurin-17.0.16+8' not in version:raise ValueError('Wrong JDK')
     source=hashlib.sha256()
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
-        temp=Path(directory);app=temp/'app';app.mkdir()
-        for name in ['core','games','assets','project.godot','export_presets.cfg']:
-            src=ROOT/name;dest=app/name
-            if src.is_dir():shutil.copytree(src,dest)
-            else:shutil.copy2(src,dest)
+        temp=Path(directory);app=temp/'app'
+        variants.snapshot(app,a.variant)
         if a.preview:
             preset=app/'export_presets.cfg'
             preset.write_text(preset.read_text().replace('package/unique_name="org.example.kinderwelt"','package/unique_name="org.example.kinderwelt.preview.v071"').replace('package/name="Kinderwelt"','package/name="Kinderwelt 0.7.1 Test"'))
@@ -122,10 +123,11 @@ def main():
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
         run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-    evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'package':'org.example.kinderwelt.preview.v071' if a.preview else 'org.example.kinderwelt','signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
-    (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
-    subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package']],check=True)
-    subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
-    print('Verified debug APK and unsigned AAB:',out)
+        evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':'org.example.kinderwelt.preview.v071' if a.preview else 'org.example.kinderwelt','signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+        (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
+        subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)],check=True)
+        subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
+        print('Verified debug APK and unsigned AAB:',out)
+
 
 if __name__=='__main__':main()

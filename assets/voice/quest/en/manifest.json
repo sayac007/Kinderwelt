@@ -21,11 +21,89 @@
   "human_listening_review": "OPEN; independent synthetic voice, no actor imitation",
   "clips": [
     {
-      "text": "Who are you today? Wanja and the family are ready. Tap a character, then let us go.",
-      "file": "voice_en_88a938aee729f5012ab2.ogg",
-      "seconds": 7.196825396825397,
-      "bytes": 40687,
-      "sha256": "645c28cac4c983ee262ded9e03091188524656fcdd094b6fb47f6cc8d3df1370",
+      "text": "Who will you be today? Choose a character. Then tap Start.",
+      "file": "voice_en_4b37f9601a0eeb2c7f99.ogg",
+      "seconds": 5.083809523809524,
+      "bytes": 29127,
+      "sha256": "4327e3bd1ad6acd2973903bc71cc15e82adba34816214266d399b4cbdeb30186",
+      "phonetic_units": [
+        {
+          "phonemes": "hˌuː",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wɪl",
+          "start": 0.33093,
+          "end": 0.42381,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "juː",
+          "start": 0.493469,
+          "end": 0.609569,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "biː",
+          "start": 0.644399,
+          "end": 0.760499,
+          "seconds": 0.1161
+        },
+        {
+          "phonemes": "tədˈeɪ?",
+          "start": 0.841769,
+          "end": 1.352608,
+          "seconds": 0.510839
+        },
+        {
+          "phonemes": "tʃˈuːz",
+          "start": 1.679048,
+          "end": 1.980907,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "ɐ",
+          "start": 2.027347,
+          "end": 2.062177,
+          "seconds": 0.03483
+        },
+        {
+          "phonemes": "kˈaɹɪktə.",
+          "start": 2.143447,
+          "end": 2.816825,
+          "seconds": 0.673379
+        },
+        {
+          "phonemes": "ðˈɛn",
+          "start": 3.305805,
+          "end": 3.607664,
+          "seconds": 0.301859
+        },
+        {
+          "phonemes": "tˈap",
+          "start": 3.735374,
+          "end": 4.060454,
+          "seconds": 0.325079
+        },
+        {
+          "phonemes": "stˈɑːt.",
+          "start": 4.199773,
+          "end": 4.722222,
+          "seconds": 0.522449
+        }
+      ],
+      "generation_profile": {
+        "revision": "articulated-2",
+        "length_scale": 1.18,
+        "noise_scale": 0.5,
+        "noise_w_scale": 0.6,
+        "volume": 0.68,
+        "lead_seconds": 0.18,
+        "tail_seconds": 0.35,
+        "sentence_pause_seconds": 0.28
+      },
       "id": "choose"
     },
     {
