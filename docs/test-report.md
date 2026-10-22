@@ -4,7 +4,7 @@ Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenn
 
 ## Fertig lokal, extern noch offen
 
-**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Das private Figurenrepository ist lokal vorbereitet und mit vollständiger Git-Historie als Bundle gesichert. GitHub-Erstellung und Push sind nicht erfolgt: API-Zugriff wurde mit `Forbidden` blockiert; native HTTPS-Git-Operationen können sich derzeit nicht authentifizieren.
+**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Das private Figurenrepository ist lokal vorbereitet und mit vollständiger Git-Historie als Bundle gesichert. Der Benutzer hat inzwischen `sayac007/Kinderwelt-Privat` angelegt und als Ziel benannt; die Konfiguration ist darauf umgestellt. Die öffentliche API bestätigt das noch öffentliche, leere Repository (HTTP 200, `private: false`); angemeldeter Zugriff scheitert aktuell mit HTTP 401 `Bad credentials`. Es wurden keine Familiengrafiken hochgeladen und keine Hauptcode-Commits gepusht. Der frühere Erstellversuch für das alte Ziel war mit `Forbidden` gescheitert.
 
 **Die englische Stimme wurde noch nicht für Deutsch/Russisch übernommen.** Ein realer Versuch mit demselben englischen Modell und deutscher/russischer Lautung wurde wegen schlechter Verständlichkeit verworfen. Modellgewichte für eine echte sprachübergreifende Stimmklangübertragung waren nicht abrufbar. Alle ausgelieferten Sprachaufnahmen und ihre Manifeste bleiben bytegleich zu 0.8.0. Ein gespeicherter Netzwerkentwurf hebt die aktuelle Sperre nicht von selbst auf.
 
@@ -39,7 +39,7 @@ Die APKs tragen temporäre Entwicklungssignaturen, **keine Release-Signaturen**.
 
 ### Quellen und Hashes
 
-Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das entfernte private Repository ist noch nicht bestätigt erstellt.
+Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das benannte entfernte Repository existiert, ist aber bislang nicht als privat bestätigt; Inhalt und GitHub-CI wurden nicht hochgeladen bzw. ausgeführt.
 
 | Datei | SHA256 |
 |---|---|
@@ -68,3 +68,9 @@ Zusätzlich muss GitHub-Authentifizierung über die Plattform wieder funktionier
 ## Manuell weiterhin offen
 
 Android-Installation beider Varianten, tatsächliche Lautsprecher-/Bluetooth-Verständlichkeit mit und ohne Musik, Audiofokus/Unterbrechung, Drehung, Wiedereinstieg und reale Bildrate. Muttersprachliche Hörprüfung und freiwillige Kinderbeobachtung bleiben offen. Die separate Figurenablage entfernt keine älteren Familienbilder aus der bestehenden Hauptrepository-Historie. Endgültige App-ID, dauerhafte Signierung, Datenschutz/Families, Altersfreigabe, Store-Eintrag und Play-Freigaben bleiben offen. Keine empirische Lernwirkung oder Google-Play-Uploadbereitschaft behauptet.
+
+## Nachtrag: vorhandenes Figurenrepository verwenden
+
+Konfiguration und Einrichtungsanleitung verweisen jetzt auf `sayac007/Kinderwelt-Privat`; Commit und Manifest-Hash der vorbereiteten Familienbilder sind unverändert. Der lokale Figurenbestand hat dieses Repository als `origin`. Der tatsächliche CI-Quellreproduktionsnachweis unter `v081-ci-reproduction.json` enthält bewusst den damals verwendeten alten Zielnamen; dieser historische Nachweis wird nicht rückwirkend umgeschrieben. Der neue Zielname verändert keine App-Dateien oder gebauten APKs. Vor dem ersten Upload muss die Sichtbarkeit privat und der GitHub-Zugriff funktionsfähig sein.
+
+Für diese reine Zielumstellung wurden alle **74 Python-Tests** erneut bestanden, `actionlint 1.7.7` lief fehlerfrei, und der tatsächliche lokale Import der 14 Dateien wurde gegen den unveränderten Commit/Manifest-Hash erneut erfolgreich ausgeführt. Protokolle: `docs/qa/v081-family-repository-target*`. Keine erneuten Android-Builds oder Godot-Läufe für diese Konfigurations-/Dokumentationsänderung.

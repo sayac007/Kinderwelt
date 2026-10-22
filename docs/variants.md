@@ -2,7 +2,7 @@
 
 `family` enthält die sechs erzeugten Familienfiguren und das gemeinsame Eichhörnchen. `public` ist die interne Kennung für die **neutrale** Ausgabe mit Nova, Lumi, Karo, Tavi, Zora, Flocke und Eichhörnchen. Beide Varianten besitzen je sieben Figuren und dieselben fünf Looks, Aufgaben, Animationen und Welten. Alle stabilen Speicherkennungen bleiben erhalten.
 
-Die Familienquellen werden jetzt aus dem getrennten privaten Repository `sayac007/Kinderwelt-family-assets` bezogen. Nur die 14 erlaubten abgeleiteten Dateien werden in `.private/characters/` importiert. Originalfotos werden weder dort benötigt noch in das neue Figurenrepository aufgenommen. Hauptcode und öffentliche Quellschnappschüsse enthalten keine privaten Quellbilder. [Einrichtung, tatsächlich lokal vorbereiteter Stand und noch blockierte GitHub-Schritte](family-repository.md).
+Die Familienquellen werden jetzt aus dem getrennten privaten Repository `sayac007/Kinderwelt-Privat` bezogen. Nur die 14 erlaubten abgeleiteten Dateien werden in `.private/characters/` importiert. Originalfotos werden weder dort benötigt noch in das neue Figurenrepository aufgenommen. Hauptcode und öffentliche Quellschnappschüsse enthalten keine privaten Quellbilder. [Einrichtung, tatsächlich lokal vorbereiteter Stand und noch blockierte GitHub-Schritte](family-repository.md).
 
 ```sh
 # Beide benannten Android-Ausgaben, nach geprüftem Familienimport:

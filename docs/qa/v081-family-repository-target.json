@@ -1,0 +1,19 @@
+{
+  "repository": "sayac007/Kinderwelt-Privat",
+  "checked_date": "2026-10-22",
+  "anonymous_metadata_http": 200,
+  "private": false,
+  "size": 0,
+  "branch_query_http": 409,
+  "authenticated_metadata_http": 401,
+  "authenticated_error": "Bad credentials",
+  "local_asset_commit": "9c99902605b61d4a908b63e1edbcecfbec911143",
+  "pushed": false,
+  "private_assets_uploaded": false,
+  "app_inputs_changed": false,
+  "python_tests": 74,
+  "python_tests_passed": true,
+  "actionlint_version": "1.7.7",
+  "actionlint_passed": true,
+  "local_pinned_manifest_import_passed": true
+}
