@@ -4,7 +4,7 @@ Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenn
 
 ## Fertig lokal, extern noch offen
 
-**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Das private Figurenrepository ist lokal vorbereitet und mit vollständiger Git-Historie als Bundle gesichert. Der Benutzer hat inzwischen `sayac007/Kinderwelt-Privat` angelegt und als Ziel benannt; die Konfiguration ist darauf umgestellt. Die öffentliche API bestätigt das noch öffentliche, leere Repository (HTTP 200, `private: false`); angemeldeter Zugriff scheitert aktuell mit HTTP 401 `Bad credentials`. Es wurden keine Familiengrafiken hochgeladen und keine Hauptcode-Commits gepusht. Der frühere Erstellversuch für das alte Ziel war mit `Forbidden` gescheitert.
+**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Der Benutzer hat die Familiengrafiken inzwischen in `sayac007/Kinderwelt-Privat` hochgeladen. Authentifizierter Zugriff bestätigt das Repository als privat; der neue entfernte Commit und sämtliche 14 zugelassenen Dateien wurden geprüft und in die Build-Konfiguration übernommen. Die früheren 401-/Forbidden-Befunde dokumentieren die vorherige Blockade. Vorhandensein und Funktion des Actions-Lesetokens sowie ein erfolgreicher GitHub-Actions-Lauf bleiben offen.
 
 **Die englische Stimme wurde noch nicht für Deutsch/Russisch übernommen.** Ein realer Versuch mit demselben englischen Modell und deutscher/russischer Lautung wurde wegen schlechter Verständlichkeit verworfen. Modellgewichte für eine echte sprachübergreifende Stimmklangübertragung waren nicht abrufbar. Alle ausgelieferten Sprachaufnahmen und ihre Manifeste bleiben bytegleich zu 0.8.0. Ein gespeicherter Netzwerkentwurf hebt die aktuelle Sperre nicht von selbst auf.
 
@@ -39,7 +39,7 @@ Die APKs tragen temporäre Entwicklungssignaturen, **keine Release-Signaturen**.
 
 ### Quellen und Hashes
 
-Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das benannte entfernte Repository existiert, ist aber bislang nicht als privat bestätigt; Inhalt und GitHub-CI wurden nicht hochgeladen bzw. ausgeführt.
+Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das benannte entfernte Repository ist inzwischen als privat bestätigt; sein manuell hochgeladener Commit und die Grafikdateien sind geprüft. Die GitHub-CI bleibt unbestätigt.
 
 | Datei | SHA256 |
 |---|---|
@@ -74,3 +74,9 @@ Android-Installation beider Varianten, tatsächliche Lautsprecher-/Bluetooth-Ver
 Konfiguration und Einrichtungsanleitung verweisen jetzt auf `sayac007/Kinderwelt-Privat`; Commit und Manifest-Hash der vorbereiteten Familienbilder sind unverändert. Der lokale Figurenbestand hat dieses Repository als `origin`. Der tatsächliche CI-Quellreproduktionsnachweis unter `v081-ci-reproduction.json` enthält bewusst den damals verwendeten alten Zielnamen; dieser historische Nachweis wird nicht rückwirkend umgeschrieben. Der neue Zielname verändert keine App-Dateien oder gebauten APKs. Vor dem ersten Upload muss die Sichtbarkeit privat und der GitHub-Zugriff funktionsfähig sein.
 
 Für diese reine Zielumstellung wurden alle **74 Python-Tests** erneut bestanden, `actionlint 1.7.7` lief fehlerfrei, und der tatsächliche lokale Import der 14 Dateien wurde gegen den unveränderten Commit/Manifest-Hash erneut erfolgreich ausgeführt. Protokolle: `docs/qa/v081-family-repository-target*`. Keine erneuten Android-Builds oder Godot-Läufe für diese Konfigurations-/Dokumentationsänderung.
+
+## Nachtrag: manueller Upload und wiederhergestellter Repository-Zugriff
+
+GitHub bestätigt das private Figurenrepository und Repository-Lese-/Schreibrechte. Der manuelle Upload-Commit `5a35f7675eb1a0881447005fbe51dc089ef8471f` wurde abgerufen und als Quelle eingetragen. Alle 14 tatsächlich entfernten Familiengrafik-/Katalogdateien stimmen mit dem bisherigen Manifest überein und bestehen den unveränderten Importer. Die oben beschriebenen früheren 401-/Öffentlichkeitsbefunde sind historisch. App-Inhalte und bestehende Android-Artefakte bleiben unverändert. Actions-Secrets können von der vorhandenen Integration nicht gelesen werden (HTTP 403 `Resource not accessible by integration`); Vorhandensein und Funktion des separaten CI-Lesetokens sowie ein erfolgreicher Remote-CI-Lauf sind weiterhin nicht bestätigt.
+
+Nach Übernahme des echten Upload-Commits bestanden erneut alle **74 Python-Tests**, einschließlich Decodierung aller 1.645 Sprachdateien, sowie `actionlint 1.7.7`. Protokoll: `docs/qa/v081-family-upload-pin-tests.log`. Keine App-Datei geändert; keine erneuten Android-Builds oder Godot-Läufe für die reine Commit-Pin-/Dokumentationsänderung.

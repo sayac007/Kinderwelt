@@ -15,5 +15,20 @@
   "python_tests_passed": true,
   "actionlint_version": "1.7.7",
   "actionlint_passed": true,
-  "local_pinned_manifest_import_passed": true
+  "local_pinned_manifest_import_passed": true,
+  "latest_check": {
+    "private": true,
+    "authenticated_metadata_http": 200,
+    "remote_revision": "5a35f7675eb1a0881447005fbe51dc089ef8471f",
+    "remote_files_match_manifest": true,
+    "remote_import_passed": true,
+    "uploaded_by": "user manually through GitHub",
+    "actions_secrets_list_http": 403,
+    "actions_secrets_list_error": "Resource not accessible by integration",
+    "secret_presence_verified": false,
+    "remote_ci_verified": false,
+    "python_tests": 74,
+    "python_tests_passed": true,
+    "actionlint_passed": true
+  }
 }

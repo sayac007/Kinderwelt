@@ -9,22 +9,11 @@ Der zweite Bestand wurde lokal als eigenständiges Git-Repository unter `/worksp
 
 Am 22. Oktober 2026 hat der Benutzer das bereits angelegte Repository `sayac007/Kinderwelt-Privat` als Ziel benannt. Die öffentliche GitHub-API bestätigte HTTP 200, `private: false` und Größe 0; die Branch-Abfrage meldete HTTP 409 für das leere Repository. Es wurden **keine Familiengrafiken hochgeladen**. Der angemeldete API-Aufruf scheitert aktuell mit **HTTP 401 Bad credentials**. Ein öffentlicher Lesezugriff bestätigt keine funktionierende Schreibberechtigung.
 
-## Noch erforderliche Einrichtung bei funktionierendem GitHub-Zugang
+## Bestätigter Upload und noch erforderliches Actions-Secret
 
-Zuerst das vorhandene [Repository auf privat umstellen](https://github.com/sayac007/Kinderwelt-Privat/settings) und den GitHub-Zugriff in der Cloud-Umgebung wiederherstellen. Ein nachträglicher Sichtbarkeitswechsel kann eine vorherige öffentliche Veröffentlichung nicht zurücknehmen. Deshalb prüft auch der Workflow weiterhin ausdrücklich `private: true`.
+Der Benutzer hat die Dateien manuell hochgeladen. Der authentifizierte GitHub-Abruf bestätigt jetzt **private: true** und Schreibzugriff der Cloud-Sitzung. Der tatsächlich entfernte Commit `5a35f7675eb1a0881447005fbe51dc089ef8471f` wurde abgerufen; alle 14 Familiengrafik-/Katalogdateien stimmen exakt mit dem unveränderten Manifest überein und bestehen den Importer. `scripts/ci/family-assets.json` verweist jetzt auf diesen neuen Commit statt den nur lokal existierenden ursprünglichen Commit. Das Fehlen der zwei versteckten Git-Regeldateien beim Browser-Upload verändert die zugelassenen App-Bilder nicht.
 
-```sh
-set -eu
-# Kein Token gehört in den Chat. Bestehenden GitHub-Zugang sicher einrichten.
-# Ausschließlich fortfahren, wenn der authentifizierte Abruf true bestätigt:
-test "$(gh api repos/sayac007/Kinderwelt-Privat --jq .private)" = true
-# Erst danach die vorbereiteten Bilder ins bestehende Repository übertragen:
-git -C /workspace/Kinderwelt-family-assets push -u origin main
-# Hauptcode und Workflow ebenfalls pushen:
-git push origin feat/experience-polish
-```
-
-Bei inzwischen vorhandenen entfernten Commits zuerst abrufen und prüfen; kein Force-Push. Das bisherige Ziel `Kinderwelt-family-assets` wird nicht neu erstellt.
+Das Lesen der Actions-Secret-Liste über die aktuelle Integration scheitert mit **HTTP 403 Resource not accessible by integration**. Deshalb ist nicht bestätigt, ob `KINDERWELT_FAMILY_ASSETS_TOKEN` bereits existiert. Diese Einschränkung betrifft Secrets; Repository-Lese-/Schreibzugriff ist bestätigt. Der Token muss sicher über GitHub eingerichtet werden, nicht im Chat oder Code.
 
 Für Actions einen **Fine-grained Personal Access Token** erzeugen, der ausschließlich das ausgewählte private Figurenrepository lesen darf: **Contents: Read**, Metadatenzugriff wie von GitHub vorgesehen. Diesen Wert im Hauptrepository unter **Settings → Secrets and variables → Actions → New repository secret** als `KINDERWELT_FAMILY_ASSETS_TOKEN` speichern. Ein bestehender Standard-`GITHUB_TOKEN` des Hauptrepositorys reicht für das zweite private Repository nicht aus. Keine Zugangsdaten im Repository oder als Build-Artefakt speichern.
 
