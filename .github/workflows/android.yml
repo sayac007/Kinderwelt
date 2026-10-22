@@ -1,33 +1,27 @@
-name: Android verification builds
-on: [push, pull_request, workflow_dispatch]
+name: Development voice converter dependency
+on: workflow_dispatch
 permissions:
-  contents: read
+  contents: write
 jobs:
-  android:
+  download:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - name: Install pinned Godot
-        run: GODOT_INSTALL_DIR="$RUNNER_TEMP/tools/godot-4.7.2" bash scripts/install-godot.sh
-      - name: Install checksum-pinned Android toolchain
-        # Repository maintainers must accept the Android SDK licence before enabling this workflow.
-        run: python3 scripts/android/install.py --root "$RUNNER_TEMP/tools" --accept-android-sdk-license
-      - name: Install decoder for real offline audio checks
+      - name: Mirror hash-pinned MIT OpenVoice converter for offline development
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ffmpeg
-      - name: Android subprocess and artifact checker regressions
-        run: python3 -m unittest discover -s tests/android -v
-      - name: Build and verify development APK and unsigned AAB
-        run: |
-          GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
-            python3 scripts/android/build.py --tools "$RUNNER_TEMP/tools"
-      - name: Retain artifacts and technical evidence (no signing material)
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: android-development-artifacts
-          path: build/android/
-          if-no-files-found: error
-          retention-days: 7
+          set -euo pipefail
+          mkdir -p openvoice-v2/converter
+          base=https://huggingface.co/myshell-ai/OpenVoiceV2/resolve/f36e7edfe1684461a8343844af60babc2efbb727/converter
+          curl --fail --location --retry 3 "$base/checkpoint.pth?download=true" -o openvoice-v2/converter/checkpoint.pth
+          echo '9652c27e92b6b2a91632590ac9962ef7ae2b712e5c5b7f4c34ec55ee2b37ab9e  openvoice-v2/converter/checkpoint.pth' | sha256sum -c -
+          curl --fail --location --retry 3 "$base/config.json" -o openvoice-v2/converter/config.json
+          curl --fail --location https://raw.githubusercontent.com/myshell-ai/OpenVoice/74a1d147b17a8c3092dd5430504bd83ef6c7eb23/LICENSE -o openvoice-v2/LICENSE
+          printf '%s\n' 'Development tool only. OpenVoice V2 is MIT licensed; no model is bundled in the Android app.' 'Official model revision f36e7edfe1684461a8343844af60babc2efbb727; code 74a1d147b17a8c3092dd5430504bd83ef6c7eb23.' > openvoice-v2/README.txt
+          tar -czf openvoice-v2-converter.tar.gz openvoice-v2
+          if ! gh release view voice-tools-openvoice-v2 >/dev/null 2>&1; then
+            gh release create voice-tools-openvoice-v2 --target "$GITHUB_SHA" --prerelease --title 'Development tooling: MIT OpenVoice V2 converter' --notes 'Hash-verified official OpenVoice V2 converter dependency for offline speech generation. Not an Android app release; no family images, recordings, credentials or signing keys. Upstream: https://github.com/myshell-ai/OpenVoice (MIT).'
+          fi
+          gh release upload voice-tools-openvoice-v2 openvoice-v2-converter.tar.gz
