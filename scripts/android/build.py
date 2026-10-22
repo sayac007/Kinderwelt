@@ -93,6 +93,10 @@ def main():
     if 'Temurin-17.0.16+8' not in version:raise ValueError('Wrong JDK')
     source=hashlib.sha256()
     tracking=git_provenance(ROOT)
+    # A character file must have reviewed generation provenance before export.
+    sys.path.insert(0,str(ROOT/'scripts/qa'))
+    import character_origins
+    character_origins.audit(ROOT)
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
         temp=Path(directory);app=temp/'app'
         variants.snapshot(app,a.variant)

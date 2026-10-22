@@ -1,22 +1,22 @@
-# Private und öffentliche Variante
+# Familien- und neutrale Variante
 
-`family` bleibt der Standard für private Android-Builds. Der dafür nötige private Grafikpack liegt ausschließlich in `.private/characters/` und ist über `.gitignore` ausgeschlossen. `public` verwendet sechs neu erfundene Figuren aus `art/public/characters/` und das gemeinsam genutzte Eichhörnchen. Animationen, Auswahl, Kleidung, Aufgaben und Spielmechanik sind gleich. Die internen Speicherkennungen bleiben stabil; lokale Lösungen und Kleiderwahl müssen nicht umgeschrieben werden. Angezeigte Namen kommen aus dem jeweiligen Pack.
+`family` enthält die sechs erzeugten Familienfiguren und das gemeinsame Eichhörnchen. `public` ist die interne Kennung für die **neutrale** Ausgabe mit Nova, Lumi, Karo, Tavi, Zora, Flocke und Eichhörnchen. Beide Varianten besitzen je sieben Figuren und dieselben fünf Looks, Aufgaben, Animationen und Welten. Alle stabilen Speicherkennungen bleiben erhalten.
+
+Die Familienquellen werden jetzt aus dem getrennten privaten Repository `sayac007/Kinderwelt-family-assets` bezogen. Nur die 14 erlaubten abgeleiteten Dateien werden in `.private/characters/` importiert. Originalfotos werden weder dort benötigt noch in das neue Figurenrepository aufgenommen. Hauptcode und öffentliche Quellschnappschüsse enthalten keine privaten Quellbilder. [Einrichtung, tatsächlich lokal vorbereiteter Stand und noch blockierte GitHub-Schritte](family-repository.md).
 
 ```sh
-# Privater Arbeitsplatz mit wiederhergestelltem Pack:
-python3 scripts/variants.py prepare --variant family --output .
-python3 scripts/android/build.py --variant family --output build/family-neu
-# Öffentliche, vom privaten Pack unabhängige Ausgabe:
-python3 scripts/variants.py prepare --variant public --output .
-python3 scripts/android/build.py --variant public --output build/public-neu
+# Beide benannten Android-Ausgaben, nach geprüftem Familienimport:
+python3 scripts/android/build_variants.py --output build/android-delivery-neu
+# Rein neutrale Ausgabe ohne private Quellen:
+python3 scripts/android/build_variants.py --variants neutral --output build/android-neutral-neu
+# Godot-Arbeitsplatz materialisieren:
+python3 scripts/variants.py prepare --variant auto --output .
 ```
 
-Ohne privaten Pack bricht ein ausdrücklich gewählter Familienbuild verständlich ab. Tests wählen mit `KINDERWELT_VARIANT=public` die öffentliche Variante; `auto` verwendet privat, wenn der Pack vorhanden ist, sonst öffentlich. GitHub Actions wählt ausdrücklich `public`. Vor direktem Öffnen im Godot-Editor einmal `prepare` ausführen. Die erzeugten `core/quest/cast.gd`, `assets/quest/cast.json`, `looks.json` und `characters/` sind ignorierte Arbeitsdateien. Die Materialisierung verändert den lokalen Quellpack nicht. Die gesonderte Größenoptimierung und ihre Sicherung sind in `repository.md` beschrieben.
+Die Artefakte heißen exakt `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. Sie verwenden getrennte vorläufige Paketkennungen und lokale Spielstände. Jede APK enthält nur den gewählten Figurenbestand. Quelle, Version, Paket, Signaturstatus und SHA256 stehen in `delivery.json` und den Berichten je Variante. APKs werden nur temporär für Tests signiert; AABs bleiben unsigniert.
 
-Der private Pack enthält sechs normale PNGs, sechs Kostüm-PNGs, `looks.json` und `names.json`. Der ursprüngliche Pack ist lokal unter `build/private-family-art.zip` gesichert, die optimierte Build-Fassung unter `build/private-family-art-optimized.zip`. Zum Wiederherstellen den gewünschten Pack privat unter `.private/` entpacken, sodass `.private/characters/looks.json` existiert. Dieses Archiv privat sichern, nicht zu GitHub oder in einen öffentlichen Download hochladen. Ein frischer Checkout besitzt den Pack absichtlich nicht. Alte Review-Bilder liegen lokal in `.private/review/`.
+Ohne Familienquellen bricht ein angeforderter Familienbuild verständlich ab; eine zweite neutrale APK wird niemals als Ersatz ausgegeben. Tests wählen mit `KINDERWELT_VARIANT=public` neutral oder mit `auto` einen verfügbaren Bestand. Erzeugte Arbeitsdateien (`core/quest/cast.gd`, `assets/quest/cast.json`, `looks.json`, `characters/`) bleiben ignoriert.
 
-Einen sauberen Quellschnappschuss mit `python3 scripts/variants.py public-source --output build/public-source-neu` erstellen. Er enthält keine Git-Historie; interne Notizen, private Packs und Vorschauarchive werden nicht kopiert.
+Aktuelle Figurenherkunft und Grenzen: [Herkunftsprüfung](character-origins.md). Alle aktiven Bildquellen sind auf hier erzeugte KI-Ausgaben zurückgeführt; deren heutige Hashes werden vor Android-Export geprüft. Die vier früheren Bilder bleiben aus aktiven Paketen ausgeschlossen.
 
-Ein öffentlicher Quellschnappschuss darf nur App, öffentliche Grafikquellen, Skripte, Tests und bereinigte Dokumentation enthalten, niemals `.private`, `.git`, `docs/internal` oder private Build-Ausgaben. Ein variantenspezifischer App-Snapshot enthält nur die gewählten Figurenressourcen. Der Android-Verifier kontrolliert das deklarierte Ressourcenprofil und weist private Figurenressourcen in öffentlichen Paketen zurück.
-
-**Grenze:** `.gitignore` und das Entfernen aus dem aktuellen Stand löschen keine bereits veröffentlichte Git-Historie. Frühere Commits und Artefakte können noch ältere Grafiken enthalten. Es wurde keine History-Umschreibung oder Löschung entfernter Releases durchgeführt. Für eine vollständig getrennte öffentliche Veröffentlichung einen bereinigten Quellschnappschuss ohne `.git` in ein neues Repository übernehmen.
+`python3 scripts/variants.py public-source --output build/public-source-neu` erzeugt einen neutralen Quellschnappschuss ohne Git-Historie, private Bilder oder interne Notizen. Lokale frühere Sicherungen unter `build/private-family-art*.zip` bleiben privat. **Das getrennte Repository und `.gitignore` entfernen keine älteren Familiengrafiken oder anderen Dateien aus der bisherigen Git-Historie.** Eine History-Umschreibung oder entfernte Löschung wurde nicht vorgenommen.

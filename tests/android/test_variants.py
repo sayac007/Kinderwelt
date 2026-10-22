@@ -39,6 +39,7 @@ class VariantTests(unittest.TestCase):
             self.assertFalse((target/'.git').exists())
             self.assertFalse((target/'.private').exists())
             self.assertFalse((target/'docs/internal').exists())
+            self.assertFalse((target/'art/private').exists())
             self.assertTrue((target/'scripts/variants.py').exists())
             self.assertTrue((target/'art/public/characters/catalog.json').exists())
 

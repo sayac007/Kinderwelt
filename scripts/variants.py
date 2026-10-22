@@ -75,7 +75,7 @@ def export_public(output,root=ROOT):
     result=snapshot(output,'public',root)
     for name in ['scripts','tests','art','docs','.github']:
         def ignore(directory,names):
-            return [n for n in names if n in ['internal','__pycache__'] or n.endswith(('.zip','.mp3'))]
+            return [n for n in names if n in ['internal','__pycache__'] or (Path(directory)==root/'art' and n=='private') or n.endswith(('.zip','.mp3'))]
         shutil.copytree(root/name,Path(output)/name,ignore=ignore)
     for name in ['README.md','.gitignore','.gitattributes','LICENSE']:
         if (root/name).exists():shutil.copy2(root/name,Path(output)/name)

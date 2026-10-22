@@ -6,7 +6,7 @@ Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine 
 
 Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
 
-**0.8.0:** Sieben Kulissen pro Fach wählbar, vier neue Bewegungswelten mit gesprochenen Hinweisen und einer gemeinsamen zusätzlichen Hintergrundtextur. [Änderungen](docs/worlds-v080.md), [Prüfungen und APKs](docs/test-report.md).
+**0.8.1:** Getrennt vorbereitete Familienquellen, geprüfte Figurenherkunft und zwei benannte Android-Ausgaben: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. [Privates Figurenrepository und CI-Einrichtung](docs/family-repository.md), [Herkunft](docs/character-origins.md), [Prüfungen und APKs](docs/test-report.md). Die gewünschte englische Stimme in DE/RU ist noch offen: der direkte Versuch wurde wegen schlechter Verständlichkeit verworfen; [tatsächlicher Befund](docs/voice-v081.md).
 
 ## Entwickeln und prüfen
 
