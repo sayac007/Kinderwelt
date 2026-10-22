@@ -6,7 +6,7 @@ class CharacterOriginTests(unittest.TestCase):
     def test_actual_sources_match_reviewed_generated_images(self):
         result=m.audit(ROOT);self.assertEqual(result['status'],'PASS');self.assertEqual(result['historical_characters_blocked'],4)
         data=json.loads((ROOT/'art/character-origins.json').read_text())
-        self.assertEqual(len(data['sources']),15)
+        self.assertEqual(len(data['sources']),24)
         self.assertTrue(all(row['generation_output'].startswith('exec-') for row in data['sources']))
         self.assertEqual(sum(row['path'].startswith('.private/') for row in data['sources']),12)
     def fixture(self,root):

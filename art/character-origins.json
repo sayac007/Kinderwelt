@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "reviewed": "2026-10-22",
-  "scope": "All active playable character source images and all five looks in family/neutral variants; not a legal clearance or claim that AI images have no copyright",
+  "scope": "All active playable character source images, all five looks, shared NPC/object atlases and PNG backgrounds/UI; not a legal clearance or claim that AI images have no copyright",
   "sources": [
     {
       "path": ".private/characters/wanja.png",
@@ -153,6 +153,96 @@
       "decoded_rgba_sha256": "db5c8de1d2a1c8664956de6e7c0121eed0c456d71546b7afe36bca6bafbf2fe7",
       "processing": "Lossless PNG recompression; identical RGBA pixel bytes verified",
       "source_evidence_commit": "b67236ba056d3c81b8a3fa8b446ca697d048d84d"
+    },
+    {
+      "path": "assets/quest/adventure-worlds.png",
+      "sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-99bd7710-d4a8-4f8b-b6f2-89ffa3ad7b86.png",
+      "generation_output_sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "source_evidence_commit": "22b44cf040086846d609c8a9878a2704119012a2",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/appicon.png",
+      "sha256": "63b5c5979559a841de4a27bfb1d4922a72be332a9b02de341b6fdd4a701834d3",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-65bb699f-7fd3-44e2-980c-62594eab5a82.png",
+      "generation_output_sha256": "877980bab8069d08b130f1646581ff142c4eb0e245fb90b413761ffb9c72998d",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/castle.png",
+      "sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-37f74fca-8d3a-42e2-a530-933cb0cafb33.png",
+      "generation_output_sha256": "62631457013f08fa3c6e5334d899d0a11d24b6c71c2340fc1b22e12b2fedc881",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/home.png",
+      "sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-376c67f5-26eb-4979-9396-08a7a3997dbc.png",
+      "generation_output_sha256": "a8fb3421a474e889937f7cb3132d0539fc96937c7d6755e939152084c5b8df34",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/icons.png",
+      "sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-9ae3eed8-80eb-40c7-82f6-bd60458af344.png",
+      "generation_output_sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/landscape.png",
+      "sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-783daeef-b132-4886-89c2-08b5cf2b7ec1.png",
+      "generation_output_sha256": "5289b9e3509f388f3d2c4967ae84d2734e7faf827766303ded0638b5269facaa",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/objects.png",
+      "sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-2efb2e0e-265f-4272-bc02-b16784d259de.png",
+      "generation_output_sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/science-a.png",
+      "sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-587da44f-8d03-4a62-8623-57814da17e34.png",
+      "generation_output_sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/science-b.png",
+      "sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-c06ad7fb-a0d4-4232-8184-df3aae7465f9.png",
+      "generation_output_sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
     }
   ],
   "historical_excluded": [

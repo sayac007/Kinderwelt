@@ -1,58 +1,70 @@
-# Tatsächliche Prüfungen und Android-Artefakte – 0.8.0
+# Tatsächliche Prüfungen und Android-Artefakte – 0.8.1
 
-Stand: 21. Oktober 2026. [Neue Welten und Bedienung](worlds-v080.md), [vorheriger Stand 0.7.3](test-report-v073.md).
+Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenntes privates Figurenrepository](family-repository.md), [Figurenherkunft](character-origins.md), [offener Stimmwunsch](voice-v081.md).
 
-## Ausgeführt und bestanden
+## Fertig lokal, extern noch offen
 
-- Private und isolierte öffentliche Figurenvariante: vollständige bestehende Suite mit jeweils **6.085 Godot-Spielprüfungen**, **3.604 neuen Weltprüfungen**, **130 tatsächlichen Audiobusprüfungen** (30 bisherige, 66 mehrsprachige Folgen, 34 neue Welthinweisprüfungen), frischem Import/60-Frame-Start sowie **62 Python-Tests**.
-- Nach der abschließenden Fahrer-Darstellung wurden die erweiterten **3.608 Weltprüfungen je Variante** erneut bestanden. Das zusätzliche Kriterium prüft, dass die Karosserie die Füße verdeckt. Alle früheren Weltprüfungen bleiben enthalten. Für diese letzte Darstellungsänderung wurden die übrigen, bereits bestandenen Prüfungen nicht wiederholt.
-- Abschließend **383 echte Godot-Bildaufnahmen je Variante** auf vier Profilen: 320×568, 360×800, 800×360 sowie 1080×2400 mit simulierter Dichte 420 dpi. Sieben Kulissen, Szene nach Aufstieg auf einen Ast, animierte Folgebilder, Bildauswahl, ursprüngliche Aufgaben, Sachfragen-Stichproben, Figuren/Looks, Sprachen, Punktestand und Rotation. Software-OpenGL/Mesa, keine Smartphone-Messung. Ausgewählte öffentliche Aufnahmen: `docs/screenshots/worlds-v080-*`.
-- Echte simulierte Berührungen erreichen alle acht Kulissenoptionen in DE/EN/RU auf vier Profilen; getrennte Fachwerte überstehen den Dateispeicher. Für jede der sieben Welten werden sämtliche 40 Mathe-Stationen auf allen vier Profilen in den sichtbaren Bereich gebracht und öffnen ihre eigene Aufgabe. Die bisherige Suite prüft weiterhin die Logik aller acht Fächer und aller 320 Aufgaben.
-- Alle **1.645 unterschiedlichen Sprachaufnahmen** und **20 Musikstücke** vollständig mit FFmpeg decodiert. Hashes, Dauer, stille Ränder und Pegel geprüft. Alle bisherigen Sprachaufnahmen/Manifestzeilen, Aufgaben-JSON und Musikmanifest sind gegenüber 0.7.3 unverändert; zwölf neue Welthinweise ergänzt.
-- Unabhängiges ASR-Screening der vier neuen Hinweise je Sprache, ohne Textvorgabe: nach vereinfachter Formulierung DE **2,564 %**, EN **2,778 %**, RU **4,867 %** Zeichenabweichung. Erste Formulierungen: 8,219 / 4,560 / 8,917 %. Unterschiedliche Referenztexte; kein kontrollierter Hörvergleich und keine menschliche Verständlichkeitsfreigabe. Insbesondere „Nüsse“, „орех у белки“ und einzelne Verben bleiben durch Menschen zu hören.
-- Offline-Hörseite mit **54 Proben**, einschließlich aller neuen Hinweise, erzeugt; eingebettete Wiedergabesequenzen und JavaScript-Syntax geprüft. Kein Netzwerk, keine Aufnahme oder Bewertungsspeicherung. Browser-/Hörprüfung bleibt manuell.
+**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Das private Figurenrepository ist lokal vorbereitet und mit vollständiger Git-Historie als Bundle gesichert. GitHub-Erstellung und Push sind nicht erfolgt: API-Zugriff wurde mit `Forbidden` blockiert; native HTTPS-Git-Operationen können sich derzeit nicht authentifizieren.
 
-Die bisherigen Audiotests setzen ausdrücklich die Bergkulisse, damit sie reine Fachansagen prüfen; ein eigener Test erfasst die zusätzlich vollständigen Welthinweise. Das bisherige Zeitlimit wurde nicht erhöht. Im ersten Durchlauf lief der alte Test wegen des zusätzlichen Hinweises in sein Zeitlimit. Die Fälle werden jetzt getrennt tatsächlich am Mixer geprüft.
+**Die englische Stimme wurde noch nicht für Deutsch/Russisch übernommen.** Ein realer Versuch mit demselben englischen Modell und deutscher/russischer Lautung wurde wegen schlechter Verständlichkeit verworfen. Modellgewichte für eine echte sprachübergreifende Stimmklangübertragung waren nicht abrufbar. Alle ausgelieferten Sprachaufnahmen und ihre Manifeste bleiben bytegleich zu 0.8.0. Ein gespeicherter Netzwerkentwurf hebt die aktuelle Sperre nicht von selbst auf.
 
-Rohprotokolle, Daten und Quellenvergleich: `docs/qa/v080-*`. Alle Tests liefen lokal; Remote-CI ist **nicht verifiziert**, die GitHub-API-Abfrage lieferte erneut `Forbidden`.
+## Tatsächlich ausgeführt und bestanden
+
+- Vollständige Suite in Familien- und isolierter neutraler Variante: jeweils **6.085 Godot-Spielprüfungen**, **3.608 Weltprüfungen**, **130 Audiobusprüfungen** (30 + 66 + 34), frischer Import/60-Frame-Start und **74 Python-Tests**.
+- Die finalen 74 Python-Tests wurden nach den letzten Import-/Auslieferungsprüfungen in beiden Varianten erneut vollständig bestanden. Nach Ergänzung der Herkunftsnachweise für NPC-, Kulissen- und UI-Grafiken wurden zusätzlich die drei Herkunftstests je Variante erneut bestanden. Diese Ergänzung verändert keine App-Grafik oder Sprachdatei.
+- Sämtliche **1.645 verschiedenen Sprachdateien** und **20 Musikstücke** vollständig mit FFmpeg decodiert; Hash, Dauer, Pegel und stille Ränder geprüft. Bestehende Aufgaben-JSON, Musikmanifest und Sprachmanifeste sind bytegleich zu 0.8.0.
+- Getrennter echter privater Git-Bestand aus dem festgelegten lokalen Commit geklont und ausschließlich 14 zugelassene, hashgeprüfte Dateien in einen frischen Hauptcode-Schnappschuss importiert. Die daraus berechneten App-Input-Hashes stimmen für **beide Varianten exakt** mit den tatsächlich gebauten Android-Artefakten überein. Die Android-Builds selbst liefen aus dem sauberen Hauptcode-Commit, nicht in GitHub Actions.
+- Importtests weisen veränderte Bilder/Manifeste, Originalfoto-Zusätze, Symlinks und veraltete Kostümhashes zurück. Auslieferungstests verhindern manipulierte Dateien, doppelte große APKs, eine falsche Figurenvariante unter dem Familiennamen und eine halb veröffentlichte APK/AAB-Paarung.
+- **24 aktuelle PNG-Quellen** sind auf hier erzeugte KI-Ausgaben zurückgeführt; zwölf private Dateien, ein neutraler Atlas und elf gemeinsame Dateien inklusive NPC-/Objektatlanten, Szenen und UI. Aktuelle Bildhashes werden geprüft. Die vier älteren Figurenbilder bleiben gesperrt; kein aktuell verwendetes heruntergeladenes Figurenbild festgestellt. Das ist eine Herkunftsprüfung, keine juristische Freigabe.
+- `actionlint 1.7.7` prüfte die endgültigen GitHub-Workflows fehlerfrei. Private Quellen/Token werden ausschließlich für vertrauenswürdige Push-/Dispatch-Läufe verwendet; Pull Requests bauen neutral ohne Zugriff auf das Figurenrepository.
+
+Protokolle und maschinenlesbare Berichte: `docs/qa/v081-*`. Es wurden **keine neuen 383 visuellen Renderings** für 0.8.1 ausgeführt: Figuren, Looks, Aufgaben, sieben Welten, Bewegung, UI-Layout und Sprachdateien wurden unverändert übernommen. Die Einstellungen zeigen 0.8.1; deren Spiel-/Layoutprüfungen sind in der aktuellen Suite enthalten. Die vorherigen echten Renderings bleiben unter `v080-*` nachgewiesen.
 
 ## Tatsächlich erzeugte Dateien
 
-| Variante | Lokaler Pfad | Bytes | MB dezimal |
-|---|---|---:|---:|
-| family | `build/android-v080-family/kinderwelt-debug.apk` | 185,906,124 | 185.906 |
-| family | `build/android-v080-family/kinderwelt-unsigned.aab` | 174,523,158 | 174.523 |
-| public | `build/android-v080-public/kinderwelt-debug.apk` | 181,035,213 | 181.035 |
-| public | `build/android-v080-public/kinderwelt-unsigned.aab` | 169,659,784 | 169.660 |
+Alle folgenden Dateien liegen unter `build/android-v081-delivery/`:
 
-Version **0.8.0 / Code 11**. APKs sind mit temporären Godot-Entwicklungsschlüsseln signiert; beide AABs sind **unsigniert**. Keine Release-Schlüssel eingesetzt. Diese Vorschauen haben eigene Paketkennungen `org.example.kinderwelt.preview.family.v080` und `org.example.kinderwelt.preview.neutral.v080` und getrennte lokale Spielstände. Vorherige Testinstallationen können daneben bestehen; deren Spielstände werden nicht automatisch zwischen Paketen übertragen. Bei einem Update mit identischer Paketkennung und kompatibler Signatur übernimmt das Speicherschema 4 die alte Kulissenwahl und erhält bekannte Lösungen/Figuren/Looks.
+| Datei | Bytes | MB dezimal |
+|---|---:|---:|
+| `kinderwelt-debug-family.apk` | 185,906,144 | 185.906 |
+| `kinderwelt-unsigned-family.aab` | 174,523,181 | 174.523 |
+| `kinderwelt-debug-neutral.apk` | 181,035,217 | 181.035 |
+| `kinderwelt-unsigned-neutral.aab` | 169,659,794 | 169.660 |
 
-Alle vier Artefakte bestanden: ZIP-/APK-/Bundle-Format, erwartete Paketkennung/Version, deklarierte Spieldaten und sämtliche Sprach-/Musik-/Grafikressourcen einschließlich des neuen gemeinsamen Atlas und der Welt-/Auto-Skripte, API **24–36**, keine Berechtigungen, Backup aus, Rotation `fullUser`, `arm64-v8a` und `x86_64`, 16-KB-ELF- sowie APK-ZIP-Ausrichtung. APK-v2-Signaturen geprüft, AABs mit Bundletool validiert und unsignierter Status bestätigt. Hier auf keinem echten Android-Gerät installiert.
+`delivery.json` verbindet die endgültigen Dateinamen mit Paket, Variante, Version, Hash und tatsächlichem App-Input. Große APK-/AAB-Dateien stehen jeweils nur einmal im Ausgabeverzeichnis; die Unterverzeichnisse enthalten nur Nachweise. Der Workflow lädt dieses Verzeichnis als `android-development-artifacts` hoch, sobald die GitHub-Voraussetzungen eingerichtet sind. **Ein solcher Remote-Lauf wurde hier noch nicht ausgeführt oder bestätigt.**
 
-### Quellen
+Beide Varianten bestanden den vollständigen Android-Export und die technischen Prüfungen: Version **0.8.1 / Code 12**, Paket/Variante, ZIP-/APK-/Bundle-Format, deklarierte Daten und sämtliche Sprach-/Musik-/Grafikressourcen, API **24–36**, keine Android-Berechtigungen, Backup aus, Drehung `fullUser`, `arm64-v8a` und `x86_64`, 16-KB-ELF- und APK-ZIP-Ausrichtung. APK-v2-Signaturen geprüft; AABs mit Bundletool validiert und unsignierter Zustand bestätigt.
 
-Privater Build aus sauberem Quellcommit `22b44cf040086846d609c8a9878a2704119012a2`, ohne beobachtete Statusänderung während des Builds. Öffentlicher Build tatsächlich aus `build/public-source-v080-verified/` ohne eigenes Git-Repository oder privaten Figurenpack. Provenienz meldet dort korrekt `unversioned-snapshot`, `source_commit=null`, `source_dirty=null`. Beide Varianten dokumentieren den tatsächlichen Hash des materialisierten App-Verzeichnisses. Nachfolgende Nachweisänderungen betreffen Dokumentation; App-Code und Ressourcen sind identisch zum gebauten Stand.
+Die APKs tragen temporäre Entwicklungssignaturen, **keine Release-Signaturen**. Beide AABs sind **unsigniert**. Pakete: `org.example.kinderwelt.preview.family.v081` und `org.example.kinderwelt.preview.neutral.v081`. Sie können nebeneinander installiert werden und haben getrennte lokale Spielstände; ältere Testpakete werden nicht ersetzt. Hier wurde keine APK auf einem echten Android-Gerät installiert.
 
-### SHA256
+### Quellen und Hashes
+
+Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das entfernte private Repository ist noch nicht bestätigt erstellt.
 
 | Datei | SHA256 |
 |---|---|
-| family/kinderwelt-debug.apk | `3d2fd2851a80ec8875785e4ef0a24bfbbe4c73a7040fab126486d0a73145f95b` |
-| family/kinderwelt-unsigned.aab | `e7f69533b2538241d536d54d0e51794f993834b400fcf0d130af7802e4da2f56` |
-| public/kinderwelt-debug.apk | `137bc0463ff4054df5dc772dbcc462a8938dcaa8d401294c5b82eb44f5c9e1e5` |
-| public/kinderwelt-unsigned.aab | `daa3a93ac9526943f6b06e6b64542e58385af55db9c2f8d3483cef442403015f` |
+| `kinderwelt-debug-family.apk` | `aa784ea3f4bb994f0e075dc5f82d342fbcba912a8198d301dc91bd72516de4f3` |
+| `kinderwelt-unsigned-family.aab` | `19c477247541e79528ba8778e43036b77d6b926ac56a62df2915a62cd82032fd` |
+| `kinderwelt-debug-neutral.apk` | `cdf98a357c401ddafcf17fbb55a7261cdb95cb94c670961ec861d272b14ac78b` |
+| `kinderwelt-unsigned-neutral.aab` | `4054ea9b37fe04af37a13d2562cd1ba11cb565b053c2fea29956ff313840bae8` |
 
-## Tatsächlicher Größenzuwachs
+### Tatsächliche Größenänderung gegenüber 0.8.0
 
-| APK-Variante | 0.7.3 Bytes | 0.8.0 Bytes | Zuwachs |
+| APK | 0.8.0 Bytes | 0.8.1 Bytes | Differenz |
 |---|---:|---:|---:|
-| family | 183,085,862 | 185,906,124 | +2,820,262 / +1.54 % |
-| public | 178,214,939 | 181,035,213 | +2,820,274 / +1.58 % |
+| family | 185,906,124 | 185,906,144 | +20 |
+| neutral | 181,035,213 | 181,035,217 | +4 |
 
-Vier neue Hintergründe teilen sich eine einzige PNG-Quelldatei mit **2.915.177 Bytes**. Tiere verwenden vorhandene Grafiken; Auto, Äste, Nüsse und Stationen brauchen keine Bildfolgen oder Videos. Die APK bleibt bei rund 186 MB privat beziehungsweise 181 MB öffentlich. Dies sind Archivgrößen, keine Messung des installierten Speichers oder eines Play-Downloads. Detaillierte Gruppen und Hashes stehen in den Größenanalysen.
+Archivgröße, nicht installierter Speicher oder Play-Download. Die separaten Quellrepositorys und Prüfnachweise werden nicht als zusätzliche Bildpakete in beide APKs gepackt.
 
-## Offen
+## Offene Stimme und Zugangs-/Netzwerkeinstellungen
 
-Geräteprüfung: Kulisse für mindestens zwei Fächer unterschiedlich wählen und nach Neustart kontrollieren; am Baum höher klettern, alle vier Seiten erreichen, Truhe/Brückenaufgabe lösen; im Hoch-/Querformat bleiben Steuerung und Punkte getrennt; Stummschaltung, reduzierte Bewegung, Audio-Unterbrechung/Resume und Telefonlautsprecher prüfen. Bildrate, Akkubelastung, Wärme und installierter Speicher wurden nicht am Gerät gemessen.
+Der direkte englische Modellversuch erzeugte je sieben echte DE-/RU-WAV-Dateien. Unabhängiges Whisper-small-Screening ohne Referenzvorgabe: **DE 45,02 %**, **RU 62,91 %** Zeichenabweichung. Keine menschliche Hörfreigabe; der Versuch ist ausdrücklich verworfen. OpenVoice-V2-Dokumentation war erreichbar, benötigte Gewichte von Hugging Face/offiziellem S3 jedoch nicht. **Keine OpenVoice-Konvertierung ausgeführt.** [Details](voice-v081.md).
 
-Muttersprachliche Hörabnahme, fachliche/kindliche Bedienungsprüfung und empirische Lernwirkung bleiben offen. Diese Prüfungen erfassen keine Nutzerprofile oder Tonaufnahmen. Endgültige App-ID, dauerhafte Signierung, Datenschutz/Families/Zielgruppe, Altersfreigabe, Store-Eintrag und Play-Freigaben bleiben offen; **Uploadbereitschaft BLOCKIERT**. Ältere private Grafiken bleiben in der bisherigen Git-Historie; ein öffentlicher Quellschnappschuss enthält keine Historie oder privaten Grafikpack.
+Die vorhandene Cloud-Konfiguration enthielt eine eingeschränkte Paketquellen-Freigabe. Eine additive Erweiterung wurde erfolgreich als Entwurf gespeichert: bestehende Android-/Google-Ziele erhalten, zusätzlich `api.github.com`, `huggingface.co`, `cdn-lfs.huggingface.co`, `cdn-lfs.hf.co`, `cas-bridge.xethub.hf.co` und der offizielle Modellbucket `myshell-public-repo-host.s3.amazonaws.com`. **Der Entwurf ist nicht automatisch aktiv**: Umgebungseinstellungen prüfen und speichern, anschließend die Umgebung veröffentlichen. Danach müssen die betroffenen Operationen erneut geprüft werden; erfolgreiche Speicherung ist keine bestätigte Verbindung oder Veröffentlichung.
+
+Zusätzlich muss GitHub-Authentifizierung über die Plattform wieder funktionieren. Es wurden native Git-Zugriffe und die vorhandene Bindung geprüft, keine Zugangsdaten ausgegeben oder extrahiert. Fehlgeschlagene Git-Anmeldungen beweisen nicht, dass ein Proxy-Platzhalter ein abgelaufener Roh-Token wäre. Für Actions ist nach Einrichtung des privaten Repositorys ein gesonderter, eng begrenzter Lesetoken als `KINDERWELT_FAMILY_ASSETS_TOKEN` erforderlich; sein Vorhandensein/ seine Funktion wurde noch nicht bestätigt. Kein Token gehört in den Chat oder Git.
+
+## Manuell weiterhin offen
+
+Android-Installation beider Varianten, tatsächliche Lautsprecher-/Bluetooth-Verständlichkeit mit und ohne Musik, Audiofokus/Unterbrechung, Drehung, Wiedereinstieg und reale Bildrate. Muttersprachliche Hörprüfung und freiwillige Kinderbeobachtung bleiben offen. Die separate Figurenablage entfernt keine älteren Familienbilder aus der bestehenden Hauptrepository-Historie. Endgültige App-ID, dauerhafte Signierung, Datenschutz/Families, Altersfreigabe, Store-Eintrag und Play-Freigaben bleiben offen. Keine empirische Lernwirkung oder Google-Play-Uploadbereitschaft behauptet.

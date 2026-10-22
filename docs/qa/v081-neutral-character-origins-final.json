@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_files_checked": 12,
+  "private_sources_absent": 12,
+  "selected_png_resources_checked": 3,
+  "historical_characters_blocked": 4,
+  "scope": "SHA256 and documented local generation evidence; no assertion of worldwide legal clearance",
+  "new_replacements_required": 0
+}
