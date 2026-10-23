@@ -25,11 +25,16 @@ class PronunciationTests(unittest.TestCase):
   self.assertIn("руки'",g.utterance('Внутри руки','ru')['synthesis_text'])
   self.assertIn("о'блака",g.utterance('Облака закрывают.','ru')['synthesis_text'].lower())
   self.assertIn("облака'",g.utterance('Из облака','ru')['synthesis_text'].lower())
+  self.assertIn("ноги'",g.utterance('У взрослого четыре ноги.','ru')['synthesis_text'])
+  self.assertIn("но'ги",g.utterance('Вырастают ноги.','ru')['synthesis_text'])
+  self.assertIn("бе'рега",g.utterance('Два берега.','ru')['synthesis_text'].lower())
+  self.assertIn("бе'рега",g.utterance('Соединяет оба берега.','ru')['synthesis_text'])
  def test_native_voices_and_clean_visible_spelling_remain_separate(self):
   self.assertEqual(g.utterance('Which two letters are missing?','en')['synthesis_text'],'Which two letters are missing?')
   self.assertEqual(g.utterance('Welche beiden Buchstaben fehlen?','de')['synthesis_text'],'Welche beiden Buchstaben fehlen?')
   self.assertIn('Physík',g.utterance('Physik.','de')['synthesis_text'])
   self.assertIn('OPEN',g.utterance('Physik.','de')['acoustic_stress_review'])
+  self.assertEqual(g.utterance('Домик. Какие две буквы пропущены?','ru')['synthesis_text'],'Домик. Какие две буквы пропущены?')
  def test_cmu_primary_stress_keeps_secondary_and_all_phonemes(self):
   row=g.lexicon()['locales']['en']['mathematics']
   self.assertEqual(row['primary_nucleus'],2);self.assertIn('ˌ',row['controlled_ipa'])

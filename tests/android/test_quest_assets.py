@@ -110,19 +110,58 @@ class QuestAssetsTests(unittest.TestCase):
         # and reproducible historical experiments; Qwen has its own tokenizer.
     def test_subject_speech_has_independent_recognition_evidence_for_the_delivered_files(self):
         report=json.loads((ROOT/'tests/fixtures/voice/subject-recognition.json').read_text())
+        subjects=['math','german','logic','physics','biology','chemistry','body','geography']
+        targets={'de':['mathe','deutsch','logik','physik','biologie','chemie','mensch','geografie'],
+                 'en':['mathematics','english','logic','physics','biology','chemistry','humanbody','geography'],
+                 'ru':['математика','русский','логика','физика','биология','химия','человек','география']}
         for locale in ['de','en','ru']:
             manifest=json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())
             clips={c['id']:c for c in manifest['clips']}
             recognition={row['id']:row for row in report['locales'][locale]['rows']}
-            for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
+            for subject in subjects:
                 id='area_'+subject;clip=clips[id];row=recognition[id]
                 self.assertEqual(row['sha256'],clip['sha256'],'ASR evidence must cover the actual delivered audio')
                 self.assertEqual(row['reference'],clip['text'])
                 self.assertLessEqual(row['character_errors']/row['reference_characters'],.25,(locale,subject,row['recognized']))
+                heard=''.join(c for c in row['recognized'].casefold() if c.isalpha())
+                if locale=='de':heard=heard.replace('geographie','geografie')
+                self.assertIn(targets[locale][subjects.index(subject)],heard,'The subject itself must be recognized; context must not dilute a missing name')
                 self.assertGreater(clip['seconds']-.60,.35,(locale,subject))
                 if locale=='en':
                     self.assertEqual(clip['generation_profile']['noise_w_scale'],0)
                     self.assertGreaterEqual(clip['phonetic_units'][-1]['seconds'],.35)
+    def test_actual_task_recordings_have_whole_instruction_recognition_evidence(self):
+        fixture=json.loads((ROOT/'tests/fixtures/voice/subject-recognition.json').read_text())
+        rows=fixture['instruction_cases']['ru']
+        self.assertEqual(len(rows),9)
+        self.assertTrue({'chemistry_38','biology_03_bonus_1','geography_33'} <= {r['id'] for r in rows})
+        manifest=json.loads((ROOT/'assets/voice/quest/ru/manifest.json').read_text())
+        clips={r['id']:r for r in manifest['clips']}
+        for row in rows:
+            self.assertEqual(row['sha256'],clips[row['id']]['sha256'],'Instruction evidence must cover the actual delivered take')
+            self.assertEqual(row['reference'],clips[row['id']]['text'])
+            self.assertGreater(row['reference_characters'],35,'Require a full instruction, not only a heading')
+            self.assertLessEqual(row['character_errors']/row['reference_characters'],.30,(row['id'],row['recognized']))
+
+    def test_native_word_screening_covers_actual_clips_and_keeps_unresolved_results_visible(self):
+        fixture=json.loads((ROOT/'tests/fixtures/voice/subject-recognition.json').read_text())['word_cases']
+        self.assertEqual(fixture['human_word_stress_review'],'OPEN')
+        tasks={t['id']:t for t in json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks'] if t['subject']=='german'}
+        spelling=lambda text:''.join(c for c in text.casefold() if c.isalnum()).replace('ё','е')
+        for locale in ['de','en','ru']:
+            clips={c['id']:c for c in json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())['clips']}
+            data=fixture['locales'][locale];rows=data['rows']
+            self.assertEqual({r['id'] for r in rows},set(tasks));self.assertEqual(len(rows),50)
+            for row in rows:
+                task=tasks[row['id']];word=(task if locale=='de' else task['variants'][locale])['word']
+                self.assertEqual(row['target_word'],word)
+                self.assertEqual(row['sha256'],clips[row['id']]['sha256'])
+                self.assertEqual(row['reference'],clips[row['id']]['text'])
+                self.assertEqual(row['target_spelling_recovered'],spelling(word) in spelling(row['recognized']))
+            self.assertEqual(data['target_spellings_recovered'],sum(r['target_spelling_recovered'] for r in rows))
+            # This verifies honest traceability; it intentionally does not turn
+            # the still-unrecognized targets into a green intelligibility claim.
+
     def test_translations_images_and_legacy_reward_migration_remain_complete(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())

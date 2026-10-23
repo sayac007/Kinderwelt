@@ -44,6 +44,15 @@ def generate(output):
     items=[];rows=[]
     for locale in ['de','en','ru']:
         review_ids=IDS+['logic_odd','logic_shadow','math_count_bonus_1','math_count_bonus_2','german_sun_bonus_1','german_sun_bonus_2','physics_05_bonus_2','body_02_bonus_1']+[t['id'] for t in word_tasks]
+        if locale=='ru':
+            # One short real example per controlled word and grammatical mode.
+            # Selection is deterministic, unrelated to its ASR result.
+            selected=set(pronunciation.controls()['ru_written_stress_words']);seen=set()
+            for clip in sorted(catalogs[locale].values(),key=lambda c:(len(c['text']),c['id'])):
+                for word in {w.lower() for w in pronunciation.WORDS.findall(clip['text'])}&selected:
+                    entry=pronunciation.referenced_word(word,clip['text'],locale)
+                    mode=(word,'context_rule' in entry)
+                    if mode not in seen:review_ids.append(clip['id']);seen.add(mode)
         for id in dict.fromkeys(review_ids):
             refs=[(locale,id)]
             sequence=[]
@@ -56,9 +65,17 @@ def generate(output):
                 task=words[id];word=(task if locale=='de' else task['variants'][locale])['word'].lower()
                 entry=pronunciation.referenced_word(word,catalogs[locale][id]['text'],locale)
                 cue=entry.get('controlled_ipa',entry.get('ipa',entry['synthesis']))
+                if locale=='de' and '\u0301' in entry['synthesis']:cue=entry['synthesis']
                 reference+='<br>Lexikalische Betonungsreferenz (keine Hörfreigabe): '+html.escape(cue)
+            elif locale=='ru':
+                selected=set(pronunciation.controls()['ru_written_stress_words'])
+                terms=sorted({w.lower() for w in pronunciation.WORDS.findall(catalogs[locale][id]['text'])}&selected)
+                cues=[pronunciation.referenced_word(w,catalogs[locale][id]['text'],locale)['synthesis'] for w in terms]
+                if cues:reference+='<br>Lexikalische Betonungsreferenz (keine Hörfreigabe): '+html.escape(', '.join(cues))
             rows.append(f'<article><strong>{locale.upper()} · {html.escape(id)}</strong> <button data-index="{index}">Anhören</button><details><summary>Erwarteten Text zeigen</summary><p>{reference}</p></details></article>')
     cards=''.join('<details><summary>'+html.escape(l+': '+m['model']+' · '+m['license'])+'</summary><pre>'+html.escape(m['card'])+'</pre></details>' for l,m in models.items())
+    for notice in sorted((ROOT/'scripts/voice/licenses').glob('*.txt')):
+        cards+='<details><summary>'+html.escape('Betonungsquelle: '+notice.name)+'</summary><pre>'+html.escape(notice.read_text())+'</pre></details>'
     # Keep literal </script and other HTML delimiters out of embedded JSON.
     data=json.dumps(items,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     version=json.loads((ROOT/'scripts/android/app-config.json').read_text())['version_name']

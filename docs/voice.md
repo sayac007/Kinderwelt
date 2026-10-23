@@ -13,13 +13,15 @@ Qwen-Modellrevision `85e237c12c027371202489a0ec509ded67b5e4b5`: alle zwölf Date
 
 ## Wortbetonung: geprüftes Textwissen und tatsächliches Hören trennen
 
-`scripts/voice/pronunciations.json` erfasst das vollständige aktuelle gesprochene Vokabular. Quellen, Revisionen, Dateihashes und Original-Lizenztexte liegen in `scripts/voice/sources.json` und `scripts/voice/licenses/`:
+`scripts/voice/pronunciations.json` erfasst das vollständige aktuelle ausgeschriebene Vokabular. Quellen, Revisionen, Dateihashes und Original-Lizenztexte liegen in `scripts/voice/sources.json` und `scripts/voice/licenses/`:
 
-- Russisch: NSU-AI `russian_g2p`, MIT; Wörterbuchformen plus redaktionelle Entscheidungen für den konkreten Spielkontext. `russian-context.tsv` und `russian-contexts.json` unterscheiden etwa **ру́ки / руки́**, **о́блака / облака́**, **о́рганы**, **оси́**. `ё` bleibt erhalten.
+- Russisch: NSU-AI `russian_g2p`, MIT; Wörterbuchformen plus redaktionelle Entscheidungen für den konkreten Spielkontext. `russian-context.tsv` und `russian-contexts.json` unterscheiden etwa **ру́ки / руки́**, **о́блака / облака́**, **о́рганы**, **оси́**, **четыре ноги́** gegenüber **вырастают но́ги** sowie **два/оба бе́рега** gegenüber der freien Mehrzahl **берега́**. `ё` bleibt erhalten.
 - Englisch: CMUdict, BSD-Lizenz, zusammen mit der vorhandenen eSpeak-NG-Phonemisierung. Eindeutig passende mehrsilbige Einträge mit einer abweichenden Hauptbetonung erhalten die lexikalische Hauptbetonung im Piper-Phonemeingang. Schwache Satzbetonung, insbesondere einsilbiger Funktionswörter, wird erhalten. Phonemfolge und Nebenbetonung bleiben erhalten; mehrdeutige oder nicht passende Formen behalten ihre native kontextabhängige Aussprache.
 - Deutsch: eSpeak NG aus der vorhandenen Piper-Entwicklungsumgebung liefert regel-/wörterbuchbasierte IPA-Referenzen. Das ist keine unabhängige muttersprachliche Freigabe jedes Wortes.
 
-**Serena besitzt in dieser Engine keine Lautschrift-/Betonungsschnittstelle.** `instruct` wird beim 0.6B-Modell ignoriert. Flächendeckende Akzent-, Großbuchstaben- und Pluszeichenversuche verschlechterten die unabhängige Erkennung oder erzeugten Wiederholungen und wurden verworfen. `controls.json` begrenzt schriftliche Hinweise auf geprüfte Fachwörter und russische Kontext-/Lernwörter; alle übrigen Wörter behalten die natürliche Schreibweise. Für RU werden ausgewählte Akzente als zuvor separat geprüfter Apostroph nach dem betonten Vokal übergeben. Das bleibt eine **indirekte Hilfe**, keine garantierte Phonemanweisung. Sichtbare Texte enthalten diese Steuerzeichen nicht.
+**Serena besitzt in dieser Engine keine Lautschrift-/Betonungsschnittstelle.** `instruct` wird beim 0.6B-Modell ignoriert. Flächendeckende Akzent-, Großbuchstaben- und Pluszeichenversuche verschlechterten die unabhängige Erkennung oder erzeugten Wiederholungen und wurden verworfen. `controls.json` begrenzt schriftliche Hinweise auf geprüfte Fachwörter und russische kontextabhängige Formen; alle übrigen Wörter behalten die natürliche Schreibweise. Für RU werden ausgewählte Akzente als zuvor separat geprüfter Apostroph nach dem betonten Vokal übergeben. Das bleibt eine **indirekte Hilfe**, keine garantierte Phonemanweisung. Sichtbare Texte enthalten diese Steuerzeichen nicht.
+
+Ziffern und Rechenzeichen werden durch die jeweilige Engine verbalisiert. Das Wortregister zertifiziert diese internen Zahlwortformen nicht; Zahlwörter, Kasusformen und Betonung bleiben zusätzlich zu hören.
 
 Jede neue Aufnahme enthält einen prüfbaren Nachweis des verwendeten Texts und der Wortreferenzen. Qwen-Batchregister bewahren den tatsächlich übergebenen Synthesetext. Unbekannte Wörter und veraltete Zuordnungen lassen `scripts/qa/pronunciation.py` scheitern. **Wörterbuchdeckung und ASR beweisen nicht die hörbare Betonung jeder Silbe.** Dafür bleibt eine muttersprachliche Hörprüfung erforderlich.
 
@@ -48,6 +50,8 @@ python3 scripts/qa/speech_recognition.py --model /pfad/sherpa-onnx-whisper-small
 ```
 
 Erst vollständige, geprüfte Banken nach `assets/voice/quest/<locale>` übernehmen und die vollständige Suite aus [QUALITY_ASSURANCE.md](QUALITY_ASSURANCE.md) ausführen. `--ids` erzeugt nur eine Teilbank; diese niemals direkt ausliefern. Die Nachweise der tatsächlich ausgeführten Läufe und die Grenzen stehen zentral im Qualitätsüberblick, neue Rohlogs unter `qa-results/`.
+
+Die tatsächlichen 24 Fächeransagen, neun Aufgabenbeispiele und 150 nativen Wortfragen sind als notwendige [Regressionsreferenz](../tests/fixtures/voice/subject-recognition.json) mit Audiohash, erwartetem Text und Erkennung erhalten. Auch nicht wiedergewonnene Zielschreibweisen bleiben dort sichtbar. Das ist kein neuer Einzelbericht pro Lauf.
 
 ## Manuell offen
 
