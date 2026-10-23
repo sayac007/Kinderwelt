@@ -18,7 +18,8 @@ class LocalizationTests(unittest.TestCase):
             for locale in ['en','ru']:
                 text=t['texts'][locale];native=t['variants'][locale]
                 self.assertIn(native['word'].casefold(),text['prompt'].casefold())
-                for letter in native['answer']:self.assertIn(letter+'.',text['tip'])
+                self.assertNotIn('. '.join(native['answer'])+'.',text['tip'])
+                self.assertTrue(text['tip'])
     def test_german_targets_are_not_voiced_by_foreign_phonemizers(self):
         voice=load('voice','scripts/generate-quest-voice.py')
         for locale in ['en','ru']:

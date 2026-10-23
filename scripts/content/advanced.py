@@ -32,14 +32,15 @@ def maths(i,level=0):
     a=9+i%10;b=4+i//4;c=2+i%4
     if level:
         a=14+i%12;b=5+i//5;c=3+i%5
+        d=2+i%3;e=2+i%2
         if level==1:
-            d=2+i%3;answer=a+b-c-d;display=f'{a} + {b} − {c} − {d} = ?'
-            q=[f'Erst {b} zu {a}, dann {c} und {d} weg. Wie viel bleibt?',f'Add {b} to {a}, then subtract {c} and {d}. How much remains?',f'Сложи {a} и {b}, затем вычти {c} и {d}. Сколько осталось?']
-            h=[f'Erst {a+b}, dann {a+b-c}, zuletzt {answer}.',f'First {a+b}, then {a+b-c}, finally {answer}.',f'Сначала {a+b}, потом {a+b-c}, в конце {answer}.']
+            answer=a+b-c-d+e;display=f'{a} + {b} − {c} − {d} + {e} = ?'
+            q=[f'Zu {a} kommen {b}. Nimm {c} und {d} weg, dann {e} dazu. Wie viel bleibt?',f'Add {b} to {a}. Subtract {c} and {d}, then add {e}. How much remains?',f'К {a} прибавь {b}. Вычти {c} и {d}, затем прибавь {e}. Сколько осталось?']
+            h=['Rechne von links nach rechts. Prüfe den letzten Schritt rückwärts.','Work from left to right. Check the last step backwards.','Считай слева направо. Проверь последнее действие обратным.']
         else:
-            target=a+b-c;answer=b;display=f'{a} + ? − {c} = {target}'
-            q=['Welche Zahl fehlt? Denke die beiden Schritte rückwärts.','Which number is missing? Think backwards through both steps.','Какого числа не хватает? Пройди оба шага в обратном порядке.']
-            h=[f'Zu {target} kommen {c} zurück. Von {target+c} ziehst du {a} ab.',f'Add {c} back to {target}. Subtract {a} from {target+c}.',f'Сначала сложи {target} и {c}. Затем вычти {a}.']
+            target=a+b-c-d+e;answer=b;display=f'{a} + ? − {c} − {d} + {e} = {target}'
+            q=['Welche Zahl fehlt? Mache die Schritte in umgekehrter Reihenfolge rückgängig.','Which number is missing? Undo the steps in reverse order.','Какого числа не хватает? Отмени действия в обратном порядке.']
+            h=[f'Nimm zuerst {e} wieder weg. Gib {d} und {c} zurück. Ziehe zuletzt {a} ab.',f'First take away {e}. Add {d} and {c} back. Finally subtract {a}.',f'Сначала вычти {e}. Верни {d} и {c}. В конце вычти {a}.']
     elif i%4==0:
         answer=a+b-c;display=f'{a} + {b} − {c} = ?'
         q=[f'Zu {a} kommen {b}, dann gehen {c}. Wie viele bleiben?',f'{b} join {a}, then {c} leave. How many remain?',f'Было {a}. Добавили {b}, убрали {c}. Сколько осталось?']
@@ -108,7 +109,8 @@ def literacy(parent,i,word_row):
         options=[wrong[0],answer,wrong[1]];shift=i%3;options=options[shift:]+options[:shift]
         variant={'word':word,'display':''.join('＿' if p in positions else c for p,c in enumerate(word)),'answer':answer,'options':options}
         q={'de':f'{word_title(word,locale)}. Welche beiden Buchstaben fehlen?','en':f'{word_title(word,locale)}. Which two letters are missing?','ru':f'{word_title(word,locale)}. Какие две буквы пропущены?'}[locale]
-        h={'de':'Lies von links nach rechts. Die Lücken brauchen '+'. '.join(answer)+'.','en':'Read from left to right. The gaps need '+'. '.join(answer)+'.','ru':'Читай слева направо. В пропусках: '+'. '.join(answer)+'.'}[locale]
+        from pedagogy import STRATEGIES
+        h=STRATEGIES['german'][LANGS.index(locale)]
         result['texts'][locale]={'prompt':q,'tip':h}
         if locale=='de':result.update(variant)
         else:result['variants'][locale]=variant
@@ -129,9 +131,9 @@ def renew(tasks,languages):
                 for key in ['left','right','count','sequence','syllables','accepted_answers','word','variants']:task.pop(key,None)
                 task.update(result)
             else:
-                for lang,q in zip(LANGS,questions[task['id']]):
-                    answer=languages['objects'][task['answer']][lang]
-                    task['texts'][lang]={'prompt':q,'tip':{'de':'Überlege beide Hinweise. Gesucht ist: '+answer+'.','en':'Use both clues. The answer is '+answer+'.','ru':'Учти обе подсказки. Ответ: '+answer+'.'}[lang]}
+                from pedagogy import CONCEPT_HINTS
+                for j,(lang,q) in enumerate(zip(LANGS,questions[task['id']])):
+                    task['texts'][lang]={'prompt':q,'tip':CONCEPT_HINTS[task['answer']][j]}
                 task['thinking']='combine context with function, cause, contrast or sequence'
             task['prompt']=task['texts']['de']['prompt'];task['tip']=task['texts']['de']['tip']
             task['content_revision']=2

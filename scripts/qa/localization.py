@@ -4,27 +4,8 @@ import argparse,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def markdown():
-    log=json.loads((ROOT/'scripts/content/localization-changes.json').read_text())
-    lines=['# Lokalisierungsabgleich', '',
-        '0.9.0 enthält 320 Grundaufgaben und 640 freiwillige Bonusaufgaben in jeweils drei Sprachen. Die Strukturprüfung deckt Übersetzungsfelder, Antwortoptionen, native Lernwörter und kyrillische russische Inhalte ab. Sie ersetzt keine muttersprachliche oder fachliche Freigabe.', '',
-        f"{len(log['changes'])} geänderte Grundaufgaben-Textfelder seit Ausgangscommit `{log['baseline_commit']}` sind unten protokolliert. Bonusinhalte stehen vollständig in `tasks.json` und den versionierten Inhaltsquellen.", '',
-        '## Aktuelle Regeln', '',
-        '- Deutsch vermittelt deutsche, English englische und Русский russische Lernwörter, Anfangsbuchstaben und Silben. Keine automatische deutsche Folgeaufnahme in EN/RU.',
-        '- Russische sichtbare Texte, Namen, Musikbeschriftungen und alle 1947 gesprochenen Einträge sind ohne lateinische Buchstaben. Interne stabile IDs und Quellen-/Lizenzdateien sind keine Lerninhalte.',
-        '- Die zweite Runde ersetzt alle 320 Fragen. Neue native Wörter haben zwei Buchstabenlücken, freiwillige Boni drei oder vier. Rechtschreibung ist von Lautschrift zu unterscheiden.',
-        '- 200 Sachfragen verwenden Kontextzeichnungen statt Kopien der richtigen Antwort. Kurze Hinweiswörter ergänzen die gesprochene Frage. Auswahlbilder und freigegebene Grundantworten bleiben erhalten.',
-        '- Pro Grundaufgabe zwei unabhängig wählbare, überspringbare Herausforderungen mit 50/100 Punkten. Die Sachbonusfragen verwenden wiederkehrende Konzepte; 640 Bonusplätze bedeuten nicht 640 einzigartige redaktionelle Fragestellungen.', '',
-        '## Offene Prüfung', '',
-        '- Muttersprachler: Aussprache, natürliche Formulierungen, Silbenzählung und vollständige russische UI am Android-Gerät.',
-        '- Fachpersonen: eindeutige Ablenker, Kontextbilder und höhere Schwierigkeit der Bonusaufgaben; Kinder mit unterschiedlichen Vorkenntnissen.',
-        '- Hörprobe ohne eingeblendeten Text, danach im Spiel mit Musik. Technische Dauermessung und ASR sind keine Hörfreigabe.',
-        '- Eine identische weibliche Stimme in allen Sprachen ist noch nicht erreicht. Die getestete Umwandlung verschlechterte deutsche Aussprache und wurde nicht ausgeliefert.', '',
-        '## Änderungsprotokoll der Grundaufgaben', '',
-        '| Aufgabe | Sprache | Feld | Vorher | Jetzt |', '|---|---|---|---|---|']
-    for c in log['changes']:
-        cells=[c['id'],c['locale'],c['field'],c['before'],c['after']]
-        lines.append('| '+' | '.join(v.replace('|','\\|') for v in cells)+' |')
-    return '\n'.join(lines)+'\n'
+    return '# Sprache und Lokalisierung prüfen\n\nAktueller Status und Einschränkungen: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Alle 320 Grundaufgaben und 640 Boni haben DE-/EN-/RU-Fassungen. Native Sprachaufgaben verwenden die jeweilige Sprache; russische Lerntexte bleiben kyrillisch.\n\nHinweise nennen keine vollständigen Antworten oder fehlenden Buchstabenlisten. Neue Fachwörter werden im Kontext erläutert; „Hebel“ wird mit der vertrauten Wippe verknüpft, der Drehpunkt als Stelle der Bewegung erklärt. Das lange deutsche Lernwort „Schildkrötenei“ ist durch das geläufigere „Entenei“ ersetzt. Die ursprünglichen Werte und aktuellen Grundtexte sind als langfristige Redaktionsreferenz in `scripts/content/localization-changes.json` nachvollziehbar, nicht als neuer Bericht pro Testlauf.\n\nDeutsch und Russisch nutzen dieselbe weibliche Serena-Modellstimme, Englisch LJSpeech. Keine identische Stimmidentität aller drei Sprachen behauptet. Geänderte Textfelder müssen mit den tatsächlich gelieferten Audio-Manifesten und Hashes übereinstimmen. [Audioverfahren und Hörfreigabe](voice.md).\n\n```sh\npython3 scripts/content/generate.py\npython3 scripts/qa/localization.py --check\n```\n\nMuttersprachliche Hör-/Textfreigabe, natürliches Sprachgefühl und kindliches Verstehen bleiben manuell zu prüfen. Technische Zeichen-/Dauerprüfungen und ASR belegen keine Lernwirkung.\n'
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();path=ROOT/'docs/localization-review.md';value=markdown()
     if a.check:

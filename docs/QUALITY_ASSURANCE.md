@@ -8,7 +8,7 @@
 |---|---|
 | Lernen | Je 40 Stationen in Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch, Geografie; Sprache jeweils DE/EN/RU. Zahlen-/Wort-/Regelrätsel, Sachfragen mit indirekten Bildhinweisen. |
 | App | `core/quest/main.tscn` und `core/quest/`: Oberfläche, Weltbewegung, Aufgaben, Audio, lokaler Spielstand; keine externe Spielserver-Abhängigkeit. |
-| Redaktion | `scripts/content/generate.py` kompiliert versionierte TSV-/JSON-Quellen und `advanced.py`/`experience.py` nach `games/quest/`. [Quellen und Ablauf](CONTENT_AUTHORING.md). |
+| Redaktion | `scripts/content/generate.py` kompiliert versionierte TSV-/JSON-Quellen und `advanced.py`/`experience.py`/`pedagogy.py` nach `games/quest/`. [Quellen und Ablauf](CONTENT_AUTHORING.md). |
 | Medien | Lokale Vorbisclips: DE/RU Serena, EN LJSpeech. [Sprachverfahren und Hörgrenzen](voice.md). [Musik](music.md), [Bildherkunft](character-origins.md). |
 | Varianten / Android | Getrennte neutrale und private Figurenquellen; [Build und technische Paketprüfung](android.md). Keine privaten Familien-Assets für neutrale Tests nötig. |
 
@@ -23,7 +23,9 @@ GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash t
 python3 scripts/qa/documentation.py --check
 ```
 
-Die bestehende CI ruft die vollständige Suite und die grafische Suite auf. Laufzeitdaten landen in `qa-results/`; Android-Ausgaben in `build/`. Kein neuer APK-/AAB-Build ist für diese Dokumentationsarbeit beauftragt.
+Für wiederholte Bildprüfungen ein neues Ausgabeverzeichnis wählen.
+
+Die bestehende CI ruft die vollständige Suite und die grafische Suite auf. Laufzeitdaten landen in `qa-results/`; Android-Ausgaben in `build/`. Auf den anschließenden Wunsch nach einer heute spielbaren Version wird zusätzlich die unveränderte Android-Pipeline für Testpakete ausgeführt. Release-Signierung und Google-Play-Freigaben bleiben ausgeschlossen.
 
 ## Letzter belegter Ausgangsstand
 
@@ -42,9 +44,29 @@ Die bestehende CI ruft die vollständige Suite und die grafische Suite auf. Lauf
 
 139 Dateien / **7.383.943 Bytes** wurden im verifizierten Git-Archiv erhalten; `docs/qa/` enthält jetzt zwei notwendige Referenzdateien / **78.669 Bytes**. Keine Historie gelöscht. Alle 139 Remote-Blobs samt Archivtag geprüft, lokale Dokumentations- und CI-Dateiverweise gültig; zwei neue Linkregressionen und der umgezogene ASR-Fixture-Test bestanden. GitHub-Einstellungs-/Actionsseiten erfordern Anmeldung; keine allgemeine öffentliche HTTP-Erreichbarkeit behauptet. [Inventar und Ablageentscheidung](qa/README.md).
 
-## Offene Inhaltsprüfung und Freigaben
+## KW-QA-01: Inhaltskorrekturen
 
-Zuerst Dokumentation konsolidieren, danach Inhaltsquellen korrigieren und offline testen. Ergebnisse, Ausnahmen, korrigierte Aufgabenanzahl, betroffene Sprachdateien und der tatsächlich getestete Commit werden **hier** nach erfolgreicher Durchführung ergänzt. Muttersprachliches Hören, Fachreview, Tests mit Kindern und reale Android-Geräte-/Updateprüfungen bleiben eigene Freigaben. Für eine Kinderstudie sind Protokoll, Einwilligung und Datenschutzentscheidung vor jeder personenbezogenen Datenerhebung erforderlich; aktuell werden keine Kinderaufnahmen oder Telemetriedaten gesammelt.
+**880 einzelne Datensätze geändert: 240 Grundaufgaben und alle 640 Boni.** Dabei wurden 608 Fragetexte und 880 Hinweise überarbeitet (jeweils Datensätze, nicht dreifach gezählte Übersetzungen). Weiterhin 320 Grundaufgaben, acht Fächer, 960 eindeutige IDs und 10/50/100 Punkte; Spielstandrevision und Belohnungslogik unverändert.
+
+| Ursprünglicher Befund | Korrektur und Absicherung |
+|---|---|
+| Verratende Hinweise | 600 Sachhinweise mit direkter Lösung entfernt; alle 120 Wortaufgaben erhalten Laut-/Lesestrategien statt Buchstabenlisten. Mathehinweise unterstützen Rechenwege ohne Endantwort. Regressionen prüfen alle drei Sprachen und bewusst eingebaute Fehler. |
+| Logikboni | Alle 40 50-Punkte-Boni: zwei tatsächlich verschiedene Schritte, zweimal fortsetzen und die neuen Zahlen addieren. Alle 40 100-Punkte-Boni: aus Beispielen Regel ableiten und rückwärts anwenden. Die fünf gemeldeten +1/+1-Fälle werden einzeln als Negativfälle getestet; Grammatik bereinigt. |
+| Ablenker | Alle ursprünglichen 33 auffälligen Grundaufgaben mit Begründung nachgeprüft; weitere Fragen/Optionen redigiert. Kleine, ausschließlich prüfende Kategorietabelle. Zwei offene Bildlücken bei `physics_09` und `body_16`: Es fehlen alternative Kopfschutzbilder. Die Kategorienheuristik wurde geändert; „33 → 2“ ist deshalb kein gemessener Qualitätszuwachs. |
+| Wiederholungen | 400 neue Sachboni: drei/vier fachliche Aussagen prüfen und genau zwei/drei passende erkennen. Jede falsche Option erfüllt mindestens eine Aussage. Je Fach 80 unterschiedliche Merkmalssätze statt bisher 23–39 verschiedener deutscher Texte; Logik 80 statt zwei Textschablonen. Das Kompass-Paar `geography_01`/`geography_31` und stationsübergreifende Nicht-Mathe-Duplikate sind abgesichert. |
+| Fachsprache | Zwölf ursprüngliche Blume/Blüte-Fälle überprüft: drei Grundaufgaben präzisiert, neun alte Boni ersetzt. Bestäubung und Hebel werden erklärt; Industriefertigung von Glas und Flüssigkeitsverlust durch Schwitzen konkretisiert; umständliche Kompassfrage vereinfacht; `SCHILDKRÖTENEI` durch `ENTENEI` ersetzt. Physik-/Biologiematrix berücksichtigt auch die Schraubendreherachse und Wasseraufnahme einer Eiche. |
+
+**Begründete Ausnahmen:** Identische Wortfragen innerhalb derselben Station bleiben zulässig, weil andere Lücken zu lösen sind. Rechenschablonen mit verschiedenen Zahlen sind keine Inhaltsduplikate. Wiederholte Antwort-/Optionsmengen werden separat ausgewiesen und bedeuten bei anderen Fragen nicht automatisch einen Fehler. `biology_32` (lebendig/unbelebt) und `body_29` (Nahrung/Sicherheit) verwenden absichtlich unterschiedliche Kategorien. Ein sinnvolles mathematisches Zwischenresultat ist kein Lösungsverrat; kurze Wörter wie „Ei“ dürfen „Eine/Eigenschaft“ nicht fälschlich beanstanden. Diese Gegenbeispiele werden getestet.
+
+**Schwierigkeitsdiagnostik:** Alle 640 Boni werden ausgewiesen. Mathe zeigt mehr Rechenoperationen als die Grundaufgabe, Sprache mehr Lücken, Logik einen zusätzlichen Verarbeitungsschritt. Sachboni umfassen neun/zwölf mögliche Merkmalszuordnungen plus exakte Anzahl; alle 400 bleiben als fachlich und empirisch zu prüfende Schwierigkeitsindikatoren markiert. Mehr Merkmale beweisen weder höheren Lerngewinn noch angemessene Schwierigkeit für jedes Kind.
+
+**Aktueller Arbeitsstand:** Generator wiederholt ohne weiteren Diff; 16 neue pädagogische Regressionstests und bestehende Inhaltsprüfungen bestanden. 11.520 Überschriftenmessungen mit echter Schrift: kein Abschneiden. Grafische Suite: 605 echte Bilder, davon 144 neue Sach-/Logikbonusansichten. Vollständige Suite und Android-Export stehen noch aus, solange die neu erzeugten Sprachbanken nicht vollständig installiert sind. Geänderte Fragen/Hinweise werden mit den bestehenden Engines neu vertont; keine Umbenennung alter Aufnahmen als Ersatz. Der tatsächlich getestete Commit und endgültige Paketpfade werden nach Abschluss hier eingetragen.
+
+## Offene manuelle und empirische Freigaben
+
+Zwei Helm-Bildlücken; muttersprachliches Hören der neuen Clips; unabhängiges Fachreview der Unterrichtsmodelle und Formulierungen; Beobachtung von Bedienung, Verständnis und Schwierigkeit mit Kindern; reale Android-Geräte-, Drehungs- und Update-/Spielstandprüfungen. Die Aussagen gelten für die in `science-models.json` genannten Beispiele, nicht unterschiedslos für jede Tierart oder jedes Material. Automatische Konsistenzprüfungen bestätigen keine fachliche Vollständigkeit der Ausgangsmatrix.
+
+Für eine Kinderstudie sind Protokoll, Einwilligung und Datenschutzentscheidung vor jeder personenbezogenen Datenerhebung erforderlich; aktuell werden keine Kinderaufnahmen oder Telemetriedaten gesammelt. Es gibt keine empirisch belegte Lernwirkung oder Google-Play-Uploadfreigabe.
 
 ## Dokumentationsregeln
 

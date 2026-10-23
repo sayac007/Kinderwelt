@@ -1,0 +1,24 @@
+{
+  "scope": "QA comparison groups for the actual pictured objects; overlapping context categories, not a biological taxonomy or an answer generator. Category agreement alone never proves an answer correct.",
+  "groups": {
+    "engineering": {"meaning":"Mechanische Bauteile und lasttragende Konstruktionen","objects":["wheel","gear","lever","pulley","bridge"]},
+    "hand_tools": {"meaning":"Handwerkzeuge","objects":["hammer","screwdriver","scissors","magnet"]},
+    "circuit_parts": {"meaning":"Stromquelle, Leuchte, leitender Werkstoff","objects":["battery","bulb","metal"]},
+    "magnetism_electricity": {"meaning":"Gegenstände für Magnetismus oder elektrische Energie; Funktion muss zusätzlich eingegrenzt werden","objects":["magnet","compass","battery","bulb","metal"]},
+    "materials": {"meaning":"Stoffe, Werkstoffe und Wasserzustände","objects":["wood","metal","glass","paper","fabric","salt","sand","oil","soap","water","ice","steam"]},
+    "garden_observation": {"meaning":"Gartenlebewesen, Pflanzenteile und Brutplatz; keine Gleichsetzung von Pilzen und Pflanzen","objects":["tree","flower","leaf","roots","seed","apple","mushroom","nest","wood"]},
+    "animals": {"meaning":"Tierbilder","objects":["bird","bee","butterfly","frog","fish","cat","turtle","worm","mouse"]},
+    "reproduction": {"meaning":"Ei, Samen, Frucht und Brutplatz im Vergleich; Funktionen müssen benannt werden","objects":["egg","seed","apple","nest"]},
+    "habitat_substrates": {"meaning":"Gewässer und Untergründe für Leben/Entwicklung; nicht überall können dieselben Tiere leben","objects":["water","sand","leaf","wood"]},
+    "body_parts": {"meaning":"Körperteile und Organe","objects":["eye","ear","nose","tongue","hand","foot","heart","lungs","brain","stomach","bone","tooth"]},
+    "navigation": {"meaning":"Orientierungshilfsmittel und Erdmodelle","objects":["map","globe","compass"]},
+    "landscape_features": {"meaning":"Landschaftsmerkmale einschließlich gebauter Querung","objects":["mountain","river","sea","island","forest","desert","bridge"]},
+    "sky_weather": {"meaning":"Himmels- und Wettererscheinungen","objects":["sun","moon","star","cloud","rain","snow"]}
+  },
+  "exceptions": {
+    "physics_09":{"options":["helmet","paper","flower"],"reason":"Keine anderen Kopfbedeckungen im Atlas. Frage sicher eingegrenzt, Ablenker bleiben zu leicht. Neue Bilder erforderlich; keine didaktische Freigabe."},
+    "body_16":{"options":["helmet","paper","soap"],"reason":"Keine anderen Kopfbedeckungen im Atlas. Helm nicht gegen ebenfalls sinnvollen Schädelknochen austauschen. Bildbedarf bleibt offen."},
+    "biology_32":{"options":["mouse","paper","glass"],"reason":"Absichtlicher Vergleich Lebewesen/unbelebt; eine lebendige Pflanze wäre hier ebenfalls richtig und wird nicht als falsche Antwort benutzt."},
+    "body_29":{"options":["apple","soap","battery"],"reason":"Sicherheitsfrage Lebensmittel/Nicht-Lebensmittel, absichtlich Kategorienkontrast. Nicht durch ebenfalls essbare Alternativen verschärfen."}
+  }
+}

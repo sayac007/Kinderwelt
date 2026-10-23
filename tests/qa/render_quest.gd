@@ -111,6 +111,13 @@ func run() -> void:
 			game.close_task();game.switch_subject("german");game.open_task(0);game.open_bonus(1)
 			await snap(profile.id+"-"+locale+"-native-letter-bonus")
 			game.close_task()
+			for subject in ["logic","physics","biology","chemistry","body","geography"]:
+				game.switch_subject(subject)
+				game.open_task(0)
+				for level in [0,1]:
+					game.open_bonus(level)
+					await snap(profile.id+"-"+locale+"-"+subject+"-bonus-"+str(level+1))
+				game.close_task()
 			app.confirm_old_round()
 			await snap(profile.id+"-"+locale+"-restore-earlier-points")
 		app.store.data.locale="de"

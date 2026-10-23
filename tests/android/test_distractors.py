@@ -20,7 +20,9 @@ class DistractorTests(unittest.TestCase):
     def test_living_plant_is_not_a_wrong_living_answer(self):
         self.assertEqual(set(self.by_id['biology_32']['options']),{'mouse','paper','glass'})
     def test_screening_separates_categories_and_exemptions(self):
-        self.assertTrue(qa.evaluate(self.by_id['physics_38'])['weak'])
+        self.assertFalse(qa.evaluate(self.by_id['physics_38'])['weak'])
+        old=dict(self.by_id['physics_38'],options=['wheel','leaf','salt'])
+        self.assertTrue(qa.evaluate(old)['weak'])
         self.assertGreater(qa.evaluate(self.by_id['body_01'])['score'],.5)
         self.assertIsNone(qa.evaluate(self.by_id['math_count'])['score'])
         self.assertIsNone(qa.evaluate(self.by_id['biology_32'])['score'])
@@ -29,5 +31,5 @@ class DistractorTests(unittest.TestCase):
     def test_review_is_reproducible_and_changes_have_stable_answers(self):
         document,rows=qa.markdown(self.tasks,self.changes)
         self.assertEqual((ROOT/'docs/distractor-review.md').read_text(),document)
-        self.assertEqual(len(rows),320)
+        self.assertEqual(len(rows),960)
         for change in self.changes:self.assertEqual(change['answer_before'],change['answer_after'])

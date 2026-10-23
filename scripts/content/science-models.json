@@ -1,0 +1,117 @@
+{
+  "scope": "Reviewed classroom examples, not universal claims about every real-world variant. Not empirical difficulty evidence.",
+  "labels": {
+    "physics": {
+      "wheel": [
+        "Rad",
+        "wheel",
+        "колесо"
+      ],
+      "lever": [
+        "Wippe",
+        "seesaw",
+        "качели-доска"
+      ],
+      "magnet": [
+        "Magnet",
+        "magnet",
+        "магнит"
+      ],
+      "bridge": [
+        "Brücke",
+        "bridge",
+        "мост"
+      ]
+    },
+    "biology": {
+      "bird": [
+        "Amsel",
+        "blackbird",
+        "дрозд"
+      ],
+      "fish": [
+        "Forelle",
+        "trout",
+        "форель"
+      ],
+      "flower": [
+        "Blüte",
+        "blossom",
+        "цветок"
+      ],
+      "tree": [
+        "Eiche",
+        "oak tree",
+        "дуб"
+      ],
+      "leaf": [
+        "grünes Blatt",
+        "green leaf",
+        "зелёный лист"
+      ]
+    },
+    "chemistry": {
+      "metal": [
+        "Eisenstück",
+        "piece of iron",
+        "кусок железа"
+      ],
+      "glass": [
+        "Glas",
+        "glass",
+        "стекло"
+      ],
+      "wood": [
+        "Holzklotz",
+        "wood block",
+        "дерево"
+      ],
+      "paper": [
+        "Papier",
+        "paper",
+        "бумага"
+      ],
+      "fabric": [
+        "Baumwolle",
+        "cotton",
+        "хлопок"
+      ],
+      "soap": [
+        "Stückseife",
+        "bar of soap",
+        "кусок мыла"
+      ],
+      "oil": [
+        "Öl",
+        "oil",
+        "масло"
+      ]
+    },
+    "body": {
+      "bone": [
+        "Armknochen",
+        "arm bone",
+        "кость руки"
+      ]
+    },
+    "geography": {
+      "map": [
+        "Karte",
+        "map",
+        "карта"
+      ],
+      "globe": [
+        "Globus",
+        "globe",
+        "глобус"
+      ]
+    }
+  },
+  "review_notes": [
+    "Statements about anatomy use normal human anatomy; variations and disabilities are not evaluated or scored as personal characteristics.",
+    "Biology models: adult blackbird, adult trout, adult bee/butterfly, oak/green leaf. Do not turn model statements into claims that all fish lay eggs or all flowers contain nectar.",
+    "Chemistry: ordinary classroom samples at 20 degrees Celsius, solid unsealed wood, iron, plain wood-pulp paper, cotton, solid bar soap, clear glass. No tasting, heating or home chemical experiment is instructed.",
+    "Physics: intended ordinary use of the depicted tools; wheel/gear/pulley rotate, a seesaw pivots. Classification counts assertions, rather than claiming every pictured tool is interchangeable.",
+    "Blossom labels are localized per task; generic flower artwork is a schematic blossom, not evidence about every plant species."
+  ]
+}
