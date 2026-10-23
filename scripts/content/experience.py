@@ -1,7 +1,7 @@
 """Compile native literacy, indirect visual clues and optional reasoning challenges.
 
 Stable parent IDs preserve existing progress. Bonus records are nested so world
-routes stay at forty stations per subject; rewards are independently identified.
+routes stay at fifty stations per subject; rewards are independently identified.
 """
 from copy import deepcopy
 from pathlib import Path
