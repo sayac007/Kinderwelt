@@ -56,7 +56,7 @@ def check_payload(names,app_root=None):
     assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'
     for script in ['game','world','world_props','vehicle','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
-    for script in ['core/quest/score_badge.gd','core/quest/scenery.gd','core/quest/scenery_card.gd','core/mobile.gd','core/quest/wardrobe.gd']:
+    for script in ['core/quest/score_badge.gd','core/quest/scenery.gd','core/quest/scenery_card.gd','core/mobile.gd','core/quest/wardrobe.gd','core/quest/letter_slots.gd']:
         assert any(n.startswith(script) for n in assets),'Missing score or adaptive screen layout: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
     cast=json.loads((app_root/'assets/quest/cast.json').read_text())
