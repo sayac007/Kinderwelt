@@ -1,0 +1,1676 @@
+[
+  {
+    "id": "physics_01",
+    "answer_before": "wheel",
+    "answer_after": "wheel",
+    "options_before": [
+      "wheel",
+      "leaf",
+      "egg"
+    ],
+    "options_after": [
+      "wheel",
+      "gear",
+      "lever"
+    ],
+    "question_before": "Was lässt ein Fahrrad rollen?",
+    "question_after": "Was lässt ein Fahrrad rollen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_02",
+    "answer_before": "scissors",
+    "answer_after": "scissors",
+    "options_before": [
+      "scissors",
+      "hammer",
+      "magnet"
+    ],
+    "options_after": [
+      "scissors",
+      "hammer",
+      "screwdriver"
+    ],
+    "question_before": "Womit schneidest du Papier?",
+    "question_after": "Womit schneidest du Papier?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_03",
+    "answer_before": "hammer",
+    "answer_after": "hammer",
+    "options_before": [
+      "hammer",
+      "screwdriver",
+      "soap"
+    ],
+    "options_after": [
+      "hammer",
+      "screwdriver",
+      "scissors"
+    ],
+    "question_before": "Womit schlägt man einen Nagel ein?",
+    "question_after": "Womit schlägt man einen Nagel ein?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_04",
+    "answer_before": "screwdriver",
+    "answer_after": "screwdriver",
+    "options_before": [
+      "screwdriver",
+      "hammer",
+      "fabric"
+    ],
+    "options_after": [
+      "screwdriver",
+      "hammer",
+      "scissors"
+    ],
+    "question_before": "Was dreht eine Schraube?",
+    "question_after": "Was dreht eine Schraube?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_07",
+    "answer_before": "bulb",
+    "answer_after": "bulb",
+    "options_before": [
+      "bulb",
+      "wheel",
+      "sand"
+    ],
+    "options_after": [
+      "bulb",
+      "battery",
+      "gear"
+    ],
+    "question_before": "Was macht eine dunkle Ecke hell?",
+    "question_after": "Was macht eine dunkle Ecke hell?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_08",
+    "answer_before": "battery",
+    "answer_after": "battery",
+    "options_before": [
+      "battery",
+      "leaf",
+      "soap"
+    ],
+    "options_after": [
+      "battery",
+      "bulb",
+      "gear"
+    ],
+    "question_before": "Was versorgt eine Taschenlampe mit Energie?",
+    "question_after": "Was versorgt eine Taschenlampe mit Energie?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_10",
+    "answer_before": "gear",
+    "answer_after": "gear",
+    "options_before": [
+      "gear",
+      "egg",
+      "glass"
+    ],
+    "options_after": [
+      "gear",
+      "wheel",
+      "lever"
+    ],
+    "question_before": "Was hat Zähne und überträgt Drehbewegungen?",
+    "question_after": "Was hat Zähne und überträgt Drehbewegungen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_12",
+    "answer_before": "pulley",
+    "answer_after": "pulley",
+    "options_before": [
+      "pulley",
+      "soap",
+      "seed"
+    ],
+    "options_after": [
+      "pulley",
+      "lever",
+      "gear"
+    ],
+    "question_before": "Was lenkt ein Seil beim Hochziehen um?",
+    "question_after": "Was lenkt ein Seil beim Hochziehen um?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_14",
+    "answer_before": "wood",
+    "answer_after": "wood",
+    "options_before": [
+      "wood",
+      "water",
+      "steam"
+    ],
+    "options_after": [
+      "wood",
+      "metal",
+      "glass"
+    ],
+    "question_before": "Welcher Baustoff kommt von Bäumen?",
+    "question_after": "Welcher Baustoff kommt von Bäumen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_19",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "sand",
+      "wood"
+    ],
+    "options_after": [
+      "water",
+      "oil",
+      "steam"
+    ],
+    "question_before": "Was entsteht aus Eis beim Erwärmen?",
+    "question_after": "Was entsteht, wenn Eis gerade schmilzt?",
+    "reason": "Schmelzen ausdrücklich eingegrenzt: allgemeines Erwärmen könnte später auch Wasserdampf erzeugen."
+  },
+  {
+    "id": "physics_27",
+    "answer_before": "steam",
+    "answer_after": "steam",
+    "options_before": [
+      "steam",
+      "metal",
+      "wood"
+    ],
+    "options_after": [
+      "steam",
+      "ice",
+      "water"
+    ],
+    "question_before": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+    "question_after": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_28",
+    "answer_before": "sun",
+    "answer_after": "sun",
+    "options_before": [
+      "sun",
+      "moon",
+      "rain"
+    ],
+    "options_after": [
+      "sun",
+      "moon",
+      "cloud"
+    ],
+    "question_before": "Was liefert Wärme, durch die Eis draußen schmelzen kann?",
+    "question_after": "Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?",
+    "reason": "Regen als Ablenker entfernt: warmer Regen kann ebenfalls Eis schmelzen. Die Frage grenzt die Licht-/Wärmequelle ein."
+  },
+  {
+    "id": "physics_29",
+    "answer_before": "map",
+    "answer_after": "map",
+    "options_before": [
+      "map",
+      "soap",
+      "salt"
+    ],
+    "options_after": [
+      "map",
+      "globe",
+      "compass"
+    ],
+    "question_before": "Was zeigt Straßen und Wege als Zeichnung?",
+    "question_after": "Was zeigt Straßen und Wege als Zeichnung?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_30",
+    "answer_before": "ear",
+    "answer_after": "ear",
+    "options_before": [
+      "ear",
+      "eye",
+      "foot"
+    ],
+    "options_after": [
+      "ear",
+      "eye",
+      "nose"
+    ],
+    "question_before": "Womit hörst du, ob eine Fahrradklingel klingelt?",
+    "question_after": "Womit hörst du, ob eine Fahrradklingel klingelt?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "physics_31",
+    "answer_before": "metal",
+    "answer_after": "metal",
+    "options_before": [
+      "metal",
+      "steam",
+      "paper"
+    ],
+    "options_after": [
+      "metal",
+      "glass",
+      "wood"
+    ],
+    "question_before": "Welches Material eignet sich für eine feste Radachse?",
+    "question_after": "Welches Material ist für eine stabile Fahrrad-Radachse üblich?",
+    "reason": "Übliche Fahrradachse statt beliebige Achse: Holz kann bei anderen Rädern durchaus geeignet sein."
+  },
+  {
+    "id": "physics_37",
+    "answer_before": "fabric",
+    "answer_after": "fabric",
+    "options_before": [
+      "fabric",
+      "glass",
+      "mountain"
+    ],
+    "options_after": [
+      "fabric",
+      "glass",
+      "metal"
+    ],
+    "question_before": "Was kann eine Schere schneiden: Stoff, Glas oder Stein?",
+    "question_after": "Welches Material kannst du mit einer Stoffschere schneiden?",
+    "reason": "Bergbild als unpassenden Stein-Ersatz entfernt; Werkzeug und alle drei Sprachfassungen präzisiert."
+  },
+  {
+    "id": "physics_39",
+    "answer_before": "battery",
+    "answer_after": "battery",
+    "options_before": [
+      "battery",
+      "ice",
+      "wood"
+    ],
+    "options_after": [
+      "battery",
+      "bulb",
+      "gear"
+    ],
+    "question_before": "Was gehört in das Batteriefach einer Spielzeuglampe?",
+    "question_after": "Was gehört in das Batteriefach einer Spielzeuglampe?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_03",
+    "answer_before": "flower",
+    "answer_after": "flower",
+    "options_before": [
+      "flower",
+      "metal",
+      "ice"
+    ],
+    "options_after": [
+      "flower",
+      "seed",
+      "roots"
+    ],
+    "question_before": "Wo findet eine Biene Nektar?",
+    "question_after": "Wo findet eine Biene Nektar?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_04",
+    "answer_before": "roots",
+    "answer_after": "roots",
+    "options_before": [
+      "roots",
+      "wheel",
+      "ear"
+    ],
+    "options_after": [
+      "roots",
+      "leaf",
+      "flower"
+    ],
+    "question_before": "Womit nimmt ein Baum Wasser aus dem Boden auf?",
+    "question_after": "Womit nimmt ein Baum Wasser aus dem Boden auf?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_09",
+    "answer_before": "bird",
+    "answer_after": "bird",
+    "options_before": [
+      "bird",
+      "tree",
+      "soap"
+    ],
+    "options_after": [
+      "bird",
+      "frog",
+      "fish"
+    ],
+    "question_before": "Wer kann aus einem Hühnerei schlüpfen?",
+    "question_after": "Wer kann aus einem Hühnerei schlüpfen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_14",
+    "answer_before": "seed",
+    "answer_after": "seed",
+    "options_before": [
+      "seed",
+      "wheel",
+      "soap"
+    ],
+    "options_after": [
+      "seed",
+      "leaf",
+      "flower"
+    ],
+    "question_before": "Woraus kann ein neuer Apfelbaum wachsen?",
+    "question_after": "Woraus kann ein neuer Apfelbaum wachsen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_16",
+    "answer_before": "leaf",
+    "answer_after": "leaf",
+    "options_before": [
+      "leaf",
+      "glass",
+      "wheel"
+    ],
+    "options_after": [
+      "leaf",
+      "roots",
+      "seed"
+    ],
+    "question_before": "Was gehört zu einem Baum?",
+    "question_after": "Welche grünen Pflanzenteile bilden hier die Baumkrone?",
+    "reason": "Die alte allgemeine Baum-Zugehörigkeitsfrage würde mehrere echte Pflanzenteile als richtige Antworten zulassen."
+  },
+  {
+    "id": "biology_19",
+    "answer_before": "worm",
+    "answer_after": "worm",
+    "options_before": [
+      "worm",
+      "metal",
+      "glass"
+    ],
+    "options_after": [
+      "worm",
+      "fish",
+      "turtle"
+    ],
+    "question_before": "Was frisst eine Amsel zum Beispiel?",
+    "question_after": "Was frisst eine Amsel zum Beispiel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_20",
+    "answer_before": "flower",
+    "answer_after": "flower",
+    "options_before": [
+      "flower",
+      "battery",
+      "hammer"
+    ],
+    "options_after": [
+      "flower",
+      "seed",
+      "roots"
+    ],
+    "question_before": "Wo kann ein Schmetterling Nektar trinken?",
+    "question_after": "Wo kann ein Schmetterling Nektar trinken?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_22",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "desert",
+      "metal"
+    ],
+    "options_after": [
+      "water",
+      "leaf",
+      "sand"
+    ],
+    "question_before": "Wo legt ein Grasfrosch seine Eier ab?",
+    "question_after": "Wo legt ein Grasfrosch seine Eier ab?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_24",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "paper",
+      "metal"
+    ],
+    "options_after": [
+      "water",
+      "oil",
+      "sand"
+    ],
+    "question_before": "Was nehmen Wurzeln auf?",
+    "question_after": "Was nehmen Wurzeln auf?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_26",
+    "answer_before": "leaf",
+    "answer_after": "leaf",
+    "options_before": [
+      "leaf",
+      "metal",
+      "glass"
+    ],
+    "options_after": [
+      "leaf",
+      "roots",
+      "seed"
+    ],
+    "question_before": "Was kann sich bei vielen Laubbäumen im Herbst verfärben?",
+    "question_after": "Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?",
+    "reason": "Laubfärbung statt beliebige Verfärbung von Pflanzenteilen eindeutig eingegrenzt."
+  },
+  {
+    "id": "biology_31",
+    "answer_before": "ear",
+    "answer_after": "ear",
+    "options_before": [
+      "ear",
+      "wheel",
+      "leaf"
+    ],
+    "options_after": [
+      "ear",
+      "eye",
+      "nose"
+    ],
+    "question_before": "Womit hört eine Katze?",
+    "question_after": "Womit hört eine Katze?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_32",
+    "answer_before": "mouse",
+    "answer_after": "mouse",
+    "options_before": [
+      "mouse",
+      "flower",
+      "paper"
+    ],
+    "options_after": [
+      "mouse",
+      "paper",
+      "glass"
+    ],
+    "question_before": "Wer ist ein Lebewesen: Maus, Papier oder Glas?",
+    "question_after": "Wer ist ein Lebewesen: Maus, Papier oder Glas?",
+    "reason": "Fachfehler behoben: Die alte Blume war ebenfalls ein Lebewesen und damit kein gültiger Ablenker. Papier und Glas entsprechen der vorhandenen Frage. Antwort Maus unverändert."
+  },
+  {
+    "id": "biology_34",
+    "answer_before": "roots",
+    "answer_after": "roots",
+    "options_before": [
+      "roots",
+      "wheel",
+      "bone"
+    ],
+    "options_after": [
+      "roots",
+      "leaf",
+      "seed"
+    ],
+    "question_before": "Welcher Pflanzenteil verankert eine Blume im Boden?",
+    "question_after": "Welcher Pflanzenteil verankert eine Blume im Boden?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_38",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "paper",
+      "oil"
+    ],
+    "options_after": [
+      "water",
+      "sand",
+      "oil"
+    ],
+    "question_before": "Worin schwimmen Fische eines Teichs?",
+    "question_after": "Worin schwimmen Fische eines Teichs?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "biology_40",
+    "answer_before": "butterfly",
+    "answer_after": "butterfly",
+    "options_before": [
+      "butterfly",
+      "cat",
+      "worm"
+    ],
+    "options_after": [
+      "butterfly",
+      "bird",
+      "cat"
+    ],
+    "question_before": "Wer hat als erwachsenes Tier vier Flügel?",
+    "question_after": "Wer hat als erwachsenes Tier vier Flügel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_09",
+    "answer_before": "magnet",
+    "answer_after": "magnet",
+    "options_before": [
+      "magnet",
+      "wood",
+      "fabric"
+    ],
+    "options_after": [
+      "magnet",
+      "lever",
+      "scissors"
+    ],
+    "question_before": "Was hilft, Eisen aus einer Mischung zu holen?",
+    "question_after": "Welcher Gegenstand zieht Eisen aus einer Mischung an?",
+    "reason": "Anziehung statt allgemeine Hilfe beim Trennen: Werkzeuge können Stoffe sonst auch mechanisch trennen."
+  },
+  {
+    "id": "chemistry_10",
+    "answer_before": "steam",
+    "answer_after": "steam",
+    "options_before": [
+      "steam",
+      "wood",
+      "salt"
+    ],
+    "options_after": [
+      "steam",
+      "ice",
+      "water"
+    ],
+    "question_before": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+    "question_after": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_11",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "sand",
+      "metal"
+    ],
+    "options_after": [
+      "water",
+      "steam",
+      "ice"
+    ],
+    "question_before": "Was bilden kleine Tropfen an einem kalten Fenster?",
+    "question_after": "Was bilden kleine Tropfen an einem kalten Fenster?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_12",
+    "answer_before": "ice",
+    "answer_after": "ice",
+    "options_before": [
+      "ice",
+      "steam",
+      "paper"
+    ],
+    "options_after": [
+      "ice",
+      "water",
+      "steam"
+    ],
+    "question_before": "Welcher Zustand von Wasser ist fest?",
+    "question_after": "Welcher Zustand von Wasser ist fest?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_13",
+    "answer_before": "steam",
+    "answer_after": "steam",
+    "options_before": [
+      "steam",
+      "ice",
+      "wood"
+    ],
+    "options_after": [
+      "steam",
+      "water",
+      "ice"
+    ],
+    "question_before": "Welches Zeichen steht für gasförmiges Wasser?",
+    "question_after": "Welches Zeichen steht für gasförmiges Wasser?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_20",
+    "answer_before": "soap",
+    "answer_after": "soap",
+    "options_before": [
+      "soap",
+      "sand",
+      "oil"
+    ],
+    "options_after": [
+      "soap",
+      "sand",
+      "oil"
+    ],
+    "question_before": "Was hilft, fettigen Schmutz mit Wasser abzuwaschen?",
+    "question_after": "Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?",
+    "reason": "Sand kann mechanisch reinigen. Die präzisierte Frage zielt auf die Wirkung von Seife beim Vermischen von Fett und Wasser."
+  },
+  {
+    "id": "chemistry_24",
+    "answer_before": "cloud",
+    "answer_after": "cloud",
+    "options_before": [
+      "cloud",
+      "bone",
+      "wheel"
+    ],
+    "options_after": [
+      "cloud",
+      "sun",
+      "moon"
+    ],
+    "question_before": "Wo sammeln sich viele winzige Wassertropfen am Himmel?",
+    "question_after": "Wo sammeln sich viele winzige Wassertropfen am Himmel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_30",
+    "answer_before": "soap",
+    "answer_after": "soap",
+    "options_before": [
+      "soap",
+      "hammer",
+      "battery"
+    ],
+    "options_after": [
+      "soap",
+      "oil",
+      "salt"
+    ],
+    "question_before": "Was gehört zum sicheren Händewaschen mit Wasser?",
+    "question_after": "Welches Mittel ist zum Händewaschen mit Wasser gedacht?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_31",
+    "answer_before": "salt",
+    "answer_after": "salt",
+    "options_before": [
+      "salt",
+      "oil",
+      "wood"
+    ],
+    "options_after": [
+      "salt",
+      "sand",
+      "ice"
+    ],
+    "question_before": "Was bleibt zurück, wenn Salzwasser ganz verdunstet?",
+    "question_after": "Was bleibt zurück, wenn Salzwasser ganz verdunstet?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_32",
+    "answer_before": "magnet",
+    "answer_after": "magnet",
+    "options_before": [
+      "magnet",
+      "soap",
+      "cloud"
+    ],
+    "options_after": [
+      "magnet",
+      "scissors",
+      "hammer"
+    ],
+    "question_before": "Womit trennt man eiserne Teile von Sand?",
+    "question_after": "Welcher Gegenstand zieht Eisenstücke aus Sand an?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_34",
+    "answer_before": "paper",
+    "answer_after": "paper",
+    "options_before": [
+      "paper",
+      "ice",
+      "water"
+    ],
+    "options_after": [
+      "paper",
+      "glass",
+      "metal"
+    ],
+    "question_before": "Was wird häufig aus Pflanzenfasern gemacht?",
+    "question_after": "Was wird häufig aus Pflanzenfasern gemacht?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_35",
+    "answer_before": "ice",
+    "answer_after": "ice",
+    "options_before": [
+      "ice",
+      "oil",
+      "paper"
+    ],
+    "options_after": [
+      "ice",
+      "steam",
+      "oil"
+    ],
+    "question_before": "Was ist dieselbe Substanz wie Wasser, nur fest?",
+    "question_after": "Was ist dieselbe Substanz wie Wasser, nur fest?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_36",
+    "answer_before": "sand",
+    "answer_after": "sand",
+    "options_before": [
+      "sand",
+      "flower",
+      "egg"
+    ],
+    "options_after": [
+      "sand",
+      "wood",
+      "metal"
+    ],
+    "question_before": "Woraus wird gewöhnliches Glas hauptsächlich hergestellt?",
+    "question_after": "Woraus wird gewöhnliches Glas hauptsächlich hergestellt?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "chemistry_40",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "battery",
+      "oil"
+    ],
+    "options_after": [
+      "water",
+      "steam",
+      "oil"
+    ],
+    "question_before": "Ein Eiswürfel schmilzt im Glas. Was ist danach mehr im Glas?",
+    "question_after": "Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_01",
+    "answer_before": "eye",
+    "answer_after": "eye",
+    "options_before": [
+      "eye",
+      "ear",
+      "foot"
+    ],
+    "options_after": [
+      "eye",
+      "ear",
+      "nose"
+    ],
+    "question_before": "Womit nimmst du Licht und Farben wahr?",
+    "question_after": "Womit nimmst du Licht und Farben wahr?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_02",
+    "answer_before": "ear",
+    "answer_after": "ear",
+    "options_before": [
+      "ear",
+      "nose",
+      "hand"
+    ],
+    "options_after": [
+      "ear",
+      "nose",
+      "eye"
+    ],
+    "question_before": "Welcher Körperteil nimmt Schall auf?",
+    "question_after": "Welcher Körperteil nimmt Schall auf?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_03",
+    "answer_before": "nose",
+    "answer_after": "nose",
+    "options_before": [
+      "nose",
+      "eye",
+      "foot"
+    ],
+    "options_after": [
+      "nose",
+      "eye",
+      "tongue"
+    ],
+    "question_before": "Womit riechen Menschen?",
+    "question_after": "Womit riechen Menschen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_04",
+    "answer_before": "tongue",
+    "answer_after": "tongue",
+    "options_before": [
+      "tongue",
+      "ear",
+      "bone"
+    ],
+    "options_after": [
+      "tongue",
+      "nose",
+      "ear"
+    ],
+    "question_before": "Womit kannst du süß und sauer schmecken?",
+    "question_after": "Womit kannst du süß und sauer schmecken?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_05",
+    "answer_before": "hand",
+    "answer_after": "hand",
+    "options_before": [
+      "hand",
+      "tooth",
+      "leaf"
+    ],
+    "options_after": [
+      "hand",
+      "eye",
+      "ear"
+    ],
+    "question_before": "Womit kannst du fühlen, ob ein Tuch weich ist?",
+    "question_after": "Womit kannst du fühlen, ob ein Tuch weich ist?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_06",
+    "answer_before": "heart",
+    "answer_after": "heart",
+    "options_before": [
+      "heart",
+      "stomach",
+      "tooth"
+    ],
+    "options_after": [
+      "heart",
+      "lungs",
+      "stomach"
+    ],
+    "question_before": "Welches Organ pumpt Blut durch den Körper?",
+    "question_after": "Welches Organ pumpt Blut durch den Körper?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_07",
+    "answer_before": "lungs",
+    "answer_after": "lungs",
+    "options_before": [
+      "lungs",
+      "brain",
+      "bone"
+    ],
+    "options_after": [
+      "lungs",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Welche Organe helfen beim Atmen?",
+    "question_after": "Welche Organe nehmen beim Atmen Luft auf?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_08",
+    "answer_before": "brain",
+    "answer_after": "brain",
+    "options_before": [
+      "brain",
+      "foot",
+      "tooth"
+    ],
+    "options_after": [
+      "brain",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Welches Organ verarbeitet Sinneseindrücke?",
+    "question_after": "Welches Organ verarbeitet Sinneseindrücke?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_09",
+    "answer_before": "bone",
+    "answer_after": "bone",
+    "options_before": [
+      "bone",
+      "soap",
+      "water"
+    ],
+    "options_after": [
+      "bone",
+      "heart",
+      "lungs"
+    ],
+    "question_before": "Was bildet das feste Gerüst im Körper?",
+    "question_after": "Was bildet das feste Gerüst im Körper?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_10",
+    "answer_before": "tooth",
+    "answer_after": "tooth",
+    "options_before": [
+      "tooth",
+      "ear",
+      "foot"
+    ],
+    "options_after": [
+      "tooth",
+      "tongue",
+      "ear"
+    ],
+    "question_before": "Womit zerkleinerst du Essen im Mund?",
+    "question_after": "Womit zerkleinerst du Essen im Mund?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_11",
+    "answer_before": "stomach",
+    "answer_after": "stomach",
+    "options_before": [
+      "stomach",
+      "eye",
+      "ear"
+    ],
+    "options_after": [
+      "stomach",
+      "heart",
+      "lungs"
+    ],
+    "question_before": "Wohin gelangt Essen nach der Speiseröhre?",
+    "question_after": "Wohin gelangt Essen nach der Speiseröhre?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_14",
+    "answer_before": "moon",
+    "answer_after": "moon",
+    "options_before": [
+      "moon",
+      "bulb",
+      "gear"
+    ],
+    "options_after": [
+      "moon",
+      "sun",
+      "cloud"
+    ],
+    "question_before": "Wann wird es draußen meist dunkel und Zeit zum Schlafen?",
+    "question_after": "Welches Bild steht hier für die Nacht und die Schlafenszeit?",
+    "reason": "Mondsymbol statt Behauptung, dass jede Nacht der Mond sichtbar sein muss."
+  },
+  {
+    "id": "body_15",
+    "answer_before": "foot",
+    "answer_after": "foot",
+    "options_before": [
+      "foot",
+      "ear",
+      "nose"
+    ],
+    "options_after": [
+      "foot",
+      "hand",
+      "eye"
+    ],
+    "question_before": "Welcher Körperteil trägt oft einen Schuh?",
+    "question_after": "Welcher Körperteil trägt oft einen Schuh?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_17",
+    "answer_before": "ear",
+    "answer_after": "ear",
+    "options_before": [
+      "ear",
+      "tooth",
+      "stomach"
+    ],
+    "options_after": [
+      "ear",
+      "eye",
+      "nose"
+    ],
+    "question_before": "Welcher Sinn braucht Schutz vor sehr lauten Tönen?",
+    "question_after": "Welcher Sinn braucht Schutz vor sehr lauten Tönen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_19",
+    "answer_before": "nose",
+    "answer_after": "nose",
+    "options_before": [
+      "nose",
+      "tooth",
+      "bone"
+    ],
+    "options_after": [
+      "nose",
+      "ear",
+      "tongue"
+    ],
+    "question_before": "Welcher Körperteil hilft, eingeatmete Luft zu filtern?",
+    "question_after": "Welcher Körperteil hilft, eingeatmete Luft zu filtern?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_21",
+    "answer_before": "hand",
+    "answer_after": "hand",
+    "options_before": [
+      "hand",
+      "eye",
+      "stomach"
+    ],
+    "options_after": [
+      "hand",
+      "foot",
+      "ear"
+    ],
+    "question_before": "Welcher Körperteil hat normalerweise fünf Finger?",
+    "question_after": "Welcher Körperteil hat normalerweise fünf Finger?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_22",
+    "answer_before": "heart",
+    "answer_after": "heart",
+    "options_before": [
+      "heart",
+      "ear",
+      "foot"
+    ],
+    "options_after": [
+      "heart",
+      "lungs",
+      "stomach"
+    ],
+    "question_before": "Was schlägt meist schneller, wenn du dich anstrengst?",
+    "question_after": "Was schlägt meist schneller, wenn du dich anstrengst?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_23",
+    "answer_before": "lungs",
+    "answer_after": "lungs",
+    "options_before": [
+      "lungs",
+      "tooth",
+      "bone"
+    ],
+    "options_after": [
+      "lungs",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Wohin strömt Luft beim Einatmen?",
+    "question_after": "Wohin strömt Luft beim Einatmen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_24",
+    "answer_before": "brain",
+    "answer_after": "brain",
+    "options_before": [
+      "brain",
+      "hand",
+      "ear"
+    ],
+    "options_after": [
+      "brain",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Wo werden viele Erinnerungen verarbeitet?",
+    "question_after": "Wo werden viele Erinnerungen verarbeitet?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_25",
+    "answer_before": "bone",
+    "answer_after": "bone",
+    "options_before": [
+      "bone",
+      "water",
+      "soap"
+    ],
+    "options_after": [
+      "bone",
+      "brain",
+      "heart"
+    ],
+    "question_before": "Was schützt das Gehirn als Schädel?",
+    "question_after": "Was schützt das Gehirn als Schädel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_26",
+    "answer_before": "stomach",
+    "answer_after": "stomach",
+    "options_before": [
+      "stomach",
+      "ear",
+      "nose"
+    ],
+    "options_after": [
+      "stomach",
+      "heart",
+      "lungs"
+    ],
+    "question_before": "Welches Organ mischt und verdaut Nahrung weiter?",
+    "question_after": "Welches Organ mischt und verdaut Nahrung weiter?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_27",
+    "answer_before": "nose",
+    "answer_after": "nose",
+    "options_before": [
+      "nose",
+      "bone",
+      "foot"
+    ],
+    "options_after": [
+      "nose",
+      "tongue",
+      "ear"
+    ],
+    "question_before": "Was hilft zusätzlich zur Zunge, Aromen zu erkennen?",
+    "question_after": "Welcher Körperteil nimmt beim Essen Duftstoffe wahr?",
+    "reason": "Geruch ausdrücklich eingegrenzt; auch Sehen kann sonst beim Erkennen von Speisen helfen."
+  },
+  {
+    "id": "body_30",
+    "answer_before": "bone",
+    "answer_after": "bone",
+    "options_before": [
+      "bone",
+      "cloud",
+      "water"
+    ],
+    "options_after": [
+      "bone",
+      "tooth",
+      "heart"
+    ],
+    "question_before": "Was befindet sich im Fuß und gibt Halt?",
+    "question_after": "Was befindet sich im Fuß und gibt Halt?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_31",
+    "answer_before": "brain",
+    "answer_after": "brain",
+    "options_before": [
+      "brain",
+      "stomach",
+      "tooth"
+    ],
+    "options_after": [
+      "brain",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Wohin gelangen Signale von den Ohren?",
+    "question_after": "Welches Organ verarbeitet die Signale der Ohren, damit du Geräusche erkennst?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_32",
+    "answer_before": "brain",
+    "answer_after": "brain",
+    "options_before": [
+      "brain",
+      "foot",
+      "tooth"
+    ],
+    "options_after": [
+      "brain",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Wohin senden die Augen ihre Signale?",
+    "question_after": "Wohin senden die Augen ihre Signale?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_33",
+    "answer_before": "lungs",
+    "answer_after": "lungs",
+    "options_before": [
+      "lungs",
+      "tooth",
+      "ear"
+    ],
+    "options_after": [
+      "lungs",
+      "heart",
+      "stomach"
+    ],
+    "question_before": "Welches Organ bringt Sauerstoff aus der Luft ins Blut?",
+    "question_after": "Welches Organ bringt Sauerstoff aus der Luft ins Blut?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_34",
+    "answer_before": "heart",
+    "answer_after": "heart",
+    "options_before": [
+      "heart",
+      "tooth",
+      "eye"
+    ],
+    "options_after": [
+      "heart",
+      "lungs",
+      "stomach"
+    ],
+    "question_before": "Welches Organ ist ein kräftiger Muskel in der Brust?",
+    "question_after": "Welches Organ ist ein kräftiger Muskel in der Brust?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_37",
+    "answer_before": "nose",
+    "answer_after": "nose",
+    "options_before": [
+      "nose",
+      "foot",
+      "hand"
+    ],
+    "options_after": [
+      "nose",
+      "eye",
+      "ear"
+    ],
+    "question_before": "Wodurch kannst du beim ruhigen Atmen Luft einziehen?",
+    "question_after": "Wodurch kannst du beim ruhigen Atmen Luft einziehen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "body_38",
+    "answer_before": "ear",
+    "answer_after": "ear",
+    "options_before": [
+      "ear",
+      "tooth",
+      "stomach"
+    ],
+    "options_after": [
+      "ear",
+      "eye",
+      "nose"
+    ],
+    "question_before": "Womit hörst du die Musik in diesem Spiel?",
+    "question_after": "Womit hörst du die Musik in diesem Spiel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_01",
+    "answer_before": "globe",
+    "answer_after": "globe",
+    "options_before": [
+      "globe",
+      "wheel",
+      "egg"
+    ],
+    "options_after": [
+      "globe",
+      "map",
+      "compass"
+    ],
+    "question_before": "Was zeigt die Erde als kleine Kugel?",
+    "question_after": "Was zeigt die Erde als kleine Kugel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_02",
+    "answer_before": "map",
+    "answer_after": "map",
+    "options_before": [
+      "map",
+      "paper",
+      "soap"
+    ],
+    "options_after": [
+      "map",
+      "globe",
+      "compass"
+    ],
+    "question_before": "Was zeigt Orte und Wege von oben?",
+    "question_after": "Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_03",
+    "answer_before": "compass",
+    "answer_after": "compass",
+    "options_before": [
+      "compass",
+      "hammer",
+      "glass"
+    ],
+    "options_after": [
+      "compass",
+      "map",
+      "globe"
+    ],
+    "question_before": "Womit kannst du dich an Himmelsrichtungen orientieren?",
+    "question_after": "Welches Gerät hat eine Nadel, die nach Norden zeigt?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_10",
+    "answer_before": "rain",
+    "answer_after": "rain",
+    "options_before": [
+      "rain",
+      "wood",
+      "metal"
+    ],
+    "options_after": [
+      "rain",
+      "sun",
+      "moon"
+    ],
+    "question_before": "Was kann aus Wolken zum Boden fallen?",
+    "question_after": "Was kann aus Wolken zum Boden fallen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_11",
+    "answer_before": "snow",
+    "answer_after": "snow",
+    "options_before": [
+      "snow",
+      "sand",
+      "oil"
+    ],
+    "options_after": [
+      "snow",
+      "rain",
+      "cloud"
+    ],
+    "question_before": "Was fällt als Eiskristalle vom Himmel?",
+    "question_after": "Was fällt als Eiskristalle vom Himmel?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_13",
+    "answer_before": "moon",
+    "answer_after": "moon",
+    "options_before": [
+      "moon",
+      "tree",
+      "fish"
+    ],
+    "options_after": [
+      "moon",
+      "sun",
+      "cloud"
+    ],
+    "question_before": "Was umkreist die Erde?",
+    "question_after": "Was umkreist die Erde?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_16",
+    "answer_before": "snow",
+    "answer_after": "snow",
+    "options_before": [
+      "snow",
+      "oil",
+      "soap"
+    ],
+    "options_after": [
+      "snow",
+      "rain",
+      "cloud"
+    ],
+    "question_before": "Was liegt auf manchen hohen Bergen sogar im Sommer?",
+    "question_after": "Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_17",
+    "answer_before": "water",
+    "answer_after": "water",
+    "options_before": [
+      "water",
+      "paper",
+      "metal"
+    ],
+    "options_after": [
+      "water",
+      "forest",
+      "desert"
+    ],
+    "question_before": "Was ist auf Karten oft blau eingezeichnet?",
+    "question_after": "Was ist auf Karten oft blau eingezeichnet?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_18",
+    "answer_before": "forest",
+    "answer_after": "forest",
+    "options_before": [
+      "forest",
+      "sea",
+      "sand"
+    ],
+    "options_after": [
+      "forest",
+      "sea",
+      "mountain"
+    ],
+    "question_before": "Was bedeutet ein Waldzeichen auf einer Karte?",
+    "question_after": "Was bedeutet ein Waldzeichen auf einer Karte?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_19",
+    "answer_before": "bridge",
+    "answer_after": "bridge",
+    "options_before": [
+      "bridge",
+      "egg",
+      "soap"
+    ],
+    "options_after": [
+      "bridge",
+      "river",
+      "mountain"
+    ],
+    "question_before": "Was zeigt ein Brückenzeichen auf einer Karte?",
+    "question_after": "Was zeigt ein Brückenzeichen auf einer Karte?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_20",
+    "answer_before": "sea",
+    "answer_after": "sea",
+    "options_before": [
+      "sea",
+      "fabric",
+      "paper"
+    ],
+    "options_after": [
+      "sea",
+      "forest",
+      "desert"
+    ],
+    "question_before": "Was bedeckt mehr von der Erdoberfläche: Meere oder Land?",
+    "question_after": "Was bedeckt den größten Teil der Erdoberfläche?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_22",
+    "answer_before": "sun",
+    "answer_after": "sun",
+    "options_before": [
+      "sun",
+      "moon",
+      "paper"
+    ],
+    "options_after": [
+      "sun",
+      "moon",
+      "cloud"
+    ],
+    "question_before": "Was liefert Energie für Verdunstung im Wasserkreislauf?",
+    "question_after": "Was erwärmt das Wasser im Wasserkreislauf vor allem?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_25",
+    "answer_before": "sand",
+    "answer_after": "sand",
+    "options_before": [
+      "sand",
+      "soap",
+      "metal"
+    ],
+    "options_after": [
+      "sand",
+      "water",
+      "wood"
+    ],
+    "question_before": "Was liegt an vielen Stränden als kleine Körner?",
+    "question_after": "Was liegt an vielen Stränden als kleine Körner?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_29",
+    "answer_before": "map",
+    "answer_after": "map",
+    "options_before": [
+      "map",
+      "globe",
+      "ice"
+    ],
+    "options_after": [
+      "map",
+      "globe",
+      "compass"
+    ],
+    "question_before": "Was lässt sich zusammenfalten und zeigt deinen Spazierweg?",
+    "question_after": "Was lässt sich zusammenfalten und zeigt deinen Spazierweg?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_30",
+    "answer_before": "globe",
+    "answer_after": "globe",
+    "options_before": [
+      "globe",
+      "bridge",
+      "wheel"
+    ],
+    "options_after": [
+      "globe",
+      "map",
+      "compass"
+    ],
+    "question_before": "Welches Modell zeigt auch die Rückseite der Erde beim Drehen?",
+    "question_after": "Welches Modell zeigt auch die Rückseite der Erde beim Drehen?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_36",
+    "answer_before": "compass",
+    "answer_after": "compass",
+    "options_before": [
+      "compass",
+      "soap",
+      "salt"
+    ],
+    "options_after": [
+      "compass",
+      "map",
+      "globe"
+    ],
+    "question_before": "Was hilft beim Ausrichten einer Karte nach Norden?",
+    "question_after": "Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_37",
+    "answer_before": "rain",
+    "answer_after": "rain",
+    "options_before": [
+      "rain",
+      "snow",
+      "sand"
+    ],
+    "options_after": [
+      "rain",
+      "snow",
+      "cloud"
+    ],
+    "question_before": "Welcher Niederschlag ist flüssig?",
+    "question_after": "Welcher Niederschlag ist flüssig?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  },
+  {
+    "id": "geography_39",
+    "answer_before": "sun",
+    "answer_after": "sun",
+    "options_before": [
+      "sun",
+      "forest",
+      "paper"
+    ],
+    "options_after": [
+      "sun",
+      "moon",
+      "cloud"
+    ],
+    "question_before": "Woher kommt das Licht, das der Mond zurückwirft?",
+    "question_after": "Welcher Himmelskörper liefert das meiste Licht, das der Mond zurückwirft?",
+    "reason": "Plausible Alternativen aus demselben Themenfeld; richtige Antwort unverändert."
+  }
+]

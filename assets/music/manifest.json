@@ -1,5 +1,6 @@
 {
-  "schema": 2,
+  "schema": 3,
+  "complete": true,
   "authorship": "Own instrumental renderings of named public-domain compositions; score and arrangement licences are listed per track.",
   "renderer": {
     "lilypond": "GNU LilyPond 2.24.4 (running Guile 2.2)",
@@ -28,9 +29,10 @@
         "sha256": "c1e73344004ea3bca42a3f98089209657d82c9f3e93bfcdd6e5a25095de4f4a0"
       },
       "tempo": 180,
+      "render_profile": "score-modernization-1",
       "file": "wiener_blut.ogg",
       "bytes": 510231,
-      "sha256": "3b92ea7f38a3a220f97d900180ce5a67ff07cc7a28fbfba5ca86a4dd44215052"
+      "sha256": "8aafc0293807f9651e53969ac16a7de450a68d6ff8847e60d052c0b63a01b3fe"
     },
     {
       "midi_notes": 168,
@@ -50,9 +52,10 @@
         "sha256": "398782eaf782fdc03d1a19077927bed71b33883d288a2124ef836e6812f3d72e"
       },
       "time_scale": 1.65,
+      "render_profile": "score-modernization-1",
       "file": "babbino.ogg",
       "bytes": 1071630,
-      "sha256": "9542f9f9221a1db3d982fb27d7d627042740e8001b08a5c7fa14b9b3f6b1d79c"
+      "sha256": "24648508301c985a7fa96c8e26a032c9340fd022b93d31b73dbcda235b5c9d03"
     },
     {
       "midi_notes": 188,
@@ -71,9 +74,10 @@
         "file": "old_french_song.ly",
         "sha256": "b65b68630d04552ff7d6f56d0282a219feba407f1038ad544eb4f7d716876628"
       },
+      "render_profile": "score-modernization-1",
       "file": "french_song.ogg",
       "bytes": 860120,
-      "sha256": "c3f37adaf91158b6f6244fe5e5dedd9eeaa9ac39aa66777c7a29d1c51ab28f0a"
+      "sha256": "435a5f71b0b51af02bb3bbd5f158752efceabafdaad45f98ea356b797c6b6d65"
     },
     {
       "midi_notes": 264,
@@ -92,9 +96,385 @@
         "file": "consolation1.ly",
         "sha256": "731440571b3fabc86f8056a056ab211b5b50471899d38e4ba8fb0d909b46977c"
       },
+      "render_profile": "score-modernization-1",
       "file": "consolation.ogg",
       "bytes": 1531037,
-      "sha256": "b0f14e6e2b5354f7a37ea596780888d298ef9c16885142ccd94d87728a48228b"
+      "sha256": "9aff15de4a7b76fbf31c58b7c615beb4a67b559ed43a8b65e4e94e42f9e34688"
+    },
+    {
+      "midi_notes": 905,
+      "seconds": 133.827641723356,
+      "id": "elise",
+      "title": "Für Elise",
+      "composer": "Ludwig van Beethoven",
+      "year": 1810,
+      "arranger": "Stelios Samelis / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.ly",
+        "file": "elise.ly",
+        "sha256": "828a7bd1b42e441fe1b0eb0389ba46f1502dab28bbe488389e635fb446ba7a67"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "elise.ogg",
+      "bytes": 1928735,
+      "sha256": "5191d1dcd01ffb4a7170269d745fc2ed0d3075af088b7ee0703884036fb08b17"
+    },
+    {
+      "midi_notes": 549,
+      "seconds": 143.0,
+      "id": "bach_prelude",
+      "title": "Präludium C-Dur · BWV 846",
+      "composer": "Johann Sebastian Bach",
+      "year": 1722,
+      "arranger": "Tobias Erbsland / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly",
+        "file": "bach_prelude.ly",
+        "sha256": "9e4540143b5c5a9884f215428837fe91d1b471b02669f3a07ce50560736078e9"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "bach_prelude.ogg",
+      "bytes": 2078900,
+      "sha256": "e08c5850355ac0b38b6936db6a0192d403ee0b55a30eb9921bcbb0ad14f8ea85"
+    },
+    {
+      "midi_notes": 282,
+      "seconds": 144.0,
+      "id": "gymnopedie",
+      "title": "Gymnopédie Nr. 1",
+      "composer": "Erik Satie",
+      "year": 1888,
+      "arranger": "Evin Robertson / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/SatieE/gymnopedie_1/gymnopedie_1.ly",
+        "file": "gymnopedie.ly",
+        "sha256": "420a52244e9fbe106dd33ba2cac84414fd66e0d01c6d472205bad39678d4ce04"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "gymnopedie.ogg",
+      "bytes": 2133361,
+      "sha256": "edd0d7be9e8dc7cd63b1e882aba1568813b9344bb32f0643d0d4533624275f8c"
+    },
+    {
+      "midi_notes": 1494,
+      "seconds": 327.0,
+      "id": "clair",
+      "title": "Clair de lune",
+      "composer": "Claude Debussy",
+      "year": 1905,
+      "arranger": "Keith OHara / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.ly",
+        "file": "clair.ly",
+        "sha256": "c78762a27972f0643a34b994bffa1d058b1bb51e3947c0b50029aa75359e2a49"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "clair.ogg",
+      "bytes": 4842534,
+      "sha256": "88b52f52535036096d64fd75bae1e3b4b2ad009b1cb6e6cef74a0281059a9812"
+    },
+    {
+      "midi_notes": 1243,
+      "seconds": 205.27281179138322,
+      "id": "nocturne",
+      "title": "Nocturne · Op. 9 Nr. 2",
+      "composer": "Frédéric Chopin",
+      "year": 1832,
+      "arranger": "Renato Biolcati Rinaldi / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-SA-3.0",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly",
+        "file": "nocturne.ly",
+        "sha256": "51a5a1cfed40eaee9d44f04b35673ff94240932a1f78c935d16016d0c42ac617"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "nocturne.ogg",
+      "bytes": 3067271,
+      "sha256": "9bb3af311360bb070f3643fce13d2f05fae89121adf6197574e7ea3939cbb4e3"
+    },
+    {
+      "midi_notes": 344,
+      "seconds": 113.68328798185941,
+      "id": "traeumerei",
+      "title": "Träumerei · Op. 15 Nr. 7",
+      "composer": "Robert Schumann",
+      "year": 1838,
+      "arranger": "Ying-Chun Liu / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/SchumannR/O15/SchumannOp15No07/SchumannOp15No07.ly",
+        "file": "traeumerei.ly",
+        "sha256": "be0a952c8465a216c8405a2f6154a9b101e983a4b080d64a90e532bd5118532a"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "traeumerei.ogg",
+      "bytes": 1671082,
+      "sha256": "db6ff245df1e1784f76ef3c6fcc1e0c2dd8e8c6e03496434e2772ab370a2601b"
+    },
+    {
+      "midi_notes": 1288,
+      "seconds": 135.72031746031746,
+      "id": "mozart_sonata",
+      "title": "Sonata facile · Allegro",
+      "composer": "Wolfgang Amadeus Mozart",
+      "year": 1788,
+      "arranger": "Alejandro Sierra / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-SA-3.0",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/MozartWA/KV545/K545-1/K545-1.ly",
+        "file": "mozart_sonata.ly",
+        "sha256": "84d0e951e6d8807d3286f31ed7878a35dfddb9850bbae9156be0f5ac0a3e2e10"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "mozart_sonata.ogg",
+      "bytes": 2031804,
+      "sha256": "fd6dcafbd55fd984f03816e2ca02f1bcbca1462ce09744f08d0cdceabf3dca22"
+    },
+    {
+      "midi_notes": 1458,
+      "seconds": 180.49589569160997,
+      "id": "arabesque",
+      "title": "Arabesque Nr. 1",
+      "composer": "Claude Debussy",
+      "year": 1891,
+      "arranger": "Keith OHara / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.ly",
+        "file": "arabesque.ly",
+        "sha256": "4639d0220a0a242e2928348cdf6075a7e6cdd35a8b051d67612aa99a2d636a3a"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "arabesque.ogg",
+      "bytes": 2623843,
+      "sha256": "c15293437bc21b7f6df712d3f5d0cc7d0f05cd6dfeca3bde112b9c0c1a603d99"
+    },
+    {
+      "midi_notes": 720,
+      "seconds": 71.27469387755102,
+      "id": "brahms_waltz",
+      "title": "Walzer · Op. 39 Nr. 15",
+      "composer": "Johannes Brahms",
+      "year": 1865,
+      "arranger": "Brian D. Rude / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BrahmsJ/O39/waltz-op39-15/waltz-op39-15.ly",
+        "file": "brahms_waltz.ly",
+        "sha256": "64cef49cf056947e8d4f900535dbc28a4a841653ff1e2a936534e928e2209a65"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "brahms_waltz.ogg",
+      "bytes": 1030092,
+      "sha256": "cceb4bd41ee61f37f1343ec60a53aae7ab635091a4e06ee7344c21cc81af3498"
+    },
+    {
+      "midi_notes": 138,
+      "seconds": 179.0,
+      "id": "canon",
+      "title": "Kanon in D",
+      "composer": "Johann Pachelbel",
+      "year": 1680,
+      "arranger": "Anonymous / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-3.0",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/PachelbelJ/CanonInD/CanonInD.ly",
+        "file": "canon.ly",
+        "sha256": "d0909b505b57f0ddcc21f867346b91ca527bd30521414d997bd516548fefcb2b"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "canon.ogg",
+      "bytes": 2668754,
+      "sha256": "3767082e5ff9fbb0789737012f8340d34acd0da2030b11def90763397bc362d3"
+    },
+    {
+      "midi_notes": 2730,
+      "seconds": 357.3539909297052,
+      "id": "impromptu",
+      "title": "Impromptu · D 899 Nr. 3",
+      "composer": "Franz Schubert",
+      "year": 1827,
+      "arranger": "Ph. Raynaud / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu.ly",
+        "file": "impromptu.ly",
+        "sha256": "698365f64214cb784651d6869915133e5f0c16eb64cbba673d8abf649a4fb6cc"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "impromptu.ogg",
+      "bytes": 5169154,
+      "sha256": "a5c410964aac9555d9cca4ec6ff00d90612738582652df376ef428ad44419dcd"
+    },
+    {
+      "midi_notes": 458,
+      "seconds": 69.0018820861678,
+      "id": "invention",
+      "title": "Invention Nr. 1 · BWV 772",
+      "composer": "Johann Sebastian Bach",
+      "year": 1723,
+      "arranger": "jeff covey / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-SA-3.0",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly",
+        "file": "invention.ly",
+        "sha256": "3c01302f70efd1dd6f43becaf19b9b2aac49e25b3e89666e3e55bc576c6cd55d"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "invention.ogg",
+      "bytes": 1020449,
+      "sha256": "bcd1b60b4c0eb49329d6bb3ef258162cf33fb4e29429e2067ff77975d50e9b58"
+    },
+    {
+      "midi_notes": 600,
+      "seconds": 111.2141723356009,
+      "id": "chopin_prelude",
+      "title": "Prélude e-Moll · Op. 28 Nr. 4",
+      "composer": "Frédéric Chopin",
+      "year": 1839,
+      "arranger": "Magnus Lewis-Smith / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/ChopinFF/O28/Chop-28-4/Chop-28-4.ly",
+        "file": "chopin_prelude.ly",
+        "sha256": "d4fca574bc3c3ad810ee643d42b7299e1c97b3b8b3fa379c3d7f77edb02f6192"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "chopin_prelude.ogg",
+      "bytes": 1575273,
+      "sha256": "122befd5348b8215cceb009e7fefb27940e2d489789bf6106454b7f47fc00d9e"
+    },
+    {
+      "midi_notes": 201,
+      "seconds": 46.63671201814059,
+      "id": "minuet",
+      "title": "Menuett G-Dur · BWV Anh. 114",
+      "composer": "Christian Petzold",
+      "year": 1725,
+      "arranger": "Shamim Mohamed / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BachJS/BWVAnh114/Minuet-xpose/Minuet-xpose.ly",
+        "file": "minuet.ly",
+        "sha256": "4b655815ba0f508940c769fe0bd3fc2cc5449fac08679ee62f41975ba447d747"
+      },
+      "dependencies": [],
+      "attribution_note": "Historically attributed to Bach in the source; now attributed to Christian Petzold.",
+      "render_profile": "score-modernization-1",
+      "file": "minuet.ogg",
+      "bytes": 693895,
+      "sha256": "8963db35fddd9e1a09cc3498f7b5937fc72636f08768752fcab98a47e9ed8788"
+    },
+    {
+      "midi_notes": 1614,
+      "seconds": 258.9981179138322,
+      "id": "turca",
+      "title": "Rondo alla turca",
+      "composer": "Wolfgang Amadeus Mozart",
+      "year": 1783,
+      "arranger": "Rune Zedeler and Chris Sawer / Mutopia; Kinderwelt piano rendering",
+      "license": "Public Domain",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca-lys/KV331_3_RondoAllaTurca.ly",
+        "file": "turca.ly",
+        "sha256": "eb5aeab7ca2cd4299e7a99f95dee9c8d2d52d73c8327474b6249c1ee4d5a20d9"
+      },
+      "dependencies": [
+        {
+          "file": "KV331_3_RondoAllaTurcaNotes.ly",
+          "path": "ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca-lys/KV331_3_RondoAllaTurcaNotes.ly",
+          "sha256": "281da85484e82f2c874d8ab6d710868b70b54d44b3a01b5b7d396b4086125d89"
+        }
+      ],
+      "render_profile": "score-modernization-1",
+      "file": "turca.ogg",
+      "bytes": 3972615,
+      "sha256": "6b77891e9d9cb22ca440d6d6f8bb2dfdbe5a99c5bccbad13ae9c4766fc518bbd"
+    },
+    {
+      "midi_notes": 1144,
+      "seconds": 279.0,
+      "id": "moonlight",
+      "title": "Mondscheinsonate · Adagio sostenuto",
+      "composer": "Ludwig van Beethoven",
+      "year": 1801,
+      "arranger": "Stewart Holmes / Mutopia; Kinderwelt piano rendering",
+      "license": "CC-BY-SA-2.5",
+      "kind": "lilypond",
+      "source": {
+        "repository": "https://github.com/MutopiaProject/MutopiaProject.git",
+        "commit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+        "path": "ftp/BeethovenLv/O27/moonlight/moonlight-lys/moonlight1-a4.ly",
+        "file": "moonlight.ly",
+        "sha256": "97f5f8f0b3cc31de38dd2c284f7e66f4f4b319fca0cdc941ee6f5f4927833ac5"
+      },
+      "dependencies": [],
+      "render_profile": "score-modernization-1",
+      "file": "moonlight.ogg",
+      "bytes": 4080770,
+      "sha256": "36686c3c2c5f6fa5aadff3a1071256181c7d12a68f0ac8b23770d798c0e57243"
     }
   ]
 }

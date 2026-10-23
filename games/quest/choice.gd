@@ -6,10 +6,14 @@ var caption := ""
 func _ready() -> void: mouse_filter = MOUSE_FILTER_IGNORE
 func _draw() -> void:
 	var rect := Rect2(Vector2(9,8),size-Vector2(18,16))
-	if value is String and Art.has_object(value):
-		if kind=="discovery": rect.size.y-=20
+	if kind=="dual_pattern":
+		var pair:=str(value).split(":")
+		Art.object(self,pair[0],Rect2(rect.position,Vector2(rect.size.x,rect.size.y-22)))
+		Art.text(self,pair[1],Vector2(size.x/2,size.y-13),20)
+	elif value is String and Art.has_object(value):
+		if kind in ["discovery","rhyme","reasoning_choice"]: rect.size.y-=20
 		Art.object(self,value,rect)
-		if kind=="discovery":
+		if kind in ["discovery","rhyme","reasoning_choice"]:
 			var px := 14
 			while px>10 and Art.font().get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>size.x-8: px-=1
 			var shown := caption
@@ -29,4 +33,6 @@ func _draw() -> void:
 		Art.text(self,"←" if value=="left" else "→",size/2,36)
 	else:
 		var caption := str(int(value)) if value is float or value is int else str(value)
-		Art.text(self,caption,size/2,24 if caption.length()>2 else 36)
+		var px:=24 if caption.length()>2 else 36
+		while px>10 and Art.font().get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>size.x-12: px-=1
+		Art.text(self,caption,size/2,px)

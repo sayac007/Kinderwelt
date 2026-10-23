@@ -1,10 +1,13 @@
 extends Control
-# Each sprite is split at the hips: legs swing around their hip independently.
-# The upper body, head and backpack remain readable during walking/celebration.
-const NAMES := {"wanja":"Wanja","mischa":"Mischa","du":"Du","mama":"Mama","katze":"Katze"}
-const IDS := ["wanja","mischa","du","mama","katze"]
-const SPRITES = {"wanja":preload("res://assets/quest/wanja.png"),"mischa":preload("res://assets/quest/mischa.png"),"du":preload("res://assets/quest/du.png"),"mama":preload("res://assets/quest/mama.png"),"katze":preload("res://assets/quest/katze.png")}
+# Classic human sprites retain their hip animation. Animals and all costumes
+# use continuous meshes, keeping coats, capes, tails and faces intact.
+const Cast = preload("res://core/quest/cast.gd")
+const NAMES = Cast.NAMES
+const IDS := ["wanja","mischa","du","mama","katze","george","squirrel"]
+const SPRITES = Cast.SPRITES
+const Wardrobe=preload("res://core/quest/wardrobe.gd")
 var person := "wanja"
+var costume := "classic"
 var animation := "idle"
 var clock := 0.0
 var reduced_motion := false
@@ -13,6 +16,12 @@ var selected := false
 var reaction := 0.0
 var pet: MeshInstance2D
 var pet_size := Vector2.ZERO
+func current_texture() -> Texture2D:
+	var dressed:=Wardrobe.frame(person,costume)
+	return dressed if dressed!=null else SPRITES.get(person,SPRITES.wanja)
+func aspect() -> float:
+	var texture: Texture2D = current_texture()
+	return float(texture.get_width())/texture.get_height()
 func react() -> void:
 	reaction = 1.2
 	animation = "success"
@@ -32,12 +41,12 @@ func _process(delta: float) -> void:
 		if reaction==0: animation="idle"
 	queue_redraw()
 func _draw() -> void:
-	var texture: Texture2D = SPRITES.get(person,SPRITES.wanja)
+	var texture: Texture2D = current_texture()
 	var col := maxi(IDS.find(person),0)
 	var w := float(texture.get_width())
 	var h := float(texture.get_height())
 	var scale_size := Vector2(size.x,size.y)
-	var hue: float = [.02,.51,.61,.35,.77][col]
+	var hue: float = [.02,.51,.61,.35,.77,.08,.42][col]
 	if reaction>0 and not reduced_motion: hue+=reaction*.16
 	var glow := Color.from_hsv(fposmod(hue+(.08*sin(clock*1.7) if selected and not reduced_motion else 0),1),.68,1)
 	var intensity := .8 if selected else .24
@@ -56,7 +65,8 @@ func _draw() -> void:
 			var bolt := PackedVector2Array([origin,origin+Vector2(-direction*9,15),origin+Vector2(direction*5,13),origin+Vector2(-direction*6,29)])
 			draw_polyline(bolt,Color(glow,.85),3,true)
 	var bob := sin(clock*2.5)*1.5
-	if animation=="move": bob = -absf(sin(clock*9))*4
+	if animation in ["move","climb"]: bob = -absf(sin(clock*9))*4
+	if animation=="swim": bob=sin(clock*2)*4
 	if animation=="success": bob = -absf(sin(clock*5))*14
 	if reduced_motion: bob = 0
 	var lean := -.08 if animation=="think" else sin(clock*4)*.025
@@ -64,20 +74,34 @@ func _draw() -> void:
 	var base := Vector2(size.x/2,size.y*.72+bob)
 	var tint := Color.WHITE.lerp(glow,minf(.18,reaction*.12)) if not reduced_motion else Color.WHITE
 	if is_instance_valid(pet):
-		pet.visible = person=="katze"
+		pet.visible = person in ["katze","squirrel"] or costume!="classic"
 		if pet.visible:
-			if pet_size!=size: build_pet_mesh()
+			if texture is AtlasTexture:
+				pet.texture=texture.atlas
+				pet.material.set_shader_parameter("frame_mask",Wardrobe.mask(person))
+				pet.material.set_shader_parameter("mask_id",float(Wardrobe.LOOKS.find(costume)))
+				var bounds: Rect2=texture.region
+				var atlas_size: Vector2=texture.atlas.get_size()
+				pet.material.set_shader_parameter("atlas_rect",Vector4(bounds.position.x/atlas_size.x,bounds.position.y/atlas_size.y,bounds.size.x/atlas_size.x,bounds.size.y/atlas_size.y))
+			else:
+				pet.texture=texture
+				pet.material.set_shader_parameter("mask_id",0.0)
+				pet.material.set_shader_parameter("atlas_rect",Vector4(0,0,1,1))
+			var fitted := texture.get_size()*minf(size.x/texture.get_width(),size.y/texture.get_height())
+			if pet_size!=fitted: build_pet_mesh(fitted)
 			pet.position = Vector2(size.x/2,size.y/2+bob)
 			pet.rotation = lean
 			pet.scale = Vector2(facing,1)
 			pet.modulate = tint
 			pet.material.set_shader_parameter("phase",clock)
-			pet.material.set_shader_parameter("walking",animation=="move" and not reduced_motion)
+			pet.material.set_shader_parameter("walking",animation in ["move","climb","swim","moon"] and not reduced_motion)
 			pet.material.set_shader_parameter("still",reduced_motion)
-			pet.material.set_shader_parameter("sprite_size",size)
+			pet.material.set_shader_parameter("sprite_size",pet_size)
+			pet.material.set_shader_parameter("squirrel",person=="squirrel")
+			pet.material.set_shader_parameter("human",person not in ["katze","squirrel"])
 			return
 	draw_set_transform(base,lean,Vector2(facing,1))
-	var swing := sin(clock*9)*.22 if animation=="move" and not reduced_motion else 0.0
+	var swing := sin(clock*9)*.22 if animation in ["move","climb","swim","moon"] and not reduced_motion else 0.0
 	for leg in range(2):
 		var hip := Vector2((-1 if leg==0 else 1)*scale_size.x*.13,0)
 		draw_set_transform(base+Vector2(hip.x*facing,0),lean+swing*(1 if leg==0 else -1),Vector2(facing,1))
@@ -87,10 +111,10 @@ func _draw() -> void:
 	draw_texture_rect_region(texture,Rect2(Vector2(-scale_size.x*.5,-scale_size.y*.72),Vector2(scale_size.x,scale_size.y*.72)),Rect2(Vector2.ZERO,Vector2(w,h*.72)),tint)
 	draw_set_transform(Vector2.ZERO)
 
-func build_pet_mesh() -> void:
+func build_pet_mesh(fitted: Vector2) -> void:
 	# A continuous mesh keeps fur intact while four paws and the tail move.
 	# The cat never uses the two-legged human sprite cut.
-	pet_size = size
+	pet_size = fitted
 	var vertices := PackedVector3Array()
 	var uvs := PackedVector2Array()
 	var indices := PackedInt32Array()
@@ -100,7 +124,7 @@ func build_pet_mesh() -> void:
 		for x in range(COLS+1):
 			var uv := Vector2(float(x)/COLS,float(y)/ROWS)
 			uvs.append(uv)
-			var at := (uv-Vector2.ONE*.5)*size
+			var at := (uv-Vector2.ONE*.5)*fitted
 			vertices.append(Vector3(at.x,at.y,0))
 	for y in range(ROWS):
 		for x in range(COLS):

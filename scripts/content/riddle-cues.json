@@ -1,0 +1,1827 @@
+{
+  "physics_01": {
+    "scene": "motion",
+    "keywords": [
+      "Bewegen",
+      "Motion",
+      "Движение"
+    ]
+  },
+  "physics_02": {
+    "scene": "tools",
+    "keywords": [
+      "Werkeln",
+      "Making",
+      "Мастерская"
+    ]
+  },
+  "physics_03": {
+    "scene": "tools",
+    "keywords": [
+      "Werkeln",
+      "Build",
+      "Мастерить"
+    ]
+  },
+  "physics_04": {
+    "scene": "tools",
+    "keywords": [
+      "Werkeln",
+      "Making",
+      "Мастерская"
+    ]
+  },
+  "physics_05": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ],
+    "questions": [
+      "Eisen, Holz, Papier. Was zieht ein Magnet an?",
+      "Iron, wood, paper. Which does a magnet attract?",
+      "Железо, дерево, бумага. Что притянет магнит?"
+    ]
+  },
+  "physics_06": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "physics_07": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_08": {
+    "scene": "electric",
+    "keywords": [
+      "Versorgen",
+      "Power",
+      "Энергия"
+    ]
+  },
+  "physics_09": {
+    "scene": "safety",
+    "keywords": [
+      "Schützen",
+      "Protection",
+      "Защита"
+    ]
+  },
+  "physics_10": {
+    "scene": "tools",
+    "keywords": [
+      "Übertragen",
+      "Transfer",
+      "Передавать"
+    ]
+  },
+  "physics_11": {
+    "scene": "tools",
+    "keywords": [
+      "Werkeln",
+      "Making",
+      "Мастерская"
+    ]
+  },
+  "physics_12": {
+    "scene": "rope",
+    "keywords": [
+      "Umlenken",
+      "Direction",
+      "Направление"
+    ]
+  },
+  "physics_13": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_14": {
+    "scene": "force",
+    "keywords": [
+      "Ausprobieren",
+      "Experiment",
+      "Опыт"
+    ]
+  },
+  "physics_15": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ]
+  },
+  "physics_16": {
+    "scene": "force",
+    "keywords": [
+      "Ausprobieren",
+      "Experiment",
+      "Опыт"
+    ]
+  },
+  "physics_17": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "physics_18": {
+    "scene": "force",
+    "keywords": [
+      "Ausprobieren",
+      "Experiment",
+      "Опыт"
+    ]
+  },
+  "physics_19": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "physics_20": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ],
+    "questions": [
+      "Was wirft einen deutlichen Schatten: Holz, klares Glas oder klares Wasser?",
+      "What casts a clear shadow: wood, clear glass or clear water?",
+      "Что даёт чёткую тень: дерево, прозрачное стекло или чистая вода?"
+    ]
+  },
+  "physics_21": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ],
+    "questions": [
+      "Was schwimmt meist: trockenes leichtes Holz, Eisen oder Sand?",
+      "Which usually floats: light dry wood, iron or sand?",
+      "Что обычно плавает: лёгкое сухое дерево, железо или песок?"
+    ]
+  },
+  "physics_22": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_23": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ]
+  },
+  "physics_24": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ],
+    "questions": [
+      "Was dämpft Klopfen besser: weiches Tuch, Glas oder Eisen?",
+      "What cushions tapping better: soft cloth, glass or iron?",
+      "Что лучше приглушит стук: мягкая ткань, стекло или железо?"
+    ]
+  },
+  "physics_25": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_26": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "physics_27": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "physics_28": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_29": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "physics_30": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ]
+  },
+  "physics_31": {
+    "scene": "motion",
+    "keywords": [
+      "Bewegen",
+      "Motion",
+      "Движение"
+    ]
+  },
+  "physics_32": {
+    "scene": "force",
+    "keywords": [
+      "Ausprobieren",
+      "Experiment",
+      "Опыт"
+    ]
+  },
+  "physics_33": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "physics_34": {
+    "scene": "electric",
+    "keywords": [
+      "Versorgen",
+      "Power",
+      "Энергия"
+    ]
+  },
+  "physics_35": {
+    "scene": "motion",
+    "keywords": [
+      "Bewegen",
+      "Motion",
+      "Движение"
+    ]
+  },
+  "physics_36": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "physics_37": {
+    "scene": "tools",
+    "keywords": [
+      "Werkeln",
+      "Making",
+      "Мастерская"
+    ]
+  },
+  "physics_38": {
+    "scene": "motion",
+    "keywords": [
+      "Bewegen",
+      "Motion",
+      "Движение"
+    ]
+  },
+  "physics_39": {
+    "scene": "electric",
+    "keywords": [
+      "Versorgen",
+      "Power",
+      "Питать"
+    ]
+  },
+  "physics_40": {
+    "scene": "force",
+    "keywords": [
+      "Ausprobieren",
+      "Experiment",
+      "Опыт"
+    ]
+  },
+  "biology_01": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_02": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_03": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_04": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "biology_05": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_06": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "biology_07": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_08": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_09": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_10": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_11": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_12": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_13": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_14": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_15": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_16": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_17": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_18": {
+    "scene": "food",
+    "keywords": [
+      "Trinken",
+      "Drink",
+      "Пить"
+    ]
+  },
+  "biology_19": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_20": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_21": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_22": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_23": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_24": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_25": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_26": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_27": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_28": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_29": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_30": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_31": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ]
+  },
+  "biology_32": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_33": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_34": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_35": {
+    "scene": "food",
+    "keywords": [
+      "Trinken",
+      "Drink",
+      "Пить"
+    ]
+  },
+  "biology_36": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_37": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_38": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "biology_39": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "biology_40": {
+    "scene": "life",
+    "keywords": [
+      "Entwickeln",
+      "Life",
+      "Жизнь"
+    ]
+  },
+  "chemistry_01": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_02": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_03": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "chemistry_04": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_05": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_06": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_07": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_08": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_09": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_10": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_11": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_12": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_13": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_14": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_15": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "chemistry_16": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_17": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ]
+  },
+  "chemistry_18": {
+    "scene": "heat",
+    "keywords": [
+      "Erwärmen",
+      "Warming",
+      "Нагрев"
+    ]
+  },
+  "chemistry_19": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_20": {
+    "scene": "cleaning",
+    "keywords": [
+      "Reinigen",
+      "Cleaning",
+      "Чистота"
+    ]
+  },
+  "chemistry_21": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "chemistry_22": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_23": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_24": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "chemistry_25": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "chemistry_26": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "chemistry_27": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_28": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_29": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_30": {
+    "scene": "cleaning",
+    "keywords": [
+      "Reinigen",
+      "Cleaning",
+      "Чистота"
+    ]
+  },
+  "chemistry_31": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_32": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_33": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_34": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  },
+  "chemistry_35": {
+    "scene": "water",
+    "keywords": [
+      "Verwandeln",
+      "Changing",
+      "Превращение"
+    ]
+  },
+  "chemistry_36": {
+    "scene": "materials",
+    "keywords": [
+      "Untersuchen",
+      "Materials",
+      "Вещества"
+    ]
+  },
+  "chemistry_37": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ]
+  },
+  "chemistry_38": {
+    "scene": "cleaning",
+    "keywords": [
+      "Reinigen",
+      "Cleaning",
+      "Чистота"
+    ]
+  },
+  "chemistry_39": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "chemistry_40": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "body_01": {
+    "scene": "vision",
+    "keywords": [
+      "Sehen",
+      "Seeing",
+      "Зрение"
+    ],
+    "questions": [
+      "Womit sehen Menschen?",
+      "What do people use to see?",
+      "Чем видит человек?"
+    ]
+  },
+  "body_02": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ],
+    "questions": [
+      "Womit hört der Mensch?",
+      "What do people use to hear?",
+      "Чем слышит человек?"
+    ]
+  },
+  "body_03": {
+    "scene": "smell",
+    "keywords": [
+      "Riechen",
+      "Smell",
+      "Запах"
+    ],
+    "questions": [
+      "Womit riechen Menschen?",
+      "What do people use to smell?",
+      "Чем человек чувствует запах?"
+    ]
+  },
+  "body_04": {
+    "scene": "taste",
+    "keywords": [
+      "Schmecken",
+      "Taste",
+      "Вкус"
+    ],
+    "questions": [
+      "Womit schmeckst du süß und sauer?",
+      "What detects sweet and sour tastes?",
+      "Чем чувствуешь сладкий и кислый вкус?"
+    ]
+  },
+  "body_05": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ],
+    "questions": [
+      "Womit ertastest du ein weiches Tuch?",
+      "What do you use to feel a soft cloth?",
+      "Чем ощупываешь мягкую ткань?"
+    ]
+  },
+  "body_06": {
+    "scene": "pump",
+    "keywords": [
+      "Antreiben",
+      "Pumping",
+      "Движение"
+    ],
+    "questions": [
+      "Welches Organ pumpt Blut?",
+      "Which organ pumps blood?",
+      "Какой орган качает кровь?"
+    ]
+  },
+  "body_07": {
+    "scene": "breath",
+    "keywords": [
+      "Atmen",
+      "Breathing",
+      "Дыхание"
+    ],
+    "questions": [
+      "Welche Organe nehmen Atemluft auf?",
+      "Which organs take in air?",
+      "Какие органы принимают воздух при вдохе?"
+    ]
+  },
+  "body_08": {
+    "scene": "memory",
+    "keywords": [
+      "Denken",
+      "Thinking",
+      "Мысли"
+    ],
+    "questions": [
+      "Welches Organ verarbeitet Sinneseindrücke?",
+      "Which organ processes what we sense?",
+      "Какой орган обрабатывает ощущения?"
+    ]
+  },
+  "body_09": {
+    "scene": "support",
+    "keywords": [
+      "Stützen",
+      "Support",
+      "Опора"
+    ],
+    "questions": [
+      "Was bildet das feste Körpergerüst?",
+      "What forms the body's hard frame?",
+      "Что образует твёрдую опору тела?"
+    ]
+  },
+  "body_10": {
+    "scene": "bite",
+    "keywords": [
+      "Zerkleinern",
+      "Biting",
+      "Измельчение"
+    ],
+    "questions": [
+      "Womit zerkleinerst du Essen?",
+      "What breaks food into small pieces?",
+      "Чем измельчаешь пищу?"
+    ]
+  },
+  "body_11": {
+    "scene": "digest",
+    "keywords": [
+      "Verdauen",
+      "Digestion",
+      "Пищеварение"
+    ],
+    "questions": [
+      "Wohin kommt Essen nach der Speiseröhre?",
+      "Where does food go after the food pipe?",
+      "Куда еда попадает после пищевода?"
+    ]
+  },
+  "body_12": {
+    "scene": "cleaning",
+    "keywords": [
+      "Reinigen",
+      "Cleaning",
+      "Чистота"
+    ],
+    "questions": [
+      "Was hilft beim Händewaschen?",
+      "What helps wash your hands?",
+      "Что помогает мыть руки?"
+    ]
+  },
+  "body_13": {
+    "scene": "food",
+    "keywords": [
+      "Trinken",
+      "Drink",
+      "Пить"
+    ],
+    "questions": [
+      "Was eignet sich als Durstlöscher?",
+      "What is a good drink when thirsty?",
+      "Чем лучше утолить жажду?"
+    ]
+  },
+  "body_14": {
+    "scene": "rest",
+    "keywords": [
+      "Ruhen",
+      "Rest",
+      "Отдых"
+    ],
+    "questions": [
+      "Welches Bild steht für die Nacht?",
+      "Which picture stands for night?",
+      "Какая картинка означает ночь?"
+    ]
+  },
+  "body_15": {
+    "scene": "shoe",
+    "keywords": [
+      "Tragen",
+      "Support",
+      "Опора"
+    ],
+    "questions": [
+      "Welcher Körperteil steckt im Schuh?",
+      "Which body part goes in a shoe?",
+      "Какую часть тела обувают?"
+    ]
+  },
+  "body_16": {
+    "scene": "safety",
+    "keywords": [
+      "Schützen",
+      "Protection",
+      "Защита"
+    ],
+    "questions": [
+      "Was schützt beim Radfahren den Kopf?",
+      "What protects your head when cycling?",
+      "Что защищает голову на велосипеде?"
+    ]
+  },
+  "body_17": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ],
+    "questions": [
+      "Welcher Körperteil braucht Schutz vor Lärm?",
+      "Which body part needs protection from loud noise?",
+      "Какую часть тела нужно защищать от шума?"
+    ]
+  },
+  "body_18": {
+    "scene": "vision",
+    "keywords": [
+      "Sehen",
+      "Seeing",
+      "Зрение"
+    ],
+    "questions": [
+      "Was schützen die Augenlider?",
+      "What do eyelids protect?",
+      "Что защищают веки?"
+    ]
+  },
+  "body_19": {
+    "scene": "food",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ],
+    "questions": [
+      "Was hilft, Atemluft zu filtern?",
+      "What helps filter the air you breathe?",
+      "Что помогает очищать вдыхаемый воздух?"
+    ]
+  },
+  "body_20": {
+    "scene": "bite",
+    "keywords": [
+      "Zerkleinern",
+      "Biting",
+      "Измельчение"
+    ],
+    "questions": [
+      "Was fällt aus und wächst bei Kindern neu?",
+      "What falls out and regrows in children?",
+      "Что выпадает и вырастает заново у детей?"
+    ]
+  },
+  "body_21": {
+    "scene": "touch",
+    "keywords": [
+      "Greifen",
+      "Grasp",
+      "Брать"
+    ],
+    "questions": [
+      "Welcher Körperteil hat normalerweise fünf Finger?",
+      "Which body part usually has five fingers?",
+      "У какой части тела обычно пять пальцев?"
+    ]
+  },
+  "body_22": {
+    "scene": "pump",
+    "keywords": [
+      "Antreiben",
+      "Pumping",
+      "Движение"
+    ],
+    "questions": [
+      "Was schlägt beim Rennen meist schneller?",
+      "What usually beats faster when running?",
+      "Что при беге обычно бьётся быстрее?"
+    ]
+  },
+  "body_23": {
+    "scene": "breath",
+    "keywords": [
+      "Atmen",
+      "Breathing",
+      "Дыхание"
+    ],
+    "questions": [
+      "Wohin strömt Luft beim Einatmen?",
+      "Where does air go when breathing in?",
+      "Куда поступает воздух при вдохе?"
+    ]
+  },
+  "body_24": {
+    "scene": "memory",
+    "keywords": [
+      "Denken",
+      "Thinking",
+      "Мысли"
+    ],
+    "questions": [
+      "Welches Organ verarbeitet Erinnerungen?",
+      "Which organ processes memories?",
+      "Какой орган обрабатывает воспоминания?"
+    ]
+  },
+  "body_25": {
+    "scene": "support",
+    "keywords": [
+      "Stützen",
+      "Support",
+      "Опора"
+    ],
+    "questions": [
+      "Was bildet den schützenden Schädel?",
+      "What makes the protective skull?",
+      "Из чего состоит защитный череп?"
+    ]
+  },
+  "body_26": {
+    "scene": "digest",
+    "keywords": [
+      "Verdauen",
+      "Digestion",
+      "Пищеварение"
+    ],
+    "questions": [
+      "Welches Organ mischt Nahrung weiter?",
+      "Which organ keeps mixing food?",
+      "Какой орган продолжает перемешивать пищу?"
+    ]
+  },
+  "body_27": {
+    "scene": "smell",
+    "keywords": [
+      "Riechen",
+      "Smell",
+      "Запах"
+    ],
+    "questions": [
+      "Womit riechst du das Essen?",
+      "What do you use to smell food?",
+      "Чем чувствуешь запах еды?"
+    ]
+  },
+  "body_28": {
+    "scene": "cleaning",
+    "keywords": [
+      "Reinigen",
+      "Cleaning",
+      "Чистота"
+    ],
+    "questions": [
+      "Was brauchst du beim Händewaschen?",
+      "What do you need when washing hands?",
+      "Что нужно для мытья рук?"
+    ]
+  },
+  "body_29": {
+    "scene": "food",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ],
+    "questions": [
+      "Was davon ist ein Lebensmittel?",
+      "Which of these is food?",
+      "Что из этого еда?"
+    ]
+  },
+  "body_30": {
+    "scene": "support",
+    "keywords": [
+      "Stützen",
+      "Support",
+      "Опора"
+    ],
+    "questions": [
+      "Was gibt dem Fuß innen Halt?",
+      "What supports the foot from inside?",
+      "Что поддерживает стопу изнутри?"
+    ]
+  },
+  "body_31": {
+    "scene": "memory",
+    "keywords": [
+      "Denken",
+      "Thinking",
+      "Мысли"
+    ],
+    "questions": [
+      "Welches Organ erkennt gehörte Geräusche?",
+      "Which organ recognises sounds you hear?",
+      "Какой орган узнаёт услышанные звуки?"
+    ]
+  },
+  "body_32": {
+    "scene": "memory",
+    "keywords": [
+      "Denken",
+      "Think",
+      "Думать"
+    ],
+    "questions": [
+      "Welches Organ verarbeitet Signale der Augen?",
+      "Which organ processes signals from the eyes?",
+      "Какой орган обрабатывает сигналы глаз?"
+    ]
+  },
+  "body_33": {
+    "scene": "breath",
+    "keywords": [
+      "Atmen",
+      "Breathe",
+      "Дышать"
+    ],
+    "questions": [
+      "Welches Organ bringt Sauerstoff ins Blut?",
+      "Which organ transfers oxygen into blood?",
+      "Какой орган передаёт кислород в кровь?"
+    ]
+  },
+  "body_34": {
+    "scene": "pump",
+    "keywords": [
+      "Antreiben",
+      "Pumping",
+      "Движение"
+    ],
+    "questions": [
+      "Welches Organ pumpt als Muskel in der Brust?",
+      "Which muscular organ pumps inside your chest?",
+      "Какой мышечный орган качает кровь в груди?"
+    ]
+  },
+  "body_35": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ],
+    "questions": [
+      "Was ist meist weich und biegsam?",
+      "Which is usually soft and flexible?",
+      "Что обычно мягкое и гибкое?"
+    ]
+  },
+  "body_36": {
+    "scene": "brush",
+    "keywords": [
+      "Pflegen",
+      "Care",
+      "Уход"
+    ],
+    "questions": [
+      "Was reinigst du mit einer Zahnbürste?",
+      "What do you clean with a toothbrush?",
+      "Что чистишь зубной щёткой?"
+    ]
+  },
+  "body_37": {
+    "scene": "food",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ],
+    "questions": [
+      "Wodurch ziehst du ruhig Atemluft ein?",
+      "Through what can you breathe in quietly?",
+      "Через что спокойно вдыхаешь воздух?"
+    ]
+  },
+  "body_38": {
+    "scene": "sound",
+    "keywords": [
+      "Hören",
+      "Hearing",
+      "Слух"
+    ],
+    "questions": [
+      "Womit hörst du Musik?",
+      "What do you use to hear music?",
+      "Чем слышишь музыку?"
+    ]
+  },
+  "body_39": {
+    "scene": "food",
+    "keywords": [
+      "Trinken",
+      "Drink",
+      "Пить"
+    ],
+    "questions": [
+      "Was braucht der Körper zum Trinken?",
+      "What does the body need to drink?",
+      "Что нужно организму для питья?"
+    ]
+  },
+  "body_40": {
+    "scene": "touch",
+    "keywords": [
+      "Fühlen",
+      "Touch",
+      "Осязание"
+    ],
+    "questions": [
+      "Womit greifst du vorsichtig einen Ball?",
+      "What gently grasps a ball?",
+      "Чем осторожно берёшь мяч?"
+    ]
+  },
+  "geography_01": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_02": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_03": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_04": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_05": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_06": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Исследовать"
+    ]
+  },
+  "geography_07": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Исследовать"
+    ]
+  },
+  "geography_08": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_09": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_10": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_11": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_12": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ]
+  },
+  "geography_13": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "geography_14": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_15": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_16": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_17": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_18": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_19": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_20": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_21": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_22": {
+    "scene": "cold",
+    "keywords": [
+      "Verändern",
+      "Change",
+      "Изменение"
+    ]
+  },
+  "geography_23": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_24": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_25": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_26": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_27": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_28": {
+    "scene": "landscape",
+    "keywords": [
+      "Wachsen",
+      "Grow",
+      "Расти"
+    ]
+  },
+  "geography_29": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_30": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_31": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_32": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_33": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_34": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_35": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_36": {
+    "scene": "navigation",
+    "keywords": [
+      "Orientieren",
+      "Direction",
+      "Ориентир"
+    ]
+  },
+  "geography_37": {
+    "scene": "landscape",
+    "keywords": [
+      "Entdecken",
+      "Explore",
+      "Открытие"
+    ]
+  },
+  "geography_38": {
+    "scene": "weather",
+    "keywords": [
+      "Beobachten",
+      "Observe",
+      "Наблюдение"
+    ]
+  },
+  "geography_39": {
+    "scene": "light",
+    "keywords": [
+      "Leuchten",
+      "Light",
+      "Свет"
+    ],
+    "questions": [
+      "Wessen Licht wirft der Mond hauptsächlich zurück?",
+      "Whose light does the Moon mainly reflect?",
+      "Чей свет в основном отражает Луна?"
+    ]
+  },
+  "geography_40": {
+    "scene": "growth",
+    "keywords": [
+      "Wachsen",
+      "Growing",
+      "Рост"
+    ]
+  }
+}

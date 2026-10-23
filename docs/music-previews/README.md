@@ -1,12 +1,11 @@
-# Neue Musik zum Anhören
+# Musikvorschauen
 
-Instrumentale Themenauszüge und Klavierstücke für Kinderwelt.
+Die vollständigen 20 Aufnahmen liegen unter [assets/music](../../assets/music/manifest.json), Quellen und Lizenzhinweise unter [NOTICES.txt](../../assets/music/NOTICES.txt). Keine doppelten MP3- oder ZIP-Dateien im Repository.
 
-- [Johann Strauss II · Wiener Blut · Walzerauszug](wiener_blut.mp3?raw=true)
-- [Giacomo Puccini · O mio babbino caro · Thema](babbino.mp3?raw=true)
-- [P. I. Tschaikowski · Altes französisches Lied](french_song.mp3?raw=true)
-- [Franz Liszt · Consolation Nr. 1](consolation.mp3?raw=true)
+30-Sekunden-Vorschauen samt Hinweisen lokal erzeugen:
 
-[Alle Hörproben als ZIP](kinderwelt-musik-hoerproben.zip?raw=true)
+```sh
+python3 scripts/qa/previews.py music --output build/music-previews
+```
 
-[Quellen, Lizenzen und offene Wünsche](../music.md)
+FFmpeg ist erforderlich. Die erzeugten Dateien liegen im ignorierten Build-Verzeichnis.

@@ -31,21 +31,21 @@ func setup(parent: Control) -> void:
 	add_child(grid)
 	for id in Tracks.ITEMS:
 		var b: Button = host.button("",func(): select(id),grid)
-		b.custom_minimum_size = Vector2(140,208)
-		b.tooltip_text = Tracks.ITEMS[id].composer+" · "+Tracks.ITEMS[id].title+" · "+Tracks.ITEMS[id].detail
+		b.custom_minimum_size = Vector2(140,252)
+		b.tooltip_text = track_text(id,"composer")+" · "+track_text(id,"title")+" · "+track_text(id,"detail")
 		var art := preload("res://core/quest/cover.gd").new()
 		art.track = id
 		art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		art.offset_bottom = -88
+		art.offset_bottom = -128
 		b.add_child(art)
 		var title := Label.new()
-		title.text = Tracks.ITEMS[id].title
+		title.text = track_text(id,"title")
 		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		title.add_theme_font_size_override("font_size",17)
+		title.add_theme_font_size_override("font_size",15)
 		title.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-		title.offset_top = -88
+		title.offset_top = -128
 		b.add_child(title)
 		covers[id] = b
 	host.audio.music.set_world(selected())
@@ -71,12 +71,12 @@ func toggle_favorite() -> void:
 	host.save()
 	refresh()
 func refresh() -> void:
-	current.text = "♫ "+Tracks.ITEMS[selected()].composer+" · "+Tracks.ITEMS[selected()].title
+	current.text = "♫ "+track_text(selected(),"composer")+" · "+track_text(selected(),"title")
 	favorite.text = host.t("favorite_on" if host.store.data.music_locked else "favorite_off")
 	shuffle.text = ("✓ " if host.store.data.music_shuffle else "⤨ ")+host.t("shuffle")
 	for id in covers:
 		covers[id].add_theme_stylebox_override("normal",preload("res://core/quest/theme.gd").style(Color("e1ead3") if selected()==id else Color("fffdf6")))
-		covers[id].get_child(1).text = ("✓ " if selected()==id else "")+Tracks.ITEMS[id].composer+"\n"+Tracks.ITEMS[id].title+"\n"+Tracks.ITEMS[id].detail
+		covers[id].get_child(1).text = ("✓ " if selected()==id else "")+track_text(id,"composer")+"\n"+track_text(id,"title")+"\n"+track_text(id,"detail")
 
 func on_track_changed(_id: String) -> void: refresh()
 
@@ -85,3 +85,6 @@ func transport(parent: Node,icon: String,title: String,action: Callable) -> void
 	b.tooltip_text = title
 	preload("res://core/quest/transport_icons.gd").apply(b,icon,32)
 	b.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
+func track_text(id: String,field: String) -> String:
+	return preload("res://core/quest/language.gd").music(id,field,host.store.data.locale)

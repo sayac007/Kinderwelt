@@ -1,0 +1,20 @@
+[
+  {
+    "component": "OpenVoice V2",
+    "purpose": "Possible timbre transfer from existing synthetic English recordings to native DE/RU",
+    "source": "https://github.com/myshell-ai/OpenVoice",
+    "code_read": "README and converter API fetched successfully",
+    "weights": [
+      {
+        "url": "https://huggingface.co/myshell-ai/OpenVoiceV2/resolve/main/converter/checkpoint.pth",
+        "result": "HTTP 403 Forbidden; no model weights obtained"
+      },
+      {
+        "url": "https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip",
+        "result": "HTTP 403 Forbidden; no model weights obtained"
+      }
+    ],
+    "actual_conversion_run": false,
+    "shipped_audio_changed": false
+  }
+]

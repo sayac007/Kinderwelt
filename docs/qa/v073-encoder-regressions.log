@@ -1,0 +1,6 @@
+test_real_encoder_leaves_headroom_without_shortening_the_recording (test_speech_encoding.SpeechEncodingTests.test_real_encoder_leaves_headroom_without_shortening_the_recording) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.385s
+
+OK

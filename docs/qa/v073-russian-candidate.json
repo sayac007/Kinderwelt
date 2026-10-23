@@ -1,0 +1,69 @@
+{
+  "scope": "Exploratory candidate screening, not a controlled listening study; candidates not shipped",
+  "models": {
+    "ru_RU-dmitri-medium": {
+      "model_sha256": "f98e751ed00b34b3e1b09ff8c3a7cfbd620fc24777e500e1605e10e7bbb86ea2",
+      "model_card_sha256": "56440cd6a7f0789669f53989b1c0ea244e335c2533fdb1fa8bac60e57205908e",
+      "dataset_license": "CC0",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-ru_RU-dmitri-medium.tar.bz2"
+    }
+  },
+  "rows": [
+    {
+      "id": "area_physics",
+      "reference": "Это физика.",
+      "recognized": "Это физика.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "area_physics.wav"
+    },
+    {
+      "id": "area_chemistry",
+      "reference": "Давай изучать химию.",
+      "recognized": "Давай изучать химию.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "area_chemistry.wav"
+    },
+    {
+      "id": "area_logic",
+      "reference": "Это логика.",
+      "recognized": "Это логика.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "area_logic.wav"
+    },
+    {
+      "id": "area_geography",
+      "reference": "Это география.",
+      "recognized": "это география",
+      "model": "ru_RU-dmitri-medium",
+      "file": "area_geography.wav"
+    },
+    {
+      "id": "physics_05",
+      "reference": "Что притягивает магнит: железо, дерево или бумагу? На выбор: древесина, бумага или железо.",
+      "recognized": "То притягивает магнит, железо, дерево или бумагу. На выбор привесено бумага или железо.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "physics_05.wav"
+    },
+    {
+      "id": "chemistry_20",
+      "reference": "Что помогает смешать жир с водой и смыть его? На выбор: песок, масло или мыло.",
+      "recognized": "То помыкается в мешаджер с водой из мотива. На выбор - песок масла или мыла.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "chemistry_20.wav"
+    },
+    {
+      "id": "body_20",
+      "reference": "Что у многих детей выпадает и заменяется новым? На выбор: кость, кисть или зуб.",
+      "recognized": "то многие детей выпадают и заменяются новым. На выбор кость кисти резут.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "body_20.wav"
+    },
+    {
+      "id": "praise_1",
+      "reference": "Очень умное решение!",
+      "recognized": "Очень вам на решение.",
+      "model": "ru_RU-dmitri-medium",
+      "file": "praise_1.wav"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "repository": "sayac007/Kinderwelt-Privat",
+  "revision": "5a35f7675eb1a0881447005fbe51dc089ef8471f",
+  "manifest_sha256": "a88fa66b3ea33cfe9df1e64611ea30cb6736d0fb6f3a148d49476d1591560f14",
+  "visibility_required": "private",
+  "credential_secret": "KINDERWELT_FAMILY_ASSETS_TOKEN",
+  "credential_scope": "Contents: Read, selected family-assets repository only"
+}

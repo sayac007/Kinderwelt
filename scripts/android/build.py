@@ -1,16 +1,37 @@
 #!/usr/bin/env python3
 """Build debug APK and UNSIGNED AAB from isolated allowlisted application files."""
+import sys
 import argparse, hashlib, json, os, re, shutil, subprocess, tempfile, zipfile
 from urllib.parse import urlsplit
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/'scripts'))
+import variants
+sys.path.insert(0,str(ROOT/'scripts/android'))
+import identity
+import debug_key
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
 FAILURE = re.compile(r"^ERROR:|SCRIPT ERROR:|BUILD FAILED", re.M)
 CAUSE = re.compile(r"^ERROR:|SCRIPT ERROR:|FAILURE:|\* What went wrong:|Caused by:|Execution failed for task|^.*Exception:")
+
+
+def git_provenance(root):
+    """Do not borrow a parent repository's clean status for an ignored capsule."""
+    def git(*args):
+        try:
+            return subprocess.run(['git','-C',str(root),*args],text=True,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=False)
+        except FileNotFoundError:return None
+    top=git('rev-parse','--show-toplevel')
+    if top is None or top.returncode or Path(top.stdout.strip()).resolve()!=root.resolve():
+        return {'source_tracking':'unversioned-snapshot','source_commit':None,'source_dirty':None}
+    commit=git('rev-parse','HEAD');status=git('status','--porcelain')
+    if commit.returncode or status.returncode:
+        return {'source_tracking':'git-unresolved','source_commit':None,'source_dirty':None}
+    return {'source_tracking':'git-worktree','source_commit':commit.stdout.strip(),'source_dirty':bool(status.stdout.strip())}
 
 
 def report_failure(log, reason):
@@ -58,7 +79,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tools',type=Path,default=Path('/workspace/tools'))
     p.add_argument('--output',type=Path,default=ROOT/'build/android')
-    p.add_argument('--preview',action='store_true',help='Build separate org.example.kinderwelt.preview app; preserves existing installations')
+    p.add_argument('--variant',choices=['family','public'],default='family')
+    p.add_argument('--preview',action='store_true',help='Use a separate variant/version test identity and local save')
+    p.add_argument('--package-id',type=identity.validate_package,help='Explicit base identity; default remains provisional test package')
     a=p.parse_args();tools=a.tools.resolve();out=a.output.resolve()
     out.mkdir(parents=True,exist_ok=False) # no stale artifact may appear successful
     godot=os.environ.get('GODOT',str(tools/'godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64'))
@@ -70,17 +93,15 @@ def main():
     version=subprocess.check_output([str(java/'bin/java'),'-version'],stderr=subprocess.STDOUT,text=True)
     if 'Temurin-17.0.16+8' not in version:raise ValueError('Wrong JDK')
     source=hashlib.sha256()
+    tracking=git_provenance(ROOT)
+    # A character file must have reviewed generation provenance before export.
+    sys.path.insert(0,str(ROOT/'scripts/qa'))
+    import character_origins
+    character_origins.audit(ROOT)
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
-        temp=Path(directory);app=temp/'app';app.mkdir()
-        for name in ['core','games','assets','project.godot','export_presets.cfg']:
-            src=ROOT/name;dest=app/name
-            if src.is_dir():shutil.copytree(src,dest)
-            else:shutil.copy2(src,dest)
-        if a.preview:
-            preset=app/'export_presets.cfg'
-            preset.write_text(preset.read_text().replace('package/unique_name="org.example.kinderwelt"','package/unique_name="org.example.kinderwelt.preview"').replace('package/name="Kinderwelt"','package/name="Kinderwelt 0.6 Test"'))
-            project=app/'project.godot'
-            project.write_text(project.read_text().replace('config/name="Kinderwelt"','config/name="Kinderwelt 0.6 Test"'))
+        temp=Path(directory);app=temp/'app'
+        variants.snapshot(app,a.variant)
+        package=identity.configure(app,a.package_id,a.preview,a.variant)
         for file in sorted(app.rglob('*')):
             if file.is_file():source.update(str(file.relative_to(app)).encode()+b'\0'+file.read_bytes())
         env=os.environ.copy()
@@ -95,7 +116,8 @@ def main():
         env['ANDROID_USER_HOME']=str(temp/'android-user');(temp/'android-user').mkdir()
         env.pop('ANDROID_SDK_HOME',None)
         env['JAVA_TOOL_OPTIONS']=env.get('JAVA_TOOL_OPTIONS','')+' -Duser.home='+str(temp)
-        # Gradle dependency cache can be reused; project/user data and debug key cannot.
+        # Gradle dependencies and the development certificate are reused outside source.
+        # Project/user data remain isolated; no release key is loaded.
         env['GRADLE_USER_HOME']=str(tools/'android-gradle-cache')
         proxy=urlsplit(env.get('HTTPS_PROXY',env.get('https_proxy','')))
         if proxy.hostname:
@@ -105,8 +127,9 @@ def main():
             if trust.is_file():options+=['-Djavax.net.ssl.trustStore='+str(trust)]
             env['JAVA_TOOL_OPTIONS']=env.get('JAVA_TOOL_OPTIONS','')+' '+' '.join(options)
 
+        key=debug_key.ensure(tools,java)
         settings=temp/'config/godot';settings.mkdir()
-        (settings/'editor_settings-4.7.tres').write_text('[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\n')
+        (settings/'editor_settings-4.7.tres').write_text('[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\nexport/android/debug_keystore='+json.dumps(str(key))+'\nexport/android/debug_keystore_user="androiddebugkey"\nexport/android/debug_keystore_pass="android"\n')
         templates=temp/'data/godot/export_templates/4.7.2.stable'
         shutil.copytree(tools/'android-tools/templates',templates)
         # Equivalent to Godot's template installer; checksum verified by install.py.
@@ -122,10 +145,11 @@ def main():
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
         run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-    evidence={'schema':1,'built_utc':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'source_dirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'package':'org.example.kinderwelt.preview' if a.preview else 'org.example.kinderwelt','signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
-    (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
-    subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package']],check=True)
-    subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
-    print('Verified debug APK and unsigned AAB:',out)
+        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'cached development-only Godot key; not a release identity','aab':'UNSIGNED','development_certificate_sha256':debug_key.fingerprint(key,java)},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+        (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
+        subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)],check=True)
+        subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
+        print('Verified debug APK and unsigned AAB:',out)
+
 
 if __name__=='__main__':main()

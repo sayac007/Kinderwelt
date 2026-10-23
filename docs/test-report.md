@@ -1,37 +1,49 @@
-# Ausgeführte Prüfungen für Kinderwelt 0.6
+# Tatsächlich ausgeführte Prüfungen: Kinderwelt 0.9.0
 
-Stand: 20. Oktober 2026. Wanja ist der fünfte spielbare Familiencharakter und vorausgewählte Hauptheld. Acht Fächer mit je 40 Aufgaben, drei Bedienungssprachen und vier klassische Klavierwiedergaben sind integriert.
+Stand: 23.10.2026 (Europe/Berlin). Implementierung: [Punkte, native Lerninhalte und Boni](rewards-native-learning-v090.md). Vorherige Ergebnisse: [0.8.1](test-report-v081.md). Kein Nachweis pädagogischer Wirksamkeit, keine Google-Play-Freigabe.
 
-## Tatsächlich ausgeführt
+Alle 320 Grundfragen wurden in allen drei Sprachfassungen gegen den zuvor ausgelieferten Stand geprüft: vollständig ersetzt. 40 neue Aufgaben je Fach plus je zwei freiwillige Boni; 200 unterschiedliche neue Sachfragen je Sprachfassung. Mathe, Sprache und Logik haben jeweils 40 unterschiedliche Rätselkonfigurationen. Frühere Erfolge bleiben im Archiv, neue Aufgaben werden erneut belohnt. Die beabsichtigte höhere Schwierigkeit wurde nicht empirisch nachgewiesen.
 
-- **4.914 Godot-Prüfungen bestanden:** ursprüngliche 24 Lösungsfixtures, richtige/falsche Antworten aller 320 Aufgaben, einmalige Sterne, lokale Speicherung und Figurenmigration, echte Touch-Eingaben in alle acht Fächer, vier frei wählbare Wege je Fach, fünf Anzeigeformate einschließlich simulierter hoher Dichte, Hilfen und reale Audio-Ende-/Playlist-Steuerung. Alle **960 lokalisierten Aufgaben** wurden auf 320 × 568 bei großer Schrift auf abgeschnittene Titel und Überschneidungen geprüft.
-- **32 Python-Tests bestanden:** ursprüngliche Inhalte, deterministischer Inhaltsgenerator, Übersetzungs-/Grafikverträge, Quell-/Audiodateihashes, tatsächliche PCM-Dekodierung aller **1.589 unterschiedlichen Sprachdateien** und vier Musikstücke, Dauer und Pegel, Exportfehler-Diagnose, negative Manifest-/Payload-/ELF-Fälle, korrekte Asset-Pack-Zuordnung und Größenanalyse.
-- Regulärer und cachefreier Start der erlaubten App-Dateien jeweils über 60 Frames bestanden, einschließlich geordnetem Audio-Shutdown.
-- **272 echte OpenGL-Renderings bestanden:** ursprüngliche 24 Aufgaben, 15 Sachaufgaben-Stichproben, acht Welten, letzte Wegseite, drei Sprachen, fünf Figuren in vier Animationszuständen sowie Musik und Einstellungen auf vier Anzeigeprofilen. Renderer: Desktop llvmpipe, keine native Android-GPU.
-- Begrenzter Quell-/Berechtigungsaudit ohne Laufzeit-Netzwerkaufrufe oder aktivierte Android-Berechtigungen. Keine umfassende Sicherheitszertifizierung.
-- Standard- und Testpaket **APK/AAB technisch PASS**: Paketkennung, Version **0.6.0 / 6**, API 24–36, Berechtigungsfreiheit, deaktiviertes Backup, Rotation, 3.287 erforderliche App-Ressourcen, fünf Figuren und Katzenshader, alle Sprach-/Musikdateien und Lizenzen, ARM64/x86_64, 16-KB-ELF-/ZIP-Ausrichtung, gültige APK-Entwicklungssignatur, Bundletool-Validierung und unsignierter AAB-Status. Aufgaben-/Sprachmanifeste und Modellkarten wurden zusätzlich byteweise mit den geprüften Quellen verglichen.
+## Technische Prüfungen
 
-## Gefundene und behobene Fehler
+- Vollständige Suite `tests/run.sh`: bestanden für Familien- und neutrale Variante (jeweils 84 Python-Tests); keine Godot-Fehler im erfolgreichen Lauf. Die abschließende Rechtschreibkorrektur wurde zusätzlich durch alle 84 Python-Tests samt vollständiger Audiodatei-Decodierung geprüft.
+- Godot-Grundregression: 6056 Prüfungen; Welten: 3608; neue Belohnungsregression: 991. Neustartnachweis mit zwei echten Prozessen: 3200 + 10 + 50 + 100 = 3360 Punkte werden erneut angezeigt, keine doppelten Belohnungen.
+- Produktionseinstieg und frischer Import ausschließlich der ausgelieferten App-Dateien; jeweils 60 Frames und geregelter Audioabschluss.
+- Reale Audio-/Unterbrechungsprüfungen am Desktop-Mixer: 30 Wiedergabe-, 66 Sequenz- und 34 Weltsprachprüfungen. Android-Benachrichtigungen werden simuliert; dies ist kein Gerätetest.
+- Python-Regressionen: 84 Tests einschließlich nativer Buchstabenrekonstruktion, Bonusgleichungen, kyrillischer UI und aller 2719 einzigartigen tatsächlich decodierten Ogg-Sprachdateien (1947 Zuordnungen pro Sprache). Hash, Dauer, Pegel und Anfang/Ende werden überprüft; außerdem alle 20 Musiktitel und deren Quellen/Lizenzen.
+- Grafische Suite: 461 echte OpenGL-Bilder, vier Displayprofile (320×568, 360×800, 800×360 und 1080×2400), drei Sprachen, beide Bonusstufen, Maximalstand 54.400, kombinierte Bild-Zahlen-Regeln, Reihenfolgen und bestätigte alte Punkteübernahme, Rotation, bisherige Figuren/Looks/Welten/Menüs. Die Bilder eines Hörrätsels bleiben beim Wechsel des früheren Lösungsobjekts Ohr → Mond identisch. Manuell betrachtet wurden ausgewählte kleine und breite Ansichten; keine vollständige manuelle Bildfreigabe behauptet.
+- Actionlint 1.7.7, Inhaltsgenerator-Reproduzierbarkeit, Figurenherkunft, Lokalisierungs-/Ablenkerbericht und Lizenzhinweise geprüft. Die Ablenkerheuristik markiert weiterhin 33 Grundaufgaben; menschliche Prüfung bleibt offen.
 
-Eine russische Überschrift war im kleinen Hochformat abgeschnitten. Die Anordnung wurde korrigiert; alle Sprachvarianten bei großer Schrift bestehen nun die Layoutprüfung. Die Paketprüfung fand außerdem fehlende Musiklizenztexte. Beide Exportfilter sind korrigiert und durch einen eigenen Regressionstest abgesichert. Die zusätzliche Inhaltsprüfung wurde an Godots tatsächliches `assetPackInstallTime/assets/` im AAB angepasst; Tests decken APK-, Base- und Install-Time-Verzeichnisse sowie manipulierte/fehlende/doppelte Daten ab.
+## Stimme
 
-## Tatsächlich erzeugte Dateien
+Der gewünschte gemeinsame weibliche Sprecher für alle Sprachen ist offen. Verworfen wurde eine Umwandlung, die die deutsche Aussprache verschlechtert; die nativen DE/RU-Stimmen bleiben erhalten. Unabhängiges Whisper-small-Screening ohne Referenz-Prompt auf den tatsächlich ausgelieferten Aufnahmen:
 
-| Variante | Datei | Bytes | SHA256 |
-| --- | --- | ---: | --- |
-| standard | `build/android-v06-verified/kinderwelt-debug.apk` | 134,111,498 | `d64a15c01d2d9a1d415d2cce4aa9def416438b77d91847c947fab290c50e459e` |
-| standard | `build/android-v06-verified/kinderwelt-unsigned.aab` | 123,325,267 | `ba340066434aea88ad3014a74b77e5079e90e6838c8221eb63f9e3e9db301178` |
-| preview | `build/android-v06-preview/kinderwelt-debug.apk` | 134,111,538 | `af1a06a123cebff496f8fdb2c63cd4c1b19501bed98d9e15e29cea0770f4eee6` |
-| preview | `build/android-v06-preview/kinderwelt-unsigned.aab` | 123,325,303 | `c486bd65a9134d92fb943635f1ad29eac5904bd26b0fe1fc8795fa45128f8012` |
+| Stichprobe | Deutsch | Englisch | Russisch |
+|---|---:|---:|---:|
+| 31 feste Aufnahmen je Sprache | 5,950 % | 3,359 % | 10,464 % |
+| 8 zusätzliche Clip-Zuordnungen je Sprache | 10,969 % | 1,337 % | 5,495 % |
 
-Das Standard-APK hat rund 134,1 MB, das AAB rund 123,3 MB. Dies sind Archivgrößen, kein installierter Platzbedarf und keine gemessene Play-Downloadgröße. Die Testvariante heißt **Kinderwelt 0.6 Test**, Paket `org.example.kinderwelt.preview`, mit eigenem lokalen Spielstand. Sie kann neben der Standard-App installiert werden. Beide APKs verwenden temporäre Godot-Entwicklungsschlüssel; eine bestehende Installation mit anderem Schlüssel lässt sich damit nicht direkt aktualisieren. Keine privaten Schlüssel werden mitgeliefert. Ein AAB ist nicht direkt installierbar und bleibt unsigniert.
+Werte sind Zeichenfehlerraten; sie messen ASR-Abweichungen und zertifizieren kein kindliches Verständnis. Zum Beispiel werden einzelne russische Fachwörter und deutsche Bonusformulierungen fehlerhaft erkannt; diese bleiben im Hörreview gezielt zu prüfen. Manche Bonus-Zuordnungen teilen dieselbe Aufnahme. Die Stichproben sind keine statistisch unabhängige Abdeckung aller Dateien. Messdaten und Hashes: `docs/qa/speech-advanced-recognition-v090.json`, `docs/qa/speech-advanced-additional-v090.json`. Die Artefakte enthalten `kinderwelt-listening.html` mit 78 abspielbaren Offline-Proben.
 
-Die Quell-Commits und SHA256 der isolierten Exportkopien stehen in [test-evidence.json](test-evidence.json). Beide Builds stammen aus sauberen Commits; die heutigen App-Dateien stimmen mit beiden Exportkopien überein (bei der Testvariante mit der dokumentierten Paket-/Namensänderung). Die spätere Korrektur des Datenprüfers änderte keine App-Dateien. Die zuerst wegen fehlender Lizenztexte abgewiesenen Dateien unter `build/android-v06` sind keine freigegebenen Testartefakte.
+## Android-Artefakte
 
-## Sichtprüfung, Download und Grenzen
+Finale lokale Builds: `build/android-v090-complete/`. Tatsächliche Dateigrößen und SHA-256 stehen in `docs/qa/android-v090-delivery.json`. Beide Varianten sind separat installierbar; Version 0.9.0, Code 13.
 
-Stichproben aus den tatsächlichen Renderings wurden betrachtet: Wanja/Familienauswahl auf kleinen Bildschirmen, Laufwelt mit neuem Fach, Physik im Hoch-/Querformat und russisches Silbenlernen. Aktuelle Bilder ersetzen die alten Figurenbilder vollständig unter [screenshots](screenshots/). Nicht alle 272 Bilder wurden einzeln manuell beurteilt.
+| Datei | Größe (MiB) | Signatur |
+|---|---:|---|
+| `kinderwelt-debug-family.apk` | 212.28 | Entwicklung |
+| `kinderwelt-unsigned-family.aab` | 200.75 | **UNSIGNIERT** |
+| `kinderwelt-debug-neutral.apk` | 207.63 | Entwicklung |
+| `kinderwelt-unsigned-neutral.aab` | 196.11 | **UNSIGNIERT** |
 
-Die vollständigen lokalen Testlogs liegen unter `/tmp/kinderwelt-06-complete-tests.log`, `/tmp/kinderwelt-06-render-final.log`, `/tmp/kinderwelt-06-android-preview.log` und `/tmp/kinderwelt-06-verify-corrected.log`. Die Standarddateien wurden aus `0df0b94` gebaut und nach der Datenprüferkorrektur erneut vollständig technisch verifiziert. Die Testvariante wurde aus dem korrigierten Prüfer-Commit gebaut. Ein direkter API-Abruf des Remote-CI-Status war mit **Forbidden** gesperrt; kein bestandener GitHub-Lauf wird behauptet.
+Geprüft: ZIP/APK/AAB-Struktur, vollständige App-/Audio-/Grafikdateien und Abgleich mit den getesteten Quellen, Paket/Version, minSdk 24, targetSdk 36, keine Berechtigungen, Backup deaktiviert, `fullUser`-Rotation, GL Compatibility, arm64-v8a/x86_64, 16-KB-ELF-/ZIP-Ausrichtung, APK-v2-Signatur und exakter Zertifikatsfingerabdruck; Bundletool-Validierung und ausdrücklich unsignierte AABs. Keine Release-Schlüssel verwendet.
 
-**Offen:** Installation auf echten Android-Geräten, Safe-Areas/Touch/Swipe, Performance und Speicherbedarf, Audiopegel und Hörverständlichkeit. Deutsche/englische Stimmen sind weiblich, die lizenzierte russische Stimme ist männlich. Aussprache sowie die zweisprachige Abfolge deutscher Lernwörter müssen Muttersprachler anhören. Fachliche/altersspezifische Abnahme, Lehrplanabgleich anhand hier gesperrter Primärseiten und Tests mit Kindern/Erwachsenen stehen aus. Es wurden keine Kinder untersucht und keine personenbezogenen Nutzungsdaten erhoben. Keine nachgewiesene Lernwirkung, Marktreife oder Google-Play-Uploadbereitschaft. Release-Schlüssel, Store-Freigaben sowie YouTube-Titelzuordnung/SKIBIDI-Lizenz bleiben offen.
+Ab 0.9.0 ist der Vorschaukanal unabhängig von der Versionsnummer. Lokal wiederverwendeter Entwicklungsschlüssel; CI verwendet einen privaten, aber löschbaren Actions-Cache. Ein Cache ist kein dauerhaft zugesicherter Signierspeicher. Die alten 0.8.1-APKs hatten flüchtige Schlüssel. Die neue App wird parallel installiert; alte Paket-Spielstände werden nicht automatisch kopiert. Details: [Android bauen](android.md).
+
+Die geprüften lokalen Exporte stammen aus einem sauberen Quellstand; Commit und Inhalts-Hashes stehen in den beigefügten Provenienzberichten. Die letzte Korrektur betrifft „Fußabdruck“ als übliche Schreibung zum gültigen Großbuchstaben-Lernwort „FUSSABDRUCK“.
+
+## GitHub und offene Prüfungen
+
+Der Branch `feat/rewards-native-learning` basiert auf `origin/main` einschließlich gemergtem PR #10. GitHub-Lauf, Ergebnis und Downloadlink werden im Pull Request und in den Actions-Artefakten ausgewiesen; ein lokaler Erfolg ist kein Beleg eines bereits erfolgreichen Remote-Laufs.
+
+Offen: Hörfreigabe und gemeinsamer weiblicher Sprecher, Muttersprachler-/Fachreview aller neuen Bonus- und Rätseltexte, echte Android-Geräte-/Updateprüfung, kinderspezifische Usability und empirische Evaluation. Keine personenbezogenen Daten neu erfasst. Endgültige App-ID, Release-Signierung und Google-Play-Freigaben bleiben offen.

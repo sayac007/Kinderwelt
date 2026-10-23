@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "reviewed": "2026-10-21",
+  "selected": {
+    "de": {
+      "model": "de_DE-thorsten-high",
+      "model_sha256": "415d684c60de8ed8107610d0188ad9a858c983b8198fae3c8f01e23c9f1472b7",
+      "model_source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-de_DE-thorsten-high.tar.bz2",
+      "dataset_license": "CC0",
+      "voice_gender": "male",
+      "sample_rate": 22050,
+      "model_card_sha256": "35cd458c7691a668ec59c63eec3ccad5c7ce7ed36c9f946766616b266a038d57"
+    },
+    "en": {
+      "model": "en_US-ljspeech-medium",
+      "model_sha256": "8ceba58a4b540d4e7e7e24ad079cf0d92762a4fd334e059f12940787c6c37b3d",
+      "model_source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-en_US-ljspeech-medium.tar.bz2",
+      "dataset_license": "Public Domain",
+      "voice_gender": "female",
+      "sample_rate": 22050,
+      "model_card_sha256": "fbee1529c89d36b3fe76d7e9f3f832dce17f44900a52d76a9bda735654766b4d"
+    },
+    "ru": {
+      "model": "ru_RU-denis-medium",
+      "model_sha256": "75c9f1117d5e4a620a20cb665408adc0828699f4a7a2eb44a233f8c34096be04",
+      "model_source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-ru_RU-denis-medium.tar.bz2",
+      "dataset_license": "CC0",
+      "voice_gender": "male",
+      "sample_rate": 22050,
+      "model_card_sha256": "f037c8ec8b6574de644bf9e5916c749e83d4ff297facd97895b56d733f6ba3fe"
+    }
+  },
+  "german_candidates": [
+    {
+      "model": "de_DE-thorsten-medium",
+      "model_sha256": "2d98b40baac55e4206f64114110a3474807e26440b80d465cd202af1e95be5e0",
+      "quality_from_config": "medium",
+      "sample_rate": 22050,
+      "dataset_license": "CC0",
+      "model_card_sha256": "5196b5ab0794e6056263a1f37c18bec407b61ac187529bee29d1c366871e5c9e",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-de_DE-thorsten-medium.tar.bz2",
+      "dataset": "https://github.com/thorstenMueller/Thorsten-Voice"
+    },
+    {
+      "model": "de_DE-thorsten-high",
+      "model_sha256": "415d684c60de8ed8107610d0188ad9a858c983b8198fae3c8f01e23c9f1472b7",
+      "quality_from_config": "high",
+      "sample_rate": 22050,
+      "dataset_license": "CC0",
+      "model_card_sha256": "35cd458c7691a668ec59c63eec3ccad5c7ce7ed36c9f946766616b266a038d57",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-de_DE-thorsten-high.tar.bz2",
+      "dataset": "https://github.com/thorstenMueller/Thorsten-Voice"
+    }
+  ]
+}

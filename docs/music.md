@@ -1,41 +1,44 @@
-# Musik: Quellen, Wiedergabe und offene Wünsche
+# Musik: 20 Klavierwiedergaben
 
-Die App enthält eigene Instrumentalwiedergaben tatsächlich notierter klassischer Kompositionen. Es sind keine Aufnahmen der verlinkten YouTube-Videos. „Wiener Blut“ und „O mio babbino caro“ sind ausdrücklich gekürzte Themenauszüge; sie werden auch in der Musikauswahl so bezeichnet.
+Kuratierte Auswahl bekannter klassischer Stücke, keine objektive Rangliste der „besten aller Zeiten“. Rund 50 Minuten eigene Klavierwiedergaben aus benannten Noten-/MIDI-Ausgaben. Eigene instrumentale Wiedergaben. Wiener Blut und O mio babbino caro sind ausdrücklich Themenauszüge.
 
-| Stück | Dauer der erzeugten Datei | Notenvorlage und Lizenz |
-| --- | --- | --- |
-| Johann Strauss II: Wiener Blut, Walzerauszug | 35,00 s | Christian F. Coors / OpenRCT2 OpenMusic, CC BY-SA 4.0; neu als Klavier gerendert, Tempo 180 Viertel/min |
-| Giacomo Puccini: O mio babbino caro, Themenauszug | 73,72 s | MIDI aus tnm/mbot, MIT; zugrunde liegende Komposition von 1918 gemeinfrei; Tempo um Faktor 1,65 verlangsamt |
-| P. I. Tschaikowski: Altes französisches Lied, Op. 39 Nr. 16 | 58,29 s | David McNamara / Mutopia, Public Domain; neue Klavierwiedergabe |
-| Franz Liszt: Consolation, S.172 Nr. 1 | 103,00 s | Ryan Prince / Mutopia, CC BY 3.0; neue Klavierwiedergabe |
+| Komponist | Stück / Fassung | Tatsächliche Dauer | Notenlizenz |
+| --- | --- | ---: | --- |
+| Johann Strauss II | Wiener Blut · Walzerauszug | 35.0 s | CC-BY-SA-4.0 |
+| Giacomo Puccini | O mio babbino caro · Thema | 73.72 s | MIT (MIDI arrangement); public domain composition |
+| P. I. Tschaikowski | Altes französisches Lied | 58.29 s | Public Domain |
+| Franz Liszt | Consolation Nr. 1 | 103.0 s | CC-BY-3.0 |
+| Ludwig van Beethoven | Für Elise | 133.83 s | Public Domain |
+| Johann Sebastian Bach | Präludium C-Dur · BWV 846 | 143.0 s | Public Domain |
+| Erik Satie | Gymnopédie Nr. 1 | 144.0 s | Public Domain |
+| Claude Debussy | Clair de lune | 327.0 s | Public Domain |
+| Frédéric Chopin | Nocturne · Op. 9 Nr. 2 | 205.27 s | CC-BY-SA-3.0 |
+| Robert Schumann | Träumerei · Op. 15 Nr. 7 | 113.68 s | Public Domain |
+| Wolfgang Amadeus Mozart | Sonata facile · Allegro | 135.72 s | CC-BY-SA-3.0 |
+| Claude Debussy | Arabesque Nr. 1 | 180.5 s | Public Domain |
+| Johannes Brahms | Walzer · Op. 39 Nr. 15 | 71.27 s | Public Domain |
+| Johann Pachelbel | Kanon in D | 179.0 s | CC-BY-3.0 |
+| Franz Schubert | Impromptu · D 899 Nr. 3 | 357.35 s | Public Domain |
+| Johann Sebastian Bach | Invention Nr. 1 · BWV 772 | 69.0 s | CC-BY-SA-3.0 |
+| Frédéric Chopin | Prélude e-Moll · Op. 28 Nr. 4 | 111.21 s | Public Domain |
+| Christian Petzold | Menuett G-Dur · BWV Anh. 114 | 46.64 s | Public Domain |
+| Wolfgang Amadeus Mozart | Rondo alla turca | 259.0 s | Public Domain |
+| Ludwig van Beethoven | Mondscheinsonate · Adagio sostenuto | 279.0 s | CC-BY-SA-2.5 |
 
-Die genauen Repository-Commits, Pfade und SHA-256 der Vorlagen stehen in [catalog.json](../scripts/music/catalog.json), die tatsächlich erzeugten Audiodateien mit Dauer und SHA-256 in [manifest.json](../assets/music/manifest.json). Die jeweiligen Audio-Bearbeitungen übernehmen die dort genannten Lizenzen. Herkunft, Bearbeitungsvermerk und Lizenzlinks werden mit der App in `assets/music/NOTICES.txt` ausgeliefert und sind unter „Für Erwachsene → Musik & Quellen“ zugänglich. Diese Lizenzen beziehen sich auf die jeweiligen Musikdateien.
-
-Der Klavierklang stammt aus GeneralUser GS 2.0.3 von S. Christian Collins. Dessen beigefügte Lizenz gestattet private und kommerzielle Musikproduktion. Die SoundFont selbst und der Synthesizer werden nicht in die App eingebaut; die App spielt nur die vorab erzeugten Vorbis-Dateien ab.
-
-Nach jedem Stück folgt automatisch das nächste. Wahlweise sind Zufallsreihenfolge und die Wiederholung eines einzelnen Stücks möglich. Ein Wechsel des Lernbereichs unterbricht die gewählte Musik nicht. Die Musik wird beim Vorlesen abgesenkt und bei App-Unterbrechungen pausiert.
+Die genauen Quellen, Upstream-Commits, Bearbeiter und SHA256 stehen in [catalog.json](../scripts/music/catalog.json), die erzeugten Audiodateien in [manifest.json](../assets/music/manifest.json). Vollständige Namensnennung, Links und Bearbeitungshinweise werden unter `assets/music/NOTICES.txt` mit der App ausgeliefert und unter „Für Erwachsene → Musik & Quellen“ angezeigt. Die Lizenztexte liegen unter `assets/music/licenses/` bei. Christian Petzolds Menuett wird in der alten Vorlage noch Bach zugeschrieben; die App nennt die heutige Zuschreibung und dokumentiert die Abweichung.
 
 ## Erzeugung
 
-Werkzeuge des tatsächlich ausgeführten Renderings: LilyPond 2.24.4, libfluidsynth 2.4.4, pyfluidsynth 1.4.0, mido 1.3.3, FFmpeg 7.1.5. Modelle und Werkzeuge sind Entwicklungsabhängigkeiten, keine Laufzeitabhängigkeiten der Android-App.
+Eigener Grand-Piano-Klang: GeneralUser GS 2.0.3 von S. Christian Collins, erlaubte Musikproduktion gemäß beigefügter Lizenz. SoundFont-SHA256 und tatsächlich verwendete Toolversionen stehen im Audiomanifest. SoundFont und Synthesizer werden nicht in die App eingebaut.
 
-- LilyPond-Archiv: `https://gitlab.com/lilypond/lilypond/-/releases/v2.24.4/downloads/lilypond-2.24.4-linux-x86_64.tar.gz`; SHA-256 `53bc1df875ee56dabe56ae1f0b4550237e0c9acc837b60f0ef8c42fc35a68641`.
-- GeneralUser: `https://github.com/mrbumpy409/GeneralUser-GS`, Commit `684543d5e5efaef08d02be50dcda8d552478fa60`; `GeneralUser-GS.sf2`, SHA-256 `9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe`.
-- Die Noten/MIDI-Vorlagen liegen bereits unter `scripts/music/scores`; der Generator prüft ihre SHA-256 vor der Synthese.
-
-```bash
-/workspace/tools/piper-env/bin/python -m pip install mido==1.3.3 pyfluidsynth==1.4.0
+```sh
 /workspace/tools/piper-env/bin/python scripts/music/render.py \
   --lilypond-root /workspace/tools/classical/lilypond-2.24.4 \
   --soundfont /workspace/tools/classical/generaluser/GeneralUser-GS.sf2
 ```
 
-Die Audiodateien werden fertig eingecheckt. CI und Android benötigen weder SoundFont noch LilyPond. Eine erneute Synthese kann durch Synthesizer-/Encoder-Versionen in den Bytes abweichen; der erzeugte Manifest-Hash bezeichnet immer die tatsächlich ausgelieferte Datei.
+Werkzeuge: LilyPond 2.24.4, libfluidsynth 2.4.4, pyfluidsynth 1.4.0, mido 1.3.3 und FFmpeg. Der Generator prüft die Noten- und Abhängigkeitshashes, modernisiert ältere LilyPond-Syntax, überträgt veraltete Oktavangaben in `ottava` und entfernt obsolete reine Balken-Gravureinstellungen. Ein inaktiver `old-relative`-Kommentar wird vor `convert-ly` entfernt. Originalvorlagen bleiben bytegetreu erhalten. Eine validierte Zwischenspeicherung ermöglicht Wiederaufnahme; `manifest.complete` wird erst bei allen 20 Titeln gesetzt.
 
-## Noch offen
+Nach jedem Stück folgt das nächste. Zufall und Wiederholung sind optional; Fach- und Kulissenwechsel starten die Musik nicht neu. Vorlesen senkt die Musik ab. Die Audio-Prüfungen dekodieren alle 20 Stücke und kontrollieren Dauer, Pegel und Hashes. Musikalische Abnahme und Balance auf Geräten bleiben offen.
 
-Beide YouTube-URLs, YouTube-oEmbed und der alternative Titelabruf waren aus der Entwicklungsumgebung mit HTTP 403 gesperrt. Die Inhalte wurden nicht heruntergeladen oder angehört. „LITTLE BIG – SKIBIDI“ wurde vom Nutzer anschließend als Referenz angesprochen. Für dessen Originalaufnahme und Komposition liegt keine Nutzungslizenz für die App vor; das Original ist nicht enthalten. Die genaue Zuordnung und der Titel des zweiten YouTube-Links sind weiterhin offen.
-
-Ein eigener elektronischer Track mit allgemeiner, verspielter Dance-Energie wäre ein weiterer möglicher Vorschlag. Eine Kopie von Melodie, Gesang oder dem markanten Rhythmus von „SKIBIDI“ wird nicht als Eigenkomposition ausgegeben.
-
-Automatisierte Prüfungen verifizieren tatsächliche Dekodierung, Laufzeit, Pegel, Dateihashes, Notenquellen und die Fortschaltung beim realen Audio-Ende. Hörvergleich, musikalische Abnahme und das Lautstärkeverhältnis auf Android-Geräten bleiben manuelle Prüfungen.
+[Hörproben lokal erzeugen](music-previews/README.md); im Repository liegen die vollständigen Audiodateien jeweils einmal unter `assets/music/`.

@@ -1,10 +1,11 @@
 extends AudioStreamPlayer
-# Only bundled clips. German learning targets keep German pronunciation.
+# Only bundled clips, always in the selected language.
 var store: RefCounted
 var music: Node
 var clip := ""
 var catalogs := {}
 var queue: Array[String] = []
+var pending_feedback := ""
 func configure(saved: RefCounted,background: Node) -> void:
 	store = saved
 	music = background
@@ -28,13 +29,22 @@ func play_clip(id: String,automatic := false) -> bool:
 	if path.is_empty() or not ResourceLoader.exists(path): return false
 	clip = id
 	queue.append(path)
-	if store.data.locale!="de" and basename.begins_with("german_"):
-		var german := resolve(basename,"de")
-		if not german.is_empty(): queue.append(german)
 	music.set_ducked(true)
 	play_next()
 	return true
+func speak_feedback(id: String) -> void:
+	# A quick answer must not cut off the end of the spoken question.
+	if playing or not queue.is_empty():
+		pending_feedback=id.trim_prefix("quest/")
+	else: play_clip(id)
 func play_next() -> void:
+	if queue.is_empty() and not pending_feedback.is_empty():
+		var next_id := pending_feedback
+		pending_feedback=""
+		var path := resolve(next_id,store.data.locale)
+		if not path.is_empty():
+			queue.append(path)
+			clip="quest/"+next_id
 	if queue.is_empty():
 		stream = null
 		clip = ""
@@ -49,6 +59,7 @@ func release_duck() -> void:
 func cancel() -> void:
 	stop()
 	queue.clear()
+	pending_feedback=""
 	stream = null
 	clip = ""
 	release_duck()

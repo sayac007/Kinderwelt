@@ -13,8 +13,8 @@
     },
     "german": {
       "de": "Deutsch",
-      "en": "German",
-      "ru": "Немецкий"
+      "en": "English",
+      "ru": "Русский"
     },
     "logic": {
       "de": "Logik",
@@ -72,9 +72,9 @@
       "ru": "Музыка и настройки"
     },
     "points": {
-      "de": "Punkte",
-      "en": "points",
-      "ru": "очков"
+      "de": "Gesamtpunkte",
+      "en": "Total points",
+      "ru": "Всего очков"
     },
     "choose": {
       "de": "Wer bist du heute?",
@@ -162,9 +162,9 @@
       "ru": "Пробуй снова. За ошибки звёзды не отнимаются. Нет таймеров, рейтингов и покупок."
     },
     "privacy": {
-      "de": "320 eigene Aufgaben. Keine Konten, Werbung, Mikrofonaufnahmen oder Netzwerkverbindungen. Figur und Spielstand bleiben auf diesem Gerät.",
-      "en": "320 original tasks. No accounts, adverts, microphone recording or network connections. Character and progress stay on this device.",
-      "ru": "320 собственных заданий. Нет аккаунтов, рекламы, записи микрофона и сетевых соединений. Персонаж и прогресс хранятся на этом устройстве."
+      "de": "320 Aufgaben und jeweils zwei freiwillige Bonusaufgaben. Keine Konten, Werbung oder Netzwerkverbindungen. Dein Gesamtpunktestand bleibt auf diesem Gerät.",
+      "en": "320 tasks, each with two optional bonus challenges. No accounts, adverts or network connections. Your total score stays on this device.",
+      "ru": "320 заданий, в каждом два необязательных бонусных задания. Нет аккаунтов, рекламы и сетевых соединений. Общий счёт сохраняется на этом устройстве."
     },
     "controls": {
       "de": "Klang & Bedienung",
@@ -177,9 +177,9 @@
       "ru": "Удалить локальный прогресс …"
     },
     "reset_question": {
-      "de": "Figur, Sterne und Einstellungen auf diesem Gerät löschen?",
-      "en": "Delete this device's character, stars and settings?",
-      "ru": "Удалить персонажа, звёзды и настройки на этом устройстве?"
+      "de": "Figur, Gesamtpunkte, Sterne und Einstellungen auf diesem Gerät löschen?",
+      "en": "Delete this device’s character, total points, stars and settings?",
+      "ru": "Удалить персонажа, общий счёт, звёзды и настройки на этом устройстве?"
     },
     "cancel": {
       "de": "Abbrechen",
@@ -327,24 +327,24 @@
       "ru": "Какое число следующее?"
     },
     "initial": {
-      "de": "Wie fängt das deutsche Wort an?",
-      "en": "How does the German word start?",
-      "ru": "Как начинается немецкое слово?"
+      "de": "Wie fängt das Wort an?",
+      "en": "Which letter comes first?",
+      "ru": "Какая первая буква?"
     },
     "rhyme": {
-      "de": "Was reimt sich auf Deutsch?",
-      "en": "Which German words rhyme?",
-      "ru": "Какие немецкие слова рифмуются?"
+      "de": "Was reimt sich?",
+      "en": "Which words rhyme?",
+      "ru": "Какие слова рифмуются?"
     },
     "syllables": {
-      "de": "Wie viele Silben im deutschen Wort?",
-      "en": "How many syllables in the German word?",
-      "ru": "Сколько слогов в немецком слове?"
+      "de": "Wie viele Silben?",
+      "en": "How many syllables?",
+      "ru": "Сколько слогов?"
     },
     "word": {
-      "de": "Welches deutsche Wort passt?",
-      "en": "Which German word matches?",
-      "ru": "Какое немецкое слово подходит?"
+      "de": "Welches Wort passt?",
+      "en": "Which word matches?",
+      "ru": "Какое слово подходит?"
     },
     "pattern": {
       "de": "Was kommt als Nächstes?",
@@ -389,7 +389,7 @@
     "piano_credit": {
       "de": "Klavierklang: GeneralUser GS 2.0.3 · S. Christian Collins. Lizenzen und Quellen liegen der App bei.",
       "en": "Piano sound: GeneralUser GS 2.0.3 · S. Christian Collins. Licences and sources are included in the app.",
-      "ru": "Фортепиано: GeneralUser GS 2.0.3 · S. Christian Collins. Лицензии и источники включены в приложение."
+      "ru": "Фортепианный звук. Лицензии и исходные данные включены в приложение."
     },
     "previous_page": {
       "de": "Voriger Weg",
@@ -400,6 +400,146 @@
       "de": "Nächster Weg",
       "en": "Next trail",
       "ru": "Следующая дорожка"
+    },
+    "squirrel": {
+      "de": "Eichhörnchen",
+      "en": "Squirrel",
+      "ru": "Белочка"
+    },
+    "praise_0": {
+      "de": "Wunderbar!",
+      "en": "Wonderful!",
+      "ru": "Замечательно!"
+    },
+    "praise_1": {
+      "de": "Sehr klug entschieden!",
+      "en": "Clever choice!",
+      "ru": "Умное решение!"
+    },
+    "praise_2": {
+      "de": "Super cool, das gefällt mir!",
+      "en": "Super cool! I like that!",
+      "ru": "Супер! Мне нравится!"
+    },
+    "praise_3": {
+      "de": "Toll gelöst!",
+      "en": "Great work!",
+      "ru": "Здорово решено!"
+    },
+    "praise_4": {
+      "de": "Genau hingeschaut. Klasse!",
+      "en": "Careful looking. Well done!",
+      "ru": "Внимательно посмотрел. Отлично!"
+    },
+    "praise_5": {
+      "de": "Prima, herausgefunden!",
+      "en": "Brilliant, you worked it out!",
+      "ru": "Прекрасно! Получилось!"
+    },
+    "look_classic": {
+      "de": "Normal",
+      "en": "Classic",
+      "ru": "Обычный"
+    },
+    "look_hero": {
+      "de": "Held",
+      "en": "Hero",
+      "ru": "Герой"
+    },
+    "look_alien": {
+      "de": "Alien",
+      "en": "Alien",
+      "ru": "Пришелец"
+    },
+    "look_astronaut": {
+      "de": "Astronaut",
+      "en": "Astronaut",
+      "ru": "Космонавт"
+    },
+    "look_scientist": {
+      "de": "Forscher",
+      "en": "Scientist",
+      "ru": "Учёный"
+    },
+    "scenery": {
+      "de": "Kulisse wählen",
+      "en": "Choose scenery",
+      "ru": "Выбрать фон"
+    },
+    "scene_auto": {
+      "de": "Automatisch wechseln",
+      "en": "Automatic changes",
+      "ru": "Менять автоматически"
+    },
+    "scene_mountains": {
+      "de": "Berge",
+      "en": "Mountains",
+      "ru": "Горы"
+    },
+    "scene_home": {
+      "de": "Zuhause",
+      "en": "Home",
+      "ru": "Дом"
+    },
+    "scene_castle": {
+      "de": "Schloss",
+      "en": "Castle",
+      "ru": "Замок"
+    },
+    "scenery_per_subject": {
+      "de": "Deine Wahl gilt nur für dieses Fach.",
+      "en": "Your choice applies to this subject.",
+      "ru": "Этот мир только для этого предмета."
+    },
+    "scene_tree": {
+      "de": "Kletterbaum",
+      "en": "Climbing tree",
+      "ru": "Дерево"
+    },
+    "scene_seabed": {
+      "de": "Meeresgrund",
+      "en": "Seabed",
+      "ru": "Морское дно"
+    },
+    "scene_city": {
+      "de": "Autofahrt",
+      "en": "City drive",
+      "ru": "Поездка по городу"
+    },
+    "scene_moon": {
+      "de": "Mond",
+      "en": "Moon",
+      "ru": "Луна"
+    },
+    "restore_old_round": {
+      "de": "Frühere Runde vollständig gelöst?",
+      "en": "Completed the entire earlier round?",
+      "ru": "Прошлый раунд полностью пройден?"
+    },
+    "restore_old_explanation": {
+      "de": "Nur für begleitende Erwachsene: Falls im früheren Testpaket alle 320 Aufgaben gelöst wurden, kannst du die damals verdienten 3200 Punkte hier einmalig übernehmen. Bereits übernommene Punkte werden nicht doppelt gezählt. Neue Aufgaben bleiben ungelöst.",
+      "en": "For accompanying adults: if all 320 tasks were completed in the earlier test app, you can restore those 3200 earned points here once. Previously restored points are not counted twice. New tasks remain unsolved.",
+      "ru": "Для сопровождающих взрослых: если в прежней тестовой игре были решены все 320 заданий, здесь можно один раз восстановить заработанные 3200 очков. Уже восстановленные очки повторно не начисляются. Новые задания останутся нерешёнными."
+    },
+    "restore_old_confirm": {
+      "de": "Ja, alle 320 waren gelöst · Punkte übernehmen",
+      "en": "Yes, all 320 were completed · restore points",
+      "ru": "Да, все 320 были решены · восстановить очки"
+    },
+    "bonus": {
+      "de": "Bonusaufgabe",
+      "en": "Bonus challenge",
+      "ru": "Бонусное задание"
+    },
+    "skip_bonus": {
+      "de": "Überspringen →",
+      "en": "Skip →",
+      "ru": "Пропустить →"
+    },
+    "equation": {
+      "de": "Knobelaufgabe",
+      "en": "Think it through",
+      "ru": "Подумай"
     }
   },
   "objects": {
@@ -762,6 +902,128 @@
       "de": "Meer",
       "en": "sea",
       "ru": "море"
+    }
+  },
+  "heroes": {
+    "family": {
+      "wanja": "Ваня",
+      "mischa": "Миша",
+      "du": "Ты",
+      "mama": "Мама",
+      "george": "Георгий",
+      "katze": "Кошка",
+      "squirrel": "Белочка"
+    },
+    "neutral": {
+      "wanja": "Нова",
+      "mischa": "Луми",
+      "du": "Каро",
+      "mama": "Тави",
+      "george": "Зора",
+      "katze": "Пушинка",
+      "squirrel": "Белочка"
+    }
+  },
+  "music": {
+    "wiener_blut": {
+      "title": "Венская кровь",
+      "composer": "Иоганн Штраус",
+      "detail": "Вальс"
+    },
+    "babbino": {
+      "title": "О мой дорогой папочка",
+      "composer": "Джакомо Пуччини",
+      "detail": "Мелодия"
+    },
+    "french_song": {
+      "title": "Старинная французская песенка",
+      "composer": "Пётр Чайковский",
+      "detail": "Фортепиано"
+    },
+    "consolation": {
+      "title": "Утешение № 1",
+      "composer": "Ференц Лист",
+      "detail": "Фортепиано"
+    },
+    "elise": {
+      "title": "К Элизе",
+      "composer": "Людвиг ван Бетховен",
+      "detail": "Фортепиано"
+    },
+    "bach_prelude": {
+      "title": "Прелюдия до мажор",
+      "composer": "Иоганн Себастьян Бах",
+      "detail": "Фортепиано"
+    },
+    "gymnopedie": {
+      "title": "Гимнопедия № 1",
+      "composer": "Эрик Сати",
+      "detail": "Фортепиано"
+    },
+    "clair": {
+      "title": "Лунный свет",
+      "composer": "Клод Дебюсси",
+      "detail": "Фортепиано"
+    },
+    "nocturne": {
+      "title": "Ноктюрн № 2",
+      "composer": "Фредерик Шопен",
+      "detail": "Фортепиано"
+    },
+    "traeumerei": {
+      "title": "Грёзы",
+      "composer": "Роберт Шуман",
+      "detail": "Фортепиано"
+    },
+    "mozart_sonata": {
+      "title": "Лёгкая соната",
+      "composer": "Вольфганг Амадей Моцарт",
+      "detail": "Фортепиано"
+    },
+    "arabesque": {
+      "title": "Арабеска № 1",
+      "composer": "Клод Дебюсси",
+      "detail": "Фортепиано"
+    },
+    "brahms_waltz": {
+      "title": "Вальс",
+      "composer": "Иоганнес Брамс",
+      "detail": "Фортепиано"
+    },
+    "canon": {
+      "title": "Канон ре мажор",
+      "composer": "Иоганн Пахельбель",
+      "detail": "Фортепиано"
+    },
+    "impromptu": {
+      "title": "Экспромт",
+      "composer": "Франц Шуберт",
+      "detail": "Фортепиано"
+    },
+    "invention": {
+      "title": "Инвенция № 1",
+      "composer": "Иоганн Себастьян Бах",
+      "detail": "Фортепиано"
+    },
+    "chopin_prelude": {
+      "title": "Прелюдия ми минор",
+      "composer": "Фредерик Шопен",
+      "detail": "Фортепиано"
+    },
+    "minuet": {
+      "title": "Менуэт соль мажор",
+      "composer": "Кристиан Петцольд",
+      "detail": "Фортепиано"
+    },
+    "turca": {
+      "title": "Турецкое рондо",
+      "composer": "Вольфганг Амадей Моцарт",
+      "detail": "Фортепиано"
+    },
+    "moonlight": {
+      "title": "Лунная соната",
+      "composer": "Людвиг ван Бетховен",
+      "detail": "Фортепиано"
     }
   }
 }

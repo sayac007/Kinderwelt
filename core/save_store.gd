@@ -1,13 +1,24 @@
 extends RefCounted
 const PATH="user://progress.json"
+const Scenery=preload("res://core/quest/scenery.gd")
 const Progress=preload("res://games/quest/progress.gd")
 var data: Dictionary=defaults()
 static func defaults() -> Dictionary:
-	return {"schema":2,"locale":"de","muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
+	return {"schema":6,"subject_sceneries":{"math":"auto","german":"auto","logic":"auto","physics":"auto","biology":"auto","chemistry":"auto","body":"auto","geography":"auto"},"looks":{"wanja":"classic","mischa":"classic","du":"classic","mama":"classic","katze":"classic","george":"classic","squirrel":"classic"},"scenery":"auto","locale":"de","muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
 static func clean(value: Variant) -> Dictionary:
 	var result:=defaults()
 	if not value is Dictionary: return result
 	if value.get("locale") is String and value.locale in ["de","en","ru"]: result.locale=value.locale
+	# Schema 3 used a global choice: keep it as each subject's initial preference.
+	if value.get("scenery") is String and value.scenery in Scenery.CHOICES: result.scenery=value.scenery
+	for subject in Progress.SUBJECTS:
+		result.subject_sceneries[subject]=result.scenery
+		if value.get("subject_sceneries") is Dictionary:
+			var selected: Variant=value.subject_sceneries.get(subject)
+			if selected is String and selected in Scenery.CHOICES: result.subject_sceneries[subject]=selected
+	if value.get("looks") is Dictionary:
+		for id in result.looks:
+			if value.looks.get(id) is String and value.looks[id] in ["classic","hero","alien","astronaut","scientist"]:result.looks[id]=value.looks[id]
 	# Only current whitelisted preferences/tasks are retained, never obsolete data.
 	for key in ["muted","reduced_motion","voice_auto","music_locked","music_shuffle"]:
 		if value.get(key) is bool: result[key]=value[key]
@@ -17,7 +28,7 @@ static func clean(value: Variant) -> Dictionary:
 			result[key]=clampf(float(v),1,1.15) if key=="text_scale" else clampf(float(v),0,1)
 	if value.get("hero") is String:
 		var id: String = {"mina":"wanja","leo":"du","sam":"mama","jule":"katze"}.get(value.hero,value.hero)
-		if id in ["wanja","mischa","du","mama","katze"]: result.hero=id
+		if id in ["wanja","mischa","du","mama","katze","george","squirrel"]: result.hero=id
 	if value.get("music_track") is String and preload("res://core/quest/tracks.gd").ITEMS.has(value.music_track): result.music_track=value.music_track
 	else: result.music_locked=false
 	result.quest=Progress.clean(value.get("quest"))

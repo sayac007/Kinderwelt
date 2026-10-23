@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "built_utc": "2026-10-23T06:51:57.704477+00:00",
+  "source_tracking": "git-worktree",
+  "source_commit": "349241c5cd4d0cc91d2c035c458e0046f779686b",
+  "source_dirty": false,
+  "git_state_changed_during_build": false,
+  "application_source_sha256": "da16ca34c24f8f204f06368e85047aa9745ee20f6ebe1e77c48e90a2fd8c5503",
+  "toolchain": {
+    "godot": "4.7.2.stable.official.ed1daf0bf",
+    "java": "17.0.16+8",
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "build_tools": "36.1.0",
+    "gradle": "8.11.1",
+    "gradle_sha256": "f397b287023acdba1e9f6fc5ea72d22dd63669d59ed4a289a29b1a76eee151c6",
+    "sdk_archives": [
+      {
+        "name": "commandline",
+        "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+        "sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+        "destination": "cmdline-tools/19.0"
+      },
+      {
+        "name": "platform",
+        "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+        "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+        "destination": "platforms/android-36"
+      },
+      {
+        "name": "build-tools",
+        "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+        "sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+        "destination": "build-tools/36.1.0"
+      },
+      {
+        "name": "platform-tools",
+        "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+        "sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+        "destination": "platform-tools"
+      }
+    ],
+    "templates_sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+    "jdk_url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.16_8.tar.gz",
+    "jdk_sha256": "166774efcf0f722f2ee18eba0039de2d685b350ee14d7b69e6f83437dafd2af1",
+    "bundletool_version": "1.18.2",
+    "bundletool_sha256": "378b5434cd1378bef6b2bc527b8c7f0ff2584b273830335bce54d6d0813c8584"
+  },
+  "variant": "public",
+  "package": "org.example.kinderwelt.preview.neutral.v090",
+  "identity_status": "PROVISIONAL_TEST_ONLY; final package undecided",
+  "version_name": "0.9.0",
+  "version_code": 13,
+  "signing": {
+    "apk": "cached development-only Godot key; not a release identity",
+    "aab": "UNSIGNED",
+    "development_certificate_sha256": "3444a17df292f9c04a47059082669d28e67bb16014c81bdfa0910d01f0389c15"
+  },
+  "upload_readiness": "BLOCKED",
+  "artifacts": {
+    "kinderwelt-unsigned.aab": {
+      "bytes": 205637393,
+      "sha256": "55963bc365435af5f56abf1aab489dc8bf4820e1608ade1df5ccd4f8881952a1"
+    },
+    "kinderwelt-debug.apk": {
+      "bytes": 217719714,
+      "sha256": "a715cfccc5ff36a1fdb2a1da2805600f79c58ee273ae984dc8afe32243647539"
+    }
+  }
+}

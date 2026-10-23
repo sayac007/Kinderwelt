@@ -1,0 +1,91 @@
+{
+  "checks": 30,
+  "failures": 0,
+  "results": [
+    {
+      "captured_seconds": 1.57895691609977,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 1.569,
+      "expected_seconds": 1.50521540641785,
+      "locale": "de",
+      "peak": 0.684067130088806,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_390687b81429aa4f2192.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 8.82358276643991,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 8.847,
+      "expected_seconds": 8.70068025588989,
+      "locale": "de",
+      "peak": 0.685982584953308,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_cd419a697cb0aa38e935.ogg",
+        "res://assets/voice/quest/de/voice_de_2e4dc1a900179b661351.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 1.57895691609977,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 1.561,
+      "expected_seconds": 1.52843534946442,
+      "locale": "en",
+      "peak": 0.674225866794586,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_7a69f8ff91297fa4e986.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 7.52326530612245,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 7.539,
+      "expected_seconds": 7.47002243995667,
+      "locale": "en",
+      "peak": 0.807955205440521,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_ff86c8f5f2db04697a5b.ogg",
+        "res://assets/voice/quest/en/voice_en_c4cf434fd59ea1a4b311.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 2.1362358276644,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 2.128,
+      "expected_seconds": 2.05088424682617,
+      "locale": "ru",
+      "peak": 0.69091922044754,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_198e9525d10503e97f49.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 8.26630385487528,
+      "clips": [
+        "quest/physics_01",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 8.28,
+      "expected_seconds": 8.23628115653992,
+      "locale": "ru",
+      "peak": 0.705137610435486,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_9c2ba95ee6b7057b3e86.ogg",
+        "res://assets/voice/quest/ru/voice_ru_7b92c48504e3bfa99222.ogg"
+      ]
+    }
+  ],
+  "scope": "Actual desktop Godot mixer capture; no Android speaker or human listening claim"
+}

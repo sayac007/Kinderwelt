@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "variants": [
+    "family",
+    "neutral"
+  ],
+  "artifacts": {
+    "kinderwelt-debug-family.apk": {
+      "variant": "family",
+      "package": "org.example.kinderwelt.preview.family.v081",
+      "version_name": "0.8.1",
+      "version_code": 12,
+      "bytes": 185906144,
+      "sha256": "aa784ea3f4bb994f0e075dc5f82d342fbcba912a8198d301dc91bd72516de4f3",
+      "application_source_sha256": "388a91a7a978088132e63aa32f934e94eb5c5bbc1795f905c418dd7b12cb8694",
+      "signing": "temporary development certificate"
+    },
+    "kinderwelt-unsigned-family.aab": {
+      "variant": "family",
+      "package": "org.example.kinderwelt.preview.family.v081",
+      "version_name": "0.8.1",
+      "version_code": 12,
+      "bytes": 174523181,
+      "sha256": "19c477247541e79528ba8778e43036b77d6b926ac56a62df2915a62cd82032fd",
+      "application_source_sha256": "388a91a7a978088132e63aa32f934e94eb5c5bbc1795f905c418dd7b12cb8694",
+      "signing": "UNSIGNED"
+    },
+    "kinderwelt-debug-neutral.apk": {
+      "variant": "neutral",
+      "package": "org.example.kinderwelt.preview.neutral.v081",
+      "version_name": "0.8.1",
+      "version_code": 12,
+      "bytes": 181035217,
+      "sha256": "cdf98a357c401ddafcf17fbb55a7261cdb95cb94c670961ec861d272b14ac78b",
+      "application_source_sha256": "f5e8f0e0da04eccdac40efd067060b7038e7dd6d2598761c8e801b7165ccb904",
+      "signing": "temporary development certificate"
+    },
+    "kinderwelt-unsigned-neutral.aab": {
+      "variant": "neutral",
+      "package": "org.example.kinderwelt.preview.neutral.v081",
+      "version_name": "0.8.1",
+      "version_code": 12,
+      "bytes": 169659794,
+      "sha256": "4054ea9b37fe04af37a13d2562cd1ba11cb565b053c2fea29956ff313840bae8",
+      "application_source_sha256": "f5e8f0e0da04eccdac40efd067060b7038e7dd6d2598761c8e801b7165ccb904",
+      "signing": "UNSIGNED"
+    }
+  },
+  "release_signing": "NOT CONFIGURED; unsigned AABs; Play readiness BLOCKED"
+}

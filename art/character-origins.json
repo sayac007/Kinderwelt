@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "reviewed": "2026-10-22",
+  "scope": "All active playable character source images, all five looks, shared NPC/object atlases and PNG backgrounds/UI; not a legal clearance or claim that AI images have no copyright",
+  "sources": [
+    {
+      "path": ".private/characters/wanja.png",
+      "sha256": "226f04facc75083c946abd5d5c96351bd9873cda17f529ef6eaf17f9eab3cbf3",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-d2656890-18df-4f0d-9acb-d69eb5593e85.png",
+      "generation_output_sha256": "3791e787483cea3e1eddc6ff0832f57c0d506088d966defeb7ce256b46dab0eb",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-wanja.png",
+      "sha256": "9b40c6a55011b7c99169da92307a1951d06a7e9734b63d70fd62cb06f4870e60",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-bdb318ac-6e00-4fac-898b-226c946ea404.png",
+      "generation_output_sha256": "e681e2ccd57a7d4a8f9701d07dec983ece08c6f7865b1f4878b99c7128e3529e",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/mischa.png",
+      "sha256": "1f7f50f923a4cab122604a058ed7563bfd502fbb6738afbdf9f03924753e679d",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-b989dc4b-9483-4360-a02e-8cfecd708d28.png",
+      "generation_output_sha256": "9821f4fc6458170cf5b329a61fd47d949825627f9b0c7d31da9df3c5a890d3ff",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-mischa.png",
+      "sha256": "f38577bbd6f75f9739ef5e13deb01929c6b9e20f2d6a8ad66f94865af4c1bfeb",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-d0f122f0-4095-4b49-8325-661fa272dc3f.png",
+      "generation_output_sha256": "c52991fea30f2338c05d34d66e00a59ea12b1fd55e81f2cc62349cdb95ced227",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/du.png",
+      "sha256": "0b0bf3d5692a8cb7b5409ef39cb4768c9ed75b52e967b7fa785ae0a3350bedf7",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-0b610e91-1b4b-4f4e-8809-96617145328a.png",
+      "generation_output_sha256": "2edaeca5e879418f337ae7f5333d3c6f43ebf87f428b70fd2983f9a696c247da",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-du.png",
+      "sha256": "a78ec172332b27a1fda5f981cd4fc606991875811abd13f9985b44aad927ab22",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-b1fdbd4f-50f3-4391-a4ec-4aef3c53a889.png",
+      "generation_output_sha256": "5129cd488906922387df05afa86d46bd3fa9244c0334f46d7efcc65267a6dc7f",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/mama.png",
+      "sha256": "ce3dad8c28fb6675526e3060d178c9b10ba0f7795febbb2ee20b0fe171da51ca",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-e3a0ad1e-d404-4b86-ae4c-652cf1632b23.png",
+      "generation_output_sha256": "fa3b6f14c4109a98509423cc517c7d24b9c5191ec89ba1f33768db8e89d4c31e",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-mama.png",
+      "sha256": "c9f273e88174c171834ecc831e9f8570d687001bdf1d5cc1ef75f407228d584b",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-e8a28e11-4789-41ef-9891-6d687142b4b5.png",
+      "generation_output_sha256": "5d32e46cb172b16f28d6e27bafbbc776ebdaf3219573d2142a81644f35449d8c",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/katze.png",
+      "sha256": "cb7a0ab27f0066e30ebba87059fa5f30c58e8f6d03704195bf63446b3ad7a9dc",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-818e548c-9f5d-45a0-8c23-bcc538042ad0.png",
+      "generation_output_sha256": "a8c8dc3fc5d7a61a0a170a96d0d0f4b0e20f8fb0159e4c4175a9d5f07b816b4c",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-katze.png",
+      "sha256": "47ba1efedfd7a013803686562af25cd3123637af5f7b4b5f08a2052af021415a",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-20cd23f0-35c5-4d13-9fe2-de4a2f1916e0.png",
+      "generation_output_sha256": "d9631ff35075acc362ddb7995eb9dfd51ffb11b349bf7bbe8c7075495d31ccef",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/george.png",
+      "sha256": "689ffae0627bce337ed651aa4e98bd1dad814bf680fac1b35ea9cfedb9f55cde",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-af957151-1458-4b6a-ae94-f02692606fde.png",
+      "generation_output_sha256": "fe7a72e6903e63de84b114be09156b657ba7ae1a2be1fbc1f2482333940c8eab",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": ".private/characters/looks-george.png",
+      "sha256": "38bfc3c5ef59fc2ac1dfd804faaa021d9900d981832930bc3e877b5cf2259676",
+      "origin": "AI generated in this project",
+      "references": "user-supplied family reference; source photo not included",
+      "generation_output": "exec-3c6256a5-b25f-44cf-a838-9311718608f8.png",
+      "generation_output_sha256": "9f3151173fb9202ffafdbdecde9b101923496c5e6d29725f00d266889b20e4eb",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": "assets/quest/squirrel.png",
+      "sha256": "7b627a20f05ac701239b8ddbecc1f5a2af0c0b34c6112cb667867ceb320becf7",
+      "origin": "AI generated in this project",
+      "references": "none; original fictional squirrel",
+      "generation_output": "exec-4a1bdf7f-91ee-4515-af5c-8bd6e8fa5961.png",
+      "generation_output_sha256": "77f0c3a781fadeaf60eb231aa72877169c85cd1fdc0ef7079ad6324a55a10ee2",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": "assets/quest/looks-squirrel.png",
+      "sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+      "origin": "AI generated in this project",
+      "references": "none; original fictional squirrel",
+      "generation_output": "exec-8d673d6a-3470-4d65-a980-0da63e2c7aa1.png",
+      "generation_output_sha256": "e1a584e3b3e70367233cca4a3c3e23073ad780734578f258d7e1a5e9fbb2a302",
+      "source_evidence_commit": "1da98ae76b3202d31fb1d1aacc354a068faa6a0e",
+      "processing": "Lanczos size optimization; existing wardrobe frame metadata retained"
+    },
+    {
+      "path": "art/public/characters/neutral-cast.png",
+      "sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+      "origin": "AI generated in this project",
+      "references": "none; six fictional characters with five original looks each",
+      "generation_output": "exec-d2d1573b-7108-429b-911f-52637d4bfad2.png",
+      "generation_output_sha256": "00f203af531388bcd5f479c6093929385a8a20bc9b428c58048ed86daadadf71",
+      "decoded_rgba_sha256": "db5c8de1d2a1c8664956de6e7c0121eed0c456d71546b7afe36bca6bafbf2fe7",
+      "processing": "Lossless PNG recompression; identical RGBA pixel bytes verified",
+      "source_evidence_commit": "b67236ba056d3c81b8a3fa8b446ca697d048d84d"
+    },
+    {
+      "path": "assets/quest/adventure-worlds.png",
+      "sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-99bd7710-d4a8-4f8b-b6f2-89ffa3ad7b86.png",
+      "generation_output_sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "source_evidence_commit": "22b44cf040086846d609c8a9878a2704119012a2",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/appicon.png",
+      "sha256": "63b5c5979559a841de4a27bfb1d4922a72be332a9b02de341b6fdd4a701834d3",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-65bb699f-7fd3-44e2-980c-62594eab5a82.png",
+      "generation_output_sha256": "877980bab8069d08b130f1646581ff142c4eb0e245fb90b413761ffb9c72998d",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/castle.png",
+      "sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-37f74fca-8d3a-42e2-a530-933cb0cafb33.png",
+      "generation_output_sha256": "62631457013f08fa3c6e5334d899d0a11d24b6c71c2340fc1b22e12b2fedc881",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/home.png",
+      "sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-376c67f5-26eb-4979-9396-08a7a3997dbc.png",
+      "generation_output_sha256": "a8fb3421a474e889937f7cb3132d0539fc96937c7d6755e939152084c5b8df34",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/icons.png",
+      "sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-9ae3eed8-80eb-40c7-82f6-bd60458af344.png",
+      "generation_output_sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/landscape.png",
+      "sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-783daeef-b132-4886-89c2-08b5cf2b7ec1.png",
+      "generation_output_sha256": "5289b9e3509f388f3d2c4967ae84d2734e7faf827766303ded0638b5269facaa",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/objects.png",
+      "sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-2efb2e0e-265f-4272-bc02-b16784d259de.png",
+      "generation_output_sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/science-a.png",
+      "sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-587da44f-8d03-4a62-8623-57814da17e34.png",
+      "generation_output_sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    },
+    {
+      "path": "assets/quest/science-b.png",
+      "sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "origin": "AI generated in this project",
+      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
+      "generation_output": "exec-c06ad7fb-a0d4-4232-8184-df3aae7465f9.png",
+      "generation_output_sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
+      "processing": "Original bytes retained or recorded Lanczos size optimization"
+    }
+  ],
+  "historical_excluded": [
+    {
+      "id": "mina",
+      "sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+      "status": "historical origin not established; removed from current runtime and blocked from Android payloads",
+      "last_examined_commit": "3909c4c"
+    },
+    {
+      "id": "leo",
+      "sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+      "status": "historical origin not established; removed from current runtime and blocked from Android payloads",
+      "last_examined_commit": "3909c4c"
+    },
+    {
+      "id": "sam",
+      "sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+      "status": "historical origin not established; removed from current runtime and blocked from Android payloads",
+      "last_examined_commit": "3909c4c"
+    },
+    {
+      "id": "jule",
+      "sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+      "status": "historical origin not established; removed from current runtime and blocked from Android payloads",
+      "last_examined_commit": "3909c4c"
+    }
+  ],
+  "replacement_decision": "No currently used internet character image found; retain the approved generated art rather than regenerate it unnecessarily"
+}
