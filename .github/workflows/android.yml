@@ -52,9 +52,7 @@ jobs:
           path: ${{ runner.temp }}/tools/preview-signing
           key: kinderwelt-development-certificate-v090
       - name: Install decoder for real offline audio checks
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ffmpeg
+        run: bash scripts/ci/install-audio-decoder.sh
       - name: Android subprocess and artifact checker regressions
         run: |
           python3 scripts/variants.py prepare --variant public --output .
