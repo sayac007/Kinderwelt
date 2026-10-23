@@ -36,6 +36,7 @@ func run() -> void:
 	check(Progress.points(app.store.data.quest)==10 and not panel.complete,"Wrong bonus answer has no penalty")
 	panel.answer(panel.task.answer)
 	check(Progress.points(app.store.data.quest)==110,"100-point bonus is independently selectable")
+	check(game.score.points==110 and game.score.reward==100,"World header animates the actual bonus reward")
 	var saved:=Store.new();saved.load_save()
 	check(Progress.points(saved.data.quest)==110,"Bonus reward is persisted immediately")
 	game.close_task()
