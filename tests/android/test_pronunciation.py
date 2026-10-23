@@ -84,3 +84,16 @@ class PronunciationTests(unittest.TestCase):
   changed=deepcopy(current);changed['generation_profile']['length_scale']=1.5
   self.assertIsNone(reviewed_piper_row(old,changed,bank,bank,'source'))
   self.assertIsNone(reviewed_piper_row(old,current,bank,dict(bank,model_sha256='other'),'source'))
+ def test_complete_listening_page_handles_sharp_s_and_all_native_words(self):
+  import tempfile
+  spec=importlib.util.spec_from_file_location('listening_test',ROOT/'scripts/qa/listening_pack.py');page=importlib.util.module_from_spec(spec);spec.loader.exec_module(page)
+  with tempfile.TemporaryDirectory() as folder:
+   path=Path(folder)/'listening.html';page.generate(path);document=path.read_text()
+  data=json.loads(re.search(r'<script type="application/json" id="data">(.*?)</script>',document,re.S).group(1))
+  actual={(r['locale'],r['id']) for r in data}
+  words=[t['id'] for t in json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks'] if t['subject']=='german']
+  for locale in ['de','en','ru']:
+   for id in words:self.assertIn((locale,id),actual)
+  self.assertIn('Fußabdruck',document)
+  self.assertIn('CMUdict-BSD.txt',document)
+  self.assertIn('russian-g2p-MIT.txt',document)

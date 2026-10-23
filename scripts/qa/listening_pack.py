@@ -35,6 +35,8 @@ for(const button of document.querySelectorAll('[data-index]'))button.addEventLis
 def generate(output):
     sys.path.insert(0,str(ROOT/'scripts/voice'))
     import pronunciation
+    sys.path.insert(0,str(ROOT/'scripts/content'))
+    from advanced import word_title
     word_tasks=[t for t in json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks'] if t['subject']=='german']
     words={t['id']:t for t in word_tasks}
     models={};catalogs={}
@@ -62,7 +64,7 @@ def generate(output):
             index=len(items);items.append({'locale':locale,'id':id,'sequence':sequence})
             reference='<br>'.join(html.escape(s['locale']+': '+s['reference']) for s in sequence)
             if id in words:
-                task=words[id];word=(task if locale=='de' else task['variants'][locale])['word'].lower()
+                task=words[id];word=word_title((task if locale=='de' else task['variants'][locale])['word'],locale).lower()
                 entry=pronunciation.referenced_word(word,catalogs[locale][id]['text'],locale)
                 cue=entry.get('controlled_ipa',entry.get('ipa',entry['synthesis']))
                 if locale=='de' and '\u0301' in entry['synthesis']:cue=entry['synthesis']
