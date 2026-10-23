@@ -12,3 +12,10 @@ __pycache__/
 *.p12
 *.pem
 /export_credentials.cfg
+/.private/
+/core/quest/cast.gd
+/core/quest/cast.gd.uid
+/assets/quest/characters/
+/assets/quest/cast.json
+/assets/quest/looks.json
+/docs/internal/

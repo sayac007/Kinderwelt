@@ -1,0 +1,1398 @@
+{
+  "baseline_commit": "cca9b049c11cc131ef331f064e4fe28af9ec9130",
+  "changes": [
+    {
+      "id": "math_count",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many apples can you see?"
+    },
+    {
+      "id": "math_count",
+      "locale": "en",
+      "field": "tip",
+      "before": "Tap each picture once and count.",
+      "after": "Tap each apple once. Count as you go."
+    },
+    {
+      "id": "math_count",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько яблок ты видишь?"
+    },
+    {
+      "id": "math_count",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Коснись каждой картинки один раз и посчитай.",
+      "after": "Коснись каждого яблока один раз. Считай при этом."
+    },
+    {
+      "id": "math_add",
+      "locale": "en",
+      "field": "prompt",
+      "before": "3 and 2. How many altogether?",
+      "after": "Three apples and two apples. How many altogether?"
+    },
+    {
+      "id": "math_add",
+      "locale": "en",
+      "field": "tip",
+      "before": "Count the left group, then keep counting the right group.",
+      "after": "Count the left group first. Then keep counting on the right."
+    },
+    {
+      "id": "math_add",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "3 и 2. Сколько всего?",
+      "after": "Три яблока и два яблока. Сколько всего?"
+    },
+    {
+      "id": "math_add",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Сначала посчитай слева, затем продолжи считать справа.",
+      "after": "Сначала посчитай слева. Затем продолжи считать справа."
+    },
+    {
+      "id": "math_take",
+      "locale": "en",
+      "field": "prompt",
+      "before": "There are 7. Take away 3. How many remain?",
+      "after": "Seven leaves. Three fly away. How many remain?"
+    },
+    {
+      "id": "math_take",
+      "locale": "en",
+      "field": "tip",
+      "before": "Count only the pictures without a cross.",
+      "after": "Count only the leaves without a cross."
+    },
+    {
+      "id": "math_take",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Было 7. Убрали 3. Сколько осталось?",
+      "after": "Семь листьев. Три улетают. Сколько осталось?"
+    },
+    {
+      "id": "math_take",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Считай только картинки без крестика.",
+      "after": "Считай только листья без крестика."
+    },
+    {
+      "id": "math_ten",
+      "locale": "en",
+      "field": "prompt",
+      "before": "There are 4. How many more make 10?",
+      "after": "Four stars are already there. How many more make ten?"
+    },
+    {
+      "id": "math_ten",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Есть 4. Сколько не хватает до 10?",
+      "after": "Уже есть четыре звезды. Сколько не хватает до десяти?"
+    },
+    {
+      "id": "math_compare",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which group has more?",
+      "after": "Where are there more apples?"
+    },
+    {
+      "id": "math_compare",
+      "locale": "en",
+      "field": "tip",
+      "before": "Count both groups and tap the larger one.",
+      "after": "Compare both groups. Tap the larger group."
+    },
+    {
+      "id": "math_compare",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где больше?",
+      "after": "Где больше яблок?"
+    },
+    {
+      "id": "math_compare",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Посчитай обе группы. Коснись той, где больше.",
+      "after": "Сравни обе группы. Коснись той, где больше."
+    },
+    {
+      "id": "math_steps",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which number comes next?",
+      "after": "Two, four, six. Which number comes next?"
+    },
+    {
+      "id": "math_steps",
+      "locale": "en",
+      "field": "tip",
+      "before": "Add 2 each time.",
+      "after": "Add two each time."
+    },
+    {
+      "id": "math_steps",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое число следующее?",
+      "after": "Два, четыре, шесть. Какое число следующее?"
+    },
+    {
+      "id": "math_steps",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Каждый раз прибавляй 2.",
+      "after": "Каждый раз прибавляй два."
+    },
+    {
+      "id": "math_twenty",
+      "locale": "en",
+      "field": "prompt",
+      "before": "10 and 4. How many altogether?",
+      "after": "Ten and four. How many altogether?"
+    },
+    {
+      "id": "math_twenty",
+      "locale": "en",
+      "field": "tip",
+      "before": "Count the left group, then keep counting the right group.",
+      "after": "The first group has ten. Count on four more."
+    },
+    {
+      "id": "math_twenty",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "10 и 4. Сколько всего?",
+      "after": "Десять и четыре. Сколько всего?"
+    },
+    {
+      "id": "math_twenty",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Сначала посчитай слева, затем продолжи считать справа.",
+      "after": "В первой группе десять. Отсчитай ещё четыре."
+    },
+    {
+      "id": "math_split",
+      "locale": "en",
+      "field": "prompt",
+      "before": "There are 5. How many more make 8?",
+      "after": "Five stars are already there. How many more make eight?"
+    },
+    {
+      "id": "math_split",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Есть 5. Сколько не хватает до 8?",
+      "after": "Уже есть пять звёзд. Сколько не хватает до восьми?"
+    },
+    {
+      "id": "german_sun",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Sonne. Which letter does it start with?"
+    },
+    {
+      "id": "german_sun",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter S. Choose that letter.",
+      "after": "Sonne starts with the letter S. Choose that letter."
+    },
+    {
+      "id": "german_sun",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Sonne. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_sun",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
+      "after": "Sonne начинается с буквы S. Выбери эту букву."
+    },
+    {
+      "id": "german_mouse",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Maus. Which letter does it start with?"
+    },
+    {
+      "id": "german_mouse",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter M. Choose that letter.",
+      "after": "Maus starts with the letter M. Choose that letter."
+    },
+    {
+      "id": "german_mouse",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Maus. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_mouse",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы M. Выбери эту букву.",
+      "after": "Maus начинается с буквы M. Выбери эту букву."
+    },
+    {
+      "id": "german_apple",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Apfel. Which letter does it start with?"
+    },
+    {
+      "id": "german_apple",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter A. Choose that letter.",
+      "after": "Apfel starts with the letter A. Choose that letter."
+    },
+    {
+      "id": "german_apple",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Apfel. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_apple",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы A. Выбери эту букву.",
+      "after": "Apfel начинается с буквы A. Выбери эту букву."
+    },
+    {
+      "id": "german_rhyme",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German words. Which one rhymes with the word for house?",
+      "after": "Which German word rhymes with Haus?"
+    },
+    {
+      "id": "german_rhyme",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German words for house and mouse rhyme: listen to the German example.",
+      "after": "Haus and Maus sound the same at the end."
+    },
+    {
+      "id": "german_rhyme",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкие слова. Какое рифмуется со словом «дом» по-немецки?",
+      "after": "Какое немецкое слово рифмуется со словом Haus?"
+    },
+    {
+      "id": "german_rhyme",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкие слова «дом» и «мышь» рифмуются. Послушай пример по-немецки.",
+      "after": "Haus и Maus звучат одинаково в конце."
+    },
+    {
+      "id": "german_robot",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Roboter. How many syllables can you hear?"
+    },
+    {
+      "id": "german_robot",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 3 syllables.",
+      "after": "Say and clap: Ro. Bo. Ter. That is 3 syllables."
+    },
+    {
+      "id": "german_robot",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Roboter. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_robot",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
+      "after": "Произнеси и хлопай: Ro. Bo. Ter. Это 3 слога."
+    },
+    {
+      "id": "german_read",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which German word belongs to the ball?"
+    },
+    {
+      "id": "german_read",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "B. A. L. L. Find the word Ball."
+    },
+    {
+      "id": "german_read",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое немецкое слово подходит к мячу?"
+    },
+    {
+      "id": "german_read",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "B. A. L. L. Найди слово Ball."
+    },
+    {
+      "id": "german_flower",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Blume. How many syllables can you hear?"
+    },
+    {
+      "id": "german_flower",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Blu. Me. That is 2 syllables."
+    },
+    {
+      "id": "german_flower",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Blume. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_flower",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Blu. Me. Это 2 слога."
+    },
+    {
+      "id": "german_fish",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Fisch. Which letter does it start with?"
+    },
+    {
+      "id": "german_fish",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter F. Choose that letter.",
+      "after": "Fisch starts with the letter F. Choose that letter."
+    },
+    {
+      "id": "german_fish",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Fisch. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_fish",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы F. Выбери эту букву.",
+      "after": "Fisch начинается с буквы F. Выбери эту букву."
+    },
+    {
+      "id": "math_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Bienen siehst du?"
+    },
+    {
+      "id": "math_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many bees can you see?"
+    },
+    {
+      "id": "math_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько пчёл ты видишь?"
+    },
+    {
+      "id": "math_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Fische siehst du?"
+    },
+    {
+      "id": "math_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many fish can you see?"
+    },
+    {
+      "id": "math_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько рыб ты видишь?"
+    },
+    {
+      "id": "math_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Blumen siehst du?"
+    },
+    {
+      "id": "math_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many flowers can you see?"
+    },
+    {
+      "id": "math_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько цветов ты видишь?"
+    },
+    {
+      "id": "math_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Blätter siehst du?"
+    },
+    {
+      "id": "math_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many leaves can you see?"
+    },
+    {
+      "id": "math_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько листьев ты видишь?"
+    },
+    {
+      "id": "math_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Sterne siehst du?"
+    },
+    {
+      "id": "math_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many stars can you see?"
+    },
+    {
+      "id": "math_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько звёзд ты видишь?"
+    },
+    {
+      "id": "math_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie viele siehst du?",
+      "after": "Wie viele Äpfel siehst du?"
+    },
+    {
+      "id": "math_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How many can you see?",
+      "after": "How many apples can you see?"
+    },
+    {
+      "id": "math_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сколько ты видишь?",
+      "after": "Сколько яблок ты видишь?"
+    },
+    {
+      "id": "german_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Biene. Which letter does it start with?"
+    },
+    {
+      "id": "german_09",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter B. Choose that letter.",
+      "after": "Biene starts with the letter B. Choose that letter."
+    },
+    {
+      "id": "german_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Biene. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_09",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы B. Выбери эту букву.",
+      "after": "Biene начинается с буквы B. Выбери эту букву."
+    },
+    {
+      "id": "german_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Frosch. Which letter does it start with?"
+    },
+    {
+      "id": "german_10",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter F. Choose that letter.",
+      "after": "Frosch starts with the letter F. Choose that letter."
+    },
+    {
+      "id": "german_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Frosch. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_10",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы F. Выбери эту букву.",
+      "after": "Frosch начинается с буквы F. Выбери эту букву."
+    },
+    {
+      "id": "german_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Katze. Which letter does it start with?"
+    },
+    {
+      "id": "german_11",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter K. Choose that letter.",
+      "after": "Katze starts with the letter K. Choose that letter."
+    },
+    {
+      "id": "german_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Katze. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_11",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы K. Выбери эту букву.",
+      "after": "Katze начинается с буквы K. Выбери эту букву."
+    },
+    {
+      "id": "german_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Nest. Which letter does it start with?"
+    },
+    {
+      "id": "german_12",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter N. Choose that letter.",
+      "after": "Nest starts with the letter N. Choose that letter."
+    },
+    {
+      "id": "german_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Nest. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_12",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы N. Выбери эту букву.",
+      "after": "Nest начинается с буквы N. Выбери эту букву."
+    },
+    {
+      "id": "german_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Wurm. Which letter does it start with?"
+    },
+    {
+      "id": "german_13",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter W. Choose that letter.",
+      "after": "Wurm starts with the letter W. Choose that letter."
+    },
+    {
+      "id": "german_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Wurm. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_13",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы W. Выбери эту букву.",
+      "after": "Wurm начинается с буквы W. Выбери эту букву."
+    },
+    {
+      "id": "german_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Wasser. Which letter does it start with?"
+    },
+    {
+      "id": "german_14",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter W. Choose that letter.",
+      "after": "Wasser starts with the letter W. Choose that letter."
+    },
+    {
+      "id": "german_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Wasser. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_14",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы W. Выбери эту букву.",
+      "after": "Wasser начинается с буквы W. Выбери эту букву."
+    },
+    {
+      "id": "german_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Salz. Which letter does it start with?"
+    },
+    {
+      "id": "german_15",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter S. Choose that letter.",
+      "after": "Salz starts with the letter S. Choose that letter."
+    },
+    {
+      "id": "german_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Salz. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_15",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
+      "after": "Salz начинается с буквы S. Выбери эту букву."
+    },
+    {
+      "id": "german_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Sand. Which letter does it start with?"
+    },
+    {
+      "id": "german_16",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter S. Choose that letter.",
+      "after": "Sand starts with the letter S. Choose that letter."
+    },
+    {
+      "id": "german_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Sand. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_16",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
+      "after": "Sand начинается с буквы S. Выбери эту букву."
+    },
+    {
+      "id": "german_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Holz. Which letter does it start with?"
+    },
+    {
+      "id": "german_17",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter H. Choose that letter.",
+      "after": "Holz starts with the letter H. Choose that letter."
+    },
+    {
+      "id": "german_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Holz. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_17",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
+      "after": "Holz начинается с буквы H. Выбери эту букву."
+    },
+    {
+      "id": "german_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Nase. Which letter does it start with?"
+    },
+    {
+      "id": "german_18",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter N. Choose that letter.",
+      "after": "Nase starts with the letter N. Choose that letter."
+    },
+    {
+      "id": "german_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Nase. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_18",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы N. Выбери эту букву.",
+      "after": "Nase начинается с буквы N. Выбери эту букву."
+    },
+    {
+      "id": "german_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Hand. Which letter does it start with?"
+    },
+    {
+      "id": "german_19",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter H. Choose that letter.",
+      "after": "Hand starts with the letter H. Choose that letter."
+    },
+    {
+      "id": "german_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Hand. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_19",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
+      "after": "Hand начинается с буквы H. Выбери эту букву."
+    },
+    {
+      "id": "german_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. Which letter does it start with?",
+      "after": "German word: Herz. Which letter does it start with?"
+    },
+    {
+      "id": "german_20",
+      "locale": "en",
+      "field": "tip",
+      "before": "The German word starts with the letter H. Choose that letter.",
+      "after": "Herz starts with the letter H. Choose that letter."
+    },
+    {
+      "id": "german_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. С какой буквы его пишут?",
+      "after": "Немецкое слово: Herz. С какой буквы его пишут?"
+    },
+    {
+      "id": "german_20",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
+      "after": "Herz начинается с буквы H. Выбери эту букву."
+    },
+    {
+      "id": "german_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Schmetterling. How many syllables can you hear?"
+    },
+    {
+      "id": "german_21",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 3 syllables.",
+      "after": "Say and clap: Schmet. Ter. Ling. That is 3 syllables."
+    },
+    {
+      "id": "german_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Schmetterling. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_21",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
+      "after": "Произнеси и хлопай: Schmet. Ter. Ling. Это 3 слога."
+    },
+    {
+      "id": "german_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Schildkröte. How many syllables can you hear?"
+    },
+    {
+      "id": "german_22",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 3 syllables.",
+      "after": "Say and clap: Schild. Krö. Te. That is 3 syllables."
+    },
+    {
+      "id": "german_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Schildkröte. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_22",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
+      "after": "Произнеси и хлопай: Schild. Krö. Te. Это 3 слога."
+    },
+    {
+      "id": "german_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Batterie. How many syllables can you hear?"
+    },
+    {
+      "id": "german_23",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 3 syllables.",
+      "after": "Say and clap: Bat. Te. Rie. That is 3 syllables."
+    },
+    {
+      "id": "german_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Batterie. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_23",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
+      "after": "Произнеси и хлопай: Bat. Te. Rie. Это 3 слога."
+    },
+    {
+      "id": "german_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Papier. How many syllables can you hear?"
+    },
+    {
+      "id": "german_24",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Pa. Pier. That is 2 syllables."
+    },
+    {
+      "id": "german_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Papier. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_24",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Pa. Pier. Это 2 слога."
+    },
+    {
+      "id": "german_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Seife. How many syllables can you hear?"
+    },
+    {
+      "id": "german_25",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Sei. Fe. That is 2 syllables."
+    },
+    {
+      "id": "german_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Seife. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_25",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Sei. Fe. Это 2 слога."
+    },
+    {
+      "id": "german_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Auge. How many syllables can you hear?"
+    },
+    {
+      "id": "german_26",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Au. Ge. That is 2 syllables."
+    },
+    {
+      "id": "german_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Auge. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_26",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Au. Ge. Это 2 слога."
+    },
+    {
+      "id": "german_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Gehirn. How many syllables can you hear?"
+    },
+    {
+      "id": "german_27",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Ge. Hirn. That is 2 syllables."
+    },
+    {
+      "id": "german_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Gehirn. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_27",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Ge. Hirn. Это 2 слога."
+    },
+    {
+      "id": "german_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Magen. How many syllables can you hear?"
+    },
+    {
+      "id": "german_28",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Ma. Gen. That is 2 syllables."
+    },
+    {
+      "id": "german_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Magen. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_28",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Ma. Gen. Это 2 слога."
+    },
+    {
+      "id": "german_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Wolke. How many syllables can you hear?"
+    },
+    {
+      "id": "german_29",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Wol. Ke. That is 2 syllables."
+    },
+    {
+      "id": "german_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Wolke. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_29",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Wol. Ke. Это 2 слога."
+    },
+    {
+      "id": "german_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Regen. How many syllables can you hear?"
+    },
+    {
+      "id": "german_30",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Re. Gen. That is 2 syllables."
+    },
+    {
+      "id": "german_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Regen. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_30",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Re. Gen. Это 2 слога."
+    },
+    {
+      "id": "german_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Insel. How many syllables can you hear?"
+    },
+    {
+      "id": "german_31",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: In. Sel. That is 2 syllables."
+    },
+    {
+      "id": "german_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Insel. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_31",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: In. Sel. Это 2 слога."
+    },
+    {
+      "id": "german_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Listen to the German word. How many syllables does it have?",
+      "after": "German word: Hammer. How many syllables can you hear?"
+    },
+    {
+      "id": "german_32",
+      "locale": "en",
+      "field": "tip",
+      "before": "Clap along with the German word. It has 2 syllables.",
+      "after": "Say and clap: Ham. Mer. That is 2 syllables."
+    },
+    {
+      "id": "german_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Послушай немецкое слово. Сколько в нём слогов?",
+      "after": "Немецкое слово: Hammer. Сколько слогов ты слышишь?"
+    },
+    {
+      "id": "german_32",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
+      "after": "Произнеси и хлопай: Ham. Mer. Это 2 слога."
+    },
+    {
+      "id": "german_33",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Fisch: F. I. S. C. H."
+    },
+    {
+      "id": "german_33",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Fisch: F. I. S. C. H."
+    },
+    {
+      "id": "german_34",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Vogel: V. O. G. E. L."
+    },
+    {
+      "id": "german_34",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Vogel: V. O. G. E. L."
+    },
+    {
+      "id": "german_35",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Mond: M. O. N. D."
+    },
+    {
+      "id": "german_35",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Mond: M. O. N. D."
+    },
+    {
+      "id": "german_36",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Baum: B. A. U. M."
+    },
+    {
+      "id": "german_36",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Baum: B. A. U. M."
+    },
+    {
+      "id": "german_37",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Zahn: Z. A. H. N."
+    },
+    {
+      "id": "german_37",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Zahn: Z. A. H. N."
+    },
+    {
+      "id": "german_38",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Fuss: F. U. S. S."
+    },
+    {
+      "id": "german_38",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Fuss: F. U. S. S."
+    },
+    {
+      "id": "german_39",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Ei: E. I."
+    },
+    {
+      "id": "german_39",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Ei: E. I."
+    },
+    {
+      "id": "german_40",
+      "locale": "en",
+      "field": "tip",
+      "before": "Match the written German word to the picture. Listen to its German reading next.",
+      "after": "Find the letters of Meer: M. E. E. R."
+    },
+    {
+      "id": "german_40",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
+      "after": "Найди буквы слова Meer: M. E. E. R."
+    },
+    {
+      "id": "physics_18",
+      "locale": "en",
+      "field": "tip",
+      "before": "A hand can push the ball and make it move.",
+      "after": "A hand can exert a force on the ball and make it move."
+    },
+    {
+      "id": "physics_18",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Рука может подействовать на мяч и привести его в движение.",
+      "after": "Рука может подействовать на мяч с силой и привести его в движение."
+    },
+    {
+      "id": "biology_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do many trees grow together?",
+      "after": "Where do many trees grow close together?"
+    },
+    {
+      "id": "biology_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где много деревьев растёт рядом?",
+      "after": "Где много деревьев растёт близко друг к другу?"
+    },
+    {
+      "id": "biology_37",
+      "locale": "ru",
+      "field": "tip",
+      "before": "Дождевые черви затаскивают опавшие листья в свои ходы.",
+      "after": "Дождевые черви затаскивают отмершие опавшие листья в свои ходы."
+    },
+    {
+      "id": "body_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part needs protection from very loud sounds?",
+      "after": "Which sense needs protection from very loud sounds?"
+    },
+    {
+      "id": "body_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что нужно защищать от очень громких звуков?",
+      "after": "Какое чувство нужно защищать от очень громких звуков?"
+    },
+    {
+      "id": "body_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где обрабатываются воспоминания?",
+      "after": "Где обрабатывается много воспоминаний?"
+    },
+    {
+      "id": "geography_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что течёт, имеет русло и два берега?",
+      "after": "Что длинное, течёт и имеет два берега?"
+    }
+  ]
+}

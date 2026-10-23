@@ -5,9 +5,41 @@ permissions:
 jobs:
   android:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      # PR code never receives access to the separate family repository.
+      - name: Read pinned private asset source for trusted builds
+        id: family_assets
+        if: github.event_name != 'pull_request'
+        env:
+          FAMILY_ASSETS_TOKEN: ${{ secrets.KINDERWELT_FAMILY_ASSETS_TOKEN }}
+        run: |
+          if [ -z "$FAMILY_ASSETS_TOKEN" ]; then
+            echo '::error::KINDERWELT_FAMILY_ASSETS_TOKEN is missing. Configure read-only Contents access to the separate private family-assets repository.'
+            exit 1
+          fi
+          python3 scripts/ci/family_assets.py plan
+          family_repo=$(python3 -c 'import json; print(json.load(open("scripts/ci/family-assets.json"))["repository"])')
+          private_flag=$(GH_TOKEN="$FAMILY_ASSETS_TOKEN" gh api "repos/$family_repo" --jq '.private')
+          if [ "$private_flag" != true ]; then
+            echo '::error::The family illustration repository must be private.'
+            exit 1
+          fi
+      - name: Check out only the pinned revision of the private family illustration repository
+        if: github.event_name != 'pull_request'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: ${{ steps.family_assets.outputs.repository }}
+          ref: ${{ steps.family_assets.outputs.revision }}
+          token: ${{ secrets.KINDERWELT_FAMILY_ASSETS_TOKEN }}
+          path: .private/family-assets
+          persist-credentials: false
+      - name: Verify and import generated family illustrations; no source photos
+        if: github.event_name != 'pull_request'
+        run: python3 scripts/ci/family_assets.py restore
       - name: Install pinned Godot
         run: GODOT_INSTALL_DIR="$RUNNER_TEMP/tools/godot-4.7.2" bash scripts/install-godot.sh
       - name: Install checksum-pinned Android toolchain
@@ -18,16 +50,24 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ffmpeg
       - name: Android subprocess and artifact checker regressions
-        run: python3 -m unittest discover -s tests/android -v
-      - name: Build and verify development APK and unsigned AAB
+        run: |
+          python3 scripts/variants.py prepare --variant public --output .
+          python3 -m unittest discover -s tests/android -v
+      - name: Build both separately installable APKs and unsigned bundles
+        if: github.event_name != 'pull_request'
         run: |
           GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
-            python3 scripts/android/build.py --tools "$RUNNER_TEMP/tools"
-      - name: Retain artifacts and technical evidence (no signing material)
+            python3 scripts/android/build_variants.py --tools "$RUNNER_TEMP/tools"
+      - name: Verify neutral Android export for pull requests without private secrets
+        if: github.event_name == 'pull_request'
+        run: |
+          GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
+            python3 scripts/android/build_variants.py --variants neutral --tools "$RUNNER_TEMP/tools"
+      - name: Retain APKs, unsigned bundles and technical evidence; no source repository or tokens
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: android-development-artifacts
-          path: build/android/
+          path: build/android-delivery/
           if-no-files-found: error
           retention-days: 7

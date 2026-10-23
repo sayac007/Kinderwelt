@@ -4,33 +4,47 @@ Die Komponenten und Prüfsummen stehen in `scripts/android/toolchain.json`: Godo
 
 ```sh
 python3 scripts/android/install.py --root /workspace/tools --accept-android-sdk-license
+# Privater Standardbuild setzt den lokalen privaten Grafikpack voraus:
 python3 scripts/android/build.py --tools /workspace/tools --output build/android-current
-# Separates Testpaket, wenn eine vorhandene Installation nicht aktualisiert werden kann:
-python3 scripts/android/build.py --tools /workspace/tools --preview --output build/android-test
+# Getrennte lokale Test-App je Variante:
+python3 scripts/android/build.py --tools /workspace/tools --variant family --preview --output build/android-v081-family
+python3 scripts/android/build.py --tools /workspace/tools --variant public --preview --output build/android-v081-public
+# Beide Varianten mit den gewünschten Dateinamen, wenn Familienquellen importiert sind:
+python3 scripts/android/build_variants.py --tools /workspace/tools --output build/android-delivery-neu
+# Ohne Familienquellen ausschließlich neutral:
+python3 scripts/android/build_variants.py --variants neutral --tools /workspace/tools --output build/android-neutral-neu
+# Optionaler expliziter Bezeichner für einen kontrollierten Testbuild:
+python3 scripts/android/build.py --tools /workspace/tools --variant public --package-id de.kinderwelt.test --output build/android-override
 ```
 
-Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzeptiert. Jedes Ausgabeverzeichnis muss neu sein. Das Skript baut aus einer isolierten Kopie ausschließlich der App-Verzeichnisse. Beide Android-SDK-Umgebungsvariablen zeigen auf dasselbe geprüfte SDK. Fehlerblöcke aus Godot und Gradle werden direkt ausgegeben; vollständige Logs bleiben im Ausgabeverzeichnis.
+Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzeptiert. Jedes Ausgabeverzeichnis muss neu sein. Das Skript baut aus einer isolierten Kopie ausschließlich der App-Verzeichnisse; die Varianten-Grafiken werden dort eingesetzt. Beide SDK-Umgebungsvariablen zeigen auf denselben geprüften SDK. Fehlerblöcke aus Godot und Gradle erscheinen direkt im Protokoll; vollständige Logs bleiben im Ausgabeverzeichnis.
 
-Standardpaket: `org.example.kinderwelt`, Version **0.6.0 / 6**. Testvariante: `org.example.kinderwelt.preview`, Launchername **Kinderwelt 0.6 Test**, eigener lokaler Spielstand. Sie enthält dieselbe neue App und kann neben einer vorhandenen Installation stehen.
+## Konfigurierbare, vorläufige Identität
 
-Jeder Build liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird nur mit einem temporären Godot-Entwicklungsschlüssel signiert. Dieser ist keine dauerhafte Update-Identität; normale APK-Updates benötigen denselben Schlüssel wie die installierte App. Keine privaten Schlüssel werden eingecheckt. Eine vorhandene App nicht unbedacht deinstallieren, wenn deren lokale Daten erhalten bleiben sollen.
+Version **0.8.1 / 12**. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@`, das der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
 
-Die Prüfung kontrolliert Paket, Version, API 24–36, Berechtigungsfreiheit, deaktiviertes Backup, Bildschirmrotation, alle acht Fächer, drei Sprachmanifeste und sämtliche tatsächlich spielbaren Sprach-/Musik- und Grafikressourcen, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierten Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt.
+| Build | Paket bei Standardkonfiguration | Launchername |
+|---|---|---|
+| Standard, gewählte Variante | `org.example.kinderwelt` | Kinderwelt |
+| Private Vorschau | `org.example.kinderwelt.preview.family.v081` | Kinderwelt 0.8.1 Privat Test |
+| Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v081` | Kinderwelt 0.8.1 Public Test |
 
-GitHub Actions führt die aktuelle Testsuite, echte Software-Renderings und Android-Exporte aus. Das ist keine Geräteprüfung.
+Vorschauen haben eigene lokale Spielstände und können nebeneinander sowie neben früheren Versionen installiert werden. Die stabile Figuren-/Lösungslogik ist identisch; Daten werden nicht zwischen getrennten Android-Paketen kopiert.
+
+## Artefakte und Prüfungen
+
+Jeder Build liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird nur mit einem temporären Godot-Entwicklungsschlüssel signiert. Dieser ist keine dauerhafte Update-Identität; ein APK-Update benötigt denselben Schlüssel wie die installierte App. Keine privaten Schlüssel werden eingecheckt. Vorhandene Installationen nicht unbedacht deinstallieren, wenn ihre lokalen Daten erhalten bleiben sollen.
+
+Prüfungen: Paket, Version, API 24–36, keine Berechtigungen, deaktiviertes Backup, Bildschirmrotation, alle acht Fächer, drei Sprachmanifeste und sämtliche tatsächlich spielbaren Sprach-/Musik-/Grafikressourcen, ausgewählte Figurenvariante, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierter Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt. Neue Buildgrößen und tatsächlich erzeugte Dateien: [Testbericht](test-report.md).
+
+## GitHub Actions
+
+Für vertrauenswürdige Pushes und manuelle Läufe erzeugt der Workflow nach Einrichtung des getrennten privaten Figurenrepositorys beide Varianten. Die Quellbilder werden aus einem festgelegten Commit mit einem gesonderten Lesetoken importiert; Pull Requests erhalten diesen Zugang nicht und bauen nur neutral. [Einrichtung und aktueller GitHub-Zugangsblocker](family-repository.md). [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml) öffnen, passenden Branch/Lauf auswählen und unter **Artifacts** `android-development-artifacts` herunterladen. GitHub-Anmeldung ist erforderlich. ZIP entpacken: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk` liegen direkt darin, außerdem zwei unsignierte AABs und Prüfberichte. Die Pakete sind getrennte Vorschau-Installationen. Der neue Workflow wurde wegen des derzeit gesperrten GitHub-Zugangs noch nicht remote ausgeführt; lokale Build-Ergebnisse sind getrennt dokumentiert.
+
+Artefakte werden sieben Tage aufbewahrt und entstehen erst nach erfolgreichem Export/Upload. Ein Push oder lokal bestandener Build beweist keinen erfolgreichen Remote-Lauf. Geräteprüfungen sind separat erforderlich.
 
 ## Google Play bleibt offen
 
-Es gibt weder eine Release-Signatur noch eine Upload-Freigabe. Eine Betreiberentscheidung zu App-ID und dauerhaftem Signierschlüssel, sicherer Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte und aktuelle Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben sind erforderlich. Es wird keine Uploadbereitschaft behauptet.
+Es gibt keine Release-Signatur und keine Upload-Freigabe. Offen sind endgültige App-ID, dauerhafter Signierschlüssel mit sicherem Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte/Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben. Keine Uploadbereitschaft wird behauptet.
 
-## Fertige Testdateien und Actions-Downloads
-
-Die tatsächlich geprüften lokalen Dateien dieser Lieferung liegen unter `build/android-v06-verified/` (Standard) und `build/android-v06-preview/` (separate Test-App). Jeweils `kinderwelt-debug.apk` installieren; `kinderwelt-unsigned.aab` ist das unsignierte Prüfbundle. Größen, Hashes und Grenzen stehen in [test-report.md](test-report.md).
-
-Nach einem erfolgreichen GitHub-Lauf lassen sich Dateien so herunterladen:
-
-1. [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml) öffnen und den Lauf des Branches `feat/science-languages-classics` wählen.
-2. Auf der Zusammenfassungsseite unten unter **Artifacts** `android-development-artifacts` herunterladen (GitHub-Anmeldung erforderlich).
-3. ZIP entpacken; `kinderwelt-debug.apk` ist die Standard-App. Die Pipeline baut dort keine separate Preview-Identität, außer sie wird ausdrücklich mit `--preview` aufgerufen.
-
-Artefakte werden sieben Tage aufbewahrt und existieren erst nach erfolgreichem Export/Upload. Der Remote-Status kann aus dieser Umgebung wegen API-Forbidden nicht bestätigt werden. Lokale APK-/AAB-Prüfungen sind davon getrennt dokumentiert.
+Öffentliche Quellschnappschüsse lassen sich auch ohne Git-Historie bauen. Provenienzformat 2 meldet dann `source_tracking=unversioned-snapshot`, `source_commit=null`, `source_dirty=null`; der Inhalts-Hash der materialisierten App bleibt vorhanden. Ein übergeordnetes Repository wird nicht als Identität des Schnappschusses übernommen.

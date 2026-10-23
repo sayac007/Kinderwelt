@@ -10,16 +10,16 @@ var chooser: Control
 var menu: Control
 var subject := "math"
 var title: Label
-var score: Label
+var score: Control
 var hero_button: Button
 var menu_button: Button
 var tabs: Array[Button] = []
-var footer: ScrollContainer
-var tab_row: HBoxContainer
+var footer: Control
 var choosing := false
 var hero_choices: Array[Button] = []
 var start_button: Button
 var chooser_label: Label
+var look_buttons: Array[Button]=[]
 var last_station := 0
 func setup(owner_host: Control) -> void:
 	host = owner_host
@@ -37,6 +37,9 @@ func setup(owner_host: Control) -> void:
 		local_theme.set_stylebox(state,"Button",style)
 	theme = local_theme
 	hero_button = button(host.t("figure"),choose_hero)
+	# Long localized names must not increase Button's minimum width into the score.
+	hero_button.clip_text = true
+	hero_button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	hero_button.tooltip_text = host.t("choose_figure")
 	menu_button = button("☰",open_menu)
 	menu_button.text = ""
@@ -46,18 +49,13 @@ func setup(owner_host: Control) -> void:
 	menu_button.add_child(gear)
 	menu_button.tooltip_text = host.t("menu_tip")
 	title = label("")
-	score = label("")
-	score.add_theme_font_size_override("font_size",16)
-	footer = ScrollContainer.new()
-	footer.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	footer.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
-	footer.follow_focus = true
+	score = preload("res://core/quest/score_badge.gd").new()
+	score.caption=host.t("points");score.reduced_motion=host.store.data.reduced_motion
+	add_child(score)
+	footer = Control.new()
 	add_child(footer)
-	tab_row = HBoxContainer.new()
-	tab_row.add_theme_constant_override("separation",5)
-	footer.add_child(tab_row)
 	for id in Progress.SUBJECTS:
-		var b := button("",func(): switch_subject(id),tab_row)
+		var b := button("",func(): switch_subject(id),footer)
 		b.tooltip_text = host.t(id)
 		var icon := preload("res://core/quest/icon.gd").new()
 		if Progress.SUBJECTS.find(id)<3: icon.cell = Vector2i(Progress.SUBJECTS.find(id),0)
@@ -107,17 +105,19 @@ func switch_subject(id: String) -> void:
 		world.set_page(first/world.PAGE_SIZE)
 		world.hero_x = world.station_x(first)-140
 		world.target_x = world.hero_x
-		world.camera_x = maxf(0,world.hero_x-size.x*.3)
+		world.camera_x = world.follow_camera()
 	world.first_hint = done==0
 	host.audio.set_world(id)
 	host.narration.play_clip("quest/area_"+id,true)
-	footer.ensure_control_visible.call_deferred(tabs[Progress.SUBJECTS.find(id)])
+	if host.store.data.voice_auto and world.scene_id() in ["tree","seabed","city","moon"]:
+		host.narration.speak_feedback("quest/world_"+world.scene_id())
 	update_score()
 	arrange()
-func update_score() -> void:
+func update_score(animate := false) -> void:
 	var stars := Progress.stars(host.store.data.quest)
-	score.text = "★ %d · %d %s" % [stars,stars*10,host.t("points")]
+	score.set_total(stars,animate)
 	hero_button.text = hero_name(host.store.data.hero)
+	hero_button.tooltip_text = host.t("choose_figure")+": "+hero_button.text
 	for i in range(tabs.size()):
 		var style := StyleBoxFlat.new()
 		style.bg_color = Color("fae3b4") if Progress.SUBJECTS[i]==subject else Color("fff8e9")
@@ -129,34 +129,38 @@ func update_score() -> void:
 	queue_redraw()
 func arrange() -> void:
 	if not is_instance_valid(world): return
-	# A single fullscreen play surface. No nested scroll containers or tiny arrows.
 	if OS.get_name()=="Android":
-		var safe := DisplayServer.get_display_safe_area()
-		var ratio := Vector2(get_window().content_scale_size)/Vector2(get_window().size)
-		var origin := Vector2(get_window().position)
-		offset_left = maxf(0,safe.position.x-origin.x)*ratio.x
-		offset_top = maxf(0,safe.position.y-origin.y)*ratio.y
-		offset_right = -maxf(0,get_window().size.x-safe.end.x+origin.x)*ratio.x
-		offset_bottom = -maxf(0,get_window().size.y-safe.end.y+origin.y)*ratio.y
-	hero_button.position = Vector2(10,10);hero_button.size = Vector2(83,48)
-	menu_button.position = Vector2(size.x-60,10);menu_button.size = Vector2(50,48)
-	title.position = Vector2(96,2);title.size = Vector2(size.x-159,33)
-	score.position = Vector2(96,34);score.size = Vector2(size.x-159,28)
-	footer.position = Vector2(0,size.y-102);footer.size = Vector2(size.x,102)
-	tab_row.custom_minimum_size = Vector2(0,90)
+		var inset:=preload("res://core/mobile.gd").safe_insets(get_window().size,get_window().content_scale_size,DisplayServer.get_display_safe_area(),get_window().position)
+		offset_left=inset.x;offset_top=inset.y;offset_right=-inset.z;offset_bottom=-inset.w
+	var landscape := size.x>size.y*1.3
+	hero_button.position=Vector2(10,22);hero_button.size=Vector2(83,48)
+	menu_button.position=Vector2(size.x-60,22);menu_button.size=Vector2(50,48)
+	title.position=Vector2(96,0);title.size=Vector2(size.x-159,31)
+	title.add_theme_font_size_override("font_size",20)
+	score.position=Vector2(96,33);score.size=Vector2(size.x-159,54)
+	var footer_height := 84.0 if landscape else 146.0
+	footer.position=Vector2(0,size.y-footer_height);footer.size=Vector2(size.x,footer_height)
+	var columns := 8 if landscape else 4
+	var width := (size.x-12)/columns
+	var height := 78.0 if landscape else 69.0
 	for i in range(tabs.size()):
-		tabs[i].custom_minimum_size = Vector2(maxf(104,(size.x-16)/3-5),90)
-		tabs[i].get_child(0).position = Vector2((tabs[i].custom_minimum_size.x-66)/2,-2)
-		tabs[i].get_child(0).size = Vector2(66,66)
-		tabs[i].get_child(1).position = Vector2(0,57)
-		tabs[i].get_child(1).size = Vector2(tabs[i].custom_minimum_size.x,32)
-	world.position = Vector2(0,68)
-	world.size = Vector2(size.x,maxf(170,size.y-170))
+		var b := tabs[i]
+		b.position=Vector2(6+(i%columns)*width,4+(i/columns)*(height+3))
+		b.size=Vector2(width-4,height)
+		b.get_child(0).position=Vector2((b.size.x-38)/2,1)
+		b.get_child(0).size=Vector2(38,38)
+		b.get_child(1).position=Vector2(2,39)
+		b.get_child(1).size=Vector2(b.size.x-4,height-40)
+		b.get_child(1).add_theme_font_size_override("font_size",12)
+	world.position=Vector2(0,94)
+	world.size=Vector2(size.x,maxf(140,size.y-94-footer_height))
 	if is_instance_valid(chooser): arrange_chooser()
 	queue_redraw()
 func hero_name(id: String) -> String:
+	if not preload("res://core/quest/cast.gd").FAMILY and id!="squirrel": return preload("res://core/quest/hero.gd").NAMES[id]
 	if id=="du": return host.t("self_hero")
 	if id=="katze": return Lang.object_name("cat",host.store.data.locale)
+	if id=="squirrel": return host.t("squirrel")
 	return preload("res://core/quest/hero.gd").NAMES[id]
 func open_task(index: int) -> void:
 	if is_instance_valid(task_panel) or choosing: return
@@ -167,7 +171,7 @@ func open_task(index: int) -> void:
 	add_child(task_panel)
 	task_panel.setup(host,Progress.tasks(subject)[index])
 	task_panel.closed.connect(close_task)
-	task_panel.solved.connect(func(_id): update_score())
+	task_panel.solved.connect(func(_id): update_score(true))
 func close_task() -> void:
 	if is_instance_valid(task_panel):
 		if task_panel.complete:
@@ -200,6 +204,7 @@ func choose_hero() -> void:
 		b.tooltip_text = hero_name(id)
 		var figure := preload("res://core/quest/hero.gd").new()
 		figure.person = id
+		figure.costume = host.store.data.looks[id]
 		figure.animation = "idle"
 		figure.reduced_motion = host.store.data.reduced_motion
 		b.add_child(figure)
@@ -207,6 +212,18 @@ func choose_hero() -> void:
 		name_tag.add_theme_color_override("font_color",Color("fff4dc"))
 		name_tag.add_theme_font_size_override("font_size",22)
 		hero_choices.append(b)
+	look_buttons.clear()
+	for look in preload("res://core/quest/wardrobe.gd").LOOKS:
+		var look_button:=button("",func(): select_look(look),chooser)
+		look_button.add_theme_font_size_override("font_size",11)
+		look_button.tooltip_text=host.t("look_"+look)
+		var icon:=preload("res://core/quest/icon.gd").new()
+		icon.object={"classic":"fabric","hero":"star","alien":"robot","astronaut":"helmet","scientist":"glass"}[look]
+		look_button.add_child(icon)
+		var caption:=label(host.t("look_"+look),look_button)
+		caption.add_theme_font_size_override("font_size",10)
+		caption.autowrap_mode=TextServer.AUTOWRAP_ARBITRARY
+		look_buttons.append(look_button)
 	start_button = button(host.t("start"),finish_hero,chooser)
 	arrange_chooser()
 	select_hero(host.store.data.hero)
@@ -215,30 +232,58 @@ func arrange_chooser() -> void:
 	var landscape := size.x>size.y*1.3
 	chooser_label.position = Vector2(12,12);chooser_label.size = Vector2(size.x-24,48)
 	var count := hero_choices.size()
-	var featured := count==5 and not landscape
-	var columns := count if landscape else 2
-	var rows := 1 if landscape else ceili(count/2.0)
+	var featured := count>=5 and count%2==1 and not landscape
+	var columns := count if landscape else (3 if count>=7 else 2)
+	var rows := 1 if landscape else (1+ceili((count-1)/float(columns)) if featured else ceili(count/float(columns)))
 	var width := (size.x-28)/columns
-	var height := (size.y-144)/rows
+	var height := (size.y-210)/rows
 	for i in range(hero_choices.size()):
 		var b := hero_choices[i]
 		if featured:
-			# Wanja leads the family, followed by four equally reachable choices.
-			b.position = Vector2(14,68) if i==0 else Vector2(14+((i-1)%2)*width,68+(1+(i-1)/2)*height)
-			b.size = Vector2(size.x-36 if i==0 else width-8,height-8)
+			# The first hero leads the selection; the remaining choices stay equally reachable.
+			b.position = Vector2(14,68) if i==0 else Vector2(14+((i-1)%columns)*width,68+(1+(i-1)/columns)*height)
+			b.size = Vector2(size.x-36 if i==0 else width-8,height-6)
 		else:
 			b.position = Vector2(14+(i%columns)*width,68+(i/columns)*height)
-			b.size = Vector2(width-8,height-8)
+			b.size = Vector2(width-8,height-6)
 		var figure: Control = b.get_child(0)
-		var h := height-40
-		figure.size = Vector2(h*.67,h)
-		figure.position = Vector2((b.size.x-figure.size.x)/2,0)
+		var h := minf(height-46,(b.size.x-8)/figure.aspect())
+		figure.size = Vector2(h*figure.aspect(),h)
+		figure.position = Vector2((b.size.x-figure.size.x)/2,maxf(0,(b.size.y-37-h)/2))
 		var tag: Label = b.get_child(1)
 		tag.position = Vector2(0,b.size.y-37);tag.size = Vector2(b.size.x,33)
+		var px := 22
+		while px>12 and Art.font().get_string_size(tag.text,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>b.size.x-8: px-=1
+		tag.add_theme_font_size_override("font_size",px)
+	for i in range(look_buttons.size()):
+		look_buttons[i].position=Vector2(10+i*(size.x-20)/5,size.y-126)
+		look_buttons[i].size=Vector2((size.x-20)/5-3,54)
+		look_buttons[i].get_child(0).position=Vector2((look_buttons[i].size.x-26)/2,0)
+		look_buttons[i].get_child(0).size=Vector2(26,26)
+		look_buttons[i].get_child(1).position=Vector2(2,27)
+		look_buttons[i].get_child(1).size=Vector2(look_buttons[i].size.x-4,26)
 	start_button.position = Vector2(size.x*.14,size.y-65);start_button.size = Vector2(size.x*.72,52)
+func refresh_looks() -> void:
+	var looks: Array=preload("res://core/quest/wardrobe.gd").LOOKS
+	for i in range(look_buttons.size()):
+		var selected_look: bool=host.store.data.looks[host.store.data.hero]==looks[i]
+		var style:=StyleBoxFlat.new()
+		style.bg_color=Color("f8d382") if selected_look else Color("fff6df")
+		style.set_corner_radius_all(18)
+		look_buttons[i].add_theme_stylebox_override("normal",style)
+func select_look(look: String) -> void:
+	if look not in preload("res://core/quest/wardrobe.gd").LOOKS:return
+	host.store.data.looks[host.store.data.hero]=look
+	host.save()
+	var index: int=preload("res://core/quest/hero.gd").IDS.find(host.store.data.hero)
+	var figure: Control=hero_choices[index].get_child(0)
+	figure.costume=look;figure.react()
+	arrange_chooser();refresh_looks()
+	host.narration.play_clip("quest/look_"+look,true)
 func select_hero(id: String) -> void:
 	host.store.data.hero = id
 	host.save()
+	refresh_looks()
 	for i in range(hero_choices.size()):
 		var chosen: bool = preload("res://core/quest/hero.gd").IDS[i]==id
 		var style := StyleBoxFlat.new()
@@ -257,9 +302,10 @@ func finish_hero() -> void:
 	remove_child(chooser);chooser.queue_free();chooser=null
 	choosing = false
 	world.hero.person = host.store.data.hero
+	world.hero.costume = host.store.data.looks[host.store.data.hero]
 	world.set_process(true)
 	update_score()
-	host.narration.play_clip("quest/walk",true)
+	host.narration.play_clip("quest/world_"+world.scene_id() if world.scene_id() in ["tree","seabed","city","moon"] else "quest/walk",true)
 func open_menu() -> void:
 	if is_instance_valid(menu): return
 	menu = Panel.new()
@@ -270,12 +316,13 @@ func open_menu() -> void:
 	add_child(menu)
 	var box := VBoxContainer.new()
 	box.set_anchors_and_offsets_preset(PRESET_CENTER)
-	box.offset_left=-130;box.offset_right=130;box.offset_top=-164;box.offset_bottom=164
-	box.add_theme_constant_override("separation",12)
+	box.offset_left=-130;box.offset_right=130;box.offset_top=-159;box.offset_bottom=159
+	box.add_theme_constant_override("separation",6)
 	menu.add_child(box)
-	for entry in [[host.t("return"),func(): remove_child(menu);menu.queue_free();menu=null],[host.t("subjects"),host.subjects],[host.t("musicbox"),host.musicbox],[host.t("settings"),host.settings],[host.t("language"),host.languages]]:
+	for entry in [[host.t("return"),func(): remove_child(menu);menu.queue_free();menu=null],[host.t("subjects"),host.subjects],[host.t("scenery"),host.sceneries],[host.t("musicbox"),host.musicbox],[host.t("settings"),host.settings],[host.t("language"),host.languages]]:
 		var b := button(entry[0],entry[1],box)
-		b.custom_minimum_size = Vector2(240,52)
+		b.custom_minimum_size = Vector2(240,48)
+		b.add_theme_font_size_override("font_size",18)
 func persist() -> void: host.save()
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_PAUSED and host!=null:
@@ -283,4 +330,5 @@ func _notification(what: int) -> void:
 		persist()
 func _draw() -> void:
 	draw_rect(Rect2(Vector2.ZERO,size),Color("f5efd9"))
-	draw_line(Vector2(0,67),Vector2(size.x,67),Color("c6d5c3"),2)
+	if is_instance_valid(footer): draw_rect(Rect2(footer.position,footer.size),Color("fffdf4"))
+	draw_line(Vector2(0,93),Vector2(size.x,93),Color("c6d5c3"),2)

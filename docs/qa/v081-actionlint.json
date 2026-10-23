@@ -1,0 +1,9 @@
+{
+  "tool": "actionlint",
+  "version": "1.7.7",
+  "download": "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz",
+  "binary_sha256": "9f7dedb4e23f89f2922073d1a6720405b7b520d4f5832ebb96f0d55a2958886c",
+  "actual_command": "actionlint -color",
+  "result": "PASS",
+  "diagnostics": ""
+}

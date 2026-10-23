@@ -1,0 +1,114 @@
+{
+  "checks": 66,
+  "failures": 0,
+  "results": [
+    {
+      "captured_seconds": 6.68734693877551,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 6.66,
+      "expected_seconds": 6.58766412734985,
+      "locale": "de",
+      "peak": 0.711281538009644,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_98baf2bf3fa8729540bf.ogg",
+        "res://assets/voice/quest/de/voice_de_2e4dc1a900179b661351.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 9.38086167800454,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 9.409,
+      "expected_seconds": 9.30712032318115,
+      "locale": "de",
+      "peak": 0.685982584953308,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_da027f766dfc0b02a685.ogg",
+        "res://assets/voice/quest/de/voice_de_2e4dc1a900179b661351.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 11.3313378684807,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 11.337,
+      "expected_seconds": 11.2637641429901,
+      "locale": "en",
+      "peak": 0.815236032009125,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_bf9be30de59e7974db4d.ogg",
+        "res://assets/voice/quest/de/voice_de_98baf2bf3fa8729540bf.ogg",
+        "res://assets/voice/quest/en/voice_en_c4cf434fd59ea1a4b311.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 12.9102947845805,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 12.936,
+      "expected_seconds": 12.8905217647552,
+      "locale": "en",
+      "peak": 0.760819494724274,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_ab788c2dcdd45ec482e2.ogg",
+        "res://assets/voice/quest/de/voice_de_da027f766dfc0b02a685.ogg",
+        "res://assets/voice/quest/en/voice_en_c4cf434fd59ea1a4b311.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 11.1455782312925,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 11.163,
+      "expected_seconds": 11.0431745052338,
+      "locale": "ru",
+      "peak": 0.712538301944733,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_ff70d04ecf05b475f05c.ogg",
+        "res://assets/voice/quest/de/voice_de_98baf2bf3fa8729540bf.ogg",
+        "res://assets/voice/quest/ru/voice_ru_7b92c48504e3bfa99222.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 13.0031746031746,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 13.033,
+      "expected_seconds": 12.9021315574646,
+      "locale": "ru",
+      "peak": 0.714131653308868,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_54680ce7602f45ced773.ogg",
+        "res://assets/voice/quest/de/voice_de_da027f766dfc0b02a685.ogg",
+        "res://assets/voice/quest/ru/voice_ru_7b92c48504e3bfa99222.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 1.48607709750567,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 1.455,
+      "expected_seconds": 1.40653059631586,
+      "locale": "de",
+      "peak": 0.684067130088806,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_390687b81429aa4f2192.ogg"
+      ]
+    }
+  ],
+  "scope": "Actual desktop mixer; simulated application notifications, no Android device or human listening claim"
+}

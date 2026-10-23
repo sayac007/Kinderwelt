@@ -1,0 +1,19 @@
+{
+  "diagnosis": "Read existing editable network policy: restricted package-manager preset; GitHub API and model hosts not in custom allowlist",
+  "existing_custom_domains_preserved": [
+    "developer.android.com",
+    "support.google.com"
+  ],
+  "additional_domains": [
+    "api.github.com",
+    "huggingface.co",
+    "cdn-lfs.huggingface.co",
+    "cdn-lfs.hf.co",
+    "cas-bridge.xethub.hf.co",
+    "myshell-public-repo-host.s3.amazonaws.com"
+  ],
+  "draft_save_status": "saved",
+  "requires_publish": true,
+  "runtime_change_verified": false,
+  "meaning": "Saved draft only; review and save environment settings, then publish; no new application credentials requested or stored"
+}

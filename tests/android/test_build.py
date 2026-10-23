@@ -3,6 +3,7 @@ import contextlib
 import importlib.util
 import io
 import os
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -67,6 +68,31 @@ class BuildDiagnosticsTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'could not start process'):
                 build.run([str(path/'absent')], {}, path, path/'apk.log')
             self.assertIn('could not start process (FileNotFoundError)', output.getvalue())
+
+
+class SourceProvenanceTests(unittest.TestCase):
+    def test_snapshot_without_git_is_identified_honestly(self):
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(build.git_provenance(Path(d)),{'source_tracking':'unversioned-snapshot','source_commit':None,'source_dirty':None})
+    def test_nested_ignored_capsule_does_not_inherit_parent_git_identity(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);subprocess.run(['git','init','--quiet',str(root)],check=True)
+            (root/'.gitignore').write_text('build/\n')
+            subprocess.run(['git','-C',str(root),'add','.gitignore'],check=True)
+            subprocess.run(['git','-C',str(root),'-c','user.name=Regression Fixture','-c','user.email=fixture@example.invalid','commit','--quiet','-m','fixture'],check=True)
+            capsule=root/'build/capsule';capsule.mkdir(parents=True)
+            self.assertFalse(build.git_provenance(root)['source_dirty'])
+            self.assertEqual(build.git_provenance(capsule),{'source_tracking':'unversioned-snapshot','source_commit':None,'source_dirty':None})
+    def test_real_worktree_tracks_clean_and_modified_sources(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);subprocess.run(['git','init','--quiet',str(root)],check=True)
+            (root/'app.txt').write_text('source')
+            subprocess.run(['git','-C',str(root),'add','app.txt'],check=True)
+            subprocess.run(['git','-C',str(root),'-c','user.name=Regression Fixture','-c','user.email=fixture@example.invalid','commit','--quiet','-m','fixture'],check=True)
+            clean=build.git_provenance(root)
+            self.assertEqual(clean['source_tracking'],'git-worktree');self.assertFalse(clean['source_dirty'])
+            self.assertEqual(len(clean['source_commit']),40)
+            (root/'app.txt').write_text('changed');self.assertTrue(build.git_provenance(root)['source_dirty'])
 
 
 if __name__ == '__main__':

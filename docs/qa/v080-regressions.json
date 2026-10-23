@@ -1,0 +1,49 @@
+{
+  "version": "0.8.0",
+  "full_suite": {
+    "variants": [
+      "family",
+      "public"
+    ],
+    "quest_checks": 6085,
+    "world_checks": 3604,
+    "speech_mixer_checks": {
+      "existing": 30,
+      "native_sequences": 66,
+      "new_world_sequences": 34
+    },
+    "python_tests": 62,
+    "audio_unique_files_decoded": 1645,
+    "music_files_decoded": 20,
+    "fresh_import_boot_frames": 60,
+    "result": "PASS"
+  },
+  "final_world_rerun": {
+    "variants": [
+      "family",
+      "public"
+    ],
+    "checks_each": 3608,
+    "reason": "Final driver placement and explicit feet-occlusion check; all previous world checks retained",
+    "result": "PASS"
+  },
+  "rendering": {
+    "variants": [
+      "family",
+      "public"
+    ],
+    "frames_each": 383,
+    "profiles": [
+      "320x568",
+      "360x800",
+      "800x360",
+      "1080x2400 at simulated 420 dpi"
+    ],
+    "backend": "Godot gl_compatibility, Mesa llvmpipe, Xorg :99",
+    "result": "PASS"
+  },
+  "human_listening": "OPEN",
+  "android_device": "OPEN",
+  "learning_effect": "NOT ESTABLISHED",
+  "remote_ci": "NOT VERIFIED; GitHub API Forbidden"
+}

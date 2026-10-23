@@ -1,0 +1,53 @@
+Android SDK (ANDROID_HOME and ANDROID_SDK_ROOT): /workspace/tools/android-sdk
+import.log: PASS
+apk.log: PASS
+aab.log: PASS
+{
+  "status": "PASS",
+  "upload_readiness": "BLOCKED",
+  "artifacts": {
+    "kinderwelt-debug.apk": {
+      "assets_checked": 3430,
+      "abis": [
+        "arm64-v8a",
+        "x86_64"
+      ],
+      "elf_16kb_alignment": "PASS",
+      "native_packaging": "deflated; extracted by Android on installation",
+      "package": "org.example.kinderwelt.preview.neutral.v073",
+      "version_name": "0.7.3",
+      "version_code": 10,
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "permissions": [],
+      "allow_backup": false,
+      "orientation": "fullUser",
+      "signature": "verified Godot development certificate, v2",
+      "zip_16kb_alignment": "PASS",
+      "bytes": 178214939,
+      "sha256": "2bd4733541453821d1a5078182174b891ccb9679b7386cdeb104389269dba564"
+    },
+    "kinderwelt-unsigned.aab": {
+      "assets_checked": 3430,
+      "abis": [
+        "arm64-v8a",
+        "x86_64"
+      ],
+      "elf_16kb_alignment": "PASS",
+      "native_packaging": "deflated; extracted by Android on installation",
+      "package": "org.example.kinderwelt.preview.neutral.v073",
+      "version_name": "0.7.3",
+      "version_code": 10,
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "permissions": [],
+      "allow_backup": false,
+      "orientation": "fullUser",
+      "signature": "UNSIGNED",
+      "rendering": "gl_compatibility",
+      "bytes": 166845218,
+      "sha256": "0b44901bd73f1d47a64a992ab4f9c8775dddcab7650a348ad7515b6a45807027"
+    }
+  }
+}
+Verified debug APK and unsigned AAB: /workspace/Kinderwelt/build/android-v073-public

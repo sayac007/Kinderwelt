@@ -1,0 +1,30 @@
+{
+  "overshoot_regression": {
+    "id": "chemistry_20",
+    "locale": "en",
+    "rejected_sha256": "06fc6965c1811f327279f74d989fa77be4db7aa6868e3ca5fa88016c0c1bde28",
+    "rejected_decoded_peak": 1.030924677848816,
+    "action": "Invalid cached recording rejected and regenerated; final Vorbis result measured before acceptance",
+    "shipping_sha256": "6df708ddcc519abc3df4e7ad03736f0a2a8f6509a5917ce36cab7775ebe4be53",
+    "shipping_encoding": {
+      "policy": "decoded-vorbis-peak-1",
+      "uniform_gain": 1.0,
+      "decoded_peak": 0.7026188373565674,
+      "ceiling": 0.95,
+      "encodes": 1
+    }
+  },
+  "unchanged_collections": {
+    "de": {
+      "manifest_sha256": "c2e05c5a199a813ca40bfeef482de200b8509c8a5ff3a055c9826e3713564ab1",
+      "same_as_v072": true,
+      "all_audio_hashes_verified": true
+    },
+    "ru": {
+      "manifest_sha256": "ce9ea04cca010490ab8dacee32395c28a4ec43a5624aacb0172c643a83c8815c",
+      "same_as_v072": true,
+      "all_audio_hashes_verified": true
+    }
+  },
+  "scope": "Technical measurements only; no human listening approval"
+}
