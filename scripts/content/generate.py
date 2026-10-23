@@ -154,6 +154,8 @@ assert len(tasks)==320 and len({t['id'] for t in tasks})==320
 from advanced import renew
 from experience import expand
 tasks=expand(renew(tasks,languages),languages)
+from pedagogy import apply
+tasks=apply(tasks,languages)
 for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
     assert sum(t['subject']==subject for t in tasks)==40
 for t in tasks:
@@ -163,3 +165,11 @@ for t in tasks:
 (ROOT/'games/quest/tasks.json').write_text(json.dumps({'schema':2,'authorship':'Original Kinderwelt tasks; multilingual authored subject bank, no copied commercial exercises.','tasks':tasks},ensure_ascii=False,indent=2)+'\n')
 (ROOT/'games/quest/languages.json').write_text(json.dumps(languages,ensure_ascii=False,indent=2)+'\n')
 print('320 base exercises + 640 optional bonuses; native German, English and Russian literacy.')
+
+# Keep the existing long-term editorial reference aligned with the compiled
+# base texts. Before-values and baseline identity stay unchanged; no run log.
+log_path=SOURCE/'localization-changes.json'
+log=json.loads(log_path.read_text());by_id={t['id']:t for t in tasks}
+for change in log['changes']:
+    change['after']=by_id[change['id']]['texts'][change['locale']][change['field']]
+log_path.write_text(json.dumps(log,ensure_ascii=False,indent=2)+'\n')

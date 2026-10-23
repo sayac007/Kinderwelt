@@ -1,0 +1,89 @@
+# subject|stable property id|objects for which the statement is true|DE|EN|RU
+physics|turn|wheel gear pulley screwdriver|Dreht sich ganz herum.|Turns all the way round.|Делает полный оборот.
+physics|axis|wheel gear pulley lever scissors screwdriver|Bewegt sich um eine Achse.|Moves about an axis.|Движется вокруг оси.
+physics|handtool|hammer screwdriver scissors magnet|Wird als Handwerkzeug benutzt.|Is used as a hand tool.|Это ручной инструмент.
+physics|transport|wheel bridge|Darauf rollt ein Fahrzeug.|Vehicles roll on it.|На нём или по нему катится транспорт.
+physics|circuit|battery bulb|Ist Stromquelle oder Leuchte.|Is a power source or lamp.|Это источник тока или лампа.
+physics|teeth|gear|Greift mit Zähnen ein.|Meshes using teeth.|Сцепляется зубцами.
+physics|rope|pulley|Führt ein Seil um eine Rolle.|Guides a rope round a wheel.|Направляет верёвку вокруг ролика.
+physics|bar|lever|Kippt als Balken auf einer Stütze.|Tilts as a beam on a support.|Качается как доска на опоре.
+physics|nail|hammer|Schlägt Nägel ins Holz.|Drives nails into wood.|Забивает гвозди в дерево.
+physics|screw|screwdriver|Dreht Schrauben ins Holz.|Turns screws into wood.|Вкручивает шурупы в дерево.
+physics|cut|scissors|Schneidet Papier mit zwei Klingen.|Cuts paper with two blades.|Режет бумагу двумя лезвиями.
+physics|iron|magnet|Zieht Eisen ohne Berührung an.|Attracts iron without touching it.|Притягивает железо без касания.
+physics|energy|battery|Liefert elektrische Energie.|Supplies electrical energy.|Даёт электрическую энергию.
+physics|light|bulb|Leuchtet bei geschlossenem Stromkreis.|Shines in a complete circuit.|Светит в замкнутой цепи.
+physics|head|helmet|Wird zum Kopfschutz getragen.|Is worn to protect the head.|Носится для защиты головы.
+physics|crossing|bridge|Trägt einen Weg über Wasser.|Carries a path over water.|Несёт дорогу над водой.
+biology|animal|bee butterfly bird cat mouse fish frog turtle worm|Ist ein Tier.|Is an animal.|Это животное.
+biology|plant|tree flower leaf roots seed|Ist eine Pflanze oder ein Pflanzenteil.|Is a plant or plant part.|Это растение или часть растения.
+biology|mammal|cat mouse|Trinkt als Jungtier Muttermilch.|Drinks mother's milk when young.|Детёныш пьёт материнское молоко.
+biology|wings|bee butterfly bird|Hat ausgewachsen Flügel.|Has wings as an adult.|У взрослого крылья.
+biology|insect|bee butterfly|Hat ausgewachsen sechs Beine.|Has six legs as an adult.|У взрослого шесть ног.
+biology|feather|bird|Hat Federn.|Has feathers.|Есть перья.
+biology|pupa|bee butterfly|War vorher eine Puppe.|Develops through a pupa stage.|Бывает куколкой.
+biology|nectar|bee butterfly|Trinkt Nektar an Blüten.|Drinks nectar from blossoms.|Пьёт нектар из цветков.
+biology|water|fish|Atmet im Wasser mit Kiemen.|Breathes in water using gills.|Дышит в воде жабрами.
+biology|tadpole|frog|Entwickelt sich aus einer Kaulquappe.|Develops from a tadpole.|Развивается из головастика.
+biology|shell|turtle|Hat einen festen Körperpanzer.|Has a hard body shell.|Есть твёрдый панцирь.
+biology|green|tree leaf|Bildet mit grünen Blättern Nahrung.|Makes food using green leaves.|Образует пищу зелёными листьями.
+biology|bloom|flower|Ist der Pflanzenteil mit Nektar.|Is the plant part with nectar.|Это часть растения с нектаром.
+biology|uptake|roots tree|Nimmt Wasser aus dem Boden auf.|Takes water up from soil.|Всасывает воду из почвы.
+biology|germinate|seed|Kann als Korn keimen.|Can germinate as a seed.|Может прорасти из зёрнышка.
+biology|kingdom|mushroom|Gehört zum Reich der Pilze.|Belongs to the fungi kingdom.|Относится к царству грибов.
+chemistry|solid|salt sand metal glass wood paper fabric|Ist bei zwanzig Grad fest.|Is solid at twenty degrees.|При 20 градусах твёрдое.
+chemistry|liquid|water oil|Ist bei zwanzig Grad flüssig.|Is liquid at twenty degrees.|При 20 градусах жидкое.
+chemistry|grain|salt sand|Liegt als kleine Körner vor.|Comes as small grains.|Состоит из мелких крупинок.
+chemistry|fiber|wood paper fabric|Hat pflanzliche Fasern.|Has plant fibres.|Из растительных волокон.
+chemistry|fold|paper fabric|Lässt sich leicht von Hand falten.|Can easily be folded by hand.|Легко складывается.
+chemistry|dissolve|salt|Löst sich in wenig Wasser auf.|Dissolves in a little water.|Растворяется в воде.
+chemistry|insoluble|sand metal glass wood paper fabric oil|Bleibt als Stoff in Wasser ungelöst.|Stays undissolved in water.|Не растворяется в воде.
+chemistry|magnetic|metal|Wird von einem Dauermagneten angezogen.|Is attracted by a permanent magnet.|Притягивается постоянным магнитом.
+chemistry|tree|wood paper|Wird aus Baumholz gewonnen.|Is obtained from tree wood.|Получено из древесины.
+chemistry|cut|paper fabric|Kann eine Bastelschere leicht schneiden.|Can easily be cut with craft scissors.|Режется детскими ножницами.
+chemistry|sealing|metal glass|Ist als massive Wand wasserdicht.|Is watertight as a solid wall.|Вода не проходит сквозь стенку.
+chemistry|float|oil|Bildet oben auf Wasser eine Schicht.|Forms a layer on top of water.|Плавает слоем на воде.
+chemistry|glass|glass|Lässt als klare Scheibe Licht durch.|Lets light through as a clear pane.|Пропускает свет как прозрачный лист.
+chemistry|wood|wood|Stammt als fester Klotz aus einem Baumstamm.|Comes as a solid block from a tree trunk.|Брусок из ствола дерева.
+body|pair|eye ear hand foot lungs|Kommt als ein linkes und rechtes Paar vor.|Comes as a left and right pair.|Есть слева и справа.
+body|head|eye ear nose tongue brain tooth|Liegt am oder im Kopf.|Is on or inside the head.|Находится на голове или в ней.
+body|inside|heart lungs brain stomach bone|Liegt geschützt im Körperinneren.|Lies protected inside the body.|Защищено внутри тела.
+body|outside|eye ear nose tongue hand foot tooth|Kann ohne Werkzeug angeschaut werden.|Can be seen without tools.|Можно увидеть без инструментов.
+body|mouth|tongue tooth|Befindet sich im Mund.|Is inside the mouth.|Находится во рту.
+body|chest|heart lungs|Liegt im Brustkorb.|Is in the chest.|Находится в грудной клетке.
+body|see|eye|Nimmt Licht für das Sehen auf.|Receives light for seeing.|Принимает свет для зрения.
+body|hear|ear|Nimmt Schall beim Hören auf.|Receives sound for hearing.|Принимает звук при слушании.
+body|smell|nose|Nimmt Duftstoffe beim Riechen auf.|Receives scents when smelling.|Улавливает запахи.
+body|taste|tongue|Erkennt Geschmack im Mund.|Detects tastes in the mouth.|Различает вкус во рту.
+body|grip|hand|Greift gewöhnlich mit Fingern zu.|Usually grips using fingers.|Обычно хватает пальцами руки.
+body|walk|foot|Berührt beim Gehen mit der Sohle den Boden.|Touches the ground with its sole when walking.|При ходьбе касается земли подошвой.
+body|pump|heart|Pumpt Blut durch den Körper.|Pumps blood round the body.|Качает кровь по телу.
+body|oxygen|lungs|Gibt Luftsauerstoff ins Blut weiter.|Passes oxygen from air into blood.|Передаёт кислород из воздуха в кровь.
+body|think|brain|Verarbeitet Erinnerungen und Gedanken.|Processes memories and thoughts.|Обрабатывает воспоминания и мысли.
+body|digest|stomach|Mischt Essen im Bauch mit Magensaft.|Mixes food with digestive juice in the abdomen.|Смешивает пищу с желудочным соком в животе.
+body|support|bone|Stützt als Knochen den Arm.|Supports the arm as a bone.|Поддерживает руку как кость.
+body|bite|tooth|Zerkleinert Essen beim Beißen.|Breaks food up when biting.|Измельчает пищу при укусе.
+geography|tool|map globe compass|Eine Orientierungshilfe.|A navigation aid.|Средство ориентирования.
+geography|model|map globe|Bildet die Erdoberfläche ab.|Represents Earth's surface.|Изображает поверхность Земли.
+geography|round|globe sun moon star|Ist kugelförmig.|Is spherical.|Имеет форму шара.
+geography|shine|sun star|Leuchtet selbst.|Produces its own light.|Излучает свой свет.
+geography|water|river sea|Ist ein Gewässer.|Is a body of water.|Это водоём.
+geography|land|mountain island forest desert|Eine Landschaft an Land.|A landscape on land.|Это местность на суше.
+geography|flow|river|Hat Quelle und Mündung.|Has a source and mouth.|Есть исток и устье.
+geography|salt|sea|Ein salziges Gewässer.|A salty body of water.|Это солёный водоём.
+geography|island|island|Land mit Wasser ringsherum.|Land with water all around.|Суша, окружённая водой.
+geography|peak|mountain|Hat einen hohen Gipfel.|Has a high summit.|Есть высокая вершина.
+geography|forest|forest|Viele Bäume stehen dicht beisammen.|Many trees grow close together.|Много близко растущих деревьев.
+geography|dry|desert|Hat sehr wenig Niederschlag.|Has very little precipitation.|Очень мало осадков.
+geography|rain|rain|Fällt in flüssigen Tropfen.|Falls as liquid drops.|Падает жидкими каплями.
+geography|snow|snow|Fällt in Eiskristallen.|Falls as ice crystals.|Падает кристаллами льда.
+geography|cloud|cloud|Schwebt als Tröpfchen oder Kristalle.|Floats as droplets or crystals.|Капельки или кристаллы висят в воздухе.
+geography|needle|compass|Hat eine Magnetnadel.|Has a magnetic needle.|Есть магнитная стрелка.
+geography|fold|map|Lässt sich als Papier falten.|Can be folded as paper.|Бумажный лист складывается.
+geography|globe|globe|Ein drehbares Erdmodell auf Ständer.|A rotating Earth model on a stand.|Модель Земли вращается на подставке.
+geography|weather|rain snow|Ist Niederschlag.|Is precipitation.|Это осадки.
+geography|sky|sun moon star cloud rain snow|Ist am Himmel zu sehen.|Can be seen in the sky.|Можно увидеть в небе.
+biology|bones|bird cat mouse fish frog turtle|Hat Knochen im Körperinneren.|Has bones inside its body.|Внутри тела есть кости.
+biology|fourlegs|cat mouse frog turtle|Hat ausgewachsen vier Beine.|Has four legs as an adult.|У взрослого четыре ноги.
+biology|not_animal|tree flower leaf roots seed mushroom|Ist kein Tier.|Is not an animal.|Это не животное.
+biology|not_plant|bee butterfly bird cat mouse fish frog turtle worm mushroom|Ist keine Pflanze.|Is not a plant.|Это не растение.

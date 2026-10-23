@@ -5,21 +5,27 @@
 1. `foundation-tasks.json`, die Fach-TSVs, `german-words.tsv` und `languages-source.json` bilden Ausgangsaufgaben und Begriffe.
 2. `distractor-changes.json` enthält bewusst geprüfte Antwortoptionsänderungen; `science-answer-fixtures.json` sichert stabile Sachantworten. Kategorien sind eine Review-Hilfe, kein Generator beliebiger falscher Antworten.
 3. `advanced.py` erneuert die Grundaufgaben mit `advanced-*.tsv` und `advanced-words.tsv`.
-4. `experience.py` ergänzt native Sprachvarianten, Kontextbilder aus `riddle-cues.json` und Boni; `reasoning-bank.tsv` ist die bisherige Sachbonusquelle.
-5. Der Generator vergibt stabile IDs/Antwortpositionen und erzeugt außerdem das nachvollziehbare `localization-changes.json`. `localization.py` und `distractors.py` reproduzieren die zugehörigen Review-Dokumente.
+4. `experience.py` ergänzt native Sprachvarianten, Kontextbilder aus `riddle-cues.json` und Boni. Sachboni kompiliert `pedagogy.science_bonuses()` aus `science-properties.tsv` und den konkreten Modellen/Bezeichnungen in `science-models.json`. `reasoning-bank.tsv` bleibt eine ausdrücklich inaktive Altquelle.
+5. `pedagogy.apply()` übernimmt die geprüften Grundaufgaben aus `pedagogy-base.tsv`, Denkhinweise und `science-hints.tsv`. Die Vergleichskategorien aus `answer-categories.json` sind ausschließlich eine QA-Hilfe mit begründeten Ausnahmen; sie erzeugen keine Antwortoptionen.
+6. Der Generator vergibt stabile IDs/Antwortpositionen und aktualisiert die aktuellen Nachher-Texte im langfristigen Redaktionsnachweis `localization-changes.json`; ursprüngliche Vorher-Werte bleiben erhalten. `localization.py` und `distractors.py` reproduzieren kompakte Anleitungen; ihre ausführlichen Laufzeitbefunde landen in `qa-results/`.
 
 ```sh
 python3 scripts/content/generate.py
 python3 scripts/qa/localization.py --check
 python3 scripts/qa/distractors.py --check
+python3 scripts/qa/pedagogy.py --check
 python3 -m unittest discover -s tests/android -v
 ```
 
 Anschließend die vollständige Suite aus [QUALITY_ASSURANCE.md](QUALITY_ASSURANCE.md) ausführen. Änderungen müssen im Generator oder seinen Quellen stehen; ein zweiter Generatorlauf darf keinen weiteren Diff erzeugen. Anzahl, stabile IDs, eindeutige Antworten, Übersetzungen und freiwillige 50-/100-Punkte-Boni erhalten.
 
+Sachboni prüfen drei beziehungsweise vier kurze Aussagen: Genau zwei beziehungsweise drei müssen für die gewählte Option stimmen. Jede falsche Option erfüllt mindestens eine Aussage, aber nicht die geforderte Anzahl. Die Faktenmatrix beschreibt ausdrücklich die genannten Unterrichtsmodelle, keine universellen Behauptungen. Jede Station verwendet einen eigenen Merkmalssatz; die deterministische Auswahl ersetzt kein fachliches Review der Quelldaten. `tests/qa/content_layout.gd` misst alle Überschriften in beiden Textgrößen und beiden Orientierungen mit der tatsächlich ausgelieferten Schrift.
+
 ## Sprache und Auslieferung
 
 `narration_texts()` in `scripts/generate-quest-voice.py` bestimmt die gesprochenen Texte einschließlich Hinweisen. Nach Inhaltsänderungen jede Locale gegen `assets/voice/quest/<locale>/manifest.json` vergleichen. Geänderte Texte benötigen neue, mit der bestehenden Engine erzeugte Clips, passende Hashes und tatsächliche Decodier-/Wiedergabeprüfungen. Alte Aufnahmen dürfen nicht durch bloßes Umetikettieren als aktuell gelten. [Erzeugung und manuelle Hörprüfung](voice.md).
+
+Qwen-Locales auf dieser 32-GB-Umgebung nacheinander erzeugen: Zwei gleichzeitige 32er-Läufe überschritten das Speicherlimit. Fertige Checkpoints können wiederverwendet werden. Mit `--ids` erzeugte Teilbanken niemals unmittelbar ausliefern; vor der Installation müssen alle aktuellen Text-/ID-Zuordnungen und tatsächlichen Dateihashes vollständig stimmen.
 
 ## Pädagogisches Review
 

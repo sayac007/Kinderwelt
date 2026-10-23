@@ -17,4 +17,6 @@ GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash t
 python3 scripts/qa/documentation.py --check
 ```
 
+Für wiederholte Bildprüfungen ein neues Ausgabeverzeichnis wählen.
+
 App-Einstieg: `core/quest/main.tscn`; erzeugte Inhalte: `games/quest/tasks.json`. Ältere Nachweise bleiben vollständig im [versionsfesten QA-Archiv](docs/qa/README.md). Neue Laufberichte gehören in CI-Artefakte, nicht als Einzeldateien ins Git.

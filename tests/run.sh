@@ -2,6 +2,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PROJECT=$(pwd)
+mkdir -p qa-results
+# Runtime screenshots/reports are evidence, not game resources to reimport.
+touch qa-results/.gdignore
 python3 scripts/variants.py prepare --output "$PROJECT" --variant "${KINDERWELT_VARIANT:-auto}"
 STATE=$(mktemp -d /tmp/kinderwelt-tests.XXXXXX)
 trap 'rm -rf "$STATE"' EXIT
@@ -21,7 +24,7 @@ checked --headless --path . -s tests/boot.gd
 KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd
 KINDERWELT_SAVE_TEST=read checked --headless --path . -s tests/save_restart.gd
 checked --headless --path . -s tests/rewards.gd
-mkdir -p qa-results
+checked --headless --path . -s tests/qa/content_layout.gd
 export KINDERWELT_SPEECH_REPORT=${KINDERWELT_SPEECH_REPORT:-"$PROJECT/qa-results/speech-playback.json"}
 export KINDERWELT_SEQUENCE_REPORT=${KINDERWELT_SEQUENCE_REPORT:-"$PROJECT/qa-results/speech-sequences.json"}
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_playback.gd
@@ -44,3 +47,5 @@ python3 scripts/qa/voice_models.py
 python3 scripts/music/notices.py --check
 
 python3 scripts/qa/documentation.py --check
+
+python3 scripts/qa/pedagogy.py --check

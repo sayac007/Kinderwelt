@@ -117,16 +117,13 @@ def language_bonus(parent,index,level):
         opts=[answer,*wrong];shift=index%3;opts=opts[shift:]+opts[:shift]
         masked=''.join('＿' if p in positions else c for p,c in enumerate(word))
         variant={'word':word,'display':masked,'answer':answer,'options':opts}
+        from pedagogy import STRATEGIES
         if locale=='de':
             from advanced import word_title
             q=word_title(word,locale)+'. Welche Buchstaben fehlen?'
-            h='Die Lücke braucht '+'. '.join(answer)+'.'
-        elif locale=='en':
-            q=word.capitalize()+'. Which letters are missing?'
-            h='The missing letters are '+'. '.join(answer)+'.'
-        else:
-            q=word.capitalize()+'. Какие буквы пропущены?'
-            h='На месте пропуска: '+'. '.join(answer)+'.'
+        elif locale=='en':q=word.capitalize()+'. Which letters are missing?'
+        else:q=word.capitalize()+'. Какие буквы пропущены?'
+        h=STRATEGIES['german'][LOCALES.index(locale)]
         bonus['texts'][locale]={'prompt':q,'tip':h}
         if locale=='de':bonus.update(variant)
         else:bonus['variants'][locale]=variant
@@ -145,17 +142,23 @@ def math_bonus(index,level):
     return {'kind':'equation','display':display,'answer':answer,'options':numeric(answer,index),'texts':texts(q,h)}
 
 def logic_bonus(parent,index,level):
+    a=1+index%5;step=2+index//5
     if level==1:
-        a=1+index%5;step=1+index//5;seq=[a,a+step,a+step+1,a+2*step+1];answer=a+2*step+2
-        display=' → '.join(map(str,seq))+' → ?'
-        q=['Zwei Schritte wechseln sich ab. Welche Zahl folgt?','Two steps alternate. Which number comes next?','Два шага чередуются. Какое число дальше?']
-        h=[f'Abwechselnd {step} dazu, dann eins dazu.',f'Alternate adding {step}, then adding one.',f'Чередуй: прибавь {step}, затем один.']
+        sequence=[a,a+step,a+step+1,a+2*step+1]
+        continuation=[a+2*step+2,a+3*step+2];answer=sum(continuation)
+        display=' → '.join(map(str,sequence))+' → ? → ?'
+        numbers=', '.join(map(str,sequence))
+        q=[f'{numbers}. Zwei Schritte wechseln. Wie groß ist die Summe der nächsten beiden Zahlen?',f'{numbers}. Two steps alternate. What is the sum of the next two numbers?',f'Продолжи ряд: {numbers}. Найди сумму двух следующих чисел.']
+        h=[f'Abwechselnd {step} und eins dazu. Setze zweimal fort und addiere beide neuen Zahlen.',f'Alternate adding {step} and one. Continue twice, then add the two new numbers.',f'Чередуй прибавление {step} и одного. Продолжи дважды и сложи два новых числа.']
+        rule={'steps':[step,1],'given':sequence,'continuation':continuation,'operation':'sum-next-two'}
     else:
-        a=1+index%5;step=1+index//5;answer=2*(a+2)+step
-        display=f'{a} → {2*a+step}\n{a+1} → {2*(a+1)+step}\n{a+2} → ?'
-        q=['Finde die Regel. Was kommt rechts hin?','Find the rule. What goes on the right?','Найди правило. Что будет справа?']
-        h=[f'Verdopple zuerst. Dann kommen {step} dazu.',f'Double first. Then add {step}.',f'Сначала удвой. Затем прибавь {step}.']
-    return {'kind':'equation','display':display,'answer':answer,'options':numeric(answer,index),'texts':texts(q,h)}
+        extra=1+index//5;answer=a+2;output=2*answer+extra
+        examples=[[a,2*a+extra],[a+1,2*(a+1)+extra]]
+        display=f'{a} → {examples[0][1]}\n{a+1} → {examples[1][1]}\n? → {output}'
+        q=[f'Aus {a} wird {examples[0][1]}, aus {a+1} wird {examples[1][1]}. Welche Startzahl ergibt {output}?',f'{a} becomes {examples[0][1]}, {a+1} becomes {examples[1][1]}. Which starting number gives {output}?',f'{a} превращается в {examples[0][1]}, {a+1} — в {examples[1][1]}. Какое начальное число даёт {output}?']
+        h=[f'Vorwärts: verdoppeln, danach {extra} addieren. Gehe für die gesuchte Startzahl rückwärts.',f'Forward: double, then add {extra}. Work backwards to find the starting number.',f'Вперёд: удвой, затем прибавь {extra}. Найди начальное число обратными действиями.']
+        rule={'multiply':2,'add':extra,'examples':examples,'output':output,'operation':'inverse-function'}
+    return {'kind':'equation','display':display,'answer':answer,'options':numeric(answer,index),'texts':texts(q,h),'logic_rule':rule}
 
 def expand(tasks,languages):
     ui=languages['ui']
@@ -171,16 +174,7 @@ def expand(tasks,languages):
         'rhyme':('Was reimt sich?','Which words rhyme?','Какие слова рифмуются?'),
         'privacy':('320 Aufgaben und jeweils zwei freiwillige Bonusaufgaben. Keine Konten, Werbung oder Netzwerkverbindungen. Dein Gesamtpunktestand bleibt auf diesem Gerät.','320 tasks, each with two optional bonus challenges. No accounts, adverts or network connections. Your total score stays on this device.','320 заданий, в каждом два необязательных бонусных задания. Нет аккаунтов, рекламы и сетевых соединений. Общий счёт сохраняется на этом устройстве.'),
     }.items():ui[key]=dict(zip(LOCALES,values))
-    bank={}
-    for line in (SOURCE/'reasoning-bank.tsv').read_text().splitlines():
-        if line and not line.startswith('#'):
-            key,*questions=line.split('|')
-            assert len(questions)==6,key
-            bank[key]=[questions[:3],questions[3:]]
     cues=json.loads((SOURCE/'riddle-cues.json').read_text())
-    # A bonus must not reward blindly touching the parent's just-revealed answer.
-    # Reuse a different concept from this subject and its reviewed distractors.
-    science_sources={s:[t for t in tasks if t['subject']==s] for s in ['physics','biology','chemistry','body','geography']}
     for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
         parents=[t for t in tasks if t['subject']==subject]
         for index,parent in enumerate(parents):
@@ -202,24 +196,17 @@ def expand(tasks,languages):
                 elif subject=='german':bonus=language_bonus(parent,index,level)
                 elif subject=='logic':bonus=logic_bonus(parent,index,level)
                 else:
-                    previous={parent['answer']}|{b['answer'] for b in bonuses}
-                    candidates=science_sources[subject]
-                    # Prefer nearby topics and existing alternatives within the subject.
-                    related=[t for t in candidates if t['answer'] in parent['options'] and t['answer'] not in previous]
-                    alternatives=related or [t for t in candidates if t['answer'] not in previous]
-                    source=alternatives[(index+level-1)%len(alternatives)]
-                    answer=source['answer']
-                    options=list(source['options']);shift=(index+level)%3;options=options[shift:]+options[:shift]
-                    bonus={'kind':'discovery','answer':answer,'options':options,'object':source['object'],
-                           'riddle_scene':cues[source['id']]['scene'],'keyword':'?',
-                           'texts':texts(bank.get(subject+':'+answer,bank[answer])[level-1],[
-                               'Gesucht ist: '+languages['objects'][answer]['de']+'.',
-                               'The answer is '+languages['objects'][answer]['en']+'.',
-                               'Ответ: '+languages['objects'][answer]['ru']+'.'])}
+                    # The complete scientific comparisons are compiled below
+                    # after the common ID/reward wrapper exists, never returned
+                    # as unfinished tasks.
+                    bonus={'kind':'discovery','answer':parent['answer'],'options':list(parent['options']),
+                           'object':parent['object'],'texts':deepcopy(parent['texts'])}
                 bonus.update(id=parent['id']+'_bonus_'+str(level),parent_id=parent['id'],subject=subject,points=50 if level==1 else 100,optional=True,reasoning_level=level,content_revision=2)
                 bonus['prompt']=bonus['texts']['de']['prompt'];bonus['tip']=bonus['texts']['de']['tip']
                 bonuses.append(bonus)
             parent['bonuses']=bonuses
+    from pedagogy import science_bonuses
+    tasks=science_bonuses(tasks,languages)
     # Stable per-task shuffling prevents solving a whole round by the old
     # repeating left/middle/right answer-position cycle.
     import hashlib

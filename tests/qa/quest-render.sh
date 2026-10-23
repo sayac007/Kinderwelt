@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+mkdir -p qa-results
+touch qa-results/.gdignore
 python3 scripts/variants.py prepare --output . --variant "${KINDERWELT_VARIANT:-auto}"
 OUTPUT=${1:?Pass a new output directory}
 if [[ -e "$OUTPUT" ]]; then echo 'Refusing existing output' >&2; exit 1; fi
 mkdir -p "$OUTPUT"
+touch "$OUTPUT/.gdignore"
 OUTPUT=$(realpath "$OUTPUT")
 STATE=$(mktemp -d /tmp/kinderwelt-quest-render.XXXXXX)
 trap 'rm -rf "$STATE"' EXIT
