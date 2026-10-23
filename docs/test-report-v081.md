@@ -1,5 +1,7 @@
 # Tatsächliche Prüfungen und Android-Artefakte – 0.8.1
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenntes privates Figurenrepository](family-repository.md), [Figurenherkunft](character-origins.md), [offener Stimmwunsch](voice-v081.md).
 
 ## Fertig lokal, extern noch offen
@@ -18,7 +20,7 @@ Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenn
 - **24 aktuelle PNG-Quellen** sind auf hier erzeugte KI-Ausgaben zurückgeführt; zwölf private Dateien, ein neutraler Atlas und elf gemeinsame Dateien inklusive NPC-/Objektatlanten, Szenen und UI. Aktuelle Bildhashes werden geprüft. Die vier älteren Figurenbilder bleiben gesperrt; kein aktuell verwendetes heruntergeladenes Figurenbild festgestellt. Das ist eine Herkunftsprüfung, keine juristische Freigabe.
 - `actionlint 1.7.7` prüfte die endgültigen GitHub-Workflows fehlerfrei. Private Quellen/Token werden ausschließlich für vertrauenswürdige Push-/Dispatch-Läufe verwendet; Pull Requests bauen neutral ohne Zugriff auf das Figurenrepository.
 
-Protokolle und maschinenlesbare Berichte: `docs/qa/v081-*`. Es wurden **keine neuen 383 visuellen Renderings** für 0.8.1 ausgeführt: Figuren, Looks, Aufgaben, sieben Welten, Bewegung, UI-Layout und Sprachdateien wurden unverändert übernommen. Die Einstellungen zeigen 0.8.1; deren Spiel-/Layoutprüfungen sind in der aktuellen Suite enthalten. Die vorherigen echten Renderings bleiben unter `v080-*` nachgewiesen.
+Protokolle und maschinenlesbare Berichte: [Archivindex: v081-*](qa/ARCHIVE_INDEX.tsv). Es wurden **keine neuen 383 visuellen Renderings** für 0.8.1 ausgeführt: Figuren, Looks, Aufgaben, sieben Welten, Bewegung, UI-Layout und Sprachdateien wurden unverändert übernommen. Die Einstellungen zeigen 0.8.1; deren Spiel-/Layoutprüfungen sind in der aktuellen Suite enthalten. Die vorherigen echten Renderings bleiben unter `v080-*` nachgewiesen.
 
 ## Tatsächlich erzeugte Dateien
 
@@ -71,12 +73,12 @@ Android-Installation beider Varianten, tatsächliche Lautsprecher-/Bluetooth-Ver
 
 ## Nachtrag: vorhandenes Figurenrepository verwenden
 
-Konfiguration und Einrichtungsanleitung verweisen jetzt auf `sayac007/Kinderwelt-Privat`; Commit und Manifest-Hash der vorbereiteten Familienbilder sind unverändert. Der lokale Figurenbestand hat dieses Repository als `origin`. Der tatsächliche CI-Quellreproduktionsnachweis unter `v081-ci-reproduction.json` enthält bewusst den damals verwendeten alten Zielnamen; dieser historische Nachweis wird nicht rückwirkend umgeschrieben. Der neue Zielname verändert keine App-Dateien oder gebauten APKs. Vor dem ersten Upload muss die Sichtbarkeit privat und der GitHub-Zugriff funktionsfähig sein.
+Konfiguration und Einrichtungsanleitung verweisen jetzt auf `sayac007/Kinderwelt-Privat`; Commit und Manifest-Hash der vorbereiteten Familienbilder sind unverändert. Der lokale Figurenbestand hat dieses Repository als `origin`. Der tatsächliche CI-Quellreproduktionsnachweis unter [v081-ci-reproduction.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/v081-ci-reproduction.json) enthält bewusst den damals verwendeten alten Zielnamen; dieser historische Nachweis wird nicht rückwirkend umgeschrieben. Der neue Zielname verändert keine App-Dateien oder gebauten APKs. Vor dem ersten Upload muss die Sichtbarkeit privat und der GitHub-Zugriff funktionsfähig sein.
 
-Für diese reine Zielumstellung wurden alle **74 Python-Tests** erneut bestanden, `actionlint 1.7.7` lief fehlerfrei, und der tatsächliche lokale Import der 14 Dateien wurde gegen den unveränderten Commit/Manifest-Hash erneut erfolgreich ausgeführt. Protokolle: `docs/qa/v081-family-repository-target*`. Keine erneuten Android-Builds oder Godot-Läufe für diese Konfigurations-/Dokumentationsänderung.
+Für diese reine Zielumstellung wurden alle **74 Python-Tests** erneut bestanden, `actionlint 1.7.7` lief fehlerfrei, und der tatsächliche lokale Import der 14 Dateien wurde gegen den unveränderten Commit/Manifest-Hash erneut erfolgreich ausgeführt. Protokolle: [Archivindex: v081-family-repository-target*](qa/ARCHIVE_INDEX.tsv). Keine erneuten Android-Builds oder Godot-Läufe für diese Konfigurations-/Dokumentationsänderung.
 
 ## Nachtrag: manueller Upload und wiederhergestellter Repository-Zugriff
 
 GitHub bestätigt das private Figurenrepository und Repository-Lese-/Schreibrechte. Der manuelle Upload-Commit `5a35f7675eb1a0881447005fbe51dc089ef8471f` wurde abgerufen und als Quelle eingetragen. Alle 14 tatsächlich entfernten Familiengrafik-/Katalogdateien stimmen mit dem bisherigen Manifest überein und bestehen den unveränderten Importer. Die oben beschriebenen früheren 401-/Öffentlichkeitsbefunde sind historisch. App-Inhalte und bestehende Android-Artefakte bleiben unverändert. Actions-Secrets können von der vorhandenen Integration nicht gelesen werden (HTTP 403 `Resource not accessible by integration`); Vorhandensein und Funktion des separaten CI-Lesetokens sowie ein erfolgreicher Remote-CI-Lauf sind weiterhin nicht bestätigt.
 
-Nach Übernahme des echten Upload-Commits bestanden erneut alle **74 Python-Tests**, einschließlich Decodierung aller 1.645 Sprachdateien, sowie `actionlint 1.7.7`. Protokoll: `docs/qa/v081-family-upload-pin-tests.log`. Keine App-Datei geändert; keine erneuten Android-Builds oder Godot-Läufe für die reine Commit-Pin-/Dokumentationsänderung.
+Nach Übernahme des echten Upload-Commits bestanden erneut alle **74 Python-Tests**, einschließlich Decodierung aller 1.645 Sprachdateien, sowie `actionlint 1.7.7`. Protokoll: [v081-family-upload-pin-tests.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/v081-family-upload-pin-tests.log). Keine App-Datei geändert; keine erneuten Android-Builds oder Godot-Läufe für die reine Commit-Pin-/Dokumentationsänderung.

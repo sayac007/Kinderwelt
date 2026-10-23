@@ -109,7 +109,7 @@ class QuestAssetsTests(unittest.TestCase):
         # Retain the native Piper phoneme regression for the English generator
         # and reproducible historical experiments; Qwen has its own tokenizer.
     def test_subject_speech_has_independent_recognition_evidence_for_the_delivered_files(self):
-        report=json.loads((ROOT/'docs/qa/speech-female-v091.json').read_text())
+        report=json.loads((ROOT/'tests/fixtures/voice/subject-recognition.json').read_text())
         for locale in ['de','en','ru']:
             manifest=json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())
             clips={c['id']:c for c in manifest['clips']}

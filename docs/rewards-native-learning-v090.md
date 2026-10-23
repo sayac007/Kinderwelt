@@ -1,5 +1,7 @@
 # Kinderwelt 0.9.0: Punkte, Bonusaufgaben und native Lerninhalte
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 23.10.2026 (Europe/Berlin). Technische Prüfungen und offene Hör-/Geräteprüfungen sind getrennt zu lesen. Keine Aussage über nachgewiesene Lernwirkung oder Google-Play-Freigabe.
 
 ## Verhalten
@@ -17,7 +19,7 @@ Stand: 23.10.2026 (Europe/Berlin). Technische Prüfungen und offene Hör-/Gerät
 
 Die unveränderte synthetische englische LJSpeech-Stimme bleibt weiblich. Deutsch (Thorsten) und Russisch (Denis) bleiben vorerst die klareren nativen Stimmen. Die gewünschte identische weibliche Stimmfarbe für alle drei Sprachen ist **nicht erreicht**.
 
-Die getestete OpenVoice-V2-Umwandlung der nativen Sprachaufnahmen zur synthetischen englischen Referenz verschlechterte bei einem festen Vergleich aus sieben bestehenden 0.8.1-Clips je Sprache die unabhängige ASR-Zeichenfehlerrate: Deutsch 3,463 % → 16,450 %, Russisch 3,756 % → 15,493 %. Akustische Anpassungen von Tonhöhe und Spektrum brachten keine verlässliche deutsche Verbesserung. Diese Versuche wurden nicht ausgeliefert. Die [Messdaten](qa/voice-v090-experiments.json) dokumentieren Referenztexte, Erkennung und Datei-Hashes. Schauspieleraufnahmen wurden nicht zur Stimmenkopie verwendet. Vor einer weiteren Umstellung sind ein verständlicher multilingualer Kandidat und Hörprüfungen nötig.
+Die getestete OpenVoice-V2-Umwandlung der nativen Sprachaufnahmen zur synthetischen englischen Referenz verschlechterte bei einem festen Vergleich aus sieben bestehenden 0.8.1-Clips je Sprache die unabhängige ASR-Zeichenfehlerrate: Deutsch 3,463 % → 16,450 %, Russisch 3,756 % → 15,493 %. Akustische Anpassungen von Tonhöhe und Spektrum brachten keine verlässliche deutsche Verbesserung. Diese Versuche wurden nicht ausgeliefert. Die [Messdaten](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/voice-v090-experiments.json) dokumentieren Referenztexte, Erkennung und Datei-Hashes. Schauspieleraufnahmen wurden nicht zur Stimmenkopie verwendet. Vor einer weiteren Umstellung sind ein verständlicher multilingualer Kandidat und Hörprüfungen nötig.
 
 Die neuen Inhalte haben pro Sprache 1947 Clip-Zuordnungen einschließlich Hinweisen und Bonusfragen. Gleiche Texte teilen Audiodateien. Die Pipeline behält alle erzeugten Sätze, Ruhe am Anfang/Ende und gemessene phonetische Dauern. Fehlende Audioinhalte, beschädigte Dateien, falsche Hashes, Übersteuerung und unerwartete Schnitte werden technisch geprüft. Das beweist keine vollständige Verständlichkeit.
 

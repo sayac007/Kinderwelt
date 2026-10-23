@@ -1,27 +1,20 @@
 # Kinderwelt
 
-Ein offline spielbares Lernabenteuer für die erste und zweite Klasse. **Sieben wählbare Spielfiguren** laufen durch die Spielwelt und lösen **320 neue Knobelaufgaben der zweiten Runde: je 40 in Mathe, Deutsch, Logik, Physik, Biologie, Chemie, Mensch und Geografie**. Jede Grundaufgabe bietet zwei freiwillige Bonusaufgaben. Erstmaliges Lösen gibt 10, 50 beziehungsweise 100 Punkte; der Gesamtpunktestand bleibt lokal gespeichert und wird beim nächsten Start angezeigt. Es gibt keine Zeitlimits, Werbung, Käufe, Konten oder Ranglisten.
+Ein **offline spielbares Lernabenteuer für Klasse 1–2**, derzeit mit anspruchsvolleren Inhalten für die zweite Klasse. Kinder bewegen eine Figur durch sieben wählbare Welten, lösen Aufgaben und sammeln dauerhaft lokal gespeicherte Punkte. Keine Konten, Werbung, Käufe, Ranglisten oder Zeitlimits.
 
-Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine Blitze sowie Lauf- und Jubelanimationen. Die App verwendet deutsche, englische und russische Menütexte und neuronale Sprachclips sowie 20 auswählbare klassische Klavierwiedergaben. Sämtliche Wiedergabe funktioniert offline. Jede Figur hat fünf frei wählbare Looks; Jedes Fach hat seine eigene frei wählbare Welt: Berge, Zuhause mit schlafender Katze, Schloss mit Gespenstern, Kletterbaum mit Eichhörnchen und Aufgaben-Nüssen, Meeresgrund mit Schatztruhen und schwimmenden Tieren, Stadt mit Autofahrt oder Mond. Alle acht Fächer sind direkt antippbar. Ein farbiger Punktezähler bleibt auch während Aufgaben sichtbar.
+**Inhalte:** acht Fächer mit je 40 Grundaufgaben: Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch und Geografie. Zu jeder Grundaufgabe gehören zwei freiwillige Boni: insgesamt 320 + 640 Aufgabenplätze. Deutsch, Englisch und Russisch haben eigene Sprachlernaufgaben. Sieben Figuren, fünf Looks, 20 klassische Klavierwiedergaben und lokale Sprachclips ergänzen das Spiel. Familien- und neutrale Variante verwenden dieselbe Spiellogik; Familiengrafiken bleiben separat privat.
 
-Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
-
-**0.9.1:** Weibliche Serena-Stimme für Deutsch und Russisch, weiterhin die bevorzugte englische Frauenstimme und ein neues, ohne Bildreferenz KI-generiertes Weltraum-Eichhörnchen als App-Icon. [Stimme und Prüfverfahren](docs/voice.md), [Bildherkunft](docs/character-origins.md). Zunächst nur Quellstand und lokale Prüfungen; neue Android-Artefakte sind auf Nutzerwunsch zurückgestellt.
-
-**0.9.0:** Alle 320 Grundaufgaben ersetzt, anspruchsvollere Rechnungen/Sprachrätsel/Regeln und Sachfragen, 640 optionale Bonusaufgaben, native Sprachaufgaben (Deutsch / English / Русский) und 200 Sachrätsel mit indirekten Kontextbildern. [Umsetzung und Prüfstand](docs/rewards-native-learning-v090.md).
-
-**Varianten:** Getrennt vorbereitete Familienquellen, geprüfte Figurenherkunft und zwei benannte Android-Ausgaben: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. [Privates Figurenrepository und CI-Einrichtung](docs/family-repository.md), [Herkunft](docs/character-origins.md), [Prüfungen und APKs](docs/test-report.md).
+**Hier beginnen:** [Qualität, Architektur, Prüfstand und Grenzen](docs/QUALITY_ASSURANCE.md). Dort sind technische Testerfolge, offene fachliche Prüfungen und nicht nachgewiesene Lernwirkungen getrennt. [Bedienung](docs/experience.md) · [Inhaltsquellen und Redaktion](docs/CONTENT_AUTHORING.md) · [Android](docs/android.md) · [Sprachprüfung](docs/voice.md).
 
 ## Entwickeln und prüfen
 
-Godot **4.7.2** ist verbindlich. Python 3 und FFmpeg werden für die technischen Prüfungen benötigt.
+Benötigt: **Godot 4.7.2**, Python 3 und FFmpeg; für grafische Prüfungen eine Anzeige oder `xvfb-run`. Die neutrale Variante benötigt keine Familien-Assets oder Tokens.
 
 ```sh
-GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 bash tests/run.sh
+GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash tests/run.sh
 # Mit grafischer Sitzung oder xvfb-run:
-GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 bash tests/qa/quest-render.sh build/renderings
+GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash tests/qa/quest-render.sh qa-results/visual
+python3 scripts/qa/documentation.py --check
 ```
 
-Android-Builds und Installationshinweise: [docs/android.md](docs/android.md). Aktuelle Ergebnisse: [docs/test-report.md](docs/test-report.md). Bedienung, Inhalte und Quellen: [docs/experience.md](docs/experience.md).
-
-Die technische Prüfung ersetzt keinen Test mit Kindern oder auf echten Android-Geräten. Lernwirkung und Google-Play-Freigabe sind nicht nachgewiesen.
+App-Einstieg: `core/quest/main.tscn`; erzeugte Inhalte: `games/quest/tasks.json`. Ältere Nachweise bleiben vollständig im [versionsfesten QA-Archiv](docs/qa/README.md). Neue Laufberichte gehören in CI-Artefakte, nicht als Einzeldateien ins Git.

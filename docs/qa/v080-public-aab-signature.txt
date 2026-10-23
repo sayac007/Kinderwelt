@@ -1,4 +1,0 @@
-
-no manifest.
-
-jar is unsigned.
