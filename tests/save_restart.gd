@@ -15,15 +15,13 @@ func run() -> void:
 		print("SAVE RESTART: migrated existing score, earned 50 + 100, persisted 160 points")
 	else:
 		var app=load("res://core/quest/main.tscn").instantiate();root.add_child(app)
-		await process_frame
+		for frame in range(60): await process_frame
 		assert(Progress.points(app.store.data.quest)==160)
 		assert(app.game_view.score.points==160)
 		assert(not app.game_view.choosing)
 		assert(not Progress.award(app.store.data.quest,"math_count_bonus_1"))
 		assert(Progress.clean(app.store.data.quest).total_points==160)
 		print("SAVE RESTART: new app process restores and displays all 160 points; no duplicate reward")
-		app.narration.cancel();app.audio.music.shutdown();app.audio.stop()
-		await create_timer(.15).timeout
-		app.free()
-		await process_frame
+		await app.shutdown()
+		return
 	quit(0)
