@@ -4,6 +4,8 @@ var store: RefCounted
 var music: Node
 var clip := ""
 var catalogs := {}
+var playback_gains := {}
+var active_gain_db := 0.0
 var queue: Array[String] = []
 var pending_feedback := ""
 func configure(saved: RefCounted,background: Node) -> void:
@@ -16,7 +18,10 @@ func resolve(id: String,locale: String) -> String:
 		if not FileAccess.file_exists(path): return ""
 		var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(path))
 		var entries := {}
-		for entry in data.clips: entries[entry.id]=entry.file
+		for entry in data.clips:
+			entries[entry.id]=entry.file
+			var resource_path: String="res://assets/voice/quest/"+locale+"/"+str(entry.file)
+			playback_gains[resource_path]=clampf(float(entry.get("playback_gain_db",0.0)),-6.0,20.0)
 		catalogs[locale]=entries
 	if not catalogs[locale].has(id): return ""
 	var filename: String = catalogs[locale][id]
@@ -48,10 +53,13 @@ func play_next() -> void:
 	if queue.is_empty():
 		stream = null
 		clip = ""
+		active_gain_db=0.0
 		release_duck()
 		return
-	stream = load(queue.pop_front())
-	volume_db = linear_to_db(float(store.data.voice_volume))
+	var stream_path: String=queue.pop_front()
+	stream = load(stream_path)
+	active_gain_db=float(playback_gains.get(stream_path,0.0))
+	volume_db = linear_to_db(float(store.data.voice_volume))+active_gain_db
 	play()
 func on_finished() -> void: play_next()
 func release_duck() -> void:
@@ -60,12 +68,13 @@ func cancel() -> void:
 	stop()
 	queue.clear()
 	pending_feedback=""
+	active_gain_db=0.0
 	stream = null
 	clip = ""
 	release_duck()
 func sync_settings() -> void:
 	if store.data.muted or float(store.data.voice_volume)<=0: cancel()
-	else: volume_db = linear_to_db(float(store.data.voice_volume))
+	else: volume_db = linear_to_db(float(store.data.voice_volume))+active_gain_db
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_PAUSED: stream_paused = true
 	elif what==NOTIFICATION_APPLICATION_RESUMED: stream_paused = false

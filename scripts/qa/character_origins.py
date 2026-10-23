@@ -16,6 +16,11 @@ def audit(root=ROOT):
         if not p.exists() and row['path'].startswith('.private/'):
             absent.append(row['path']);continue
         if hashlib.sha256(p.read_bytes()).hexdigest()!=row['sha256']:raise ValueError('Unreviewed character source: '+row['path'])
+        if row.get('generation_source_path'):
+            source=Path(row['generation_source_path'])
+            if source.is_absolute() or '..' in source.parts:raise ValueError('Invalid generation source path')
+            if hashlib.sha256((root/source).read_bytes()).hexdigest()!=row['generation_output_sha256']:
+                raise ValueError('Original generation evidence changed: '+str(source))
         checked.append(row['path'])
     manifest=root/'assets/quest/cast.json'
     selected=[]

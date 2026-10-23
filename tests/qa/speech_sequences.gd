@@ -32,6 +32,11 @@ func run() -> void:
  app.store.data.locale="de"
  app.narration.play_clip("quest/area_physics")
  await create_timer(.15).timeout
+ var calibrated_db: float=app.narration.volume_db
+ app.store.data.voice_volume=.5;app.narration.sync_settings()
+ check(absf(app.narration.volume_db-calibrated_db-linear_to_db(.5))<.001,"Volume slider preserves per-recording calibration")
+ app.store.data.voice_volume=1.;app.narration.sync_settings()
+ check(absf(app.narration.volume_db-calibrated_db)<.001,"Restoring voice volume restores calibrated level")
  app.narration._notification(Node.NOTIFICATION_APPLICATION_PAUSED)
  var paused_position: float=app.narration.get_playback_position()
  await create_timer(.35).timeout

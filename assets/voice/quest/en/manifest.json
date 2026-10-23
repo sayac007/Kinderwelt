@@ -1056,34 +1056,29 @@
       "id": "area_body"
     },
     {
-      "text": "Let's explore geography.",
-      "file": "voice_en_377e7dd7726af82352e6.ogg",
-      "seconds": 2.9332426303854877,
-      "bytes": 18424,
-      "sha256": "b012beb3927f93c4d4b3c6a8fa2d6f8467e8da8fa7a3853bdf6042025857992f",
+      "text": "Geography.",
+      "file": "voice_en_e894a1bb42f5bf687f18.ogg",
+      "seconds": 1.563265306122449,
+      "bytes": 10205,
+      "sha256": "e31a2d5809514d13f3f7d7a7a7f2418384570bd1b0f8963ef1b8386a9eaadabd",
+      "encoding": {
+        "policy": "decoded-vorbis-peak-1",
+        "uniform_gain": 1.0,
+        "decoded_peak": 0.6966208219528198,
+        "ceiling": 0.95,
+        "encodes": 1
+      },
       "phonetic_units": [
         {
-          "phonemes": "lˈɛts",
-          "start": 0.24966,
-          "end": 0.539909,
-          "seconds": 0.290249
-        },
-        {
-          "phonemes": "ɛksplˈɔː",
-          "start": 0.597959,
-          "end": 1.364218,
-          "seconds": 0.766259
-        },
-        {
           "phonemes": "dʒɪʲˈɒɡɹəfi.",
-          "start": 1.399048,
-          "end": 2.525215,
-          "seconds": 1.126168
+          "start": 0.20322,
+          "end": 1.166848,
+          "seconds": 0.963628
         }
       ],
       "generation_profile": {
-        "revision": "articulated-short-3",
-        "length_scale": 1.5,
+        "revision": "articulated-context-4",
+        "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.0,
         "volume": 0.68,

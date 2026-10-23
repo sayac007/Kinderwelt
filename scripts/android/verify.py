@@ -44,8 +44,8 @@ def check_payload(names,app_root=None):
     imported={n.split('/')[-1].rsplit('-',1)[0] for n in assets if n.startswith('.godot/imported/') and n.endswith('.oggvorbisstr')}
     assert any(n.endswith('project.binary') for n in assets),'Missing Godot project'
     for n in assets:
-        assert not re.search(r'(^|/)(tests|scripts|docs|addons|qa-results|android|build)(/|$)',n),'Development files packaged: '+n
-        assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml')),'Sensitive or specification file packaged'
+        assert not re.search(r'(^|/)(art|tests|scripts|docs|addons|qa-results|android|build)(/|$)',n),'Development files packaged: '+n
+        assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml','.safetensors','.onnx','.pth','.pt')),'Sensitive, specification or development model file packaged'
     required=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
     for notice in ['assets/quest/OFL.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/CC-BY-3.0.txt','assets/music/licenses/CC-BY-SA-3.0.txt','assets/music/licenses/CC-BY-SA-2.5.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
@@ -78,6 +78,7 @@ def check_payload(names,app_root=None):
         for filename in ['manifest.json','MODEL_CARD.txt']:
             assert folder+filename in assets,'Missing localized speech metadata: '+locale+'/'+filename
         manifest=json.loads((Path(__file__).resolve().parents[2]/folder/'manifest.json').read_text())
+        if manifest.get('model_license')=='Apache-2.0':assert folder+'LICENSE.txt' in assets,'Missing multilingual voice notice: '+locale
         for filename in {c['file'] for c in manifest['clips']}:
             assert folder+filename+'.import' in assets,'Missing neural speech: '+locale+'/'+filename
             assert filename in imported,'Missing playable neural speech: '+filename
@@ -98,12 +99,44 @@ def check_packaged_data(archive,app_root=None):
     """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     data_files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
-    data_files += ['games/quest/legacy-rewards.json']
+    data_files += ['games/quest/legacy-rewards.json','assets/quest/appicon.png']
     data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+    for locale in ['de','ru']:
+        folder='assets/voice/quest/'+locale+'/'
+        manifest=json.loads((app_root/folder/'manifest.json').read_text())
+        if manifest.get('model_license')=='Apache-2.0':data_files.append(folder+'LICENSE.txt')
     for name in data_files:
         candidates=[n for n in archive.namelist() if 'assets/' in n and n.split('assets/',1)[1]==name]
         assert len(candidates)==1,'Missing or duplicate packaged content: '+name
         assert archive.read(candidates[0])==(app_root/name).read_bytes(),'Packaged content differs from tested source: '+name
+
+def check_launcher_images(archive,app_root=None,aab=False):
+    """Decode the actual Android launcher/splash resources, not just game assets.
+
+    Godot and AAPT resize/re-encode these. A small pixel tolerance allows their
+    resampler differences while rejecting a stale or substituted illustration.
+    FFmpeg is already required for the delivered speech verification.
+    """
+    app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
+    def pixels(data):
+        args=['ffmpeg','-nostdin','-v','error','-threads','1','-filter_threads','1','-i','pipe:0',
+              '-vf','scale=192:192:flags=lanczos','-frames:v','1','-pix_fmt','rgb24','-f','rawvideo','-']
+        try:result=subprocess.check_output(args,input=data,stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as error:raise AssertionError('Cannot decode Android icon') from error
+        assert len(result)==192*192*3,'Invalid decoded icon size'
+        return result
+    expected=pixels((app_root/'assets/quest/appicon.png').read_bytes())
+    result={};prefix='base/' if aab else ''
+    for resource in ['res/mipmap-xxxhdpi-v4/icon.webp','res/mipmap-xxxhdpi-v4/icon_foreground.webp','res/drawable/splash_icon.webp']:
+        name=prefix+resource
+        assert name in archive.namelist(),'Missing Android launcher/splash image: '+name
+        data=archive.read(name)
+        assert data[:4]==b'RIFF' and data[8:12]==b'WEBP','Invalid Android WebP image: '+name
+        actual=pixels(data)
+        error=sum(abs(a-b) for a,b in zip(actual,expected))/len(expected)
+        assert error<12,'Android launcher/splash differs from approved generated icon: '+name
+        result[resource]={'normalized_rgb_mean_absolute_error':round(error,4),'status':'PASS'}
+    return result
 
 def inspect_zip(path,aab=False,app_root=None):
     with zipfile.ZipFile(path) as z:
@@ -113,13 +146,14 @@ def inspect_zip(path,aab=False,app_root=None):
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
         if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
         check_packaged_data(z,app_root)
+        icons=check_launcher_images(z,app_root,aab)
         abis=set();native_methods=set()
         for n in names:
             if n.endswith('.so'):
                 abis.add(n.split('/')[-2]);elf_alignment(z.read(n));native_methods.add(z.getinfo(n).compress_type)
         assert abis=={'arm64-v8a','x86_64'},'Unexpected native ABI set'
         assert native_methods=={zipfile.ZIP_DEFLATED},'Expected lossless native library compression'
-        return {'assets_checked':check_payload(names,app_root),'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
+        return {'assets_checked':check_payload(names,app_root),'launcher_images':icons,'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',type=identity.validate_package,default=PACKAGE);a=p.parse_args()

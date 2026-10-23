@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-10-22",
+  "reviewed": "2026-10-23",
   "scope": "All active playable character source images, all five looks, shared NPC/object atlases and PNG backgrounds/UI; not a legal clearance or claim that AI images have no copyright",
   "sources": [
     {
@@ -166,13 +166,14 @@
     },
     {
       "path": "assets/quest/appicon.png",
-      "sha256": "63b5c5979559a841de4a27bfb1d4922a72be332a9b02de341b6fdd4a701834d3",
+      "sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551",
       "origin": "AI generated in this project",
-      "references": "shared scene, object/NPC or UI artwork; not a directly downloaded texture",
-      "generation_output": "exec-65bb699f-7fd3-44e2-980c-62594eab5a82.png",
-      "generation_output_sha256": "877980bab8069d08b130f1646581ff142c4eb0e245fb90b413761ffb9c72998d",
-      "source_evidence_commit": "d9f24173b058ac998ad2f0909bb7596ee89c29c1",
-      "processing": "Original bytes retained or recorded Lanczos size optimization"
+      "references": "none; original teal space squirrel, violet scarf, glowing book and star; no existing character reference",
+      "generation_output": "exec-094ae2eb-c6ca-418c-a1b0-73fbf73341c1.png",
+      "generation_output_sha256": "85ed87611142948827c76bd209b79d6e883296d1b90cbee7187ee837ceac2f3c",
+      "processing": "Pillow Lanczos to 512x512 RGBA; optimized lossless PNG",
+      "generation_source_path": "art/public/app-icon/original.png",
+      "evidence_method": "Unmodified original generation PNG and brief included under art/public/app-icon; independently hashed runtime derivative"
     },
     {
       "path": "assets/quest/castle.png",

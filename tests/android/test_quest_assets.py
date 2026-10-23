@@ -46,17 +46,30 @@ class QuestAssetsTests(unittest.TestCase):
             pcm=array.array('f',subprocess.check_output(['ffmpeg','-nostdin','-v','error','-threads','1','-i',str(path),'-ar','22050','-ac','1','-f','f32le','-']))
             self.assertAlmostEqual(len(pcm)/22050,clip['seconds'],delta=.06,msg=str(path))
             self.assertGreater(math.sqrt(sum(v*v for v in pcm)/len(pcm)),.005,msg=str(path))
-            self.assertLess(max(abs(v) for v in pcm),1.001,msg=str(path))
+            peak=max(abs(v) for v in pcm)
+            self.assertLess(peak,1.001,msg=str(path))
+            if 'playback_gain_db' in clip:
+                gain=10**(clip['playback_gain_db']/20)
+                self.assertGreaterEqual(clip['playback_gain_db'],-6)
+                self.assertLessEqual(clip['playback_gain_db'],20)
+                self.assertAlmostEqual(peak*gain,.70,delta=.002,msg='Decoded calibrated headroom: '+str(path))
             self.assertLess(max(abs(v) for v in pcm[:2205]),.001,msg='Speech has a complete quiet lead-in: '+str(path))
             self.assertLess(max(abs(v) for v in pcm[-3307:]),.001,msg='Speech has a complete quiet ending: '+str(path))
-        for locale,model in [('de','de_DE-thorsten-high'),('en','en_US-ljspeech-medium'),('ru','ru_RU-denis-medium')]:
+        for locale,model in [('de','Qwen3-TTS-12Hz-0.6B-CustomVoice'),('en','en_US-ljspeech-medium'),('ru','Qwen3-TTS-12Hz-0.6B-CustomVoice')]:
             folder=ROOT/'assets/voice/quest'/locale
             manifest=json.loads((folder/'manifest.json').read_text())
             self.assertEqual(manifest['model'],model)
             self.assertEqual(manifest['synthesis'],source.synthesis_profile(locale))
-            self.assertGreaterEqual(manifest['synthesis']['sentence_pause_seconds'],.25)
-            self.assertIn(manifest['dataset_license'],['CC0','Public Domain'])
-            self.assertEqual(manifest['voice_gender'],'female' if locale=='en' else 'male')
+            if locale=='en':
+                self.assertGreaterEqual(manifest['synthesis']['sentence_pause_seconds'],.25)
+                self.assertEqual(manifest['dataset_license'],'Public Domain')
+            else:
+                self.assertEqual(manifest['speaker'],'Serena')
+                self.assertEqual(manifest['playback_level']['target_peak'],.70)
+                self.assertTrue(all('playback_gain_db' in c for c in manifest['clips']))
+                self.assertEqual(manifest['model_license'],'Apache-2.0')
+                self.assertEqual(manifest['dataset_license'],'Not separately specified by publisher')
+            self.assertEqual(manifest['voice_gender'],'female')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
             self.assertEqual(len(expected),1947)
@@ -70,45 +83,46 @@ class QuestAssetsTests(unittest.TestCase):
         # Decode each delivered recording once, even if several exercises share it.
         with ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(decode,decoded))
         print('Decoded all',len(decoded),'unique localized voice recordings')
-    def test_german_phonetic_word_durations_are_measured_not_padding(self):
-        manifest=json.loads((ROOT/'assets/voice/quest/de/manifest.json').read_text())
-        self.assertEqual(manifest['synthesis']['duration_alignment'],'vits-ceil-frames')
-        by_id={c['id']:c for c in manifest['clips']}
-        for clip in manifest['clips']:
-            units=clip['phonetic_units']
-            self.assertTrue(units,clip['id'])
-            previous=.17
-            for unit in units:
-                self.assertGreaterEqual(unit['start'],previous-.00001,clip['id'])
-                self.assertGreater(unit['seconds'],0,clip['id'])
-                self.assertAlmostEqual(unit['end']-unit['start'],unit['seconds'],places=5)
-                self.assertLessEqual(unit['end'],clip['seconds']-.30,clip['id'])
-                previous=unit['end']
-        # Independent bounds for short, previously swallowed subject words.
-        # These compare actual model speech allocation, excluding inserted silence.
-        for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
-            clip=by_id['area_'+subject]
-            # Some subjects now have a short spoken introduction; the subject
-            # itself is the last phonetic unit, not the added context or silence.
-            self.assertGreaterEqual(clip['phonetic_units'][-1]['seconds'],.35,subject)
-        self.assertGreaterEqual(by_id['area_physics']['phonetic_units'][0]['seconds'],.65)
+    def test_female_waveforms_are_complete_and_do_not_claim_unavailable_word_alignment(self):
+        # Qwen does not expose Piper's VITS word allocation. Verify complete
+        # source sample counts and actual encoded duration (decoded above),
+        # rather than retaining stale or invented phonetic timestamps.
+        for locale in ['de','ru']:
+            manifest=json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())
+            self.assertEqual(manifest['synthesis']['duration_alignment'],'not available; no fabricated word timestamps')
+            for clip in manifest['clips']:
+                self.assertNotIn('phonetic_units',clip)
+                self.assertEqual(clip['source_sample_rate'],24000)
+                self.assertAlmostEqual(clip['synthesized_seconds'],clip['source_samples']/24000,places=6)
+                self.assertAlmostEqual(clip['seconds'],clip['synthesized_seconds']+.60,places=6)
+                self.assertGreater(clip['synthesized_seconds'],.45,clip['id'])
+                self.assertLess(clip['synthesized_seconds'],(clip['generation_parameters']['max_new_tokens']-2)/12.5,clip['id'])
+                self.assertGreater(clip['uniform_waveform_gain'],0)
+                self.assertLessEqual(clip['uniform_waveform_gain'],1)
+                self.assertEqual(len(clip['source_waveform_sha256']),64)
     def test_phoneme_normalization_keeps_the_german_ich_sound_and_rejects_unknowns(self):
         spec=importlib.util.spec_from_file_location('speech_source',ROOT/'scripts/generate-quest-voice.py')
         source=importlib.util.module_from_spec(spec);spec.loader.exec_module(source)
         self.assertEqual(source.normalized_phonemes(list('ɪc\u0327'),{'ɪ':[1],'ç':[2]}),['ɪ','ç'])
         self.assertEqual(''.join(source.pronunciation_phonemes(list('diː çeːmˈiː.'),'Die Chemie.','de')),'diː çeˈmiː.')
         with self.assertRaises(ValueError):source.normalized_phonemes(['?'],{'ɪ':[1]})
-        model=json.loads((ROOT/'assets/voice/quest/de/manifest.json').read_text())
-        self.assertEqual(model['synthesis']['phoneme_normalization'],'supported-nfc')
-    def test_short_subject_clips_have_stable_measured_articulation_in_all_languages(self):
+        # Retain the native Piper phoneme regression for the English generator
+        # and reproducible historical experiments; Qwen has its own tokenizer.
+    def test_subject_speech_has_independent_recognition_evidence_for_the_delivered_files(self):
+        report=json.loads((ROOT/'docs/qa/speech-female-v091.json').read_text())
         for locale in ['de','en','ru']:
             manifest=json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())
             clips={c['id']:c for c in manifest['clips']}
+            recognition={row['id']:row for row in report['locales'][locale]['rows']}
             for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
-                clip=clips['area_'+subject]
-                profile=clip.get('generation_profile',manifest['synthesis'])
-                self.assertEqual(profile['noise_w_scale'],0)
-                self.assertGreaterEqual(clip['phonetic_units'][-1]['seconds'],.35,(locale,subject))
+                id='area_'+subject;clip=clips[id];row=recognition[id]
+                self.assertEqual(row['sha256'],clip['sha256'],'ASR evidence must cover the actual delivered audio')
+                self.assertEqual(row['reference'],clip['text'])
+                self.assertLessEqual(row['character_errors']/row['reference_characters'],.25,(locale,subject,row['recognized']))
+                self.assertGreater(clip['seconds']-.60,.35,(locale,subject))
+                if locale=='en':
+                    self.assertEqual(clip['generation_profile']['noise_w_scale'],0)
+                    self.assertGreaterEqual(clip['phonetic_units'][-1]['seconds'],.35)
     def test_translations_images_and_legacy_reward_migration_remain_complete(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())

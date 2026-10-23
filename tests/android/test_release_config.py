@@ -27,7 +27,7 @@ class ReleaseConfigTests(unittest.TestCase):
                 text=(app/'export_presets.cfg').read_text()
                 self.assertNotIn(identity.TOKEN,text)
                 self.assertEqual(text.count('package/unique_name="'+chosen+'"'),2)
-                self.assertIn('version/code=13',text)
+                self.assertIn('version/code='+str(identity.CONFIG['version_code']),text)
     def test_invalid_package_ids_rejected_before_export(self):
         for value in ['','single','com..app','com.App','com.1app','com.public.app','com.test-app','com.app;echo','com.app\nother','a.'+'a'*180]:
             with self.subTest(value=value),self.assertRaises(ValueError):identity.validate_package(value)

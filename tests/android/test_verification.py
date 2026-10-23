@@ -4,7 +4,7 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
-MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="13" android:versionName="0.9.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
+MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="14" android:versionName="0.9.1"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/core/quest/scenery.gdc','assets/core/quest/scenery_card.gdc','assets/core/quest/wardrobe.gdc','assets/core/quest/score_badge.gdc','assets/core/mobile.gdc','assets/project.binary','assets/core/quest/main.gdc']
 PAYLOAD += ['assets/games/quest/legacy-rewards.json']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
@@ -22,6 +22,7 @@ for locale in ['de','en','ru']:
     folder='assets/voice/quest/'+locale+'/'
     manifest=json.loads((Path(__file__).resolve().parents[2]/folder/'manifest.json').read_text())
     PAYLOAD += ['assets/'+folder+name for name in ['manifest.json','MODEL_CARD.txt']]
+    if manifest.get('model_license')=='Apache-2.0':PAYLOAD += ['assets/'+folder+'LICENSE.txt']
     for filename in sorted({c['file'] for c in manifest['clips']}):
         PAYLOAD += ['assets/'+folder+filename+'.import','assets/.godot/imported/'+filename+'-fixture.oggvorbisstr']
 PAYLOAD += ['assets/core/quest/language.gdc']
@@ -39,11 +40,11 @@ class VerificationTests(unittest.TestCase):
         root=ET.fromstring(MANIFEST);ET.SubElement(root,'uses-permission',{v.ANDROID+'name':'android.permission.INTERNET'})
         with self.assertRaises(AssertionError):v.check_manifest(root)
     def test_identity_version_sdk_backup_rotation_drift_rejected(self):
-        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="13"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
+        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="14"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
             with self.subTest(before=before),self.assertRaises(AssertionError):v.check_manifest(ET.fromstring(MANIFEST.replace(before,after)))
     def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),len(PAYLOAD))
     def test_development_and_key_files_rejected(self):
-        for name in ['assets/addons/gut/test.gdc','assets/tests/smoke.gdc','assets/private.jks','assets/release.yaml','assets/docs/study.txt']:
+        for name in ['assets/addons/gut/test.gdc','assets/tests/smoke.gdc','assets/private.jks','assets/release.yaml','assets/docs/study.txt','assets/art/public/original.png','assets/voice/model.safetensors','assets/voice/male.onnx']:
             with self.subTest(name=name),self.assertRaises(AssertionError):v.check_payload(PAYLOAD+[name])
     def test_missing_modules_rejected(self):
         with self.assertRaises(AssertionError):v.check_payload([n for n in PAYLOAD if n!="assets/games/quest/tasks.json"])
@@ -58,8 +59,11 @@ class VerificationTests(unittest.TestCase):
     def data_archive(self,prefix='assets/',change=None):
         memory=io.BytesIO()
         root=Path(__file__).resolve().parents[2]
-        files=['games/quest/legacy-rewards.json','games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
+        files=['games/quest/legacy-rewards.json','assets/quest/appicon.png','games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
         files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
+        for locale in ['de','ru']:
+            folder='assets/voice/quest/'+locale+'/'
+            if json.loads((root/folder/'manifest.json').read_text()).get('model_license')=='Apache-2.0':files.append(folder+'LICENSE.txt')
         with zipfile.ZipFile(memory,'w') as archive:
             for name in files:
                 if change=='missing' and name==files[0]:continue
@@ -75,6 +79,18 @@ class VerificationTests(unittest.TestCase):
     def test_changed_missing_or_duplicate_data_is_rejected(self):
         for change in ['modified','missing','duplicate']:
             with self.subTest(change=change),self.data_archive(change=change) as archive,self.assertRaises(AssertionError):v.check_packaged_data(archive)
+    def test_stale_launcher_image_is_rejected_in_apk_and_aab(self):
+        for prefix in ['assets/','assetPackInstallTime/assets/']:
+            with self.subTest(prefix=prefix),self.data_archive(prefix) as original:
+                memory=io.BytesIO()
+                with zipfile.ZipFile(memory,'w') as stale:
+                    for name in original.namelist():
+                        data=original.read(name)
+                        if name.endswith('/assets/quest/appicon.png'):data=b'previous icon'
+                        stale.writestr(name,data)
+                memory.seek(0)
+                with zipfile.ZipFile(memory) as stale,self.assertRaisesRegex(AssertionError,'appicon.png'):
+                    v.check_packaged_data(stale)
     def test_elf_16kb(self):
         data=bytearray(120);data[:5]=b'\x7fELF\x02';struct.pack_into('<Q',data,32,64);struct.pack_into('<HH',data,54,56,1);struct.pack_into('<IIQQQQQQ',data,64,1,0,0,0,0,0,0,16384)
         v.elf_alignment(data)

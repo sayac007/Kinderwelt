@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "created": "2026-10-23",
+  "tool": "image_gen.imagegen",
+  "references": [],
+  "source": "original.png",
+  "source_sha256": "85ed87611142948827c76bd209b79d6e883296d1b90cbee7187ee837ceac2f3c",
+  "generation_output": "exec-094ae2eb-c6ca-418c-a1b0-73fbf73341c1.png",
+  "runtime_image": "assets/quest/appicon.png",
+  "runtime_sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551",
+  "processing": "Pillow Lanczos to 512x512 RGBA; optimized lossless PNG",
+  "brief": "New original teal-and-cream fluffy space squirrel with oversized copper-orange curled tail, violet explorer scarf, transparent space helmet, glowing open book and golden star. Saturated midnight-blue/purple space background, soft plush dimensional game illustration, cyan/lavender/gold light. No existing cartoon, game, movie or celebrity references, no text or logos.",
+  "legal_scope": "Documented local generation and exact files; no claim of worldwide legal clearance or that generated art has no copyright."
+}

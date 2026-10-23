@@ -1,6 +1,6 @@
 # Herkunft aller aktuell verwendeten Spielfiguren
 
-Prüfung vom 22. Oktober 2026. Erfasst sind beide Figurenvarianten mit je sieben Figuren und fünf Looks. Die bestehende Gestaltung wird erhalten; es wurden **keine aktuell eingebauten heruntergeladenen Figurenbilder festgestellt**, die jetzt neu ersetzt werden müssten.
+Prüfung vom 23. Oktober 2026. Erfasst sind beide Figurenvarianten mit je sieben Figuren und fünf Looks. Die bestehende Gestaltung wird erhalten; es wurden **keine aktuell eingebauten heruntergeladenen Figurenbilder festgestellt**, die jetzt neu ersetzt werden müssten.
 
 | Figurenbestand | Herkunft | Konkreter Nachweis | Behandlung |
 |---|---|---|---|
@@ -15,3 +15,9 @@ Insgesamt sind **24 aktuelle PNG-Quellen** erfasst: zwölf private Familienbilde
 Maschinenlesbare Herkunft: `art/character-origins.json`. `scripts/qa/character_origins.py` prüft die tatsächlichen aktuellen Bildhashes und den materialisierten Figurenbestand. Android-Exporte führen diese Prüfung vor dem Export aus. Ungeprüfte Austauschdateien oder umbenannte fremde aktive PNGs führen zu einem Fehler. Die Android-Prüfung sperrt weiterhin die vier alten Bildnamen und kontrolliert die gewählte Figurenvariante.
 
 Diese Prüfung unterscheidet **eigene Fantasiegestaltung ohne Bildreferenz** von **neu generierter Familienillustration mit Nutzerreferenz**. „KI-generiert“ bedeutet nicht automatisch „urheberrechtsfrei“. Die nachgewiesene Herkunft ersetzt keine weltweite juristische Freigabe oder Prüfung auf jede denkbare Ähnlichkeit. Vorhandene alte Git-Commits werden durch diese Änderung nicht gelöscht oder umgeschrieben.
+
+## Neues App-Icon in 0.9.1
+
+Das vorherige Icon wird auf ausdrücklichen Nutzerwunsch durch eine neue, hier ohne Bildreferenz erzeugte Illustration ersetzt: türkisfarbenes Weltraum-Eichhörnchen mit kupferfarbigem Schwanz, violettem Schal, Buch und Stern. Das unveränderte originale `image_gen`-Ergebnis und der Generierungsauftrag liegen unter `art/public/app-icon/`; die App verwendet die auf 512×512 verkleinerte PNG-Datei. Original- und Laufzeitdatei sind separat per SHA256 dokumentiert. Es wurden keine vorhandenen Film-/Spielfiguren oder Fotos als Vorlage übergeben. Das ist ein Herkunftsnachweis, keine pauschale juristische Freigabe.
+
+Die Android-Prüfung vergleicht die mitgepackte PNG-Datei bytegenau und decodiert außerdem das tatsächliche Launcher-Icon, den adaptiven Vordergrund sowie das Startbild aus APK und AAB. Ein Pixelvergleich mit dokumentierter Toleranz für Skalierung/Rekompression verhindert, dass ein altes Android-Ressourcenbild unbemerkt erhalten bleibt.
