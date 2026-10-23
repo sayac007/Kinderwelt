@@ -39,7 +39,7 @@ func setup(owner_host: Control,data: Dictionary,parent: Dictionary={},index := -
 	add_child(score)
 	heading = Label.new()
 	heading.text = task.prompt if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else host.t(task.kind)
-	heading.max_lines_visible = 6 if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else 2
+	heading.max_lines_visible = 8 if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else 2
 	heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	heading.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -100,7 +100,7 @@ func arrange() -> void:
 	var landscape := size.x>size.y*1.3
 	close_button.position = Vector2(18,18);close_button.size = Vector2(52,52)
 	speaker.position = Vector2(size.x-70,18);speaker.size = Vector2(52,52)
-	heading.max_lines_visible = 2 if complete else ((3 if landscape else 6) if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else (2 if landscape else 3))
+	heading.max_lines_visible = 2 if complete else ((3 if landscape else 8) if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else (2 if landscape else 3))
 	score.position=Vector2(size.x/2-82,16);score.size=Vector2(164,54)
 	heading.position = Vector2(20,76)
 	heading.size = Vector2(size.x-40,0)
@@ -108,7 +108,9 @@ func arrange() -> void:
 	var picture_width := size.x-40 if not landscape else size.x*.55
 	var picture_height := size.y-186-picture_top if not landscape else size.y-picture_top-21
 	picture.position = Vector2(20,picture_top)
-	picture.size = Vector2(picture_width,maxf(90,picture_height))
+	# Keep the requested text size. Long accessible headings use more of the
+	# panel; the noninteractive illustration yields space before answer controls.
+	picture.size = Vector2(picture_width,maxf(40,picture_height))
 	var hero_height := minf(290,picture.size.y)
 	companion.size = Vector2(hero_height*companion.aspect(),hero_height)
 	companion.position = picture.position+(picture.size-companion.size)/2

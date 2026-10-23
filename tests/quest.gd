@@ -193,12 +193,14 @@ func run() -> void:
 		for subject in Progress.SUBJECTS:
 			app.game_view.switch_subject(subject)
 			for index in range(40):
-				app.game_view.open_task(index)
-				await process_frame
-				var panel: Control=app.game_view.task_panel
-				check(panel.heading.get_line_count()<=panel.heading.max_lines_visible,"Full localized instruction fits: "+locale+"/"+panel.task.id)
-				check(panel.heading.get_rect().end.y<panel.picture.position.y and panel.picture.get_rect().end.y<panel.choices[0].position.y if panel.task.kind!="compare" else true,"No heading/picture/answer overlap: "+locale+"/"+panel.task.id)
-				app.game_view.close_task()
+				for bonus_index in [-1,0,1]:
+					app.game_view.open_task(index)
+					if bonus_index>=0:app.game_view.open_bonus(bonus_index)
+					await process_frame
+					var panel: Control=app.game_view.task_panel
+					check(panel.heading.get_line_count()<=panel.heading.max_lines_visible,"Full localized instruction fits: "+locale+"/"+panel.task.id)
+					check(panel.heading.get_rect().end.y<panel.picture.position.y and panel.picture.get_rect().end.y<panel.choices[0].position.y if panel.task.kind!="compare" else true,"No heading/picture/answer overlap: "+locale+"/"+panel.task.id)
+					app.game_view.close_task()
 	app.store.data.text_scale=1.0
 	app.store.data.locale="de"
 	check(Store.clean({"locale":"xx"}).locale=="de","Unknown locale falls back to German")
