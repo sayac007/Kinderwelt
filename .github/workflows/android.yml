@@ -1,27 +1,38 @@
-name: Development voice converter dependency
+name: Development female multilingual speech dependency
 on: workflow_dispatch
 permissions:
   contents: write
 jobs:
   download:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
-      - name: Mirror hash-pinned MIT OpenVoice converter for offline development
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Mirror pinned Apache-2.0 multilingual development model
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          mkdir -p openvoice-v2/converter
-          base=https://huggingface.co/myshell-ai/OpenVoiceV2/resolve/f36e7edfe1684461a8343844af60babc2efbb727/converter
-          curl --fail --location --retry 3 "$base/checkpoint.pth?download=true" -o openvoice-v2/converter/checkpoint.pth
-          echo '9652c27e92b6b2a91632590ac9962ef7ae2b712e5c5b7f4c34ec55ee2b37ab9e  openvoice-v2/converter/checkpoint.pth' | sha256sum -c -
-          curl --fail --location --retry 3 "$base/config.json" -o openvoice-v2/converter/config.json
-          curl --fail --location https://raw.githubusercontent.com/myshell-ai/OpenVoice/74a1d147b17a8c3092dd5430504bd83ef6c7eb23/LICENSE -o openvoice-v2/LICENSE
-          printf '%s\n' 'Development tool only. OpenVoice V2 is MIT licensed; no model is bundled in the Android app.' 'Official model revision f36e7edfe1684461a8343844af60babc2efbb727; code 74a1d147b17a8c3092dd5430504bd83ef6c7eb23.' > openvoice-v2/README.txt
-          tar -czf openvoice-v2-converter.tar.gz openvoice-v2
-          if ! gh release view voice-tools-openvoice-v2 >/dev/null 2>&1; then
-            gh release create voice-tools-openvoice-v2 --target "$GITHUB_SHA" --prerelease --title 'Development tooling: MIT OpenVoice V2 converter' --notes 'Hash-verified official OpenVoice V2 converter dependency for offline speech generation. Not an Android app release; no family images, recordings, credentials or signing keys. Upstream: https://github.com/myshell-ai/OpenVoice (MIT).'
+          python3 - <<'PYTHON'
+          import hashlib,json,subprocess
+          from pathlib import Path
+          source=json.loads(Path('scripts/ci/qwen-source.json').read_text())
+          root=Path('qwen-female');root.mkdir()
+          for row in source['files']:
+              p=root/row['path'];p.parent.mkdir(parents=True,exist_ok=True)
+              url='https://huggingface.co/'+source['repo']+'/resolve/'+source['revision']+'/'+row['path']+'?download=true'
+              subprocess.run(['curl','--fail','--location','--retry','3','--max-time','600',url,'-o',str(p)],check=True)
+              assert p.stat().st_size==row['size'],row['path']
+              if row['sha256']:assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256'],row['path']
+          PYTHON
+          mv qwen-female/model.safetensors qwen-model.safetensors
+          mv qwen-female/speech_tokenizer/model.safetensors qwen-speech-tokenizer.safetensors
+          cp scripts/ci/qwen-source.json qwen-female/source.json
+          tar -czf qwen-config.tar.gz qwen-female
+          if ! gh release view voice-tools-qwen3-female >/dev/null 2>&1; then
+            gh release create voice-tools-qwen3-female --target "$GITHUB_SHA" --prerelease --title 'Development tooling: Apache-2.0 multilingual female speech' --notes 'Pinned official Qwen3-TTS-12Hz-0.6B-CustomVoice dependency for offline generation. No actor, family recordings, app release, keys or credentials. https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice (Apache-2.0).'
           fi
-          gh release upload voice-tools-openvoice-v2 openvoice-v2-converter.tar.gz
+          gh release upload voice-tools-qwen3-female qwen-model.safetensors qwen-speech-tokenizer.safetensors qwen-config.tar.gz --clobber
