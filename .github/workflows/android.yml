@@ -28,6 +28,8 @@ jobs:
               assert p.stat().st_size==row['size'],row['path']
               if row['sha256']:assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256'],row['path']
           PYTHON
+          curl --fail --location https://raw.githubusercontent.com/QwenLM/Qwen3-TTS/022e286b98fbec7e1e916cb940cdf532cd9f488e/LICENSE -o qwen-female/LICENSE.txt
+          echo 'a44a6081c73ad75f0255bb2bb5cab74ef1829565a895a24e53a4f11290ab7655  qwen-female/LICENSE.txt' | sha256sum -c -
           mv qwen-female/model.safetensors qwen-model.safetensors
           mv qwen-female/speech_tokenizer/model.safetensors qwen-speech-tokenizer.safetensors
           cp scripts/ci/qwen-source.json qwen-female/source.json
