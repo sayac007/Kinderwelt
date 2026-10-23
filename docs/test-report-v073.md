@@ -1,5 +1,7 @@
 # Tatsächliche Prüfungen und Android-Artefakte – 0.7.3
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 21. Oktober 2026. [Änderungen und Messgrenzen](experience-polish-v073.md); [vorheriger geprüfter Stand 0.7.2](test-report-v072.md).
 
 ## Ausgeführt und bestanden
@@ -12,7 +14,7 @@ Stand: 21. Oktober 2026. [Änderungen und Messgrenzen](experience-polish-v073.md
 - Feste ASR-Stichprobe: 31 Beispiele je Sprache, ohne Referenzvorgabe; **DE 4,189 %, EN 1,987 %, RU 7,464 %** Zeichenabweichung. EN zuvor 3,617 %, teilweise mit anderen Ansagetexten; kein kontrollierter Hörvergleich. Russische Variante mit 9,281 % verworfen. DE/RU-Manifestbytes und Audiohashes sind unverändert.
 - Offline-Hördatei mit 42 Proben aus den tatsächlich ausgelieferten Dateien erzeugt; JavaScript-Syntax geprüft. Browser-/Hörabnahme bleibt manuell.
 
-Rohprotokolle und JSON-Berichte: `docs/qa/v073-*`. Es wurden keine erneuten 343 visuellen Renderings für diese Iteration ausgeführt; Figuren, Kulissen, Aufgaben, Layout und Speicherlogik wurden unverändert übernommen. Die Einstellungen zeigen die neue Version.
+Rohprotokolle und JSON-Berichte: [Archivindex: v073-*](qa/ARCHIVE_INDEX.tsv). Es wurden keine erneuten 343 visuellen Renderings für diese Iteration ausgeführt; Figuren, Kulissen, Aufgaben, Layout und Speicherlogik wurden unverändert übernommen. Die Einstellungen zeigen die neue Version.
 
 ## Tatsächlich erzeugte Dateien
 
@@ -51,7 +53,7 @@ Die Paketprüfung und vollständige Android-Exportkette liefen für beide Varian
 | 0.7.2 | 183.037.438 Bytes | 178.166.519 Bytes |
 | 0.7.3 | 183.085.862 Bytes | 178.214.939 Bytes |
 
-Der neue Stand enthält aktualisierte Sprachdateien und Metadaten. Archivgröße, nicht installierter Speicherbedarf oder Play-Download. Originaler privater 0.7.1-Ausgangsstand: 204.115.006 Bytes. Detaillierte Gruppen und Dateihashes in `v073-family-size-analysis.json` und `v073-public-size-analysis.json`.
+Der neue Stand enthält aktualisierte Sprachdateien und Metadaten. Archivgröße, nicht installierter Speicherbedarf oder Play-Download. Originaler privater 0.7.1-Ausgangsstand: 204.115.006 Bytes. Detaillierte Gruppen und Dateihashes in [v073-family-size-analysis.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/v073-family-size-analysis.json) und [v073-public-size-analysis.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/v073-public-size-analysis.json).
 
 ## Offen
 

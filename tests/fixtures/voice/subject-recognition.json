@@ -1,0 +1,248 @@
+{
+  "scope": "Necessary immutable subject-recognition regression fixture; subset of the archived 0.9.1 measurement, not a new test run",
+  "model": "multilingual Whisper small, int8, sherpa-onnx",
+  "model_files": {
+    "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+    "small-decoder.int8.onnx": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+    "small-tokens.txt": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+  },
+  "locales": {
+    "de": {
+      "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "samples": 8,
+      "rows": [
+        {
+          "id": "area_math",
+          "reference": "Mathe.",
+          "recognized": "Mathe",
+          "character_errors": 0,
+          "reference_characters": 5,
+          "seconds": 1.64,
+          "sha256": "192887e7f503631e972c61d8da8c2cb9a0b72eaf1396bcfee07a323ad66c94f1"
+        },
+        {
+          "id": "area_german",
+          "reference": "Deutsch.",
+          "recognized": "Deutsch",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.88,
+          "sha256": "287b94f0a716992b204f40b0c1c74f01bd1150f9b7d8dd4001b22c19e82b3c11"
+        },
+        {
+          "id": "area_logic",
+          "reference": "Hier entdecken wir die Logik.",
+          "recognized": "Hier entdecken wir die Logik.",
+          "character_errors": 0,
+          "reference_characters": 24,
+          "seconds": 2.76,
+          "sha256": "55abcfa8967783669118efb5758ac88cf65bb56bcef0fe67d0cb29d8f1079983"
+        },
+        {
+          "id": "area_physics",
+          "reference": "Physik.",
+          "recognized": "Physik",
+          "character_errors": 0,
+          "reference_characters": 6,
+          "seconds": 2.28,
+          "sha256": "3a150978918743ca91c74bb3805361aa34731c91227e0ee23d459e20c015774d"
+        },
+        {
+          "id": "area_biology",
+          "reference": "Biologie.",
+          "recognized": "Biologie",
+          "character_errors": 0,
+          "reference_characters": 8,
+          "seconds": 2.12,
+          "sha256": "5aae76dfd6f8b3df4054cb5081c5f96e6e19dfb6139c89776fbe72c45386568d"
+        },
+        {
+          "id": "area_chemistry",
+          "reference": "Hier entdecken wir die Chemie.",
+          "recognized": "Hier entdecken wir die Chemie.",
+          "character_errors": 0,
+          "reference_characters": 25,
+          "seconds": 3.08,
+          "sha256": "143432adfbb34839c8789577a93bcb5195e45a3e4622948d8a5b2c882e7f8698"
+        },
+        {
+          "id": "area_body",
+          "reference": "Mensch.",
+          "recognized": "Mensch",
+          "character_errors": 0,
+          "reference_characters": 6,
+          "seconds": 1.88,
+          "sha256": "5aacaa8dc7275ba7242aa3988322db36be7e6e7ebdace1d206b9ec31cac704a7"
+        },
+        {
+          "id": "area_geography",
+          "reference": "Hier entdecken wir die Geografie.",
+          "recognized": "Hier entdecken wir die Geographie.",
+          "character_errors": 2,
+          "reference_characters": 28,
+          "seconds": 3.4,
+          "sha256": "7db608d89dbdf4f8c9ec17b2ae54c039db1eb24ea2b1272752d67be5e2567bbc"
+        }
+      ]
+    },
+    "en": {
+      "voice_model": "en_US-ljspeech-medium",
+      "samples": 8,
+      "rows": [
+        {
+          "id": "area_math",
+          "reference": "Mathematics.",
+          "recognized": "mathematics",
+          "character_errors": 0,
+          "reference_characters": 11,
+          "seconds": 1.9696,
+          "sha256": "7e7e0b2bef266cfb458359dd1875267a3297aae46e8da79164c751594e2e706e"
+        },
+        {
+          "id": "area_german",
+          "reference": "English.",
+          "recognized": "English",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.5749,
+          "sha256": "b8cf1f5d0c5428c3345b787a770fe40c0e2941a03fe6c7fd968c3a1565d6df41"
+        },
+        {
+          "id": "area_logic",
+          "reference": "This is logic.",
+          "recognized": "This is logic.",
+          "character_errors": 0,
+          "reference_characters": 11,
+          "seconds": 1.9929,
+          "sha256": "728095af9b3d9bbd4a5d89e19ca27e8c4054229c3dba5f384535cbfe1f093417"
+        },
+        {
+          "id": "area_physics",
+          "reference": "Physics.",
+          "recognized": "Physics",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.5284,
+          "sha256": "e7b2c8bb6188b164e033647327ad4eb421a638c9c4f9d25cc2b62990583892bf"
+        },
+        {
+          "id": "area_biology",
+          "reference": "Biology.",
+          "recognized": "biology",
+          "character_errors": 0,
+          "reference_characters": 7,
+          "seconds": 1.5749,
+          "sha256": "ad51c7945852d084da20081787df359bda168fa0e2e731931ad9b95feea1e041"
+        },
+        {
+          "id": "area_chemistry",
+          "reference": "Chemistry.",
+          "recognized": "Chemistry",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.5981,
+          "sha256": "6b73ffe494c6dfe7a66962e69dd284d8a64be61744a7e8159c6f7ed9d6547bf8"
+        },
+        {
+          "id": "area_body",
+          "reference": "Human body.",
+          "recognized": "human body",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.7723,
+          "sha256": "ec95d2903aa2ff36a874beb7f35e4bbf82143d71c98cc97180ac4702c7e3a15f"
+        },
+        {
+          "id": "area_geography",
+          "reference": "Geography.",
+          "recognized": "Geography",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 1.5633,
+          "sha256": "e31a2d5809514d13f3f7d7a7a7f2418384570bd1b0f8963ef1b8386a9eaadabd"
+        }
+      ]
+    },
+    "ru": {
+      "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "samples": 8,
+      "rows": [
+        {
+          "id": "area_math",
+          "reference": "Это математика.",
+          "recognized": "Это математика.",
+          "character_errors": 0,
+          "reference_characters": 13,
+          "seconds": 2.04,
+          "sha256": "a48e1b0abb02c9181f048f7a45d4a51c08d02eecac190827a9fdcc81d02053dd"
+        },
+        {
+          "id": "area_german",
+          "reference": "Это русский.",
+          "recognized": "Это русский.",
+          "character_errors": 0,
+          "reference_characters": 10,
+          "seconds": 2.04,
+          "sha256": "159ff35d5c9a3344ce333acc2b8c768eb87d8aa9f431a2b90d56e578cc467c7c"
+        },
+        {
+          "id": "area_logic",
+          "reference": "Это логика.",
+          "recognized": "Это логика.",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 2.6,
+          "sha256": "614cf48aa47ee0f66ada71b59aa388ac3c0b280550cd75fb3f256a24cad95700"
+        },
+        {
+          "id": "area_physics",
+          "reference": "Это физика.",
+          "recognized": "Это физика.",
+          "character_errors": 0,
+          "reference_characters": 9,
+          "seconds": 3.08,
+          "sha256": "32cfd4d2f21ad7adc2c71d9816efe01a2889be9c610157914fa85e85a418bf64"
+        },
+        {
+          "id": "area_biology",
+          "reference": "Это биология.",
+          "recognized": "Это биология.",
+          "character_errors": 0,
+          "reference_characters": 11,
+          "seconds": 2.52,
+          "sha256": "416398cc0b5f8d6e6c96af48beeb1084c86edaf600b2be6c4cac4bc364ee34b5"
+        },
+        {
+          "id": "area_chemistry",
+          "reference": "Это химия.",
+          "recognized": "Это химия.",
+          "character_errors": 0,
+          "reference_characters": 8,
+          "seconds": 2.28,
+          "sha256": "bce7d6096402d631eda8ae4f4baf65772a3411624a27636597cdd74c1a63ba75"
+        },
+        {
+          "id": "area_body",
+          "reference": "Это человек.",
+          "recognized": "Это человек.",
+          "character_errors": 0,
+          "reference_characters": 10,
+          "seconds": 1.88,
+          "sha256": "d5bd39c2f194e020f74fa3056c03a0e35ac92b61cc5854cd6e3d40e26f99bc16"
+        },
+        {
+          "id": "area_geography",
+          "reference": "Это география.",
+          "recognized": "И это география.",
+          "character_errors": 1,
+          "reference_characters": 12,
+          "seconds": 3.16,
+          "sha256": "e7e9bc9cc87a15694f6668964a5829f882ac2726a78c618058be8d8676a9c7ed"
+        }
+      ]
+    }
+  },
+  "execution_note": "DE and EN fixed 31-clip screening; changed English geography additionally re-screened after final regeneration; RU fixed 31-clip screening. All rows checked against exact current generated file hashes. No reference text was supplied to ASR.",
+  "targeted_rescreen_note": "Replaced only the actually re-generated and independently re-screened German row math_count in this report; other rows retain their measured original files.",
+  "archive_source": "https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/speech-female-v091.json"
+}

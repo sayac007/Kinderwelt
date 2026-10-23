@@ -42,3 +42,5 @@ python3 scripts/qa/localization.py --check
 python3 scripts/qa/voice_models.py
 
 python3 scripts/music/notices.py --check
+
+python3 scripts/qa/documentation.py --check

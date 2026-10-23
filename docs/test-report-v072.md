@@ -1,5 +1,7 @@
 # Tatsächliche Prüfungen und Android-Artefakte – 0.7.2
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 21. Oktober 2026. Fünf getrennte Phasencommits plus dieser Nachweiscommit. Gebaut aus dem sauberen Quellcommit `52a7cedb91f568be2b2b644aa68e1a5d2f671908`; beide Provenienzdateien melden `source_dirty=false`. Private Grafiken sind bewusst extern; ihr vollständiger materialisierter Inhalt ist im App-Quellhash des privaten Builds erfasst.
 
 ## Ausgeführt und bestanden
@@ -17,7 +19,7 @@ Stand: 21. Oktober 2026. Fünf getrennte Phasencommits plus dieser Nachweiscommi
 
 Nach Ergänzung der erhaltenen Petzold-Zuschreibung nochmals alle 56 Python-Tests im privaten Stand sowie die vier betroffenen Konfigurations-/Nachweistests im öffentlichen Stand bestanden. Der frühere öffentliche Raster-Render mit Nachbarfragment ist verworfen. Die abschließenden 343 öffentlichen Renderings verwenden enge Alpha-Grenzen und Masken; Auswahl und maximale Punkteanzeige wurden stichprobenartig angesehen.
 
-Protokolle: [Phasen](phases.md), `docs/qa/phase5-family.log`, `phase5-public.log`, `phase5-python.log`, `phase5-family-render.log`, `phase5-public-verified-render.log`, `phase5-public-attribution-tests.log`. ASR-Rohbefunde und Grenzen: [Stimme](voice.md). Keine manuelle Hörabnahme oder Kinderstudie wurde durchgeführt.
+Protokolle: [Phasen](phases.md), [phase5-family.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-family.log), [phase5-public.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-public.log), [phase5-python.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-python.log), [phase5-family-render.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-family-render.log), [phase5-public-verified-render.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-public-verified-render.log), [phase5-public-attribution-tests.log](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/phase5-public-attribution-tests.log). ASR-Rohbefunde und Grenzen: [Stimme](voice.md). Keine manuelle Hörabnahme oder Kinderstudie wurde durchgeführt.
 
 ## Tatsächlich erzeugte Dateien
 
@@ -34,7 +36,7 @@ Alle vier Artefakte: gültige ZIP-/APK-/Bundle-Struktur, tatsächliche Dateniden
 
 Pakete: privat `org.example.kinderwelt.preview.family.v072`; öffentlich `org.example.kinderwelt.preview.neutral.v072`. Die Basiskennung bleibt ausdrücklich vorläufig und konfigurierbar. [Buildbefehle](android.md).
 
-Hash-/Signatur-/Größen-/Quellnachweise stehen unter `docs/qa/android-v072-family-*` und `android-v072-public-*`. Vollständige Import-/Export-/Bundletool-Logs bleiben in den jeweiligen lokalen Build-Ausgabeordnern.
+Hash-/Signatur-/Größen-/Quellnachweise stehen unter [Archivindex: android-v072-family-*](qa/ARCHIVE_INDEX.tsv) und `android-v072-public-*`. Vollständige Import-/Export-/Bundletool-Logs bleiben in den jeweiligen lokalen Build-Ausgabeordnern.
 
 ### SHA256
 
@@ -55,7 +57,7 @@ Gemessen mit `scripts/android/analyze_size.py`, jeweils beide ABIs, APK beziehun
 | 0.7.2 privat | 183.037.438 Bytes | 171.670.185 Bytes |
 | 0.7.2 öffentlich | 178.166.519 Bytes | 166.806.808 Bytes |
 
-Private APK: **21.077.568 Bytes kleiner (10,326 %)**. Öffentliche APK: **25.948.487 Bytes kleiner (12,713 %)** als der private Ausgangsstand. In der privaten APK sank der gespeicherte Grafikanteil von 44.084.738 auf 22.550.893 Bytes. Sprachinhalte und Variantenmetadaten änderten sich ebenfalls; dies ist kein isoliertes PNG-Experiment. Vollständige Ausgangs-/Ergebnisgruppen und Differenzen: [size-comparison.json](qa/size-comparison.json).
+Private APK: **21.077.568 Bytes kleiner (10,326 %)**. Öffentliche APK: **25.948.487 Bytes kleiner (12,713 %)** als der private Ausgangsstand. In der privaten APK sank der gespeicherte Grafikanteil von 44.084.738 auf 22.550.893 Bytes. Sprachinhalte und Variantenmetadaten änderten sich ebenfalls; dies ist kein isoliertes PNG-Experiment. Vollständige Ausgangs-/Ergebnisgruppen und Differenzen: [size-comparison.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/size-comparison.json).
 
 ## Noch offen
 

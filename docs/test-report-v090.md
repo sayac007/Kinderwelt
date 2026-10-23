@@ -1,5 +1,7 @@
 # Tatsächlich ausgeführte Prüfungen: Kinderwelt 0.9.0
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 23.10.2026 (Europe/Berlin). Implementierung: [Punkte, native Lerninhalte und Boni](rewards-native-learning-v090.md). Vorherige Ergebnisse: [0.8.1](test-report-v081.md). Kein Nachweis pädagogischer Wirksamkeit, keine Google-Play-Freigabe.
 
 Alle 320 Grundfragen wurden in allen drei Sprachfassungen gegen den zuvor ausgelieferten Stand geprüft: vollständig ersetzt. 40 neue Aufgaben je Fach plus je zwei freiwillige Boni; 200 unterschiedliche neue Sachfragen je Sprachfassung. Mathe, Sprache und Logik haben jeweils 40 unterschiedliche Rätselkonfigurationen. Frühere Erfolge bleiben im Archiv, neue Aufgaben werden erneut belohnt. Die beabsichtigte höhere Schwierigkeit wurde nicht empirisch nachgewiesen.
@@ -23,11 +25,11 @@ Der gewünschte gemeinsame weibliche Sprecher für alle Sprachen ist offen. Verw
 | 31 feste Aufnahmen je Sprache | 5,950 % | 3,359 % | 10,464 % |
 | 8 zusätzliche Clip-Zuordnungen je Sprache | 10,969 % | 1,337 % | 5,495 % |
 
-Werte sind Zeichenfehlerraten; sie messen ASR-Abweichungen und zertifizieren kein kindliches Verständnis. Zum Beispiel werden einzelne russische Fachwörter und deutsche Bonusformulierungen fehlerhaft erkannt; diese bleiben im Hörreview gezielt zu prüfen. Manche Bonus-Zuordnungen teilen dieselbe Aufnahme. Die Stichproben sind keine statistisch unabhängige Abdeckung aller Dateien. Messdaten und Hashes: `docs/qa/speech-advanced-recognition-v090.json`, `docs/qa/speech-advanced-additional-v090.json`. Die Artefakte enthalten `kinderwelt-listening.html` mit 78 abspielbaren Offline-Proben.
+Werte sind Zeichenfehlerraten; sie messen ASR-Abweichungen und zertifizieren kein kindliches Verständnis. Zum Beispiel werden einzelne russische Fachwörter und deutsche Bonusformulierungen fehlerhaft erkannt; diese bleiben im Hörreview gezielt zu prüfen. Manche Bonus-Zuordnungen teilen dieselbe Aufnahme. Die Stichproben sind keine statistisch unabhängige Abdeckung aller Dateien. Messdaten und Hashes: [speech-advanced-recognition-v090.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/speech-advanced-recognition-v090.json), [speech-advanced-additional-v090.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/speech-advanced-additional-v090.json). Die Artefakte enthalten `kinderwelt-listening.html` mit 78 abspielbaren Offline-Proben.
 
 ## Android-Artefakte
 
-Finale lokale Builds: `build/android-v090-complete/`. Tatsächliche Dateigrößen und SHA-256 stehen in `docs/qa/android-v090-delivery.json`. Beide Varianten sind separat installierbar; Version 0.9.0, Code 13.
+Finale lokale Builds: `build/android-v090-complete/`. Tatsächliche Dateigrößen und SHA-256 stehen in [android-v090-delivery.json](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa/android-v090-delivery.json). Beide Varianten sind separat installierbar; Version 0.9.0, Code 13.
 
 | Datei | Größe (MiB) | Signatur |
 |---|---:|---|

@@ -30,6 +30,6 @@ def main():
     private=[r for r in rows if r['asset'].startswith('private/')]
     report=ROOT/'build/reports';report.mkdir(parents=True,exist_ok=True)
     (report/'private-graphics-optimization.json').write_text(json.dumps(private,indent=2)+'\n')
-    (ROOT/'docs/qa/graphics-optimization.json').write_text(json.dumps({'method':'Pillow Lanczos RGBA; optimize PNG; no palette quantization','shared':[r for r in rows if r not in private],'private_summary':{'files':len(private),'before_bytes':sum(r['before_bytes'] for r in private),'after_bytes':sum(r['after_bytes'] for r in private),'classic_pixels':[512,768],'costume_pixels':[768,1152]}},indent=2)+'\n')
+    (report/'graphics-optimization.json').write_text(json.dumps({'method':'Pillow Lanczos RGBA; optimize PNG; no palette quantization','shared':[r for r in rows if r not in private],'private_summary':{'files':len(private),'before_bytes':sum(r['before_bytes'] for r in private),'after_bytes':sum(r['after_bytes'] for r in private),'classic_pixels':[512,768],'costume_pixels':[768,1152]}},indent=2)+'\n')
     print('Optimized',len(rows),'images:',sum(r['before_bytes'] for r in rows),'->',sum(r['after_bytes'] for r in rows),'source PNG bytes')
 if __name__=='__main__':main()

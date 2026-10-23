@@ -1,5 +1,7 @@
 # Tatsächliche Prüfungen und Android-Artefakte – 0.8.0
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Stand: 21. Oktober 2026. [Neue Welten und Bedienung](worlds-v080.md), [vorheriger Stand 0.7.3](test-report-v073.md).
 
 ## Ausgeführt und bestanden
@@ -14,7 +16,7 @@ Stand: 21. Oktober 2026. [Neue Welten und Bedienung](worlds-v080.md), [vorherige
 
 Die bisherigen Audiotests setzen ausdrücklich die Bergkulisse, damit sie reine Fachansagen prüfen; ein eigener Test erfasst die zusätzlich vollständigen Welthinweise. Das bisherige Zeitlimit wurde nicht erhöht. Im ersten Durchlauf lief der alte Test wegen des zusätzlichen Hinweises in sein Zeitlimit. Die Fälle werden jetzt getrennt tatsächlich am Mixer geprüft.
 
-Rohprotokolle, Daten und Quellenvergleich: `docs/qa/v080-*`. Alle Tests liefen lokal; Remote-CI ist **nicht verifiziert**, die GitHub-API-Abfrage lieferte erneut `Forbidden`.
+Rohprotokolle, Daten und Quellenvergleich: [Archivindex: v080-*](qa/ARCHIVE_INDEX.tsv). Alle Tests liefen lokal; Remote-CI ist **nicht verifiziert**, die GitHub-API-Abfrage lieferte erneut `Forbidden`.
 
 ## Tatsächlich erzeugte Dateien
 

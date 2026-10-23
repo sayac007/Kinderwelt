@@ -1,5 +1,7 @@
 # Kinderwelt 0.8.0 – sieben Welten pro Fach
 
+> Historischer Versionsbericht. Aktuelle Funktionen, Tests und offene Freigaben: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die folgenden Ergebnisse gelten ausschließlich für den genannten früheren Stand.
+
 Jedes der acht Fächer speichert eine eigene frei wählbare Kulisse. Über Zahnrad → „Kulisse wählen“ öffnet sich die bebilderte Auswahl; dieselbe Auswahl bleibt in den Einstellungen erreichbar. Acht große Bildschaltflächen bieten sieben feste Welten und automatischen Wechsel. Beschriftungen, zugängliche Namen und neue gesprochene Hinweise sind in DE/EN/RU vorhanden.
 
 ## Spielbare Welten
