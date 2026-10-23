@@ -1,0 +1,26 @@
+{
+  "de": {
+    "model": "de_DE-thorsten-high",
+    "mappings": 1947,
+    "unique_files": 904,
+    "generated_seconds": 5106.955,
+    "model_and_card_provenance": "PASS",
+    "human_intelligibility": "OPEN"
+  },
+  "en": {
+    "model": "en_US-ljspeech-medium",
+    "mappings": 1947,
+    "unique_files": 903,
+    "generated_seconds": 4746.338,
+    "model_and_card_provenance": "PASS",
+    "human_intelligibility": "OPEN"
+  },
+  "ru": {
+    "model": "ru_RU-denis-medium",
+    "mappings": 1947,
+    "unique_files": 912,
+    "generated_seconds": 4675.892,
+    "model_and_card_provenance": "PASS",
+    "human_intelligibility": "OPEN"
+  }
+}

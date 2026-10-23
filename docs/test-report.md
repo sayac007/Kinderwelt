@@ -1,82 +1,49 @@
-# Tatsächliche Prüfungen und Android-Artefakte – 0.8.1
+# Tatsächlich ausgeführte Prüfungen: Kinderwelt 0.9.0
 
-Stand: 22. Oktober 2026. [Vorheriger Stand 0.8.0](test-report-v080.md). [Getrenntes privates Figurenrepository](family-repository.md), [Figurenherkunft](character-origins.md), [offener Stimmwunsch](voice-v081.md).
+Stand: 23.10.2026 (Europe/Berlin). Implementierung: [Punkte, native Lerninhalte und Boni](rewards-native-learning-v090.md). Vorherige Ergebnisse: [0.8.1](test-report-v081.md). Kein Nachweis pädagogischer Wirksamkeit, keine Google-Play-Freigabe.
 
-## Fertig lokal, extern noch offen
+Alle 320 Grundfragen wurden in allen drei Sprachfassungen gegen den zuvor ausgelieferten Stand geprüft: vollständig ersetzt. 40 neue Aufgaben je Fach plus je zwei freiwillige Boni; 200 unterschiedliche neue Sachfragen je Sprachfassung. Mathe, Sprache und Logik haben jeweils 40 unterschiedliche Rätselkonfigurationen. Frühere Erfolge bleiben im Archiv, neue Aufgaben werden erneut belohnt. Die beabsichtigte höhere Schwierigkeit wurde nicht empirisch nachgewiesen.
 
-**Zwei tatsächlich gebaute APKs mit den gewünschten Dateinamen**, zwei unsignierte AABs und eine geprüfte gemeinsame Auslieferungsstruktur liegen vor. Der Benutzer hat die Familiengrafiken inzwischen in `sayac007/Kinderwelt-Privat` hochgeladen. Authentifizierter Zugriff bestätigt das Repository als privat; der neue entfernte Commit und sämtliche 14 zugelassenen Dateien wurden geprüft und in die Build-Konfiguration übernommen. Die früheren 401-/Forbidden-Befunde dokumentieren die vorherige Blockade. Vorhandensein und Funktion des Actions-Lesetokens sowie ein erfolgreicher GitHub-Actions-Lauf bleiben offen.
+## Technische Prüfungen
 
-**Die englische Stimme wurde noch nicht für Deutsch/Russisch übernommen.** Ein realer Versuch mit demselben englischen Modell und deutscher/russischer Lautung wurde wegen schlechter Verständlichkeit verworfen. Modellgewichte für eine echte sprachübergreifende Stimmklangübertragung waren nicht abrufbar. Alle ausgelieferten Sprachaufnahmen und ihre Manifeste bleiben bytegleich zu 0.8.0. Ein gespeicherter Netzwerkentwurf hebt die aktuelle Sperre nicht von selbst auf.
+- Vollständige Suite `tests/run.sh`: bestanden für Familien- und neutrale Variante (jeweils 84 Python-Tests); keine Godot-Fehler im erfolgreichen Lauf. Die abschließende Rechtschreibkorrektur wurde zusätzlich durch alle 84 Python-Tests samt vollständiger Audiodatei-Decodierung geprüft.
+- Godot-Grundregression: 6056 Prüfungen; Welten: 3608; neue Belohnungsregression: 991. Neustartnachweis mit zwei echten Prozessen: 3200 + 10 + 50 + 100 = 3360 Punkte werden erneut angezeigt, keine doppelten Belohnungen.
+- Produktionseinstieg und frischer Import ausschließlich der ausgelieferten App-Dateien; jeweils 60 Frames und geregelter Audioabschluss.
+- Reale Audio-/Unterbrechungsprüfungen am Desktop-Mixer: 30 Wiedergabe-, 66 Sequenz- und 34 Weltsprachprüfungen. Android-Benachrichtigungen werden simuliert; dies ist kein Gerätetest.
+- Python-Regressionen: 84 Tests einschließlich nativer Buchstabenrekonstruktion, Bonusgleichungen, kyrillischer UI und aller 2719 einzigartigen tatsächlich decodierten Ogg-Sprachdateien (1947 Zuordnungen pro Sprache). Hash, Dauer, Pegel und Anfang/Ende werden überprüft; außerdem alle 20 Musiktitel und deren Quellen/Lizenzen.
+- Grafische Suite: 461 echte OpenGL-Bilder, vier Displayprofile (320×568, 360×800, 800×360 und 1080×2400), drei Sprachen, beide Bonusstufen, Maximalstand 54.400, kombinierte Bild-Zahlen-Regeln, Reihenfolgen und bestätigte alte Punkteübernahme, Rotation, bisherige Figuren/Looks/Welten/Menüs. Die Bilder eines Hörrätsels bleiben beim Wechsel des früheren Lösungsobjekts Ohr → Mond identisch. Manuell betrachtet wurden ausgewählte kleine und breite Ansichten; keine vollständige manuelle Bildfreigabe behauptet.
+- Actionlint 1.7.7, Inhaltsgenerator-Reproduzierbarkeit, Figurenherkunft, Lokalisierungs-/Ablenkerbericht und Lizenzhinweise geprüft. Die Ablenkerheuristik markiert weiterhin 33 Grundaufgaben; menschliche Prüfung bleibt offen.
 
-## Tatsächlich ausgeführt und bestanden
+## Stimme
 
-- Vollständige Suite in Familien- und isolierter neutraler Variante: jeweils **6.085 Godot-Spielprüfungen**, **3.608 Weltprüfungen**, **130 Audiobusprüfungen** (30 + 66 + 34), frischer Import/60-Frame-Start und **74 Python-Tests**.
-- Die finalen 74 Python-Tests wurden nach den letzten Import-/Auslieferungsprüfungen in beiden Varianten erneut vollständig bestanden. Nach Ergänzung der Herkunftsnachweise für NPC-, Kulissen- und UI-Grafiken wurden zusätzlich die drei Herkunftstests je Variante erneut bestanden. Diese Ergänzung verändert keine App-Grafik oder Sprachdatei.
-- Sämtliche **1.645 verschiedenen Sprachdateien** und **20 Musikstücke** vollständig mit FFmpeg decodiert; Hash, Dauer, Pegel und stille Ränder geprüft. Bestehende Aufgaben-JSON, Musikmanifest und Sprachmanifeste sind bytegleich zu 0.8.0.
-- Getrennter echter privater Git-Bestand aus dem festgelegten lokalen Commit geklont und ausschließlich 14 zugelassene, hashgeprüfte Dateien in einen frischen Hauptcode-Schnappschuss importiert. Die daraus berechneten App-Input-Hashes stimmen für **beide Varianten exakt** mit den tatsächlich gebauten Android-Artefakten überein. Die Android-Builds selbst liefen aus dem sauberen Hauptcode-Commit, nicht in GitHub Actions.
-- Importtests weisen veränderte Bilder/Manifeste, Originalfoto-Zusätze, Symlinks und veraltete Kostümhashes zurück. Auslieferungstests verhindern manipulierte Dateien, doppelte große APKs, eine falsche Figurenvariante unter dem Familiennamen und eine halb veröffentlichte APK/AAB-Paarung.
-- **24 aktuelle PNG-Quellen** sind auf hier erzeugte KI-Ausgaben zurückgeführt; zwölf private Dateien, ein neutraler Atlas und elf gemeinsame Dateien inklusive NPC-/Objektatlanten, Szenen und UI. Aktuelle Bildhashes werden geprüft. Die vier älteren Figurenbilder bleiben gesperrt; kein aktuell verwendetes heruntergeladenes Figurenbild festgestellt. Das ist eine Herkunftsprüfung, keine juristische Freigabe.
-- `actionlint 1.7.7` prüfte die endgültigen GitHub-Workflows fehlerfrei. Private Quellen/Token werden ausschließlich für vertrauenswürdige Push-/Dispatch-Läufe verwendet; Pull Requests bauen neutral ohne Zugriff auf das Figurenrepository.
+Der gewünschte gemeinsame weibliche Sprecher für alle Sprachen ist offen. Verworfen wurde eine Umwandlung, die die deutsche Aussprache verschlechtert; die nativen DE/RU-Stimmen bleiben erhalten. Unabhängiges Whisper-small-Screening ohne Referenz-Prompt auf den tatsächlich ausgelieferten Aufnahmen:
 
-Protokolle und maschinenlesbare Berichte: `docs/qa/v081-*`. Es wurden **keine neuen 383 visuellen Renderings** für 0.8.1 ausgeführt: Figuren, Looks, Aufgaben, sieben Welten, Bewegung, UI-Layout und Sprachdateien wurden unverändert übernommen. Die Einstellungen zeigen 0.8.1; deren Spiel-/Layoutprüfungen sind in der aktuellen Suite enthalten. Die vorherigen echten Renderings bleiben unter `v080-*` nachgewiesen.
-
-## Tatsächlich erzeugte Dateien
-
-Alle folgenden Dateien liegen unter `build/android-v081-delivery/`:
-
-| Datei | Bytes | MB dezimal |
-|---|---:|---:|
-| `kinderwelt-debug-family.apk` | 185,906,144 | 185.906 |
-| `kinderwelt-unsigned-family.aab` | 174,523,181 | 174.523 |
-| `kinderwelt-debug-neutral.apk` | 181,035,217 | 181.035 |
-| `kinderwelt-unsigned-neutral.aab` | 169,659,794 | 169.660 |
-
-`delivery.json` verbindet die endgültigen Dateinamen mit Paket, Variante, Version, Hash und tatsächlichem App-Input. Große APK-/AAB-Dateien stehen jeweils nur einmal im Ausgabeverzeichnis; die Unterverzeichnisse enthalten nur Nachweise. Der Workflow lädt dieses Verzeichnis als `android-development-artifacts` hoch, sobald die GitHub-Voraussetzungen eingerichtet sind. **Ein solcher Remote-Lauf wurde hier noch nicht ausgeführt oder bestätigt.**
-
-Beide Varianten bestanden den vollständigen Android-Export und die technischen Prüfungen: Version **0.8.1 / Code 12**, Paket/Variante, ZIP-/APK-/Bundle-Format, deklarierte Daten und sämtliche Sprach-/Musik-/Grafikressourcen, API **24–36**, keine Android-Berechtigungen, Backup aus, Drehung `fullUser`, `arm64-v8a` und `x86_64`, 16-KB-ELF- und APK-ZIP-Ausrichtung. APK-v2-Signaturen geprüft; AABs mit Bundletool validiert und unsignierter Zustand bestätigt.
-
-Die APKs tragen temporäre Entwicklungssignaturen, **keine Release-Signaturen**. Beide AABs sind **unsigniert**. Pakete: `org.example.kinderwelt.preview.family.v081` und `org.example.kinderwelt.preview.neutral.v081`. Sie können nebeneinander installiert werden und haben getrennte lokale Spielstände; ältere Testpakete werden nicht ersetzt. Hier wurde keine APK auf einem echten Android-Gerät installiert.
-
-### Quellen und Hashes
-
-Die Builds liefen aus sauberem Git-Quellcommit `4b7ac09` ohne beobachtete Statusänderung während des jeweiligen Builds. Nachfolgende Änderungen ergänzen Nachweise und Herkunftsmetadaten; sie ändern keine App-Datei. Die private Figurenquelle ist in `scripts/ci/family-assets.json` mit vollständigem tatsächlichem Git-Commit und Manifest-SHA festgelegt. Das benannte entfernte Repository ist inzwischen als privat bestätigt; sein manuell hochgeladener Commit und die Grafikdateien sind geprüft. Die GitHub-CI bleibt unbestätigt.
-
-| Datei | SHA256 |
-|---|---|
-| `kinderwelt-debug-family.apk` | `aa784ea3f4bb994f0e075dc5f82d342fbcba912a8198d301dc91bd72516de4f3` |
-| `kinderwelt-unsigned-family.aab` | `19c477247541e79528ba8778e43036b77d6b926ac56a62df2915a62cd82032fd` |
-| `kinderwelt-debug-neutral.apk` | `cdf98a357c401ddafcf17fbb55a7261cdb95cb94c670961ec861d272b14ac78b` |
-| `kinderwelt-unsigned-neutral.aab` | `4054ea9b37fe04af37a13d2562cd1ba11cb565b053c2fea29956ff313840bae8` |
-
-### Tatsächliche Größenänderung gegenüber 0.8.0
-
-| APK | 0.8.0 Bytes | 0.8.1 Bytes | Differenz |
+| Stichprobe | Deutsch | Englisch | Russisch |
 |---|---:|---:|---:|
-| family | 185,906,124 | 185,906,144 | +20 |
-| neutral | 181,035,213 | 181,035,217 | +4 |
+| 31 feste Aufnahmen je Sprache | 5,950 % | 3,359 % | 10,464 % |
+| 8 zusätzliche Clip-Zuordnungen je Sprache | 10,969 % | 1,337 % | 5,495 % |
 
-Archivgröße, nicht installierter Speicher oder Play-Download. Die separaten Quellrepositorys und Prüfnachweise werden nicht als zusätzliche Bildpakete in beide APKs gepackt.
+Werte sind Zeichenfehlerraten; sie messen ASR-Abweichungen und zertifizieren kein kindliches Verständnis. Zum Beispiel werden einzelne russische Fachwörter und deutsche Bonusformulierungen fehlerhaft erkannt; diese bleiben im Hörreview gezielt zu prüfen. Manche Bonus-Zuordnungen teilen dieselbe Aufnahme. Die Stichproben sind keine statistisch unabhängige Abdeckung aller Dateien. Messdaten und Hashes: `docs/qa/speech-advanced-recognition-v090.json`, `docs/qa/speech-advanced-additional-v090.json`. Die Artefakte enthalten `kinderwelt-listening.html` mit 78 abspielbaren Offline-Proben.
 
-## Offene Stimme und Zugangs-/Netzwerkeinstellungen
+## Android-Artefakte
 
-Der direkte englische Modellversuch erzeugte je sieben echte DE-/RU-WAV-Dateien. Unabhängiges Whisper-small-Screening ohne Referenzvorgabe: **DE 45,02 %**, **RU 62,91 %** Zeichenabweichung. Keine menschliche Hörfreigabe; der Versuch ist ausdrücklich verworfen. OpenVoice-V2-Dokumentation war erreichbar, benötigte Gewichte von Hugging Face/offiziellem S3 jedoch nicht. **Keine OpenVoice-Konvertierung ausgeführt.** [Details](voice-v081.md).
+Finale lokale Builds: `build/android-v090-complete/`. Tatsächliche Dateigrößen und SHA-256 stehen in `docs/qa/android-v090-delivery.json`. Beide Varianten sind separat installierbar; Version 0.9.0, Code 13.
 
-Die vorhandene Cloud-Konfiguration enthielt eine eingeschränkte Paketquellen-Freigabe. Eine additive Erweiterung wurde erfolgreich als Entwurf gespeichert: bestehende Android-/Google-Ziele erhalten, zusätzlich `api.github.com`, `huggingface.co`, `cdn-lfs.huggingface.co`, `cdn-lfs.hf.co`, `cas-bridge.xethub.hf.co` und der offizielle Modellbucket `myshell-public-repo-host.s3.amazonaws.com`. **Der Entwurf ist nicht automatisch aktiv**: Umgebungseinstellungen prüfen und speichern, anschließend die Umgebung veröffentlichen. Danach müssen die betroffenen Operationen erneut geprüft werden; erfolgreiche Speicherung ist keine bestätigte Verbindung oder Veröffentlichung.
+| Datei | Größe (MiB) | Signatur |
+|---|---:|---|
+| `kinderwelt-debug-family.apk` | 212.28 | Entwicklung |
+| `kinderwelt-unsigned-family.aab` | 200.75 | **UNSIGNIERT** |
+| `kinderwelt-debug-neutral.apk` | 207.63 | Entwicklung |
+| `kinderwelt-unsigned-neutral.aab` | 196.11 | **UNSIGNIERT** |
 
-Zusätzlich muss GitHub-Authentifizierung über die Plattform wieder funktionieren. Es wurden native Git-Zugriffe und die vorhandene Bindung geprüft, keine Zugangsdaten ausgegeben oder extrahiert. Fehlgeschlagene Git-Anmeldungen beweisen nicht, dass ein Proxy-Platzhalter ein abgelaufener Roh-Token wäre. Für Actions ist nach Einrichtung des privaten Repositorys ein gesonderter, eng begrenzter Lesetoken als `KINDERWELT_FAMILY_ASSETS_TOKEN` erforderlich; sein Vorhandensein/ seine Funktion wurde noch nicht bestätigt. Kein Token gehört in den Chat oder Git.
+Geprüft: ZIP/APK/AAB-Struktur, vollständige App-/Audio-/Grafikdateien und Abgleich mit den getesteten Quellen, Paket/Version, minSdk 24, targetSdk 36, keine Berechtigungen, Backup deaktiviert, `fullUser`-Rotation, GL Compatibility, arm64-v8a/x86_64, 16-KB-ELF-/ZIP-Ausrichtung, APK-v2-Signatur und exakter Zertifikatsfingerabdruck; Bundletool-Validierung und ausdrücklich unsignierte AABs. Keine Release-Schlüssel verwendet.
 
-## Manuell weiterhin offen
+Ab 0.9.0 ist der Vorschaukanal unabhängig von der Versionsnummer. Lokal wiederverwendeter Entwicklungsschlüssel; CI verwendet einen privaten, aber löschbaren Actions-Cache. Ein Cache ist kein dauerhaft zugesicherter Signierspeicher. Die alten 0.8.1-APKs hatten flüchtige Schlüssel. Die neue App wird parallel installiert; alte Paket-Spielstände werden nicht automatisch kopiert. Details: [Android bauen](android.md).
 
-Android-Installation beider Varianten, tatsächliche Lautsprecher-/Bluetooth-Verständlichkeit mit und ohne Musik, Audiofokus/Unterbrechung, Drehung, Wiedereinstieg und reale Bildrate. Muttersprachliche Hörprüfung und freiwillige Kinderbeobachtung bleiben offen. Die separate Figurenablage entfernt keine älteren Familienbilder aus der bestehenden Hauptrepository-Historie. Endgültige App-ID, dauerhafte Signierung, Datenschutz/Families, Altersfreigabe, Store-Eintrag und Play-Freigaben bleiben offen. Keine empirische Lernwirkung oder Google-Play-Uploadbereitschaft behauptet.
+Die geprüften lokalen Exporte stammen aus einem sauberen Quellstand; Commit und Inhalts-Hashes stehen in den beigefügten Provenienzberichten. Die letzte Korrektur betrifft „Fußabdruck“ als übliche Schreibung zum gültigen Großbuchstaben-Lernwort „FUSSABDRUCK“.
 
-## Nachtrag: vorhandenes Figurenrepository verwenden
+## GitHub und offene Prüfungen
 
-Konfiguration und Einrichtungsanleitung verweisen jetzt auf `sayac007/Kinderwelt-Privat`; Commit und Manifest-Hash der vorbereiteten Familienbilder sind unverändert. Der lokale Figurenbestand hat dieses Repository als `origin`. Der tatsächliche CI-Quellreproduktionsnachweis unter `v081-ci-reproduction.json` enthält bewusst den damals verwendeten alten Zielnamen; dieser historische Nachweis wird nicht rückwirkend umgeschrieben. Der neue Zielname verändert keine App-Dateien oder gebauten APKs. Vor dem ersten Upload muss die Sichtbarkeit privat und der GitHub-Zugriff funktionsfähig sein.
+Der Branch `feat/rewards-native-learning` basiert auf `origin/main` einschließlich gemergtem PR #10. GitHub-Lauf, Ergebnis und Downloadlink werden im Pull Request und in den Actions-Artefakten ausgewiesen; ein lokaler Erfolg ist kein Beleg eines bereits erfolgreichen Remote-Laufs.
 
-Für diese reine Zielumstellung wurden alle **74 Python-Tests** erneut bestanden, `actionlint 1.7.7` lief fehlerfrei, und der tatsächliche lokale Import der 14 Dateien wurde gegen den unveränderten Commit/Manifest-Hash erneut erfolgreich ausgeführt. Protokolle: `docs/qa/v081-family-repository-target*`. Keine erneuten Android-Builds oder Godot-Läufe für diese Konfigurations-/Dokumentationsänderung.
-
-## Nachtrag: manueller Upload und wiederhergestellter Repository-Zugriff
-
-GitHub bestätigt das private Figurenrepository und Repository-Lese-/Schreibrechte. Der manuelle Upload-Commit `5a35f7675eb1a0881447005fbe51dc089ef8471f` wurde abgerufen und als Quelle eingetragen. Alle 14 tatsächlich entfernten Familiengrafik-/Katalogdateien stimmen mit dem bisherigen Manifest überein und bestehen den unveränderten Importer. Die oben beschriebenen früheren 401-/Öffentlichkeitsbefunde sind historisch. App-Inhalte und bestehende Android-Artefakte bleiben unverändert. Actions-Secrets können von der vorhandenen Integration nicht gelesen werden (HTTP 403 `Resource not accessible by integration`); Vorhandensein und Funktion des separaten CI-Lesetokens sowie ein erfolgreicher Remote-CI-Lauf sind weiterhin nicht bestätigt.
-
-Nach Übernahme des echten Upload-Commits bestanden erneut alle **74 Python-Tests**, einschließlich Decodierung aller 1.645 Sprachdateien, sowie `actionlint 1.7.7`. Protokoll: `docs/qa/v081-family-upload-pin-tests.log`. Keine App-Datei geändert; keine erneuten Android-Builds oder Godot-Läufe für die reine Commit-Pin-/Dokumentationsänderung.
+Offen: Hörfreigabe und gemeinsamer weiblicher Sprecher, Muttersprachler-/Fachreview aller neuen Bonus- und Rätseltexte, echte Android-Geräte-/Updateprüfung, kinderspezifische Usability und empirische Evaluation. Keine personenbezogenen Daten neu erfasst. Endgültige App-ID, Release-Signierung und Google-Play-Freigaben bleiben offen.
