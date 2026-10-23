@@ -45,6 +45,9 @@ func setup(owner_host: Control,data: Dictionary,parent: Dictionary={},index := -
 	heading.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	heading.add_theme_font_size_override("font_size",roundi((18 if task.kind=="discovery" else 20)*host.store.data.text_scale))
 	add_child(heading)
+	# Wrapping settles after the first layout; reflow the illustration when
+	# the actual label height becomes available (also after rotation).
+	heading.minimum_size_changed.connect(arrange)
 	picture = preload("res://games/quest/picture.gd").new()
 	picture.task = task
 	picture.host = host
