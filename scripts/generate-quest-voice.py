@@ -119,7 +119,6 @@ def narration_texts(locale):
     # Isolated synthetic words can lose consonants. Natural context stabilizes
     # intonation; it is spoken audio, never a prompt supplied to the ASR checker.
     if locale=='de':
-        texts['area_math']='Das ist Mathe.'
         for subject in ['logic','chemistry','geography']:
             texts['area_'+subject]='Hier entdecken wir die '+languages['ui'][subject][locale]+'.'
     elif locale=='en':

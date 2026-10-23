@@ -145,7 +145,10 @@ def main():
         spoken=[pronunciation.utterance(text,a.locale)['synthesis_text'] for text in batch]
         seed=(int(hashlib.sha256((a.locale+json.dumps(spoken,ensure_ascii=False)).encode()).hexdigest()[:8],16)+104729*attempt)%2**32
         torch.manual_seed(seed)
-        budget=min(480,max(96,max(len(re.findall(r'\w+',t)) for t in batch)*8+36+32*attempt))
+        # Compounds and number sequences expand beyond a simple written-word
+        # estimate. Leave room to finish; the independent duration guard still
+        # rejects repetitions before waveform decoding.
+        budget=min(480,max(96,max(len(re.findall(r'\w+',t)) for t in batch)*12+64+32*attempt))
         kwargs={'do_sample':sampling,'subtalker_dosample':sampling,'max_new_tokens':budget}
         if sampling:kwargs.update(temperature=.65+.05*max(0,attempt-1),top_p=.85,top_k=30,subtalker_temperature=.65)
         decoder=model.model.speech_tokenizer.decode
@@ -186,6 +189,7 @@ def main():
             # affect numerical rounding even with deterministic greedy decoding.
             group=work[offset:offset+a.batch_size]
             if all(text in done for text in group):continue
+            print(a.locale,'synthesizing',len(group),'inputs;',len(done),'of',len(unique),'verified',flush=True)
             wavs,rate,seed,budget,kwargs=synthesize(group,sampling=True)
             for text,waveform in zip(group,wavs):
                 if text in done:continue

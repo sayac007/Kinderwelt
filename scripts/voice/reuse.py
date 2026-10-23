@@ -8,7 +8,7 @@ import pronunciation
 
 def exact_input_rows(previous,expected,texts,locale,manifest_sha256):
     identity=['model_sha256','speech_tokenizer_sha256','model_revision','speaker','locale']
-    if any(previous.get(k)!=expected.get(k) for k in identity):return {}
+    if any(not previous.get(k) or previous.get(k)!=expected.get(k) for k in identity):return {}
     batches=previous.get('generation_batches',{});wanted=set(texts.values());rows={}
     for original in previous['clips']:
         text=original['text']
