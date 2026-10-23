@@ -6,6 +6,9 @@ new completions from the archived achievements earned in the first round.
 from pathlib import Path
 SOURCE=Path(__file__).parent
 LANGS=('de','en','ru')
+def word_title(word,locale):
+    # Uppercase SS is valid for ß; title casing cannot infer the lowercase form.
+    return 'Fußabdruck' if locale=='de' and word=='FUSSABDRUCK' else word.capitalize()
 
 def localized(q,h):return {lang:{'prompt':a,'tip':b} for lang,a,b in zip(LANGS,q,h)}
 def numeric(n,i):
@@ -104,7 +107,7 @@ def literacy(parent,i,word_row):
         wrong=letter_distractors(answer,alphabet,i)
         options=[wrong[0],answer,wrong[1]];shift=i%3;options=options[shift:]+options[:shift]
         variant={'word':word,'display':''.join('＿' if p in positions else c for p,c in enumerate(word)),'answer':answer,'options':options}
-        q={'de':f'{word.capitalize()}. Welche beiden Buchstaben fehlen?','en':f'{word.capitalize()}. Which two letters are missing?','ru':f'{word.capitalize()}. Какие две буквы пропущены?'}[locale]
+        q={'de':f'{word_title(word,locale)}. Welche beiden Buchstaben fehlen?','en':f'{word_title(word,locale)}. Which two letters are missing?','ru':f'{word_title(word,locale)}. Какие две буквы пропущены?'}[locale]
         h={'de':'Lies von links nach rechts. Die Lücken brauchen '+'. '.join(answer)+'.','en':'Read from left to right. The gaps need '+'. '.join(answer)+'.','ru':'Читай слева направо. В пропусках: '+'. '.join(answer)+'.'}[locale]
         result['texts'][locale]={'prompt':q,'tip':h}
         if locale=='de':result.update(variant)

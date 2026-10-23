@@ -118,7 +118,8 @@ def language_bonus(parent,index,level):
         masked=''.join('＿' if p in positions else c for p,c in enumerate(word))
         variant={'word':word,'display':masked,'answer':answer,'options':opts}
         if locale=='de':
-            q=word.capitalize()+'. Welche Buchstaben fehlen?'
+            from advanced import word_title
+            q=word_title(word,locale)+'. Welche Buchstaben fehlen?'
             h='Die Lücke braucht '+'. '.join(answer)+'.'
         elif locale=='en':
             q=word.capitalize()+'. Which letters are missing?'

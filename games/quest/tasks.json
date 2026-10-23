@@ -11306,7 +11306,7 @@
       "object": "tooth",
       "texts": {
         "de": {
-          "prompt": "Fussabdruck. Welche beiden Buchstaben fehlen?",
+          "prompt": "Fußabdruck. Welche beiden Buchstaben fehlen?",
           "tip": "Lies von links nach rechts. Die Lücken brauchen S. U."
         },
         "en": {
@@ -11318,7 +11318,7 @@
           "tip": "Читай слева направо. В пропусках: С. О."
         }
       },
-      "prompt": "Fussabdruck. Welche beiden Buchstaben fehlen?",
+      "prompt": "Fußabdruck. Welche beiden Buchstaben fehlen?",
       "tip": "Lies von links nach rechts. Die Lücken brauchen S. U.",
       "advanced_native": true,
       "native_words": {
@@ -11381,7 +11381,7 @@
           },
           "texts": {
             "de": {
-              "prompt": "Fussabdruck. Welche Buchstaben fehlen?",
+              "prompt": "Fußabdruck. Welche Buchstaben fehlen?",
               "tip": "Die Lücke braucht A. B. D."
             },
             "en": {
@@ -11408,7 +11408,7 @@
           "optional": true,
           "reasoning_level": 1,
           "content_revision": 2,
-          "prompt": "Fussabdruck. Welche Buchstaben fehlen?",
+          "prompt": "Fußabdruck. Welche Buchstaben fehlen?",
           "tip": "Die Lücke braucht A. B. D."
         },
         {
@@ -11438,7 +11438,7 @@
           },
           "texts": {
             "de": {
-              "prompt": "Fussabdruck. Welche Buchstaben fehlen?",
+              "prompt": "Fußabdruck. Welche Buchstaben fehlen?",
               "tip": "Die Lücke braucht B. D. R. U."
             },
             "en": {
@@ -11465,7 +11465,7 @@
           "optional": true,
           "reasoning_level": 2,
           "content_revision": 2,
-          "prompt": "Fussabdruck. Welche Buchstaben fehlen?",
+          "prompt": "Fußabdruck. Welche Buchstaben fehlen?",
           "tip": "Die Lücke braucht B. D. R. U."
         }
       ]

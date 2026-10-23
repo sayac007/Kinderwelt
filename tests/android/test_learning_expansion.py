@@ -57,6 +57,9 @@ class LearningExpansionTests(unittest.TestCase):
         self.assertEqual((sun['word'],sun['answer']),('SONNENSTRAHL','SS'))
         self.assertEqual((sun['variants']['en']['word'],sun['variants']['en']['answer']),('SUNSHINE','SH'))
         self.assertEqual((sun['variants']['ru']['word'],sun['variants']['ru']['answer']),('СОЛНЫШКО','СЫ'))
+        foot=next(t for t in self.parents if t.get('word')=='FUSSABDRUCK')
+        for task in [foot,*foot['bonuses']]:
+            self.assertIn('Fußabdruck',task['texts']['de']['prompt'])
         for parent in self.parents:
             if parent['subject']!='german':continue
             for task in [parent,*parent['bonuses']]:

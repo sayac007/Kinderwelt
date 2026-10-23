@@ -527,7 +527,7 @@
 | german_36 | en | tip | Find the letters of Baum: B. A. U. M. | Read from left to right. The gaps need T. B. |
 | german_36 | ru | prompt | Какое немецкое слово подходит к картинке? | Зубик. Какие две буквы пропущены? |
 | german_36 | ru | tip | Найди буквы слова Baum: B. A. U. M. | Читай слева направо. В пропусках: З. Б. |
-| german_37 | de | prompt | Welches deutsche Wort passt zum Bild? | Fussabdruck. Welche beiden Buchstaben fehlen? |
+| german_37 | de | prompt | Welches deutsche Wort passt zum Bild? | Fußabdruck. Welche beiden Buchstaben fehlen? |
 | german_37 | de | tip | Suche die Buchstaben von Zahn: Z. A. H. N. | Lies von links nach rechts. Die Lücken brauchen S. U. |
 | german_37 | en | prompt | Which German word matches the picture? | Footprint. Which two letters are missing? |
 | german_37 | en | tip | Find the letters of Zahn: Z. A. H. N. | Read from left to right. The gaps need F. P. |

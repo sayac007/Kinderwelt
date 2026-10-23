@@ -40548,47 +40548,47 @@
       "id": "german_36_bonus_2_hint"
     },
     {
-      "text": "Fussabdruck. Welche beiden Buchstaben fehlen?",
-      "file": "voice_de_899d7ed21de18cea8f35.ogg",
-      "seconds": 4.234920634920635,
-      "bytes": 24950,
-      "sha256": "f4994a5e3a9a05952a1fb795301ecb53b71750c5e14ed8dd7ad0866427aab02f",
+      "text": "Fußabdruck. Welche beiden Buchstaben fehlen?",
+      "file": "voice_de_80edf8ce56643eddc36c.ogg",
+      "seconds": 4.211700680272108,
+      "bytes": 24614,
+      "sha256": "5ade1c0c2d219a1b99cc17f7a615565c719b2327d2a257c3f83ff691e6b7effe",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6835304498672485,
+        "decoded_peak": 0.6950795650482178,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊsabdrˌʊk.",
-          "start": 0.30771,
-          "end": 1.468707,
-          "seconds": 1.160998
+          "phonemes": "fˈuːsabdrˌʊk.",
+          "start": 0.4122,
+          "end": 1.457098,
+          "seconds": 1.044898
         },
         {
           "phonemes": "vˈɛlçə",
-          "start": 1.876417,
-          "end": 2.236327,
+          "start": 1.853197,
+          "end": 2.213107,
           "seconds": 0.359909
         },
         {
           "phonemes": "bˈaɪdən",
-          "start": 2.317596,
-          "end": 2.561406,
+          "start": 2.294376,
+          "end": 2.538186,
           "seconds": 0.24381
         },
         {
           "phonemes": "bˈuːxʃtɑːbən",
-          "start": 2.584626,
-          "end": 3.118685,
+          "start": 2.561406,
+          "end": 3.095465,
           "seconds": 0.534059
         },
         {
           "phonemes": "fˈeːlən?",
-          "start": 3.165125,
-          "end": 3.826893,
+          "start": 3.141905,
+          "end": 3.803673,
           "seconds": 0.661769
         }
       ],
@@ -40696,41 +40696,41 @@
       "id": "german_37_hint"
     },
     {
-      "text": "Fussabdruck. Welche Buchstaben fehlen?",
-      "file": "voice_de_8bbdb9e1dfb536a32821.ogg",
-      "seconds": 3.979501133786848,
-      "bytes": 23756,
-      "sha256": "c28cc93acd9213ea491b58276e1611f388816073f055dcf16c0f90de77aea7a5",
+      "text": "Fußabdruck. Welche Buchstaben fehlen?",
+      "file": "voice_de_24bf1e4934a6a01d582e.ogg",
+      "seconds": 3.956281179138322,
+      "bytes": 22281,
+      "sha256": "67d892fc310620c46c16743f7bc624067aa04cef00f3f6739363da5b66353892",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6745014190673828,
+        "decoded_peak": 0.680124044418335,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊsabdrˌʊk.",
-          "start": 0.30771,
-          "end": 1.468707,
-          "seconds": 1.160998
+          "phonemes": "fˈuːsabdrˌʊk.",
+          "start": 0.4122,
+          "end": 1.457098,
+          "seconds": 1.044898
         },
         {
           "phonemes": "vˈɛlçə",
-          "start": 1.888027,
-          "end": 2.247937,
+          "start": 1.864807,
+          "end": 2.224717,
           "seconds": 0.359909
         },
         {
           "phonemes": "bˈuːxʃtɑːbən",
-          "start": 2.294376,
-          "end": 2.851655,
+          "start": 2.271156,
+          "end": 2.828435,
           "seconds": 0.557279
         },
         {
           "phonemes": "fˈeːlən?",
-          "start": 2.898095,
-          "end": 3.571474,
+          "start": 2.874875,
+          "end": 3.548254,
           "seconds": 0.673379
         }
       ],
@@ -40814,41 +40814,41 @@
       "id": "german_37_bonus_1_hint"
     },
     {
-      "text": "Fussabdruck. Welche Buchstaben fehlen?",
-      "file": "voice_de_8bbdb9e1dfb536a32821.ogg",
-      "seconds": 3.979501133786848,
-      "bytes": 23756,
-      "sha256": "c28cc93acd9213ea491b58276e1611f388816073f055dcf16c0f90de77aea7a5",
+      "text": "Fußabdruck. Welche Buchstaben fehlen?",
+      "file": "voice_de_24bf1e4934a6a01d582e.ogg",
+      "seconds": 3.956281179138322,
+      "bytes": 22281,
+      "sha256": "67d892fc310620c46c16743f7bc624067aa04cef00f3f6739363da5b66353892",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6745014190673828,
+        "decoded_peak": 0.680124044418335,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊsabdrˌʊk.",
-          "start": 0.30771,
-          "end": 1.468707,
-          "seconds": 1.160998
+          "phonemes": "fˈuːsabdrˌʊk.",
+          "start": 0.4122,
+          "end": 1.457098,
+          "seconds": 1.044898
         },
         {
           "phonemes": "vˈɛlçə",
-          "start": 1.888027,
-          "end": 2.247937,
+          "start": 1.864807,
+          "end": 2.224717,
           "seconds": 0.359909
         },
         {
           "phonemes": "bˈuːxʃtɑːbən",
-          "start": 2.294376,
-          "end": 2.851655,
+          "start": 2.271156,
+          "end": 2.828435,
           "seconds": 0.557279
         },
         {
           "phonemes": "fˈeːlən?",
-          "start": 2.898095,
-          "end": 3.571474,
+          "start": 2.874875,
+          "end": 3.548254,
           "seconds": 0.673379
         }
       ],
