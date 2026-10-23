@@ -10119,66 +10119,66 @@
     },
     {
       "text": "Flowerpot. Which two letters are missing?",
-      "file": "voice_en_2e6ddeef88ec0300e229.ogg",
-      "seconds": 3.5267120181405898,
-      "bytes": 21134,
-      "sha256": "36256e23b420826a88a17a1a479691d25a4781a79fc06c04f1daad4307dc6fbd",
+      "file": "voice_en_70625380c4bfb3da5551.ogg",
+      "seconds": 3.5151020408163265,
+      "bytes": 21067,
+      "sha256": "2d1cbcfb7f8d95214576f3ae52cf89d9eea6111cc47fffd0ff9331ada95df2f5",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7137508392333984,
+        "decoded_peak": 0.6994529962539673,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "flˈaʊəpˌɒt.",
-          "start": 0.23805,
-          "end": 1.155238,
-          "seconds": 0.917188
+          "start": 0.20322,
+          "end": 1.143628,
+          "seconds": 0.940408
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.504898,
-          "end": 1.702268,
-          "seconds": 0.19737
+          "start": 1.493288,
+          "end": 1.679048,
+          "seconds": 0.18576
         },
         {
           "phonemes": "tˈuː",
           "start": 1.783537,
-          "end": 2.004127,
-          "seconds": 0.22059
+          "end": 1.980907,
+          "seconds": 0.19737
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 2.097007,
-          "end": 2.503356,
-          "seconds": 0.406349
+          "start": 2.015737,
+          "end": 2.445306,
+          "seconds": 0.429569
         },
         {
           "phonemes": "ɑː",
           "start": 2.538186,
-          "end": 2.631066,
-          "seconds": 0.09288
+          "end": 2.619456,
+          "seconds": 0.08127
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.677506,
-          "end": 3.153515,
+          "start": 2.665896,
+          "end": 3.141905,
           "seconds": 0.476009
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_flower",
       "pronunciation": {
         "synthesis_text": "Flowerpot. Which two letters are missing?",
         "word_count": 6,
@@ -10186,7 +10186,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_flower"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -10659,66 +10673,66 @@
     },
     {
       "text": "Goldfish. Which two letters are missing?",
-      "file": "voice_en_872844eff7fa5237ac08.ogg",
-      "seconds": 3.5499319727891154,
-      "bytes": 21488,
-      "sha256": "93b10ac728e5cd9235d2ad1e349a81b54cf49ffddc971aef95bd26c017817523",
+      "file": "voice_en_2a3a9981c7b16bf0b09e.ogg",
+      "seconds": 3.654421768707483,
+      "bytes": 22394,
+      "sha256": "713a92d6f995537ad6c590791bc4155e0eb26318da0dba25d6b086d502ce7947",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.686593234539032,
+        "decoded_peak": 0.6857006549835205,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "ɡˈəʊldfɪʃ.",
-          "start": 0.20322,
-          "end": 1.155238,
-          "seconds": 0.952018
+          "start": 0.21483,
+          "end": 1.248118,
+          "seconds": 1.033288
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.504898,
-          "end": 1.667438,
-          "seconds": 0.16254
+          "start": 1.586168,
+          "end": 1.771927,
+          "seconds": 0.18576
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.760317,
-          "end": 1.969297,
-          "seconds": 0.20898
+          "start": 1.864807,
+          "end": 2.085397,
+          "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 2.027347,
-          "end": 2.445306,
-          "seconds": 0.417959
+          "start": 2.131837,
+          "end": 2.514966,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.538186,
-          "end": 2.631066,
-          "seconds": 0.09288
+          "start": 2.561406,
+          "end": 2.665896,
+          "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.700726,
-          "end": 3.153515,
-          "seconds": 0.452789
+          "start": 2.689116,
+          "end": 3.246395,
+          "seconds": 0.557279
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_fish",
       "pronunciation": {
         "synthesis_text": "Goldfish. Which two letters are missing?",
         "word_count": 6,
@@ -10726,7 +10740,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_fish"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -37359,66 +37387,66 @@
     },
     {
       "text": "Kitten. Which two letters are missing?",
-      "file": "voice_en_6c18c7bddefe960b6dc0.ogg",
+      "file": "voice_en_caf315c30d39437fc61e.ogg",
       "seconds": 3.1087528344671203,
-      "bytes": 18351,
-      "sha256": "60f437045f0f1e2edcba8e39e209d5f277bdbef4e4f77c5fbc9aa6c9fec26f48",
+      "bytes": 18610,
+      "sha256": "46575fc33d7f42b9322dd1e53e87be366cccbb34da437aea50349f6ded054916",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7251834273338318,
+        "decoded_peak": 0.6971758604049683,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "kˈɪtən.",
-          "start": 0.22644,
-          "end": 0.667619,
+          "start": 0.24966,
+          "end": 0.690839,
           "seconds": 0.441179
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.028889,
-          "end": 1.237868,
-          "seconds": 0.20898
+          "start": 1.005669,
+          "end": 1.191429,
+          "seconds": 0.18576
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.330748,
-          "end": 1.493288,
-          "seconds": 0.16254
+          "start": 1.261088,
+          "end": 1.435238,
+          "seconds": 0.17415
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.539728,
-          "end": 1.969297,
-          "seconds": 0.429569
+          "start": 1.504898,
+          "end": 1.980907,
+          "seconds": 0.476009
         },
         {
           "phonemes": "ɑː",
           "start": 2.038957,
-          "end": 2.166667,
-          "seconds": 0.12771
+          "end": 2.143447,
+          "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
           "start": 2.201497,
-          "end": 2.723946,
-          "seconds": 0.522449
+          "end": 2.747166,
+          "seconds": 0.545669
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_11",
       "pronunciation": {
         "synthesis_text": "Kitten. Which two letters are missing?",
         "word_count": 6,
@@ -37426,7 +37454,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_11"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -40059,66 +40101,66 @@
     },
     {
       "text": "Sandcastle. Which two letters are missing?",
-      "file": "voice_en_df186f09f47e25fab7cd.ogg",
-      "seconds": 3.689251700680272,
-      "bytes": 22783,
-      "sha256": "640055c6840ca678b9564f86d86fb695567960affdf335a3337810b6de198d96",
+      "file": "voice_en_136e66092c35b980f5b6.ogg",
+      "seconds": 3.5499319727891154,
+      "bytes": 21439,
+      "sha256": "1e460b94e9b653c2b04fa4b371c21c4736c3fbc6c1a46df03e19862177e08f5b",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6812688112258911,
+        "decoded_peak": 0.6841166019439697,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "sˈandkasəl.",
-          "start": 0.2961,
-          "end": 1.236508,
-          "seconds": 0.940408
+          "start": 0.33093,
+          "end": 1.248118,
+          "seconds": 0.917188
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.586168,
-          "end": 1.795147,
-          "seconds": 0.20898
+          "start": 1.562948,
+          "end": 1.737098,
+          "seconds": 0.17415
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.864807,
-          "end": 2.062177,
-          "seconds": 0.19737
+          "start": 1.899637,
+          "end": 2.038957,
+          "seconds": 0.13932
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 2.108617,
-          "end": 2.549796,
-          "seconds": 0.441179
+          "start": 2.120227,
+          "end": 2.503356,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.631066,
-          "end": 2.758776,
-          "seconds": 0.12771
+          "start": 2.549796,
+          "end": 2.665896,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.793605,
-          "end": 3.316054,
-          "seconds": 0.522449
+          "start": 2.723946,
+          "end": 3.176735,
+          "seconds": 0.452789
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_16",
       "pronunciation": {
         "synthesis_text": "Sandcastle. Which two letters are missing?",
         "word_count": 6,
@@ -40126,7 +40168,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_16"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -41139,66 +41195,66 @@
     },
     {
       "text": "Nostril. Which two letters are missing?",
-      "file": "voice_en_c1349649a929bcb4ffe4.ogg",
-      "seconds": 3.5383219954648526,
-      "bytes": 21090,
-      "sha256": "654414796c8d0acd5dc7ef793824f76e1bb5fe527d6517a8bd0abc2bbb5a8d29",
+      "file": "voice_en_4aef33858ccff7c69f0d.ogg",
+      "seconds": 3.5615419501133787,
+      "bytes": 21198,
+      "sha256": "e74d7e1555c4da1bff3e38271d3667153f81a48d04b2a5d30cb3620b32def450",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7034773230552673,
+        "decoded_peak": 0.6987611055374146,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "nˈɒstɹəl.",
-          "start": 0.22644,
-          "end": 1.062358,
+          "start": 0.21483,
+          "end": 1.050748,
           "seconds": 0.835918
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.400408,
-          "end": 1.620998,
+          "start": 1.377188,
+          "end": 1.597778,
           "seconds": 0.22059
         },
         {
           "phonemes": "tˈuː",
           "start": 1.690658,
-          "end": 1.899637,
-          "seconds": 0.20898
+          "end": 1.841587,
+          "seconds": 0.15093
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.934467,
-          "end": 2.364036,
-          "seconds": 0.429569
+          "start": 1.911247,
+          "end": 2.375646,
+          "seconds": 0.464399
         },
         {
           "phonemes": "ɑː",
-          "start": 2.468526,
-          "end": 2.584626,
-          "seconds": 0.1161
+          "start": 2.410476,
+          "end": 2.538186,
+          "seconds": 0.12771
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.631066,
-          "end": 3.130295,
-          "seconds": 0.499229
+          "start": 2.573016,
+          "end": 3.153515,
+          "seconds": 0.580499
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_18",
       "pronunciation": {
         "synthesis_text": "Nostril. Which two letters are missing?",
         "word_count": 6,
@@ -41206,7 +41262,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_18"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -50859,66 +50929,66 @@
     },
     {
       "text": "Toothbrush. Which two letters are missing?",
-      "file": "voice_en_ba9a0c7f03263f2e799f.ogg",
-      "seconds": 3.5499319727891154,
-      "bytes": 21360,
-      "sha256": "1e2a35d648efae542d3a95fa7a15e713790fd7f205ae51c75e27abb18772a986",
+      "file": "voice_en_6b0d4accc4659e6ca5f4.ogg",
+      "seconds": 3.64281179138322,
+      "bytes": 21954,
+      "sha256": "0bc39214f38d16970a219d2876f38fb837d830fd4ad8ad93671f9a9303aedb83",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7548151612281799,
+        "decoded_peak": 0.8312559127807617,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
           "phonemes": "tˈuːθbɹʌʃ.",
-          "start": 0.22644,
-          "end": 1.178458,
-          "seconds": 0.952018
+          "start": 0.26127,
+          "end": 1.259728,
+          "seconds": 0.998458
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.516508,
-          "end": 1.725488,
+          "start": 1.586168,
+          "end": 1.795147,
           "seconds": 0.20898
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.795147,
-          "end": 1.957687,
-          "seconds": 0.16254
+          "start": 1.888027,
+          "end": 2.073787,
+          "seconds": 0.18576
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 2.015737,
-          "end": 2.445306,
-          "seconds": 0.429569
+          "start": 2.131837,
+          "end": 2.538186,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 2.503356,
-          "end": 2.619456,
-          "seconds": 0.1161
+          "start": 2.596236,
+          "end": 2.747166,
+          "seconds": 0.15093
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.677506,
-          "end": 3.141905,
-          "seconds": 0.464399
+          "start": 2.781995,
+          "end": 3.269615,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
-        "revision": "articulated-stress-3",
+        "revision": "articulated-2",
         "length_scale": 1.18,
         "noise_scale": 0.5,
         "noise_w_scale": 0.6,
         "volume": 0.68,
         "lead_seconds": 0.18,
         "tail_seconds": 0.35,
-        "sentence_pause_seconds": 0.28,
-        "pronunciation_revision": "lexical-stress-1"
+        "sentence_pause_seconds": 0.28
       },
+      "id": "german_36",
       "pronunciation": {
         "synthesis_text": "Toothbrush. Which two letters are missing?",
         "word_count": 6,
@@ -50926,7 +50996,21 @@
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_36"
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "12129dfee88724348b8827a4f3c7f7efc168aadf490642c98c0c6dd3ff57e9a8",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",

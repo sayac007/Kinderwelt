@@ -228,7 +228,7 @@ def main():
             guidance=pronunciation.utterance(text,args.locale)
             cache_key=(text,json.dumps(applied,sort_keys=True))
             if cache_key in done:row=dict(done[cache_key])
-            elif text in old and old[text].get('generation_profile',old_profile)==applied and old[text].get('pronunciation')==guidance and valid_cached_audio(dest/old[text]['file'],old[text]['sha256']):
+            elif text in old and (old[text].get('generation_profile',old_profile)==applied or old[text].get('pronunciation_review',{}).get('reviewed_generation_profile')==applied) and old[text].get('pronunciation')==guidance and valid_cached_audio(dest/old[text]['file'],old[text]['sha256']):
                 row=dict(old[text]);done[cache_key]=row
             else:
                 filename='voice_'+args.locale+'_'+hashlib.sha256((text+manifest['model_sha256']+json.dumps(applied,sort_keys=True)+guidance['sha256']).encode()).hexdigest()[:20]+'.ogg'

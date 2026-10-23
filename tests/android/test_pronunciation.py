@@ -64,3 +64,18 @@ class PronunciationTests(unittest.TestCase):
   self.assertEqual(set(reviewed_current_rows(prior,{'area':current},'ru')),{current})
   with self.assertRaisesRegex(ValueError,'Unreviewed speech word'):
    reviewed_current_rows(prior,{'new':'Несуществующееслово.'},'ru')
+ def test_piper_reuse_requires_actual_phonemes_and_synthesis_parameters_to_match(self):
+  from copy import deepcopy
+  sys.path.insert(0,str(ROOT/'scripts/voice'))
+  from reuse import reviewed_piper_row
+  bank={'locale':'en','model':'LJSpeech','model_sha256':'weights','voice_gender':'female'}
+  old={'text':'English.','generation_profile':{'revision':'original','length_scale':1.18},'phonetic_units':[{'phonemes':'ˈɪŋɡlɪʃ.'}],'sha256':'original-audio'}
+  current=dict(old,generation_profile={'revision':'new','length_scale':1.18},pronunciation=g.utterance('English.','en'))
+  row=reviewed_piper_row(old,current,bank,bank,'source-manifest')
+  self.assertEqual(row['sha256'],'original-audio');self.assertEqual(row['generation_profile']['revision'],'original')
+  self.assertEqual(row['pronunciation_review']['reviewed_generation_profile'],current['generation_profile'])
+  changed=deepcopy(current);changed['phonetic_units'][0]['phonemes']='different'
+  self.assertIsNone(reviewed_piper_row(old,changed,bank,bank,'source'))
+  changed=deepcopy(current);changed['generation_profile']['length_scale']=1.5
+  self.assertIsNone(reviewed_piper_row(old,changed,bank,bank,'source'))
+  self.assertIsNone(reviewed_piper_row(old,current,bank,dict(bank,model_sha256='other'),'source'))
