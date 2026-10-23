@@ -29,6 +29,29 @@ func _draw() -> void:
 	if task.is_empty(): return
 	items.clear()
 	var rect := Rect2(Vector2(8,4),size-Vector2(16,8))
+	if task.get("kind","")=="dual_pattern":
+		var cell: float=rect.size.x/(task.sequence.size()+1)
+		var side:=minf(48,cell-8)
+		for i in range(task.sequence.size()+1):
+			var center:=Vector2(rect.position.x+cell*(i+.5),size.y/2)
+			if i<task.sequence.size():
+				Art.object(self,task.sequence[i],Rect2(center-Vector2(side/2,side+5),Vector2.ONE*side))
+				Art.text(self,str(int(task.counts[i])),center+Vector2(0,22),20)
+			else:
+				Art.text(self,"?",center-Vector2(0,23),30)
+				Art.text(self,"?",center+Vector2(0,22),24)
+		return
+	if task.has("riddle_scene"):
+		preload("res://games/quest/riddle_scene.gd").paint(self,task.riddle_scene,rect)
+		Art.text(self,task.get("keyword","?"),Vector2(size.x/2,size.y-12),20)
+		return
+	if task.has("display"):
+		var lines: PackedStringArray=str(task.display).split("\n")
+		for i in range(lines.size()):
+			var px:=30
+			while px>14 and Art.font().get_string_size(lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>rect.size.x-8: px-=1
+			Art.text(self,lines[i],Vector2(size.x/2,size.y*(i+1)/(lines.size()+1)),px)
+		return
 	match task.kind:
 		"count": group(task.count,rect)
 		"add","subtract":

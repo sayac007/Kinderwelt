@@ -18,6 +18,9 @@ checked --headless --path . --editor --import --quit
 checked --headless --path . -s tests/quest.gd
 checked --headless --path . -s tests/worlds.gd
 checked --headless --path . -s tests/boot.gd
+KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd
+KINDERWELT_SAVE_TEST=read checked --headless --path . -s tests/save_restart.gd
+checked --headless --path . -s tests/rewards.gd
 mkdir -p qa-results
 export KINDERWELT_SPEECH_REPORT=${KINDERWELT_SPEECH_REPORT:-"$PROJECT/qa-results/speech-playback.json"}
 export KINDERWELT_SEQUENCE_REPORT=${KINDERWELT_SEQUENCE_REPORT:-"$PROJECT/qa-results/speech-sequences.json"}

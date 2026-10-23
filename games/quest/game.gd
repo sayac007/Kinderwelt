@@ -113,9 +113,9 @@ func switch_subject(id: String) -> void:
 		host.narration.speak_feedback("quest/world_"+world.scene_id())
 	update_score()
 	arrange()
-func update_score(animate := false) -> void:
+func update_score(animate := false,earned := 10) -> void:
 	var stars := Progress.stars(host.store.data.quest)
-	score.set_total(stars,animate)
+	score.set_total(stars,animate,Progress.points(host.store.data.quest),earned)
 	hero_button.text = hero_name(host.store.data.hero)
 	hero_button.tooltip_text = host.t("choose_figure")+": "+hero_button.text
 	for i in range(tabs.size()):
@@ -157,6 +157,9 @@ func arrange() -> void:
 	if is_instance_valid(chooser): arrange_chooser()
 	queue_redraw()
 func hero_name(id: String) -> String:
+	if host.store.data.locale=="ru":
+		var family: bool=preload("res://core/quest/cast.gd").FAMILY
+		return Lang.data().heroes["family" if family else "neutral"][id]
 	if not preload("res://core/quest/cast.gd").FAMILY and id!="squirrel": return preload("res://core/quest/hero.gd").NAMES[id]
 	if id=="du": return host.t("self_hero")
 	if id=="katze": return Lang.object_name("cat",host.store.data.locale)
@@ -171,7 +174,20 @@ func open_task(index: int) -> void:
 	add_child(task_panel)
 	task_panel.setup(host,Progress.tasks(subject)[index])
 	task_panel.closed.connect(close_task)
-	task_panel.solved.connect(func(_id): update_score(true))
+	task_panel.solved.connect(func(id): update_score(true,Progress.value(id)))
+	task_panel.bonus_requested.connect(open_bonus)
+func open_bonus(index: int) -> void:
+	var parent: Dictionary=Progress.tasks(subject)[last_station]
+	var bonuses: Array=parent.get("bonuses",[])
+	if index<0 or index>=bonuses.size(): return
+	host.narration.cancel()
+	remove_child(task_panel);task_panel.queue_free()
+	task_panel=preload("res://games/quest/task.gd").new()
+	add_child(task_panel)
+	task_panel.setup(host,bonuses[index],parent,index)
+	task_panel.closed.connect(close_task)
+	task_panel.solved.connect(func(id): update_score(true,Progress.value(id)))
+	task_panel.bonus_requested.connect(open_bonus)
 func close_task() -> void:
 	if is_instance_valid(task_panel):
 		if task_panel.complete:

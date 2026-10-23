@@ -21,7 +21,7 @@ func run() -> void:
 		regions.append(region)
 	for old in Scenery.CHOICES:
 		var data:=Store.clean({"scenery":old,"quest":{"solved":{"math_count":true}},"hero":"mama","looks":{"mama":"alien"}})
-		check(data.schema==4 and data.quest.solved.has("math_count") and data.hero=="mama" and data.looks.mama=="alien","Legacy saves retain tasks, characters and clothes")
+		check(data.schema==6 and data.quest.archived.has("math_count") and data.hero=="mama" and data.looks.mama=="alien","Legacy saves retain tasks, characters and clothes")
 		for subject in Progress.SUBJECTS:check(data.subject_sceneries[subject]==old,"Migrate global choice into each subject: "+old)
 	var invalid:=Store.clean({"subject_sceneries":{"math":"tree","german":12,"logic":"unknown","biology":null,"hacker":"city"}})
 	check(invalid.subject_sceneries.math=="tree" and invalid.subject_sceneries.german=="auto" and invalid.subject_sceneries.logic=="auto" and invalid.subject_sceneries.size()==8,"Reject invalid scenery and unknown subjects")

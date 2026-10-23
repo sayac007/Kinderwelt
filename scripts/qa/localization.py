@@ -5,7 +5,22 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def markdown():
     log=json.loads((ROOT/'scripts/content/localization-changes.json').read_text())
-    lines=['# Lokalisierungsabgleich','','Verglichen: alle 320 Fragen und Hinweise in Deutsch, Englisch und Russisch (960 Sprachfassungen). Die 200 Sachfragen wurden inhaltlich auf Objekte, Bedingungen, Mengen, Verneinungen und Sicherheitshinweise abgeglichen; außerdem alle 120 Mathe-, Deutsch- und Logikaufgaben. Dies ist eine redaktionelle Prüfung, keine unabhängige muttersprachliche Freigabe.','',f"{len(log['changes'])} Textfelder in {len({c['id'] for c in log['changes']})} Aufgaben geändert; Ausgangscommit `{log['baseline_commit']}`. Richtige Antworten, Zuordnung, Bilder und Mechanik bleiben erhalten. Die ursprünglichen 24 deutschen Aufgabentexte bleiben wortgleich.",'','## Abgleich und Grenzen','','- Mengenaufgaben nennen die Gegenstände, wenn die deutsche Fassung sie nennt. Ursprüngliche Zahlenfolgen und konkrete Hinweise sind in EN/RU vollständig.','- Deutsche Lernwörter, einzelne Buchstaben und Klatsch-Silben stehen auch in EN/RU auf dem Bildschirm. Die Erklärung wird lokal gesprochen, anschließend folgen Wort und Hinweis aus der deutschen Aufnahme. Fremdsprachige Modelle sprechen keine deutschen Lernwörter vor.','- Sachfragen behalten Einschränkungen wie „meist“, „nicht alle“, „bei Raumtemperatur“, „unsichtbar“, konkrete Materialien und Hilfe durch Erwachsene. Ergänzt wurden unter anderem Kraftwirkung, dicht beieinander stehende Bäume, abgestorbene Blätter, langer Fluss und die Unterscheidung Sinn/Körperteil.','- Keine automatische Behauptung vollständiger Bedeutungsäquivalenz. Tests schützen ausgewählte konkrete Informationsverluste und die Reproduzierbarkeit.','','## Noch durch Muttersprachler / Fachpersonen prüfen','','- EN/RU: natürliches Sprechtempo und Verständnis bei Kindern der ersten und zweiten Klasse; alle 320 Aufgaben im Kontext der Bilder.','- RU: technische Begriffe „блок“ (Seilrolle), „качели-доска“, „ось“, „вкусовые почки“ und Schulkontext der Fremdsprachensilben. Verständlichkeit gezielt beobachten; keine ungeprüften Fachbegriffe ersetzen.','- EN: „food pipe“, „forewings/hindwings“, „precipitation“ und „physiology“ auf altersgerechtes Verständnis prüfen.','- Deutsche Rechtschreibung versus gehörte Anlaute (z. B. Sonne): die Fragen prüfen den Anfangsbuchstaben; keine Lautschrift oder Übersetzung des Lernworts lehren.','- Mehrsprachige Bildschirmtexte und deutsche Folgeaufnahme gemeinsam hören; ASR allein kann diese Lernsequenzen nicht freigeben.','','## Vollständiges Änderungsprotokoll','','| Aufgabe | Sprache | Feld | Vorher | Jetzt |','|---|---|---|---|---|']
+    lines=['# Lokalisierungsabgleich', '',
+        '0.9.0 enthält 320 Grundaufgaben und 640 freiwillige Bonusaufgaben in jeweils drei Sprachen. Die Strukturprüfung deckt Übersetzungsfelder, Antwortoptionen, native Lernwörter und kyrillische russische Inhalte ab. Sie ersetzt keine muttersprachliche oder fachliche Freigabe.', '',
+        f"{len(log['changes'])} geänderte Grundaufgaben-Textfelder seit Ausgangscommit `{log['baseline_commit']}` sind unten protokolliert. Bonusinhalte stehen vollständig in `tasks.json` und den versionierten Inhaltsquellen.", '',
+        '## Aktuelle Regeln', '',
+        '- Deutsch vermittelt deutsche, English englische und Русский russische Lernwörter, Anfangsbuchstaben und Silben. Keine automatische deutsche Folgeaufnahme in EN/RU.',
+        '- Russische sichtbare Texte, Namen, Musikbeschriftungen und alle 1947 gesprochenen Einträge sind ohne lateinische Buchstaben. Interne stabile IDs und Quellen-/Lizenzdateien sind keine Lerninhalte.',
+        '- Die zweite Runde ersetzt alle 320 Fragen. Neue native Wörter haben zwei Buchstabenlücken, freiwillige Boni drei oder vier. Rechtschreibung ist von Lautschrift zu unterscheiden.',
+        '- 200 Sachfragen verwenden Kontextzeichnungen statt Kopien der richtigen Antwort. Kurze Hinweiswörter ergänzen die gesprochene Frage. Auswahlbilder und freigegebene Grundantworten bleiben erhalten.',
+        '- Pro Grundaufgabe zwei unabhängig wählbare, überspringbare Herausforderungen mit 50/100 Punkten. Die Sachbonusfragen verwenden wiederkehrende Konzepte; 640 Bonusplätze bedeuten nicht 640 einzigartige redaktionelle Fragestellungen.', '',
+        '## Offene Prüfung', '',
+        '- Muttersprachler: Aussprache, natürliche Formulierungen, Silbenzählung und vollständige russische UI am Android-Gerät.',
+        '- Fachpersonen: eindeutige Ablenker, Kontextbilder und höhere Schwierigkeit der Bonusaufgaben; Kinder mit unterschiedlichen Vorkenntnissen.',
+        '- Hörprobe ohne eingeblendeten Text, danach im Spiel mit Musik. Technische Dauermessung und ASR sind keine Hörfreigabe.',
+        '- Eine identische weibliche Stimme in allen Sprachen ist noch nicht erreicht. Die getestete Umwandlung verschlechterte deutsche Aussprache und wurde nicht ausgeliefert.', '',
+        '## Änderungsprotokoll der Grundaufgaben', '',
+        '| Aufgabe | Sprache | Feld | Vorher | Jetzt |', '|---|---|---|---|---|']
     for c in log['changes']:
         cells=[c['id'],c['locale'],c['field'],c['before'],c['after']]
         lines.append('| '+' | '.join(v.replace('|','\\|') for v in cells)+' |')
@@ -15,5 +30,5 @@ def main():
     if a.check:
         if not path.exists() or path.read_text()!=value:raise SystemExit('Localization review is stale')
     else:path.write_text(value)
-    print('Localization review: 320 tasks, 3 locales; authored changes documented; human review OPEN')
+    print('Localization review: 320 base tasks + 640 bonuses, 3 locales; authored changes documented; human review OPEN')
 if __name__=='__main__':main()

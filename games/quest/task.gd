@@ -1,6 +1,7 @@
 extends Control
 signal closed
 signal solved(id: String)
+signal bonus_requested(index: int)
 const Art = preload("res://core/quest/art.gd")
 const Progress = preload("res://games/quest/progress.gd")
 var host: Control
@@ -17,8 +18,13 @@ var complete := false
 var companion: Control
 var score: Control
 var praise := ""
-func setup(owner_host: Control,data: Dictionary) -> void:
+var base_task: Dictionary
+var bonus_index := -1
+var bonus_buttons: Array[Button]=[]
+func setup(owner_host: Control,data: Dictionary,parent: Dictionary={},index := -1) -> void:
 	host = owner_host
+	base_task=data if parent.is_empty() else parent
+	bonus_index=index
 	task = preload("res://core/quest/language.gd").task(data,host.store.data.locale)
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	mouse_filter = MOUSE_FILTER_STOP
@@ -29,11 +35,11 @@ func setup(owner_host: Control,data: Dictionary) -> void:
 	speaker.tooltip_text = host.t("repeat")
 	score=preload("res://core/quest/score_badge.gd").new()
 	score.caption=host.t("points");score.reduced_motion=host.store.data.reduced_motion
-	score.set_total(Progress.stars(host.store.data.quest))
+	score.set_total(Progress.stars(host.store.data.quest),false,Progress.points(host.store.data.quest))
 	add_child(score)
 	heading = Label.new()
-	heading.text = task.prompt if task.kind=="discovery" else host.t(task.kind)
-	heading.max_lines_visible = 6 if task.kind=="discovery" else 2
+	heading.text = task.prompt if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else host.t(task.kind)
+	heading.max_lines_visible = 6 if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else 2
 	heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	heading.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -52,11 +58,14 @@ func setup(owner_host: Control,data: Dictionary) -> void:
 	companion.hide()
 	for option in task.options:
 		var b := make_button("",func(): answer(option))
-		b.tooltip_text = preload("res://core/quest/language.gd").object_name(str(option),host.store.data.locale)
+		b.tooltip_text = task.get("option_labels",{}).get(str(option),preload("res://core/quest/language.gd").object_name(str(option),host.store.data.locale))
+		if task.kind=="dual_pattern":
+			var pair:=str(option).split(":")
+			b.tooltip_text=preload("res://core/quest/language.gd").object_name(pair[0],host.store.data.locale)+" · "+pair[1]
 		var visual := preload("res://games/quest/choice.gd").new()
 		visual.value = option
 		visual.kind = task.kind
-		if task.kind=="discovery": visual.caption = b.tooltip_text
+		if task.kind in ["discovery","rhyme","reasoning_choice"]: visual.caption = b.tooltip_text
 		visual.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 		b.add_child(visual)
 		choices.append(b)
@@ -68,7 +77,13 @@ func setup(owner_host: Control,data: Dictionary) -> void:
 	add_child(feedback)
 	help_button = make_button(host.t("help"),help)
 	next_button = make_button(host.t("next"),func(): host.narration.cancel();closed.emit())
-	next_button.hide()
+	if bonus_index<0: next_button.hide()
+	else: next_button.text=host.t("skip_bonus")
+	for i in range(base_task.get("bonuses",[]).size()):
+		var n:=i
+		var b:=make_button("★ +"+str(int(base_task.bonuses[i].points)),func(): bonus_requested.emit(n))
+		b.tooltip_text=host.t("bonus")+" "+str(i+1)+" · "+str(int(base_task.bonuses[i].points))+" "+host.t("points")
+		b.hide();bonus_buttons.append(b)
 	resized.connect(arrange)
 	arrange.call_deferred()
 	host.narration.play_clip("quest/"+task.id,true)
@@ -85,7 +100,7 @@ func arrange() -> void:
 	var landscape := size.x>size.y*1.3
 	close_button.position = Vector2(18,18);close_button.size = Vector2(52,52)
 	speaker.position = Vector2(size.x-70,18);speaker.size = Vector2(52,52)
-	heading.max_lines_visible = 2 if complete else ((3 if landscape else 6) if task.kind=="discovery" else (2 if landscape else 3))
+	heading.max_lines_visible = 2 if complete else ((3 if landscape else 6) if task.kind in ["discovery","equation","reasoning_choice","dual_pattern"] or task.has("display") else (2 if landscape else 3))
 	score.position=Vector2(size.x/2-82,16);score.size=Vector2(164,54)
 	heading.position = Vector2(20,76)
 	heading.size = Vector2(size.x-40,0)
@@ -116,6 +131,12 @@ func arrange() -> void:
 	help_button.size = Vector2(168,48)
 	next_button.position = help_button.position
 	next_button.size = help_button.size
+	if bonus_index>=0 and not complete:
+		help_button.position=Vector2(18,size.y-57);help_button.size=Vector2(size.x/2-26,48)
+		next_button.position=Vector2(size.x/2+8,size.y-57);next_button.size=Vector2(size.x/2-26,48)
+	for i in range(bonus_buttons.size()):
+		bonus_buttons[i].position=Vector2(20+i*(size.x-32)/2,size.y-174)
+		bonus_buttons[i].size=Vector2((size.x-48)/2,58)
 	queue_redraw()
 func repeat() -> void: host.narration.play_clip("quest/"+task.id)
 func help() -> void:
@@ -141,11 +162,12 @@ func answer(value: Variant) -> void:
 		host.sound(true)
 		var fresh := Progress.award(host.store.data.quest,task.id)
 		host.save()
-		score.set_total(Progress.stars(host.store.data.quest),fresh)
+		var earned:=Progress.value(task.id)
+		score.set_total(Progress.stars(host.store.data.quest),fresh,Progress.points(host.store.data.quest),earned)
 		praise=host.praise_id()
 		heading.text=host.t(praise)
 		arrange()
-		feedback.text = host.t("reward" if fresh else "remembered")
+		feedback.text = host.t("reward").replace("10",str(earned)) if fresh else host.t("remembered")
 		for i in range(choices.size()):
 			choices[i].disabled=true
 			if task.kind=="compare": choices[i].hide()
@@ -157,6 +179,12 @@ func answer(value: Variant) -> void:
 			else: choices[i].modulate.a=.45
 		help_button.hide()
 		next_button.show()
+		next_button.text=host.t("next")
+		for i in range(bonus_buttons.size()):
+			bonus_buttons[i].visible=i>bonus_index
+		if bonus_index<1:
+			for choice in choices: choice.hide()
+		arrange()
 		host.narration.speak_feedback("quest/"+praise)
 		solved.emit(task.id)
 	else:

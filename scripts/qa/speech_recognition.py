@@ -31,6 +31,7 @@ def main():
     p.add_argument('--voices',type=Path,default=Path('assets/voice/quest'))
     p.add_argument('--locales',nargs='+',default=['de','en','ru'])
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--ids',nargs='+',help='Explicit fixed comparison subset; reference text is still never prompted')
     a=p.parse_args()
     import numpy as np
     import sherpa_onnx
@@ -41,7 +42,7 @@ def main():
         folder=a.voices/locale;manifest=json.loads((folder/'manifest.json').read_text());clips={c['id']:c for c in manifest['clips']}
         recognizer=sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(encoder),decoder=str(decoder),tokens=str(tokens),language=locale,num_threads=2)
         rows=[];errors=0;chars=0
-        for id in sample_ids():
+        for id in (a.ids or sample_ids()):
             c=clips[id];path=folder/c['file'];assert hashlib.sha256(path.read_bytes()).hexdigest()==c['sha256']
             pcm=np.frombuffer(subprocess.check_output(['ffmpeg','-nostdin','-v','error','-i',str(path),'-ar','16000','-ac','1','-f','f32le','-']),np.float32)
             stream=recognizer.create_stream();stream.accept_waveform(16000,pcm);recognizer.decode_stream(stream)

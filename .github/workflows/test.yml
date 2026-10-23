@@ -13,7 +13,7 @@ jobs:
       - name: Install pinned Godot
         run: GODOT_INSTALL_DIR="$RUNNER_TEMP/godot" bash scripts/install-godot.sh
       - name: Install audio decoder
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+        run: bash scripts/ci/install-audio-decoder.sh
       - name: Complete current test suite
         run: GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" bash tests/run.sh
       - name: Original tasks, science samples, languages and animations at four display profiles

@@ -2,7 +2,6 @@ extends "res://tests/qa/speech_playback.gd"
 # Capture every actual recording in multilingual learning sequences.
 func sequence_paths(id: String) -> Array[String]:
  var paths: Array[String]=[app.narration.resolve(id,app.store.data.locale)]
- if app.store.data.locale!="de":paths.append(app.narration.resolve(id,"de"))
  paths.append(app.narration.resolve("praise_1",app.store.data.locale))
  return paths
 func total_length(paths: Array[String]) -> float:
@@ -24,7 +23,7 @@ func run() -> void:
   app.store.data.locale=locale
   for id in ["german_sun","german_robot_hint"]:
    var paths:=sequence_paths(id)
-   check(app.narration.play_clip("quest/"+id),"Native German question or syllable hint loads")
+   check(app.narration.play_clip("quest/"+id),"Native question or syllable hint loads")
    app.narration.speak_feedback("quest/praise_1")
    check(app.narration.pending_feedback=="praise_1","Fast response preserves every remaining native target")
    await completed(total_length(paths),["quest/"+id,"quest/praise_1"],paths)

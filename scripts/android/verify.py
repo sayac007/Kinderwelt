@@ -40,6 +40,7 @@ def check_manifest(root,package=PACKAGE):
 def check_payload(names,app_root=None):
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     assets={n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')}
+    assert 'games/quest/legacy-rewards.json' in assets,'Missing first-round lifetime reward migration registry'
     imported={n.split('/')[-1].rsplit('-',1)[0] for n in assets if n.startswith('.godot/imported/') and n.endswith('.oggvorbisstr')}
     assert any(n.endswith('project.binary') for n in assets),'Missing Godot project'
     for n in assets:
@@ -97,6 +98,7 @@ def check_packaged_data(archive,app_root=None):
     """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     data_files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
+    data_files += ['games/quest/legacy-rewards.json']
     data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
     for name in data_files:
         candidates=[n for n in archive.namelist() if 'assets/' in n and n.split('assets/',1)[1]==name]
@@ -135,8 +137,11 @@ def main():
     assert re.search(r'android:screenOrientation[^\n]*=13\b',xmltree),'APK orientation mismatch'
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
+    provenance=json.loads((out/'provenance.json').read_text())
+    expected_certificate=provenance['signing']['development_certificate_sha256']
+    assert re.search(r'Signer #1 certificate SHA-256 digest: '+re.escape(expected_certificate),signature,re.I),'APK signer differs from reused development key'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','certificate_sha256':expected_certificate,'zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
     aab_data=inspect_zip(aab,True,app_root=a.source);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'

@@ -177,9 +177,9 @@
       "ru": "Удалить локальный прогресс …"
     },
     "reset_question": {
-      "de": "Figur, Sterne und Einstellungen auf diesem Gerät löschen?",
-      "en": "Delete this device's character, stars and settings?",
-      "ru": "Удалить персонажа, звёзды и настройки на этом устройстве?"
+      "de": "Figur, Gesamtpunkte, Sterne und Einstellungen auf diesem Gerät löschen?",
+      "en": "Delete this device’s character, total points, stars and settings?",
+      "ru": "Удалить персонажа, общий счёт, звёзды и настройки на этом устройстве?"
     },
     "cancel": {
       "de": "Abbrechen",
@@ -389,7 +389,7 @@
     "piano_credit": {
       "de": "Klavierklang: GeneralUser GS 2.0.3 · S. Christian Collins. Lizenzen und Quellen liegen der App bei.",
       "en": "Piano sound: GeneralUser GS 2.0.3 · S. Christian Collins. Licences and sources are included in the app.",
-      "ru": "Фортепиано: GeneralUser GS 2.0.3 · S. Christian Collins. Лицензии и источники включены в приложение."
+      "ru": "Фортепианный звук. Лицензии и исходные данные включены в приложение."
     },
     "previous_page": {
       "de": "Voriger Weg",
@@ -510,6 +510,21 @@
       "de": "Mond",
       "en": "Moon",
       "ru": "Луна"
+    },
+    "restore_old_round": {
+      "de": "Frühere Runde vollständig gelöst?",
+      "en": "Completed the entire earlier round?",
+      "ru": "Прошлый раунд полностью пройден?"
+    },
+    "restore_old_explanation": {
+      "de": "Nur für begleitende Erwachsene: Falls im früheren Testpaket alle 320 Aufgaben gelöst wurden, kannst du die damals verdienten 3200 Punkte hier einmalig übernehmen. Bereits übernommene Punkte werden nicht doppelt gezählt. Neue Aufgaben bleiben ungelöst.",
+      "en": "For accompanying adults: if all 320 tasks were completed in the earlier test app, you can restore those 3200 earned points here once. Previously restored points are not counted twice. New tasks remain unsolved.",
+      "ru": "Для сопровождающих взрослых: если в прежней тестовой игре были решены все 320 заданий, здесь можно один раз восстановить заработанные 3200 очков. Уже восстановленные очки повторно не начисляются. Новые задания останутся нерешёнными."
+    },
+    "restore_old_confirm": {
+      "de": "Ja, alle 320 waren gelöst · Punkte übernehmen",
+      "en": "Yes, all 320 were completed · restore points",
+      "ru": "Да, все 320 были решены · восстановить очки"
     }
   },
   "objects": {
@@ -872,6 +887,128 @@
       "de": "Meer",
       "en": "sea",
       "ru": "море"
+    }
+  },
+  "heroes": {
+    "family": {
+      "wanja": "Ваня",
+      "mischa": "Миша",
+      "du": "Ты",
+      "mama": "Мама",
+      "george": "Георгий",
+      "katze": "Кошка",
+      "squirrel": "Белочка"
+    },
+    "neutral": {
+      "wanja": "Нова",
+      "mischa": "Луми",
+      "du": "Каро",
+      "mama": "Тави",
+      "george": "Зора",
+      "katze": "Пушинка",
+      "squirrel": "Белочка"
+    }
+  },
+  "music": {
+    "wiener_blut": {
+      "title": "Венская кровь",
+      "composer": "Иоганн Штраус",
+      "detail": "Вальс"
+    },
+    "babbino": {
+      "title": "О мой дорогой папочка",
+      "composer": "Джакомо Пуччини",
+      "detail": "Мелодия"
+    },
+    "french_song": {
+      "title": "Старинная французская песенка",
+      "composer": "Пётр Чайковский",
+      "detail": "Фортепиано"
+    },
+    "consolation": {
+      "title": "Утешение № 1",
+      "composer": "Ференц Лист",
+      "detail": "Фортепиано"
+    },
+    "elise": {
+      "title": "К Элизе",
+      "composer": "Людвиг ван Бетховен",
+      "detail": "Фортепиано"
+    },
+    "bach_prelude": {
+      "title": "Прелюдия до мажор",
+      "composer": "Иоганн Себастьян Бах",
+      "detail": "Фортепиано"
+    },
+    "gymnopedie": {
+      "title": "Гимнопедия № 1",
+      "composer": "Эрик Сати",
+      "detail": "Фортепиано"
+    },
+    "clair": {
+      "title": "Лунный свет",
+      "composer": "Клод Дебюсси",
+      "detail": "Фортепиано"
+    },
+    "nocturne": {
+      "title": "Ноктюрн № 2",
+      "composer": "Фредерик Шопен",
+      "detail": "Фортепиано"
+    },
+    "traeumerei": {
+      "title": "Грёзы",
+      "composer": "Роберт Шуман",
+      "detail": "Фортепиано"
+    },
+    "mozart_sonata": {
+      "title": "Лёгкая соната",
+      "composer": "Вольфганг Амадей Моцарт",
+      "detail": "Фортепиано"
+    },
+    "arabesque": {
+      "title": "Арабеска № 1",
+      "composer": "Клод Дебюсси",
+      "detail": "Фортепиано"
+    },
+    "brahms_waltz": {
+      "title": "Вальс",
+      "composer": "Иоганнес Брамс",
+      "detail": "Фортепиано"
+    },
+    "canon": {
+      "title": "Канон ре мажор",
+      "composer": "Иоганн Пахельбель",
+      "detail": "Фортепиано"
+    },
+    "impromptu": {
+      "title": "Экспромт",
+      "composer": "Франц Шуберт",
+      "detail": "Фортепиано"
+    },
+    "invention": {
+      "title": "Инвенция № 1",
+      "composer": "Иоганн Себастьян Бах",
+      "detail": "Фортепиано"
+    },
+    "chopin_prelude": {
+      "title": "Прелюдия ми минор",
+      "composer": "Фредерик Шопен",
+      "detail": "Фортепиано"
+    },
+    "minuet": {
+      "title": "Менуэт соль мажор",
+      "composer": "Кристиан Петцольд",
+      "detail": "Фортепиано"
+    },
+    "turca": {
+      "title": "Турецкое рондо",
+      "composer": "Вольфганг Амадей Моцарт",
+      "detail": "Фортепиано"
+    },
+    "moonlight": {
+      "title": "Лунная соната",
+      "composer": "Людвиг ван Бетховен",
+      "detail": "Фортепиано"
     }
   }
 }

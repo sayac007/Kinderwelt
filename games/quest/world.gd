@@ -200,6 +200,7 @@ func _draw() -> void:
 		var center := station_center(n)
 		if center.x < -120 or center.x>size.x+120 or center.y< -100 or center.y>size.y+100: continue
 		var solved: bool = host.store.data.quest.solved.has(missions[n].id)
+		var clue: String="?" if missions[n].has("riddle_scene") else missions[n].get("object","star")
 		if scene in ["tree","seabed","city","moon"]:
 			match scene:
 				"tree":Props.branch(self,center,phase)
@@ -211,9 +212,10 @@ func _draw() -> void:
 			# A clear task medallion keeps hidden stations discoverable without reading.
 			if scene=="tree":
 				if solved:Art.star(self,center+Vector2(0,7),18,Color("fff5bc"))
-				else:Art.object(self,missions[n].get("object","star"),Rect2(center+Vector2(-17,-9),Vector2(34,34)))
+				elif clue=="?":Art.text(self,"?",center+Vector2(0,7),27,Color("76528c"))
+				else:Art.object(self,clue,Rect2(center+Vector2(-17,-9),Vector2(34,34)))
 				Art.text(self,str(n+1),center+Vector2(34,40),15,Color("fff5bc"))
-			else:Props.clue(self,center,solved,missions[n].get("object","star"),n)
+			else:Props.clue(self,center,solved,clue,n)
 		else:
 			# Upright irregular pennants replace a menu of square buttons.
 			draw_line(center+Vector2(0,30),center+Vector2(0,66),Color("785b49"),7,true)
@@ -223,7 +225,8 @@ func _draw() -> void:
 			if solved: Art.star(self,center,23,Color("fff5bc"))
 			else:
 				var task: Dictionary = missions[n]
-				Art.object(self,task.get("object","star"),Rect2(center-Vector2(27,27),Vector2(54,54)))
+				if clue=="?":Art.text(self,"?",center,37,Color("76528c"))
+				else:Art.object(self,task.get("object","star"),Rect2(center-Vector2(27,27),Vector2(54,54)))
 			Art.text(self,str(n+1),center+Vector2(0,86),16,Color("334451"))
 	if first_hint:
 		var c := station_center(first_station())+Vector2(-50 if scene=="tree" else 0,-52)

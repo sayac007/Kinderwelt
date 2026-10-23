@@ -1,0 +1,248 @@
+{
+  "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+  "model": "multilingual Whisper small, int8, sherpa-onnx",
+  "model_files": {
+    "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+    "small-decoder.int8.onnx": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+    "small-tokens.txt": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+  },
+  "locales": {
+    "de": {
+      "voice_model": "de_DE-thorsten-high",
+      "samples": 8,
+      "character_error_rate": 0.10969,
+      "rows": [
+        {
+          "id": "math_count_bonus_1",
+          "reference": "Erst 5 zu 14, dann 3 und 2 weg. Wie viel bleibt?",
+          "recognized": "Erst fünf zu vier Zähn, dann drei und zwei Weg. Wie viel bleibt?",
+          "character_errors": 20,
+          "reference_characters": 34,
+          "seconds": 5.5121,
+          "sha256": "4188ca5bb492caeaa594c1fea8d2dcb57d71ed02b4f85f4cb4eb90cb7ff29099"
+        },
+        {
+          "id": "math_count_bonus_2",
+          "reference": "Welche Zahl fehlt? Denke die beiden Schritte rückwärts.",
+          "recognized": "Welche Zahl fehlt? Denke die beiden Schritte requert.",
+          "character_errors": 6,
+          "reference_characters": 46,
+          "seconds": 5.0012,
+          "sha256": "42d611ed5376ef0af570d50c0f0c465e44f57b99a514ea4bc3c807cbb776dfed"
+        },
+        {
+          "id": "german_sun_bonus_1",
+          "reference": "Sonnenstrahl. Welche Buchstaben fehlen?",
+          "recognized": "Sonstral. Welche Buchstaben fehlen?",
+          "character_errors": 4,
+          "reference_characters": 34,
+          "seconds": 3.7241,
+          "sha256": "9eed225a6c914014b55e7c768292d1b4e1ea1110f9d284d2aed1a143f16fc03a"
+        },
+        {
+          "id": "german_sun_bonus_2",
+          "reference": "Sonnenstrahl. Welche Buchstaben fehlen?",
+          "recognized": "Sonstral. Welche Buchstaben fehlen?",
+          "character_errors": 4,
+          "reference_characters": 34,
+          "seconds": 3.7241,
+          "sha256": "9eed225a6c914014b55e7c768292d1b4e1ea1110f9d284d2aed1a143f16fc03a"
+        },
+        {
+          "id": "physics_05_bonus_2",
+          "reference": "Ein Material lässt sich falten und gut beschreiben. Welches passt zum Bauplan?",
+          "recognized": "Ein Material lässt Sie falten und gut beschreiben. Welches passt zum Bauplan?",
+          "character_errors": 2,
+          "reference_characters": 65,
+          "seconds": 6.3944,
+          "sha256": "d145e937ab823253a481c90bf0adfac62ef5c2b8aab70ba6ffbde0ecd7bd0394"
+        },
+        {
+          "id": "body_02_bonus_1",
+          "reference": "Du erkennst eine Blume, ohne sie zu sehen oder zu berühren. Welcher Körperteil riecht sie?",
+          "recognized": "Du erkennst eine Blume ohne sie zu sehen oder zu berühren. Welter Körper Teil riecht sie?",
+          "character_errors": 2,
+          "reference_characters": 73,
+          "seconds": 7.0562,
+          "sha256": "8107559672b08b9c6440047cfd4853044b35dc6b5f92c300b668c8981a75cbfb"
+        },
+        {
+          "id": "logic_odd",
+          "reference": "Bild und Zahl haben eigene Regeln. Welches Paar setzt beide fort?",
+          "recognized": "Bild und Zahl haben eigene Regeln. Welches passet bei der Fort?",
+          "character_errors": 5,
+          "reference_characters": 53,
+          "seconds": 5.2683,
+          "sha256": "5fbc015204adf7b589a1f02cf8a0d2678c544fab4b8c7ced5f6f7ae086d31a88"
+        },
+        {
+          "id": "logic_shadow",
+          "reference": "Katze steht vor Frosch. Vogel steht vor Katze. Wer steht ganz vorn?",
+          "recognized": "Katze steht vor Frosch. Vogel steht vor Katze. Wer steht ganz vorn?",
+          "character_errors": 0,
+          "reference_characters": 53,
+          "seconds": 5.734,
+          "sha256": "973d4d1d57550f8a14fd0d38c1ed03b0fa8f7f98ba990b4669d3d8a963892cc2"
+        }
+      ]
+    },
+    "en": {
+      "voice_model": "en_US-ljspeech-medium",
+      "samples": 8,
+      "character_error_rate": 0.01337,
+      "rows": [
+        {
+          "id": "math_count_bonus_1",
+          "reference": "Add 5 to 14, then subtract 3 and 2. How much remains?",
+          "recognized": "Add 5 to 14, then subtract 3 and 2. How much remains?",
+          "character_errors": 0,
+          "reference_characters": 39,
+          "seconds": 6.6498,
+          "sha256": "114265b3826451a3bfb7c950617416a6c50c5e08a987e1c9af899e6f0f20b65a"
+        },
+        {
+          "id": "math_count_bonus_2",
+          "reference": "Which number is missing? Think backwards through both steps.",
+          "recognized": "Which number is missing? Think backwards through both steps.",
+          "character_errors": 0,
+          "reference_characters": 50,
+          "seconds": 4.7574,
+          "sha256": "d32a1f9e2f3c37893707f7254818c5b780b76b22a7673e9d0684b4aa23adad8d"
+        },
+        {
+          "id": "german_sun_bonus_1",
+          "reference": "Sunshine. Which letters are missing?",
+          "recognized": "Sunshine, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 30,
+          "seconds": 3.2481,
+          "sha256": "26e73412ddae92b5d87ed2b28ce35cf363b7905386ed8ad7f3bb191c0343deda"
+        },
+        {
+          "id": "german_sun_bonus_2",
+          "reference": "Sunshine. Which letters are missing?",
+          "recognized": "Sunshine, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 30,
+          "seconds": 3.2481,
+          "sha256": "26e73412ddae92b5d87ed2b28ce35cf363b7905386ed8ad7f3bb191c0343deda"
+        },
+        {
+          "id": "physics_05_bonus_2",
+          "reference": "A material folds and is easy to draw on. Which fits a building plan?",
+          "recognized": "A material folds and is easy to draw on, which fits a building plan.",
+          "character_errors": 0,
+          "reference_characters": 53,
+          "seconds": 5.5701,
+          "sha256": "db7e4e1a1718d8b80329406c75d2a04883aacd2379c411e7879ad777bd9a9172"
+        },
+        {
+          "id": "body_02_bonus_1",
+          "reference": "You recognise a flower without seeing or touching it. Which body part smells it?",
+          "recognized": "You recognize a flower without seeing or touching it, which body part smells it.",
+          "character_errors": 1,
+          "reference_characters": 65,
+          "seconds": 6.3828,
+          "sha256": "32483db9219c822d8fe5e81ab93acb410e9cb7a3d21d8c1f3c5f263e5efd14b2"
+        },
+        {
+          "id": "logic_odd",
+          "reference": "Picture and number have separate rules. Which pair continues both?",
+          "recognized": "Picture and number have separate rules, which pair continues both.",
+          "character_errors": 0,
+          "reference_characters": 55,
+          "seconds": 5.1754,
+          "sha256": "a687cc5b99ce6c77fd2f9a20c050473f30b69671423e4ccc713b5ccb0a7bff1c"
+        },
+        {
+          "id": "logic_shadow",
+          "reference": "The cat is before the frog. The bird is before the cat. Who is first?",
+          "recognized": "The cat is before the frog. The bird is before the cat. The boy is first.",
+          "character_errors": 4,
+          "reference_characters": 52,
+          "seconds": 6.2564,
+          "sha256": "66b2bc6165eaf3d3716766943de4b8a052a7027030fbeeb203b0bbaa18102f99"
+        }
+      ]
+    },
+    "ru": {
+      "voice_model": "ru_RU-denis-medium",
+      "samples": 8,
+      "character_error_rate": 0.05495,
+      "rows": [
+        {
+          "id": "math_count_bonus_1",
+          "reference": "Сложи 14 и 5, затем вычти 3 и 2. Сколько осталось?",
+          "recognized": "Сажи 14,5, затем вычтите 3,2. Колька осталась?",
+          "character_errors": 9,
+          "reference_characters": 37,
+          "seconds": 5.1754,
+          "sha256": "858c23f33f236a028a6c11956089f9a05b482dd3b0da1d6a146f55d6e3c6124f"
+        },
+        {
+          "id": "math_count_bonus_2",
+          "reference": "Какого числа не хватает? Пройди оба шага в обратном порядке.",
+          "recognized": "Какого числа не хватает? Пройди оба шага в обратном порядке.",
+          "character_errors": 0,
+          "reference_characters": 49,
+          "seconds": 5.4424,
+          "sha256": "56ddada90f51a7e7dd4180e6f4eb133c5865c2ff3cb60d2745a0def795e5ce6c"
+        },
+        {
+          "id": "german_sun_bonus_1",
+          "reference": "Солнышко. Какие буквы пропущены?",
+          "recognized": "Сольнышко, какие буквы пропущены?",
+          "character_errors": 1,
+          "reference_characters": 27,
+          "seconds": 3.5035,
+          "sha256": "750d41f82cef7ed8e54d5f11cbcf1eb35315c97d0c1ac5eb24cb0fb455a87532"
+        },
+        {
+          "id": "german_sun_bonus_2",
+          "reference": "Солнышко. Какие буквы пропущены?",
+          "recognized": "Сольнышко, какие буквы пропущены?",
+          "character_errors": 1,
+          "reference_characters": 27,
+          "seconds": 3.5035,
+          "sha256": "750d41f82cef7ed8e54d5f11cbcf1eb35315c97d0c1ac5eb24cb0fb455a87532"
+        },
+        {
+          "id": "physics_05_bonus_2",
+          "reference": "Материал складывается, на нём удобно рисовать. Что подходит для чертежа?",
+          "recognized": "Материал складывается, на нем удобно рисовать. Кто подходит для чертежа?",
+          "character_errors": 2,
+          "reference_characters": 60,
+          "seconds": 5.93,
+          "sha256": "0108e92001e3d1fd56d09aa83ecd2c2569fa88eb4ec1ce23de93e96a95890c1b"
+        },
+        {
+          "id": "body_02_bonus_1",
+          "reference": "Ты узнаёшь цветок, не видя и не трогая. Какая часть тела чувствует запах?",
+          "recognized": "Ты узнаешь, цветок не видя и не трогая. Какая часть тела чувствует запах?",
+          "character_errors": 1,
+          "reference_characters": 58,
+          "seconds": 5.6862,
+          "sha256": "97d5497902bbfb73b83ebe203911557d51dc2c01b7ca11425ca3ae82a3db3874"
+        },
+        {
+          "id": "logic_odd",
+          "reference": "У картинок и чисел свои правила. Какая пара продолжает оба ряда?",
+          "recognized": "У картинок и чисел свои прорывы. Какая пара продолжает оба ряда?",
+          "character_errors": 5,
+          "reference_characters": 52,
+          "seconds": 5.5352,
+          "sha256": "fc8ce425592529f6e14a6aa0cba294e0247132839e75170bb3aa6c61bf943947"
+        },
+        {
+          "id": "logic_shadow",
+          "reference": "кошка раньше, чем лягушка. птица раньше, чем кошка. Кто самый первый?",
+          "recognized": "Кошка раньше, чем лягушка, птица раньше, чем кошка. Это самый первый.",
+          "character_errors": 1,
+          "reference_characters": 54,
+          "seconds": 5.5585,
+          "sha256": "f788821957ea291972e46f897840e5163bb712662dda9dd26e982ced16d67cbf"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,731 @@
+{
+  "shipped": false,
+  "reference": "Existing synthetic en_US-ljspeech-medium; seven legacy 0.8.1 samples per locale; no actor recordings",
+  "trials": {
+    "openvoice-native-asr": {
+      "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+      "locales": {
+        "de": {
+          "voice_model": "de_DE-thorsten-high",
+          "samples": 7,
+          "character_error_rate": 0.03463,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Physik.",
+              "recognized": "Physik",
+              "character_errors": 0,
+              "reference_characters": 6,
+              "seconds": 1.5052,
+              "sha256": "ae577fffc95d78ac257306862c44f9757e99f11ba931d7824b4b4c6151fef83a"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Hier entdecken wir die Chemie.",
+              "recognized": "Hier entdecken wir die Temi.",
+              "character_errors": 3,
+              "reference_characters": 25,
+              "seconds": 2.1786,
+              "sha256": "e186b21b2467a918e0d708cb9b6c2cec103de44c8b1a402b6145ece236e537bf"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Sehr klug entschieden!",
+              "recognized": "Sehr klug entschieden.",
+              "character_errors": 0,
+              "reference_characters": 19,
+              "seconds": 2.2599,
+              "sha256": "581687e1c050d0354b7bdbf529628befbad1e6563f630c29d0855e61ad8c94f3"
+            },
+            {
+              "id": "math_count",
+              "reference": "Wie viele Äpfel siehst du?",
+              "recognized": "Wie viele Äpfel siehst du?",
+              "character_errors": 0,
+              "reference_characters": 21,
+              "seconds": 2.4573,
+              "sha256": "99ddaf1716cf85b49454b7613b93621fd0e9f60b8a3ee59c4aa6a042976e7a48"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Sonne. Welcher Buchstabe passt am Anfang?",
+              "recognized": "Sonne, welcher Buchstabe passt am Anfang?",
+              "character_errors": 0,
+              "reference_characters": 34,
+              "seconds": 4.3278,
+              "sha256": "3d16f158a74f83204d58bf63016920d86462a8e4a3734a16c4699ae3c4afcf32"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+              "recognized": "Eisen wird von Magneten angezogen. Netjes Metall ist magnetisch.",
+              "character_errors": 5,
+              "reference_characters": 58,
+              "seconds": 5.7791,
+              "sha256": "9281cd258427dcd28cc51dbf074b57cc5034cadca9dd6b6b72e74c4b793d0e46"
+            },
+            {
+              "id": "world_city",
+              "reference": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "recognized": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "character_errors": 0,
+              "reference_characters": 68,
+              "seconds": 6.0926,
+              "sha256": "4a36f87a6715bb54e302486fb2bba6c69a0ae32c4ac640b89310d51bc1252dc7"
+            }
+          ]
+        },
+        "ru": {
+          "voice_model": "ru_RU-denis-medium",
+          "samples": 7,
+          "character_error_rate": 0.03756,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Это физика.",
+              "recognized": "Это физика.",
+              "character_errors": 0,
+              "reference_characters": 9,
+              "seconds": 2.0509,
+              "sha256": "06db6b9361fd34c1543962d167aa247bcefe026e0c9ad283fbe52d4197f50dbd"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Это химия.",
+              "recognized": "Это в Фиме.",
+              "character_errors": 4,
+              "reference_characters": 8,
+              "seconds": 2.0045,
+              "sha256": "df7b20ee27e3de4340944c8f077e8d0dc92d9fab5eab64286068453bac83e113"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Очень умное решение!",
+              "recognized": "Очень умное решение.",
+              "character_errors": 0,
+              "reference_characters": 17,
+              "seconds": 2.3063,
+              "sha256": "a9e4a42195f0c4740bf9276dbeaede68c4052f7613a40aa22477055b4384f109"
+            },
+            {
+              "id": "math_count",
+              "reference": "Сколько яблок ты видишь?",
+              "recognized": "Сколько яблот ты видишь?",
+              "character_errors": 1,
+              "reference_characters": 20,
+              "seconds": 2.1438,
+              "sha256": "1b596b399f08b2fd4fbec8bc2e6a8db508bb59d90f7af196095bafe204df7a83"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+              "recognized": "Послушай немецкое слово, с какой буквы его пишет?",
+              "character_errors": 1,
+              "reference_characters": 40,
+              "seconds": 4.4091,
+              "sha256": "cb25a4a3ef8cd0d81d2177c46be348287818b3ac1d528d653c64be2a669e2a46"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+              "recognized": "Магнит притядивает железо, не каждый металл притядивается магнитом.",
+              "character_errors": 2,
+              "reference_characters": 58,
+              "seconds": 5.7326,
+              "sha256": "eb22fcaa2e7afb3511d4227fa0b420b19cb3df0406b66013c19e7f50354a9e0c"
+            },
+            {
+              "id": "world_city",
+              "reference": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "recognized": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "character_errors": 0,
+              "reference_characters": 61,
+              "seconds": 7.0808,
+              "sha256": "5192584f251f4ec0d17a05c72edae2f4fb3c1019f67483472df3f19d28b8826e"
+            }
+          ]
+        }
+      }
+    },
+    "openvoice-sample-asr": {
+      "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+      "locales": {
+        "de": {
+          "voice_model": "de_DE-thorsten-high",
+          "samples": 7,
+          "character_error_rate": 0.1645,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Physik.",
+              "recognized": "Physik",
+              "character_errors": 0,
+              "reference_characters": 6,
+              "seconds": 1.5052,
+              "sha256": "836e86e81bcd14d304338f9009996cb947dd75204637562c50746d0e2437f7c0"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Hier entdecken wir die Chemie.",
+              "recognized": "Hier entdeckt in der Rekommi.",
+              "character_errors": 10,
+              "reference_characters": 25,
+              "seconds": 2.1786,
+              "sha256": "b05a1e126653a677d7ed823271ef035f7f9d76d2e2cc91331d0aa59e1ac72994"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Sehr klug entschieden!",
+              "recognized": "Sehr klug entschieken",
+              "character_errors": 1,
+              "reference_characters": 19,
+              "seconds": 2.2599,
+              "sha256": "a2e84088bda706ad21e61ade3a146efa6e061ca52eeced457b3413b076826690"
+            },
+            {
+              "id": "math_count",
+              "reference": "Wie viele Äpfel siehst du?",
+              "recognized": "Wie viele App siehst du?",
+              "character_errors": 4,
+              "reference_characters": 21,
+              "seconds": 2.4573,
+              "sha256": "c5664bbd24a59cf355839d889516c01f416b334b7e221f3bbb42d96ed283d095"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Sonne. Welcher Buchstabe passt am Anfang?",
+              "recognized": "Sonne. Bel-der-Buch-Gabe passt am Anfang.",
+              "character_errors": 5,
+              "reference_characters": 34,
+              "seconds": 4.3265,
+              "sha256": "c733bf71fda472f03eec4ff8d29266d1da065cd931948ae38beda23c37aa2eea"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+              "recognized": "Eisen wird von Magneten angezogen. Medizmittel ist magnetisch.",
+              "character_errors": 11,
+              "reference_characters": 58,
+              "seconds": 5.7777,
+              "sha256": "fb8f4cc96ab0ce00fcd7de7db0b0642325a8bf37c564eb28a2470aa3f0d4cbe9"
+            },
+            {
+              "id": "world_city",
+              "reference": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "recognized": "Wir erfahren Gordi Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "character_errors": 7,
+              "reference_characters": 68,
+              "seconds": 6.0912,
+              "sha256": "1ec8548f9a2d835ee12063dd956119af36350e24014e327264b11b486fd7510a"
+            }
+          ]
+        },
+        "ru": {
+          "voice_model": "ru_RU-denis-medium",
+          "samples": 7,
+          "character_error_rate": 0.15493,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Это физика.",
+              "recognized": "Эта физика.",
+              "character_errors": 1,
+              "reference_characters": 9,
+              "seconds": 2.0509,
+              "sha256": "e0e83046cccd298be59e0fe3d25f300e6cad6814185f03bc445ef79ede02d54f"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Это химия.",
+              "recognized": "Это фильме.",
+              "character_errors": 5,
+              "reference_characters": 8,
+              "seconds": 2.0045,
+              "sha256": "dd5736269a5dca23941f02c4b9cee4b90dcfac6adfaf1c4f88c3e963881ed294"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Очень умное решение!",
+              "recognized": "Я не могла.",
+              "character_errors": 14,
+              "reference_characters": 17,
+              "seconds": 2.3063,
+              "sha256": "e0ef59b2811f1a71b1d345478ff38c32f76744cfd241c3172797f0c3a5625e2e"
+            },
+            {
+              "id": "math_count",
+              "reference": "Сколько яблок ты видишь?",
+              "recognized": "Сколько яблот ты видишь?",
+              "character_errors": 1,
+              "reference_characters": 20,
+              "seconds": 2.1438,
+              "sha256": "109786b8135d8e0e4dfc86bf116dc6fe4f440d5220b77f584d279b48d18c4a41"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+              "recognized": "Ослушай немецкое слово, с какой буквы его пишет.",
+              "character_errors": 2,
+              "reference_characters": 40,
+              "seconds": 4.4078,
+              "sha256": "5c49333f86d49460b7185ea72e8716b54f922eb52ea7a0e6b50f0f65d83beb01"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+              "recognized": "Водник притягивает железо. Не каждый металл притягивается моднитом.",
+              "character_errors": 6,
+              "reference_characters": 58,
+              "seconds": 5.7313,
+              "sha256": "ee5bad0400584b17a80e60467cfc7fd2c8d3f82a070a4a1cdcc347eeaeae6115"
+            },
+            {
+              "id": "world_city",
+              "reference": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "recognized": "Мы едем по ОВАД. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "character_errors": 4,
+              "reference_characters": 61,
+              "seconds": 7.0781,
+              "sha256": "db25e4874fd7c31463968727382ed4c47f303157d20dd6271ca5957a25c7615f"
+            }
+          ]
+        }
+      }
+    },
+    "openvoice-strength060-asr": {
+      "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+      "locales": {
+        "de": {
+          "voice_model": "de_DE-thorsten-high",
+          "samples": 7,
+          "character_error_rate": 0.10823,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Physik.",
+              "recognized": "Physik",
+              "character_errors": 0,
+              "reference_characters": 6,
+              "seconds": 1.5052,
+              "sha256": "7c3424ebfb6fe1a0e2c14bf7c2a4e4fed672faf83f845f8a717825a2462412fa"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Hier entdecken wir die Chemie.",
+              "recognized": "Hier entdecken wir die Chemie.",
+              "character_errors": 0,
+              "reference_characters": 25,
+              "seconds": 2.1786,
+              "sha256": "402d64a4981ecc415097ff5ad0fdedb101e615c71be1164bf82374b7b8b398b9"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Sehr klug entschieden!",
+              "recognized": "Sehr klug entschieden.",
+              "character_errors": 0,
+              "reference_characters": 19,
+              "seconds": 2.2599,
+              "sha256": "d386103aa41a41b5eca40233833e40d9cd2dddcfaecd5cb6ce55d448fc7cb9e1"
+            },
+            {
+              "id": "math_count",
+              "reference": "Wie viele Äpfel siehst du?",
+              "recognized": "Wie viele App fällst du?",
+              "character_errors": 7,
+              "reference_characters": 21,
+              "seconds": 2.4573,
+              "sha256": "f8abba5e24ef677f7d8f08b6d8f7993721dd79fe1b3029f32d901a83cbebced6"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Sonne. Welcher Buchstabe passt am Anfang?",
+              "recognized": "Sonne! Bällärbuchstabe passt am Anfang!",
+              "character_errors": 5,
+              "reference_characters": 34,
+              "seconds": 4.3265,
+              "sha256": "c1e63216fbad92b7fb214039f2702dc09ad0a698bb6898b016adad8f3d7a0c2f"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+              "recognized": "Eisen wird von Magneten angezogen. Netjes Metall ist magnetisch.",
+              "character_errors": 5,
+              "reference_characters": 58,
+              "seconds": 5.7777,
+              "sha256": "e2e711ed8772f67f5319ece91574390234d292a45afd9954e191c10ae5775f46"
+            },
+            {
+              "id": "world_city",
+              "reference": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "recognized": "Wir fahren gerade statt. Suche ein Bild an der Halterstelle oder unter der Brocke.",
+              "character_errors": 8,
+              "reference_characters": 68,
+              "seconds": 6.0912,
+              "sha256": "2d2406bed064c63212423948eab3e79c8a4b5a3a1a906f314f890f0eec44b938"
+            }
+          ]
+        },
+        "ru": {
+          "voice_model": "ru_RU-denis-medium",
+          "samples": 7,
+          "character_error_rate": 0.07042,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Это физика.",
+              "recognized": "Это физика.",
+              "character_errors": 0,
+              "reference_characters": 9,
+              "seconds": 2.0509,
+              "sha256": "e0bbd73c8402b37409cfad13ea589a6e4ae218d6bf462caf709c9b13a0d1a054"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Это химия.",
+              "recognized": "Это в фильме.",
+              "character_errors": 6,
+              "reference_characters": 8,
+              "seconds": 2.0045,
+              "sha256": "74f09104c94a61fdcdde47fa0dc6fa78385ef3f193c45162e0a3bd1b34b426dc"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Очень умное решение!",
+              "recognized": "Очень умный решение.",
+              "character_errors": 2,
+              "reference_characters": 17,
+              "seconds": 2.3063,
+              "sha256": "26a5877049619946af31cfcb5e1b27445cd26f0cdf51c00f1f9597a324f5013c"
+            },
+            {
+              "id": "math_count",
+              "reference": "Сколько яблок ты видишь?",
+              "recognized": "Сколько я облотил видишь?",
+              "character_errors": 4,
+              "reference_characters": 20,
+              "seconds": 2.1438,
+              "sha256": "cdd79484f8922762297f7a24bd9ed93c0f40c2dd4b023adfe15420b9b2f7cdb3"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+              "recognized": "Послушай немецкое слово, с какой буквы его пишут.",
+              "character_errors": 0,
+              "reference_characters": 40,
+              "seconds": 4.4078,
+              "sha256": "ae947c2fdf17f856991673866b12767c46545659c70555c54c848e8c718c9e7b"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+              "recognized": "Вогнит притягивает железо, не каждый металл притягивается магнитом.",
+              "character_errors": 2,
+              "reference_characters": 58,
+              "seconds": 5.7313,
+              "sha256": "7c0c1d09e30b0b191c7b912bff16ce5b792c6da00482ffc5aceac1dd71f06b20"
+            },
+            {
+              "id": "world_city",
+              "reference": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "recognized": "Мы едем по голоду. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "character_errors": 1,
+              "reference_characters": 61,
+              "seconds": 7.0781,
+              "sha256": "0550fe18135e9b63de22aa0de972589e8a053d8d58eeb12cfedc63b943c09c25"
+            }
+          ]
+        }
+      }
+    },
+    "world-sample-asr": {
+      "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+      "locales": {
+        "de": {
+          "voice_model": "de_DE-thorsten-high",
+          "samples": 7,
+          "character_error_rate": 0.06926,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Physik.",
+              "recognized": "Fessik",
+              "character_errors": 3,
+              "reference_characters": 6,
+              "seconds": 1.51,
+              "sha256": "a57df37fc2a2a1717d044da846127c13bf8bde691e067ac2cc8f68a236e57a4b"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Hier entdecken wir die Chemie.",
+              "recognized": "Hier entdecken wir die Chemie.",
+              "character_errors": 0,
+              "reference_characters": 25,
+              "seconds": 2.18,
+              "sha256": "9d20f0d1ce9ffe9ea18b7f14984183e85dc3e814bda0268e8177a046aacdbe79"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Sehr klug entschieden!",
+              "recognized": "Sehr klug entschieden.",
+              "character_errors": 0,
+              "reference_characters": 19,
+              "seconds": 2.26,
+              "sha256": "2f80d5544c5a1b7c0365c72bb3ef27d68545e0b3e6f25dfb9d668978e06cf7c9"
+            },
+            {
+              "id": "math_count",
+              "reference": "Wie viele Äpfel siehst du?",
+              "recognized": "Wie viele App fällst du?",
+              "character_errors": 7,
+              "reference_characters": 21,
+              "seconds": 2.46,
+              "sha256": "a24926732a6baa071ebc18e0af5737fb4a247c579f75f804194a6ec8e6e5b653"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Sonne. Welcher Buchstabe passt am Anfang?",
+              "recognized": "Sonne, welcher Buchstabe passt am Anfang?",
+              "character_errors": 0,
+              "reference_characters": 34,
+              "seconds": 4.33,
+              "sha256": "b648f03c3e293976e1d491890ae7060f28c020d80a5cdbc93312290b142fecb2"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+              "recognized": "Eisen wird von Magneten angezogen. Netzgliedes Metall ist magnetisch.",
+              "character_errors": 6,
+              "reference_characters": 58,
+              "seconds": 5.78,
+              "sha256": "0428a530aab5b4b00d64258c3352a6a08502b5eb36fc3083fc8dce5676505753"
+            },
+            {
+              "id": "world_city",
+              "reference": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "recognized": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "character_errors": 0,
+              "reference_characters": 68,
+              "seconds": 6.095,
+              "sha256": "d7c61185203d0529f33ee285c210485e58b48e927e8625c893acbd8a9bc079a0"
+            }
+          ]
+        },
+        "ru": {
+          "voice_model": "ru_RU-denis-medium",
+          "samples": 7,
+          "character_error_rate": 0.02817,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Это физика.",
+              "recognized": "Это физика.",
+              "character_errors": 0,
+              "reference_characters": 9,
+              "seconds": 2.055,
+              "sha256": "7cf49b0e37ca74f5eb89944631be5f3b6ffece49a72570272764d77f0ac103a6"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Это химия.",
+              "recognized": "Это Фимия.",
+              "character_errors": 1,
+              "reference_characters": 8,
+              "seconds": 2.005,
+              "sha256": "bbe1ca0b7733db998a473dc486ffd10bbb49b37059f77c2b6b6982a880bf84a6"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Очень умное решение!",
+              "recognized": "Очень умное решение.",
+              "character_errors": 0,
+              "reference_characters": 17,
+              "seconds": 2.31,
+              "sha256": "0c285e4b0b3d69cd775a8ae520c8b0632b4d5c2384149ae85b1bd4301d0a1762"
+            },
+            {
+              "id": "math_count",
+              "reference": "Сколько яблок ты видишь?",
+              "recognized": "Колька яблок ты видишь?",
+              "character_errors": 2,
+              "reference_characters": 20,
+              "seconds": 2.145,
+              "sha256": "aea5ba51d1f660e5adaa225d4d65d3f090b4686905a9422f649a75346bb0dc35"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+              "recognized": "Послушай немецкое слово, с какой буквы его пишет?",
+              "character_errors": 1,
+              "reference_characters": 40,
+              "seconds": 4.41,
+              "sha256": "9b1462e45201b03de2cf617ce3056333cb9a2b62a61328d147b631c94b9e80f9"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+              "recognized": "Магнит притягивает железо, не каждый металл притягивается магнита.",
+              "character_errors": 2,
+              "reference_characters": 58,
+              "seconds": 5.735,
+              "sha256": "46da7fb980c1ebf7b4b6a7d51abf8988436c34ac55d355c5c279f3fd3f7e736e"
+            },
+            {
+              "id": "world_city",
+              "reference": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "recognized": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "character_errors": 0,
+              "reference_characters": 61,
+              "seconds": 7.085,
+              "sha256": "f149cfad0a083f65ff9a28015e5fdadf7bffd59c4165a5cbbf099c69299472fe"
+            }
+          ]
+        }
+      }
+    },
+    "world-transients-asr": {
+      "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+      "locales": {
+        "de": {
+          "voice_model": "de_DE-thorsten-high",
+          "samples": 7,
+          "character_error_rate": 0.08658,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Physik.",
+              "recognized": "Physik",
+              "character_errors": 0,
+              "reference_characters": 6,
+              "seconds": 1.51,
+              "sha256": "583b1138ce5031e8311c59c9851664d84eb7f8dc9d35d60d7f90e7464b76ee34"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Hier entdecken wir die Chemie.",
+              "recognized": "Hier entdeckt ein wenig Gemüse.",
+              "character_errors": 10,
+              "reference_characters": 25,
+              "seconds": 2.18,
+              "sha256": "87d5d11e9fc8f606350c67909dc5a2bd4e8fae10488f5647a8386532d4ef6ec9"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Sehr klug entschieden!",
+              "recognized": "Sehr klug entschieden.",
+              "character_errors": 0,
+              "reference_characters": 19,
+              "seconds": 2.26,
+              "sha256": "5ad0779cb57c454d3f9ce025b881abbb42a877d9296a32794f15db10a47f5854"
+            },
+            {
+              "id": "math_count",
+              "reference": "Wie viele Äpfel siehst du?",
+              "recognized": "Wie viele App fällst du?",
+              "character_errors": 7,
+              "reference_characters": 21,
+              "seconds": 2.46,
+              "sha256": "054e26e9396c63decd981dd7b1666713f3b45e78c554497ad01e77ab4c609cb3"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Sonne. Welcher Buchstabe passt am Anfang?",
+              "recognized": "Sonne, welcher Buchstabe passt am Anfang?",
+              "character_errors": 0,
+              "reference_characters": 34,
+              "seconds": 4.33,
+              "sha256": "809f2a115ea840892ceda6d643da49a203f6b909add1be825ab559fcaef28f32"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Eisen wird von Magneten angezogen. Nicht jedes Metall ist magnetisch.",
+              "recognized": "Eisen wird von Magneten angezogen. Net jedes Metall ist magnetisch.",
+              "character_errors": 3,
+              "reference_characters": 58,
+              "seconds": 5.78,
+              "sha256": "5133ae965a4ea5c6605425601854a5ba9a11361d1114b96fa01c774d44c5a946"
+            },
+            {
+              "id": "world_city",
+              "reference": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "recognized": "Wir fahren durch die Stadt. Suche ein Bild an der Haltestelle oder unter der Brücke.",
+              "character_errors": 0,
+              "reference_characters": 68,
+              "seconds": 6.095,
+              "sha256": "eacea4096553335eab90c3178438ef01e98ee27bd1dcc6a9bd8ab2a79503d9e1"
+            }
+          ]
+        },
+        "ru": {
+          "voice_model": "ru_RU-denis-medium",
+          "samples": 7,
+          "character_error_rate": 0.01408,
+          "rows": [
+            {
+              "id": "area_physics",
+              "reference": "Это физика.",
+              "recognized": "Это физика.",
+              "character_errors": 0,
+              "reference_characters": 9,
+              "seconds": 2.055,
+              "sha256": "0bf117aac94ffebb54ced85645e67a10108e0aaf1adb3da33885c89c24703264"
+            },
+            {
+              "id": "area_chemistry",
+              "reference": "Это химия.",
+              "recognized": "Это Фимия.",
+              "character_errors": 1,
+              "reference_characters": 8,
+              "seconds": 2.005,
+              "sha256": "65bddc590783b6ba7800f3792db936fe16e6d55f7ff2846cb9ff296f4a4a38fe"
+            },
+            {
+              "id": "praise_1",
+              "reference": "Очень умное решение!",
+              "recognized": "Очень умное решение.",
+              "character_errors": 0,
+              "reference_characters": 17,
+              "seconds": 2.31,
+              "sha256": "63d201d03a183c09fac114ba5f2e8b41cce4f779c7d9893d865cca2447bc9253"
+            },
+            {
+              "id": "math_count",
+              "reference": "Сколько яблок ты видишь?",
+              "recognized": "Сколько яблок ты видишь?",
+              "character_errors": 0,
+              "reference_characters": 20,
+              "seconds": 2.145,
+              "sha256": "19dd6093190b6c9343b029deab05c2c4c8e6b2bcc8108c74040ea2607f91b146"
+            },
+            {
+              "id": "german_sun",
+              "reference": "Послушай немецкое слово. С какой буквы его пишут?",
+              "recognized": "Послушай немецкое слово, с какой буквы его пишут?",
+              "character_errors": 0,
+              "reference_characters": 40,
+              "seconds": 4.41,
+              "sha256": "346b49521020c166788315aa1259b992358248742a9cf5a441e3907722535f56"
+            },
+            {
+              "id": "physics_05_hint",
+              "reference": "Магнит притягивает железо. Не каждый металл притягивается магнитом.",
+              "recognized": "Магнит притягивает железо, не каждый металл притягивается магнита.",
+              "character_errors": 2,
+              "reference_characters": 58,
+              "seconds": 5.735,
+              "sha256": "6a4046d4c43690437be332b30d8e248b04f35b17b1b5e870e1f29d1ec665be68"
+            },
+            {
+              "id": "world_city",
+              "reference": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "recognized": "Мы едем по городу. Ищи картинки на остановке и под мостом. Нажми на картинку.",
+              "character_errors": 0,
+              "reference_characters": 61,
+              "seconds": 7.085,
+              "sha256": "41622136c36078eef125c30682e2ac132237c567b13750ec2f5cf96bc329f77b"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

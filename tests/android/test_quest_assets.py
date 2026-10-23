@@ -59,7 +59,7 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(manifest['voice_gender'],'female' if locale=='en' else 'male')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
-            self.assertEqual(len(expected),667)
+            self.assertEqual(len(expected),1947)
             self.assertEqual({c['id']:c['text'] for c in manifest['clips']},expected)
             unique={c['file']:c for c in manifest['clips']}
             self.assertEqual({p.name for p in folder.glob('*.ogg')},set(unique))
@@ -109,7 +109,7 @@ class QuestAssetsTests(unittest.TestCase):
                 profile=clip.get('generation_profile',manifest['synthesis'])
                 self.assertEqual(profile['noise_w_scale'],0)
                 self.assertGreaterEqual(clip['phonetic_units'][-1]['seconds'],.35,(locale,subject))
-    def test_translations_images_and_original_content_remain_complete(self):
+    def test_translations_images_and_legacy_reward_migration_remain_complete(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())
         for section in ['ui','objects']:
@@ -126,7 +126,9 @@ class QuestAssetsTests(unittest.TestCase):
         originals=json.loads((ROOT/'scripts/content/foundation-tasks.json').read_text())['tasks']
         current={t['id']:t for t in tasks}
         for task in originals:
-            for key,value in task.items():self.assertEqual(current[task['id']][key],value)
+            self.assertNotEqual(current[task['id']]['texts']['de']['prompt'],task['prompt'])
+            legacy=json.loads((ROOT/'games/quest/legacy-rewards.json').read_text())['rewards']
+            self.assertEqual(legacy[task['id']],10)
     def test_content_generator_is_reproducible(self):
         paths=[ROOT/'games/quest/tasks.json',ROOT/'games/quest/languages.json']
         before=[p.read_bytes() for p in paths]
