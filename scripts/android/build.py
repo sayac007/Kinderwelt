@@ -11,6 +11,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import variants
 sys.path.insert(0,str(ROOT/'scripts/android'))
 import identity
+import debug_key
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
@@ -115,7 +116,8 @@ def main():
         env['ANDROID_USER_HOME']=str(temp/'android-user');(temp/'android-user').mkdir()
         env.pop('ANDROID_SDK_HOME',None)
         env['JAVA_TOOL_OPTIONS']=env.get('JAVA_TOOL_OPTIONS','')+' -Duser.home='+str(temp)
-        # Gradle dependency cache can be reused; project/user data and debug key cannot.
+        # Gradle dependencies and the development certificate are reused outside source.
+        # Project/user data remain isolated; no release key is loaded.
         env['GRADLE_USER_HOME']=str(tools/'android-gradle-cache')
         proxy=urlsplit(env.get('HTTPS_PROXY',env.get('https_proxy','')))
         if proxy.hostname:
@@ -125,8 +127,9 @@ def main():
             if trust.is_file():options+=['-Djavax.net.ssl.trustStore='+str(trust)]
             env['JAVA_TOOL_OPTIONS']=env.get('JAVA_TOOL_OPTIONS','')+' '+' '.join(options)
 
+        key=debug_key.ensure(tools,java)
         settings=temp/'config/godot';settings.mkdir()
-        (settings/'editor_settings-4.7.tres').write_text('[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\n')
+        (settings/'editor_settings-4.7.tres').write_text('[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\nexport/android/debug_keystore='+json.dumps(str(key))+'\nexport/android/debug_keystore_user="androiddebugkey"\nexport/android/debug_keystore_pass="android"\n')
         templates=temp/'data/godot/export_templates/4.7.2.stable'
         shutil.copytree(tools/'android-tools/templates',templates)
         # Equivalent to Godot's template installer; checksum verified by install.py.
@@ -142,7 +145,7 @@ def main():
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
         run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'ephemeral Godot development key; not a release identity','aab':'UNSIGNED'},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'cached development-only Godot key; not a release identity','aab':'UNSIGNED','development_certificate_sha256':debug_key.fingerprint(key,java)},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
         (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
         subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)],check=True)
         subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)

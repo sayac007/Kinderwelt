@@ -79,7 +79,7 @@ func run() -> void:
 		game.world.set_page(3)
 		await snap(profile.id+"-last-trail")
 		var previous_progress: Dictionary=app.store.data.quest.duplicate(true)
-		for task in preload("res://games/quest/progress.gd").tasks():preload("res://games/quest/progress.gd").award(app.store.data.quest,task.id)
+		for task in preload("res://games/quest/progress.gd").all_tasks():preload("res://games/quest/progress.gd").award(app.store.data.quest,task.id)
 		app.store.data.hero="squirrel";game.world.hero.person="squirrel"
 		game.update_score();game.arrange()
 		await snap(profile.id+"-header-max-points")
@@ -94,6 +94,19 @@ func run() -> void:
 			await snap(profile.id+"-"+locale+"-german")
 			app.languages();await snap(profile.id+"-"+locale+"-languages")
 		app.store.data.locale="de"
+		for locale in ["de","en","ru"]:
+			app.store.data.locale=locale;app.hub();game=app.game_view
+			game.switch_subject("math");game.open_task(0)
+			game.task_panel.answer(game.task_panel.task.answer)
+			await snap(profile.id+"-"+locale+"-bonus-offer")
+			game.open_bonus(0)
+			await snap(profile.id+"-"+locale+"-bonus-50")
+			game.open_bonus(1)
+			await snap(profile.id+"-"+locale+"-bonus-100")
+			game.close_task();game.switch_subject("german");game.open_task(0);game.open_bonus(1)
+			await snap(profile.id+"-"+locale+"-native-letter-bonus")
+			game.close_task()
+		app.store.data.locale="de"
 		app.musicbox()
 		await snap(profile.id+"-musicbox")
 		app.settings()
@@ -105,6 +118,16 @@ func run() -> void:
 		app.free()
 		await process_frame
 		root.content_scale_size=Vector2i.ZERO
+	# The riddle is independent of the old answer/object atlas, verified in real pixels.
+	root.size=Vector2i(320,240)
+	var clue=preload("res://games/quest/picture.gd").new()
+	clue.size=Vector2(320,240)
+	clue.task={"riddle_scene":"sound","keyword":"Hören","object":"ear"}
+	root.add_child(clue)
+	await snap("riddle-sound-ear")
+	clue.task.object="moon";clue.queue_redraw()
+	await snap("riddle-sound-moon")
+	clue.free()
 	# Large actual-engine galleries let reviewers inspect all 35 character/look combinations.
 	root.size=Vector2i(1200,800);root.content_scale_size=Vector2i.ZERO
 	for id in preload("res://core/quest/hero.gd").IDS:

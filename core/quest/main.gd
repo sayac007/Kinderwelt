@@ -142,11 +142,11 @@ func languages() -> void:
 	clear();button(t("back"),hub)
 	label(t("select_language"))
 	for locale in Lang.LOCALES:
-		button(("✓ " if locale==store.data.locale else "")+Lang.NAMES[locale],func():
+		button(("✓ " if locale==store.data.locale else "")+Lang.locale_name(locale,store.data.locale),func():
 			store.data.locale=locale;save();hub())
 func settings() -> void:
 	clear();button(t("back"),hub)
-	label("Kinderwelt 0.8.1")
+	label(("Мир детства" if store.data.locale=="ru" else "Kinderwelt")+" 0.9.0")
 	button(t("language"),languages)
 	button(t("scenery"),sceneries)
 	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())
@@ -182,9 +182,13 @@ func music_credits() -> void:
 	label(t("classical_note"))
 	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/music/manifest.json"))
 	for track in manifest.tracks:
-		label(track.composer+" · "+track.title)
-		label(track.arranger+"\n"+track.license)
-		label(track.source.repository+"\n"+track.source.path)
+		if store.data.locale=="ru":
+			var names: Dictionary=Lang.data().music.get(track.id,{})
+			label(names.get("composer","")+" · "+names.get("title",""))
+		else:
+			label(track.composer+" · "+track.title)
+			label(track.arranger+"\n"+track.license)
+			label(track.source.repository+"\n"+track.source.path)
 	label(t("piano_credit"))
 func confirm_reset() -> void:
 	clear();label(t("reset_question"))

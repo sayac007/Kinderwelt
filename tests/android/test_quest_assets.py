@@ -59,7 +59,7 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(manifest['voice_gender'],'female' if locale=='en' else 'male')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
-            self.assertEqual(len(expected),667)
+            self.assertEqual(len(expected),1947)
             self.assertEqual({c['id']:c['text'] for c in manifest['clips']},expected)
             unique={c['file']:c for c in manifest['clips']}
             self.assertEqual({p.name for p in folder.glob('*.ogg')},set(unique))

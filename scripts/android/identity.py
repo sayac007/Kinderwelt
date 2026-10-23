@@ -12,7 +12,7 @@ def validate_package(value):
 
 def configure(app,package=None,preview=False,variant='family'):
     base=validate_package(package or CONFIG['test_package'])
-    chosen=validate_package(base+f'.preview.{"family" if variant=="family" else "neutral"}.v'+CONFIG['version_name'].replace('.','') if preview else base)
+    chosen=validate_package(base+f'.preview.{"family" if variant=="family" else "neutral"}.'+CONFIG['preview_channel'] if preview else base)
     preset=app/'export_presets.cfg';text=preset.read_text()
     if text.count('package/unique_name="'+TOKEN+'"')!=2:raise ValueError('Missing package placeholders in Android presets')
     text=text.replace(TOKEN,chosen)

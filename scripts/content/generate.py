@@ -151,6 +151,8 @@ for subject in ['physics','biology','chemistry','body','geography']:
         add(subject,'discovery',fields[1:4],fields[4:7],object=cue,options=options,answer=answer)
 
 assert len(tasks)==320 and len({t['id'] for t in tasks})==320
+from experience import expand
+tasks=expand(tasks,languages)
 for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
     assert sum(t['subject']==subject for t in tasks)==40
 for t in tasks:
@@ -159,4 +161,4 @@ for t in tasks:
     for lang in LOCALES:assert t['texts'][lang]['prompt'] and t['texts'][lang]['tip']
 (ROOT/'games/quest/tasks.json').write_text(json.dumps({'schema':2,'authorship':'Original Kinderwelt tasks; multilingual authored subject bank, no copied commercial exercises.','tasks':tasks},ensure_ascii=False,indent=2)+'\n')
 (ROOT/'games/quest/languages.json').write_text(json.dumps(languages,ensure_ascii=False,indent=2)+'\n')
-print('320 exercises: 40 each in eight subjects; German, English and Russian instructions.')
+print('320 base exercises + 640 optional bonuses; native German, English and Russian literacy.')

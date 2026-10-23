@@ -1,5 +1,5 @@
 extends AudioStreamPlayer
-# Only bundled clips. German learning targets keep German pronunciation.
+# Only bundled clips, always in the selected language.
 var store: RefCounted
 var music: Node
 var clip := ""
@@ -29,9 +29,6 @@ func play_clip(id: String,automatic := false) -> bool:
 	if path.is_empty() or not ResourceLoader.exists(path): return false
 	clip = id
 	queue.append(path)
-	if store.data.locale!="de" and basename.begins_with("german_"):
-		var german := resolve(basename,"de")
-		if not german.is_empty(): queue.append(german)
 	music.set_ducked(true)
 	play_next()
 	return true

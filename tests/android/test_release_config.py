@@ -5,17 +5,29 @@ def load(name,path):
     spec=importlib.util.spec_from_file_location(name,ROOT/path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
 identity=load('identity_test','scripts/android/identity.py')
 class ReleaseConfigTests(unittest.TestCase):
+    def test_preview_channel_stays_stable_when_the_display_version_changes(self):
+        original=identity.CONFIG['version_name']
+        try:
+            packages=[]
+            for version in ['0.9.0','0.9.1']:
+                identity.CONFIG['version_name']=version
+                with tempfile.TemporaryDirectory() as d:
+                    app=Path(d)
+                    for n in ['export_presets.cfg','project.godot']:(app/n).write_bytes((ROOT/n).read_bytes())
+                    packages.append(identity.configure(app,preview=True,variant='family'))
+            self.assertEqual(packages[0],packages[1])
+        finally:identity.CONFIG['version_name']=original
     def test_explicit_package_override_and_isolated_previews(self):
         for variant in ['family','public']:
             with tempfile.TemporaryDirectory() as d:
                 app=Path(d)
                 for n in ['export_presets.cfg','project.godot']:(app/n).write_bytes((ROOT/n).read_bytes())
                 chosen=identity.configure(app,'de.kinderwelt.test',True,variant)
-                self.assertEqual(chosen,'de.kinderwelt.test.preview.'+('family' if variant=='family' else 'neutral')+'.v081')
+                self.assertEqual(chosen,'de.kinderwelt.test.preview.'+('family' if variant=='family' else 'neutral')+'.v090')
                 text=(app/'export_presets.cfg').read_text()
                 self.assertNotIn(identity.TOKEN,text)
                 self.assertEqual(text.count('package/unique_name="'+chosen+'"'),2)
-                self.assertIn('version/code=12',text)
+                self.assertIn('version/code=13',text)
     def test_invalid_package_ids_rejected_before_export(self):
         for value in ['','single','com..app','com.App','com.1app','com.public.app','com.test-app','com.app;echo','com.app\nother','a.'+'a'*180]:
             with self.subTest(value=value),self.assertRaises(ValueError):identity.validate_package(value)

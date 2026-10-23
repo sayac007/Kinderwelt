@@ -108,43 +108,43 @@ Besonders relevant: `biology_32` enthielt eine Blume als angeblich falsche Alter
 
 | Aufgabe | Wert | Frage | Ablenker |
 |---|---:|---|---|
-| biology_02 | 0.00 | Wo brütet ein Amselvogel seine Eier aus? | glass: 0, oil: 0 |
-| biology_29 | 0.00 | Woraus schlüpfen junge Schildkröten? | apple: 0, seed: 0 |
-| biology_30 | 0.00 | Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen? | soap: 0, metal: 0 |
-| biology_33 | 0.00 | Was lässt du beim Beobachten von Vogeleiern in Ruhe? | soap: 0, wheel: 0 |
-| biology_36 | 0.00 | Was hilft Bienen im Garten? | hammer: 0, glass: 0 |
-| biology_37 | 0.00 | Was können Regenwürmer in die Erde ziehen? | battery: 0, glass: 0 |
-| biology_39 | 0.00 | Was kann aus einer Eichel wachsen? | metal: 0, wheel: 0 |
-| body_16 | 0.00 | Was schützt den Kopf beim Fahrradfahren? | soap: 0, paper: 0 |
-| geography_14 | 0.00 | Was verbindet zwei Ufer für einen Weg? | sand: 0, cloud: 0 |
-| geography_19 | 0.00 | Was zeigt ein Brückenzeichen auf einer Karte? | river: 0, mountain: 0 |
-| geography_21 | 0.00 | Wo entstehen Regentropfen am Himmel? | wood: 0, metal: 0 |
-| geography_28 | 0.00 | Was gehört zu einem Wald? | fish: 0, glass: 0 |
-| geography_31 | 0.00 | Was kann die Sonne am Himmel verdecken? | bone: 0, metal: 0 |
-| physics_09 | 0.00 | Was schützt beim Radfahren den Kopf? | flower: 0, paper: 0 |
-| physics_17 | 0.00 | Was hilft dir, Norden zu finden? | hammer: 0, scissors: 0 |
-| physics_18 | 0.00 | Was kann einen ruhenden Ball anschubsen? | moon: 0, cloud: 0 |
-| physics_32 | 0.00 | Welches Bauwerk braucht tragfähige Stützen? | soap: 0, egg: 0 |
-| physics_38 | 0.00 | Welcher Teil einer Seilrolle dreht sich? | leaf: 0, salt: 0 |
-| physics_40 | 0.00 | Was hat einen Nordpol und einen Südpol? | roots: 0, cloud: 0 |
-| geography_23 | 0.25 | Wie gelangt Wasser aus Wolken zurück zum Boden? | sand: 0.5, wood: 0 |
-| physics_11 | 0.25 | Welches Gerät kippt um einen Drehpunkt? | battery: 0.5, paper: 0 |
-| physics_35 | 0.25 | Was dreht sich an einem fahrenden Fahrrad? | scissors: 0.5, salt: 0 |
-| biology_06 | 0.50 | Was liefert einer grünen Pflanze Licht zum Wachsen? | metal: 0, moon: 1 |
-| biology_17 | 0.50 | Was ist ein Pilz und keine Pflanze? | flower: 1, bird: 0 |
-| biology_22 | 0.50 | Wo legt ein Grasfrosch seine Eier ab? | leaf: 0, sand: 1 |
-| body_10 | 0.50 | Womit zerkleinerst du Essen im Mund? | tongue: 0.5, ear: 0.5 |
-| body_36 | 0.50 | Welchen Körperteil reinigst du mit einer Zahnbürste? | ear: 0.5, nose: 0.5 |
-| body_40 | 0.50 | Womit kannst du einen weichen Ball vorsichtig greifen? | bone: 0.5, tooth: 0.5 |
-| geography_24 | 0.50 | Wo kann ein Fluss hoch oben entspringen? | fabric: 0, sea: 1 |
-| geography_32 | 0.50 | Was kann im Frühling Schnee schmelzen lassen? | moon: 1, paper: 0 |
-| geography_35 | 0.50 | Welches große Gewässer ist normalerweise salzig? | river: 1, paper: 0 |
-| physics_06 | 0.50 | Was führt einen Weg über einen Fluss? | bulb: 0.5, wheel: 0.5 |
-| physics_34 | 0.50 | Was kann eine Solarzelle mit Energie versorgen? | moon: 1, egg: 0 |
+| biology_02 | 0.00 | Entwickeln. Wo brütet ein Amselvogel seine Eier aus? | glass: 0, oil: 0 |
+| biology_29 | 0.00 | Entwickeln. Woraus schlüpfen junge Schildkröten? | apple: 0, seed: 0 |
+| biology_30 | 0.00 | Wachsen. Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen? | soap: 0, metal: 0 |
+| biology_33 | 0.00 | Entwickeln. Was lässt du beim Beobachten von Vogeleiern in Ruhe? | soap: 0, wheel: 0 |
+| biology_36 | 0.00 | Wachsen. Was hilft Bienen im Garten? | hammer: 0, glass: 0 |
+| biology_37 | 0.00 | Entwickeln. Was können Regenwürmer in die Erde ziehen? | battery: 0, glass: 0 |
+| biology_39 | 0.00 | Wachsen. Was kann aus einer Eichel wachsen? | metal: 0, wheel: 0 |
+| body_16 | 0.00 | Schützen. Was schützt beim Radfahren den Kopf? | soap: 0, paper: 0 |
+| geography_14 | 0.00 | Entdecken. Was verbindet zwei Ufer für einen Weg? | sand: 0, cloud: 0 |
+| geography_19 | 0.00 | Orientieren. Was zeigt ein Brückenzeichen auf einer Karte? | river: 0, mountain: 0 |
+| geography_21 | 0.00 | Beobachten. Wo entstehen Regentropfen am Himmel? | wood: 0, metal: 0 |
+| geography_28 | 0.00 | Wachsen. Was gehört zu einem Wald? | fish: 0, glass: 0 |
+| geography_31 | 0.00 | Beobachten. Was kann die Sonne am Himmel verdecken? | bone: 0, metal: 0 |
+| physics_09 | 0.00 | Schützen. Was schützt beim Radfahren den Kopf? | flower: 0, paper: 0 |
+| physics_17 | 0.00 | Orientieren. Was hilft dir, Norden zu finden? | hammer: 0, scissors: 0 |
+| physics_18 | 0.00 | Ausprobieren. Was kann einen ruhenden Ball anschubsen? | moon: 0, cloud: 0 |
+| physics_32 | 0.00 | Ausprobieren. Welches Bauwerk braucht tragfähige Stützen? | soap: 0, egg: 0 |
+| physics_38 | 0.00 | Bewegen. Welcher Teil einer Seilrolle dreht sich? | leaf: 0, salt: 0 |
+| physics_40 | 0.00 | Ausprobieren. Was hat einen Nordpol und einen Südpol? | roots: 0, cloud: 0 |
+| geography_23 | 0.25 | Beobachten. Wie gelangt Wasser aus Wolken zurück zum Boden? | sand: 0.5, wood: 0 |
+| physics_11 | 0.25 | Werkeln. Welches Gerät kippt um einen Drehpunkt? | battery: 0.5, paper: 0 |
+| physics_35 | 0.25 | Bewegen. Was dreht sich an einem fahrenden Fahrrad? | scissors: 0.5, salt: 0 |
+| biology_06 | 0.50 | Leuchten. Was liefert einer grünen Pflanze Licht zum Wachsen? | metal: 0, moon: 1 |
+| biology_17 | 0.50 | Wachsen. Was ist ein Pilz und keine Pflanze? | flower: 1, bird: 0 |
+| biology_22 | 0.50 | Entwickeln. Wo legt ein Grasfrosch seine Eier ab? | leaf: 0, sand: 1 |
+| body_10 | 0.50 | Zerkleinern. Womit zerkleinerst du Essen? | tongue: 0.5, ear: 0.5 |
+| body_36 | 0.50 | Pflegen. Was reinigst du mit einer Zahnbürste? | ear: 0.5, nose: 0.5 |
+| body_40 | 0.50 | Fühlen. Womit greifst du vorsichtig einen Ball? | bone: 0.5, tooth: 0.5 |
+| geography_24 | 0.50 | Entdecken. Wo kann ein Fluss hoch oben entspringen? | fabric: 0, sea: 1 |
+| geography_32 | 0.50 | Beobachten. Was kann im Frühling Schnee schmelzen lassen? | moon: 1, paper: 0 |
+| geography_35 | 0.50 | Entdecken. Welches große Gewässer ist normalerweise salzig? | river: 1, paper: 0 |
+| physics_06 | 0.50 | Entdecken. Was führt einen Weg über einen Fluss? | bulb: 0.5, wheel: 0.5 |
+| physics_34 | 0.50 | Versorgen. Was kann eine Solarzelle mit Energie versorgen? | moon: 1, egg: 0 |
 
 ## Fehlende Bilder und bewusst unveränderte Aufgaben
 
-Die folgenden Aufgaben wurden **nicht geändert**. Für einen fachlich sicheren Umbau wären neue konkrete Bilder/Szenen oder eine gesondert geprüfte Aufgabenfassung nötig. Vorhandene Gegenstände wurden nicht bloß wegen ähnlicher Kategorien als falsche Antworten eingesetzt.
+Die folgenden Grundantworten und Auswahlbilder wurden bei der früheren Ablenkerprüfung nicht geändert. In 0.9.0 wurden bei allen Sachaufgaben indirekte Kontextzeichnungen ergänzt; deren manuelle fachliche Prüfung steht aus. Für einen fachlich sicheren Umbau wären neue konkrete Bilder/Szenen oder eine gesondert geprüfte Aufgabenfassung nötig. Vorhandene Gegenstände wurden nicht bloß wegen ähnlicher Kategorien als falsche Antworten eingesetzt.
 
 | Aufgabe | Bedarf / Risiko |
 |---|---|

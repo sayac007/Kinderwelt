@@ -4,7 +4,7 @@ const Scenery=preload("res://core/quest/scenery.gd")
 const Progress=preload("res://games/quest/progress.gd")
 var data: Dictionary=defaults()
 static func defaults() -> Dictionary:
-	return {"schema":4,"subject_sceneries":{"math":"auto","german":"auto","logic":"auto","physics":"auto","biology":"auto","chemistry":"auto","body":"auto","geography":"auto"},"looks":{"wanja":"classic","mischa":"classic","du":"classic","mama":"classic","katze":"classic","george":"classic","squirrel":"classic"},"scenery":"auto","locale":"de","muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
+	return {"schema":5,"subject_sceneries":{"math":"auto","german":"auto","logic":"auto","physics":"auto","biology":"auto","chemistry":"auto","body":"auto","geography":"auto"},"looks":{"wanja":"classic","mischa":"classic","du":"classic","mama":"classic","katze":"classic","george":"classic","squirrel":"classic"},"scenery":"auto","locale":"de","muted":false,"reduced_motion":false,"music_volume":.35,"effects_volume":.6,"voice_volume":.8,"voice_auto":true,"text_scale":1.0,"hero":"wanja","music_track":"wiener_blut","music_locked":false,"music_shuffle":false,"quest":Progress.clean(null)}
 static func clean(value: Variant) -> Dictionary:
 	var result:=defaults()
 	if not value is Dictionary: return result

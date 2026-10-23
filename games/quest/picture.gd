@@ -29,6 +29,17 @@ func _draw() -> void:
 	if task.is_empty(): return
 	items.clear()
 	var rect := Rect2(Vector2(8,4),size-Vector2(16,8))
+	if task.has("riddle_scene"):
+		preload("res://games/quest/riddle_scene.gd").paint(self,task.riddle_scene,rect)
+		Art.text(self,task.get("keyword","?"),Vector2(size.x/2,size.y-12),20)
+		return
+	if task.has("display"):
+		var lines: PackedStringArray=str(task.display).split("\n")
+		for i in range(lines.size()):
+			var px:=30
+			while px>14 and Art.font().get_string_size(lines[i],HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>rect.size.x-8: px-=1
+			Art.text(self,lines[i],Vector2(size.x/2,size.y*(i+1)/(lines.size()+1)),px)
+		return
 	match task.kind:
 		"count": group(task.count,rect)
 		"add","subtract":

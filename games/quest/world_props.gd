@@ -52,6 +52,7 @@ static func clue(canvas: CanvasItem,c: Vector2,solved: bool,object: String,index
 	canvas.draw_circle(c,31,Color("fff5c7") if solved else Color("fffcf1"))
 	canvas.draw_arc(c,31,0,TAU,32,Color("a67638"),2,true)
 	if solved:Art.star(canvas,c,21,Color("efa923"))
+	elif object=="?":Art.text(canvas,"?",c,34,Color("76528c"))
 	else:Art.object(canvas,object,Rect2(c-Vector2(23,23),Vector2(46,46)))
 	canvas.draw_circle(c+Vector2(28,27),12,Color("fff8d9"))
 	Art.text(canvas,str(index+1),c+Vector2(28,27),13)

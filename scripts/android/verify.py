@@ -135,8 +135,11 @@ def main():
     assert re.search(r'android:screenOrientation[^\n]*=13\b',xmltree),'APK orientation mismatch'
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'
+    provenance=json.loads((out/'provenance.json').read_text())
+    expected_certificate=provenance['signing']['development_certificate_sha256']
+    assert re.search(r'Signer #1 certificate SHA-256 digest: '+re.escape(expected_certificate),signature,re.I),'APK signer differs from reused development key'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
-    apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','zip_16kb_alignment':'PASS'})
+    apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','certificate_sha256':expected_certificate,'zip_16kb_alignment':'PASS'})
     validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
     manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
     aab_data=inspect_zip(aab,True,app_root=a.source);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'

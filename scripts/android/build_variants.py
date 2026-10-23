@@ -15,7 +15,7 @@ def collect(directory,label):
         target=directory.parent/named
         if target.exists():raise ValueError('Refusing stale delivery artifact: '+named)
         pending.append((source,target))
-        result[named]={'variant':label,'package':proof['package'],'version_name':proof['version_name'],'version_code':proof['version_code'],**expected,'application_source_sha256':proof['application_source_sha256'],'signing':'temporary development certificate' if target.suffix=='.apk' else 'UNSIGNED'}
+        result[named]={'variant':label,'package':proof['package'],'version_name':proof['version_name'],'version_code':proof['version_code'],**expected,'application_source_sha256':proof['application_source_sha256'],'signing':'cached development-only certificate' if target.suffix=='.apk' else 'UNSIGNED'}
     for source,target in pending:source.rename(target)
     return result
 
@@ -24,7 +24,7 @@ def main():
     if len(set(a.variants))!=len(a.variants):p.error('Duplicate variants are not allowed')
     out=a.output.resolve()
     if out.exists():p.error('Output must be a new directory')
-    if 'family' in a.variants and not (ROOT/'.private/characters/looks.json').is_file():p.error('Family artwork is missing; restore the encrypted CI pack first. No neutral substitute is used.')
+    if 'family' in a.variants and not (ROOT/'.private/characters/looks.json').is_file():p.error('Family artwork is missing; restore the pinned private illustration repository first. No neutral substitute is used.')
     out.mkdir(parents=True);artifacts={}
     for label in a.variants:
         destination=out/label

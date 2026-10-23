@@ -120,28 +120,23 @@ def narration_texts(locale):
     else:
         for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
             texts['area_'+subject]='Это '+languages['ui'][subject][locale].lower()+'.'
-    for task in tasks:
+    expanded=[]
+    for parent in tasks:
+        expanded.append(parent)
+        expanded.extend(parent.get('bonuses',[]))
+    for task in expanded:
         values=task['texts'][locale]
+        # Native literacy variants are spoken by their own locale. No German
+        # follow-up audio, foreign spelling targets or long answer enumeration.
         prompt=values['prompt']
-        # Pictures are named aloud in the interface language. German learning
-        # targets are always pronounced by the German recording queued afterwards.
-        if task['kind']=='discovery' or (locale=='de' and task['subject']=='german' and task['kind']=='rhyme'):
-            names=[languages['objects'][o][locale] for o in task['options']]
-            if locale=='de':prompt+=' Zur Auswahl stehen '+', '.join(names[:-1])+' und '+names[-1]+'.'
-            elif locale=='en':prompt+=' Choose from '+', '.join(names[:-1])+' or '+names[-1]+'.'
-            else:prompt+=' '+languages['ui']['choices'][locale]+' '+'. '.join(names)+'.'
-        hint=values['tip']
-        if locale!='de' and task['subject']=='german':
-            # Never teach German targets through an English/Russian phonemizer.
-            # The runtime queues the matching full German question/hint next.
-            leads={
-                'initial':('Listen to the German word. Which letter does it start with?', 'Послушай немецкое слово. С какой буквы его пишут?', 'Listen to the German word and its first letter.', 'Послушай немецкое слово и его первую букву.'),
-                'syllables':('Listen to the German word. How many syllables can you hear?', 'Послушай немецкое слово. Сколько слогов ты слышишь?', 'Listen to the German example and clap along.', 'Послушай немецкий пример и хлопай по слогам.'),
-                'word':('Which German word matches the picture?', 'Какое немецкое слово подходит к картинке?', 'Listen to the German word and how its letters are spelled.', 'Послушай немецкое слово и как оно произносится по буквам.'),
-                'rhyme':('Listen to the German words. Which ones rhyme?', 'Послушай немецкие слова. Какие из них рифмуются?', 'Listen to the two German words that rhyme.', 'Послушай два немецких слова, которые рифмуются.')}
-            leads=leads[task['kind']];prompt=leads[0 if locale=='en' else 1];hint=leads[2 if locale=='en' else 3]
+        if task['kind']=='rhyme':
+            variant=task.get('variants',{}).get(locale,{})
+            options=variant.get('options',task['options'])
+            labels=variant.get('option_labels',{})
+            names=[labels.get(str(o),languages['objects'][o][locale]) for o in options]
+            prompt+=' '+languages['ui']['choices'][locale]+' '+'. '.join(n.capitalize() for n in names)+'.'
         texts[task['id']]=prompt
-        texts[task['id']+'_hint']=hint
+        texts[task['id']+'_hint']=values['tip']
     return texts
 
 def normalized_phonemes(phonemes,id_map):
@@ -188,6 +183,7 @@ def main():
     parser.add_argument('--locale',choices=MODELS,required=True)
     parser.add_argument('--model',type=Path,required=True)
     parser.add_argument('--threads',type=int,default=2)
+    parser.add_argument('--output',type=Path,help='Optional development voice-bank root; keeps shipping clips untouched')
     args=parser.parse_args()
     import onnxruntime
     onnxruntime.disable_telemetry_events()
@@ -202,7 +198,7 @@ def main():
     profile=synthesis_profile(args.locale)
     model,lic,gender=MODELS[args.locale]
     assert args.model.name==model+'.onnx'
-    dest=ROOT/'assets/voice/quest'/args.locale;dest.mkdir(parents=True,exist_ok=True)
+    dest=(args.output if args.output else ROOT/'assets/voice/quest')/args.locale;dest.mkdir(parents=True,exist_ok=True)
     shutil.copy2(args.model.parent/'MODEL_CARD',dest/'MODEL_CARD.txt')
     manifest={'schema':3,'synthesis':profile,'locale':args.locale,'engine':'Piper 1.4.2 (development tool only)','model':model,'model_sha256':hashlib.sha256(args.model.read_bytes()).hexdigest(),'model_source':'https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-'+model+'.tar.bz2','dataset_license':lic,'voice_gender':gender,'runtime':'Bundled Vorbis only; no network, microphone, model or TTS engine','human_listening_review':'OPEN; independent synthetic voice, no actor imitation','clips':[]}
     old={}

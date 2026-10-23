@@ -1,6 +1,7 @@
 {
   "test_package": "org.example.kinderwelt",
   "identity_status": "PROVISIONAL_TEST_ONLY; final package undecided",
-  "version_name": "0.8.1",
-  "version_code": 12
+  "version_name": "0.9.0",
+  "version_code": 13,
+  "preview_channel": "v090"
 }

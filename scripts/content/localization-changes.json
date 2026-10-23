@@ -202,224 +202,224 @@
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Sonne. Which letter does it start with?"
+      "after": "Sun. Which letter comes first?"
     },
     {
       "id": "german_sun",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter S. Choose that letter.",
-      "after": "Sonne starts with the letter S. Choose that letter."
+      "after": "Sun starts with S."
     },
     {
       "id": "german_sun",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Sonne. С какой буквы его пишут?"
+      "after": "Солнце. Какая первая буква?"
     },
     {
       "id": "german_sun",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "after": "Sonne начинается с буквы S. Выбери эту букву."
+      "after": "В слове Солнце первая буква С."
     },
     {
       "id": "german_mouse",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Maus. Which letter does it start with?"
+      "after": "Mouse. Which letter comes first?"
     },
     {
       "id": "german_mouse",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter M. Choose that letter.",
-      "after": "Maus starts with the letter M. Choose that letter."
+      "after": "Mouse starts with M."
     },
     {
       "id": "german_mouse",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Maus. С какой буквы его пишут?"
+      "after": "Мышь. Какая первая буква?"
     },
     {
       "id": "german_mouse",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы M. Выбери эту букву.",
-      "after": "Maus начинается с буквы M. Выбери эту букву."
+      "after": "В слове Мышь первая буква М."
     },
     {
       "id": "german_apple",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Apfel. Which letter does it start with?"
+      "after": "Apple. Which letter comes first?"
     },
     {
       "id": "german_apple",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter A. Choose that letter.",
-      "after": "Apfel starts with the letter A. Choose that letter."
+      "after": "Apple starts with A."
     },
     {
       "id": "german_apple",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Apfel. С какой буквы его пишут?"
+      "after": "Яблоко. Какая первая буква?"
     },
     {
       "id": "german_apple",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы A. Выбери эту букву.",
-      "after": "Apfel начинается с буквы A. Выбери эту букву."
+      "after": "В слове Яблоко первая буква Я."
     },
     {
       "id": "german_rhyme",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German words. Which one rhymes with the word for house?",
-      "after": "Which German word rhymes with Haus?"
+      "after": "House. Which word rhymes?"
     },
     {
       "id": "german_rhyme",
       "locale": "en",
       "field": "tip",
       "before": "The German words for house and mouse rhyme: listen to the German example.",
-      "after": "Haus and Maus sound the same at the end."
+      "after": "House and mouse have the same ending sound."
     },
     {
       "id": "german_rhyme",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкие слова. Какое рифмуется со словом «дом» по-немецки?",
-      "after": "Какое немецкое слово рифмуется со словом Haus?"
+      "after": "Дом. Какое слово рифмуется?"
     },
     {
       "id": "german_rhyme",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкие слова «дом» и «мышь» рифмуются. Послушай пример по-немецки.",
-      "after": "Haus и Maus звучат одинаково в конце."
+      "after": "Дом и сом звучат похоже в конце."
     },
     {
       "id": "german_robot",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Roboter. How many syllables can you hear?"
+      "after": "Robot. How many syllables?"
     },
     {
       "id": "german_robot",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 3 syllables.",
-      "after": "Say and clap: Ro. Bo. Ter. That is 3 syllables."
+      "after": "Say and clap: Ro. Bot."
     },
     {
       "id": "german_robot",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Roboter. Сколько слогов ты слышишь?"
+      "after": "Робот. Сколько слогов?"
     },
     {
       "id": "german_robot",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "after": "Произнеси и хлопай: Ro. Bo. Ter. Это 3 слога."
+      "after": "Произнеси и хлопай: Ро. Бот."
     },
     {
       "id": "german_read",
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Which German word belongs to the ball?"
+      "after": "Which word matches the picture?"
     },
     {
       "id": "german_read",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "B. A. L. L. Find the word Ball."
+      "after": "The word is Ball."
     },
     {
       "id": "german_read",
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Какое немецкое слово подходит к мячу?"
+      "after": "Какое слово подходит к картинке?"
     },
     {
       "id": "german_read",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "B. A. L. L. Найди слово Ball."
+      "after": "Это слово Мяч."
     },
     {
       "id": "german_flower",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Blume. How many syllables can you hear?"
+      "after": "Flower. How many syllables?"
     },
     {
       "id": "german_flower",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Blu. Me. That is 2 syllables."
+      "after": "Say and clap: Flow. Er."
     },
     {
       "id": "german_flower",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Blume. Сколько слогов ты слышишь?"
+      "after": "Цветок. Сколько слогов?"
     },
     {
       "id": "german_flower",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Blu. Me. Это 2 слога."
+      "after": "Произнеси и хлопай: Цве. Ток."
     },
     {
       "id": "german_fish",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Fisch. Which letter does it start with?"
+      "after": "Fish. Which letter comes first?"
     },
     {
       "id": "german_fish",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter F. Choose that letter.",
-      "after": "Fisch starts with the letter F. Choose that letter."
+      "after": "Fish starts with F."
     },
     {
       "id": "german_fish",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Fisch. С какой буквы его пишут?"
+      "after": "Рыба. Какая первая буква?"
     },
     {
       "id": "german_fish",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы F. Выбери эту букву.",
-      "after": "Fisch начинается с буквы F. Выбери эту букву."
+      "after": "В слове Рыба первая буква Р."
     },
     {
       "id": "math_09",
@@ -552,784 +552,784 @@
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Biene. Which letter does it start with?"
+      "after": "Bee. Which letter comes first?"
     },
     {
       "id": "german_09",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter B. Choose that letter.",
-      "after": "Biene starts with the letter B. Choose that letter."
+      "after": "Bee starts with B."
     },
     {
       "id": "german_09",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Biene. С какой буквы его пишут?"
+      "after": "Пчела. Какая первая буква?"
     },
     {
       "id": "german_09",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы B. Выбери эту букву.",
-      "after": "Biene начинается с буквы B. Выбери эту букву."
+      "after": "В слове Пчела первая буква П."
     },
     {
       "id": "german_10",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Frosch. Which letter does it start with?"
+      "after": "Frog. Which letter comes first?"
     },
     {
       "id": "german_10",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter F. Choose that letter.",
-      "after": "Frosch starts with the letter F. Choose that letter."
+      "after": "Frog starts with F."
     },
     {
       "id": "german_10",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Frosch. С какой буквы его пишут?"
+      "after": "Лягушка. Какая первая буква?"
     },
     {
       "id": "german_10",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы F. Выбери эту букву.",
-      "after": "Frosch начинается с буквы F. Выбери эту букву."
+      "after": "В слове Лягушка первая буква Л."
     },
     {
       "id": "german_11",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Katze. Which letter does it start with?"
+      "after": "Cat. Which letter comes first?"
     },
     {
       "id": "german_11",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter K. Choose that letter.",
-      "after": "Katze starts with the letter K. Choose that letter."
+      "after": "Cat starts with C."
     },
     {
       "id": "german_11",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Katze. С какой буквы его пишут?"
+      "after": "Кошка. Какая первая буква?"
     },
     {
       "id": "german_11",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы K. Выбери эту букву.",
-      "after": "Katze начинается с буквы K. Выбери эту букву."
+      "after": "В слове Кошка первая буква К."
     },
     {
       "id": "german_12",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Nest. Which letter does it start with?"
+      "after": "Nest. Which letter comes first?"
     },
     {
       "id": "german_12",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter N. Choose that letter.",
-      "after": "Nest starts with the letter N. Choose that letter."
+      "after": "Nest starts with N."
     },
     {
       "id": "german_12",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Nest. С какой буквы его пишут?"
+      "after": "Гнездо. Какая первая буква?"
     },
     {
       "id": "german_12",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы N. Выбери эту букву.",
-      "after": "Nest начинается с буквы N. Выбери эту букву."
+      "after": "В слове Гнездо первая буква Г."
     },
     {
       "id": "german_13",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Wurm. Which letter does it start with?"
+      "after": "Worm. Which letter comes first?"
     },
     {
       "id": "german_13",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter W. Choose that letter.",
-      "after": "Wurm starts with the letter W. Choose that letter."
+      "after": "Worm starts with W."
     },
     {
       "id": "german_13",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Wurm. С какой буквы его пишут?"
+      "after": "Червяк. Какая первая буква?"
     },
     {
       "id": "german_13",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы W. Выбери эту букву.",
-      "after": "Wurm начинается с буквы W. Выбери эту букву."
+      "after": "В слове Червяк первая буква Ч."
     },
     {
       "id": "german_14",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Wasser. Which letter does it start with?"
+      "after": "Water. Which letter comes first?"
     },
     {
       "id": "german_14",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter W. Choose that letter.",
-      "after": "Wasser starts with the letter W. Choose that letter."
+      "after": "Water starts with W."
     },
     {
       "id": "german_14",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Wasser. С какой буквы его пишут?"
+      "after": "Вода. Какая первая буква?"
     },
     {
       "id": "german_14",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы W. Выбери эту букву.",
-      "after": "Wasser начинается с буквы W. Выбери эту букву."
+      "after": "В слове Вода первая буква В."
     },
     {
       "id": "german_15",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Salz. Which letter does it start with?"
+      "after": "Salt. Which letter comes first?"
     },
     {
       "id": "german_15",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter S. Choose that letter.",
-      "after": "Salz starts with the letter S. Choose that letter."
+      "after": "Salt starts with S."
     },
     {
       "id": "german_15",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Salz. С какой буквы его пишут?"
+      "after": "Соль. Какая первая буква?"
     },
     {
       "id": "german_15",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "after": "Salz начинается с буквы S. Выбери эту букву."
+      "after": "В слове Соль первая буква С."
     },
     {
       "id": "german_16",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Sand. Which letter does it start with?"
+      "after": "Sand. Which letter comes first?"
     },
     {
       "id": "german_16",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter S. Choose that letter.",
-      "after": "Sand starts with the letter S. Choose that letter."
+      "after": "Sand starts with S."
     },
     {
       "id": "german_16",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Sand. С какой буквы его пишут?"
+      "after": "Песок. Какая первая буква?"
     },
     {
       "id": "german_16",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы S. Выбери эту букву.",
-      "after": "Sand начинается с буквы S. Выбери эту букву."
+      "after": "В слове Песок первая буква П."
     },
     {
       "id": "german_17",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Holz. Which letter does it start with?"
+      "after": "Wood. Which letter comes first?"
     },
     {
       "id": "german_17",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter H. Choose that letter.",
-      "after": "Holz starts with the letter H. Choose that letter."
+      "after": "Wood starts with W."
     },
     {
       "id": "german_17",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Holz. С какой буквы его пишут?"
+      "after": "Дерево. Какая первая буква?"
     },
     {
       "id": "german_17",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "after": "Holz начинается с буквы H. Выбери эту букву."
+      "after": "В слове Дерево первая буква Д."
     },
     {
       "id": "german_18",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Nase. Which letter does it start with?"
+      "after": "Nose. Which letter comes first?"
     },
     {
       "id": "german_18",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter N. Choose that letter.",
-      "after": "Nase starts with the letter N. Choose that letter."
+      "after": "Nose starts with N."
     },
     {
       "id": "german_18",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Nase. С какой буквы его пишут?"
+      "after": "Нос. Какая первая буква?"
     },
     {
       "id": "german_18",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы N. Выбери эту букву.",
-      "after": "Nase начинается с буквы N. Выбери эту букву."
+      "after": "В слове Нос первая буква Н."
     },
     {
       "id": "german_19",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Hand. Which letter does it start with?"
+      "after": "Hand. Which letter comes first?"
     },
     {
       "id": "german_19",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter H. Choose that letter.",
-      "after": "Hand starts with the letter H. Choose that letter."
+      "after": "Hand starts with H."
     },
     {
       "id": "german_19",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Hand. С какой буквы его пишут?"
+      "after": "Рука. Какая первая буква?"
     },
     {
       "id": "german_19",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "after": "Hand начинается с буквы H. Выбери эту букву."
+      "after": "В слове Рука первая буква Р."
     },
     {
       "id": "german_20",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. Which letter does it start with?",
-      "after": "German word: Herz. Which letter does it start with?"
+      "after": "Heart. Which letter comes first?"
     },
     {
       "id": "german_20",
       "locale": "en",
       "field": "tip",
       "before": "The German word starts with the letter H. Choose that letter.",
-      "after": "Herz starts with the letter H. Choose that letter."
+      "after": "Heart starts with H."
     },
     {
       "id": "german_20",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. С какой буквы его пишут?",
-      "after": "Немецкое слово: Herz. С какой буквы его пишут?"
+      "after": "Сердце. Какая первая буква?"
     },
     {
       "id": "german_20",
       "locale": "ru",
       "field": "tip",
       "before": "Немецкое слово начинается с буквы H. Выбери эту букву.",
-      "after": "Herz начинается с буквы H. Выбери эту букву."
+      "after": "В слове Сердце первая буква С."
     },
     {
       "id": "german_21",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Schmetterling. How many syllables can you hear?"
+      "after": "Butterfly. How many syllables?"
     },
     {
       "id": "german_21",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 3 syllables.",
-      "after": "Say and clap: Schmet. Ter. Ling. That is 3 syllables."
+      "after": "Say and clap: But. Ter. Fly."
     },
     {
       "id": "german_21",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Schmetterling. Сколько слогов ты слышишь?"
+      "after": "Бабочка. Сколько слогов?"
     },
     {
       "id": "german_21",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "after": "Произнеси и хлопай: Schmet. Ter. Ling. Это 3 слога."
+      "after": "Произнеси и хлопай: Ба. Боч. Ка."
     },
     {
       "id": "german_22",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Schildkröte. How many syllables can you hear?"
+      "after": "Turtle. How many syllables?"
     },
     {
       "id": "german_22",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 3 syllables.",
-      "after": "Say and clap: Schild. Krö. Te. That is 3 syllables."
+      "after": "Say and clap: Tur. Tle."
     },
     {
       "id": "german_22",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Schildkröte. Сколько слогов ты слышишь?"
+      "after": "Черепаха. Сколько слогов?"
     },
     {
       "id": "german_22",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "after": "Произнеси и хлопай: Schild. Krö. Te. Это 3 слога."
+      "after": "Произнеси и хлопай: Че. Ре. Па. Ха."
     },
     {
       "id": "german_23",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Batterie. How many syllables can you hear?"
+      "after": "Battery. How many syllables?"
     },
     {
       "id": "german_23",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 3 syllables.",
-      "after": "Say and clap: Bat. Te. Rie. That is 3 syllables."
+      "after": "Say and clap: Bat. Ter. Y."
     },
     {
       "id": "german_23",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Batterie. Сколько слогов ты слышишь?"
+      "after": "Батарейка. Сколько слогов?"
     },
     {
       "id": "german_23",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 3 слога.",
-      "after": "Произнеси и хлопай: Bat. Te. Rie. Это 3 слога."
+      "after": "Произнеси и хлопай: Ба. Та. Рей. Ка."
     },
     {
       "id": "german_24",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Papier. How many syllables can you hear?"
+      "after": "Paper. How many syllables?"
     },
     {
       "id": "german_24",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Pa. Pier. That is 2 syllables."
+      "after": "Say and clap: Pa. Per."
     },
     {
       "id": "german_24",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Papier. Сколько слогов ты слышишь?"
+      "after": "Бумага. Сколько слогов?"
     },
     {
       "id": "german_24",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Pa. Pier. Это 2 слога."
+      "after": "Произнеси и хлопай: Бу. Ма. Га."
     },
     {
       "id": "german_25",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Seife. How many syllables can you hear?"
+      "after": "Soap. How many syllables?"
     },
     {
       "id": "german_25",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Sei. Fe. That is 2 syllables."
+      "after": "Say and clap: Soap."
     },
     {
       "id": "german_25",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Seife. Сколько слогов ты слышишь?"
+      "after": "Мыло. Сколько слогов?"
     },
     {
       "id": "german_25",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Sei. Fe. Это 2 слога."
+      "after": "Произнеси и хлопай: Мы. Ло."
     },
     {
       "id": "german_26",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Auge. How many syllables can you hear?"
+      "after": "Eye. How many syllables?"
     },
     {
       "id": "german_26",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Au. Ge. That is 2 syllables."
+      "after": "Say and clap: Eye."
     },
     {
       "id": "german_26",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Auge. Сколько слогов ты слышишь?"
+      "after": "Глаз. Сколько слогов?"
     },
     {
       "id": "german_26",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Au. Ge. Это 2 слога."
+      "after": "Произнеси и хлопай: Глаз."
     },
     {
       "id": "german_27",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Gehirn. How many syllables can you hear?"
+      "after": "Brain. How many syllables?"
     },
     {
       "id": "german_27",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Ge. Hirn. That is 2 syllables."
+      "after": "Say and clap: Brain."
     },
     {
       "id": "german_27",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Gehirn. Сколько слогов ты слышишь?"
+      "after": "Мозг. Сколько слогов?"
     },
     {
       "id": "german_27",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Ge. Hirn. Это 2 слога."
+      "after": "Произнеси и хлопай: Мозг."
     },
     {
       "id": "german_28",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Magen. How many syllables can you hear?"
+      "after": "Stomach. How many syllables?"
     },
     {
       "id": "german_28",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Ma. Gen. That is 2 syllables."
+      "after": "Say and clap: Stom. Ach."
     },
     {
       "id": "german_28",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Magen. Сколько слогов ты слышишь?"
+      "after": "Желудок. Сколько слогов?"
     },
     {
       "id": "german_28",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Ma. Gen. Это 2 слога."
+      "after": "Произнеси и хлопай: Же. Лу. Док."
     },
     {
       "id": "german_29",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Wolke. How many syllables can you hear?"
+      "after": "Cloud. How many syllables?"
     },
     {
       "id": "german_29",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Wol. Ke. That is 2 syllables."
+      "after": "Say and clap: Cloud."
     },
     {
       "id": "german_29",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Wolke. Сколько слогов ты слышишь?"
+      "after": "Облако. Сколько слогов?"
     },
     {
       "id": "german_29",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Wol. Ke. Это 2 слога."
+      "after": "Произнеси и хлопай: Об. Ла. Ко."
     },
     {
       "id": "german_30",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Regen. How many syllables can you hear?"
+      "after": "Rain. How many syllables?"
     },
     {
       "id": "german_30",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Re. Gen. That is 2 syllables."
+      "after": "Say and clap: Rain."
     },
     {
       "id": "german_30",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Regen. Сколько слогов ты слышишь?"
+      "after": "Дождь. Сколько слогов?"
     },
     {
       "id": "german_30",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Re. Gen. Это 2 слога."
+      "after": "Произнеси и хлопай: Дождь."
     },
     {
       "id": "german_31",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Insel. How many syllables can you hear?"
+      "after": "Island. How many syllables?"
     },
     {
       "id": "german_31",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: In. Sel. That is 2 syllables."
+      "after": "Say and clap: Is. Land."
     },
     {
       "id": "german_31",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Insel. Сколько слогов ты слышишь?"
+      "after": "Остров. Сколько слогов?"
     },
     {
       "id": "german_31",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: In. Sel. Это 2 слога."
+      "after": "Произнеси и хлопай: Ос. Тров."
     },
     {
       "id": "german_32",
       "locale": "en",
       "field": "prompt",
       "before": "Listen to the German word. How many syllables does it have?",
-      "after": "German word: Hammer. How many syllables can you hear?"
+      "after": "Hammer. How many syllables?"
     },
     {
       "id": "german_32",
       "locale": "en",
       "field": "tip",
       "before": "Clap along with the German word. It has 2 syllables.",
-      "after": "Say and clap: Ham. Mer. That is 2 syllables."
+      "after": "Say and clap: Ham. Mer."
     },
     {
       "id": "german_32",
       "locale": "ru",
       "field": "prompt",
       "before": "Послушай немецкое слово. Сколько в нём слогов?",
-      "after": "Немецкое слово: Hammer. Сколько слогов ты слышишь?"
+      "after": "Молоток. Сколько слогов?"
     },
     {
       "id": "german_32",
       "locale": "ru",
       "field": "tip",
       "before": "Произнеси немецкое слово, хлопая по слогам. В нём 2 слога.",
-      "after": "Произнеси и хлопай: Ham. Mer. Это 2 слога."
+      "after": "Произнеси и хлопай: Мо. Ло. Ток."
     },
     {
       "id": "german_33",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Fisch: F. I. S. C. H."
+      "after": "The word is Fish."
     },
     {
       "id": "german_33",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Fisch: F. I. S. C. H."
+      "after": "Это слово Рыба."
     },
     {
       "id": "german_34",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Vogel: V. O. G. E. L."
+      "after": "The word is Bird."
     },
     {
       "id": "german_34",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Vogel: V. O. G. E. L."
+      "after": "Это слово Птица."
     },
     {
       "id": "german_35",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Mond: M. O. N. D."
+      "after": "The word is Moon."
     },
     {
       "id": "german_35",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Mond: M. O. N. D."
+      "after": "Это слово Луна."
     },
     {
       "id": "german_36",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Baum: B. A. U. M."
+      "after": "The word is Tree."
     },
     {
       "id": "german_36",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Baum: B. A. U. M."
+      "after": "Это слово Дерево."
     },
     {
       "id": "german_37",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Zahn: Z. A. H. N."
+      "after": "The word is Tooth."
     },
     {
       "id": "german_37",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Zahn: Z. A. H. N."
+      "after": "Это слово Зуб."
     },
     {
       "id": "german_38",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Fuss: F. U. S. S."
+      "after": "The word is Foot."
     },
     {
       "id": "german_38",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Fuss: F. U. S. S."
+      "after": "Это слово Стопа."
     },
     {
       "id": "german_39",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Ei: E. I."
+      "after": "The word is Egg."
     },
     {
       "id": "german_39",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Ei: E. I."
+      "after": "Это слово Яйцо."
     },
     {
       "id": "german_40",
       "locale": "en",
       "field": "tip",
       "before": "Match the written German word to the picture. Listen to its German reading next.",
-      "after": "Find the letters of Meer: M. E. E. R."
+      "after": "The word is Sea."
     },
     {
       "id": "german_40",
       "locale": "ru",
       "field": "tip",
       "before": "Найди немецкое слово к картинке. Сейчас послушай, как оно читается по-немецки.",
-      "after": "Найди буквы слова Meer: M. E. E. R."
+      "after": "Это слово Море."
     },
     {
       "id": "physics_18",
@@ -1350,14 +1350,14 @@
       "locale": "en",
       "field": "prompt",
       "before": "Where do many trees grow together?",
-      "after": "Where do many trees grow close together?"
+      "after": "Life. Where do many trees grow close together?"
     },
     {
       "id": "biology_25",
       "locale": "ru",
       "field": "prompt",
       "before": "Где много деревьев растёт рядом?",
-      "after": "Где много деревьев растёт близко друг к другу?"
+      "after": "Жизнь. Где много деревьев растёт близко друг к другу?"
     },
     {
       "id": "biology_37",
@@ -1371,28 +1371,4298 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which body part needs protection from very loud sounds?",
-      "after": "Which sense needs protection from very loud sounds?"
+      "after": "Hearing. Which body part needs protection from loud noise?"
     },
     {
       "id": "body_17",
       "locale": "ru",
       "field": "prompt",
       "before": "Что нужно защищать от очень громких звуков?",
-      "after": "Какое чувство нужно защищать от очень громких звуков?"
+      "after": "Слух. Какую часть тела нужно защищать от шума?"
     },
     {
       "id": "body_24",
       "locale": "ru",
       "field": "prompt",
       "before": "Где обрабатываются воспоминания?",
-      "after": "Где обрабатывается много воспоминаний?"
+      "after": "Мысли. Какой орган обрабатывает воспоминания?"
     },
     {
       "id": "geography_33",
       "locale": "ru",
       "field": "prompt",
       "before": "Что течёт, имеет русло и два берега?",
-      "after": "Что длинное, течёт и имеет два берега?"
+      "after": "Открытие. Что длинное, течёт и имеет два берега?"
+    },
+    {
+      "id": "german_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "german_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which German word matches the picture?",
+      "after": "Which word matches the picture?"
+    },
+    {
+      "id": "german_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое немецкое слово подходит к картинке?",
+      "after": "Какое слово подходит к картинке?"
+    },
+    {
+      "id": "physics_01",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was lässt ein Fahrrad rollen?",
+      "after": "Bewegen. Was lässt ein Fahrrad rollen?"
+    },
+    {
+      "id": "physics_01",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What lets a bicycle roll?",
+      "after": "Motion. What lets a bicycle roll?"
+    },
+    {
+      "id": "physics_01",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает велосипеду катиться?",
+      "after": "Движение. Что помогает велосипеду катиться?"
+    },
+    {
+      "id": "physics_02",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit schneidest du Papier?",
+      "after": "Werkeln. Womit schneidest du Papier?"
+    },
+    {
+      "id": "physics_02",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What cuts paper?",
+      "after": "Making. What cuts paper?"
+    },
+    {
+      "id": "physics_02",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем режут бумагу?",
+      "after": "Мастерская. Чем режут бумагу?"
+    },
+    {
+      "id": "physics_03",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit schlägt man einen Nagel ein?",
+      "after": "Werkeln. Womit schlägt man einen Nagel ein?"
+    },
+    {
+      "id": "physics_03",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What drives a nail into wood?",
+      "after": "Build. What drives a nail into wood?"
+    },
+    {
+      "id": "physics_03",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем забивают гвоздь в дерево?",
+      "after": "Мастерить. Чем забивают гвоздь в дерево?"
+    },
+    {
+      "id": "physics_04",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was dreht eine Schraube?",
+      "after": "Werkeln. Was dreht eine Schraube?"
+    },
+    {
+      "id": "physics_04",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What turns a screw?",
+      "after": "Making. What turns a screw?"
+    },
+    {
+      "id": "physics_04",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем поворачивают винт?",
+      "after": "Мастерская. Чем поворачивают винт?"
+    },
+    {
+      "id": "physics_05",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was zieht ein Magnet an: Eisen, Holz oder Papier?",
+      "after": "Verändern. Eisen, Holz, Papier. Was zieht ein Magnet an?"
+    },
+    {
+      "id": "physics_05",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a magnet attract: iron, wood or paper?",
+      "after": "Change. Iron, wood, paper. Which does a magnet attract?"
+    },
+    {
+      "id": "physics_05",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что притягивает магнит: железо, дерево или бумагу?",
+      "after": "Изменение. Железо, дерево, бумага. Что притянет магнит?"
+    },
+    {
+      "id": "physics_06",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was führt einen Weg über einen Fluss?",
+      "after": "Entdecken. Was führt einen Weg über einen Fluss?"
+    },
+    {
+      "id": "physics_06",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What carries a path across a river?",
+      "after": "Explore. What carries a path across a river?"
+    },
+    {
+      "id": "physics_06",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что проводит дорогу через реку?",
+      "after": "Открытие. Что проводит дорогу через реку?"
+    },
+    {
+      "id": "physics_07",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was macht eine dunkle Ecke hell?",
+      "after": "Leuchten. Was macht eine dunkle Ecke hell?"
+    },
+    {
+      "id": "physics_07",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What lights up a dark corner?",
+      "after": "Light. What lights up a dark corner?"
+    },
+    {
+      "id": "physics_07",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что освещает тёмный угол?",
+      "after": "Свет. Что освещает тёмный угол?"
+    },
+    {
+      "id": "physics_08",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was versorgt eine Taschenlampe mit Energie?",
+      "after": "Versorgen. Was versorgt eine Taschenlampe mit Energie?"
+    },
+    {
+      "id": "physics_08",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What supplies energy to a battery-powered torch?",
+      "after": "Power. What supplies energy to a battery-powered torch?"
+    },
+    {
+      "id": "physics_08",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт энергию карманному фонарику?",
+      "after": "Энергия. Что даёт энергию карманному фонарику?"
+    },
+    {
+      "id": "physics_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was schützt beim Radfahren den Kopf?",
+      "after": "Schützen. Was schützt beim Radfahren den Kopf?"
+    },
+    {
+      "id": "physics_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What protects your head when cycling?",
+      "after": "Protection. What protects your head when cycling?"
+    },
+    {
+      "id": "physics_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что защищает голову при езде на велосипеде?",
+      "after": "Защита. Что защищает голову при езде на велосипеде?"
+    },
+    {
+      "id": "physics_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hat Zähne und überträgt Drehbewegungen?",
+      "after": "Übertragen. Was hat Zähne und überträgt Drehbewegungen?"
+    },
+    {
+      "id": "physics_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What has teeth and passes on a turning movement?",
+      "after": "Transfer. What has teeth and passes on a turning movement?"
+    },
+    {
+      "id": "physics_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что имеет зубцы и передаёт вращение?",
+      "after": "Передавать. Что имеет зубцы и передаёт вращение?"
+    },
+    {
+      "id": "physics_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Gerät kippt um einen Drehpunkt?",
+      "after": "Werkeln. Welches Gerät kippt um einen Drehpunkt?"
+    },
+    {
+      "id": "physics_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which device tilts around a pivot?",
+      "after": "Making. Which device tilts around a pivot?"
+    },
+    {
+      "id": "physics_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое устройство качается вокруг опоры?",
+      "after": "Мастерская. Какое устройство качается вокруг опоры?"
+    },
+    {
+      "id": "physics_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was lenkt ein Seil beim Hochziehen um?",
+      "after": "Umlenken. Was lenkt ein Seil beim Hochziehen um?"
+    },
+    {
+      "id": "physics_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What changes a rope's direction when lifting?",
+      "after": "Direction. What changes a rope's direction when lifting?"
+    },
+    {
+      "id": "physics_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что меняет направление верёвки при подъёме?",
+      "after": "Направление. Что меняет направление верёвки при подъёме?"
+    },
+    {
+      "id": "physics_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wodurch kannst du gut hindurchsehen?",
+      "after": "Leuchten. Wodurch kannst du gut hindurchsehen?"
+    },
+    {
+      "id": "physics_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material can you see through clearly?",
+      "after": "Light. Which material can you see through clearly?"
+    },
+    {
+      "id": "physics_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Сквозь какой материал хорошо видно?",
+      "after": "Свет. Сквозь какой материал хорошо видно?"
+    },
+    {
+      "id": "physics_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Baustoff kommt von Bäumen?",
+      "after": "Ausprobieren. Welcher Baustoff kommt von Bäumen?"
+    },
+    {
+      "id": "physics_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which building material comes from trees?",
+      "after": "Experiment. Which building material comes from trees?"
+    },
+    {
+      "id": "physics_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой строительный материал получают из деревьев?",
+      "after": "Опыт. Какой строительный материал получают из деревьев?"
+    },
+    {
+      "id": "physics_15",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material eignet sich für ein weiches Tuch?",
+      "after": "Fühlen. Welches Material eignet sich für ein weiches Tuch?"
+    },
+    {
+      "id": "physics_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material makes a soft cloth?",
+      "after": "Touch. Which material makes a soft cloth?"
+    },
+    {
+      "id": "physics_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал подходит для мягкой ткани?",
+      "after": "Осязание. Какой материал подходит для мягкой ткани?"
+    },
+    {
+      "id": "physics_16",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Worauf kannst du einen Bauplan zeichnen?",
+      "after": "Ausprobieren. Worauf kannst du einen Bauplan zeichnen?"
+    },
+    {
+      "id": "physics_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can you draw a building plan on?",
+      "after": "Experiment. What can you draw a building plan on?"
+    },
+    {
+      "id": "physics_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "На чём можно нарисовать план постройки?",
+      "after": "Опыт. На чём можно нарисовать план постройки?"
+    },
+    {
+      "id": "physics_17",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hilft dir, Norden zu finden?",
+      "after": "Orientieren. Was hilft dir, Norden zu finden?"
+    },
+    {
+      "id": "physics_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps you find north?",
+      "after": "Direction. What helps you find north?"
+    },
+    {
+      "id": "physics_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает найти север?",
+      "after": "Ориентир. Что помогает найти север?"
+    },
+    {
+      "id": "physics_18",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann einen ruhenden Ball anschubsen?",
+      "after": "Ausprobieren. Was kann einen ruhenden Ball anschubsen?"
+    },
+    {
+      "id": "physics_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can push a ball that is still?",
+      "after": "Experiment. What can push a ball that is still?"
+    },
+    {
+      "id": "physics_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может толкнуть неподвижный мяч?",
+      "after": "Опыт. Что может толкнуть неподвижный мяч?"
+    },
+    {
+      "id": "physics_19",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was entsteht, wenn Eis gerade schmilzt?",
+      "after": "Verändern. Was entsteht, wenn Eis gerade schmilzt?"
+    },
+    {
+      "id": "physics_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What forms when ice is melting?",
+      "after": "Change. What forms when ice is melting?"
+    },
+    {
+      "id": "physics_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что образуется, когда лёд тает?",
+      "after": "Изменение. Что образуется, когда лёд тает?"
+    },
+    {
+      "id": "physics_20",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was wirft im Lampenlicht einen deutlichen Schatten: Holz, klares Glas oder klares Wasser?",
+      "after": "Leuchten. Was wirft einen deutlichen Schatten: Holz, klares Glas oder klares Wasser?"
+    },
+    {
+      "id": "physics_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What casts a clear shadow in lamp light: wood, clear glass or clear water?",
+      "after": "Light. What casts a clear shadow: wood, clear glass or clear water?"
+    },
+    {
+      "id": "physics_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт отчётливую тень в свете лампы: дерево, прозрачное стекло или прозрачная вода?",
+      "after": "Свет. Что даёт чёткую тень: дерево, прозрачное стекло или чистая вода?"
+    },
+    {
+      "id": "physics_21",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was schwimmt meist: ein leichtes trockenes Holzstück, ein Eisenklotz oder Sand?",
+      "after": "Verändern. Was schwimmt meist: trockenes leichtes Holz, Eisen oder Sand?"
+    },
+    {
+      "id": "physics_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What usually floats: a light dry piece of wood, an iron block or sand?",
+      "after": "Change. Which usually floats: light dry wood, iron or sand?"
+    },
+    {
+      "id": "physics_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что обычно плавает: лёгкая сухая деревяшка, железный брусок или песок?",
+      "after": "Изменение. Что обычно плавает: лёгкое сухое дерево, железо или песок?"
+    },
+    {
+      "id": "physics_22",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wodurch kann Licht gut hindurchscheinen?",
+      "after": "Leuchten. Wodurch kann Licht gut hindurchscheinen?"
+    },
+    {
+      "id": "physics_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material lets light pass through clearly?",
+      "after": "Light. Which material lets light pass through clearly?"
+    },
+    {
+      "id": "physics_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал хорошо пропускает свет?",
+      "after": "Свет. Какой материал хорошо пропускает свет?"
+    },
+    {
+      "id": "physics_23",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil nimmt Schallwellen wahr?",
+      "after": "Hören. Welcher Körperteil nimmt Schallwellen wahr?"
+    },
+    {
+      "id": "physics_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part detects sound waves?",
+      "after": "Hearing. Which body part detects sound waves?"
+    },
+    {
+      "id": "physics_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая часть тела воспринимает звуковые волны?",
+      "after": "Слух. Какая часть тела воспринимает звуковые волны?"
+    },
+    {
+      "id": "physics_24",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was dämpft Klopfgeräusche auf einem Tisch am besten: ein weiches Tuch, Glas oder Eisen?",
+      "after": "Fühlen. Was dämpft Klopfen besser: weiches Tuch, Glas oder Eisen?"
+    },
+    {
+      "id": "physics_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What best softens tapping sounds on a table: a soft cloth, glass or iron?",
+      "after": "Touch. What cushions tapping better: soft cloth, glass or iron?"
+    },
+    {
+      "id": "physics_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что лучше приглушает стук по столу: мягкая ткань, стекло или железо?",
+      "after": "Осязание. Что лучше приглушит стук: мягкая ткань, стекло или железо?"
+    },
+    {
+      "id": "physics_25",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was erzeugt selbst Licht: Sonne, Mond oder Wolke?",
+      "after": "Leuchten. Was erzeugt selbst Licht: Sonne, Mond oder Wolke?"
+    },
+    {
+      "id": "physics_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which makes its own light: the sun, the moon or a cloud?",
+      "after": "Light. Which makes its own light: the sun, the moon or a cloud?"
+    },
+    {
+      "id": "physics_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что само создаёт свет: Солнце, Луна или облако?",
+      "after": "Свет. Что само создаёт свет: Солнце, Луна или облако?"
+    },
+    {
+      "id": "physics_26",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher dieser Stoffe hat eine feste eigene Form?",
+      "after": "Verändern. Welcher dieser Stoffe hat eine feste eigene Form?"
+    },
+    {
+      "id": "physics_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which of these has its own solid shape?",
+      "after": "Change. Which of these has its own solid shape?"
+    },
+    {
+      "id": "physics_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что из этого имеет собственную твёрдую форму?",
+      "after": "Изменение. Что из этого имеет собственную твёрдую форму?"
+    },
+    {
+      "id": "physics_27",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+      "after": "Verwandeln. Was entsteht unsichtbar, wenn Wasser verdunstet?"
+    },
+    {
+      "id": "physics_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What forms invisibly when water evaporates?",
+      "after": "Changing. What forms invisibly when water evaporates?"
+    },
+    {
+      "id": "physics_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что незаметно образуется, когда вода испаряется?",
+      "after": "Превращение. Что незаметно образуется, когда вода испаряется?"
+    },
+    {
+      "id": "physics_28",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?",
+      "after": "Leuchten. Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?"
+    },
+    {
+      "id": "physics_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What gives off light and warmth that can melt ice outdoors?",
+      "after": "Light. What gives off light and warmth that can melt ice outdoors?"
+    },
+    {
+      "id": "physics_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что излучает свет и тепло, от которых лёд на улице может растаять?",
+      "after": "Свет. Что излучает свет и тепло, от которых лёд на улице может растаять?"
+    },
+    {
+      "id": "physics_29",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was zeigt Straßen und Wege als Zeichnung?",
+      "after": "Orientieren. Was zeigt Straßen und Wege als Zeichnung?"
+    },
+    {
+      "id": "physics_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What shows roads and paths in a drawing?",
+      "after": "Direction. What shows roads and paths in a drawing?"
+    },
+    {
+      "id": "physics_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что показывает дороги и тропинки на рисунке?",
+      "after": "Ориентир. Что показывает дороги и тропинки на рисунке?"
+    },
+    {
+      "id": "physics_30",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit hörst du, ob eine Fahrradklingel klingelt?",
+      "after": "Hören. Womit hörst du, ob eine Fahrradklingel klingelt?"
+    },
+    {
+      "id": "physics_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How do you hear a bicycle bell?",
+      "after": "Hearing. How do you hear a bicycle bell?"
+    },
+    {
+      "id": "physics_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем ты слышишь велосипедный звонок?",
+      "after": "Слух. Чем ты слышишь велосипедный звонок?"
+    },
+    {
+      "id": "physics_31",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material ist für eine stabile Fahrrad-Radachse üblich?",
+      "after": "Bewegen. Welches Material ist für eine stabile Fahrrad-Radachse üblich?"
+    },
+    {
+      "id": "physics_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material is normally used for a strong bicycle wheel axle?",
+      "after": "Motion. Which material is normally used for a strong bicycle wheel axle?"
+    },
+    {
+      "id": "physics_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из какого материала обычно делают прочную ось велосипедного колеса?",
+      "after": "Движение. Из какого материала обычно делают прочную ось велосипедного колеса?"
+    },
+    {
+      "id": "physics_32",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Bauwerk braucht tragfähige Stützen?",
+      "after": "Ausprobieren. Welches Bauwerk braucht tragfähige Stützen?"
+    },
+    {
+      "id": "physics_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which structure needs strong supports?",
+      "after": "Experiment. Which structure needs strong supports?"
+    },
+    {
+      "id": "physics_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какому сооружению нужны прочные опоры?",
+      "after": "Опыт. Какому сооружению нужны прочные опоры?"
+    },
+    {
+      "id": "physics_33",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was nimmt Wasser beim Abtrocknen gut auf: Stoff, Glas oder Eisen?",
+      "after": "Verändern. Was nimmt Wasser beim Abtrocknen gut auf: Stoff, Glas oder Eisen?"
+    },
+    {
+      "id": "physics_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What soaks up water well when drying: fabric, glass or iron?",
+      "after": "Change. What soaks up water well when drying: fabric, glass or iron?"
+    },
+    {
+      "id": "physics_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что хорошо впитывает воду при вытирании: ткань, стекло или железо?",
+      "after": "Изменение. Что хорошо впитывает воду при вытирании: ткань, стекло или железо?"
+    },
+    {
+      "id": "physics_34",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann eine Solarzelle mit Energie versorgen?",
+      "after": "Versorgen. Was kann eine Solarzelle mit Energie versorgen?"
+    },
+    {
+      "id": "physics_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What supplies energy to a solar cell?",
+      "after": "Power. What supplies energy to a solar cell?"
+    },
+    {
+      "id": "physics_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт энергию солнечной батарее?",
+      "after": "Энергия. Что даёт энергию солнечной батарее?"
+    },
+    {
+      "id": "physics_35",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was dreht sich an einem fahrenden Fahrrad?",
+      "after": "Bewegen. Was dreht sich an einem fahrenden Fahrrad?"
+    },
+    {
+      "id": "physics_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What turns on a moving bicycle?",
+      "after": "Motion. What turns on a moving bicycle?"
+    },
+    {
+      "id": "physics_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что вращается у едущего велосипеда?",
+      "after": "Движение. Что вращается у едущего велосипеда?"
+    },
+    {
+      "id": "physics_36",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus besteht eine durchsichtige Fensterscheibe?",
+      "after": "Leuchten. Woraus besteht eine durchsichtige Fensterscheibe?"
+    },
+    {
+      "id": "physics_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is a transparent window pane made of?",
+      "after": "Light. What is a transparent window pane made of?"
+    },
+    {
+      "id": "physics_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего делают прозрачное оконное стекло?",
+      "after": "Свет. Из чего делают прозрачное оконное стекло?"
+    },
+    {
+      "id": "physics_37",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material kannst du mit einer Stoffschere schneiden?",
+      "after": "Werkeln. Welches Material kannst du mit einer Stoffschere schneiden?"
+    },
+    {
+      "id": "physics_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material can fabric scissors cut?",
+      "after": "Making. Which material can fabric scissors cut?"
+    },
+    {
+      "id": "physics_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал можно разрезать ножницами для ткани?",
+      "after": "Мастерская. Какой материал можно разрезать ножницами для ткани?"
+    },
+    {
+      "id": "physics_38",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Teil einer Seilrolle dreht sich?",
+      "after": "Bewegen. Welcher Teil einer Seilrolle dreht sich?"
+    },
+    {
+      "id": "physics_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which part of a pulley turns?",
+      "after": "Motion. Which part of a pulley turns?"
+    },
+    {
+      "id": "physics_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая часть блока вращается?",
+      "after": "Движение. Какая часть блока вращается?"
+    },
+    {
+      "id": "physics_39",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was gehört in das Batteriefach einer Spielzeuglampe?",
+      "after": "Versorgen. Was gehört in das Batteriefach einer Spielzeuglampe?"
+    },
+    {
+      "id": "physics_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What goes in a toy lamp's battery compartment?",
+      "after": "Power. What goes in a toy lamp's battery compartment?"
+    },
+    {
+      "id": "physics_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что кладут в отсек питания игрушечного фонарика?",
+      "after": "Питать. Что кладут в отсек питания игрушечного фонарика?"
+    },
+    {
+      "id": "physics_40",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hat einen Nordpol und einen Südpol?",
+      "after": "Ausprobieren. Was hat einen Nordpol und einen Südpol?"
+    },
+    {
+      "id": "physics_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What has a north pole and a south pole?",
+      "after": "Experiment. What has a north pole and a south pole?"
+    },
+    {
+      "id": "physics_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У чего есть северный и южный полюс?",
+      "after": "Опыт. У чего есть северный и южный полюс?"
+    },
+    {
+      "id": "biology_01",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo kann ein Fisch mit Kiemen atmen?",
+      "after": "Entwickeln. Wo kann ein Fisch mit Kiemen atmen?"
+    },
+    {
+      "id": "biology_01",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where can a fish breathe with gills?",
+      "after": "Life. Where can a fish breathe with gills?"
+    },
+    {
+      "id": "biology_01",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где рыба дышит жабрами?",
+      "after": "Жизнь. Где рыба дышит жабрами?"
+    },
+    {
+      "id": "biology_02",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo brütet ein Amselvogel seine Eier aus?",
+      "after": "Entwickeln. Wo brütet ein Amselvogel seine Eier aus?"
+    },
+    {
+      "id": "biology_02",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where does a blackbird hatch its eggs?",
+      "after": "Life. Where does a blackbird hatch its eggs?"
+    },
+    {
+      "id": "biology_02",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где дрозд высиживает яйца?",
+      "after": "Жизнь. Где дрозд высиживает яйца?"
+    },
+    {
+      "id": "biology_03",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo findet eine Biene Nektar?",
+      "after": "Wachsen. Wo findet eine Biene Nektar?"
+    },
+    {
+      "id": "biology_03",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where does a bee find nectar?",
+      "after": "Growing. Where does a bee find nectar?"
+    },
+    {
+      "id": "biology_03",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где пчела находит нектар?",
+      "after": "Рост. Где пчела находит нектар?"
+    },
+    {
+      "id": "biology_04",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit nimmt ein Baum Wasser aus dem Boden auf?",
+      "after": "Verwandeln. Womit nimmt ein Baum Wasser aus dem Boden auf?"
+    },
+    {
+      "id": "biology_04",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What takes water from the soil into a tree?",
+      "after": "Changing. What takes water from the soil into a tree?"
+    },
+    {
+      "id": "biology_04",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем дерево впитывает воду из земли?",
+      "after": "Превращение. Чем дерево впитывает воду из земли?"
+    },
+    {
+      "id": "biology_05",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was braucht ein Samen zum Keimen?",
+      "after": "Wachsen. Was braucht ein Samen zum Keimen?"
+    },
+    {
+      "id": "biology_05",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a seed need to start growing?",
+      "after": "Growing. What does a seed need to start growing?"
+    },
+    {
+      "id": "biology_05",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что нужно семени для прорастания?",
+      "after": "Рост. Что нужно семени для прорастания?"
+    },
+    {
+      "id": "biology_06",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was liefert einer grünen Pflanze Licht zum Wachsen?",
+      "after": "Leuchten. Was liefert einer grünen Pflanze Licht zum Wachsen?"
+    },
+    {
+      "id": "biology_06",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What gives a green plant light to grow?",
+      "after": "Light. What gives a green plant light to grow?"
+    },
+    {
+      "id": "biology_06",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт зелёному растению свет для роста?",
+      "after": "Свет. Что даёт зелёному растению свет для роста?"
+    },
+    {
+      "id": "biology_07",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Tier entsteht aus einer Raupe?",
+      "after": "Entwickeln. Welches Tier entsteht aus einer Raupe?"
+    },
+    {
+      "id": "biology_07",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal develops from a caterpillar?",
+      "after": "Life. Which animal develops from a caterpillar?"
+    },
+    {
+      "id": "biology_07",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое животное вырастает из гусеницы?",
+      "after": "Жизнь. Какое животное вырастает из гусеницы?"
+    },
+    {
+      "id": "biology_08",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Tier wächst aus einer Kaulquappe heran?",
+      "after": "Entwickeln. Welches Tier wächst aus einer Kaulquappe heran?"
+    },
+    {
+      "id": "biology_08",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal grows from a tadpole?",
+      "after": "Life. Which animal grows from a tadpole?"
+    },
+    {
+      "id": "biology_08",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто вырастает из головастика?",
+      "after": "Жизнь. Кто вырастает из головастика?"
+    },
+    {
+      "id": "biology_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer kann aus einem Hühnerei schlüpfen?",
+      "after": "Entwickeln. Wer kann aus einem Hühnerei schlüpfen?"
+    },
+    {
+      "id": "biology_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can hatch from a hen's egg?",
+      "after": "Life. What can hatch from a hen's egg?"
+    },
+    {
+      "id": "biology_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто может вылупиться из куриного яйца?",
+      "after": "Жизнь. Кто может вылупиться из куриного яйца?"
+    },
+    {
+      "id": "biology_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Tier ist ein Säugetier?",
+      "after": "Entwickeln. Welches Tier ist ein Säugetier?"
+    },
+    {
+      "id": "biology_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal is a mammal?",
+      "after": "Life. Which animal is a mammal?"
+    },
+    {
+      "id": "biology_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто из них млекопитающее?",
+      "after": "Жизнь. Кто из них млекопитающее?"
+    },
+    {
+      "id": "biology_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer hat Federn?",
+      "after": "Entwickeln. Wer hat Federn?"
+    },
+    {
+      "id": "biology_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal has feathers?",
+      "after": "Life. Which animal has feathers?"
+    },
+    {
+      "id": "biology_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У кого есть перья?",
+      "after": "Жизнь. У кого есть перья?"
+    },
+    {
+      "id": "biology_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer trägt einen festen Panzer?",
+      "after": "Entwickeln. Wer trägt einen festen Panzer?"
+    },
+    {
+      "id": "biology_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal has a hard shell?",
+      "after": "Life. Which animal has a hard shell?"
+    },
+    {
+      "id": "biology_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У кого есть твёрдый панцирь?",
+      "after": "Жизнь. У кого есть твёрдый панцирь?"
+    },
+    {
+      "id": "biology_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Tier lockert Erde beim Graben?",
+      "after": "Entwickeln. Welches Tier lockert Erde beim Graben?"
+    },
+    {
+      "id": "biology_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal loosens soil as it burrows?",
+      "after": "Life. Which animal loosens soil as it burrows?"
+    },
+    {
+      "id": "biology_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто рыхлит землю, прокладывая ходы?",
+      "after": "Жизнь. Кто рыхлит землю, прокладывая ходы?"
+    },
+    {
+      "id": "biology_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus kann ein neuer Apfelbaum wachsen?",
+      "after": "Entwickeln. Woraus kann ein neuer Apfelbaum wachsen?"
+    },
+    {
+      "id": "biology_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can grow into a new apple tree?",
+      "after": "Life. What can grow into a new apple tree?"
+    },
+    {
+      "id": "biology_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего может вырасти новая яблоня?",
+      "after": "Жизнь. Из чего может вырасти новая яблоня?"
+    },
+    {
+      "id": "biology_15",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer kann Blüten bestäuben?",
+      "after": "Wachsen. Wer kann Blüten bestäuben?"
+    },
+    {
+      "id": "biology_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal can pollinate flowers?",
+      "after": "Growing. Which animal can pollinate flowers?"
+    },
+    {
+      "id": "biology_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто может опылять цветки?",
+      "after": "Рост. Кто может опылять цветки?"
+    },
+    {
+      "id": "biology_16",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welche grünen Pflanzenteile bilden hier die Baumkrone?",
+      "after": "Wachsen. Welche grünen Pflanzenteile bilden hier die Baumkrone?"
+    },
+    {
+      "id": "biology_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which green plant parts form the tree crown here?",
+      "after": "Growing. Which green plant parts form the tree crown here?"
+    },
+    {
+      "id": "biology_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какие зелёные части растения образуют здесь крону дерева?",
+      "after": "Рост. Какие зелёные части растения образуют здесь крону дерева?"
+    },
+    {
+      "id": "biology_17",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist ein Pilz und keine Pflanze?",
+      "after": "Wachsen. Was ist ein Pilz und keine Pflanze?"
+    },
+    {
+      "id": "biology_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which is a fungus rather than a plant?",
+      "after": "Growing. Which is a fungus rather than a plant?"
+    },
+    {
+      "id": "biology_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что относится к грибам, а не к растениям?",
+      "after": "Рост. Что относится к грибам, а не к растениям?"
+    },
+    {
+      "id": "biology_18",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was braucht eine Katze täglich zum Trinken?",
+      "after": "Trinken. Was braucht eine Katze täglich zum Trinken?"
+    },
+    {
+      "id": "biology_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a cat need to drink every day?",
+      "after": "Drink. What does a cat need to drink every day?"
+    },
+    {
+      "id": "biology_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что кошке нужно пить каждый день?",
+      "after": "Пить. Что кошке нужно пить каждый день?"
+    },
+    {
+      "id": "biology_19",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was frisst eine Amsel zum Beispiel?",
+      "after": "Entwickeln. Was frisst eine Amsel zum Beispiel?"
+    },
+    {
+      "id": "biology_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What might a blackbird eat?",
+      "after": "Life. What might a blackbird eat?"
+    },
+    {
+      "id": "biology_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что, например, ест дрозд?",
+      "after": "Жизнь. Что, например, ест дрозд?"
+    },
+    {
+      "id": "biology_20",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo kann ein Schmetterling Nektar trinken?",
+      "after": "Wachsen. Wo kann ein Schmetterling Nektar trinken?"
+    },
+    {
+      "id": "biology_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where can a butterfly drink nectar?",
+      "after": "Growing. Where can a butterfly drink nectar?"
+    },
+    {
+      "id": "biology_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где бабочка может пить нектар?",
+      "after": "Рост. Где бабочка может пить нектар?"
+    },
+    {
+      "id": "biology_21",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches dieser Tiere lebt im Wasser?",
+      "after": "Entwickeln. Welches dieser Tiere lebt im Wasser?"
+    },
+    {
+      "id": "biology_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which of these animals lives in water?",
+      "after": "Life. Which of these animals lives in water?"
+    },
+    {
+      "id": "biology_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто из этих животных живёт в воде?",
+      "after": "Жизнь. Кто из этих животных живёт в воде?"
+    },
+    {
+      "id": "biology_22",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo legt ein Grasfrosch seine Eier ab?",
+      "after": "Entwickeln. Wo legt ein Grasfrosch seine Eier ab?"
+    },
+    {
+      "id": "biology_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where does a common frog lay its eggs?",
+      "after": "Life. Where does a common frog lay its eggs?"
+    },
+    {
+      "id": "biology_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где травяная лягушка откладывает икру?",
+      "after": "Жизнь. Где травяная лягушка откладывает икру?"
+    },
+    {
+      "id": "biology_23",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was wächst bei einem keimenden Samen zuerst in den Boden?",
+      "after": "Wachsen. Was wächst bei einem keimenden Samen zuerst in den Boden?"
+    },
+    {
+      "id": "biology_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What grows into the soil first when a seed sprouts?",
+      "after": "Growing. What grows into the soil first when a seed sprouts?"
+    },
+    {
+      "id": "biology_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что первым растёт в землю при прорастании семени?",
+      "after": "Рост. Что первым растёт в землю при прорастании семени?"
+    },
+    {
+      "id": "biology_24",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was nehmen Wurzeln auf?",
+      "after": "Wachsen. Was nehmen Wurzeln auf?"
+    },
+    {
+      "id": "biology_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do roots absorb?",
+      "after": "Growing. What do roots absorb?"
+    },
+    {
+      "id": "biology_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что впитывают корни?",
+      "after": "Рост. Что впитывают корни?"
+    },
+    {
+      "id": "biology_25",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo stehen viele Bäume dicht beieinander?",
+      "after": "Entwickeln. Wo stehen viele Bäume dicht beieinander?"
+    },
+    {
+      "id": "biology_26",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?",
+      "after": "Wachsen. Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?"
+    },
+    {
+      "id": "biology_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which parts of the tree crown often turn yellow or red in autumn?",
+      "after": "Growing. Which parts of the tree crown often turn yellow or red in autumn?"
+    },
+    {
+      "id": "biology_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какие части кроны дерева осенью часто становятся жёлтыми или красными?",
+      "after": "Рост. Какие части кроны дерева осенью часто становятся жёлтыми или красными?"
+    },
+    {
+      "id": "biology_27",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer hat einen Schnabel?",
+      "after": "Entwickeln. Wer hat einen Schnabel?"
+    },
+    {
+      "id": "biology_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which animal has a beak?",
+      "after": "Life. Which animal has a beak?"
+    },
+    {
+      "id": "biology_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У кого есть клюв?",
+      "after": "Жизнь. У кого есть клюв?"
+    },
+    {
+      "id": "biology_28",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches dieser Tiere ist ein Insekt?",
+      "after": "Entwickeln. Welches dieser Tiere ist ein Insekt?"
+    },
+    {
+      "id": "biology_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which of these animals is an insect?",
+      "after": "Life. Which of these animals is an insect?"
+    },
+    {
+      "id": "biology_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто из этих животных насекомое?",
+      "after": "Жизнь. Кто из этих животных насекомое?"
+    },
+    {
+      "id": "biology_29",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus schlüpfen junge Schildkröten?",
+      "after": "Entwickeln. Woraus schlüpfen junge Schildkröten?"
+    },
+    {
+      "id": "biology_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do young turtles hatch from?",
+      "after": "Life. What do young turtles hatch from?"
+    },
+    {
+      "id": "biology_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего вылупляются черепашки?",
+      "after": "Жизнь. Из чего вылупляются черепашки?"
+    },
+    {
+      "id": "biology_30",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen?",
+      "after": "Wachsen. Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen?"
+    },
+    {
+      "id": "biology_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can form after flowering and grow into new plants?",
+      "after": "Growing. What can form after flowering and grow into new plants?"
+    },
+    {
+      "id": "biology_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может появиться после цветения и дать новые растения?",
+      "after": "Рост. Что может появиться после цветения и дать новые растения?"
+    },
+    {
+      "id": "biology_31",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit hört eine Katze?",
+      "after": "Hören. Womit hört eine Katze?"
+    },
+    {
+      "id": "biology_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a cat use to hear?",
+      "after": "Hearing. What does a cat use to hear?"
+    },
+    {
+      "id": "biology_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем кошка слышит?",
+      "after": "Слух. Чем кошка слышит?"
+    },
+    {
+      "id": "biology_32",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer ist ein Lebewesen: Maus, Papier oder Glas?",
+      "after": "Entwickeln. Wer ist ein Lebewesen: Maus, Papier oder Glas?"
+    },
+    {
+      "id": "biology_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which is a living thing: a mouse, paper or glass?",
+      "after": "Life. Which is a living thing: a mouse, paper or glass?"
+    },
+    {
+      "id": "biology_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Кто живой: мышь, бумага или стекло?",
+      "after": "Жизнь. Кто живой: мышь, бумага или стекло?"
+    },
+    {
+      "id": "biology_33",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was lässt du beim Beobachten von Vogeleiern in Ruhe?",
+      "after": "Entwickeln. Was lässt du beim Beobachten von Vogeleiern in Ruhe?"
+    },
+    {
+      "id": "biology_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What should you leave undisturbed when watching bird eggs?",
+      "after": "Life. What should you leave undisturbed when watching bird eggs?"
+    },
+    {
+      "id": "biology_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что нельзя тревожить, наблюдая за птичьими яйцами?",
+      "after": "Жизнь. Что нельзя тревожить, наблюдая за птичьими яйцами?"
+    },
+    {
+      "id": "biology_34",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Pflanzenteil verankert eine Blume im Boden?",
+      "after": "Wachsen. Welcher Pflanzenteil verankert eine Blume im Boden?"
+    },
+    {
+      "id": "biology_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which plant part holds a flower in the ground?",
+      "after": "Growing. Which plant part holds a flower in the ground?"
+    },
+    {
+      "id": "biology_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая часть растения удерживает цветок в земле?",
+      "after": "Рост. Какая часть растения удерживает цветок в земле?"
+    },
+    {
+      "id": "biology_35",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Eine Topfpflanze hat trockene Erde. Was kann ihr fehlen?",
+      "after": "Trinken. Eine Topfpflanze hat trockene Erde. Was kann ihr fehlen?"
+    },
+    {
+      "id": "biology_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "A plant's soil is dry. What might it need?",
+      "after": "Drink. A plant's soil is dry. What might it need?"
+    },
+    {
+      "id": "biology_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Земля в горшке сухая. Чего может не хватать растению?",
+      "after": "Пить. Земля в горшке сухая. Чего может не хватать растению?"
+    },
+    {
+      "id": "biology_36",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hilft Bienen im Garten?",
+      "after": "Wachsen. Was hilft Bienen im Garten?"
+    },
+    {
+      "id": "biology_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps bees in a garden?",
+      "after": "Growing. What helps bees in a garden?"
+    },
+    {
+      "id": "biology_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает пчёлам в саду?",
+      "after": "Рост. Что помогает пчёлам в саду?"
+    },
+    {
+      "id": "biology_37",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was können Regenwürmer in die Erde ziehen?",
+      "after": "Entwickeln. Was können Regenwürmer in die Erde ziehen?"
+    },
+    {
+      "id": "biology_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can earthworms pull into the soil?",
+      "after": "Life. What can earthworms pull into the soil?"
+    },
+    {
+      "id": "biology_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что дождевые черви могут затаскивать в землю?",
+      "after": "Жизнь. Что дождевые черви могут затаскивать в землю?"
+    },
+    {
+      "id": "biology_38",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Worin schwimmen Fische eines Teichs?",
+      "after": "Entwickeln. Worin schwimmen Fische eines Teichs?"
+    },
+    {
+      "id": "biology_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do pond fish swim in?",
+      "after": "Life. What do pond fish swim in?"
+    },
+    {
+      "id": "biology_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "В чём плавают прудовые рыбы?",
+      "after": "Жизнь. В чём плавают прудовые рыбы?"
+    },
+    {
+      "id": "biology_39",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann aus einer Eichel wachsen?",
+      "after": "Wachsen. Was kann aus einer Eichel wachsen?"
+    },
+    {
+      "id": "biology_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can grow from an acorn?",
+      "after": "Growing. What can grow from an acorn?"
+    },
+    {
+      "id": "biology_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может вырасти из жёлудя?",
+      "after": "Рост. Что может вырасти из жёлудя?"
+    },
+    {
+      "id": "biology_40",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wer hat als erwachsenes Tier vier Flügel?",
+      "after": "Entwickeln. Wer hat als erwachsenes Tier vier Flügel?"
+    },
+    {
+      "id": "biology_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which adult animal has four wings?",
+      "after": "Life. Which adult animal has four wings?"
+    },
+    {
+      "id": "biology_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У кого во взрослом состоянии четыре крыла?",
+      "after": "Жизнь. У кого во взрослом состоянии четыре крыла?"
+    },
+    {
+      "id": "chemistry_01",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was wird aus Eis, wenn es schmilzt?",
+      "after": "Verändern. Was wird aus Eis, wenn es schmilzt?"
+    },
+    {
+      "id": "chemistry_01",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does ice become when it melts?",
+      "after": "Change. What does ice become when it melts?"
+    },
+    {
+      "id": "chemistry_01",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Во что превращается лёд, когда тает?",
+      "after": "Изменение. Во что превращается лёд, когда тает?"
+    },
+    {
+      "id": "chemistry_02",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann aus Wasser im Gefrierfach werden?",
+      "after": "Verändern. Was kann aus Wasser im Gefrierfach werden?"
+    },
+    {
+      "id": "chemistry_02",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can water become in a freezer?",
+      "after": "Change. What can water become in a freezer?"
+    },
+    {
+      "id": "chemistry_02",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Во что вода может превратиться в морозильнике?",
+      "after": "Изменение. Во что вода может превратиться в морозильнике?"
+    },
+    {
+      "id": "chemistry_03",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist bei Zimmertemperatur flüssig?",
+      "after": "Entdecken. Was ist bei Zimmertemperatur flüssig?"
+    },
+    {
+      "id": "chemistry_03",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which is liquid at room temperature?",
+      "after": "Explore. Which is liquid at room temperature?"
+    },
+    {
+      "id": "chemistry_03",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что жидкое при комнатной температуре?",
+      "after": "Открытие. Что жидкое при комнатной температуре?"
+    },
+    {
+      "id": "chemistry_04",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist bei Zimmertemperatur fest?",
+      "after": "Untersuchen. Was ist bei Zimmertemperatur fest?"
+    },
+    {
+      "id": "chemistry_04",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which is solid at room temperature?",
+      "after": "Materials. Which is solid at room temperature?"
+    },
+    {
+      "id": "chemistry_04",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что твёрдое при комнатной температуре?",
+      "after": "Вещества. Что твёрдое при комнатной температуре?"
+    },
+    {
+      "id": "chemistry_05",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Gefäß hält Trinkwasser zuverlässig?",
+      "after": "Verwandeln. Welches Gefäß hält Trinkwasser zuverlässig?"
+    },
+    {
+      "id": "chemistry_05",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which container reliably holds drinking water?",
+      "after": "Changing. Which container reliably holds drinking water?"
+    },
+    {
+      "id": "chemistry_05",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая ёмкость надёжно удерживает питьевую воду?",
+      "after": "Превращение. Какая ёмкость надёжно удерживает питьевую воду?"
+    },
+    {
+      "id": "chemistry_06",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was löst sich in Wasser: Salz, Sand oder Holz?",
+      "after": "Verwandeln. Was löst sich in Wasser: Salz, Sand oder Holz?"
+    },
+    {
+      "id": "chemistry_06",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What dissolves in water: salt, sand or wood?",
+      "after": "Changing. What dissolves in water: salt, sand or wood?"
+    },
+    {
+      "id": "chemistry_06",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что растворяется в воде: соль, песок или дерево?",
+      "after": "Превращение. Что растворяется в воде: соль, песок или дерево?"
+    },
+    {
+      "id": "chemistry_07",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bleibt als Körnchen sichtbar, wenn es in Wasser liegt?",
+      "after": "Verwandeln. Was bleibt als Körnchen sichtbar, wenn es in Wasser liegt?"
+    },
+    {
+      "id": "chemistry_07",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What stays visible as grains in water?",
+      "after": "Changing. What stays visible as grains in water?"
+    },
+    {
+      "id": "chemistry_07",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что остаётся видимыми крупинками в воде?",
+      "after": "Превращение. Что остаётся видимыми крупинками в воде?"
+    },
+    {
+      "id": "chemistry_08",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bildet mit Wasser oft zwei Schichten?",
+      "after": "Verwandeln. Was bildet mit Wasser oft zwei Schichten?"
+    },
+    {
+      "id": "chemistry_08",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What often forms two layers with water?",
+      "after": "Changing. What often forms two layers with water?"
+    },
+    {
+      "id": "chemistry_08",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что часто образует с водой два слоя?",
+      "after": "Превращение. Что часто образует с водой два слоя?"
+    },
+    {
+      "id": "chemistry_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Gegenstand zieht Eisen aus einer Mischung an?",
+      "after": "Verändern. Welcher Gegenstand zieht Eisen aus einer Mischung an?"
+    },
+    {
+      "id": "chemistry_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which object attracts iron out of a mixture?",
+      "after": "Change. Which object attracts iron out of a mixture?"
+    },
+    {
+      "id": "chemistry_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой предмет притягивает железо из смеси?",
+      "after": "Изменение. Какой предмет притягивает железо из смеси?"
+    },
+    {
+      "id": "chemistry_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+      "after": "Verwandeln. Was entsteht unsichtbar, wenn Wasser verdunstet?"
+    },
+    {
+      "id": "chemistry_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What forms invisibly when water evaporates?",
+      "after": "Changing. What forms invisibly when water evaporates?"
+    },
+    {
+      "id": "chemistry_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что образуется незаметно, когда вода испаряется?",
+      "after": "Превращение. Что образуется незаметно, когда вода испаряется?"
+    },
+    {
+      "id": "chemistry_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bilden kleine Tropfen an einem kalten Fenster?",
+      "after": "Verändern. Was bilden kleine Tropfen an einem kalten Fenster?"
+    },
+    {
+      "id": "chemistry_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What are the little drops on a cold window made of?",
+      "after": "Change. What are the little drops on a cold window made of?"
+    },
+    {
+      "id": "chemistry_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего состоят капельки на холодном окне?",
+      "after": "Изменение. Из чего состоят капельки на холодном окне?"
+    },
+    {
+      "id": "chemistry_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Zustand von Wasser ist fest?",
+      "after": "Verwandeln. Welcher Zustand von Wasser ist fest?"
+    },
+    {
+      "id": "chemistry_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which form of water is solid?",
+      "after": "Changing. Which form of water is solid?"
+    },
+    {
+      "id": "chemistry_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое состояние воды твёрдое?",
+      "after": "Превращение. Какое состояние воды твёрдое?"
+    },
+    {
+      "id": "chemistry_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Zeichen steht für gasförmiges Wasser?",
+      "after": "Verwandeln. Welches Zeichen steht für gasförmiges Wasser?"
+    },
+    {
+      "id": "chemistry_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which symbol stands for water as a gas?",
+      "after": "Changing. Which symbol stands for water as a gas?"
+    },
+    {
+      "id": "chemistry_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой значок обозначает воду в газообразном состоянии?",
+      "after": "Превращение. Какой значок обозначает воду в газообразном состоянии?"
+    },
+    {
+      "id": "chemistry_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Worin löst sich etwas Kochsalz gut?",
+      "after": "Untersuchen. Worin löst sich etwas Kochsalz gut?"
+    },
+    {
+      "id": "chemistry_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What dissolves a little table salt well?",
+      "after": "Materials. What dissolves a little table salt well?"
+    },
+    {
+      "id": "chemistry_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "В чём хорошо растворяется немного поваренной соли?",
+      "after": "Вещества. В чём хорошо растворяется немного поваренной соли?"
+    },
+    {
+      "id": "chemistry_15",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material ist durchsichtig?",
+      "after": "Leuchten. Welches Material ist durchsichtig?"
+    },
+    {
+      "id": "chemistry_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material is transparent?",
+      "after": "Light. Which material is transparent?"
+    },
+    {
+      "id": "chemistry_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал прозрачный?",
+      "after": "Свет. Какой материал прозрачный?"
+    },
+    {
+      "id": "chemistry_16",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material saugt Wasser leicht auf?",
+      "after": "Verwandeln. Welches Material saugt Wasser leicht auf?"
+    },
+    {
+      "id": "chemistry_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material easily soaks up water?",
+      "after": "Changing. Which material easily soaks up water?"
+    },
+    {
+      "id": "chemistry_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал легко впитывает воду?",
+      "after": "Превращение. Какой материал легко впитывает воду?"
+    },
+    {
+      "id": "chemistry_17",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was lässt sich weich zusammenfalten?",
+      "after": "Fühlen. Was lässt sich weich zusammenfalten?"
+    },
+    {
+      "id": "chemistry_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can be softly folded up?",
+      "after": "Touch. What can be softly folded up?"
+    },
+    {
+      "id": "chemistry_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что можно мягко сложить?",
+      "after": "Осязание. Что можно мягко сложить?"
+    },
+    {
+      "id": "chemistry_18",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann Wärme gut weiterleiten?",
+      "after": "Erwärmen. Was kann Wärme gut weiterleiten?"
+    },
+    {
+      "id": "chemistry_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material can conduct heat well?",
+      "after": "Warming. Which material can conduct heat well?"
+    },
+    {
+      "id": "chemistry_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал хорошо проводит тепло?",
+      "after": "Нагрев. Какой материал хорошо проводит тепло?"
+    },
+    {
+      "id": "chemistry_19",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material zeigt oft Jahresringe?",
+      "after": "Untersuchen. Welches Material zeigt oft Jahresringe?"
+    },
+    {
+      "id": "chemistry_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material often shows growth rings?",
+      "after": "Materials. Which material often shows growth rings?"
+    },
+    {
+      "id": "chemistry_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "На каком материале часто видны годичные кольца?",
+      "after": "Вещества. На каком материале часто видны годичные кольца?"
+    },
+    {
+      "id": "chemistry_20",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?",
+      "after": "Reinigen. Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?"
+    },
+    {
+      "id": "chemistry_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps grease mix with water so it can be washed away?",
+      "after": "Cleaning. What helps grease mix with water so it can be washed away?"
+    },
+    {
+      "id": "chemistry_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает смешать жир с водой и смыть его?",
+      "after": "Чистота. Что помогает смешать жир с водой и смыть его?"
+    },
+    {
+      "id": "chemistry_21",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Stoff wird oft zum Kochen verwendet und bleibt flüssig?",
+      "after": "Entdecken. Welcher Stoff wird oft zum Kochen verwendet und bleibt flüssig?"
+    },
+    {
+      "id": "chemistry_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which substance is often used in cooking and stays liquid?",
+      "after": "Explore. Which substance is often used in cooking and stays liquid?"
+    },
+    {
+      "id": "chemistry_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое вещество часто используют при готовке и оно остаётся жидким?",
+      "after": "Открытие. Какое вещество часто используют при готовке и оно остаётся жидким?"
+    },
+    {
+      "id": "chemistry_22",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was besteht hier aus vielen kleinen Körnern?",
+      "after": "Untersuchen. Was besteht hier aus vielen kleinen Körnern?"
+    },
+    {
+      "id": "chemistry_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which of these consists of many little grains?",
+      "after": "Materials. Which of these consists of many little grains?"
+    },
+    {
+      "id": "chemistry_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что здесь состоит из множества маленьких крупинок?",
+      "after": "Вещества. Что здесь состоит из множества маленьких крупинок?"
+    },
+    {
+      "id": "chemistry_23",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was liefert Wärme, die draußen Eis schmelzen lässt?",
+      "after": "Verändern. Was liefert Wärme, die draußen Eis schmelzen lässt?"
+    },
+    {
+      "id": "chemistry_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What provides warmth that can melt ice outdoors?",
+      "after": "Change. What provides warmth that can melt ice outdoors?"
+    },
+    {
+      "id": "chemistry_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт тепло и может растопить лёд на улице?",
+      "after": "Изменение. Что даёт тепло и может растопить лёд на улице?"
+    },
+    {
+      "id": "chemistry_24",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo sammeln sich viele winzige Wassertropfen am Himmel?",
+      "after": "Beobachten. Wo sammeln sich viele winzige Wassertropfen am Himmel?"
+    },
+    {
+      "id": "chemistry_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do many tiny water drops gather in the sky?",
+      "after": "Observe. Where do many tiny water drops gather in the sky?"
+    },
+    {
+      "id": "chemistry_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где в небе собирается много крошечных капель воды?",
+      "after": "Наблюдение. Где в небе собирается много крошечных капель воды?"
+    },
+    {
+      "id": "chemistry_25",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus bestehen Regentropfen hauptsächlich?",
+      "after": "Beobachten. Woraus bestehen Regentropfen hauptsächlich?"
+    },
+    {
+      "id": "chemistry_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What are raindrops mainly made of?",
+      "after": "Observe. What are raindrops mainly made of?"
+    },
+    {
+      "id": "chemistry_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего в основном состоят капли дождя?",
+      "after": "Наблюдение. Из чего в основном состоят капли дождя?"
+    },
+    {
+      "id": "chemistry_26",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus bestehen Schneeflocken?",
+      "after": "Beobachten. Woraus bestehen Schneeflocken?"
+    },
+    {
+      "id": "chemistry_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What are snowflakes made of?",
+      "after": "Observe. What are snowflakes made of?"
+    },
+    {
+      "id": "chemistry_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего состоят снежинки?",
+      "after": "Наблюдение. Из чего состоят снежинки?"
+    },
+    {
+      "id": "chemistry_27",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was passt sich der Form eines Glases an?",
+      "after": "Untersuchen. Was passt sich der Form eines Glases an?"
+    },
+    {
+      "id": "chemistry_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What takes the shape of a glass?",
+      "after": "Materials. What takes the shape of a glass?"
+    },
+    {
+      "id": "chemistry_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что принимает форму стакана?",
+      "after": "Вещества. Что принимает форму стакана?"
+    },
+    {
+      "id": "chemistry_28",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was behält auf dem Teller zunächst seine eigene Form?",
+      "after": "Verändern. Was behält auf dem Teller zunächst seine eigene Form?"
+    },
+    {
+      "id": "chemistry_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What keeps its own shape on a plate before warming up?",
+      "after": "Change. What keeps its own shape on a plate before warming up?"
+    },
+    {
+      "id": "chemistry_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что сначала сохраняет свою форму на тарелке, пока не нагрелось?",
+      "after": "Изменение. Что сначала сохраняет свою форму на тарелке, пока не нагрелось?"
+    },
+    {
+      "id": "chemistry_29",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material kann splittern, wenn es herunterfällt?",
+      "after": "Untersuchen. Welches Material kann splittern, wenn es herunterfällt?"
+    },
+    {
+      "id": "chemistry_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material can shatter if dropped?",
+      "after": "Materials. Which material can shatter if dropped?"
+    },
+    {
+      "id": "chemistry_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал может разбиться на осколки при падении?",
+      "after": "Вещества. Какой материал может разбиться на осколки при падении?"
+    },
+    {
+      "id": "chemistry_30",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Mittel ist zum Händewaschen mit Wasser gedacht?",
+      "after": "Reinigen. Welches Mittel ist zum Händewaschen mit Wasser gedacht?"
+    },
+    {
+      "id": "chemistry_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which product is intended for washing hands with water?",
+      "after": "Cleaning. Which product is intended for washing hands with water?"
+    },
+    {
+      "id": "chemistry_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое средство предназначено для мытья рук с водой?",
+      "after": "Чистота. Какое средство предназначено для мытья рук с водой?"
+    },
+    {
+      "id": "chemistry_31",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bleibt zurück, wenn Salzwasser ganz verdunstet?",
+      "after": "Verwandeln. Was bleibt zurück, wenn Salzwasser ganz verdunstet?"
+    },
+    {
+      "id": "chemistry_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is left when salt water completely evaporates?",
+      "after": "Changing. What is left when salt water completely evaporates?"
+    },
+    {
+      "id": "chemistry_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что остаётся, когда солёная вода полностью испаряется?",
+      "after": "Превращение. Что остаётся, когда солёная вода полностью испаряется?"
+    },
+    {
+      "id": "chemistry_32",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Gegenstand zieht Eisenstücke aus Sand an?",
+      "after": "Verändern. Welcher Gegenstand zieht Eisenstücke aus Sand an?"
+    },
+    {
+      "id": "chemistry_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which object attracts iron pieces out of sand?",
+      "after": "Change. Which object attracts iron pieces out of sand?"
+    },
+    {
+      "id": "chemistry_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой предмет притягивает кусочки железа из песка?",
+      "after": "Изменение. Какой предмет притягивает кусочки железа из песка?"
+    },
+    {
+      "id": "chemistry_33",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Stoff fließt aus einer umgekippten offenen Flasche?",
+      "after": "Untersuchen. Welcher Stoff fließt aus einer umgekippten offenen Flasche?"
+    },
+    {
+      "id": "chemistry_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which substance flows from a tipped open bottle?",
+      "after": "Materials. Which substance flows from a tipped open bottle?"
+    },
+    {
+      "id": "chemistry_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое вещество вытекает из наклонённой открытой бутылки?",
+      "after": "Вещества. Какое вещество вытекает из наклонённой открытой бутылки?"
+    },
+    {
+      "id": "chemistry_34",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was wird häufig aus Pflanzenfasern gemacht?",
+      "after": "Wachsen. Was wird häufig aus Pflanzenfasern gemacht?"
+    },
+    {
+      "id": "chemistry_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is often made from plant fibres?",
+      "after": "Growing. What is often made from plant fibres?"
+    },
+    {
+      "id": "chemistry_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что часто делают из растительных волокон?",
+      "after": "Рост. Что часто делают из растительных волокон?"
+    },
+    {
+      "id": "chemistry_35",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist dieselbe Substanz wie Wasser, nur fest?",
+      "after": "Verwandeln. Was ist dieselbe Substanz wie Wasser, nur fest?"
+    },
+    {
+      "id": "chemistry_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is the same substance as water, but solid?",
+      "after": "Changing. What is the same substance as water, but solid?"
+    },
+    {
+      "id": "chemistry_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что является тем же веществом, что вода, только твёрдым?",
+      "after": "Превращение. Что является тем же веществом, что вода, только твёрдым?"
+    },
+    {
+      "id": "chemistry_36",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Woraus wird gewöhnliches Glas hauptsächlich hergestellt?",
+      "after": "Untersuchen. Woraus wird gewöhnliches Glas hauptsächlich hergestellt?"
+    },
+    {
+      "id": "chemistry_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is ordinary glass mainly made from?",
+      "after": "Materials. What is ordinary glass mainly made from?"
+    },
+    {
+      "id": "chemistry_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Из чего в основном делают обычное стекло?",
+      "after": "Вещества. Из чего в основном делают обычное стекло?"
+    },
+    {
+      "id": "chemistry_37",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Material besteht aus gewebten Fäden?",
+      "after": "Fühlen. Welches Material besteht aus gewebten Fäden?"
+    },
+    {
+      "id": "chemistry_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which material can be made from woven threads?",
+      "after": "Touch. Which material can be made from woven threads?"
+    },
+    {
+      "id": "chemistry_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой материал можно сделать из переплетённых нитей?",
+      "after": "Осязание. Какой материал можно сделать из переплетённых нитей?"
+    },
+    {
+      "id": "chemistry_38",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit spülst du Seife von den Händen ab?",
+      "after": "Reinigen. Womit spülst du Seife von den Händen ab?"
+    },
+    {
+      "id": "chemistry_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What rinses soap off your hands?",
+      "after": "Cleaning. What rinses soap off your hands?"
+    },
+    {
+      "id": "chemistry_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем смывают мыло с рук?",
+      "after": "Чистота. Чем смывают мыло с рук?"
+    },
+    {
+      "id": "chemistry_39",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bleibt in Wasser bei Zimmertemperatur fest: Glas, Eis oder Salz?",
+      "after": "Verändern. Was bleibt in Wasser bei Zimmertemperatur fest: Glas, Eis oder Salz?"
+    },
+    {
+      "id": "chemistry_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What stays solid in water at room temperature: glass, ice or salt?",
+      "after": "Change. What stays solid in water at room temperature: glass, ice or salt?"
+    },
+    {
+      "id": "chemistry_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что остаётся твёрдым в воде при комнатной температуре: стекло, лёд или соль?",
+      "after": "Изменение. Что остаётся твёрдым в воде при комнатной температуре: стекло, лёд или соль?"
+    },
+    {
+      "id": "chemistry_40",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?",
+      "after": "Verändern. Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?"
+    },
+    {
+      "id": "chemistry_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does an ice cube become when it melts in a glass?",
+      "after": "Change. What does an ice cube become when it melts in a glass?"
+    },
+    {
+      "id": "chemistry_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Во что превращается кубик льда, когда тает в стакане?",
+      "after": "Изменение. Во что превращается кубик льда, когда тает в стакане?"
+    },
+    {
+      "id": "body_01",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit nimmst du Licht und Farben wahr?",
+      "after": "Sehen. Womit sehen Menschen?"
+    },
+    {
+      "id": "body_01",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part detects light and colours?",
+      "after": "Seeing. What do people use to see?"
+    },
+    {
+      "id": "body_01",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем воспринимают свет и цвета?",
+      "after": "Зрение. Чем видит человек?"
+    },
+    {
+      "id": "body_02",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil nimmt Schall auf?",
+      "after": "Hören. Womit hört der Mensch?"
+    },
+    {
+      "id": "body_02",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part detects sounds?",
+      "after": "Hearing. What do people use to hear?"
+    },
+    {
+      "id": "body_02",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая часть тела воспринимает звуки?",
+      "after": "Слух. Чем слышит человек?"
+    },
+    {
+      "id": "body_03",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit riechen Menschen?",
+      "after": "Riechen. Womit riechen Menschen?"
+    },
+    {
+      "id": "body_03",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do people use to smell?",
+      "after": "Smell. What do people use to smell?"
+    },
+    {
+      "id": "body_03",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем люди ощущают запахи?",
+      "after": "Запах. Чем человек чувствует запах?"
+    },
+    {
+      "id": "body_04",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit kannst du süß und sauer schmecken?",
+      "after": "Schmecken. Womit schmeckst du süß und sauer?"
+    },
+    {
+      "id": "body_04",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps you taste sweet and sour?",
+      "after": "Taste. What detects sweet and sour tastes?"
+    },
+    {
+      "id": "body_04",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает различать сладкий и кислый вкус?",
+      "after": "Вкус. Чем чувствуешь сладкий и кислый вкус?"
+    },
+    {
+      "id": "body_05",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit kannst du fühlen, ob ein Tuch weich ist?",
+      "after": "Fühlen. Womit ertastest du ein weiches Tuch?"
+    },
+    {
+      "id": "body_05",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can feel whether a cloth is soft?",
+      "after": "Touch. What do you use to feel a soft cloth?"
+    },
+    {
+      "id": "body_05",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем можно почувствовать, мягкая ли ткань?",
+      "after": "Осязание. Чем ощупываешь мягкую ткань?"
+    },
+    {
+      "id": "body_06",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ pumpt Blut durch den Körper?",
+      "after": "Antreiben. Welches Organ pumpt Blut?"
+    },
+    {
+      "id": "body_06",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ pumps blood around the body?",
+      "after": "Pumping. Which organ pumps blood?"
+    },
+    {
+      "id": "body_06",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган перекачивает кровь по телу?",
+      "after": "Движение. Какой орган качает кровь?"
+    },
+    {
+      "id": "body_07",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welche Organe nehmen beim Atmen Luft auf?",
+      "after": "Atmen. Welche Organe nehmen Atemluft auf?"
+    },
+    {
+      "id": "body_07",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organs take in air when you breathe?",
+      "after": "Breathing. Which organs take in air?"
+    },
+    {
+      "id": "body_07",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какие органы принимают воздух при дыхании?",
+      "after": "Дыхание. Какие органы принимают воздух при вдохе?"
+    },
+    {
+      "id": "body_08",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ verarbeitet Sinneseindrücke?",
+      "after": "Denken. Welches Organ verarbeitet Sinneseindrücke?"
+    },
+    {
+      "id": "body_08",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ processes information from your senses?",
+      "after": "Thinking. Which organ processes what we sense?"
+    },
+    {
+      "id": "body_08",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган обрабатывает сигналы органов чувств?",
+      "after": "Мысли. Какой орган обрабатывает ощущения?"
+    },
+    {
+      "id": "body_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bildet das feste Gerüst im Körper?",
+      "after": "Stützen. Was bildet das feste Körpergerüst?"
+    },
+    {
+      "id": "body_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What forms the body's hard framework?",
+      "after": "Support. What forms the body's hard frame?"
+    },
+    {
+      "id": "body_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что образует твёрдую опору тела?",
+      "after": "Опора. Что образует твёрдую опору тела?"
+    },
+    {
+      "id": "body_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit zerkleinerst du Essen im Mund?",
+      "after": "Zerkleinern. Womit zerkleinerst du Essen?"
+    },
+    {
+      "id": "body_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What breaks food into smaller pieces in your mouth?",
+      "after": "Biting. What breaks food into small pieces?"
+    },
+    {
+      "id": "body_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем измельчают пищу во рту?",
+      "after": "Измельчение. Чем измельчаешь пищу?"
+    },
+    {
+      "id": "body_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wohin gelangt Essen nach der Speiseröhre?",
+      "after": "Verdauen. Wohin kommt Essen nach der Speiseröhre?"
+    },
+    {
+      "id": "body_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where does food go after the food pipe?",
+      "after": "Digestion. Where does food go after the food pipe?"
+    },
+    {
+      "id": "body_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Куда попадает пища после пищевода?",
+      "after": "Пищеварение. Куда еда попадает после пищевода?"
+    },
+    {
+      "id": "body_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was hilft, die Hände sauber zu waschen?",
+      "after": "Reinigen. Was hilft beim Händewaschen?"
+    },
+    {
+      "id": "body_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps wash your hands clean?",
+      "after": "Cleaning. What helps wash your hands?"
+    },
+    {
+      "id": "body_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает хорошо вымыть руки?",
+      "after": "Чистота. Что помогает мыть руки?"
+    },
+    {
+      "id": "body_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was eignet sich als Durstlöscher?",
+      "after": "Trinken. Was eignet sich als Durstlöscher?"
+    },
+    {
+      "id": "body_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is a good drink when you are thirsty?",
+      "after": "Drink. What is a good drink when thirsty?"
+    },
+    {
+      "id": "body_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что хорошо утоляет жажду?",
+      "after": "Пить. Чем лучше утолить жажду?"
+    },
+    {
+      "id": "body_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Bild steht hier für die Nacht und die Schlafenszeit?",
+      "after": "Ruhen. Welches Bild steht für die Nacht?"
+    },
+    {
+      "id": "body_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which picture here stands for nighttime and bedtime?",
+      "after": "Rest. Which picture stands for night?"
+    },
+    {
+      "id": "body_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая картинка здесь обозначает ночь и время сна?",
+      "after": "Отдых. Какая картинка означает ночь?"
+    },
+    {
+      "id": "body_15",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil trägt oft einen Schuh?",
+      "after": "Tragen. Welcher Körperteil steckt im Schuh?"
+    },
+    {
+      "id": "body_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part often wears a shoe?",
+      "after": "Support. Which body part goes in a shoe?"
+    },
+    {
+      "id": "body_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "На какую часть тела обычно надевают обувь?",
+      "after": "Опора. Какую часть тела обувают?"
+    },
+    {
+      "id": "body_16",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was schützt den Kopf beim Fahrradfahren?",
+      "after": "Schützen. Was schützt beim Radfahren den Kopf?"
+    },
+    {
+      "id": "body_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What protects your head when cycling?",
+      "after": "Protection. What protects your head when cycling?"
+    },
+    {
+      "id": "body_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что защищает голову на велосипеде?",
+      "after": "Защита. Что защищает голову на велосипеде?"
+    },
+    {
+      "id": "body_17",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Sinn braucht Schutz vor sehr lauten Tönen?",
+      "after": "Hören. Welcher Körperteil braucht Schutz vor Lärm?"
+    },
+    {
+      "id": "body_18",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welchen Körperteil schützen Augenlider?",
+      "after": "Sehen. Was schützen die Augenlider?"
+    },
+    {
+      "id": "body_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part do eyelids protect?",
+      "after": "Seeing. What do eyelids protect?"
+    },
+    {
+      "id": "body_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что защищают веки?",
+      "after": "Зрение. Что защищают веки?"
+    },
+    {
+      "id": "body_19",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil hilft, eingeatmete Luft zu filtern?",
+      "after": "Entdecken. Was hilft, Atemluft zu filtern?"
+    },
+    {
+      "id": "body_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part helps filter the air you breathe in?",
+      "after": "Explore. What helps filter the air you breathe?"
+    },
+    {
+      "id": "body_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает очищать вдыхаемый воздух?",
+      "after": "Открытие. Что помогает очищать вдыхаемый воздух?"
+    },
+    {
+      "id": "body_20",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was fällt bei vielen Kindern aus und wächst neu nach?",
+      "after": "Zerkleinern. Was fällt aus und wächst bei Kindern neu?"
+    },
+    {
+      "id": "body_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do many children lose and replace as they grow?",
+      "after": "Biting. What falls out and regrows in children?"
+    },
+    {
+      "id": "body_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что у многих детей выпадает и заменяется новым?",
+      "after": "Измельчение. Что выпадает и вырастает заново у детей?"
+    },
+    {
+      "id": "body_21",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil hat normalerweise fünf Finger?",
+      "after": "Greifen. Welcher Körperteil hat normalerweise fünf Finger?"
+    },
+    {
+      "id": "body_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part usually has five fingers?",
+      "after": "Grasp. Which body part usually has five fingers?"
+    },
+    {
+      "id": "body_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У какой части тела обычно пять пальцев?",
+      "after": "Брать. У какой части тела обычно пять пальцев?"
+    },
+    {
+      "id": "body_22",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was schlägt meist schneller, wenn du dich anstrengst?",
+      "after": "Antreiben. Was schlägt beim Rennen meist schneller?"
+    },
+    {
+      "id": "body_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What usually beats faster when you exercise?",
+      "after": "Pumping. What usually beats faster when running?"
+    },
+    {
+      "id": "body_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что обычно бьётся быстрее при физической нагрузке?",
+      "after": "Движение. Что при беге обычно бьётся быстрее?"
+    },
+    {
+      "id": "body_23",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wohin strömt Luft beim Einatmen?",
+      "after": "Atmen. Wohin strömt Luft beim Einatmen?"
+    },
+    {
+      "id": "body_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where does air go when you breathe in?",
+      "after": "Breathing. Where does air go when breathing in?"
+    },
+    {
+      "id": "body_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Куда поступает воздух при вдохе?",
+      "after": "Дыхание. Куда поступает воздух при вдохе?"
+    },
+    {
+      "id": "body_24",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo werden viele Erinnerungen verarbeitet?",
+      "after": "Denken. Welches Organ verarbeitet Erinnerungen?"
+    },
+    {
+      "id": "body_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where are many memories processed?",
+      "after": "Thinking. Which organ processes memories?"
+    },
+    {
+      "id": "body_25",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was schützt das Gehirn als Schädel?",
+      "after": "Stützen. Was bildet den schützenden Schädel?"
+    },
+    {
+      "id": "body_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What protects the brain as the skull?",
+      "after": "Support. What makes the protective skull?"
+    },
+    {
+      "id": "body_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что образует череп и защищает мозг?",
+      "after": "Опора. Из чего состоит защитный череп?"
+    },
+    {
+      "id": "body_26",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ mischt und verdaut Nahrung weiter?",
+      "after": "Verdauen. Welches Organ mischt Nahrung weiter?"
+    },
+    {
+      "id": "body_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ mixes food and continues digestion?",
+      "after": "Digestion. Which organ keeps mixing food?"
+    },
+    {
+      "id": "body_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган перемешивает пищу и продолжает пищеварение?",
+      "after": "Пищеварение. Какой орган продолжает перемешивать пищу?"
+    },
+    {
+      "id": "body_27",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Körperteil nimmt beim Essen Duftstoffe wahr?",
+      "after": "Riechen. Womit riechst du das Essen?"
+    },
+    {
+      "id": "body_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which part of the body senses smells while you eat?",
+      "after": "Smell. What do you use to smell food?"
+    },
+    {
+      "id": "body_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая часть тела чувствует запахи во время еды?",
+      "after": "Запах. Чем чувствуешь запах еды?"
+    },
+    {
+      "id": "body_28",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was nimmst du zum Händewaschen vor dem Essen?",
+      "after": "Reinigen. Was brauchst du beim Händewaschen?"
+    },
+    {
+      "id": "body_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do you use to wash your hands before eating?",
+      "after": "Cleaning. What do you need when washing hands?"
+    },
+    {
+      "id": "body_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем моют руки перед едой?",
+      "after": "Чистота. Что нужно для мытья рук?"
+    },
+    {
+      "id": "body_29",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was davon ist ein Lebensmittel?",
+      "after": "Entdecken. Was davon ist ein Lebensmittel?"
+    },
+    {
+      "id": "body_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which of these is food?",
+      "after": "Explore. Which of these is food?"
+    },
+    {
+      "id": "body_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что из этого является едой?",
+      "after": "Открытие. Что из этого еда?"
+    },
+    {
+      "id": "body_30",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was befindet sich im Fuß und gibt Halt?",
+      "after": "Stützen. Was gibt dem Fuß innen Halt?"
+    },
+    {
+      "id": "body_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is inside a foot and gives it support?",
+      "after": "Support. What supports the foot from inside?"
+    },
+    {
+      "id": "body_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что находится внутри стопы и даёт ей опору?",
+      "after": "Опора. Что поддерживает стопу изнутри?"
+    },
+    {
+      "id": "body_31",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ verarbeitet die Signale der Ohren, damit du Geräusche erkennst?",
+      "after": "Denken. Welches Organ erkennt gehörte Geräusche?"
+    },
+    {
+      "id": "body_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ processes signals from your ears so you recognize sounds?",
+      "after": "Thinking. Which organ recognises sounds you hear?"
+    },
+    {
+      "id": "body_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган обрабатывает сигналы от ушей, чтобы ты узнавал звуки?",
+      "after": "Мысли. Какой орган узнаёт услышанные звуки?"
+    },
+    {
+      "id": "body_32",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wohin senden die Augen ihre Signale?",
+      "after": "Denken. Welches Organ verarbeitet Signale der Augen?"
+    },
+    {
+      "id": "body_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do eyes send their signals?",
+      "after": "Think. Which organ processes signals from the eyes?"
+    },
+    {
+      "id": "body_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Куда глаза посылают сигналы?",
+      "after": "Думать. Какой орган обрабатывает сигналы глаз?"
+    },
+    {
+      "id": "body_33",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ bringt Sauerstoff aus der Luft ins Blut?",
+      "after": "Atmen. Welches Organ bringt Sauerstoff ins Blut?"
+    },
+    {
+      "id": "body_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ brings oxygen from air into the blood?",
+      "after": "Breathe. Which organ transfers oxygen into blood?"
+    },
+    {
+      "id": "body_33",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган передаёт кислород из воздуха в кровь?",
+      "after": "Дышать. Какой орган передаёт кислород в кровь?"
+    },
+    {
+      "id": "body_34",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Organ ist ein kräftiger Muskel in der Brust?",
+      "after": "Antreiben. Welches Organ pumpt als Muskel in der Brust?"
+    },
+    {
+      "id": "body_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which organ is a strong muscle in the chest?",
+      "after": "Pumping. Which muscular organ pumps inside your chest?"
+    },
+    {
+      "id": "body_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой орган — сильная мышца в груди?",
+      "after": "Движение. Какой мышечный орган качает кровь в груди?"
+    },
+    {
+      "id": "body_35",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was fühlt sich meist weich und biegsam an?",
+      "after": "Fühlen. Was ist meist weich und biegsam?"
+    },
+    {
+      "id": "body_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What usually feels soft and bendy?",
+      "after": "Touch. Which is usually soft and flexible?"
+    },
+    {
+      "id": "body_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что обычно мягкое на ощупь и легко сгибается?",
+      "after": "Осязание. Что обычно мягкое и гибкое?"
+    },
+    {
+      "id": "body_36",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welchen Körperteil reinigst du mit einer Zahnbürste?",
+      "after": "Pflegen. Was reinigst du mit einer Zahnbürste?"
+    },
+    {
+      "id": "body_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which body part do you clean with a toothbrush?",
+      "after": "Care. What do you clean with a toothbrush?"
+    },
+    {
+      "id": "body_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что чистят зубной щёткой?",
+      "after": "Уход. Что чистишь зубной щёткой?"
+    },
+    {
+      "id": "body_37",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wodurch kannst du beim ruhigen Atmen Luft einziehen?",
+      "after": "Entdecken. Wodurch ziehst du ruhig Atemluft ein?"
+    },
+    {
+      "id": "body_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can you breathe through when resting?",
+      "after": "Explore. Through what can you breathe in quietly?"
+    },
+    {
+      "id": "body_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Через что можно вдыхать воздух в покое?",
+      "after": "Открытие. Через что спокойно вдыхаешь воздух?"
+    },
+    {
+      "id": "body_38",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit hörst du die Musik in diesem Spiel?",
+      "after": "Hören. Womit hörst du Musik?"
+    },
+    {
+      "id": "body_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What helps you hear this game's music?",
+      "after": "Hearing. What do you use to hear music?"
+    },
+    {
+      "id": "body_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает слышать музыку в этой игре?",
+      "after": "Слух. Чем слышишь музыку?"
+    },
+    {
+      "id": "body_39",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was braucht der Körper zum Trinken?",
+      "after": "Trinken. Was braucht der Körper zum Trinken?"
+    },
+    {
+      "id": "body_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does the body need to drink?",
+      "after": "Drink. What does the body need to drink?"
+    },
+    {
+      "id": "body_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что нужно организму для питья?",
+      "after": "Пить. Что нужно организму для питья?"
+    },
+    {
+      "id": "body_40",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Womit kannst du einen weichen Ball vorsichtig greifen?",
+      "after": "Fühlen. Womit greifst du vorsichtig einen Ball?"
+    },
+    {
+      "id": "body_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can gently hold a soft ball?",
+      "after": "Touch. What gently grasps a ball?"
+    },
+    {
+      "id": "body_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чем можно осторожно взять мягкий мяч?",
+      "after": "Осязание. Чем осторожно берёшь мяч?"
+    },
+    {
+      "id": "geography_01",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was zeigt die Erde als kleine Kugel?",
+      "after": "Orientieren. Was zeigt die Erde als kleine Kugel?"
+    },
+    {
+      "id": "geography_01",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What shows Earth as a small sphere?",
+      "after": "Direction. What shows Earth as a small sphere?"
+    },
+    {
+      "id": "geography_01",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что показывает Землю в виде маленького шара?",
+      "after": "Ориентир. Что показывает Землю в виде маленького шара?"
+    },
+    {
+      "id": "geography_02",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?",
+      "after": "Orientieren. Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?"
+    },
+    {
+      "id": "geography_02",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which drawing on a flat sheet shows places and paths from above?",
+      "after": "Direction. Which drawing on a flat sheet shows places and paths from above?"
+    },
+    {
+      "id": "geography_02",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой рисунок на плоском листе показывает места и дороги сверху?",
+      "after": "Ориентир. Какой рисунок на плоском листе показывает места и дороги сверху?"
+    },
+    {
+      "id": "geography_03",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Gerät hat eine Nadel, die nach Norden zeigt?",
+      "after": "Orientieren. Welches Gerät hat eine Nadel, die nach Norden zeigt?"
+    },
+    {
+      "id": "geography_03",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which instrument has a needle that points north?",
+      "after": "Direction. Which instrument has a needle that points north?"
+    },
+    {
+      "id": "geography_03",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У какого прибора есть стрелка, показывающая на север?",
+      "after": "Ориентир. У какого прибора есть стрелка, показывающая на север?"
+    },
+    {
+      "id": "geography_04",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ragt hoch über seine Umgebung hinaus?",
+      "after": "Entdecken. Was ragt hoch über seine Umgebung hinaus?"
+    },
+    {
+      "id": "geography_04",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What rises high above the land around it?",
+      "after": "Explore. What rises high above the land around it?"
+    },
+    {
+      "id": "geography_04",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что высоко поднимается над окружающей местностью?",
+      "after": "Открытие. Что высоко поднимается над окружающей местностью?"
+    },
+    {
+      "id": "geography_05",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was fließt in einem Bett durch die Landschaft?",
+      "after": "Entdecken. Was fließt in einem Bett durch die Landschaft?"
+    },
+    {
+      "id": "geography_05",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What flows in a channel through the landscape?",
+      "after": "Explore. What flows in a channel through the landscape?"
+    },
+    {
+      "id": "geography_05",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что течёт по руслу через местность?",
+      "after": "Открытие. Что течёт по руслу через местность?"
+    },
+    {
+      "id": "geography_06",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist ganz von Wasser umgebenes Land?",
+      "after": "Entdecken. Was ist ganz von Wasser umgebenes Land?"
+    },
+    {
+      "id": "geography_06",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is land surrounded by water on all sides?",
+      "after": "Explore. What is land surrounded by water on all sides?"
+    },
+    {
+      "id": "geography_06",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Как называется суша, со всех сторон окружённая водой?",
+      "after": "Исследовать. Как называется суша, со всех сторон окружённая водой?"
+    },
+    {
+      "id": "geography_07",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo findest du sehr viel Salzwasser?",
+      "after": "Entdecken. Wo findest du sehr viel Salzwasser?"
+    },
+    {
+      "id": "geography_07",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where can you find a very large amount of salt water?",
+      "after": "Explore. Where can you find a very large amount of salt water?"
+    },
+    {
+      "id": "geography_07",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где находится очень много солёной воды?",
+      "after": "Исследовать. Где находится очень много солёной воды?"
+    },
+    {
+      "id": "geography_08",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo fällt über lange Zeit sehr wenig Niederschlag?",
+      "after": "Beobachten. Wo fällt über lange Zeit sehr wenig Niederschlag?"
+    },
+    {
+      "id": "geography_08",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where is there very little precipitation over a long time?",
+      "after": "Observe. Where is there very little precipitation over a long time?"
+    },
+    {
+      "id": "geography_08",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где долгое время выпадает очень мало осадков?",
+      "after": "Наблюдение. Где долгое время выпадает очень мало осадков?"
+    },
+    {
+      "id": "geography_09",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo wachsen viele Bäume zusammen?",
+      "after": "Entdecken. Wo wachsen viele Bäume zusammen?"
+    },
+    {
+      "id": "geography_09",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do many trees grow together?",
+      "after": "Explore. Where do many trees grow together?"
+    },
+    {
+      "id": "geography_09",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где много деревьев растёт вместе?",
+      "after": "Открытие. Где много деревьев растёт вместе?"
+    },
+    {
+      "id": "geography_10",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann aus Wolken zum Boden fallen?",
+      "after": "Beobachten. Was kann aus Wolken zum Boden fallen?"
+    },
+    {
+      "id": "geography_10",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can fall from clouds to the ground?",
+      "after": "Observe. What can fall from clouds to the ground?"
+    },
+    {
+      "id": "geography_10",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может падать из облаков на землю?",
+      "after": "Наблюдение. Что может падать из облаков на землю?"
+    },
+    {
+      "id": "geography_11",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was fällt als Eiskristalle vom Himmel?",
+      "after": "Entdecken. Was fällt als Eiskristalle vom Himmel?"
+    },
+    {
+      "id": "geography_11",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What falls from the sky as ice crystals?",
+      "after": "Explore. What falls from the sky as ice crystals?"
+    },
+    {
+      "id": "geography_11",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что падает с неба в виде кристалликов льда?",
+      "after": "Открытие. Что падает с неба в виде кристалликов льда?"
+    },
+    {
+      "id": "geography_12",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was versorgt die Erde mit Licht und Wärme?",
+      "after": "Leuchten. Was versorgt die Erde mit Licht und Wärme?"
+    },
+    {
+      "id": "geography_12",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What gives Earth light and warmth?",
+      "after": "Light. What gives Earth light and warmth?"
+    },
+    {
+      "id": "geography_12",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что даёт Земле свет и тепло?",
+      "after": "Свет. Что даёт Земле свет и тепло?"
+    },
+    {
+      "id": "geography_13",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was umkreist die Erde?",
+      "after": "Verändern. Was umkreist die Erde?"
+    },
+    {
+      "id": "geography_13",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What orbits Earth?",
+      "after": "Change. What orbits Earth?"
+    },
+    {
+      "id": "geography_13",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что обращается вокруг Земли?",
+      "after": "Изменение. Что обращается вокруг Земли?"
+    },
+    {
+      "id": "geography_14",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was verbindet zwei Ufer für einen Weg?",
+      "after": "Entdecken. Was verbindet zwei Ufer für einen Weg?"
+    },
+    {
+      "id": "geography_14",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What connects two banks so a path can cross?",
+      "after": "Explore. What connects two banks so a path can cross?"
+    },
+    {
+      "id": "geography_14",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что соединяет берега и позволяет перейти реку?",
+      "after": "Открытие. Что соединяет берега и позволяет перейти реку?"
+    },
+    {
+      "id": "geography_15",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wohin fließen viele große Flüsse schließlich?",
+      "after": "Entdecken. Wohin fließen viele große Flüsse schließlich?"
+    },
+    {
+      "id": "geography_15",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do many large rivers eventually flow?",
+      "after": "Explore. Where do many large rivers eventually flow?"
+    },
+    {
+      "id": "geography_15",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Куда в конце концов впадают многие большие реки?",
+      "after": "Открытие. Куда в конце концов впадают многие большие реки?"
+    },
+    {
+      "id": "geography_16",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?",
+      "after": "Entdecken. Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?"
+    },
+    {
+      "id": "geography_16",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can remain as a frozen white layer on high mountains even in summer?",
+      "after": "Explore. What can remain as a frozen white layer on high mountains even in summer?"
+    },
+    {
+      "id": "geography_16",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может лежать замёрзшим белым слоем на высоких горах даже летом?",
+      "after": "Открытие. Что может лежать замёрзшим белым слоем на высоких горах даже летом?"
+    },
+    {
+      "id": "geography_17",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist auf Karten oft blau eingezeichnet?",
+      "after": "Orientieren. Was ist auf Karten oft blau eingezeichnet?"
+    },
+    {
+      "id": "geography_17",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is often coloured blue on maps?",
+      "after": "Direction. What is often coloured blue on maps?"
+    },
+    {
+      "id": "geography_17",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что на картах часто обозначают синим цветом?",
+      "after": "Ориентир. Что на картах часто обозначают синим цветом?"
+    },
+    {
+      "id": "geography_18",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bedeutet ein Waldzeichen auf einer Karte?",
+      "after": "Orientieren. Was bedeutet ein Waldzeichen auf einer Karte?"
+    },
+    {
+      "id": "geography_18",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a forest symbol on a map show?",
+      "after": "Direction. What does a forest symbol on a map show?"
+    },
+    {
+      "id": "geography_18",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что показывает знак леса на карте?",
+      "after": "Ориентир. Что показывает знак леса на карте?"
+    },
+    {
+      "id": "geography_19",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was zeigt ein Brückenzeichen auf einer Karte?",
+      "after": "Orientieren. Was zeigt ein Brückenzeichen auf einer Karte?"
+    },
+    {
+      "id": "geography_19",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What does a bridge symbol on a map show?",
+      "after": "Direction. What does a bridge symbol on a map show?"
+    },
+    {
+      "id": "geography_19",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что показывает знак моста на карте?",
+      "after": "Ориентир. Что показывает знак моста на карте?"
+    },
+    {
+      "id": "geography_20",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bedeckt den größten Teil der Erdoberfläche?",
+      "after": "Entdecken. Was bedeckt den größten Teil der Erdoberfläche?"
+    },
+    {
+      "id": "geography_20",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What covers most of Earth’s surface?",
+      "after": "Explore. What covers most of Earth’s surface?"
+    },
+    {
+      "id": "geography_20",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что покрывает большую часть поверхности Земли?",
+      "after": "Открытие. Что покрывает большую часть поверхности Земли?"
+    },
+    {
+      "id": "geography_21",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo entstehen Regentropfen am Himmel?",
+      "after": "Beobachten. Wo entstehen Regentropfen am Himmel?"
+    },
+    {
+      "id": "geography_21",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where do raindrops form in the sky?",
+      "after": "Observe. Where do raindrops form in the sky?"
+    },
+    {
+      "id": "geography_21",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где в небе образуются дождевые капли?",
+      "after": "Наблюдение. Где в небе образуются дождевые капли?"
+    },
+    {
+      "id": "geography_22",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was erwärmt das Wasser im Wasserkreislauf vor allem?",
+      "after": "Verändern. Was erwärmt das Wasser im Wasserkreislauf vor allem?"
+    },
+    {
+      "id": "geography_22",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What mainly warms water in Earth’s water cycle?",
+      "after": "Change. What mainly warms water in Earth’s water cycle?"
+    },
+    {
+      "id": "geography_22",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что в основном нагревает воду в круговороте воды на Земле?",
+      "after": "Изменение. Что в основном нагревает воду в круговороте воды на Земле?"
+    },
+    {
+      "id": "geography_23",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wie gelangt Wasser aus Wolken zurück zum Boden?",
+      "after": "Beobachten. Wie gelangt Wasser aus Wolken zurück zum Boden?"
+    },
+    {
+      "id": "geography_23",
+      "locale": "en",
+      "field": "prompt",
+      "before": "How can water return from clouds to the ground?",
+      "after": "Observe. How can water return from clouds to the ground?"
+    },
+    {
+      "id": "geography_23",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Как вода из облаков возвращается на землю?",
+      "after": "Наблюдение. Как вода из облаков возвращается на землю?"
+    },
+    {
+      "id": "geography_24",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Wo kann ein Fluss hoch oben entspringen?",
+      "after": "Entdecken. Wo kann ein Fluss hoch oben entspringen?"
+    },
+    {
+      "id": "geography_24",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Where can a river begin high above the plains?",
+      "after": "Explore. Where can a river begin high above the plains?"
+    },
+    {
+      "id": "geography_24",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Где высоко над равниной может начинаться река?",
+      "after": "Открытие. Где высоко над равниной может начинаться река?"
+    },
+    {
+      "id": "geography_25",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was liegt an vielen Stränden als kleine Körner?",
+      "after": "Entdecken. Was liegt an vielen Stränden als kleine Körner?"
+    },
+    {
+      "id": "geography_25",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What lies in little grains on many beaches?",
+      "after": "Explore. What lies in little grains on many beaches?"
+    },
+    {
+      "id": "geography_25",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что лежит мелкими крупинками на многих пляжах?",
+      "after": "Открытие. Что лежит мелкими крупинками на многих пляжах?"
+    },
+    {
+      "id": "geography_26",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist in trockenen Wüsten besonders knapp?",
+      "after": "Entdecken. Was ist in trockenen Wüsten besonders knapp?"
+    },
+    {
+      "id": "geography_26",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is especially scarce in dry deserts?",
+      "after": "Explore. What is especially scarce in dry deserts?"
+    },
+    {
+      "id": "geography_26",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Чего особенно мало в сухих пустынях?",
+      "after": "Открытие. Чего особенно мало в сухих пустынях?"
+    },
+    {
+      "id": "geography_27",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was siehst du rings um eine Meeresinsel?",
+      "after": "Entdecken. Was siehst du rings um eine Meeresinsel?"
+    },
+    {
+      "id": "geography_27",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What surrounds an island in the sea?",
+      "after": "Explore. What surrounds an island in the sea?"
+    },
+    {
+      "id": "geography_27",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что окружает морской остров?",
+      "after": "Открытие. Что окружает морской остров?"
+    },
+    {
+      "id": "geography_28",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was gehört zu einem Wald?",
+      "after": "Wachsen. Was gehört zu einem Wald?"
+    },
+    {
+      "id": "geography_28",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What belongs in a forest?",
+      "after": "Grow. What belongs in a forest?"
+    },
+    {
+      "id": "geography_28",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что относится к лесу?",
+      "after": "Расти. Что относится к лесу?"
+    },
+    {
+      "id": "geography_29",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was lässt sich zusammenfalten und zeigt deinen Spazierweg?",
+      "after": "Entdecken. Was lässt sich zusammenfalten und zeigt deinen Spazierweg?"
+    },
+    {
+      "id": "geography_29",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can be folded up and show your walking route?",
+      "after": "Explore. What can be folded up and show your walking route?"
+    },
+    {
+      "id": "geography_29",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что можно сложить и использовать для выбора маршрута прогулки?",
+      "after": "Открытие. Что можно сложить и использовать для выбора маршрута прогулки?"
+    },
+    {
+      "id": "geography_30",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Modell zeigt auch die Rückseite der Erde beim Drehen?",
+      "after": "Orientieren. Welches Modell zeigt auch die Rückseite der Erde beim Drehen?"
+    },
+    {
+      "id": "geography_30",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which model shows Earth's other side when you turn it?",
+      "after": "Direction. Which model shows Earth's other side when you turn it?"
+    },
+    {
+      "id": "geography_30",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какая модель показывает другую сторону Земли при повороте?",
+      "after": "Ориентир. Какая модель показывает другую сторону Земли при повороте?"
+    },
+    {
+      "id": "geography_31",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann die Sonne am Himmel verdecken?",
+      "after": "Beobachten. Was kann die Sonne am Himmel verdecken?"
+    },
+    {
+      "id": "geography_31",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can hide the sun in the sky?",
+      "after": "Observe. What can hide the sun in the sky?"
+    },
+    {
+      "id": "geography_31",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что может закрыть Солнце в небе?",
+      "after": "Наблюдение. Что может закрыть Солнце в небе?"
+    },
+    {
+      "id": "geography_32",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was kann im Frühling Schnee schmelzen lassen?",
+      "after": "Beobachten. Was kann im Frühling Schnee schmelzen lassen?"
+    },
+    {
+      "id": "geography_32",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What can help melt snow in spring?",
+      "after": "Observe. What can help melt snow in spring?"
+    },
+    {
+      "id": "geography_32",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что помогает снегу таять весной?",
+      "after": "Наблюдение. Что помогает снегу таять весной?"
+    },
+    {
+      "id": "geography_33",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist lang, fließt und hat zwei Ufer?",
+      "after": "Entdecken. Was ist lang, fließt und hat zwei Ufer?"
+    },
+    {
+      "id": "geography_33",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What is long, flows and has two banks?",
+      "after": "Explore. What is long, flows and has two banks?"
+    },
+    {
+      "id": "geography_34",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welche Landschaft erkennst du an einem hohen Gipfel?",
+      "after": "Entdecken. Welche Landschaft erkennst du an einem hohen Gipfel?"
+    },
+    {
+      "id": "geography_34",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which landscape has a high peak?",
+      "after": "Explore. Which landscape has a high peak?"
+    },
+    {
+      "id": "geography_34",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "У какого элемента рельефа высокая вершина?",
+      "after": "Открытие. У какого элемента рельефа высокая вершина?"
+    },
+    {
+      "id": "geography_35",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches große Gewässer ist normalerweise salzig?",
+      "after": "Entdecken. Welches große Gewässer ist normalerweise salzig?"
+    },
+    {
+      "id": "geography_35",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which large body of water is normally salty?",
+      "after": "Explore. Which large body of water is normally salty?"
+    },
+    {
+      "id": "geography_35",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой большой водоём обычно солёный?",
+      "after": "Открытие. Какой большой водоём обычно солёный?"
+    },
+    {
+      "id": "geography_36",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?",
+      "after": "Orientieren. Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?"
+    },
+    {
+      "id": "geography_36",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which instrument uses a magnetic needle to show north for your map?",
+      "after": "Direction. Which instrument uses a magnetic needle to show north for your map?"
+    },
+    {
+      "id": "geography_36",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какой прибор магнитной стрелкой показывает север для твоей карты?",
+      "after": "Ориентир. Какой прибор магнитной стрелкой показывает север для твоей карты?"
+    },
+    {
+      "id": "geography_37",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Niederschlag ist flüssig?",
+      "after": "Entdecken. Welcher Niederschlag ist flüssig?"
+    },
+    {
+      "id": "geography_37",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which kind of precipitation is liquid?",
+      "after": "Explore. Which kind of precipitation is liquid?"
+    },
+    {
+      "id": "geography_37",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какие осадки жидкие?",
+      "after": "Открытие. Какие осадки жидкие?"
+    },
+    {
+      "id": "geography_38",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was ist ein Stern: Sonne, Wolke oder Mond?",
+      "after": "Beobachten. Was ist ein Stern: Sonne, Wolke oder Mond?"
+    },
+    {
+      "id": "geography_38",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which is a star: the sun, a cloud or the moon?",
+      "after": "Observe. Which is a star: the sun, a cloud or the moon?"
+    },
+    {
+      "id": "geography_38",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что является звездой: Солнце, облако или Луна?",
+      "after": "Наблюдение. Что является звездой: Солнце, облако или Луна?"
+    },
+    {
+      "id": "geography_39",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Welcher Himmelskörper liefert das meiste Licht, das der Mond zurückwirft?",
+      "after": "Leuchten. Wessen Licht wirft der Mond hauptsächlich zurück?"
+    },
+    {
+      "id": "geography_39",
+      "locale": "en",
+      "field": "prompt",
+      "before": "Which celestial body supplies most of the light reflected by the Moon?",
+      "after": "Light. Whose light does the Moon mainly reflect?"
+    },
+    {
+      "id": "geography_39",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Какое небесное тело даёт большую часть света, отражаемого Луной?",
+      "after": "Свет. Чей свет в основном отражает Луна?"
+    },
+    {
+      "id": "geography_40",
+      "locale": "de",
+      "field": "prompt",
+      "before": "Was bringen Regen und Flüsse vielen Pflanzen?",
+      "after": "Wachsen. Was bringen Regen und Flüsse vielen Pflanzen?"
+    },
+    {
+      "id": "geography_40",
+      "locale": "en",
+      "field": "prompt",
+      "before": "What do rain and rivers bring to many plants?",
+      "after": "Growing. What do rain and rivers bring to many plants?"
+    },
+    {
+      "id": "geography_40",
+      "locale": "ru",
+      "field": "prompt",
+      "before": "Что дождь и реки приносят многим растениям?",
+      "after": "Рост. Что дождь и реки приносят многим растениям?"
     }
   ]
 }

@@ -5,21 +5,39 @@ static var registry: Array = []
 static func tasks(subject: String = "") -> Array:
 	if registry.is_empty(): registry = JSON.parse_string(FileAccess.get_file_as_string("res://games/quest/tasks.json")).tasks
 	return registry if subject.is_empty() else registry.filter(func(t): return t.subject==subject)
+static func all_tasks() -> Array:
+	var result: Array=[]
+	for task in tasks():
+		result.append(task)
+		result.append_array(task.get("bonuses",[]))
+	return result
+static func value(id: String) -> int:
+	for task in all_tasks():
+		if task.id==id: return int(task.get("points",10))
+	return 0
+static func points(state: Dictionary) -> int:
+	var total:=0
+	var solved: Dictionary=state.get("solved",{})
+	for task in all_tasks():
+		if solved.get(task.id) is bool and solved.get(task.id): total+=int(task.get("points",10))
+	return total
 static func clean(value: Variant) -> Dictionary:
-	var result := {"solved":{}, "subject":"math", "hero_chosen":false}
+	var result := {"solved":{}, "subject":"math", "hero_chosen":false,"total_points":0}
 	if not value is Dictionary: return result
 	if value.get("subject") is String and value.subject in SUBJECTS: result.subject = value.subject
 	result.hero_chosen = value.get("hero_chosen") is bool and value.hero_chosen
 	if value.get("solved") is Dictionary:
-		for task in tasks():
+		for task in all_tasks():
 			if value.solved.get(task.id) is bool and value.solved[task.id]: result.solved[task.id] = true
+	result.total_points=points(result)
 	return result
 static func award(state: Dictionary,id: String) -> bool:
-	if state.solved.has(id) or not tasks().any(func(t): return t.id==id): return false
+	if state.solved.has(id) or value(id)==0: return false
 	state.solved[id] = true
+	state.total_points=points(state)
 	return true
 static func correct(task: Dictionary,value: Variant) -> bool:
-	return task.options.any(func(option): return same(option,value)) and same(value,task.answer)
+	return task.options.any(func(option): return same(option,value)) and task.get("accepted_answers",[task.answer]).any(func(answer): return same(value,answer))
 static func same(a: Variant,b: Variant) -> bool:
 	if (a is int or a is float) and (b is int or b is float):
 		return is_finite(float(a)) and is_finite(float(b)) and float(a)==float(b)
