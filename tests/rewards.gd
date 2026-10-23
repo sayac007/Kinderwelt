@@ -57,6 +57,11 @@ func run() -> void:
 	check(game.task_panel.task.riddle_scene=="sound","Hearing puzzle uses music context, not an ear copy")
 	check(game.task_panel.task.keyword=="Слух","Russian keyword uses Cyrillic")
 	game.close_task()
+	game.switch_subject("logic");game.open_task(2)
+	var latin:=RegEx.create_from_string("[A-Za-z]")
+	for choice in game.task_panel.choices:
+		check(latin.search(choice.tooltip_text)==null,"Russian visual-logic labels never expose encoded Latin object IDs")
+	game.close_task()
 	var before_restore:=Progress.points(app.store.data.quest)
 	app.confirm_old_round()
 	app.body.get_child(app.body.get_child_count()-1).pressed.emit()
