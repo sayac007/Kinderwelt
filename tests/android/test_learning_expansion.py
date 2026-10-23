@@ -67,6 +67,9 @@ class LearningExpansionTests(unittest.TestCase):
                     self.assertEqual(reconstructed,v['word'])
                     self.assertGreaterEqual(len(v['answer']),2 if task==parent else 3)
                     self.assertEqual(len(v['options']),len(set(v['options'])))
+                    for j in range(len(v['answer'])):
+                        self.assertTrue(any(option[j]!=v['answer'][j] for option in v['options']),
+                                        'A gap must not be identical in every answer choice')
                 v=task['variants']['ru']
                 self.assertRegex(v['word'],r'^[А-ЯЁ]+$')
                 for option in v['options']:self.assertRegex(option,r'^[А-ЯЁ]+$')
@@ -77,12 +80,19 @@ class LearningExpansionTests(unittest.TestCase):
         self.assertEqual(first['counts'],[1,3,4,6,7])
         self.assertEqual(first['answer'],'star:9')
         order=self.by_id['logic_shadow']
-        self.assertEqual(order['options'],['cat','frog','bird'])
+        self.assertEqual(set(order['options']),{'cat','frog','bird'})
         self.assertEqual(order['order'],['bird','cat','frog'])
         self.assertEqual(order['answer'],'bird')
         for t in self.parents:
             if t['kind']=='reasoning_choice':
                 self.assertEqual(t['answer'],t['order'][0 if t['ask_first'] else -1])
+    def test_correct_answer_slots_do_not_form_a_repeating_cycle(self):
+        from collections import Counter
+        for subject in {t['subject'] for t in self.parents}:
+            slots=[t['options'].index(t['answer']) for t in self.parents if t['subject']==subject]
+            self.assertEqual(set(slots),{0,1,2})
+            self.assertTrue(any(slots[i]!=slots[i+3] for i in range(len(slots)-3)))
+            self.assertLessEqual(max(Counter(slots).values()),25)
     def test_science_questions_have_indirect_context_and_short_keyword(self):
         science=[t for t in self.parents if t['kind']=='discovery']
         self.assertEqual(len(science),200)

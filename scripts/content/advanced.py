@@ -12,6 +12,19 @@ def numeric(n,i):
     values=[n-1,n,n+1];k=i%3
     return values[k:]+values[:k]
 
+def letter_distractors(answer,alphabet,index):
+    # Both independent letter groups must be checked. Keeping every later
+    # letter identical would let a child ignore all but the first gap.
+    result=[]
+    for parity in [0,1]:
+        letters=list(answer)
+        for j,letter in enumerate(letters):
+            if j%2==parity:
+                choices=[c for c in alphabet if c!=letter]
+                letters[j]=choices[(index+j)%len(choices)]
+        result.append(''.join(letters))
+    return result
+
 def maths(i,level=0):
     a=9+i%10;b=4+i//4;c=2+i%4
     if level:
@@ -88,7 +101,7 @@ def literacy(parent,i,word_row):
         positions=sorted({i%len(word),(i+max(1,len(word)//2))%len(word)})
         answer=''.join(word[p] for p in positions)
         alphabet='АЕИКЛМНОРСТ' if locale=='ru' else 'AEIKLMNORST'
-        wrong=[x+answer[1:] for x in alphabet if x!=answer[0]][:2]
+        wrong=letter_distractors(answer,alphabet,i)
         options=[wrong[0],answer,wrong[1]];shift=i%3;options=options[shift:]+options[:shift]
         variant={'word':word,'display':''.join('＿' if p in positions else c for p,c in enumerate(word)),'answer':answer,'options':options}
         q={'de':f'{word.capitalize()}. Welche beiden Buchstaben fehlen?','en':f'{word.capitalize()}. Which two letters are missing?','ru':f'{word.capitalize()}. Какие две буквы пропущены?'}[locale]

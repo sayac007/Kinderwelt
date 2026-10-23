@@ -112,11 +112,8 @@ def language_bonus(parent,index,level):
         positions=[(index+level+j)%len(word) for j in range(min(len(word),level+2))]
         positions=sorted(set(positions))
         answer=''.join(word[p] for p in positions)
-        wrong=[]
-        for letter in alphabet:
-            candidate=letter+answer[1:]
-            if candidate!=answer and candidate not in wrong:wrong.append(candidate)
-            if len(wrong)==2:break
+        from advanced import letter_distractors
+        wrong=letter_distractors(answer,alphabet,index+level)
         opts=[answer,*wrong];shift=index%3;opts=opts[shift:]+opts[:shift]
         masked=''.join('＿' if p in positions else c for p,c in enumerate(word))
         variant={'word':word,'display':masked,'answer':answer,'options':opts}
@@ -222,4 +219,14 @@ def expand(tasks,languages):
                 bonus['prompt']=bonus['texts']['de']['prompt'];bonus['tip']=bonus['texts']['de']['tip']
                 bonuses.append(bonus)
             parent['bonuses']=bonuses
+    # Stable per-task shuffling prevents solving a whole round by the old
+    # repeating left/middle/right answer-position cycle.
+    import hashlib
+    for parent in tasks:
+        for task in [parent,*parent['bonuses']]:
+            for locale in LOCALES:
+                target=task if locale=='de' else task.get('variants',{}).get(locale)
+                if target is None or 'options' not in target:continue
+                target['options']=sorted(target['options'],key=lambda choice:hashlib.sha256(
+                    (task['id']+'|2|'+locale+'|'+json.dumps(choice,ensure_ascii=False)).encode()).digest())
     return tasks
