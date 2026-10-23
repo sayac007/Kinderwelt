@@ -29,10 +29,10 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertLess(max(abs(v) for v in pcm),1)
     def test_task_contract(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
-        self.assertEqual(len(tasks),320)
-        self.assertEqual(len({t['id'] for t in tasks}),320)
+        self.assertEqual(len(tasks),400)
+        self.assertEqual(len({t['id'] for t in tasks}),400)
         for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
-            self.assertEqual(sum(t['subject']==subject for t in tasks),40)
+            self.assertEqual(sum(t['subject']==subject for t in tasks),50)
         for task in tasks:
             self.assertIn(task['answer'],task['options'])
             self.assertEqual(len(task['options']),len(set(task['options'])))
@@ -72,7 +72,7 @@ class QuestAssetsTests(unittest.TestCase):
             self.assertEqual(manifest['voice_gender'],'female')
             self.assertEqual(manifest['human_listening_review'].split(';')[0],'OPEN')
             expected=source.narration_texts(locale)
-            self.assertEqual(len(expected),1947)
+            self.assertEqual(len(expected),2427)
             self.assertEqual({c['id']:c['text'] for c in manifest['clips']},expected)
             unique={c['file']:c for c in manifest['clips']}
             self.assertEqual({p.name for p in folder.glob('*.ogg')},set(unique))

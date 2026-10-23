@@ -39,7 +39,7 @@ func run() -> void:
 		for subject in preload("res://games/quest/progress.gd").SUBJECTS:
 			game.switch_subject(subject)
 			await snap(profile.id+"-"+subject+"-world")
-			for index in (range(8) if subject in ["math","german","logic"] else [0,19,39]):
+			for index in (range(8)+[49] if subject in ["math","german","logic"] else [0,19,39,49]):
 				game.open_task(index)
 				await snap(profile.id+"-"+subject+"-task-"+str(index))
 				if index==0:
@@ -76,7 +76,7 @@ func run() -> void:
 				game.world.camera_x=game.world.follow_camera();game.world._process(0)
 				await snap(profile.id+"-scene-tree-branch")
 		app.store.data.subject_sceneries[game.subject]="auto"
-		game.world.set_page(3)
+		game.world.set_page(4)
 		await snap(profile.id+"-last-trail")
 		var previous_progress: Dictionary=app.store.data.quest.duplicate(true)
 		for id in preload("res://games/quest/progress.gd").legacy_rewards():app.store.data.quest.archived[id]=true
@@ -111,6 +111,13 @@ func run() -> void:
 			game.close_task();game.switch_subject("german");game.open_task(0);game.open_bonus(1)
 			await snap(profile.id+"-"+locale+"-native-letter-bonus")
 			game.close_task()
+			app.store.data.text_scale=1.15
+			game.switch_subject("german");game.open_task(49)
+			await snap(profile.id+"-"+locale+"-native-last-base")
+			for level in [0,1]:
+				game.open_bonus(level)
+				await snap(profile.id+"-"+locale+"-native-last-"+str(level))
+			game.close_task();app.store.data.text_scale=1.0
 			for subject in ["logic","physics","biology","chemistry","body","geography"]:
 				game.switch_subject(subject)
 				game.open_task(0)

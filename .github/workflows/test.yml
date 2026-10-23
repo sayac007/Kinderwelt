@@ -7,7 +7,8 @@ jobs:
     env:
       KINDERWELT_VARIANT: public
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    # 400 stations, all localized bonuses and larger real-frame coverage.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Install pinned Godot

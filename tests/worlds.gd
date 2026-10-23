@@ -44,7 +44,7 @@ func run() -> void:
 			if is_instance_valid(game.task_panel):game.close_task()
 			# Every task on all pages can be brought into view and reached, with no
 			# task ID rewritten by the world type or by vertical camera movement.
-			for page in range(4):
+			for page in range(5):
 				world.set_page(page)
 				for index in range(page*10,page*10+10):
 					world.hero_x=world.arrival_distance(index);world.target_x=world.hero_x

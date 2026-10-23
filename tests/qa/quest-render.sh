@@ -18,7 +18,7 @@ export KINDERWELT_RENDER_OUTPUT="$OUTPUT"
 "${GODOT:-godot}" --headless --path . --editor --import --quit >"$OUTPUT/import.log" 2>&1
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/import.log"; then cat "$OUTPUT/import.log"; exit 1; fi
 RESULT=0
-timeout 240 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/render_quest.gd >"$OUTPUT/render.log" 2>&1 || RESULT=$?
+timeout 300 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/render_quest.gd >"$OUTPUT/render.log" 2>&1 || RESULT=$?
 cat "$OUTPUT/render.log"
 if ((RESULT!=0)); then exit "$RESULT"; fi
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/render.log"; then exit 1; fi

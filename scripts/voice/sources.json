@@ -1,0 +1,23 @@
+{
+  "russian_g2p": {
+    "repository": "nsu-ai/russian_g2p",
+    "revision": "20305523bfe4ccb632c7538e9a5e925bde54b52e",
+    "url": "https://github.com/nsu-ai/russian_g2p",
+    "file": "russian_g2p/data/Accents_new.zip",
+    "sha256": "9a85c8dabfba5d0a8acc6a634cbb06110b602813c3034185762c126042ad02bf",
+    "license": "MIT"
+  },
+  "cmudict": {
+    "repository": "cmusphinx/cmudict",
+    "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+    "url": "https://github.com/cmusphinx/cmudict",
+    "file": "cmudict.dict",
+    "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+    "license": "BSD-style; original notice retained"
+  },
+  "espeak_ng": {
+    "url": "https://github.com/espeak-ng/espeak-ng",
+    "provider": "Piper 1.4.2 embedded eSpeak NG; development only",
+    "license": "GPL-3.0 code, not shipped in the Android app; generated phonetic data"
+  }
+}

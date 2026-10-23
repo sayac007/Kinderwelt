@@ -46,6 +46,9 @@ func _draw() -> void:
 		Art.text(self,task.get("keyword","?"),Vector2(size.x/2,size.y-12),20)
 		return
 	if task.has("display"):
+		if task.kind=="word":
+			preload("res://core/quest/letter_slots.gd").paint(self,str(task.display),rect)
+			return
 		var lines: PackedStringArray=str(task.display).split("\n")
 		for i in range(lines.size()):
 			var px:=30

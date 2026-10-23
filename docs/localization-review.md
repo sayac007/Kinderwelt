@@ -1,6 +1,6 @@
 # Sprache und Lokalisierung prüfen
 
-Aktueller Status und Einschränkungen: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Alle 320 Grundaufgaben und 640 Boni haben DE-/EN-/RU-Fassungen. Native Sprachaufgaben verwenden die jeweilige Sprache; russische Lerntexte bleiben kyrillisch.
+Aktueller Status und Einschränkungen: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Alle 400 Grundaufgaben und 800 Boni haben DE-/EN-/RU-Fassungen. Native Sprachaufgaben verwenden die jeweilige Sprache; russische Lerntexte bleiben kyrillisch.
 
 Hinweise nennen keine vollständigen Antworten oder fehlenden Buchstabenlisten. Neue Fachwörter werden im Kontext erläutert; „Hebel“ wird mit der vertrauten Wippe verknüpft, der Drehpunkt als Stelle der Bewegung erklärt. Das lange deutsche Lernwort „Schildkrötenei“ ist durch das geläufigere „Entenei“ ersetzt. Die ursprünglichen Werte und aktuellen Grundtexte sind als langfristige Redaktionsreferenz in `scripts/content/localization-changes.json` nachvollziehbar, nicht als neuer Bericht pro Testlauf.
 

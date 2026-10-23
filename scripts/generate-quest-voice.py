@@ -10,6 +10,9 @@ import argparse,hashlib,json,subprocess,tempfile,wave,shutil,unicodedata,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
+sys.path.insert(0,str(ROOT/'scripts/voice'))
+import pronunciation
+
 MODELS={'de':('Qwen3-TTS-12Hz-0.6B-CustomVoice','Not separately specified by publisher','female'),'en':('en_US-ljspeech-medium','Public Domain','female'),'ru':('Qwen3-TTS-12Hz-0.6B-CustomVoice','Not separately specified by publisher','female')}
 GLOBALS={
  'de':{'choose':'Wer bist du heute? Suche dir eine Figur aus. Tippe dann auf Start.','walk':'Tippe auf ein Schild. Deine Figur läuft dorthin. Unten kannst du alle acht Bereiche direkt antippen.','success':'Wunderbar! Das hast du gut gemacht.','again':'Schau noch einmal. Du kannst es ausprobieren.'},
@@ -37,7 +40,7 @@ PRAISE={
 'de':['Wunderbar! Das hast du gut gemacht.','Sehr klug entschieden!','Super cool, das gefällt mir!','Toll gelöst! Weiter so!','Du hast genau hingeschaut. Klasse!','Prima! Du hast es herausgefunden.'],
 'en':['Wonderful! You did that really well.','That was a clever choice!','Super cool! I like that!','Great work! Keep going!','You looked carefully. Well done!','Brilliant! You worked it out.'],
 'ru':['Замечательно! У тебя отлично получилось.','Очень умное решение!','Супер! Мне нравится!','Здорово решено! Так держать!','Ты внимательно посмотрел. Отлично!','Прекрасно! У тебя получилось разобраться.']}
-SYNTHESIS={'revision':'articulated-2','length_scale':1.18,'noise_scale':0.5,'noise_w_scale':0.6,'volume':0.68,'lead_seconds':0.18,'tail_seconds':0.35,'sentence_pause_seconds':0.28}
+SYNTHESIS={'revision':'articulated-stress-3','length_scale':1.18,'noise_scale':0.5,'noise_w_scale':0.6,'volume':0.68,'lead_seconds':0.18,'tail_seconds':0.35,'sentence_pause_seconds':0.28}
 
 def synthesis_profile(locale):
     if locale in ['de','ru']:
@@ -46,6 +49,7 @@ def synthesis_profile(locale):
         engine=importlib.util.module_from_spec(spec);spec.loader.exec_module(engine)
         return engine.synthesis_profile()
     profile=dict(SYNTHESIS)
+    profile['pronunciation_revision']=pronunciation.REVISION
     return profile
 
 def clip_profile(locale,id,text=''):
@@ -54,7 +58,7 @@ def clip_profile(locale,id,text=''):
     if locale!='de' and id.startswith(('area_','look_')):
         profile.update(revision='articulated-short-3',length_scale=1.5,noise_w_scale=0.0,
                        duration_alignment='vits-ceil-frames')
-    if locale=='en' and id=='area_geography':
+    if locale=='en' and id in ['area_geography','area_german']:
         profile.update(revision='articulated-context-4',length_scale=1.18)
     return profile
 
@@ -115,10 +119,12 @@ def narration_texts(locale):
     # Isolated synthetic words can lose consonants. Natural context stabilizes
     # intonation; it is spoken audio, never a prompt supplied to the ASR checker.
     if locale=='de':
+        texts['area_math']='Das ist Mathe.'
         for subject in ['logic','chemistry','geography']:
             texts['area_'+subject]='Hier entdecken wir die '+languages['ui'][subject][locale]+'.'
     elif locale=='en':
         texts['area_math']='Mathematics.'
+        texts['area_german']='This is English.'
         texts['area_logic']='This is logic.'
         texts['area_geography']='Geography.'
     else:
@@ -132,7 +138,7 @@ def narration_texts(locale):
         values=task['texts'][locale]
         # Native literacy variants are spoken by their own locale. No German
         # follow-up audio, foreign spelling targets or long answer enumeration.
-        prompt=values['prompt']
+        prompt=values.get('spoken_prompt',values['prompt'])
         if task['kind']=='rhyme':
             variant=task.get('variants',{}).get(locale,{})
             options=variant.get('options',task['options'])
@@ -198,7 +204,7 @@ def main():
     from piper import PiperVoice,SynthesisConfig
     class CompleteVoice(PiperVoice):
         def phonemize(self,text):
-            return [pronunciation_phonemes(normalized_phonemes(sentence,self.config.phoneme_id_map),text,args.locale) for sentence in super().phonemize(text)]
+            return [pronunciation.english_phonemes(pronunciation_phonemes(normalized_phonemes(sentence,self.config.phoneme_id_map),text,args.locale)) for sentence in super().phonemize(text)]
     from piper.config import PiperConfig
     options=onnxruntime.SessionOptions();options.intra_op_num_threads=args.threads;options.inter_op_num_threads=1
     model_input=duration_model(args.model)
@@ -220,12 +226,13 @@ def main():
     with tempfile.TemporaryDirectory(prefix='kinderwelt-voice.') as temp:
         for index,(id,text) in enumerate(narration_texts(args.locale).items()):
             applied=clip_profile(args.locale,id,text)
+            guidance=pronunciation.utterance(text,args.locale)
             cache_key=(text,json.dumps(applied,sort_keys=True))
             if cache_key in done:row=dict(done[cache_key])
-            elif text in old and old[text].get('generation_profile',old_profile)==applied and valid_cached_audio(dest/old[text]['file'],old[text]['sha256']):
+            elif text in old and old[text].get('generation_profile',old_profile)==applied and old[text].get('pronunciation')==guidance and valid_cached_audio(dest/old[text]['file'],old[text]['sha256']):
                 row=dict(old[text]);done[cache_key]=row
             else:
-                filename='voice_'+args.locale+'_'+hashlib.sha256((text+manifest['model_sha256']+json.dumps(applied,sort_keys=True)).encode()).hexdigest()[:20]+'.ogg'
+                filename='voice_'+args.locale+'_'+hashlib.sha256((text+manifest['model_sha256']+json.dumps(applied,sort_keys=True)+guidance['sha256']).encode()).hexdigest()[:20]+'.ogg'
                 wav=Path(temp)/'speech.wav'
                 chunks=list(voice.synthesize(text,SynthesisConfig(length_scale=applied['length_scale'],noise_scale=applied['noise_scale'],noise_w_scale=applied['noise_w_scale'],volume=applied['volume']),include_alignments=True))
                 assert chunks and all(c.sample_rate==chunks[0].sample_rate and c.sample_width==2 and c.sample_channels==1 for c in chunks)
@@ -250,6 +257,7 @@ def main():
                 row['phonetic_units']=units
                 row['generation_profile']=applied
                 done[cache_key]=dict(row)
+            row['pronunciation']=guidance
             row['id']=id;manifest['clips'].append(row)
             if index%25==0:print(args.locale,index,id,flush=True)
             # Checkpoint enables a safe interrupted run to resume without resynthesis.

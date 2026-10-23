@@ -51,7 +51,7 @@ func run() -> void:
 	check(state.archived.size()==1 and state.solved.is_empty() and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
 	check(state.subject=="math" and not state.hero_chosen,"Invalid subject/hero-chosen types rejected")
 	state = Progress.clean(null)
-	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==40,"Forty real tasks in "+subject)
+	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==50,"Fifty real tasks in "+subject)
 	for task in Progress.tasks():
 		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent second-round answer fixture "+task.id)
 		if task.kind=="add": check(task.answer==task.left+task.right,"Addition is arithmetically correct")
@@ -64,7 +64,7 @@ func run() -> void:
 		check(not Progress.correct(task,"forged"),"Reject unknown option")
 		check(Progress.award(state,task.id),"First completion earns a star")
 		check(not Progress.award(state,task.id),"Repeated completion cannot farm stars")
-	check(Progress.stars(state)==320 and not Progress.award(state,"unknown"),"Finite 320-star progression")
+	check(Progress.stars(state)==400 and not Progress.award(state,"unknown"),"Finite 400-star progression")
 	var app: Control = load("res://core/quest/main.tscn").instantiate()
 	root.add_child(app)
 	app.store.reset();app.store.data.muted=true;app.audio.sync_settings()
@@ -161,10 +161,10 @@ func run() -> void:
 			panel.answer(panel.task.answer)
 			check(panel.complete,"Every authored task is completable in presenter")
 			game.close_task()
-	# All four route pages expose ten tasks, without stale movement on page changes.
+	# All five route pages expose ten tasks, without stale movement on page changes.
 	for subject in Progress.SUBJECTS:
 		app.game_view.switch_subject(subject)
-		for page in range(4):
+		for page in range(5):
 			app.game_view.world.set_page(page)
 			var world: Control=app.game_view.world
 			check(world.first_station()==page*10 and world.last_station()==page*10+9,"Every route page has ten reachable stations")
@@ -192,7 +192,7 @@ func run() -> void:
 		app.store.data.locale=locale;app.store.data.text_scale=1.15;app.hub()
 		for subject in Progress.SUBJECTS:
 			app.game_view.switch_subject(subject)
-			for index in range(40):
+			for index in range(50):
 				for bonus_index in [-1,0,1]:
 					app.game_view.open_task(index)
 					if bonus_index>=0:app.game_view.open_bonus(bonus_index)

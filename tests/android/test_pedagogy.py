@@ -39,7 +39,7 @@ class PedagogyTests(unittest.TestCase):
         self.assertEqual(len(report['baseline_33_rechecks']),33)
         self.assertTrue(all(r['review'] for r in report['baseline_33_rechecks']))
         self.assertEqual({r['id'] for r in report['baseline_33_rechecks'] if r['remaining_image_warning']},{'physics_09','body_16'})
-        self.assertEqual(len(report['difficulty_review']),640)
+        self.assertEqual(len(report['difficulty_review']),800)
         self.assertFalse(any(r['probably_easier_structurally'] for r in report['difficulty_review']))
     def test_solution_prefixes_and_bare_science_answers_fail_in_each_language(self):
         for locale,text in [('de','Gesucht ist: Rad.'),('en','The answer is wheel.'),('ru','Ответ: колесо.')]:

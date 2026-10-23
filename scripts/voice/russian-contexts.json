@@ -1,0 +1,8 @@
+{
+  "scope": "Meaning and case decisions for the current task bank, not a universal homograph rule.",
+  "rules": [
+    {"word":"руки","when":"(?:ополоснуть|вытереть|вымыть|мыть|помой|вымой)\\s+руки","synthesis":"ру́ки","reason":"Accusative plural hands, rather than genitive singular of a hand."},
+    {"word":"облака","when":"облака\\s+закрывают","synthesis":"о́блака","reason":"Nominative plural clouds; из облака keeps genitive singular."},
+    {"word":"места","when":"(?:возможные|и)\\s+места\\b","synthesis":"места́","reason":"Plural places; много места keeps singular genitive."}
+  ]
+}

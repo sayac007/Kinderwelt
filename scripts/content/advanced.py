@@ -30,6 +30,13 @@ def letter_distractors(answer,alphabet,index):
 
 def maths(i,level=0):
     a=9+i%10;b=4+i//4;c=2+i%4
+    if i>=40 and level==0:
+        a=21+i-40;b=3+(i-40)%5;c=2+(i-40)%3;answer=a+b-c
+        return {'kind':'equation','display':f'{a} + {b} − {c} = ?',
+                'answer':answer,'options':numeric(answer,i),
+                'texts':localized([f'Zu {a} kommen {b}, danach gehen {c}. Wie viele bleiben?',f'Add {b} to {a}, then take away {c}. How many remain?',f'К {a} прибавили {b}, затем убрали {c}. Сколько осталось?'],
+                                  ['Rechne erst vorwärts und prüfe rückwärts.','Work forwards, then check backwards.','Сначала посчитай прямо, затем проверь обратными действиями.']),
+                'thinking':'two-step arithmetic beyond twenty'}
     if level:
         a=14+i%12;b=5+i//5;c=3+i%5
         d=2+i%3;e=2+i%2
@@ -40,7 +47,7 @@ def maths(i,level=0):
         else:
             target=a+b-c-d+e;answer=b;display=f'{a} + ? − {c} − {d} + {e} = {target}'
             q=['Welche Zahl fehlt? Mache die Schritte in umgekehrter Reihenfolge rückgängig.','Which number is missing? Undo the steps in reverse order.','Какого числа не хватает? Отмени действия в обратном порядке.']
-            h=[f'Nimm zuerst {e} wieder weg. Gib {d} und {c} zurück. Ziehe zuletzt {a} ab.',f'First take away {e}. Add {d} and {c} back. Finally subtract {a}.',f'Сначала вычти {e}. Верни {d} и {c}. В конце вычти {a}.']
+            h=[f'Nimm zuerst {e} wieder weg. Gib {d} und {c} zurück. Ziehe zum Schluss die Startzahl ab.',f'First take away {e}. Add {d} and {c} back. Finally subtract the starting number.',f'Сначала вычти {e}. Верни {d} и {c}. В конце вычти начальное число.']
     elif i%4==0:
         answer=a+b-c;display=f'{a} + {b} − {c} = ?'
         q=[f'Zu {a} kommen {b}, dann gehen {c}. Wie viele bleiben?',f'{b} join {a}, then {c} leave. How many remain?',f'Было {a}. Добавили {b}, убрали {c}. Сколько осталось?']
@@ -107,22 +114,23 @@ def literacy(parent,i,word_row):
         alphabet='АЕИКЛМНОРСТ' if locale=='ru' else 'AEIKLMNORST'
         wrong=letter_distractors(answer,alphabet,i)
         options=[wrong[0],answer,wrong[1]];shift=i%3;options=options[shift:]+options[:shift]
-        variant={'word':word,'display':''.join('＿' if p in positions else c for p,c in enumerate(word)),'answer':answer,'options':options}
-        q={'de':f'{word_title(word,locale)}. Welche beiden Buchstaben fehlen?','en':f'{word_title(word,locale)}. Which two letters are missing?','ru':f'{word_title(word,locale)}. Какие две буквы пропущены?'}[locale]
+        variant={'word':word,'display':''.join('_' if p in positions else c for p,c in enumerate(word)),'answer':answer,'options':options,
+                 'missing_positions':positions,'option_displays':{o:''.join(o[positions.index(p)] if p in positions else '_' for p in range(len(word))) for o in options}}
+        q={'de':'Welche beiden Buchstaben fehlen?','en':'Which two letters are missing?','ru':'Какие две буквы пропущены?'}[locale]
         from pedagogy import STRATEGIES
         h=STRATEGIES['german'][LANGS.index(locale)]
-        result['texts'][locale]={'prompt':q,'tip':h}
+        result['texts'][locale]={'prompt':q,'tip':h,'spoken_prompt':word_title(word,locale)+'. '+q}
         if locale=='de':result.update(variant)
         else:result['variants'][locale]=variant
     return result
 
 def renew(tasks,languages):
     word_rows=[line.split('|') for line in (SOURCE/'advanced-words.tsv').read_text().splitlines() if line]
-    assert len(word_rows)==40
+    assert len(word_rows)==50
     questions={}
     for subject in ['physics','biology','chemistry','body','geography']:
         rows=[line.split('|') for line in (SOURCE/f'advanced-{subject}.tsv').read_text().splitlines() if line]
-        assert len(rows)==40 and all(len(row)==4 for row in rows),subject
+        assert len(rows)==50 and all(len(row)==4 for row in rows),subject
         questions.update({row[0]:row[1:] for row in rows})
     for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
         for i,task in enumerate(t for t in tasks if t['subject']==subject):
