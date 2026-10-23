@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts/voice'))
 import pronunciation
+from reuse import reviewed_current_rows
 MODEL='Qwen3-TTS-12Hz-0.6B-CustomVoice'
 REVISION='85e237c12c027371202489a0ec509ded67b5e4b5'
 MODEL_SHA='bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb'
@@ -100,7 +101,7 @@ def main():
         legacy={**profile,'revision':'female-multilingual-1','do_sample':False,'subtalker_dosample':False}
         for key in ['temperature','top_p','top_k']:legacy.pop(key)
         if previous.get('synthesis') in [profile,legacy,dict(profile,batch_size=32),dict(profile,batch_size=16),dict(legacy,batch_size=32),dict(legacy,batch_size=16)] and previous.get('model_sha256')==MODEL_SHA and previous.get('speaker')==a.speaker:
-            prior={c['text']:c for c in previous['clips'] if c.get('pronunciation')==pronunciation.utterance(c['text'],a.locale)}
+            prior=reviewed_current_rows(previous,texts,a.locale)
     if a.reuse_bank:
         from reuse import exact_input_rows
         original_manifest=(a.reuse_bank/'manifest.json').read_bytes()

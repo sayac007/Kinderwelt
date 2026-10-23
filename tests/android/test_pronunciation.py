@@ -56,3 +56,11 @@ class PronunciationTests(unittest.TestCase):
   self.assertFalse(exact_input_rows(bank,dict(bank,speaker='Other'),wanted,'de','manifest'))
   bank['generation_batches'][key].append('tampered')
   self.assertFalse(exact_input_rows(bank,bank,wanted,'de','manifest'))
+ def test_resume_skips_retired_text_before_looking_up_its_old_vocabulary(self):
+  sys.path.insert(0,str(ROOT/'scripts/voice'))
+  from reuse import reviewed_current_rows
+  current='Это физика.'
+  prior={'clips':[{'text':'Несуществующееслово.'},{'text':current,'pronunciation':g.utterance(current,'ru')}]}
+  self.assertEqual(set(reviewed_current_rows(prior,{'area':current},'ru')),{current})
+  with self.assertRaisesRegex(ValueError,'Unreviewed speech word'):
+   reviewed_current_rows(prior,{'new':'Несуществующееслово.'},'ru')

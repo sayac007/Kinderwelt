@@ -6,6 +6,12 @@ Original generation parameters, seeds and waveform hashes remain unchanged.
 import hashlib,json
 import pronunciation
 
+def reviewed_current_rows(previous,texts,locale):
+    wanted=set(texts.values())
+    # Retired text may contain words deliberately absent from the new finite
+    # vocabulary. Do not attempt to review or reuse an obsolete utterance.
+    return {r['text']:r for r in previous['clips'] if r['text'] in wanted and r.get('pronunciation')==pronunciation.utterance(r['text'],locale)}
+
 def exact_input_rows(previous,expected,texts,locale,manifest_sha256):
     identity=['model_sha256','speech_tokenizer_sha256','model_revision','speaker','locale']
     if any(not previous.get(k) or previous.get(k)!=expected.get(k) for k in identity):return {}
