@@ -511,6 +511,21 @@
       "en": "Moon",
       "ru": "Луна"
     },
+    "restore_old_round": {
+      "de": "Frühere Runde vollständig gelöst?",
+      "en": "Completed the entire earlier round?",
+      "ru": "Прошлый раунд полностью пройден?"
+    },
+    "restore_old_explanation": {
+      "de": "Nur für begleitende Erwachsene: Falls im früheren Testpaket alle 320 Aufgaben gelöst wurden, kannst du die damals verdienten 3200 Punkte hier einmalig übernehmen. Bereits übernommene Punkte werden nicht doppelt gezählt. Neue Aufgaben bleiben ungelöst.",
+      "en": "For accompanying adults: if all 320 tasks were completed in the earlier test app, you can restore those 3200 earned points here once. Previously restored points are not counted twice. New tasks remain unsolved.",
+      "ru": "Для сопровождающих взрослых: если в прежней тестовой игре были решены все 320 заданий, здесь можно один раз восстановить заработанные 3200 очков. Уже восстановленные очки повторно не начисляются. Новые задания останутся нерешёнными."
+    },
+    "restore_old_confirm": {
+      "de": "Ja, alle 320 waren gelöst · Punkte übernehmen",
+      "en": "Yes, all 320 were completed · restore points",
+      "ru": "Да, все 320 были решены · восстановить очки"
+    },
     "bonus": {
       "de": "Bonusaufgabe",
       "en": "Bonus challenge",

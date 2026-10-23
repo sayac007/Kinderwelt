@@ -108,39 +108,39 @@ Besonders relevant: `biology_32` enthielt eine Blume als angeblich falsche Alter
 
 | Aufgabe | Wert | Frage | Ablenker |
 |---|---:|---|---|
-| biology_02 | 0.00 | Entwickeln. Wo brütet ein Amselvogel seine Eier aus? | glass: 0, oil: 0 |
-| biology_29 | 0.00 | Entwickeln. Woraus schlüpfen junge Schildkröten? | apple: 0, seed: 0 |
-| biology_30 | 0.00 | Wachsen. Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen? | soap: 0, metal: 0 |
-| biology_33 | 0.00 | Entwickeln. Was lässt du beim Beobachten von Vogeleiern in Ruhe? | soap: 0, wheel: 0 |
-| biology_36 | 0.00 | Wachsen. Was hilft Bienen im Garten? | hammer: 0, glass: 0 |
-| biology_37 | 0.00 | Entwickeln. Was können Regenwürmer in die Erde ziehen? | battery: 0, glass: 0 |
-| biology_39 | 0.00 | Wachsen. Was kann aus einer Eichel wachsen? | metal: 0, wheel: 0 |
-| body_16 | 0.00 | Schützen. Was schützt beim Radfahren den Kopf? | soap: 0, paper: 0 |
-| geography_14 | 0.00 | Entdecken. Was verbindet zwei Ufer für einen Weg? | sand: 0, cloud: 0 |
-| geography_19 | 0.00 | Orientieren. Was zeigt ein Brückenzeichen auf einer Karte? | river: 0, mountain: 0 |
-| geography_21 | 0.00 | Beobachten. Wo entstehen Regentropfen am Himmel? | wood: 0, metal: 0 |
-| geography_28 | 0.00 | Wachsen. Was gehört zu einem Wald? | fish: 0, glass: 0 |
-| geography_31 | 0.00 | Beobachten. Was kann die Sonne am Himmel verdecken? | bone: 0, metal: 0 |
-| physics_09 | 0.00 | Schützen. Was schützt beim Radfahren den Kopf? | flower: 0, paper: 0 |
-| physics_17 | 0.00 | Orientieren. Was hilft dir, Norden zu finden? | hammer: 0, scissors: 0 |
-| physics_18 | 0.00 | Ausprobieren. Was kann einen ruhenden Ball anschubsen? | moon: 0, cloud: 0 |
-| physics_32 | 0.00 | Ausprobieren. Welches Bauwerk braucht tragfähige Stützen? | soap: 0, egg: 0 |
-| physics_38 | 0.00 | Bewegen. Welcher Teil einer Seilrolle dreht sich? | leaf: 0, salt: 0 |
-| physics_40 | 0.00 | Ausprobieren. Was hat einen Nordpol und einen Südpol? | roots: 0, cloud: 0 |
-| geography_23 | 0.25 | Beobachten. Wie gelangt Wasser aus Wolken zurück zum Boden? | sand: 0.5, wood: 0 |
-| physics_11 | 0.25 | Werkeln. Welches Gerät kippt um einen Drehpunkt? | battery: 0.5, paper: 0 |
-| physics_35 | 0.25 | Bewegen. Was dreht sich an einem fahrenden Fahrrad? | scissors: 0.5, salt: 0 |
-| biology_06 | 0.50 | Leuchten. Was liefert einer grünen Pflanze Licht zum Wachsen? | metal: 0, moon: 1 |
-| biology_17 | 0.50 | Wachsen. Was ist ein Pilz und keine Pflanze? | flower: 1, bird: 0 |
-| biology_22 | 0.50 | Entwickeln. Wo legt ein Grasfrosch seine Eier ab? | leaf: 0, sand: 1 |
-| body_10 | 0.50 | Zerkleinern. Womit zerkleinerst du Essen? | tongue: 0.5, ear: 0.5 |
-| body_36 | 0.50 | Pflegen. Was reinigst du mit einer Zahnbürste? | ear: 0.5, nose: 0.5 |
-| body_40 | 0.50 | Fühlen. Womit greifst du vorsichtig einen Ball? | bone: 0.5, tooth: 0.5 |
-| geography_24 | 0.50 | Entdecken. Wo kann ein Fluss hoch oben entspringen? | fabric: 0, sea: 1 |
-| geography_32 | 0.50 | Beobachten. Was kann im Frühling Schnee schmelzen lassen? | moon: 1, paper: 0 |
-| geography_35 | 0.50 | Entdecken. Welches große Gewässer ist normalerweise salzig? | river: 1, paper: 0 |
-| physics_06 | 0.50 | Entdecken. Was führt einen Weg über einen Fluss? | bulb: 0.5, wheel: 0.5 |
-| physics_34 | 0.50 | Versorgen. Was kann eine Solarzelle mit Energie versorgen? | moon: 1, egg: 0 |
+| biology_02 | 0.00 | Entwickeln. Eine Amsel sammelt Halme, bevor sie Eier legt. Welcher geschützte Ort entsteht? | glass: 0, oil: 0 |
+| biology_29 | 0.00 | Entwickeln. Eine Schildkröte bringt keine lebenden Jungen zur Welt. Woraus schlüpft ihr Nachwuchs? | apple: 0, seed: 0 |
+| biology_30 | 0.00 | Wachsen. Die Blüte ist verblüht. Was kann sich bilden und später eine neue Pflanze hervorbringen? | soap: 0, metal: 0 |
+| biology_33 | 0.00 | Entwickeln. Ein Vogel wärmt Eier. Was darfst du beim Beobachten nicht anfassen oder verschieben? | soap: 0, wheel: 0 |
+| biology_36 | 0.00 | Wachsen. Ein Garten hat viel Rasen, aber kaum Nektar. Was hilft den Bienen zusätzlich? | hammer: 0, glass: 0 |
+| biology_37 | 0.00 | Entwickeln. Abgestorbene Pflanzenteile werden von Würmern in die Erde gezogen. Was davon passt? | battery: 0, glass: 0 |
+| biology_39 | 0.00 | Wachsen. Ein Eichhörnchen vergisst eine Eichel im Boden. Welche große Pflanze kann daraus wachsen? | metal: 0, wheel: 0 |
+| body_16 | 0.00 | Schützen. Ein Sturz lässt sich nicht immer verhindern. Was kann dabei den Kopf schützen? | soap: 0, paper: 0 |
+| geography_14 | 0.00 | Entdecken. Die Ufer gehören zum selben Weg, aber Wasser liegt dazwischen. Welches Bauwerk verbindet sie? | sand: 0, cloud: 0 |
+| geography_19 | 0.00 | Orientieren. Ein Kartenzeichen verbindet einen Weg über einen Fluss. Welches Bauwerk ist gemeint? | river: 0, mountain: 0 |
+| geography_21 | 0.00 | Beobachten. Wasser steigt als Dampf auf und kühlt ab. Wo wachsen daraus Regentropfen? | wood: 0, metal: 0 |
+| geography_28 | 0.00 | Wachsen. Ein Wald enthält Pflanzen mit Stämmen und Kronen. Was davon gehört dorthin? | fish: 0, glass: 0 |
+| geography_31 | 0.00 | Beobachten. Ein Schatten wandert über die Landschaft, obwohl die Sonne weiter scheint. Was kann sie verdecken? | bone: 0, metal: 0 |
+| physics_09 | 0.00 | Schützen. Beim Sturz trifft ein Schlag den Kopf. Was soll den Schlag abfedern? | flower: 0, paper: 0 |
+| physics_17 | 0.00 | Orientieren. Die Karte ist verdreht, Straßennamen fehlen. Welches Gerät hilft beim Ausrichten nach Norden? | hammer: 0, scissors: 0 |
+| physics_18 | 0.00 | Ausprobieren. Ein Ball ruht. Was kann ihn durch Berühren anschieben, statt nur am Himmel zu stehen? | moon: 0, cloud: 0 |
+| physics_32 | 0.00 | Ausprobieren. Ein Weg führt über eine Lücke. Welches Bauwerk muss dort Lasten an Stützen weitergeben? | soap: 0, egg: 0 |
+| physics_38 | 0.00 | Bewegen. Das Seil einer Seilrolle bewegt sich weiter. Welcher runde Teil dreht sich darunter mit? | leaf: 0, salt: 0 |
+| physics_40 | 0.00 | Ausprobieren. Ein Gegenstand zieht Eisen ohne Berührung an. Was besitzt dafür einen Nordpol und Südpol? | roots: 0, cloud: 0 |
+| geography_23 | 0.25 | Beobachten. Eine Wolke verliert flüssige Tropfen, der Boden wird nass. Welcher Weg bringt das Wasser zurück? | sand: 0.5, wood: 0 |
+| physics_11 | 0.25 | Werkeln. Eine Seite der Wippe geht hinunter, die andere hoch. Welches einfache Gerät nutzt den Drehpunkt? | battery: 0.5, paper: 0 |
+| physics_35 | 0.25 | Bewegen. Das Fahrrad bewegt sich vorwärts. Welcher Teil dreht sich dabei um seine Achse? | scissors: 0.5, salt: 0 |
+| biology_06 | 0.50 | Leuchten. Eine grüne Pflanze hat Wasser, steht aber im Dunkeln. Welche natürliche Lichtquelle fehlt? | metal: 0, moon: 1 |
+| biology_17 | 0.50 | Wachsen. Es wächst ohne grüne Blätter und ist weder Tier noch Pflanze. Was gehört zu einem eigenen Reich? | flower: 1, bird: 0 |
+| biology_22 | 0.50 | Entwickeln. Aus Froscheiern werden schwimmende Kaulquappen. Wo brauchen die Eier deshalb ihren Platz? | leaf: 0, sand: 1 |
+| body_10 | 0.50 | Zerkleinern. Große Essensstücke passen schlecht zum Schlucken. Was macht sie beim Kauen kleiner? | tongue: 0.5, ear: 0.5 |
+| body_36 | 0.50 | Pflegen. Ein Belag bleibt nach dem Essen zurück. Welchen Körperteil reinigst du deshalb mit einer Bürste? | ear: 0.5, nose: 0.5 |
+| body_40 | 0.50 | Fühlen. Du willst einen Ball fangen, statt ihn wegzutreten. Welcher Körperteil greift zu? | bone: 0.5, tooth: 0.5 |
+| geography_24 | 0.50 | Entdecken. Eine Quelle liegt hoch, von dort fließt Wasser ins Tal. Welche Landschaft kann sie umgeben? | fabric: 0, sea: 1 |
+| geography_32 | 0.50 | Beobachten. Schnee schmilzt im Frühling auch ohne Regen. Welcher Himmelskörper liefert dafür Wärme? | moon: 1, paper: 0 |
+| geography_35 | 0.50 | Entdecken. Ein Gewässer ist viel größer als ein Fluss und normalerweise salzig. Welches passt? | river: 1, paper: 0 |
+| physics_06 | 0.50 | Entdecken. Die Straße endet am Fluss, das andere Ufer soll erreichbar bleiben. Welches Bauwerk hilft? | bulb: 0.5, wheel: 0.5 |
+| physics_34 | 0.50 | Versorgen. Eine Solarzelle braucht Licht, keine Batterie im Fach. Welcher Himmelskörper kann sie versorgen? | moon: 1, egg: 0 |
 
 ## Fehlende Bilder und bewusst unveränderte Aufgaben
 

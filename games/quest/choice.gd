@@ -6,10 +6,14 @@ var caption := ""
 func _ready() -> void: mouse_filter = MOUSE_FILTER_IGNORE
 func _draw() -> void:
 	var rect := Rect2(Vector2(9,8),size-Vector2(18,16))
-	if value is String and Art.has_object(value):
-		if kind in ["discovery","rhyme"]: rect.size.y-=20
+	if kind=="dual_pattern":
+		var pair:=str(value).split(":")
+		Art.object(self,pair[0],Rect2(rect.position,Vector2(rect.size.x,rect.size.y-22)))
+		Art.text(self,pair[1],Vector2(size.x/2,size.y-13),20)
+	elif value is String and Art.has_object(value):
+		if kind in ["discovery","rhyme","reasoning_choice"]: rect.size.y-=20
 		Art.object(self,value,rect)
-		if kind in ["discovery","rhyme"]:
+		if kind in ["discovery","rhyme","reasoning_choice"]:
 			var px := 14
 			while px>10 and Art.font().get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>size.x-8: px-=1
 			var shown := caption

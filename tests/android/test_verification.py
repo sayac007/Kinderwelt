@@ -6,6 +6,7 @@ v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
 MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="13" android:versionName="0.9.0"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/core/quest/scenery.gdc','assets/core/quest/scenery_card.gdc','assets/core/quest/wardrobe.gdc','assets/core/quest/score_badge.gdc','assets/core/mobile.gdc','assets/project.binary','assets/core/quest/main.gdc']
+PAYLOAD += ['assets/games/quest/legacy-rewards.json']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
 PAYLOAD += ['assets/games/quest/'+s+'.gdc' for s in ['game','world','world_props','vehicle','task','picture','progress','choice']]
 CAST=json.loads((Path(__file__).resolve().parents[2]/'assets/quest/cast.json').read_text())
@@ -57,7 +58,7 @@ class VerificationTests(unittest.TestCase):
     def data_archive(self,prefix='assets/',change=None):
         memory=io.BytesIO()
         root=Path(__file__).resolve().parents[2]
-        files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
+        files=['games/quest/legacy-rewards.json','games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
         files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
         with zipfile.ZipFile(memory,'w') as archive:
             for name in files:

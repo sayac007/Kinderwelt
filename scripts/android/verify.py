@@ -40,6 +40,7 @@ def check_manifest(root,package=PACKAGE):
 def check_payload(names,app_root=None):
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     assets={n.split('assets/',1)[1] for n in names if 'assets/' in n and not n.endswith('/')}
+    assert 'games/quest/legacy-rewards.json' in assets,'Missing first-round lifetime reward migration registry'
     imported={n.split('/')[-1].rsplit('-',1)[0] for n in assets if n.startswith('.godot/imported/') and n.endswith('.oggvorbisstr')}
     assert any(n.endswith('project.binary') for n in assets),'Missing Godot project'
     for n in assets:
@@ -97,6 +98,7 @@ def check_packaged_data(archive,app_root=None):
     """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     data_files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
+    data_files += ['games/quest/legacy-rewards.json']
     data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
     for name in data_files:
         candidates=[n for n in archive.namelist() if 'assets/' in n and n.split('assets/',1)[1]==name]

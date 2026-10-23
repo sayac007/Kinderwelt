@@ -1,0 +1,1605 @@
+{
+  "baseline_commit": "f513bf43d1270d7caa8750fd13b39052a9dee3a3",
+  "questions": {
+    "math_count": {
+      "de": "Wie viele Äpfel siehst du?",
+      "en": "How many apples can you see?",
+      "ru": "Сколько яблок ты видишь?"
+    },
+    "math_add": {
+      "de": "Drei Äpfel und zwei Äpfel. Wie viele sind es zusammen?",
+      "en": "Three apples and two apples. How many altogether?",
+      "ru": "Три яблока и два яблока. Сколько всего?"
+    },
+    "math_take": {
+      "de": "Sieben Blätter. Drei fliegen weg. Wie viele bleiben?",
+      "en": "Seven leaves. Three fly away. How many remain?",
+      "ru": "Семь листьев. Три улетают. Сколько осталось?"
+    },
+    "math_ten": {
+      "de": "Vier Sterne sind schon da. Wie viele fehlen bis zehn?",
+      "en": "Four stars are already there. How many more make ten?",
+      "ru": "Уже есть четыре звезды. Сколько не хватает до десяти?"
+    },
+    "math_compare": {
+      "de": "Wo sind mehr Äpfel?",
+      "en": "Where are there more apples?",
+      "ru": "Где больше яблок?"
+    },
+    "math_steps": {
+      "de": "Zwei, vier, sechs. Welche Zahl kommt als Nächstes?",
+      "en": "Two, four, six. Which number comes next?",
+      "ru": "Два, четыре, шесть. Какое число следующее?"
+    },
+    "math_twenty": {
+      "de": "Zehn und vier. Wie viel ist das zusammen?",
+      "en": "Ten and four. How many altogether?",
+      "ru": "Десять и четыре. Сколько всего?"
+    },
+    "math_split": {
+      "de": "Fünf Sterne sind schon da. Wie viele fehlen bis acht?",
+      "en": "Five stars are already there. How many more make eight?",
+      "ru": "Уже есть пять звёзд. Сколько не хватает до восьми?"
+    },
+    "german_sun": {
+      "de": "Sonne. Welcher Buchstabe passt am Anfang?",
+      "en": "German word: Sonne. Which letter does it start with?",
+      "ru": "Немецкое слово: Sonne. С какой буквы его пишут?"
+    },
+    "german_mouse": {
+      "de": "Maus. Welcher Buchstabe passt am Anfang?",
+      "en": "German word: Maus. Which letter does it start with?",
+      "ru": "Немецкое слово: Maus. С какой буквы его пишут?"
+    },
+    "german_apple": {
+      "de": "Apfel. Welcher Buchstabe passt am Anfang?",
+      "en": "German word: Apfel. Which letter does it start with?",
+      "ru": "Немецкое слово: Apfel. С какой буквы его пишут?"
+    },
+    "german_rhyme": {
+      "de": "Was reimt sich auf Haus?",
+      "en": "Which German word rhymes with Haus?",
+      "ru": "Какое немецкое слово рифмуется со словом Haus?"
+    },
+    "german_robot": {
+      "de": "Roboter. Wie viele Silben hörst du?",
+      "en": "German word: Roboter. How many syllables can you hear?",
+      "ru": "Немецкое слово: Roboter. Сколько слогов ты слышишь?"
+    },
+    "german_read": {
+      "de": "Welches Wort gehört zum Ball?",
+      "en": "Which German word belongs to the ball?",
+      "ru": "Какое немецкое слово подходит к мячу?"
+    },
+    "german_flower": {
+      "de": "Blume. Wie viele Silben hörst du?",
+      "en": "German word: Blume. How many syllables can you hear?",
+      "ru": "Немецкое слово: Blume. Сколько слогов ты слышишь?"
+    },
+    "german_fish": {
+      "de": "Fisch. Welcher Buchstabe passt am Anfang?",
+      "en": "German word: Fisch. Which letter does it start with?",
+      "ru": "Немецкое слово: Fisch. С какой буквы его пишут?"
+    },
+    "logic_repeat": {
+      "de": "Was kommt als Nächstes?",
+      "en": "Apple, leaf. What comes next?",
+      "ru": "Яблоко, лист. Что дальше?"
+    },
+    "logic_triple": {
+      "de": "Wie geht das Muster weiter?",
+      "en": "How does this pattern continue?",
+      "ru": "Как продолжается узор?"
+    },
+    "logic_odd": {
+      "de": "Was passt hier nicht dazu?",
+      "en": "Which does not grow like these plants?",
+      "ru": "Что не растёт, как эти растения?"
+    },
+    "logic_shadow": {
+      "de": "Welcher Gegenstand passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_size": {
+      "de": "Welcher Baum ist am größten?",
+      "en": "Which tree is the tallest?",
+      "ru": "Какое дерево самое высокое?"
+    },
+    "logic_double": {
+      "de": "Was kommt in die Lücke?",
+      "en": "What comes in the gap?",
+      "ru": "Что поставить в пропуск?"
+    },
+    "logic_shape": {
+      "de": "Welcher Gegenstand passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_rule": {
+      "de": "Was gehört nicht zu den Himmelskörpern?",
+      "en": "Which does not belong with the objects in the sky?",
+      "ru": "Что лишнее среди небесных тел?"
+    },
+    "math_09": {
+      "de": "Wie viele Bienen siehst du?",
+      "en": "How many bees can you see?",
+      "ru": "Сколько пчёл ты видишь?"
+    },
+    "math_10": {
+      "de": "Wie viele Fische siehst du?",
+      "en": "How many fish can you see?",
+      "ru": "Сколько рыб ты видишь?"
+    },
+    "math_11": {
+      "de": "Wie viele Blumen siehst du?",
+      "en": "How many flowers can you see?",
+      "ru": "Сколько цветов ты видишь?"
+    },
+    "math_12": {
+      "de": "Wie viele Blätter siehst du?",
+      "en": "How many leaves can you see?",
+      "ru": "Сколько листьев ты видишь?"
+    },
+    "math_13": {
+      "de": "Wie viele Sterne siehst du?",
+      "en": "How many stars can you see?",
+      "ru": "Сколько звёзд ты видишь?"
+    },
+    "math_14": {
+      "de": "Wie viele Äpfel siehst du?",
+      "en": "How many apples can you see?",
+      "ru": "Сколько яблок ты видишь?"
+    },
+    "math_15": {
+      "de": "2 und 2. Wie viele zusammen?",
+      "en": "2 and 2. How many altogether?",
+      "ru": "2 и 2. Сколько всего?"
+    },
+    "math_16": {
+      "de": "4 und 3. Wie viele zusammen?",
+      "en": "4 and 3. How many altogether?",
+      "ru": "4 и 3. Сколько всего?"
+    },
+    "math_17": {
+      "de": "5 und 4. Wie viele zusammen?",
+      "en": "5 and 4. How many altogether?",
+      "ru": "5 и 4. Сколько всего?"
+    },
+    "math_18": {
+      "de": "6 und 2. Wie viele zusammen?",
+      "en": "6 and 2. How many altogether?",
+      "ru": "6 и 2. Сколько всего?"
+    },
+    "math_19": {
+      "de": "8 und 3. Wie viele zusammen?",
+      "en": "8 and 3. How many altogether?",
+      "ru": "8 и 3. Сколько всего?"
+    },
+    "math_20": {
+      "de": "10 und 5. Wie viele zusammen?",
+      "en": "10 and 5. How many altogether?",
+      "ru": "10 и 5. Сколько всего?"
+    },
+    "math_21": {
+      "de": "9 und 6. Wie viele zusammen?",
+      "en": "9 and 6. How many altogether?",
+      "ru": "9 и 6. Сколько всего?"
+    },
+    "math_22": {
+      "de": "12 und 7. Wie viele zusammen?",
+      "en": "12 and 7. How many altogether?",
+      "ru": "12 и 7. Сколько всего?"
+    },
+    "math_23": {
+      "de": "5 sind da. 2 gehen weg. Wie viele bleiben?",
+      "en": "There are 5. Take away 2. How many remain?",
+      "ru": "Было 5. Убрали 2. Сколько осталось?"
+    },
+    "math_24": {
+      "de": "8 sind da. 4 gehen weg. Wie viele bleiben?",
+      "en": "There are 8. Take away 4. How many remain?",
+      "ru": "Было 8. Убрали 4. Сколько осталось?"
+    },
+    "math_25": {
+      "de": "9 sind da. 2 gehen weg. Wie viele bleiben?",
+      "en": "There are 9. Take away 2. How many remain?",
+      "ru": "Было 9. Убрали 2. Сколько осталось?"
+    },
+    "math_26": {
+      "de": "10 sind da. 1 gehen weg. Wie viele bleiben?",
+      "en": "There are 10. Take away 1. How many remain?",
+      "ru": "Было 10. Убрали 1. Сколько осталось?"
+    },
+    "math_27": {
+      "de": "12 sind da. 3 gehen weg. Wie viele bleiben?",
+      "en": "There are 12. Take away 3. How many remain?",
+      "ru": "Было 12. Убрали 3. Сколько осталось?"
+    },
+    "math_28": {
+      "de": "14 sind da. 4 gehen weg. Wie viele bleiben?",
+      "en": "There are 14. Take away 4. How many remain?",
+      "ru": "Было 14. Убрали 4. Сколько осталось?"
+    },
+    "math_29": {
+      "de": "16 sind da. 6 gehen weg. Wie viele bleiben?",
+      "en": "There are 16. Take away 6. How many remain?",
+      "ru": "Было 16. Убрали 6. Сколько осталось?"
+    },
+    "math_30": {
+      "de": "20 sind da. 5 gehen weg. Wie viele bleiben?",
+      "en": "There are 20. Take away 5. How many remain?",
+      "ru": "Было 20. Убрали 5. Сколько осталось?"
+    },
+    "math_31": {
+      "de": "2 sind da. Wie viele fehlen bis 5?",
+      "en": "There are 2. How many more make 5?",
+      "ru": "Есть 2. Сколько не хватает до 5?"
+    },
+    "math_32": {
+      "de": "6 sind da. Wie viele fehlen bis 10?",
+      "en": "There are 6. How many more make 10?",
+      "ru": "Есть 6. Сколько не хватает до 10?"
+    },
+    "math_33": {
+      "de": "7 sind da. Wie viele fehlen bis 10?",
+      "en": "There are 7. How many more make 10?",
+      "ru": "Есть 7. Сколько не хватает до 10?"
+    },
+    "math_34": {
+      "de": "8 sind da. Wie viele fehlen bis 12?",
+      "en": "There are 8. How many more make 12?",
+      "ru": "Есть 8. Сколько не хватает до 12?"
+    },
+    "math_35": {
+      "de": "10 sind da. Wie viele fehlen bis 15?",
+      "en": "There are 10. How many more make 15?",
+      "ru": "Есть 10. Сколько не хватает до 15?"
+    },
+    "math_36": {
+      "de": "14 sind da. Wie viele fehlen bis 20?",
+      "en": "There are 14. How many more make 20?",
+      "ru": "Есть 14. Сколько не хватает до 20?"
+    },
+    "math_37": {
+      "de": "Wo sind mehr?",
+      "en": "Which group has more?",
+      "ru": "Где больше?"
+    },
+    "math_38": {
+      "de": "Wo sind mehr?",
+      "en": "Which group has more?",
+      "ru": "Где больше?"
+    },
+    "math_39": {
+      "de": "Wo sind mehr?",
+      "en": "Which group has more?",
+      "ru": "Где больше?"
+    },
+    "math_40": {
+      "de": "Wo sind mehr?",
+      "en": "Which group has more?",
+      "ru": "Где больше?"
+    },
+    "german_09": {
+      "de": "Biene. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Biene. Which letter does it start with?",
+      "ru": "Немецкое слово: Biene. С какой буквы его пишут?"
+    },
+    "german_10": {
+      "de": "Frosch. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Frosch. Which letter does it start with?",
+      "ru": "Немецкое слово: Frosch. С какой буквы его пишут?"
+    },
+    "german_11": {
+      "de": "Katze. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Katze. Which letter does it start with?",
+      "ru": "Немецкое слово: Katze. С какой буквы его пишут?"
+    },
+    "german_12": {
+      "de": "Nest. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Nest. Which letter does it start with?",
+      "ru": "Немецкое слово: Nest. С какой буквы его пишут?"
+    },
+    "german_13": {
+      "de": "Wurm. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Wurm. Which letter does it start with?",
+      "ru": "Немецкое слово: Wurm. С какой буквы его пишут?"
+    },
+    "german_14": {
+      "de": "Wasser. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Wasser. Which letter does it start with?",
+      "ru": "Немецкое слово: Wasser. С какой буквы его пишут?"
+    },
+    "german_15": {
+      "de": "Salz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Salz. Which letter does it start with?",
+      "ru": "Немецкое слово: Salz. С какой буквы его пишут?"
+    },
+    "german_16": {
+      "de": "Sand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Sand. Which letter does it start with?",
+      "ru": "Немецкое слово: Sand. С какой буквы его пишут?"
+    },
+    "german_17": {
+      "de": "Holz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Holz. Which letter does it start with?",
+      "ru": "Немецкое слово: Holz. С какой буквы его пишут?"
+    },
+    "german_18": {
+      "de": "Nase. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Nase. Which letter does it start with?",
+      "ru": "Немецкое слово: Nase. С какой буквы его пишут?"
+    },
+    "german_19": {
+      "de": "Hand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Hand. Which letter does it start with?",
+      "ru": "Немецкое слово: Hand. С какой буквы его пишут?"
+    },
+    "german_20": {
+      "de": "Herz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
+      "en": "German word: Herz. Which letter does it start with?",
+      "ru": "Немецкое слово: Herz. С какой буквы его пишут?"
+    },
+    "german_21": {
+      "de": "Schmetterling. Wie viele Silben hörst du?",
+      "en": "German word: Schmetterling. How many syllables can you hear?",
+      "ru": "Немецкое слово: Schmetterling. Сколько слогов ты слышишь?"
+    },
+    "german_22": {
+      "de": "Schildkröte. Wie viele Silben hörst du?",
+      "en": "German word: Schildkröte. How many syllables can you hear?",
+      "ru": "Немецкое слово: Schildkröte. Сколько слогов ты слышишь?"
+    },
+    "german_23": {
+      "de": "Batterie. Wie viele Silben hörst du?",
+      "en": "German word: Batterie. How many syllables can you hear?",
+      "ru": "Немецкое слово: Batterie. Сколько слогов ты слышишь?"
+    },
+    "german_24": {
+      "de": "Papier. Wie viele Silben hörst du?",
+      "en": "German word: Papier. How many syllables can you hear?",
+      "ru": "Немецкое слово: Papier. Сколько слогов ты слышишь?"
+    },
+    "german_25": {
+      "de": "Seife. Wie viele Silben hörst du?",
+      "en": "German word: Seife. How many syllables can you hear?",
+      "ru": "Немецкое слово: Seife. Сколько слогов ты слышишь?"
+    },
+    "german_26": {
+      "de": "Auge. Wie viele Silben hörst du?",
+      "en": "German word: Auge. How many syllables can you hear?",
+      "ru": "Немецкое слово: Auge. Сколько слогов ты слышишь?"
+    },
+    "german_27": {
+      "de": "Gehirn. Wie viele Silben hörst du?",
+      "en": "German word: Gehirn. How many syllables can you hear?",
+      "ru": "Немецкое слово: Gehirn. Сколько слогов ты слышишь?"
+    },
+    "german_28": {
+      "de": "Magen. Wie viele Silben hörst du?",
+      "en": "German word: Magen. How many syllables can you hear?",
+      "ru": "Немецкое слово: Magen. Сколько слогов ты слышишь?"
+    },
+    "german_29": {
+      "de": "Wolke. Wie viele Silben hörst du?",
+      "en": "German word: Wolke. How many syllables can you hear?",
+      "ru": "Немецкое слово: Wolke. Сколько слогов ты слышишь?"
+    },
+    "german_30": {
+      "de": "Regen. Wie viele Silben hörst du?",
+      "en": "German word: Regen. How many syllables can you hear?",
+      "ru": "Немецкое слово: Regen. Сколько слогов ты слышишь?"
+    },
+    "german_31": {
+      "de": "Insel. Wie viele Silben hörst du?",
+      "en": "German word: Insel. How many syllables can you hear?",
+      "ru": "Немецкое слово: Insel. Сколько слогов ты слышишь?"
+    },
+    "german_32": {
+      "de": "Hammer. Wie viele Silben hörst du?",
+      "en": "German word: Hammer. How many syllables can you hear?",
+      "ru": "Немецкое слово: Hammer. Сколько слогов ты слышишь?"
+    },
+    "german_33": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_34": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_35": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_36": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_37": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_38": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_39": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "german_40": {
+      "de": "Welches deutsche Wort passt zum Bild?",
+      "en": "Which German word matches the picture?",
+      "ru": "Какое немецкое слово подходит к картинке?"
+    },
+    "logic_09": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_10": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_11": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_12": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_13": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_14": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_15": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_16": {
+      "de": "Was kommt als Nächstes?",
+      "en": "What comes next?",
+      "ru": "Что дальше?"
+    },
+    "logic_17": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_18": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_19": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_20": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_21": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_22": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_23": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_24": {
+      "de": "Was passt zum Schatten?",
+      "en": "What matches the shadow?",
+      "ru": "Что подходит к тени?"
+    },
+    "logic_25": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_26": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_27": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_28": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_29": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_30": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_31": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_32": {
+      "de": "Welches Bild passt nicht zur gezeigten Gruppe?",
+      "en": "Which picture does not belong with this group?",
+      "ru": "Какая картинка не подходит к этой группе?"
+    },
+    "logic_33": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_34": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_35": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_36": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_37": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_38": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_39": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "logic_40": {
+      "de": "Welche Zahl kommt als Nächstes?",
+      "en": "Which number comes next?",
+      "ru": "Какое число следующее?"
+    },
+    "physics_01": {
+      "de": "Was lässt ein Fahrrad rollen?",
+      "en": "What lets a bicycle roll?",
+      "ru": "Что помогает велосипеду катиться?"
+    },
+    "physics_02": {
+      "de": "Womit schneidest du Papier?",
+      "en": "What cuts paper?",
+      "ru": "Чем режут бумагу?"
+    },
+    "physics_03": {
+      "de": "Womit schlägt man einen Nagel ein?",
+      "en": "What drives a nail into wood?",
+      "ru": "Чем забивают гвоздь в дерево?"
+    },
+    "physics_04": {
+      "de": "Was dreht eine Schraube?",
+      "en": "What turns a screw?",
+      "ru": "Чем поворачивают винт?"
+    },
+    "physics_05": {
+      "de": "Was zieht ein Magnet an: Eisen, Holz oder Papier?",
+      "en": "What does a magnet attract: iron, wood or paper?",
+      "ru": "Что притягивает магнит: железо, дерево или бумагу?"
+    },
+    "physics_06": {
+      "de": "Was führt einen Weg über einen Fluss?",
+      "en": "What carries a path across a river?",
+      "ru": "Что проводит дорогу через реку?"
+    },
+    "physics_07": {
+      "de": "Was macht eine dunkle Ecke hell?",
+      "en": "What lights up a dark corner?",
+      "ru": "Что освещает тёмный угол?"
+    },
+    "physics_08": {
+      "de": "Was versorgt eine Taschenlampe mit Energie?",
+      "en": "What supplies energy to a battery-powered torch?",
+      "ru": "Что даёт энергию карманному фонарику?"
+    },
+    "physics_09": {
+      "de": "Was schützt beim Radfahren den Kopf?",
+      "en": "What protects your head when cycling?",
+      "ru": "Что защищает голову при езде на велосипеде?"
+    },
+    "physics_10": {
+      "de": "Was hat Zähne und überträgt Drehbewegungen?",
+      "en": "What has teeth and passes on a turning movement?",
+      "ru": "Что имеет зубцы и передаёт вращение?"
+    },
+    "physics_11": {
+      "de": "Welches Gerät kippt um einen Drehpunkt?",
+      "en": "Which device tilts around a pivot?",
+      "ru": "Какое устройство качается вокруг опоры?"
+    },
+    "physics_12": {
+      "de": "Was lenkt ein Seil beim Hochziehen um?",
+      "en": "What changes a rope's direction when lifting?",
+      "ru": "Что меняет направление верёвки при подъёме?"
+    },
+    "physics_13": {
+      "de": "Wodurch kannst du gut hindurchsehen?",
+      "en": "Which material can you see through clearly?",
+      "ru": "Сквозь какой материал хорошо видно?"
+    },
+    "physics_14": {
+      "de": "Welcher Baustoff kommt von Bäumen?",
+      "en": "Which building material comes from trees?",
+      "ru": "Какой строительный материал получают из деревьев?"
+    },
+    "physics_15": {
+      "de": "Welches Material eignet sich für ein weiches Tuch?",
+      "en": "Which material makes a soft cloth?",
+      "ru": "Какой материал подходит для мягкой ткани?"
+    },
+    "physics_16": {
+      "de": "Worauf kannst du einen Bauplan zeichnen?",
+      "en": "What can you draw a building plan on?",
+      "ru": "На чём можно нарисовать план постройки?"
+    },
+    "physics_17": {
+      "de": "Was hilft dir, Norden zu finden?",
+      "en": "What helps you find north?",
+      "ru": "Что помогает найти север?"
+    },
+    "physics_18": {
+      "de": "Was kann einen ruhenden Ball anschubsen?",
+      "en": "What can push a ball that is still?",
+      "ru": "Что может толкнуть неподвижный мяч?"
+    },
+    "physics_19": {
+      "de": "Was entsteht, wenn Eis gerade schmilzt?",
+      "en": "What forms when ice is melting?",
+      "ru": "Что образуется, когда лёд тает?"
+    },
+    "physics_20": {
+      "de": "Was wirft im Lampenlicht einen deutlichen Schatten: Holz, klares Glas oder klares Wasser?",
+      "en": "What casts a clear shadow in lamp light: wood, clear glass or clear water?",
+      "ru": "Что даёт отчётливую тень в свете лампы: дерево, прозрачное стекло или прозрачная вода?"
+    },
+    "physics_21": {
+      "de": "Was schwimmt meist: ein leichtes trockenes Holzstück, ein Eisenklotz oder Sand?",
+      "en": "What usually floats: a light dry piece of wood, an iron block or sand?",
+      "ru": "Что обычно плавает: лёгкая сухая деревяшка, железный брусок или песок?"
+    },
+    "physics_22": {
+      "de": "Wodurch kann Licht gut hindurchscheinen?",
+      "en": "Which material lets light pass through clearly?",
+      "ru": "Какой материал хорошо пропускает свет?"
+    },
+    "physics_23": {
+      "de": "Welcher Körperteil nimmt Schallwellen wahr?",
+      "en": "Which body part detects sound waves?",
+      "ru": "Какая часть тела воспринимает звуковые волны?"
+    },
+    "physics_24": {
+      "de": "Was dämpft Klopfgeräusche auf einem Tisch am besten: ein weiches Tuch, Glas oder Eisen?",
+      "en": "What best softens tapping sounds on a table: a soft cloth, glass or iron?",
+      "ru": "Что лучше приглушает стук по столу: мягкая ткань, стекло или железо?"
+    },
+    "physics_25": {
+      "de": "Was erzeugt selbst Licht: Sonne, Mond oder Wolke?",
+      "en": "Which makes its own light: the sun, the moon or a cloud?",
+      "ru": "Что само создаёт свет: Солнце, Луна или облако?"
+    },
+    "physics_26": {
+      "de": "Welcher dieser Stoffe hat eine feste eigene Form?",
+      "en": "Which of these has its own solid shape?",
+      "ru": "Что из этого имеет собственную твёрдую форму?"
+    },
+    "physics_27": {
+      "de": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+      "en": "What forms invisibly when water evaporates?",
+      "ru": "Что незаметно образуется, когда вода испаряется?"
+    },
+    "physics_28": {
+      "de": "Was gibt Licht und Wärme ab, durch die Eis draußen schmelzen kann?",
+      "en": "What gives off light and warmth that can melt ice outdoors?",
+      "ru": "Что излучает свет и тепло, от которых лёд на улице может растаять?"
+    },
+    "physics_29": {
+      "de": "Was zeigt Straßen und Wege als Zeichnung?",
+      "en": "What shows roads and paths in a drawing?",
+      "ru": "Что показывает дороги и тропинки на рисунке?"
+    },
+    "physics_30": {
+      "de": "Womit hörst du, ob eine Fahrradklingel klingelt?",
+      "en": "How do you hear a bicycle bell?",
+      "ru": "Чем ты слышишь велосипедный звонок?"
+    },
+    "physics_31": {
+      "de": "Welches Material ist für eine stabile Fahrrad-Radachse üblich?",
+      "en": "Which material is normally used for a strong bicycle wheel axle?",
+      "ru": "Из какого материала обычно делают прочную ось велосипедного колеса?"
+    },
+    "physics_32": {
+      "de": "Welches Bauwerk braucht tragfähige Stützen?",
+      "en": "Which structure needs strong supports?",
+      "ru": "Какому сооружению нужны прочные опоры?"
+    },
+    "physics_33": {
+      "de": "Was nimmt Wasser beim Abtrocknen gut auf: Stoff, Glas oder Eisen?",
+      "en": "What soaks up water well when drying: fabric, glass or iron?",
+      "ru": "Что хорошо впитывает воду при вытирании: ткань, стекло или железо?"
+    },
+    "physics_34": {
+      "de": "Was kann eine Solarzelle mit Energie versorgen?",
+      "en": "What supplies energy to a solar cell?",
+      "ru": "Что даёт энергию солнечной батарее?"
+    },
+    "physics_35": {
+      "de": "Was dreht sich an einem fahrenden Fahrrad?",
+      "en": "What turns on a moving bicycle?",
+      "ru": "Что вращается у едущего велосипеда?"
+    },
+    "physics_36": {
+      "de": "Woraus besteht eine durchsichtige Fensterscheibe?",
+      "en": "What is a transparent window pane made of?",
+      "ru": "Из чего делают прозрачное оконное стекло?"
+    },
+    "physics_37": {
+      "de": "Welches Material kannst du mit einer Stoffschere schneiden?",
+      "en": "Which material can fabric scissors cut?",
+      "ru": "Какой материал можно разрезать ножницами для ткани?"
+    },
+    "physics_38": {
+      "de": "Welcher Teil einer Seilrolle dreht sich?",
+      "en": "Which part of a pulley turns?",
+      "ru": "Какая часть блока вращается?"
+    },
+    "physics_39": {
+      "de": "Was gehört in das Batteriefach einer Spielzeuglampe?",
+      "en": "What goes in a toy lamp's battery compartment?",
+      "ru": "Что кладут в отсек питания игрушечного фонарика?"
+    },
+    "physics_40": {
+      "de": "Was hat einen Nordpol und einen Südpol?",
+      "en": "What has a north pole and a south pole?",
+      "ru": "У чего есть северный и южный полюс?"
+    },
+    "biology_01": {
+      "de": "Wo kann ein Fisch mit Kiemen atmen?",
+      "en": "Where can a fish breathe with gills?",
+      "ru": "Где рыба дышит жабрами?"
+    },
+    "biology_02": {
+      "de": "Wo brütet ein Amselvogel seine Eier aus?",
+      "en": "Where does a blackbird hatch its eggs?",
+      "ru": "Где дрозд высиживает яйца?"
+    },
+    "biology_03": {
+      "de": "Wo findet eine Biene Nektar?",
+      "en": "Where does a bee find nectar?",
+      "ru": "Где пчела находит нектар?"
+    },
+    "biology_04": {
+      "de": "Womit nimmt ein Baum Wasser aus dem Boden auf?",
+      "en": "What takes water from the soil into a tree?",
+      "ru": "Чем дерево впитывает воду из земли?"
+    },
+    "biology_05": {
+      "de": "Was braucht ein Samen zum Keimen?",
+      "en": "What does a seed need to start growing?",
+      "ru": "Что нужно семени для прорастания?"
+    },
+    "biology_06": {
+      "de": "Was liefert einer grünen Pflanze Licht zum Wachsen?",
+      "en": "What gives a green plant light to grow?",
+      "ru": "Что даёт зелёному растению свет для роста?"
+    },
+    "biology_07": {
+      "de": "Welches Tier entsteht aus einer Raupe?",
+      "en": "Which animal develops from a caterpillar?",
+      "ru": "Какое животное вырастает из гусеницы?"
+    },
+    "biology_08": {
+      "de": "Welches Tier wächst aus einer Kaulquappe heran?",
+      "en": "Which animal grows from a tadpole?",
+      "ru": "Кто вырастает из головастика?"
+    },
+    "biology_09": {
+      "de": "Wer kann aus einem Hühnerei schlüpfen?",
+      "en": "What can hatch from a hen's egg?",
+      "ru": "Кто может вылупиться из куриного яйца?"
+    },
+    "biology_10": {
+      "de": "Welches Tier ist ein Säugetier?",
+      "en": "Which animal is a mammal?",
+      "ru": "Кто из них млекопитающее?"
+    },
+    "biology_11": {
+      "de": "Wer hat Federn?",
+      "en": "Which animal has feathers?",
+      "ru": "У кого есть перья?"
+    },
+    "biology_12": {
+      "de": "Wer trägt einen festen Panzer?",
+      "en": "Which animal has a hard shell?",
+      "ru": "У кого есть твёрдый панцирь?"
+    },
+    "biology_13": {
+      "de": "Welches Tier lockert Erde beim Graben?",
+      "en": "Which animal loosens soil as it burrows?",
+      "ru": "Кто рыхлит землю, прокладывая ходы?"
+    },
+    "biology_14": {
+      "de": "Woraus kann ein neuer Apfelbaum wachsen?",
+      "en": "What can grow into a new apple tree?",
+      "ru": "Из чего может вырасти новая яблоня?"
+    },
+    "biology_15": {
+      "de": "Wer kann Blüten bestäuben?",
+      "en": "Which animal can pollinate flowers?",
+      "ru": "Кто может опылять цветки?"
+    },
+    "biology_16": {
+      "de": "Welche grünen Pflanzenteile bilden hier die Baumkrone?",
+      "en": "Which green plant parts form the tree crown here?",
+      "ru": "Какие зелёные части растения образуют здесь крону дерева?"
+    },
+    "biology_17": {
+      "de": "Was ist ein Pilz und keine Pflanze?",
+      "en": "Which is a fungus rather than a plant?",
+      "ru": "Что относится к грибам, а не к растениям?"
+    },
+    "biology_18": {
+      "de": "Was braucht eine Katze täglich zum Trinken?",
+      "en": "What does a cat need to drink every day?",
+      "ru": "Что кошке нужно пить каждый день?"
+    },
+    "biology_19": {
+      "de": "Was frisst eine Amsel zum Beispiel?",
+      "en": "What might a blackbird eat?",
+      "ru": "Что, например, ест дрозд?"
+    },
+    "biology_20": {
+      "de": "Wo kann ein Schmetterling Nektar trinken?",
+      "en": "Where can a butterfly drink nectar?",
+      "ru": "Где бабочка может пить нектар?"
+    },
+    "biology_21": {
+      "de": "Welches dieser Tiere lebt im Wasser?",
+      "en": "Which of these animals lives in water?",
+      "ru": "Кто из этих животных живёт в воде?"
+    },
+    "biology_22": {
+      "de": "Wo legt ein Grasfrosch seine Eier ab?",
+      "en": "Where does a common frog lay its eggs?",
+      "ru": "Где травяная лягушка откладывает икру?"
+    },
+    "biology_23": {
+      "de": "Was wächst bei einem keimenden Samen zuerst in den Boden?",
+      "en": "What grows into the soil first when a seed sprouts?",
+      "ru": "Что первым растёт в землю при прорастании семени?"
+    },
+    "biology_24": {
+      "de": "Was nehmen Wurzeln auf?",
+      "en": "What do roots absorb?",
+      "ru": "Что впитывают корни?"
+    },
+    "biology_25": {
+      "de": "Wo stehen viele Bäume dicht beieinander?",
+      "en": "Where do many trees grow close together?",
+      "ru": "Где много деревьев растёт близко друг к другу?"
+    },
+    "biology_26": {
+      "de": "Welche Teile der Baumkrone werden im Herbst oft gelb oder rot?",
+      "en": "Which parts of the tree crown often turn yellow or red in autumn?",
+      "ru": "Какие части кроны дерева осенью часто становятся жёлтыми или красными?"
+    },
+    "biology_27": {
+      "de": "Wer hat einen Schnabel?",
+      "en": "Which animal has a beak?",
+      "ru": "У кого есть клюв?"
+    },
+    "biology_28": {
+      "de": "Welches dieser Tiere ist ein Insekt?",
+      "en": "Which of these animals is an insect?",
+      "ru": "Кто из этих животных насекомое?"
+    },
+    "biology_29": {
+      "de": "Woraus schlüpfen junge Schildkröten?",
+      "en": "What do young turtles hatch from?",
+      "ru": "Из чего вылупляются черепашки?"
+    },
+    "biology_30": {
+      "de": "Was kann nach der Blüte entstehen und neue Pflanzen hervorbringen?",
+      "en": "What can form after flowering and grow into new plants?",
+      "ru": "Что может появиться после цветения и дать новые растения?"
+    },
+    "biology_31": {
+      "de": "Womit hört eine Katze?",
+      "en": "What does a cat use to hear?",
+      "ru": "Чем кошка слышит?"
+    },
+    "biology_32": {
+      "de": "Wer ist ein Lebewesen: Maus, Papier oder Glas?",
+      "en": "Which is a living thing: a mouse, paper or glass?",
+      "ru": "Кто живой: мышь, бумага или стекло?"
+    },
+    "biology_33": {
+      "de": "Was lässt du beim Beobachten von Vogeleiern in Ruhe?",
+      "en": "What should you leave undisturbed when watching bird eggs?",
+      "ru": "Что нельзя тревожить, наблюдая за птичьими яйцами?"
+    },
+    "biology_34": {
+      "de": "Welcher Pflanzenteil verankert eine Blume im Boden?",
+      "en": "Which plant part holds a flower in the ground?",
+      "ru": "Какая часть растения удерживает цветок в земле?"
+    },
+    "biology_35": {
+      "de": "Eine Topfpflanze hat trockene Erde. Was kann ihr fehlen?",
+      "en": "A plant's soil is dry. What might it need?",
+      "ru": "Земля в горшке сухая. Чего может не хватать растению?"
+    },
+    "biology_36": {
+      "de": "Was hilft Bienen im Garten?",
+      "en": "What helps bees in a garden?",
+      "ru": "Что помогает пчёлам в саду?"
+    },
+    "biology_37": {
+      "de": "Was können Regenwürmer in die Erde ziehen?",
+      "en": "What can earthworms pull into the soil?",
+      "ru": "Что дождевые черви могут затаскивать в землю?"
+    },
+    "biology_38": {
+      "de": "Worin schwimmen Fische eines Teichs?",
+      "en": "What do pond fish swim in?",
+      "ru": "В чём плавают прудовые рыбы?"
+    },
+    "biology_39": {
+      "de": "Was kann aus einer Eichel wachsen?",
+      "en": "What can grow from an acorn?",
+      "ru": "Что может вырасти из жёлудя?"
+    },
+    "biology_40": {
+      "de": "Wer hat als erwachsenes Tier vier Flügel?",
+      "en": "Which adult animal has four wings?",
+      "ru": "У кого во взрослом состоянии четыре крыла?"
+    },
+    "chemistry_01": {
+      "de": "Was wird aus Eis, wenn es schmilzt?",
+      "en": "What does ice become when it melts?",
+      "ru": "Во что превращается лёд, когда тает?"
+    },
+    "chemistry_02": {
+      "de": "Was kann aus Wasser im Gefrierfach werden?",
+      "en": "What can water become in a freezer?",
+      "ru": "Во что вода может превратиться в морозильнике?"
+    },
+    "chemistry_03": {
+      "de": "Was ist bei Zimmertemperatur flüssig?",
+      "en": "Which is liquid at room temperature?",
+      "ru": "Что жидкое при комнатной температуре?"
+    },
+    "chemistry_04": {
+      "de": "Was ist bei Zimmertemperatur fest?",
+      "en": "Which is solid at room temperature?",
+      "ru": "Что твёрдое при комнатной температуре?"
+    },
+    "chemistry_05": {
+      "de": "Welches Gefäß hält Trinkwasser zuverlässig?",
+      "en": "Which container reliably holds drinking water?",
+      "ru": "Какая ёмкость надёжно удерживает питьевую воду?"
+    },
+    "chemistry_06": {
+      "de": "Was löst sich in Wasser: Salz, Sand oder Holz?",
+      "en": "What dissolves in water: salt, sand or wood?",
+      "ru": "Что растворяется в воде: соль, песок или дерево?"
+    },
+    "chemistry_07": {
+      "de": "Was bleibt als Körnchen sichtbar, wenn es in Wasser liegt?",
+      "en": "What stays visible as grains in water?",
+      "ru": "Что остаётся видимыми крупинками в воде?"
+    },
+    "chemistry_08": {
+      "de": "Was bildet mit Wasser oft zwei Schichten?",
+      "en": "What often forms two layers with water?",
+      "ru": "Что часто образует с водой два слоя?"
+    },
+    "chemistry_09": {
+      "de": "Welcher Gegenstand zieht Eisen aus einer Mischung an?",
+      "en": "Which object attracts iron out of a mixture?",
+      "ru": "Какой предмет притягивает железо из смеси?"
+    },
+    "chemistry_10": {
+      "de": "Was entsteht unsichtbar, wenn Wasser verdunstet?",
+      "en": "What forms invisibly when water evaporates?",
+      "ru": "Что образуется незаметно, когда вода испаряется?"
+    },
+    "chemistry_11": {
+      "de": "Was bilden kleine Tropfen an einem kalten Fenster?",
+      "en": "What are the little drops on a cold window made of?",
+      "ru": "Из чего состоят капельки на холодном окне?"
+    },
+    "chemistry_12": {
+      "de": "Welcher Zustand von Wasser ist fest?",
+      "en": "Which form of water is solid?",
+      "ru": "Какое состояние воды твёрдое?"
+    },
+    "chemistry_13": {
+      "de": "Welches Zeichen steht für gasförmiges Wasser?",
+      "en": "Which symbol stands for water as a gas?",
+      "ru": "Какой значок обозначает воду в газообразном состоянии?"
+    },
+    "chemistry_14": {
+      "de": "Worin löst sich etwas Kochsalz gut?",
+      "en": "What dissolves a little table salt well?",
+      "ru": "В чём хорошо растворяется немного поваренной соли?"
+    },
+    "chemistry_15": {
+      "de": "Welches Material ist durchsichtig?",
+      "en": "Which material is transparent?",
+      "ru": "Какой материал прозрачный?"
+    },
+    "chemistry_16": {
+      "de": "Welches Material saugt Wasser leicht auf?",
+      "en": "Which material easily soaks up water?",
+      "ru": "Какой материал легко впитывает воду?"
+    },
+    "chemistry_17": {
+      "de": "Was lässt sich weich zusammenfalten?",
+      "en": "What can be softly folded up?",
+      "ru": "Что можно мягко сложить?"
+    },
+    "chemistry_18": {
+      "de": "Was kann Wärme gut weiterleiten?",
+      "en": "Which material can conduct heat well?",
+      "ru": "Какой материал хорошо проводит тепло?"
+    },
+    "chemistry_19": {
+      "de": "Welches Material zeigt oft Jahresringe?",
+      "en": "Which material often shows growth rings?",
+      "ru": "На каком материале часто видны годичные кольца?"
+    },
+    "chemistry_20": {
+      "de": "Was hilft, Fett mit Wasser zu vermischen und abzuwaschen?",
+      "en": "What helps grease mix with water so it can be washed away?",
+      "ru": "Что помогает смешать жир с водой и смыть его?"
+    },
+    "chemistry_21": {
+      "de": "Welcher Stoff wird oft zum Kochen verwendet und bleibt flüssig?",
+      "en": "Which substance is often used in cooking and stays liquid?",
+      "ru": "Какое вещество часто используют при готовке и оно остаётся жидким?"
+    },
+    "chemistry_22": {
+      "de": "Was besteht hier aus vielen kleinen Körnern?",
+      "en": "Which of these consists of many little grains?",
+      "ru": "Что здесь состоит из множества маленьких крупинок?"
+    },
+    "chemistry_23": {
+      "de": "Was liefert Wärme, die draußen Eis schmelzen lässt?",
+      "en": "What provides warmth that can melt ice outdoors?",
+      "ru": "Что даёт тепло и может растопить лёд на улице?"
+    },
+    "chemistry_24": {
+      "de": "Wo sammeln sich viele winzige Wassertropfen am Himmel?",
+      "en": "Where do many tiny water drops gather in the sky?",
+      "ru": "Где в небе собирается много крошечных капель воды?"
+    },
+    "chemistry_25": {
+      "de": "Woraus bestehen Regentropfen hauptsächlich?",
+      "en": "What are raindrops mainly made of?",
+      "ru": "Из чего в основном состоят капли дождя?"
+    },
+    "chemistry_26": {
+      "de": "Woraus bestehen Schneeflocken?",
+      "en": "What are snowflakes made of?",
+      "ru": "Из чего состоят снежинки?"
+    },
+    "chemistry_27": {
+      "de": "Was passt sich der Form eines Glases an?",
+      "en": "What takes the shape of a glass?",
+      "ru": "Что принимает форму стакана?"
+    },
+    "chemistry_28": {
+      "de": "Was behält auf dem Teller zunächst seine eigene Form?",
+      "en": "What keeps its own shape on a plate before warming up?",
+      "ru": "Что сначала сохраняет свою форму на тарелке, пока не нагрелось?"
+    },
+    "chemistry_29": {
+      "de": "Welches Material kann splittern, wenn es herunterfällt?",
+      "en": "Which material can shatter if dropped?",
+      "ru": "Какой материал может разбиться на осколки при падении?"
+    },
+    "chemistry_30": {
+      "de": "Welches Mittel ist zum Händewaschen mit Wasser gedacht?",
+      "en": "Which product is intended for washing hands with water?",
+      "ru": "Какое средство предназначено для мытья рук с водой?"
+    },
+    "chemistry_31": {
+      "de": "Was bleibt zurück, wenn Salzwasser ganz verdunstet?",
+      "en": "What is left when salt water completely evaporates?",
+      "ru": "Что остаётся, когда солёная вода полностью испаряется?"
+    },
+    "chemistry_32": {
+      "de": "Welcher Gegenstand zieht Eisenstücke aus Sand an?",
+      "en": "Which object attracts iron pieces out of sand?",
+      "ru": "Какой предмет притягивает кусочки железа из песка?"
+    },
+    "chemistry_33": {
+      "de": "Welcher Stoff fließt aus einer umgekippten offenen Flasche?",
+      "en": "Which substance flows from a tipped open bottle?",
+      "ru": "Какое вещество вытекает из наклонённой открытой бутылки?"
+    },
+    "chemistry_34": {
+      "de": "Was wird häufig aus Pflanzenfasern gemacht?",
+      "en": "What is often made from plant fibres?",
+      "ru": "Что часто делают из растительных волокон?"
+    },
+    "chemistry_35": {
+      "de": "Was ist dieselbe Substanz wie Wasser, nur fest?",
+      "en": "What is the same substance as water, but solid?",
+      "ru": "Что является тем же веществом, что вода, только твёрдым?"
+    },
+    "chemistry_36": {
+      "de": "Woraus wird gewöhnliches Glas hauptsächlich hergestellt?",
+      "en": "What is ordinary glass mainly made from?",
+      "ru": "Из чего в основном делают обычное стекло?"
+    },
+    "chemistry_37": {
+      "de": "Welches Material besteht aus gewebten Fäden?",
+      "en": "Which material can be made from woven threads?",
+      "ru": "Какой материал можно сделать из переплетённых нитей?"
+    },
+    "chemistry_38": {
+      "de": "Womit spülst du Seife von den Händen ab?",
+      "en": "What rinses soap off your hands?",
+      "ru": "Чем смывают мыло с рук?"
+    },
+    "chemistry_39": {
+      "de": "Was bleibt in Wasser bei Zimmertemperatur fest: Glas, Eis oder Salz?",
+      "en": "What stays solid in water at room temperature: glass, ice or salt?",
+      "ru": "Что остаётся твёрдым в воде при комнатной температуре: стекло, лёд или соль?"
+    },
+    "chemistry_40": {
+      "de": "Was entsteht aus dem Eiswürfel, wenn er im Glas schmilzt?",
+      "en": "What does an ice cube become when it melts in a glass?",
+      "ru": "Во что превращается кубик льда, когда тает в стакане?"
+    },
+    "body_01": {
+      "de": "Womit nimmst du Licht und Farben wahr?",
+      "en": "Which body part detects light and colours?",
+      "ru": "Чем воспринимают свет и цвета?"
+    },
+    "body_02": {
+      "de": "Welcher Körperteil nimmt Schall auf?",
+      "en": "Which body part detects sounds?",
+      "ru": "Какая часть тела воспринимает звуки?"
+    },
+    "body_03": {
+      "de": "Womit riechen Menschen?",
+      "en": "What do people use to smell?",
+      "ru": "Чем люди ощущают запахи?"
+    },
+    "body_04": {
+      "de": "Womit kannst du süß und sauer schmecken?",
+      "en": "What helps you taste sweet and sour?",
+      "ru": "Что помогает различать сладкий и кислый вкус?"
+    },
+    "body_05": {
+      "de": "Womit kannst du fühlen, ob ein Tuch weich ist?",
+      "en": "What can feel whether a cloth is soft?",
+      "ru": "Чем можно почувствовать, мягкая ли ткань?"
+    },
+    "body_06": {
+      "de": "Welches Organ pumpt Blut durch den Körper?",
+      "en": "Which organ pumps blood around the body?",
+      "ru": "Какой орган перекачивает кровь по телу?"
+    },
+    "body_07": {
+      "de": "Welche Organe nehmen beim Atmen Luft auf?",
+      "en": "Which organs take in air when you breathe?",
+      "ru": "Какие органы принимают воздух при дыхании?"
+    },
+    "body_08": {
+      "de": "Welches Organ verarbeitet Sinneseindrücke?",
+      "en": "Which organ processes information from your senses?",
+      "ru": "Какой орган обрабатывает сигналы органов чувств?"
+    },
+    "body_09": {
+      "de": "Was bildet das feste Gerüst im Körper?",
+      "en": "What forms the body's hard framework?",
+      "ru": "Что образует твёрдую опору тела?"
+    },
+    "body_10": {
+      "de": "Womit zerkleinerst du Essen im Mund?",
+      "en": "What breaks food into smaller pieces in your mouth?",
+      "ru": "Чем измельчают пищу во рту?"
+    },
+    "body_11": {
+      "de": "Wohin gelangt Essen nach der Speiseröhre?",
+      "en": "Where does food go after the food pipe?",
+      "ru": "Куда попадает пища после пищевода?"
+    },
+    "body_12": {
+      "de": "Was hilft, die Hände sauber zu waschen?",
+      "en": "What helps wash your hands clean?",
+      "ru": "Что помогает хорошо вымыть руки?"
+    },
+    "body_13": {
+      "de": "Was eignet sich als Durstlöscher?",
+      "en": "What is a good drink when you are thirsty?",
+      "ru": "Что хорошо утоляет жажду?"
+    },
+    "body_14": {
+      "de": "Welches Bild steht hier für die Nacht und die Schlafenszeit?",
+      "en": "Which picture here stands for nighttime and bedtime?",
+      "ru": "Какая картинка здесь обозначает ночь и время сна?"
+    },
+    "body_15": {
+      "de": "Welcher Körperteil trägt oft einen Schuh?",
+      "en": "Which body part often wears a shoe?",
+      "ru": "На какую часть тела обычно надевают обувь?"
+    },
+    "body_16": {
+      "de": "Was schützt den Kopf beim Fahrradfahren?",
+      "en": "What protects your head when cycling?",
+      "ru": "Что защищает голову на велосипеде?"
+    },
+    "body_17": {
+      "de": "Welcher Sinn braucht Schutz vor sehr lauten Tönen?",
+      "en": "Which sense needs protection from very loud sounds?",
+      "ru": "Какое чувство нужно защищать от очень громких звуков?"
+    },
+    "body_18": {
+      "de": "Welchen Körperteil schützen Augenlider?",
+      "en": "Which body part do eyelids protect?",
+      "ru": "Что защищают веки?"
+    },
+    "body_19": {
+      "de": "Welcher Körperteil hilft, eingeatmete Luft zu filtern?",
+      "en": "Which body part helps filter the air you breathe in?",
+      "ru": "Что помогает очищать вдыхаемый воздух?"
+    },
+    "body_20": {
+      "de": "Was fällt bei vielen Kindern aus und wächst neu nach?",
+      "en": "What do many children lose and replace as they grow?",
+      "ru": "Что у многих детей выпадает и заменяется новым?"
+    },
+    "body_21": {
+      "de": "Welcher Körperteil hat normalerweise fünf Finger?",
+      "en": "Which body part usually has five fingers?",
+      "ru": "У какой части тела обычно пять пальцев?"
+    },
+    "body_22": {
+      "de": "Was schlägt meist schneller, wenn du dich anstrengst?",
+      "en": "What usually beats faster when you exercise?",
+      "ru": "Что обычно бьётся быстрее при физической нагрузке?"
+    },
+    "body_23": {
+      "de": "Wohin strömt Luft beim Einatmen?",
+      "en": "Where does air go when you breathe in?",
+      "ru": "Куда поступает воздух при вдохе?"
+    },
+    "body_24": {
+      "de": "Wo werden viele Erinnerungen verarbeitet?",
+      "en": "Where are many memories processed?",
+      "ru": "Где обрабатывается много воспоминаний?"
+    },
+    "body_25": {
+      "de": "Was schützt das Gehirn als Schädel?",
+      "en": "What protects the brain as the skull?",
+      "ru": "Что образует череп и защищает мозг?"
+    },
+    "body_26": {
+      "de": "Welches Organ mischt und verdaut Nahrung weiter?",
+      "en": "Which organ mixes food and continues digestion?",
+      "ru": "Какой орган перемешивает пищу и продолжает пищеварение?"
+    },
+    "body_27": {
+      "de": "Welcher Körperteil nimmt beim Essen Duftstoffe wahr?",
+      "en": "Which part of the body senses smells while you eat?",
+      "ru": "Какая часть тела чувствует запахи во время еды?"
+    },
+    "body_28": {
+      "de": "Was nimmst du zum Händewaschen vor dem Essen?",
+      "en": "What do you use to wash your hands before eating?",
+      "ru": "Чем моют руки перед едой?"
+    },
+    "body_29": {
+      "de": "Was davon ist ein Lebensmittel?",
+      "en": "Which of these is food?",
+      "ru": "Что из этого является едой?"
+    },
+    "body_30": {
+      "de": "Was befindet sich im Fuß und gibt Halt?",
+      "en": "What is inside a foot and gives it support?",
+      "ru": "Что находится внутри стопы и даёт ей опору?"
+    },
+    "body_31": {
+      "de": "Welches Organ verarbeitet die Signale der Ohren, damit du Geräusche erkennst?",
+      "en": "Which organ processes signals from your ears so you recognize sounds?",
+      "ru": "Какой орган обрабатывает сигналы от ушей, чтобы ты узнавал звуки?"
+    },
+    "body_32": {
+      "de": "Wohin senden die Augen ihre Signale?",
+      "en": "Where do eyes send their signals?",
+      "ru": "Куда глаза посылают сигналы?"
+    },
+    "body_33": {
+      "de": "Welches Organ bringt Sauerstoff aus der Luft ins Blut?",
+      "en": "Which organ brings oxygen from air into the blood?",
+      "ru": "Какой орган передаёт кислород из воздуха в кровь?"
+    },
+    "body_34": {
+      "de": "Welches Organ ist ein kräftiger Muskel in der Brust?",
+      "en": "Which organ is a strong muscle in the chest?",
+      "ru": "Какой орган — сильная мышца в груди?"
+    },
+    "body_35": {
+      "de": "Was fühlt sich meist weich und biegsam an?",
+      "en": "What usually feels soft and bendy?",
+      "ru": "Что обычно мягкое на ощупь и легко сгибается?"
+    },
+    "body_36": {
+      "de": "Welchen Körperteil reinigst du mit einer Zahnbürste?",
+      "en": "Which body part do you clean with a toothbrush?",
+      "ru": "Что чистят зубной щёткой?"
+    },
+    "body_37": {
+      "de": "Wodurch kannst du beim ruhigen Atmen Luft einziehen?",
+      "en": "What can you breathe through when resting?",
+      "ru": "Через что можно вдыхать воздух в покое?"
+    },
+    "body_38": {
+      "de": "Womit hörst du die Musik in diesem Spiel?",
+      "en": "What helps you hear this game's music?",
+      "ru": "Что помогает слышать музыку в этой игре?"
+    },
+    "body_39": {
+      "de": "Was braucht der Körper zum Trinken?",
+      "en": "What does the body need to drink?",
+      "ru": "Что нужно организму для питья?"
+    },
+    "body_40": {
+      "de": "Womit kannst du einen weichen Ball vorsichtig greifen?",
+      "en": "What can gently hold a soft ball?",
+      "ru": "Чем можно осторожно взять мягкий мяч?"
+    },
+    "geography_01": {
+      "de": "Was zeigt die Erde als kleine Kugel?",
+      "en": "What shows Earth as a small sphere?",
+      "ru": "Что показывает Землю в виде маленького шара?"
+    },
+    "geography_02": {
+      "de": "Welche Zeichnung auf einem flachen Blatt zeigt Orte und Wege von oben?",
+      "en": "Which drawing on a flat sheet shows places and paths from above?",
+      "ru": "Какой рисунок на плоском листе показывает места и дороги сверху?"
+    },
+    "geography_03": {
+      "de": "Welches Gerät hat eine Nadel, die nach Norden zeigt?",
+      "en": "Which instrument has a needle that points north?",
+      "ru": "У какого прибора есть стрелка, показывающая на север?"
+    },
+    "geography_04": {
+      "de": "Was ragt hoch über seine Umgebung hinaus?",
+      "en": "What rises high above the land around it?",
+      "ru": "Что высоко поднимается над окружающей местностью?"
+    },
+    "geography_05": {
+      "de": "Was fließt in einem Bett durch die Landschaft?",
+      "en": "What flows in a channel through the landscape?",
+      "ru": "Что течёт по руслу через местность?"
+    },
+    "geography_06": {
+      "de": "Was ist ganz von Wasser umgebenes Land?",
+      "en": "What is land surrounded by water on all sides?",
+      "ru": "Как называется суша, со всех сторон окружённая водой?"
+    },
+    "geography_07": {
+      "de": "Wo findest du sehr viel Salzwasser?",
+      "en": "Where can you find a very large amount of salt water?",
+      "ru": "Где находится очень много солёной воды?"
+    },
+    "geography_08": {
+      "de": "Wo fällt über lange Zeit sehr wenig Niederschlag?",
+      "en": "Where is there very little precipitation over a long time?",
+      "ru": "Где долгое время выпадает очень мало осадков?"
+    },
+    "geography_09": {
+      "de": "Wo wachsen viele Bäume zusammen?",
+      "en": "Where do many trees grow together?",
+      "ru": "Где много деревьев растёт вместе?"
+    },
+    "geography_10": {
+      "de": "Was kann aus Wolken zum Boden fallen?",
+      "en": "What can fall from clouds to the ground?",
+      "ru": "Что может падать из облаков на землю?"
+    },
+    "geography_11": {
+      "de": "Was fällt als Eiskristalle vom Himmel?",
+      "en": "What falls from the sky as ice crystals?",
+      "ru": "Что падает с неба в виде кристалликов льда?"
+    },
+    "geography_12": {
+      "de": "Was versorgt die Erde mit Licht und Wärme?",
+      "en": "What gives Earth light and warmth?",
+      "ru": "Что даёт Земле свет и тепло?"
+    },
+    "geography_13": {
+      "de": "Was umkreist die Erde?",
+      "en": "What orbits Earth?",
+      "ru": "Что обращается вокруг Земли?"
+    },
+    "geography_14": {
+      "de": "Was verbindet zwei Ufer für einen Weg?",
+      "en": "What connects two banks so a path can cross?",
+      "ru": "Что соединяет берега и позволяет перейти реку?"
+    },
+    "geography_15": {
+      "de": "Wohin fließen viele große Flüsse schließlich?",
+      "en": "Where do many large rivers eventually flow?",
+      "ru": "Куда в конце концов впадают многие большие реки?"
+    },
+    "geography_16": {
+      "de": "Was kann als gefrorene weiße Schicht auch im Sommer auf hohen Bergen liegen?",
+      "en": "What can remain as a frozen white layer on high mountains even in summer?",
+      "ru": "Что может лежать замёрзшим белым слоем на высоких горах даже летом?"
+    },
+    "geography_17": {
+      "de": "Was ist auf Karten oft blau eingezeichnet?",
+      "en": "What is often coloured blue on maps?",
+      "ru": "Что на картах часто обозначают синим цветом?"
+    },
+    "geography_18": {
+      "de": "Was bedeutet ein Waldzeichen auf einer Karte?",
+      "en": "What does a forest symbol on a map show?",
+      "ru": "Что показывает знак леса на карте?"
+    },
+    "geography_19": {
+      "de": "Was zeigt ein Brückenzeichen auf einer Karte?",
+      "en": "What does a bridge symbol on a map show?",
+      "ru": "Что показывает знак моста на карте?"
+    },
+    "geography_20": {
+      "de": "Was bedeckt den größten Teil der Erdoberfläche?",
+      "en": "What covers most of Earth’s surface?",
+      "ru": "Что покрывает большую часть поверхности Земли?"
+    },
+    "geography_21": {
+      "de": "Wo entstehen Regentropfen am Himmel?",
+      "en": "Where do raindrops form in the sky?",
+      "ru": "Где в небе образуются дождевые капли?"
+    },
+    "geography_22": {
+      "de": "Was erwärmt das Wasser im Wasserkreislauf vor allem?",
+      "en": "What mainly warms water in Earth’s water cycle?",
+      "ru": "Что в основном нагревает воду в круговороте воды на Земле?"
+    },
+    "geography_23": {
+      "de": "Wie gelangt Wasser aus Wolken zurück zum Boden?",
+      "en": "How can water return from clouds to the ground?",
+      "ru": "Как вода из облаков возвращается на землю?"
+    },
+    "geography_24": {
+      "de": "Wo kann ein Fluss hoch oben entspringen?",
+      "en": "Where can a river begin high above the plains?",
+      "ru": "Где высоко над равниной может начинаться река?"
+    },
+    "geography_25": {
+      "de": "Was liegt an vielen Stränden als kleine Körner?",
+      "en": "What lies in little grains on many beaches?",
+      "ru": "Что лежит мелкими крупинками на многих пляжах?"
+    },
+    "geography_26": {
+      "de": "Was ist in trockenen Wüsten besonders knapp?",
+      "en": "What is especially scarce in dry deserts?",
+      "ru": "Чего особенно мало в сухих пустынях?"
+    },
+    "geography_27": {
+      "de": "Was siehst du rings um eine Meeresinsel?",
+      "en": "What surrounds an island in the sea?",
+      "ru": "Что окружает морской остров?"
+    },
+    "geography_28": {
+      "de": "Was gehört zu einem Wald?",
+      "en": "What belongs in a forest?",
+      "ru": "Что относится к лесу?"
+    },
+    "geography_29": {
+      "de": "Was lässt sich zusammenfalten und zeigt deinen Spazierweg?",
+      "en": "What can be folded up and show your walking route?",
+      "ru": "Что можно сложить и использовать для выбора маршрута прогулки?"
+    },
+    "geography_30": {
+      "de": "Welches Modell zeigt auch die Rückseite der Erde beim Drehen?",
+      "en": "Which model shows Earth's other side when you turn it?",
+      "ru": "Какая модель показывает другую сторону Земли при повороте?"
+    },
+    "geography_31": {
+      "de": "Was kann die Sonne am Himmel verdecken?",
+      "en": "What can hide the sun in the sky?",
+      "ru": "Что может закрыть Солнце в небе?"
+    },
+    "geography_32": {
+      "de": "Was kann im Frühling Schnee schmelzen lassen?",
+      "en": "What can help melt snow in spring?",
+      "ru": "Что помогает снегу таять весной?"
+    },
+    "geography_33": {
+      "de": "Was ist lang, fließt und hat zwei Ufer?",
+      "en": "What is long, flows and has two banks?",
+      "ru": "Что длинное, течёт и имеет два берега?"
+    },
+    "geography_34": {
+      "de": "Welche Landschaft erkennst du an einem hohen Gipfel?",
+      "en": "Which landscape has a high peak?",
+      "ru": "У какого элемента рельефа высокая вершина?"
+    },
+    "geography_35": {
+      "de": "Welches große Gewässer ist normalerweise salzig?",
+      "en": "Which large body of water is normally salty?",
+      "ru": "Какой большой водоём обычно солёный?"
+    },
+    "geography_36": {
+      "de": "Welches Gerät zeigt mit einer Magnetnadel die Nordrichtung für deine Karte?",
+      "en": "Which instrument uses a magnetic needle to show north for your map?",
+      "ru": "Какой прибор магнитной стрелкой показывает север для твоей карты?"
+    },
+    "geography_37": {
+      "de": "Welcher Niederschlag ist flüssig?",
+      "en": "Which kind of precipitation is liquid?",
+      "ru": "Какие осадки жидкие?"
+    },
+    "geography_38": {
+      "de": "Was ist ein Stern: Sonne, Wolke oder Mond?",
+      "en": "Which is a star: the sun, a cloud or the moon?",
+      "ru": "Что является звездой: Солнце, облако или Луна?"
+    },
+    "geography_39": {
+      "de": "Welcher Himmelskörper liefert das meiste Licht, das der Mond zurückwirft?",
+      "en": "Which celestial body supplies most of the light reflected by the Moon?",
+      "ru": "Какое небесное тело даёт большую часть света, отражаемого Луной?"
+    },
+    "geography_40": {
+      "de": "Was bringen Regen und Flüsse vielen Pflanzen?",
+      "en": "What do rain and rivers bring to many plants?",
+      "ru": "Что дождь и реки приносят многим растениям?"
+    }
+  }
+}

@@ -29,7 +29,7 @@ Version **0.9.0 / 13**. `scripts/android/app-config.json` hält ausdrücklich di
 | Private Vorschau | `org.example.kinderwelt.preview.family.v090` | Kinderwelt 0.9.0 Privat Test |
 | Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v090` | Kinderwelt 0.9.0 Public Test |
 
-Der Testkanal `preview_channel=v090` ist unabhängig von der Versionsnummer, damit spätere Builds mit demselben Zertifikat als Update installierbar bleiben. Die alten 0.8.1-Schlüssel waren flüchtig und sind nicht wiederherstellbar. 0.9.0 wird deshalb parallel installiert; alte Punkte werden nicht automatisch zwischen Paketen übertragen. Die alte App nicht deinstallieren, wenn ihre Daten gebraucht werden.
+Der Testkanal `preview_channel=v090` ist unabhängig von der Versionsnummer, damit spätere Builds mit demselben Zertifikat als Update installierbar bleiben. Die alten 0.8.1-Schlüssel waren flüchtig und sind nicht wiederherstellbar. 0.9.0 wird deshalb parallel installiert; alte Punkte werden nicht automatisch zwischen Paketen übertragen. Für die vollständig gelöste erste Runde gibt es im Elternbereich eine ausdrückliche manuelle Bestätigung zur einmaligen Übernahme der 3200 früher verdienten Punkte. Die alte App nicht deinstallieren, wenn ihre Daten gebraucht werden.
 
 Vorschauen haben eigene lokale Spielstände und können nebeneinander sowie neben früheren Versionen installiert werden. Die stabile Figuren-/Lösungslogik ist identisch; Daten werden nicht zwischen getrennten Android-Paketen kopiert.
 

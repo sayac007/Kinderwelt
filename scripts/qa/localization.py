@@ -11,7 +11,7 @@ def markdown():
         '## Aktuelle Regeln', '',
         '- Deutsch vermittelt deutsche, English englische und Русский russische Lernwörter, Anfangsbuchstaben und Silben. Keine automatische deutsche Folgeaufnahme in EN/RU.',
         '- Russische sichtbare Texte, Namen, Musikbeschriftungen und alle 1947 gesprochenen Einträge sind ohne lateinische Buchstaben. Interne stabile IDs und Quellen-/Lizenzdateien sind keine Lerninhalte.',
-        '- Englische Silbenvarianten für flower und battery werden akzeptiert. Rechtschreibung und Anfangsbuchstaben sind von Lautschrift zu unterscheiden.',
+        '- Die zweite Runde ersetzt alle 320 Fragen. Neue native Wörter haben zwei Buchstabenlücken, freiwillige Boni drei oder vier. Rechtschreibung ist von Lautschrift zu unterscheiden.',
         '- 200 Sachfragen verwenden Kontextzeichnungen statt Kopien der richtigen Antwort. Kurze Hinweiswörter ergänzen die gesprochene Frage. Auswahlbilder und freigegebene Grundantworten bleiben erhalten.',
         '- Pro Grundaufgabe zwei unabhängig wählbare, überspringbare Herausforderungen mit 50/100 Punkten. Die Sachbonusfragen verwenden wiederkehrende Konzepte; 640 Bonusplätze bedeuten nicht 640 einzigartige redaktionelle Fragestellungen.', '',
         '## Offene Prüfung', '',

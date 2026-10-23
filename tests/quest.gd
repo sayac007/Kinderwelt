@@ -40,19 +40,20 @@ func run() -> void:
 		check(Store.clean({"hero":id}).hero==id,"All seven family members remain independently selectable and persistent: "+id)
 	for pair in [["mina","wanja"],["leo","du"],["sam","mama"],["jule","katze"]]:
 		var migrated := Store.clean({"hero":pair[0],"quest":{"solved":{"math_count":true},"hero_chosen":true}})
-		check(migrated.hero==pair[1] and migrated.quest.solved.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
+		check(migrated.hero==pair[1] and migrated.quest.archived.has("math_count") and migrated.quest.hero_chosen,"Replacing a character preserves saved stars and onboarding: "+pair[0])
 	check(Store.clean({"music_track":"stars","music_locked":true}).music_track==Tracks.DEFAULT and not Store.clean({"music_track":"stars","music_locked":true}).music_locked,"Unavailable old favourites migrate to an alternating classical playlist")
 	check(Tracks.next("moonlight")=="wiener_blut" and Tracks.next("wiener_blut",-1)=="moonlight","Playlist wraps in both directions")
 	check(Tracks.next("babbino",1,false,true)=="babbino","Repeat preserves a chosen track")
 	for i in range(8): check(Tracks.next("babbino",1,true)!="babbino","Shuffle excludes the current piece")
-	var expected := {"math_count":6,"math_add":5,"math_take":4,"math_ten":6,"math_compare":"right","math_steps":8,"math_twenty":14,"math_split":3,"german_sun":"S","german_mouse":"M","german_apple":"A","german_rhyme":"mouse","german_robot":3,"german_read":"BALL","german_flower":2,"german_fish":"F","logic_repeat":"leaf","logic_triple":"moon","logic_odd":"ball","logic_shadow":"tree","logic_size":"large","logic_double":"sun","logic_shape":"robot","logic_rule":"flower"}
+	# Independently calculated second-round fixtures; first-round rewards migrate separately.
+	var expected := {"math_count":11,"math_add":4,"math_take":5,"math_ten":5,"math_compare":16,"math_steps":5,"math_twenty":6,"math_split":2,"german_sun":"SS","german_mouse":"AL","german_apple":"FA","german_rhyme":"MS","german_robot":"FT","german_read":"BP","german_flower":"LV","german_fish":"LC","logic_repeat":8,"logic_triple":9,"logic_odd":"star:9","logic_shadow":"bird","logic_size":12,"logic_double":13,"logic_shape":"sun:10","logic_rule":"bird"}
 	var state := Progress.clean({"solved":{"fake":true,"math_count":true,"math_add":false},"subject":"market","hero_chosen":"yes","stars":9999})
-	check(state.solved.size()==1 and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
+	check(state.archived.size()==1 and state.solved.is_empty() and Progress.stars(state)==1,"Only known true completions count; supplied totals are ignored")
 	check(state.subject=="math" and not state.hero_chosen,"Invalid subject/hero-chosen types rejected")
 	state = Progress.clean(null)
 	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==40,"Forty real tasks in "+subject)
 	for task in Progress.tasks():
-		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent original answer fixture "+task.id)
+		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent second-round answer fixture "+task.id)
 		if task.kind=="add": check(task.answer==task.left+task.right,"Addition is arithmetically correct")
 		if task.kind=="subtract": check(task.answer==task.left-task.right,"Subtraction is arithmetically correct")
 		if task.kind=="complete": check(task.answer==task.right-task.left,"Complement is arithmetically correct")
@@ -120,7 +121,7 @@ func run() -> void:
 	# A long character name previously grew the actual Button over the score.
 	# Check actual engine rectangles, all names/locales and maximum saved points.
 	var saved_progress: Dictionary=app.store.data.quest.duplicate(true)
-	for task in Progress.tasks():Progress.award(app.store.data.quest,task.id)
+	for task in Progress.all_tasks():Progress.award(app.store.data.quest,task.id)
 	for pixels in [Vector2i(320,568),Vector2i(360,800),Vector2i(800,360),Vector2i(1080,2400),Vector2i(2400,1080)]:
 		root.size=pixels;app.simulated_dpi=420 if pixels.x>1000 else 0;app.update_mobile()
 		for locale in ["de","en","ru"]:
@@ -253,7 +254,7 @@ func run() -> void:
 	app.hub()
 	check(app.game_view.score.pulse==0 and app.game_view.score.points==Progress.points(app.store.data.quest),"Re-entry shows saved total points without inventing a new award")
 	var legacy_cast_save:=Store.clean({"hero":"wanja","looks":{"wanja":"astronaut"},"quest":{"solved":{"math_count":true},"hero_chosen":true}})
-	check(legacy_cast_save.hero=="wanja" and legacy_cast_save.looks.wanja=="astronaut" and legacy_cast_save.quest.solved.has("math_count"),"Legacy family IDs, clothing and solved tasks survive either cast variant")
+	check(legacy_cast_save.hero=="wanja" and legacy_cast_save.looks.wanja=="astronaut" and legacy_cast_save.quest.archived.has("math_count"),"Legacy family IDs, clothing and solved tasks survive either cast variant")
 	check(preload("res://core/quest/hero.gd").NAMES.wanja==("Wanja" if preload("res://core/quest/cast.gd").FAMILY else "Nova"),"Selected cast supplies display names independently of saved IDs")
 	var wardrobe_save:=Store.new();wardrobe_save.load_save()
 	for id in preload("res://core/quest/hero.gd").IDS:check(wardrobe_save.data.looks[id]=="scientist","All seven independent wardrobe choices survive disk roundtrip")

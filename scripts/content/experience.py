@@ -52,6 +52,7 @@ NATIVE={
 }
 
 def words(task,locale):
+    if task.get('native_words'): return task['native_words'][locale],[task['native_words'][locale]]
     if locale=='de': return task['word'],task.get('syllables',[task['word']])
     row=NATIVE[task['object']];offset=0 if locale=='en' else 2
     return row[offset],row[offset+1].split()
@@ -108,8 +109,7 @@ def language_bonus(parent,index,level):
     for locale in LOCALES:
         word,_=words(parent,locale)
         alphabet='АМОСТРКБЛЕИ' if locale=='ru' else 'AEIMONRSTUL'
-        positions=[(index+level)%len(word)]
-        if level==2:positions.append((positions[0]+max(1,len(word)//2))%len(word))
+        positions=[(index+level+j)%len(word) for j in range(min(len(word),level+2))]
         positions=sorted(set(positions))
         answer=''.join(word[p] for p in positions)
         wrong=[]
@@ -121,13 +121,13 @@ def language_bonus(parent,index,level):
         masked=''.join('＿' if p in positions else c for p,c in enumerate(word))
         variant={'word':word,'display':masked,'answer':answer,'options':opts}
         if locale=='de':
-            q=word.capitalize()+('. Welcher Buchstabe fehlt?' if level==1 else '. Welche Buchstaben fehlen?')
+            q=word.capitalize()+'. Welche Buchstaben fehlen?'
             h='Die Lücke braucht '+'. '.join(answer)+'.'
         elif locale=='en':
-            q=word.capitalize()+('. Which letter is missing?' if level==1 else '. Which letters are missing?')
+            q=word.capitalize()+'. Which letters are missing?'
             h='The missing letters are '+'. '.join(answer)+'.'
         else:
-            q=word.capitalize()+('. Какая буква пропущена?' if level==1 else '. Какие буквы пропущены?')
+            q=word.capitalize()+'. Какие буквы пропущены?'
             h='На месте пропуска: '+'. '.join(answer)+'.'
         bonus['texts'][locale]={'prompt':q,'tip':h}
         if locale=='de':bonus.update(variant)
@@ -187,18 +187,20 @@ def expand(tasks,languages):
         parents=[t for t in tasks if t['subject']==subject]
         for index,parent in enumerate(parents):
             parent['points']=10
-            if subject=='german':literacy(parent,index)
+            if subject=='german' and not parent.get('advanced_native'):literacy(parent,index)
             if parent['kind']=='discovery':
                 clue=cues[parent['id']]
                 parent['riddle_scene']=clue['scene']
                 parent['keyword']=clue['keywords'][0]
                 for j,locale in enumerate(LOCALES):
-                    q=clue.get('questions',[parent['texts'][lang]['prompt'] for lang in LOCALES])[j]
+                    q=parent['texts'][locale]['prompt'] if parent.get('content_revision')==2 else clue.get('questions',[parent['texts'][lang]['prompt'] for lang in LOCALES])[j]
                     parent['texts'][locale]['prompt']=clue['keywords'][j]+'. '+q
                     parent.setdefault('variants',{}).setdefault(locale,{})['keyword']=clue['keywords'][j]
             bonuses=[]
             for level in [1,2]:
-                if subject=='math':bonus=math_bonus(index,level)
+                if subject=='math':
+                    from advanced import maths
+                    bonus=maths(index,level)
                 elif subject=='german':bonus=language_bonus(parent,index,level)
                 elif subject=='logic':bonus=logic_bonus(parent,index,level)
                 else:
@@ -216,7 +218,7 @@ def expand(tasks,languages):
                                'Gesucht ist: '+languages['objects'][answer]['de']+'.',
                                'The answer is '+languages['objects'][answer]['en']+'.',
                                'Ответ: '+languages['objects'][answer]['ru']+'.'])}
-                bonus.update(id=parent['id']+'_bonus_'+str(level),parent_id=parent['id'],subject=subject,points=50 if level==1 else 100,optional=True,reasoning_level=level)
+                bonus.update(id=parent['id']+'_bonus_'+str(level),parent_id=parent['id'],subject=subject,points=50 if level==1 else 100,optional=True,reasoning_level=level,content_revision=2)
                 bonus['prompt']=bonus['texts']['de']['prompt'];bonus['tip']=bonus['texts']['de']['tip']
                 bonuses.append(bonus)
             parent['bonuses']=bonuses

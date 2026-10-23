@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile authored multilingual exercises; preserve all 24 foundation tasks."""
+"""Compile authored multilingual exercises; renew all 320 base tasks and preserve stable routing IDs."""
 import json
 from pathlib import Path
 
@@ -151,8 +151,9 @@ for subject in ['physics','biology','chemistry','body','geography']:
         add(subject,'discovery',fields[1:4],fields[4:7],object=cue,options=options,answer=answer)
 
 assert len(tasks)==320 and len({t['id'] for t in tasks})==320
+from advanced import renew
 from experience import expand
-tasks=expand(tasks,languages)
+tasks=expand(renew(tasks,languages),languages)
 for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
     assert sum(t['subject']==subject for t in tasks)==40
 for t in tasks:

@@ -22,35 +22,67 @@ class LearningExpansionTests(unittest.TestCase):
                 self.assertIn(bonus['answer'],bonus['options'])
                 self.assertEqual(len(bonus['options']),len(set(bonus['options'])))
                 self.assertEqual(set(bonus['texts']),{'de','en','ru'})
-    def test_math_bonus_answers_satisfy_the_actual_two_step_equations(self):
+    def test_every_new_math_equation_is_independently_solvable(self):
+        import ast,operator
+        def arithmetic(text):
+            node=ast.parse(text,mode='eval').body
+            def visit(n):
+                if isinstance(n,ast.Constant) and type(n.value)==int:return n.value
+                self.assertIsInstance(n,ast.BinOp)
+                self.assertIn(type(n.op),(ast.Add,ast.Sub))
+                return (operator.add if isinstance(n.op,ast.Add) else operator.sub)(visit(n.left),visit(n.right))
+            return visit(node)
         for parent in self.parents:
             if parent['subject']!='math':continue
-            a,b=parent['bonuses']
-            numbers=list(map(int,re.findall(r'\d+',a['display'])))
-            self.assertEqual(numbers[0]+numbers[1]-numbers[2],a['answer'],a['id'])
-            numbers=list(map(int,re.findall(r'\d+',b['display'])))
-            self.assertEqual(numbers[0]+b['answer']+numbers[1],numbers[2],b['id'])
-    def test_literacy_native_words_have_independently_checked_syllables(self):
+            for task in [parent,*parent['bonuses']]:
+                left,right=task['display'].replace('−','-').replace('?',str(task['answer'])).split('=')
+                self.assertEqual(arithmetic(left.strip()),arithmetic(right.strip()),task['id'])
+    def test_every_base_task_replaces_the_completed_first_round(self):
+        old=json.loads((ROOT/'scripts/content/round-one-questions.json').read_text())['questions']
+        self.assertEqual(len(old),320)
+        for t in self.parents:
+            self.assertEqual(t['content_revision'],2)
+            for locale in ('de','en','ru'):
+                self.assertNotEqual(t['texts'][locale]['prompt'],old[t['id']][locale],(t['id'],locale))
+        for subject in ('math','german','logic'):
+            self.assertEqual(len({json.dumps({k:t.get(k) for k in ('display','sequence','counts','order','ask_first')},sort_keys=True) for t in self.parents if t['subject']==subject}),40)
+        for lang in ('de','en','ru'):
+            science=[t for t in self.parents if t['kind']=='discovery']
+            self.assertEqual(len({t['texts'][lang]['prompt'] for t in science}),200)
+        legacy=json.loads((ROOT/'games/quest/legacy-rewards.json').read_text())['rewards']
+        self.assertEqual(set(legacy),set(old))
+        self.assertEqual(sum(legacy.values()),3200)
+    def test_native_letter_puzzles_reconstruct_the_new_word(self):
         sun=self.by_id['german_sun']
-        self.assertEqual((sun['variants']['en']['word'],sun['variants']['en']['answer']),('SUN','S'))
-        self.assertEqual((sun['variants']['ru']['word'],sun['variants']['ru']['answer']),('СОЛНЦЕ','С'))
-        for id,en,ru in [('german_robot',2,2),('german_21',3,3),('german_22',2,4),('german_23',3,4),('german_26',1,1)]:
-            self.assertEqual(self.by_id[id]['variants']['en']['answer'],en,id)
-            self.assertEqual(self.by_id[id]['variants']['ru']['answer'],ru,id)
+        self.assertEqual((sun['word'],sun['answer']),('SONNENSTRAHL','SS'))
+        self.assertEqual((sun['variants']['en']['word'],sun['variants']['en']['answer']),('SUNSHINE','SH'))
+        self.assertEqual((sun['variants']['ru']['word'],sun['variants']['ru']['answer']),('СОЛНЫШКО','СЫ'))
         for parent in self.parents:
             if parent['subject']!='german':continue
             for task in [parent,*parent['bonuses']]:
+                for lang in ('de','en','ru'):
+                    v=task if lang=='de' else task['variants'][lang]
+                    letters=iter(v['answer'])
+                    reconstructed=''.join(next(letters) if c=='＿' else c for c in v['display'])
+                    self.assertEqual(reconstructed,v['word'])
+                    self.assertGreaterEqual(len(v['answer']),2 if task==parent else 3)
+                    self.assertEqual(len(v['options']),len(set(v['options'])))
                 v=task['variants']['ru']
                 self.assertRegex(v['word'],r'^[А-ЯЁ]+$')
-                if task['kind']!='rhyme':
-                    for option in v['options']:
-                        if isinstance(option,str):self.assertRegex(option,r'^[А-ЯЁ]+$')
+                for option in v['options']:self.assertRegex(option,r'^[А-ЯЁ]+$')
                 for field in ('prompt','tip'):self.assertNotRegex(task['texts']['ru'][field],r'[A-Za-z]')
-    def test_native_rhyme_has_a_matching_visible_label(self):
-        t=self.by_id['german_rhyme']
-        self.assertEqual(t['variants']['en']['option_labels'][t['variants']['en']['answer']],'MOUSE')
-        self.assertEqual(t['variants']['ru']['option_labels'][t['variants']['ru']['answer']],'СОМ')
-        self.assertIn('Дом',t['texts']['ru']['prompt'])
+    def test_visual_logic_combines_two_rules_and_ordering_composes_constraints(self):
+        first=self.by_id['logic_odd']
+        self.assertEqual(first['sequence'],['sun','moon','star','sun','moon'])
+        self.assertEqual(first['counts'],[1,3,4,6,7])
+        self.assertEqual(first['answer'],'star:9')
+        order=self.by_id['logic_shadow']
+        self.assertEqual(order['options'],['cat','frog','bird'])
+        self.assertEqual(order['order'],['bird','cat','frog'])
+        self.assertEqual(order['answer'],'bird')
+        for t in self.parents:
+            if t['kind']=='reasoning_choice':
+                self.assertEqual(t['answer'],t['order'][0 if t['ask_first'] else -1])
     def test_science_questions_have_indirect_context_and_short_keyword(self):
         science=[t for t in self.parents if t['kind']=='discovery']
         self.assertEqual(len(science),200)
@@ -65,7 +97,7 @@ class LearningExpansionTests(unittest.TestCase):
                              'Science bonuses must not repeat the just-shown correct answer: '+t['id'])
         hearing=self.by_id['body_02']
         self.assertEqual(hearing['riddle_scene'],'sound')
-        self.assertEqual(hearing['texts']['de']['prompt'],'Hören. Womit hört der Mensch?')
+        self.assertIn('Augen sind zu',hearing['texts']['de']['prompt'])
     def test_russian_ui_and_music_have_no_latin_letters(self):
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())
         self.assertEqual(languages['ui']['german']['en'],'English')
@@ -82,4 +114,4 @@ class LearningExpansionTests(unittest.TestCase):
         self.assertEqual(len(clips),1947)
         for id,text in clips.items():self.assertNotRegex(text,r'[A-Za-z]',id)
         self.assertNotIn('немецк',clips['german_sun'].lower())
-        self.assertIn('Солнце',clips['german_sun'])
+        self.assertIn('Солнышко',clips['german_sun'])

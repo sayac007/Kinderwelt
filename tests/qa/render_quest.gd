@@ -79,6 +79,7 @@ func run() -> void:
 		game.world.set_page(3)
 		await snap(profile.id+"-last-trail")
 		var previous_progress: Dictionary=app.store.data.quest.duplicate(true)
+		for id in preload("res://games/quest/progress.gd").legacy_rewards():app.store.data.quest.archived[id]=true
 		for task in preload("res://games/quest/progress.gd").all_tasks():preload("res://games/quest/progress.gd").award(app.store.data.quest,task.id)
 		app.store.data.hero="squirrel";game.world.hero.person="squirrel"
 		game.update_score();game.arrange()
@@ -92,6 +93,10 @@ func run() -> void:
 			await snap(profile.id+"-"+locale+"-physics")
 			game.close_task();game.switch_subject("german");game.open_task(20)
 			await snap(profile.id+"-"+locale+"-german")
+			game.close_task();game.switch_subject("logic");game.open_task(2)
+			await snap(profile.id+"-"+locale+"-logic-dual")
+			game.close_task();game.open_task(3)
+			await snap(profile.id+"-"+locale+"-logic-order")
 			app.languages();await snap(profile.id+"-"+locale+"-languages")
 		app.store.data.locale="de"
 		for locale in ["de","en","ru"]:
@@ -106,6 +111,8 @@ func run() -> void:
 			game.close_task();game.switch_subject("german");game.open_task(0);game.open_bonus(1)
 			await snap(profile.id+"-"+locale+"-native-letter-bonus")
 			game.close_task()
+			app.confirm_old_round()
+			await snap(profile.id+"-"+locale+"-restore-earlier-points")
 		app.store.data.locale="de"
 		app.musicbox()
 		await snap(profile.id+"-musicbox")

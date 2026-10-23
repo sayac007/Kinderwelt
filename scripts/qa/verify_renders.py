@@ -3,7 +3,7 @@
 import hashlib,json,struct,sys
 from pathlib import Path
 p=Path(sys.argv[1]);frames=json.loads((p/'renders.json').read_text())
-assert len(frames)==433
+assert len(frames)==461
 for frame in frames:
  data=(p/(frame['name']+'.png')).read_bytes()
  assert data[:8]==b'\x89PNG\r\n\x1a\n'
@@ -12,6 +12,10 @@ for profile in ['phone','small','landscape','dense']:
  for locale in ['de','en','ru']:
   for suffix in ['bonus-offer','bonus-50','bonus-100','native-letter-bonus']:
    assert (p/f'{profile}-{locale}-{suffix}.png').is_file()
+  assert (p/f'{profile}-{locale}-restore-earlier-points.png').is_file()
+  if locale!='de':
+   for suffix in ['logic-dual','logic-order']:
+    assert (p/f'{profile}-{locale}-{suffix}.png').is_file()
  assert len({hashlib.sha256((p/(profile+'-heroes'+suffix+'.png')).read_bytes()).hexdigest() for suffix in ['', '-move','-think','-success']})==4
 for profile in ['phone','small','landscape','dense']:
  assert (p/(profile+'-scene-castle.png')).read_bytes()!=(p/(profile+'-scene-castle-floating.png')).read_bytes()
@@ -19,4 +23,4 @@ for profile in ['phone','small','landscape','dense']:
   assert (p/(profile+'-scene-'+scene+'.png')).read_bytes()!=(p/(profile+'-scene-'+scene+'-floating.png')).read_bytes()
  assert len({hashlib.sha256((p/(profile+'-looks-'+look+'.png')).read_bytes()).hexdigest() for look in ['hero','alien','astronaut','scientist']})==4
 assert (p/'riddle-sound-ear.png').read_bytes()==(p/'riddle-sound-moon.png').read_bytes(),'Riddle must not reveal the original answer/object'
-print('PASS: 433 real frames; 51200-point headers, 50/100 bonuses and native letter challenges in three languages/four profiles; answer-independent riddle pixels; existing worlds, heroes, looks, tasks, rotations and menus')
+print('PASS: 461 real frames; 54400-point headers, 50/100 bonuses, native letter challenges, dual-rule logic, ordering and confirmed old-point transfer in three languages/four profiles; answer-independent riddle pixels; worlds, heroes, looks, rotations and menus')

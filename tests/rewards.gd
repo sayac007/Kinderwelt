@@ -13,8 +13,8 @@ func run() -> void:
 	for task in Progress.all_tasks():
 		check(Progress.value(task.id)==int(task.points),"Known, bounded reward")
 		Progress.award(state,task.id)
-	check(Progress.points(state)==51200,"All known base/bonus rewards sum to 51200")
-	check(Progress.stars(state)==960,"Bonus achievements survive save sanitisation")
+	check(Progress.points(state)==51210,"All known base/bonus rewards sum to 51200 plus the archived 10")
+	check(Progress.stars(state)==961,"Bonus achievements survive save sanitisation")
 	var app=load("res://core/quest/main.tscn").instantiate();root.add_child(app)
 	app.store.reset();app.store.data.quest.hero_chosen=true;app.store.data.muted=true;app.hub()
 	await process_frame
@@ -43,16 +43,28 @@ func run() -> void:
 	for locale in ["de","en","ru"]:
 		app.store.data.locale=locale;game.switch_subject("german");game.open_task(0)
 		panel=game.task_panel
-		var expected: String={"de":"S","en":"S","ru":"С"}[locale]
-		check(panel.task.answer==expected,"Native literacy answer follows selected script")
-		check(panel.task.word=={"de":"SONNE","en":"SUN","ru":"СОЛНЦЕ"}[locale],"Native literacy word shown")
+		check(panel.task.answer=={"de":"SS","en":"SH","ru":"СЫ"}[locale],"New native letter pairs follow the selected alphabet")
+		check(panel.task.word=={"de":"SONNENSTRAHL","en":"SUNSHINE","ru":"СОЛНЫШКО"}[locale],"New native vocabulary shown")
 		game.close_task()
-	var syllable_task: Dictionary=preload("res://core/quest/language.gd").task(Progress.tasks("german").filter(func(t): return t.object=="flower" and t.kind=="syllables")[0],"en")
-	check(Progress.correct(syllable_task,1) and Progress.correct(syllable_task,2),"English flower accepts both standard syllable counts")
+	var old_solved: Dictionary={}
+	for id in Progress.legacy_rewards():old_solved[id]=true
+	var graduate: Dictionary=Progress.clean({"solved":old_solved,"total_points":99999999})
+	check(Progress.points(graduate)==3200 and graduate.solved.is_empty(),"All old achievements survive but no new task is marked complete")
+	for task in Progress.all_tasks():Progress.award(graduate,task.id)
+	check(Progress.points(graduate)==54400 and Progress.stars(graduate)==1280,"Lifetime total includes both completed rounds without duplication")
+	check(Progress.points(Progress.clean(graduate))==54400,"Cleaning a new-round save does not archive it again")
 	app.store.data.locale="ru";game.switch_subject("body");game.open_task(1)
 	check(game.task_panel.task.riddle_scene=="sound","Hearing puzzle uses music context, not an ear copy")
 	check(game.task_panel.task.keyword=="Слух","Russian keyword uses Cyrillic")
 	game.close_task()
+	var before_restore:=Progress.points(app.store.data.quest)
+	app.confirm_old_round()
+	app.body.get_child(app.body.get_child_count()-1).pressed.emit()
+	check(Progress.points(app.store.data.quest)==before_restore+3200,"Adult-confirmed transfer adds only the previously earned old round")
+	check(app.game_view.score.points==before_restore+3200,"Transferred lifetime points are visible immediately")
+	app.confirm_old_round()
+	app.body.get_child(app.body.get_child_count()-1).pressed.emit()
+	check(Progress.points(app.store.data.quest)==before_restore+3200,"Confirmed old-round transfer is idempotent")
 	app.narration.cancel();app.audio.music.shutdown();app.audio.stop()
 	await create_timer(.15).timeout
 	app.free()

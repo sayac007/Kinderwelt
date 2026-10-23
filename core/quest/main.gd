@@ -173,9 +173,18 @@ func parents() -> void:
 	label(t("voluntary"))
 	label(t("respect"))
 	label(t("privacy"))
+	if store.data.quest.archived.size()<preload("res://games/quest/progress.gd").legacy_rewards().size():
+		button(t("restore_old_round"),confirm_old_round)
 	button(t("controls"),settings)
 	button(t("music_sources"),music_credits)
 	button(t("reset"),confirm_reset)
+func confirm_old_round() -> void:
+	clear();label(t("restore_old_explanation"))
+	button(t("cancel"),parents)
+	button(t("restore_old_confirm"),func():
+		for id in preload("res://games/quest/progress.gd").legacy_rewards():store.data.quest.archived[id]=true
+		store.data.quest.total_points=preload("res://games/quest/progress.gd").points(store.data.quest)
+		save();hub())
 func music_credits() -> void:
 	clear();button(t("return"),parents)
 	label(t("music_sources"))

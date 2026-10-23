@@ -33,7 +33,7 @@ def generate(output):
         models[locale]={'model':m['model'],'license':m['dataset_license'],'card':(folder/'MODEL_CARD.txt').read_text()}
     items=[];rows=[]
     for locale in ['de','en','ru']:
-        for id in IDS+['math_count_bonus_1','math_count_bonus_2','german_sun_bonus_1','german_sun_bonus_2','physics_05_bonus_2','body_02_bonus_1']:
+        for id in IDS+['logic_odd','logic_shadow','math_count_bonus_1','math_count_bonus_2','german_sun_bonus_1','german_sun_bonus_2','physics_05_bonus_2','body_02_bonus_1']:
             refs=[(locale,id)]
             sequence=[]
             for lang,key in refs:
