@@ -33,7 +33,8 @@ func completed(expected_seconds: float,ids: Array[String],expected_paths: Array[
  # The mixer may buffer a fraction of a second; allow its documented latency.
  check(elapsed>=expected_seconds-.25,"Actual playback preserves the complete duration: "+str(ids))
  check(float(frames)/AudioServer.get_mix_rate()>=expected_seconds-.35,"Audio bus contains the complete recording sequence")
- check(peak>.01,"Audio bus contains audible speech, not just silence")
+ check(peak>.25,"Calibrated speech is clearly audible on the actual mixer bus")
+ check(peak<.90,"Actual speech keeps output headroom after calibration")
  for id in ids:check(id in seen,"Actual playback reaches "+id)
  if not expected_paths.is_empty():check(paths==expected_paths,"Actual recording order matches localized instruction, German target and feedback")
  results.append({"stream_paths":paths,"locale":app.store.data.locale,"expected_seconds":expected_seconds,"elapsed_seconds":elapsed,"captured_seconds":float(frames)/AudioServer.get_mix_rate(),"peak":peak,"clips":seen})

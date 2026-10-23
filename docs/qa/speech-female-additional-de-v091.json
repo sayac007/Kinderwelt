@@ -1,0 +1,451 @@
+{
+  "scope": "Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting",
+  "model": "multilingual Whisper small, int8, sherpa-onnx",
+  "model_files": {
+    "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+    "small-decoder.int8.onnx": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+    "small-tokens.txt": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+  },
+  "locales": {
+    "de": {
+      "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "samples": 48,
+      "character_error_rate": 0.0105,
+      "rows": [
+        {
+          "id": "math_24",
+          "reference": "Eine Zahl wird weggenommen, dann kommt etwas dazu. Wie viel ging weg?",
+          "recognized": "Eine Zahl wird weggenommen, dann kommt etwas dazu. Wie viel ging weg?",
+          "character_errors": 0,
+          "reference_characters": 55,
+          "seconds": 5.88,
+          "sha256": "a1703538fb80aa6d6700ed5b77b9e005f15895b736d333056497c8423bebfa68"
+        },
+        {
+          "id": "math_24_bonus_1",
+          "reference": "Erst 9 zu 25, dann 6 und 4 weg. Wie viel bleibt?",
+          "recognized": "Erst 9 zu 25, dann 6 und 4 weg. Wie viel bleibt?",
+          "character_errors": 0,
+          "reference_characters": 34,
+          "seconds": 6.6,
+          "sha256": "bb26b5ec6d23deeb5226b7a10c30cf7792e148feefc069f1a73086f1e74f2856"
+        },
+        {
+          "id": "math_24_bonus_2",
+          "reference": "Welche Zahl fehlt? Denke die beiden Schritte rückwärts.",
+          "recognized": "Welche Zahl fehlt, denke die beiden Schritte rückwärts.",
+          "character_errors": 0,
+          "reference_characters": 46,
+          "seconds": 5.32,
+          "sha256": "970f9cb825f4367d6842432a75956aece0767e550adcd881393ea10f211e68b6"
+        },
+        {
+          "id": "math_21",
+          "reference": "Zu 9 kommen 9, dann gehen 2. Wie viele bleiben?",
+          "recognized": "Zu 9,9, dann gehen zwei. Wie viele bleiben?",
+          "character_errors": 10,
+          "reference_characters": 35,
+          "seconds": 5.16,
+          "sha256": "7bb50eb06b441c08d13ac4bb93d772dea9c606a82cde9d7e6b07bdee2451593d"
+        },
+        {
+          "id": "math_21_bonus_1",
+          "reference": "Erst 9 zu 22, dann 3 und 4 weg. Wie viel bleibt?",
+          "recognized": "Erst 9 zu 22, dann 3 und 4 weg. Wie viel bleibt?",
+          "character_errors": 0,
+          "reference_characters": 34,
+          "seconds": 6.76,
+          "sha256": "4ce9ba136749fd70083fb3826c966455afa3b040a09eeafc3c0044a77d8be724"
+        },
+        {
+          "id": "math_21_bonus_2",
+          "reference": "Welche Zahl fehlt? Denke die beiden Schritte rückwärts.",
+          "recognized": "Welche Zahl fehlt, denke die beiden Schritte rückwärts.",
+          "character_errors": 0,
+          "reference_characters": 46,
+          "seconds": 5.32,
+          "sha256": "970f9cb825f4367d6842432a75956aece0767e550adcd881393ea10f211e68b6"
+        },
+        {
+          "id": "german_34",
+          "reference": "Mondlicht. Welche beiden Buchstaben fehlen?",
+          "recognized": "Mondlicht, welche beiden Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 37,
+          "seconds": 4.28,
+          "sha256": "96389f4bc38471756fdea9e002e0f8f87d9833a98f0dfe74cb6ed68bd16b9206"
+        },
+        {
+          "id": "german_34_bonus_1",
+          "reference": "Mondlicht. Welche Buchstaben fehlen?",
+          "recognized": "Mundlicht, welche Buchstaben fehlen?",
+          "character_errors": 1,
+          "reference_characters": 31,
+          "seconds": 4.76,
+          "sha256": "b2e47ecef682194ca1fa25b3c30b5979b218aa9f0420e7855300ce0b1a5012c0"
+        },
+        {
+          "id": "german_34_bonus_2",
+          "reference": "Mondlicht. Welche Buchstaben fehlen?",
+          "recognized": "Mundlicht, welche Buchstaben fehlen?",
+          "character_errors": 1,
+          "reference_characters": 31,
+          "seconds": 4.76,
+          "sha256": "b2e47ecef682194ca1fa25b3c30b5979b218aa9f0420e7855300ce0b1a5012c0"
+        },
+        {
+          "id": "german_16",
+          "reference": "Sandkasten. Welche beiden Buchstaben fehlen?",
+          "recognized": "Sandkasten, welche beiden Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 4.6,
+          "sha256": "58632614edfed87efa01b5a58f7ee763ff6629fb5856015e25211695c170c1e4"
+        },
+        {
+          "id": "german_16_bonus_1",
+          "reference": "Sandkasten. Welche Buchstaben fehlen?",
+          "recognized": "Sandkasten, welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 32,
+          "seconds": 3.48,
+          "sha256": "b7dbae38982d029e1c39a743f7806765619d7a52f76e1a1c199681ccbf64a5f1"
+        },
+        {
+          "id": "german_16_bonus_2",
+          "reference": "Sandkasten. Welche Buchstaben fehlen?",
+          "recognized": "Sandkasten, welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 32,
+          "seconds": 3.48,
+          "sha256": "b7dbae38982d029e1c39a743f7806765619d7a52f76e1a1c199681ccbf64a5f1"
+        },
+        {
+          "id": "logic_27",
+          "reference": "Bild und Zahl haben eigene Regeln. Welches Paar setzt beide fort?",
+          "recognized": "Bild und Zahl haben eigene Regeln. Welches Paar setzt beide fort?",
+          "character_errors": 0,
+          "reference_characters": 53,
+          "seconds": 6.04,
+          "sha256": "6f8f57f9eddf1c002f908b0543f17383b1664d0adb0867225df48dee40df8137"
+        },
+        {
+          "id": "logic_27_bonus_1",
+          "reference": "Zwei Schritte wechseln sich ab. Welche Zahl folgt?",
+          "recognized": "Zwei Schritte wechseln sich ab. Welche Zahl folgt?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 4.52,
+          "sha256": "e31f67277eb40bf048f4ca7ac30aa2f045afcd124f1db6e84ea5ddf0b9d892c2"
+        },
+        {
+          "id": "logic_27_bonus_2",
+          "reference": "Finde die Regel. Was kommt rechts hin?",
+          "recognized": "Findet die Regel. Was kommt rechts hin?",
+          "character_errors": 1,
+          "reference_characters": 30,
+          "seconds": 4.12,
+          "sha256": "e95ebbddb58fc5a75687201f7308d43ded552c1bf166444659a56e2eacb1ada2"
+        },
+        {
+          "id": "logic_18",
+          "reference": "Nach rechts und nach unten gilt ein fester Schritt. Was fehlt unten rechts?",
+          "recognized": "Nach rechts und nach unten gilt ein fester Schritt. Was fehlt unten rechts?",
+          "character_errors": 0,
+          "reference_characters": 61,
+          "seconds": 6.44,
+          "sha256": "1b5b6a43599f6755b8f02058c63c0ad680961258e82aa9c065f85f72d736ee0c"
+        },
+        {
+          "id": "logic_18_bonus_1",
+          "reference": "Zwei Schritte wechseln sich ab. Welche Zahl folgt?",
+          "recognized": "Zwei Schritte wechseln sich ab. Welche Zahl folgt?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 4.52,
+          "sha256": "e31f67277eb40bf048f4ca7ac30aa2f045afcd124f1db6e84ea5ddf0b9d892c2"
+        },
+        {
+          "id": "logic_18_bonus_2",
+          "reference": "Finde die Regel. Was kommt rechts hin?",
+          "recognized": "Findet die Regel. Was kommt rechts hin?",
+          "character_errors": 1,
+          "reference_characters": 30,
+          "seconds": 4.12,
+          "sha256": "e95ebbddb58fc5a75687201f7308d43ded552c1bf166444659a56e2eacb1ada2"
+        },
+        {
+          "id": "physics_13",
+          "reference": "Leuchten. Ein Fenster hält Wind ab, aber Licht soll hindurch. Welches Material erfüllt beides?",
+          "recognized": "Leuchten Ein Fenster hält Wind ab, aber Licht soll hindurch. Welches Material erfüllt beides?",
+          "character_errors": 0,
+          "reference_characters": 77,
+          "seconds": 10.76,
+          "sha256": "edf3e43cd7f255639d36fef534d73cb9ffe227173455454bd642976a00795b43"
+        },
+        {
+          "id": "physics_13_bonus_1",
+          "reference": "Ein trockener leichter Stoff kommt vom Baum und schwimmt oft. Welcher passt?",
+          "recognized": "Ein trockener leichter Stoff kommt vom Baum und schwimmt oft. Welcher passt?",
+          "character_errors": 0,
+          "reference_characters": 63,
+          "seconds": 5.4,
+          "sha256": "f4edf65dbcfe9837cb6cbe71834d413b79de82036c064d246526e4f6b9ad53eb"
+        },
+        {
+          "id": "physics_13_bonus_2",
+          "reference": "Ein Eisenstück bleibt hart und wird vom Magneten angezogen. Zu welcher Stoffgruppe gehört es?",
+          "recognized": "Ein Eisenstück bleibt hart und wird von Magneten angezogen. Zu welcher Stoffgruppe gehört es?",
+          "character_errors": 1,
+          "reference_characters": 78,
+          "seconds": 7.56,
+          "sha256": "437096abf720c6ae1017f0e11c4cb3ba454a191bc8124c005caed4ded38eba94"
+        },
+        {
+          "id": "physics_16",
+          "reference": "Ausprobieren. Ein Plan muss beschreibbar und leicht zusammenfaltbar sein. Welches Material wählst du?",
+          "recognized": "Ausprobieren. Ein Plan muss beschreibbar und leicht zusammenfaltbar sein. Welches Material willst du?",
+          "character_errors": 2,
+          "reference_characters": 86,
+          "seconds": 8.2,
+          "sha256": "ba2757e8856e57ac7d0908e315c48222b7411e53919638d3569c44676e51d7f9"
+        },
+        {
+          "id": "physics_16_bonus_1",
+          "reference": "Die Karte liegt falsch herum. Welches Gerät zeigt, wo Norden ist?",
+          "recognized": "Die Karte liegt falsch herum. Welches Gerät zeigt, wo Norden ist?",
+          "character_errors": 0,
+          "reference_characters": 52,
+          "seconds": 5.48,
+          "sha256": "35e23623c0061f6c74b0ab9b38ee7e667c9d361f40d7ac948f9bf097a6b4593b"
+        },
+        {
+          "id": "physics_16_bonus_2",
+          "reference": "Wasser verdunstet und bildet an einem kalten Fenster Tropfen. Welcher flüssige Stoff ist wieder da?",
+          "recognized": "Wasser verdunstet und bildet an einem kalten Fenster Tropfen. Welcher flüssige Stoff ist wieder da?",
+          "character_errors": 0,
+          "reference_characters": 83,
+          "seconds": 6.68,
+          "sha256": "5dbbca61d94166277d9099ca586619eff1f308be12c6dd43af0821ac3709ca6b"
+        },
+        {
+          "id": "biology_11",
+          "reference": "Entwickeln. Nicht jedes Tier mit Flügeln hat Federn. Welches dieser Tiere besitzt Federn?",
+          "recognized": "Entwickeln Nicht jedes Tier mit Flügeln hat Federn. Welches dieser Tiere besitzt Federn?",
+          "character_errors": 0,
+          "reference_characters": 74,
+          "seconds": 7.56,
+          "sha256": "60ad7e1949e9c04e63c5d1ef97e22954854048601722983903902c7b2f5cebb8"
+        },
+        {
+          "id": "biology_11_bonus_1",
+          "reference": "Ein Tier ohne Beine gräbt Gänge und lockert Erde. Wer passt?",
+          "recognized": "Ein Tier ohne Beine greibt Gänge und lockert Erde. Wer passt?",
+          "character_errors": 2,
+          "reference_characters": 48,
+          "seconds": 5.0,
+          "sha256": "2df7bc9166f8a4a2eee646dd3440265ddf322f1b9d10ba77e38c8c9d1c05cbb2"
+        },
+        {
+          "id": "biology_11_bonus_2",
+          "reference": "Ein Tier hat Flossen statt Beinen und nimmt Sauerstoff mit Kiemen auf. Wer ist es?",
+          "recognized": "Ein Tier hat Flossen statt Beinen und nimmt Sauerstoff mit Keemen auf. Wer ist es?",
+          "character_errors": 1,
+          "reference_characters": 66,
+          "seconds": 6.6,
+          "sha256": "00efcbddb6e81f5e63c5611eb6c7a975d71c711da4b0cad11e720d3c81cda730"
+        },
+        {
+          "id": "biology_31",
+          "reference": "Hören. Eine Katze erkennt ein Rascheln, auch ohne die Maus zu sehen. Was nimmt den Schall auf?",
+          "recognized": "\"Hören, eine Katze erkennt ein Rascheln, auch ohne die Maus zu sehen. Was nimmt den Schall auf?\"",
+          "character_errors": 0,
+          "reference_characters": 74,
+          "seconds": 7.64,
+          "sha256": "cece0f80267eaebe9413ab1b2047746664ea049d60396e4bde97df89019af450"
+        },
+        {
+          "id": "biology_31_bonus_1",
+          "reference": "Es ist lebendig, hat Fell und braucht Nahrung. Was passt?",
+          "recognized": "Es ist lebendig, hat Fell und braucht Nahrung. Was passt?",
+          "character_errors": 0,
+          "reference_characters": 45,
+          "seconds": 5.64,
+          "sha256": "769ba225d0ccb153643591e3af905ab8ddc308f91af6dd42260ffea7ff41012e"
+        },
+        {
+          "id": "biology_31_bonus_2",
+          "reference": "Eine Blume soll nicht umfallen und braucht Wasser. Welcher unterirdische Teil hilft bei beidem?",
+          "recognized": "Eine Blume soll nicht umfallen und braucht Wasser. Welcher unterirdische Teil hilft bei Beidem?",
+          "character_errors": 0,
+          "reference_characters": 80,
+          "seconds": 6.76,
+          "sha256": "5efc518c871e2b161abec478ba7b013364c334395907743f0519b34f2d75d0d8"
+        },
+        {
+          "id": "chemistry_36",
+          "reference": "Untersuchen. Ein Erwachsener erhitzt Rohstoffe für gewöhnliches Glas. Welcher körnige Stoff gehört vor allem dazu?",
+          "recognized": "Untersuchen Ein erwachsener, erhitzt Rohstoffe für gewöhnliches Glas. Welcher körnige Stoff gehört vor allem dazu?",
+          "character_errors": 0,
+          "reference_characters": 97,
+          "seconds": 8.92,
+          "sha256": "d9a7ecd8ac7a1568520e85977f49115b2007171b15f3a3b3e6d792827f67347d"
+        },
+        {
+          "id": "chemistry_36_bonus_1",
+          "reference": "Ein trockener leichter Stoff kommt vom Baum und schwimmt oft. Welcher passt?",
+          "recognized": "Ein trockener leichter Stoff kommt vom Baum und schwimmt oft. Welcher passt?",
+          "character_errors": 0,
+          "reference_characters": 63,
+          "seconds": 5.4,
+          "sha256": "f4edf65dbcfe9837cb6cbe71834d413b79de82036c064d246526e4f6b9ad53eb"
+        },
+        {
+          "id": "chemistry_36_bonus_2",
+          "reference": "Ein Eisenstück bleibt hart und wird vom Magneten angezogen. Zu welcher Stoffgruppe gehört es?",
+          "recognized": "Ein Eisenstück bleibt hart und wird von Magneten angezogen. Zu welcher Stoffgruppe gehört es?",
+          "character_errors": 1,
+          "reference_characters": 78,
+          "seconds": 7.56,
+          "sha256": "437096abf720c6ae1017f0e11c4cb3ba454a191bc8124c005caed4ded38eba94"
+        },
+        {
+          "id": "chemistry_33",
+          "reference": "Untersuchen. Ein Gefäß kippt. Welcher Stoff kann herausfließen statt als festes Stück herauszufallen?",
+          "recognized": "Untersuchen, ein Gefäß kippt, welcher Stauf kann herausfließen, statt als festes Stück herauszufallen.",
+          "character_errors": 2,
+          "reference_characters": 88,
+          "seconds": 7.72,
+          "sha256": "47d72d931ba1f0a3c5c91e4717227ef5642877e47328c517c6522dad22814b41"
+        },
+        {
+          "id": "chemistry_33_bonus_1",
+          "reference": "Licht soll hindurchgehen, Wasser aber im Gefäß bleiben. Welches Material passt?",
+          "recognized": "Licht soll hindurchgehen, Wasser aber im Gefäß bleiben, welches Material passt.",
+          "character_errors": 0,
+          "reference_characters": 67,
+          "seconds": 6.28,
+          "sha256": "afa7bd1f4ce2be2877eb2ff83d87c21ca5be185a540af6099feffccee85b4dec"
+        },
+        {
+          "id": "chemistry_33_bonus_2",
+          "reference": "Ein Baustoff zeigt Jahresringe und lässt sich zu Brettern sägen. Welcher ist es?",
+          "recognized": "Ein Baustoff zeigt Jahresringe und lässt sich zu Brettern sägen. Welcher ist es?",
+          "character_errors": 0,
+          "reference_characters": 66,
+          "seconds": 5.88,
+          "sha256": "3b88afcfbafa63be2f7bf06f58329984ef55ea3e630538df4dcee2848f0f418b"
+        },
+        {
+          "id": "body_37",
+          "reference": "Entdecken. Du atmest ruhig ein und hältst den Mund geschlossen. Wo strömt die Luft hinein?",
+          "recognized": "Entdecken! Du atmest ruhig ein und hältst den Mund geschlossen. Wo strömt die Luft hinein?",
+          "character_errors": 0,
+          "reference_characters": 73,
+          "seconds": 8.04,
+          "sha256": "e7670fa96a099057431afe5d73d155dc705a445233bfc1e1428ba3a7fad551e4"
+        },
+        {
+          "id": "body_37_bonus_1",
+          "reference": "Töne versetzen Luft in Schwingung. Welcher Körperteil nimmt sie auf?",
+          "recognized": "Töne versetzen Luft in Schwingung. Welcher Körperteil nimmt sie auf?",
+          "character_errors": 0,
+          "reference_characters": 57,
+          "seconds": 5.24,
+          "sha256": "e2efca153a30fe5fe572379f0a70d50cc58fe48c028cb70d9c8c3cc61d44be5f"
+        },
+        {
+          "id": "body_37_bonus_2",
+          "reference": "Du hörst einen Ball, weißt aber seine Farbe nicht. Welcher Körperteil kann die Farbe erkennen?",
+          "recognized": "Du hörst einen Ball, weißt aber seine Farbe nicht. Welcher Körperteil kann die Farbe erkennen?",
+          "character_errors": 0,
+          "reference_characters": 78,
+          "seconds": 7.32,
+          "sha256": "7f33b7929b447c8247d568e3a90fd2475032dec694d177cc45c0143bef801a66"
+        },
+        {
+          "id": "body_12",
+          "reference": "Reinigen. Fettiger Schmutz bleibt an den Fingern. Was hilft Wasser, ihn abzulösen?",
+          "recognized": "Ah, ah, Reinigen. Fertiger Schmutz bleibt an den Fingern. Was hilft Wasser, ihn abzulösen?",
+          "character_errors": 5,
+          "reference_characters": 67,
+          "seconds": 8.44,
+          "sha256": "0e00c15f3b031ea2edcb8d23023758a2ceb798429aa4dd1483218bebfcd2d0c6"
+        },
+        {
+          "id": "body_12_bonus_1",
+          "reference": "Nach dem Spielen hast du geschwitzt. Welches Getränk ersetzt verlorene Flüssigkeit ohne Zucker?",
+          "recognized": "Nach dem Spielen hast du geschwitzt. Welches Getränk ersetzt verlore Flüssigkeit ohne Zucker?",
+          "character_errors": 2,
+          "reference_characters": 81,
+          "seconds": 6.68,
+          "sha256": "e1a91f947eccc0c61f4251f352141d29a059e5daf67350a581b79e4e224cb64e"
+        },
+        {
+          "id": "body_12_bonus_2",
+          "reference": "Beim Stehen liegt ein Teil des Körpers direkt im Schuh auf dem Boden. Welcher?",
+          "recognized": "Beim Stehen liegt ein Teil des Körpers direkt im Schuh auf dem Boden. Welcher?",
+          "character_errors": 0,
+          "reference_characters": 63,
+          "seconds": 6.36,
+          "sha256": "4d2d0f22d353cac88d09658b1aeaa7091f65539c2b1afd4294dce3dbe747ce03"
+        },
+        {
+          "id": "geography_29",
+          "reference": "Entdecken. Du willst einen Spazierweg zeichnen und das Blatt einstecken. Welche Orientierungshilfe passt?",
+          "recognized": "Entdecken Du willst einen Spazierweg zeichnen und das Blatt einstecken, welche Orientierungshilfe passt.",
+          "character_errors": 0,
+          "reference_characters": 90,
+          "seconds": 7.56,
+          "sha256": "ab12e5e0ba6718c74641a692a251ab63ed8ccbdc791e14896f94740c54faef91"
+        },
+        {
+          "id": "geography_29_bonus_1",
+          "reference": "Du willst alle Seiten der Erde sehen und das Modell drehen. Was nimmst du?",
+          "recognized": "Du willst alle Seiten der Erde sehen und das Modell drehen. Was nimmst du?",
+          "character_errors": 0,
+          "reference_characters": 59,
+          "seconds": 6.12,
+          "sha256": "a3d204e0f7dcfc43c8ab015b78e8dc7681a86dbc3d76913fa97f1f3c44aaf2d2"
+        },
+        {
+          "id": "geography_29_bonus_2",
+          "reference": "Ohne Ortsnamen und ohne Zeichnung: Welches Gerät hilft mit einer Magnetnadel beim Ausrichten?",
+          "recognized": "Ohne Ortsnamen und ohne Zeichnung, welches Gerät hilft mit einer Magnetnadel beim Ausrichten?",
+          "character_errors": 0,
+          "reference_characters": 79,
+          "seconds": 7.88,
+          "sha256": "efab49af2afaa83f5053d8df559e3b62e7843d9e42315cdce15c6642788f5c3a"
+        },
+        {
+          "id": "geography_09",
+          "reference": "Entdecken. Viele Baumkronen spenden Schatten, darunter liegt oft Laub. Welche Landschaft passt?",
+          "recognized": "Entdecken. Viele Baumkronen spenden Schatten. Darunter liegt oft Laub. Welche Landschaft passt?",
+          "character_errors": 0,
+          "reference_characters": 80,
+          "seconds": 8.36,
+          "sha256": "7016b810ec6c68c436cda6dd2ca1486980046a514bdbb897ae339d1655943bf7"
+        },
+        {
+          "id": "geography_09_bonus_1",
+          "reference": "Ein Fluss bringt Wasser zu einem sehr großen salzigen Gewässer. Wohin?",
+          "recognized": "Ein Fluss bringt Wasser zu einem sehr großen salzigen Gewässer. Wohin?",
+          "character_errors": 0,
+          "reference_characters": 59,
+          "seconds": 5.88,
+          "sha256": "ec0c8d641d698139d320ecf9993d83cab0f15f9fa72f873677729762490a8c02"
+        },
+        {
+          "id": "geography_09_bonus_2",
+          "reference": "Ein Erwachsener stellt gewöhnliches Glas her. Welchen körnigen Rohstoff braucht er vor allem?",
+          "recognized": "Ein Erwachsener stellt gewöhnliches Glas her. Welchen körnigen Rohstoff braucht er vor allem?",
+          "character_errors": 0,
+          "reference_characters": 79,
+          "seconds": 7.24,
+          "sha256": "bd9f529495a0805d9fc271532de564ee94cc522ce700e7b6d6e86218560b83d9"
+        }
+      ]
+    }
+  },
+  "targeted_rescreen_note": "Replaced only the actually re-generated and independently re-screened German row german_34 in this report; other rows retain their measured original files."
+}

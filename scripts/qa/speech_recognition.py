@@ -28,6 +28,7 @@ def sample_ids():
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--model',type=Path,required=True)
+    p.add_argument('--threads',type=int,default=2)
     p.add_argument('--voices',type=Path,default=Path('assets/voice/quest'))
     p.add_argument('--locales',nargs='+',default=['de','en','ru'])
     p.add_argument('--output',type=Path,required=True)
@@ -40,7 +41,7 @@ def main():
     report={'scope':'Independent ASR screening, not human intelligibility or exact word alignment; no reference-text prompting','model':'multilingual Whisper small, int8, sherpa-onnx','model_files':model_files,'locales':{}}
     for locale in a.locales:
         folder=a.voices/locale;manifest=json.loads((folder/'manifest.json').read_text());clips={c['id']:c for c in manifest['clips']}
-        recognizer=sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(encoder),decoder=str(decoder),tokens=str(tokens),language=locale,num_threads=2)
+        recognizer=sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(encoder),decoder=str(decoder),tokens=str(tokens),language=locale,num_threads=a.threads)
         rows=[];errors=0;chars=0
         for id in (a.ids or sample_ids()):
             c=clips[id];path=folder/c['file'];assert hashlib.sha256(path.read_bytes()).hexdigest()==c['sha256']

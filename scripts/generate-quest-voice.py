@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Generate bundled, deduplicated offline neural narration for one UI language.
 
-Development only: piper-tts1.4.2, onnxruntime, FFmpeg. Supply a licensed local
-model; no download or speech engine in the Android application.
+German/Russian use the pinned female Qwen engine, English the original Piper
+voice. Development tools only; supply licensed local models. No download,
+model or speech engine is included in the Android application.
 """
-import array,math
+import array,math,sys
 import argparse,hashlib,json,subprocess,tempfile,wave,shutil,unicodedata,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
-MODELS={'de':('de_DE-thorsten-high','CC0','male'),'en':('en_US-ljspeech-medium','Public Domain','female'),'ru':('ru_RU-denis-medium','CC0','male')}
+MODELS={'de':('Qwen3-TTS-12Hz-0.6B-CustomVoice','Not separately specified by publisher','female'),'en':('en_US-ljspeech-medium','Public Domain','female'),'ru':('Qwen3-TTS-12Hz-0.6B-CustomVoice','Not separately specified by publisher','female')}
 GLOBALS={
  'de':{'choose':'Wer bist du heute? Suche dir eine Figur aus. Tippe dann auf Start.','walk':'Tippe auf ein Schild. Deine Figur läuft dorthin. Unten kannst du alle acht Bereiche direkt antippen.','success':'Wunderbar! Das hast du gut gemacht.','again':'Schau noch einmal. Du kannst es ausprobieren.'},
  'en':{'choose':'Who will you be today? Choose a character. Then tap Start.','walk':'Tap a sign. Your character walks there. Tap any of the eight subjects along the bottom.','success':'That is right! You did it.','again':'Take another look. You can try again.'},
@@ -39,19 +40,22 @@ PRAISE={
 SYNTHESIS={'revision':'articulated-2','length_scale':1.18,'noise_scale':0.5,'noise_w_scale':0.6,'volume':0.68,'lead_seconds':0.18,'tail_seconds':0.35,'sentence_pause_seconds':0.28}
 
 def synthesis_profile(locale):
+    if locale in ['de','ru']:
+        import importlib.util
+        spec=importlib.util.spec_from_file_location('multilingual_voice_profile',ROOT/'scripts/generate-multilingual-voice.py')
+        engine=importlib.util.module_from_spec(spec);spec.loader.exec_module(engine)
+        return engine.synthesis_profile()
     profile=dict(SYNTHESIS)
-    if locale=='de':
-        profile.update(revision='articulated-3',length_scale=1.6,noise_w_scale=0.0,
-                       phoneme_normalization='supported-nfc',duration_alignment='vits-ceil-frames')
     return profile
 
 def clip_profile(locale,id,text=''):
     profile=synthesis_profile(locale)
+    if locale in ['de','ru']:return profile
     if locale!='de' and id.startswith(('area_','look_')):
         profile.update(revision='articulated-short-3',length_scale=1.5,noise_w_scale=0.0,
                        duration_alignment='vits-ceil-frames')
-    if locale=='de' and re.search(r'\bChemie\b',text):
-        profile['pronunciations']={'Chemie':'çeˈmiː'}
+    if locale=='en' and id=='area_geography':
+        profile.update(revision='articulated-context-4',length_scale=1.18)
     return profile
 
 def pronunciation_phonemes(phonemes,text,locale):
@@ -116,7 +120,7 @@ def narration_texts(locale):
     elif locale=='en':
         texts['area_math']='Mathematics.'
         texts['area_logic']='This is logic.'
-        texts['area_geography']="Let's explore geography."
+        texts['area_geography']='Geography.'
     else:
         for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
             texts['area_'+subject]='Это '+languages['ui'][subject][locale].lower()+'.'
@@ -185,6 +189,10 @@ def main():
     parser.add_argument('--threads',type=int,default=2)
     parser.add_argument('--output',type=Path,help='Optional development voice-bank root; keeps shipping clips untouched')
     args=parser.parse_args()
+    if args.locale in ['de','ru']:
+        if not args.model.is_dir():parser.error('Deutsch/Russisch verwenden jetzt die weibliche Qwen-Stimme; --model muss das lokale Qwen-Modellverzeichnis sein, keine alte männliche ONNX-Datei.')
+        subprocess.run([sys.executable,str(ROOT/'scripts/generate-multilingual-voice.py'),'--locale',args.locale,'--model',str(args.model),'--threads',str(args.threads),'--output',str(args.output if args.output else ROOT/'assets/voice/quest')],check=True)
+        return
     import onnxruntime
     onnxruntime.disable_telemetry_events()
     from piper import PiperVoice,SynthesisConfig

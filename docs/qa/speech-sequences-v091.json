@@ -1,0 +1,110 @@
+{
+  "checks": 75,
+  "failures": 0,
+  "results": [
+    {
+      "captured_seconds": 7.61614512471655,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 7.618,
+      "expected_seconds": 7.52000021934509,
+      "locale": "de",
+      "peak": 0.704979062080383,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_365cde4de80355fd3b56.ogg",
+        "res://assets/voice/quest/de/voice_de_2849bf5198045377dabb.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 7.70902494331066,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 7.726,
+      "expected_seconds": 7.60000014305115,
+      "locale": "de",
+      "peak": 0.704979062080383,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_5a86c43c6a66c2b34a0a.ogg",
+        "res://assets/voice/quest/de/voice_de_2849bf5198045377dabb.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 5.85142857142857,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 5.789,
+      "expected_seconds": 5.78657603263855,
+      "locale": "en",
+      "peak": 0.692974209785461,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_723784251dcaaf0e5c4f.ogg",
+        "res://assets/voice/quest/en/voice_en_c4cf434fd59ea1a4b311.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 7.05886621315193,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 7.078,
+      "expected_seconds": 7.01859402656555,
+      "locale": "en",
+      "peak": 0.745601534843445,
+      "stream_paths": [
+        "res://assets/voice/quest/en/voice_en_0b2bd1312bbcf621beb2.ogg",
+        "res://assets/voice/quest/en/voice_en_c4cf434fd59ea1a4b311.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 6.78022675736961,
+      "clips": [
+        "quest/german_sun",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 6.795,
+      "expected_seconds": 6.72000002861023,
+      "locale": "ru",
+      "peak": 0.699999928474426,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_08af7a4ed388a463c77f.ogg",
+        "res://assets/voice/quest/ru/voice_ru_50079cc7566de9a41def.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 8.5449433106576,
+      "clips": [
+        "quest/german_robot_hint",
+        "quest/praise_1"
+      ],
+      "elapsed_seconds": 8.561,
+      "expected_seconds": 8.48000025749207,
+      "locale": "ru",
+      "peak": 0.703018248081207,
+      "stream_paths": [
+        "res://assets/voice/quest/ru/voice_ru_c02267e8d8d57890e82b.ogg",
+        "res://assets/voice/quest/ru/voice_ru_50079cc7566de9a41def.ogg"
+      ]
+    },
+    {
+      "captured_seconds": 2.2291156462585,
+      "clips": [
+        "quest/area_physics"
+      ],
+      "elapsed_seconds": 2.208,
+      "expected_seconds": 2.18131516128778,
+      "locale": "de",
+      "peak": 0.700000107288361,
+      "stream_paths": [
+        "res://assets/voice/quest/de/voice_de_be2ee8410457653e4e19.ogg"
+      ]
+    }
+  ],
+  "scope": "Actual desktop mixer; simulated application notifications, no Android device or human listening claim"
+}

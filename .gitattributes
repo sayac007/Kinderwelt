@@ -1,3 +1,6 @@
 # Pinned third-party scores/notices remain byte-for-byte originals for SHA checks.
 scripts/music/scores/** -whitespace
 assets/music/licenses/** -whitespace
+
+# Keep upstream model cards byte-identical, including their original spacing.
+assets/voice/quest/*/MODEL_CARD.txt -whitespace

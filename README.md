@@ -6,9 +6,11 @@ Die Figuren im 3D-Comicstil haben farbige Lichtkränze, Klickreaktionen, kleine 
 
 Dieser Projektstand enthält ausschließlich die neue App. Einstieg: `core/quest/main.tscn`. Aufgaben: `games/quest/tasks.json`.
 
+**0.9.1:** Weibliche Serena-Stimme für Deutsch und Russisch, weiterhin die bevorzugte englische Frauenstimme und ein neues, ohne Bildreferenz KI-generiertes Weltraum-Eichhörnchen als App-Icon. [Stimme und Prüfverfahren](docs/voice.md), [Bildherkunft](docs/character-origins.md). Zunächst nur Quellstand und lokale Prüfungen; neue Android-Artefakte sind auf Nutzerwunsch zurückgestellt.
+
 **0.9.0:** Alle 320 Grundaufgaben ersetzt, anspruchsvollere Rechnungen/Sprachrätsel/Regeln und Sachfragen, 640 optionale Bonusaufgaben, native Sprachaufgaben (Deutsch / English / Русский) und 200 Sachrätsel mit indirekten Kontextbildern. [Umsetzung und Prüfstand](docs/rewards-native-learning-v090.md).
 
-**Varianten:** Getrennt vorbereitete Familienquellen, geprüfte Figurenherkunft und zwei benannte Android-Ausgaben: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. [Privates Figurenrepository und CI-Einrichtung](docs/family-repository.md), [Herkunft](docs/character-origins.md), [Prüfungen und APKs](docs/test-report.md). Die gewünschte englische Stimme in DE/RU ist noch offen: der direkte Versuch wurde wegen schlechter Verständlichkeit verworfen; [tatsächlicher Befund](docs/voice-v081.md).
+**Varianten:** Getrennt vorbereitete Familienquellen, geprüfte Figurenherkunft und zwei benannte Android-Ausgaben: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. [Privates Figurenrepository und CI-Einrichtung](docs/family-repository.md), [Herkunft](docs/character-origins.md), [Prüfungen und APKs](docs/test-report.md).
 
 ## Entwickeln und prüfen
 
