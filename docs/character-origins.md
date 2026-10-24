@@ -1,7 +1,7 @@
 # Herkunft aller aktuell verwendeten Spielfiguren
 
-Scope clarification for 0.9.4: the historical table below concerns **bundled**
-project artwork. Optional device-local PNG avatars are user-provided inputs,
+Scope clarification for 0.9.5: the historical table below concerns **bundled**
+project artwork. Optional device-local JPEG/PNG/WebP avatars are user-provided inputs,
 not part of the preapproved generation registry or a new project authorship
 claim. They are never included in a build or this provenance scan. The
 [visual audit](qa/VISUAL_IP_AUDIT.md) and the corrected legacy row below include

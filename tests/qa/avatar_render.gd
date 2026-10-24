@@ -32,6 +32,10 @@ func run() -> void:
 			panel.preview.texture=ImageTexture.create_from_image(panel.candidate)
 			panel.preview.queue_redraw();panel.help_text.hide();panel.confirm_button.disabled=false
 			await snap(locale+"-"+profile.id+"-preview")
+			await panel.load_path("res://tests/fixtures/avatar/orientation-1.jpg")
+			panel.preview.set_zoom(1.8);panel.preview.pan(Vector2(12,0))
+			panel.scroll.scroll_vertical=maxi(0,roundi(panel.preview.position.y-20))
+			await snap(locale+"-"+profile.id+"-crop")
 			panel.confirm_button.pressed.emit()
 			await snap(locale+"-"+profile.id+"-world")
 			app.audio.music.shutdown();app.narration.cancel();app.queue_free()

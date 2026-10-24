@@ -38,20 +38,21 @@ Keine Aussagen zu nachgewiesener Lernwirkung, Garantien oder angeblicher pädago
 
 Langtextgrundlage: 50 Stationen pro Fach mit je zwei freiwilligen Boni; Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch und Geografie. Sprachaufgaben mit eigenem Wortschatz in Deutsch, Englisch oder Russisch. Sieben wählbare Kulissen, Punktefortschritt auf dem Gerät und anpassbare Audioeinstellungen. Keine Konten oder Werbung. Zahlen/Features vor Veröffentlichung mit dem tatsächlich freigegebenen Paket erneut abgleichen. Einträge und Screenshots erst nach den offenen Entscheidungen finalisieren.
 
-## Optional device-local avatar processing (0.9.4)
+## Optional device-local avatar processing (0.9.5)
 
-The parent area can select a finished transparent PNG through the system document
-picker. This optionally processes personal image content **on the device**; it is
+The parent area can select JPEG, PNG or static WebP through the system document
+picker, orient and crop a portrait, or retain a transparent full figure. This optionally processes personal image content **on the device**; it is
 not accurate to claim that no personal image is ever processed. Only normalized,
 re-encoded pixels are retained in private app storage. No original copy, source
 URI or EXIF/GPS/camera metadata is retained, and no image is transmitted by the
-app. The original device file remains untouched. Parent removal and reset delete
+app. Backup exclusions apply to this private app copy; the original gallery/cloud
+file and system provider behaviour remain outside the app’s control. The original device file remains untouched. Parent removal and reset delete
 the private normalized copy and pending file.
 
 The manifest still declares zero permissions and disables backup. Explicit cloud
 and device-transfer exclusion rules are additionally verified in the compiled
-APK. A synthetic GPS/camera PNG exercises the actual runtime re-encoding and
-deleted-copy behavior. These technical checks do not substitute for native-device
+APK. Synthetic GPS/camera fixtures in all three formats exercise all eight EXIF
+orientations, actual runtime re-encoding, restart and deleted-copy behavior. These technical checks do not substitute for native-device
 picker/lifecycle/backup tests. See the [implementation and test boundaries](AVATAR_IMPORT_FEASIBILITY.md).
 
 Before approving Data Safety statements, the operator must distinguish local
