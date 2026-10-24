@@ -3,10 +3,13 @@ const Art = preload("res://core/quest/art.gd")
 var value: Variant
 var kind := ""
 var caption := ""
+var slot_pattern := ""
 func _ready() -> void: mouse_filter = MOUSE_FILTER_IGNORE
 func _draw() -> void:
 	var rect := Rect2(Vector2(9,8),size-Vector2(18,16))
-	if kind=="dual_pattern":
+	if kind=="word" and not slot_pattern.is_empty():
+		preload("res://core/quest/letter_slots.gd").paint(self,slot_pattern,rect)
+	elif kind=="dual_pattern":
 		var pair:=str(value).split(":")
 		Art.object(self,pair[0],Rect2(rect.position,Vector2(rect.size.x,rect.size.y-22)))
 		Art.text(self,pair[1],Vector2(size.x/2,size.y-13),20)

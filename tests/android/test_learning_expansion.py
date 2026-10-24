@@ -9,9 +9,9 @@ class LearningExpansionTests(unittest.TestCase):
         cls.by_id={t['id']:t for t in cls.parents}
         cls.all=[t for p in cls.parents for t in [p,*p['bonuses']]]
     def test_two_optional_differently_valued_bonuses_per_station(self):
-        self.assertEqual(len(self.all),960)
-        self.assertEqual(len({t['id'] for t in self.all}),960)
-        self.assertEqual(sum(t['points'] for t in self.all),51200)
+        self.assertEqual(len(self.all),1200)
+        self.assertEqual(len({t['id'] for t in self.all}),1200)
+        self.assertEqual(sum(t['points'] for t in self.all),64000)
         for parent in self.parents:
             self.assertEqual(parent['points'],10)
             self.assertEqual([b['points'] for b in parent['bonuses']],[50,100])
@@ -43,12 +43,12 @@ class LearningExpansionTests(unittest.TestCase):
         for t in self.parents:
             self.assertEqual(t['content_revision'],2)
             for locale in ('de','en','ru'):
-                self.assertNotEqual(t['texts'][locale]['prompt'],old[t['id']][locale],(t['id'],locale))
+                if t['id'] in old:self.assertNotEqual(t['texts'][locale]['prompt'],old[t['id']][locale],(t['id'],locale))
         for subject in ('math','german','logic'):
-            self.assertEqual(len({json.dumps({k:t.get(k) for k in ('display','sequence','counts','order','ask_first')},sort_keys=True) for t in self.parents if t['subject']==subject}),40)
+            self.assertEqual(len({json.dumps({k:t.get(k) for k in ('display','sequence','counts','order','ask_first')},sort_keys=True) for t in self.parents if t['subject']==subject}),50)
         for lang in ('de','en','ru'):
             science=[t for t in self.parents if t['kind']=='discovery']
-            self.assertEqual(len({t['texts'][lang]['prompt'] for t in science}),200)
+            self.assertEqual(len({t['texts'][lang]['prompt'] for t in science}),250)
         legacy=json.loads((ROOT/'games/quest/legacy-rewards.json').read_text())['rewards']
         self.assertEqual(set(legacy),set(old))
         self.assertEqual(sum(legacy.values()),3200)
@@ -59,14 +59,15 @@ class LearningExpansionTests(unittest.TestCase):
         self.assertEqual((sun['variants']['ru']['word'],sun['variants']['ru']['answer']),('СОЛНЫШКО','СЫ'))
         foot=next(t for t in self.parents if t.get('word')=='FUSSABDRUCK')
         for task in [foot,*foot['bonuses']]:
-            self.assertIn('Fußabdruck',task['texts']['de']['prompt'])
+            self.assertIn('Fußabdruck',task['texts']['de']['spoken_prompt'])
+            self.assertNotIn('Fußabdruck',task['texts']['de']['prompt'])
         for parent in self.parents:
             if parent['subject']!='german':continue
             for task in [parent,*parent['bonuses']]:
                 for lang in ('de','en','ru'):
                     v=task if lang=='de' else task['variants'][lang]
                     letters=iter(v['answer'])
-                    reconstructed=''.join(next(letters) if c=='＿' else c for c in v['display'])
+                    reconstructed=''.join(next(letters) if c=='_' else c for c in v['display'])
                     self.assertEqual(reconstructed,v['word'])
                     self.assertGreaterEqual(len(v['answer']),2 if task==parent else 3)
                     self.assertEqual(len(v['options']),len(set(v['options'])))
@@ -98,7 +99,7 @@ class LearningExpansionTests(unittest.TestCase):
             self.assertLessEqual(max(Counter(slots).values()),25)
     def test_science_questions_have_indirect_context_and_short_keyword(self):
         science=[t for t in self.parents if t['kind']=='discovery']
-        self.assertEqual(len(science),200)
+        self.assertEqual(len(science),250)
         for t in science:
             self.assertIn('riddle_scene',t)
             self.assertIsInstance(t['riddle_scene'],str)
@@ -124,7 +125,7 @@ class LearningExpansionTests(unittest.TestCase):
         spec=importlib.util.spec_from_file_location('native_voice',ROOT/'scripts/generate-quest-voice.py')
         m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
         clips=m.narration_texts('ru')
-        self.assertEqual(len(clips),1947)
+        self.assertEqual(len(clips),2427)
         for id,text in clips.items():self.assertNotRegex(text,r'[A-Za-z]',id)
         self.assertNotIn('немецк',clips['german_sun'].lower())
         self.assertIn('Солнышко',clips['german_sun'])

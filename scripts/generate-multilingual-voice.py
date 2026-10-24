@@ -4,17 +4,20 @@
 Development only. No model, Python, network or TTS engine enters the app.
 English remains the existing LJSpeech voice. No human reference recording.
 """
-import argparse,hashlib,importlib.util,json,math,os,re,shutil,tempfile,time
+import argparse,hashlib,importlib.util,json,math,os,re,shutil,tempfile,time,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts/voice'))
+import pronunciation
+from reuse import reviewed_current_rows
 MODEL='Qwen3-TTS-12Hz-0.6B-CustomVoice'
 REVISION='85e237c12c027371202489a0ec509ded67b5e4b5'
 MODEL_SHA='bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb'
 TOKENIZER_SHA='836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258'
 SOURCE='https://huggingface.co/Qwen/'+MODEL+'/tree/'+REVISION
 LANGUAGES={'de':'German','ru':'Russian'}
-def synthesis_profile(speaker='Serena',batch_size=32):
-    return {'revision':'female-multilingual-2','speaker':speaker,'precision':'bfloat16',
+def synthesis_profile(speaker='Serena',batch_size=48):
+    return {'revision':'female-lexical-stress-3','pronunciation_revision':pronunciation.REVISION,'decoder_batch_size':4,'speaker':speaker,'precision':'bfloat16',
             'attention':'sdpa','batch_size':batch_size,'do_sample':True,'subtalker_dosample':True,'temperature':.65,'top_p':.85,'top_k':30,
             'lead_seconds':.20,'tail_seconds':.40,'waveform_policy':'Complete decoder output, no trimming, pitch or formant conversion',
             'duration_alignment':'not available; no fabricated word timestamps',
@@ -51,8 +54,10 @@ def main():
     p.add_argument('--calibrate-only',action='store_true',help='Update measured playback gain in an existing complete manifest; no model or audio changes')
     p.add_argument('--output',type=Path,required=True,help='Voice-bank root; start in build/ for review before installation')
     p.add_argument('--speaker',choices=['Serena','Ono_Anna','Sohee'],default='Serena')
-    p.add_argument('--threads',type=int,default=4);p.add_argument('--batch-size',type=int,default=32);p.add_argument('--ids',nargs='+');a=p.parse_args()
-    if not 1<=a.batch_size<=32:p.error('Batch size must be between 1 and 32')
+    p.add_argument('--threads',type=int,default=4);p.add_argument('--batch-size',type=int,default=48);p.add_argument('--ids',nargs='+')
+    p.add_argument('--reuse-bank',type=Path,help='Existing locale folder; only provably identical original model inputs can be reused')
+    a=p.parse_args()
+    if not 1<=a.batch_size<=64:p.error('Batch size must be between 1 and 64')
     if a.calibrate_only:
         import fcntl
         path=a.output/a.locale/'manifest.json'
@@ -95,12 +100,27 @@ def main():
         manifest['generation_batches']=previous.get('generation_batches',{})
         legacy={**profile,'revision':'female-multilingual-1','do_sample':False,'subtalker_dosample':False}
         for key in ['temperature','top_p','top_k']:legacy.pop(key)
-        if previous.get('synthesis') in [profile,legacy,dict(profile,batch_size=16),dict(legacy,batch_size=16)] and previous.get('model_sha256')==MODEL_SHA and previous.get('speaker')==a.speaker:
-            prior={c['text']:c for c in previous['clips']}
+        if previous.get('synthesis') in [profile,legacy,dict(profile,batch_size=32),dict(profile,batch_size=16),dict(legacy,batch_size=32),dict(legacy,batch_size=16)] and previous.get('model_sha256')==MODEL_SHA and previous.get('speaker')==a.speaker:
+            prior=reviewed_current_rows(previous,texts,a.locale)
+    if a.reuse_bank:
+        from reuse import exact_input_rows
+        original_manifest=(a.reuse_bank/'manifest.json').read_bytes()
+        original=json.loads(original_manifest)
+        reusable=exact_input_rows(original,manifest,texts,a.locale,hashlib.sha256(original_manifest).hexdigest())
+        adopted=0
+        for text,row in reusable.items():
+            if text in prior:continue
+            path=a.reuse_bank/row['file']
+            if not source.valid_cached_audio(path,row['sha256']):continue
+            shutil.copy2(path,dest/row['file']);prior[text]=row;adopted+=1
+        manifest.setdefault('generation_batches',{}).update(original.get('generation_batches',{}))
+        print('Reused',adopted,'unchanged recordings with exact original input proof; original synthesis metadata retained',flush=True)
     model=None;done={};start=time.monotonic()
     spec=importlib.util.spec_from_file_location('asr_sample_ids',ROOT/'scripts/qa/speech_recognition.py')
     screening=importlib.util.module_from_spec(spec);spec.loader.exec_module(screening)
     priority={texts[id] for id in screening.sample_ids() if id in texts}
+    word_ids=[t['id'] for t in json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks'] if t['subject']=='german']
+    priority.update(texts[id] for id in word_ids if id in texts)
     unique=sorted(set(texts.values()),key=lambda t:(t not in priority,len(t),t))
     for text in unique:
         if text in prior and source.valid_cached_audio(dest/prior[text]['file'],prior[text]['sha256']):done[text]=prior[text]
@@ -123,36 +143,54 @@ def main():
         if model is None:
             model=Qwen3TTSModel.from_pretrained(str(a.model),device_map='cpu',dtype=torch.bfloat16,attn_implementation='sdpa')
             print('Loaded official local Qwen3 model; offline',flush=True)
-        seed=(int(hashlib.sha256((a.locale+json.dumps(batch,ensure_ascii=False)).encode()).hexdigest()[:8],16)+104729*attempt)%2**32
+        spoken=[pronunciation.utterance(text,a.locale)['synthesis_text'] for text in batch]
+        seed=(int(hashlib.sha256((a.locale+json.dumps(spoken,ensure_ascii=False)).encode()).hexdigest()[:8],16)+104729*attempt)%2**32
         torch.manual_seed(seed)
-        budget=min(480,max(96,max(len(re.findall(r'\w+',t)) for t in batch)*8+36+32*attempt))
+        # Compounds and number sequences expand beyond a simple written-word
+        # estimate. Leave room to finish; the independent duration guard still
+        # rejects repetitions before waveform decoding.
+        budget=min(480,max(96,max(len(re.findall(r'\w+',t)) for t in batch)*12+64+32*attempt))
         kwargs={'do_sample':sampling,'subtalker_dosample':sampling,'max_new_tokens':budget}
         if sampling:kwargs.update(temperature=.65+.05*max(0,attempt-1),top_p=.85,top_k=30,subtalker_temperature=.65)
         decoder=model.model.speech_tokenizer.decode
         def checked_decode(items):
             # Inspect codec length before waveform decoding. A failed EOS must
             # not force every valid item through a huge padded audio batch.
-            waves=[];output_rate=24000
-            for text,item in zip(batch,items):
+            waves=[None]*len(items);output_rate=24000;valid=[]
+            for index,(text,item) in enumerate(zip(batch,items)):
                 seconds=item['audio_codes'].shape[0]/12.5
                 words=len(re.findall(r'\w+',text))
                 if seconds>=(budget-2)/12.5 or seconds>max(5.,1.1*words+2):
                     print('Reject codec overrun before decoding:',repr(text),round(seconds,2),flush=True)
-                    waves.append(np.zeros(0,np.float32));continue
-                decoded,output_rate=decoder([item]);waves.append(decoded[0])
+                    waves[index]=np.zeros(0,np.float32);continue
+                valid.append(index)
+            # Bound waveform-decoder memory independently of the text batch.
+            # Length buckets limit padding; official decode retains each item's
+            # complete original length. Four items fit the 32-GiB environment.
+            valid.sort(key=lambda i:items[i]['audio_codes'].shape[0])
+            for offset in range(0,len(valid),profile['decoder_batch_size']):
+                indexes=valid[offset:offset+profile['decoder_batch_size']]
+                decoded,output_rate=decoder([items[i] for i in indexes])
+                if len(decoded)!=len(indexes):raise ValueError('Incomplete decoder batch')
+                for index,waveform in zip(indexes,decoded):waves[index]=waveform
             return waves,output_rate
         model.model.speech_tokenizer.decode=checked_decode
         try:
-            wavs,rate=model.generate_custom_voice(text=batch,language=LANGUAGES[a.locale],speaker=a.speaker,**kwargs)
+            wavs,rate=model.generate_custom_voice(text=spoken,language=LANGUAGES[a.locale],speaker=a.speaker,**kwargs)
         finally:model.model.speech_tokenizer.decode=decoder
         if len(wavs)!=len(batch):raise ValueError('Missing batch output')
         return wavs,rate,seed,budget,kwargs
     with tempfile.TemporaryDirectory(prefix='kinderwelt-female.') as tmp:
-        for offset in range(0,len(unique),a.batch_size):
+        # An explicit existing bank is a new incremental generation operation.
+        # Compact its missing inputs; actual new batch/seed are recorded below.
+        # Never synthesize hundreds of already verified clips just for padding.
+        work=[text for text in unique if text not in done] if a.reuse_bank else unique
+        for offset in range(0,len(work),a.batch_size):
             # Keep the original grouping on resume: changes in batch shape can
             # affect numerical rounding even with deterministic greedy decoding.
-            group=unique[offset:offset+a.batch_size]
+            group=work[offset:offset+a.batch_size]
             if all(text in done for text in group):continue
+            print(a.locale,'synthesizing',len(group),'inputs;',len(done),'of',len(unique),'verified',flush=True)
             wavs,rate,seed,budget,kwargs=synthesize(group,sampling=True)
             for text,waveform in zip(group,wavs):
                 if text in done:continue
@@ -175,18 +213,24 @@ def main():
                 gain=min(1.,.78/peak)
                 padded=np.concatenate([np.zeros(round(rate*profile['lead_seconds']),np.float32),pcm*gain,np.zeros(round(rate*profile['tail_seconds']),np.float32)])
                 wav=Path(tmp)/'complete.wav';sf.write(wav,padded,rate,subtype='PCM_16')
-                filename='voice_'+a.locale+'_'+hashlib.sha256((text+MODEL_SHA+json.dumps(profile,sort_keys=True)+str(actual_seed)+json.dumps(actual_kwargs,sort_keys=True)).encode()).hexdigest()[:20]+'.ogg'
+                filename='voice_'+a.locale+'_'+hashlib.sha256((text+MODEL_SHA+json.dumps(profile,sort_keys=True)+str(actual_seed)+json.dumps(actual_kwargs,sort_keys=True)+pronunciation.utterance(text,a.locale)['sha256']).encode()).hexdigest()[:20]+'.ogg'
                 target=dest/filename;encoding=source.encode_speech(wav,target)
                 row={'text':text,'file':filename,'seconds':len(padded)/rate,'synthesized_seconds':duration,
                      'source_sample_rate':rate,'source_samples':len(pcm),'source_waveform_sha256':hashlib.sha256(pcm.tobytes()).hexdigest(),
                      'uniform_waveform_gain':gain,'synthesis_threads':a.threads,'encoding':encoding,'generation_profile':profile,'seed':actual_seed,
-                     'generation_parameters':actual_kwargs,'generation_batch':group if actual_seed==seed else [text],
+                     'generation_parameters':actual_kwargs,
+                     'pronunciation':pronunciation.utterance(text,a.locale),
+                     'generation_batch':[pronunciation.utterance(t,a.locale)['synthesis_text'] for t in (group if actual_seed==seed else [text])],
                      'bytes':target.stat().st_size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
                 done[text]=row
                 checkpoint()
             print(a.locale,'unique',len(done),'/',len(unique),'mappings',len(manifest['clips']),'wall',round(time.monotonic()-start),flush=True)
     checkpoint()
     if not a.ids:
+        referenced={r['generation_batch_sha256'] for r in manifest['clips']}
+        manifest['generation_batches']={key:value for key,value in manifest['generation_batches'].items() if key in referenced}
+        (dest/'manifest.json.tmp').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+        (dest/'manifest.json.tmp').replace(dest/'manifest.json')
         keep={c['file'] for c in manifest['clips']}
         for path in dest.glob('voice_*.ogg'):
             if path.name not in keep:path.unlink();path.with_suffix('.ogg.import').unlink(missing_ok=True)

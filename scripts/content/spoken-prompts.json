@@ -1,0 +1,26 @@
+{
+  "scope": "Explicit spoken alternatives preserve the task meaning; visible spelling targets stay separate.",
+  "tasks": {
+    "body_01": {
+      "de": "Schau genau. Licht kommt vom Bild. Welcher Körperteil meldet seine Farben ans Gehirn?"
+    },
+    "german_42": {
+      "de": "Das Wort ist Waldweg. Welche beiden Buchstaben fehlen?"
+    },
+    "german_42_bonus_1": {
+      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?"
+    },
+    "german_42_bonus_2": {
+      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?"
+    },
+    "german_50": {
+      "de": "Das Wort ist Bastelschere. Welche beiden Buchstaben fehlen?"
+    },
+    "german_50_bonus_1": {
+      "de": "Das Wort ist Bastelschere. Welche Buchstaben fehlen?"
+    },
+    "german_50_bonus_2": {
+      "de": "Das Wort ist Bastelschere. Welche Buchstaben fehlen?"
+    }
+  }
+}

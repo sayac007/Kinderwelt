@@ -342,7 +342,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Sonne. Welcher Buchstabe passt am Anfang?",
-      "after": "Sonnenstrahl. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_sun",
@@ -356,7 +356,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Sonne. Which letter does it start with?",
-      "after": "Sunshine. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_sun",
@@ -370,7 +370,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Sonne. С какой буквы его пишут?",
-      "after": "Солнышко. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_sun",
@@ -384,7 +384,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Maus. Welcher Buchstabe passt am Anfang?",
-      "after": "Mauseloch. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_mouse",
@@ -398,7 +398,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Maus. Which letter does it start with?",
-      "after": "Mousehole. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_mouse",
@@ -412,7 +412,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Maus. С какой буквы его пишут?",
-      "after": "Мышонок. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_mouse",
@@ -426,7 +426,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Apfel. Welcher Buchstabe passt am Anfang?",
-      "after": "Apfelsaft. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_apple",
@@ -440,7 +440,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Apfel. Which letter does it start with?",
-      "after": "Applesauce. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_apple",
@@ -454,7 +454,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Apfel. С какой буквы его пишут?",
-      "after": "Яблочко. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_apple",
@@ -468,7 +468,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Was reimt sich auf Haus?",
-      "after": "Baumhaus. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_rhyme",
@@ -482,7 +482,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word rhymes with Haus?",
-      "after": "Treehouse. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_rhyme",
@@ -496,7 +496,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово рифмуется со словом Haus?",
-      "after": "Домик. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_rhyme",
@@ -510,7 +510,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Roboter. Wie viele Silben hörst du?",
-      "after": "Raumfahrt. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_robot",
@@ -524,7 +524,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Roboter. How many syllables can you hear?",
-      "after": "Spaceship. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_robot",
@@ -538,7 +538,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Roboter. Сколько слогов ты слышишь?",
-      "after": "Ракета. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_robot",
@@ -552,7 +552,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches Wort gehört zum Ball?",
-      "after": "Ballspiel. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_read",
@@ -566,7 +566,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word belongs to the ball?",
-      "after": "Football. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_read",
@@ -580,7 +580,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к мячу?",
-      "after": "Футбол. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_read",
@@ -594,7 +594,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Blume. Wie viele Silben hörst du?",
-      "after": "Blumenvase. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_flower",
@@ -608,7 +608,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Blume. How many syllables can you hear?",
-      "after": "Flowerpot. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_flower",
@@ -622,7 +622,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Blume. Сколько слогов ты слышишь?",
-      "after": "Цветочек. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_flower",
@@ -636,7 +636,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Fisch. Welcher Buchstabe passt am Anfang?",
-      "after": "Goldfisch. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_fish",
@@ -650,7 +650,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Fisch. Which letter does it start with?",
-      "after": "Goldfish. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_fish",
@@ -664,7 +664,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Fisch. С какой буквы его пишут?",
-      "after": "Аквариум. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_fish",
@@ -2358,7 +2358,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Biene. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Bienenkorb. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_09",
@@ -2372,7 +2372,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Biene. Which letter does it start with?",
-      "after": "Beehive. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_09",
@@ -2386,7 +2386,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Biene. С какой буквы его пишут?",
-      "after": "Улей. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_09",
@@ -2400,7 +2400,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Frosch. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Froschteich. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_10",
@@ -2414,7 +2414,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Frosch. Which letter does it start with?",
-      "after": "Tadpole. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_10",
@@ -2428,7 +2428,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Frosch. С какой буквы его пишут?",
-      "after": "Головастик. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_10",
@@ -2442,7 +2442,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Katze. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Katzenpfote. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_11",
@@ -2456,7 +2456,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Katze. Which letter does it start with?",
-      "after": "Kitten. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_11",
@@ -2470,7 +2470,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Katze. С какой буквы его пишут?",
-      "after": "Котёнок. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_11",
@@ -2484,7 +2484,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Nest. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Vogelnest. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_12",
@@ -2498,7 +2498,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Nest. Which letter does it start with?",
-      "after": "Nestling. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_12",
@@ -2512,7 +2512,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Nest. С какой буквы его пишут?",
-      "after": "Птенец. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_12",
@@ -2526,7 +2526,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Wurm. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Regenwurm. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_13",
@@ -2540,7 +2540,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Wurm. Which letter does it start with?",
-      "after": "Earthworm. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_13",
@@ -2554,7 +2554,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Wurm. С какой буквы его пишут?",
-      "after": "Червячок. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_13",
@@ -2568,7 +2568,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Wasser. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Wassertropfen. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_14",
@@ -2582,7 +2582,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Wasser. Which letter does it start with?",
-      "after": "Raindrop. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_14",
@@ -2596,7 +2596,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Wasser. С какой буквы его пишут?",
-      "after": "Капелька. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_14",
@@ -2610,7 +2610,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Salz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Salzkristall. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_15",
@@ -2624,7 +2624,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Salz. Which letter does it start with?",
-      "after": "Crystal. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_15",
@@ -2638,7 +2638,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Salz. С какой буквы его пишут?",
-      "after": "Кристалл. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_15",
@@ -2652,7 +2652,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Sand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Sandkasten. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_16",
@@ -2666,7 +2666,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Sand. Which letter does it start with?",
-      "after": "Sandcastle. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_16",
@@ -2680,7 +2680,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Sand. С какой буквы его пишут?",
-      "after": "Песочница. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_16",
@@ -2694,7 +2694,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Holz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Holzlöffel. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_17",
@@ -2708,7 +2708,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Holz. Which letter does it start with?",
-      "after": "Woodland. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_17",
@@ -2722,7 +2722,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Holz. С какой буквы его пишут?",
-      "after": "Древесина. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_17",
@@ -2736,7 +2736,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Nase. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Nasenspitze. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_18",
@@ -2750,7 +2750,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Nase. Which letter does it start with?",
-      "after": "Nostril. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_18",
@@ -2764,7 +2764,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Nase. С какой буквы его пишут?",
-      "after": "Носик. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_18",
@@ -2778,7 +2778,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Hand. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Handschuh. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_19",
@@ -2792,7 +2792,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Hand. Which letter does it start with?",
-      "after": "Mitten. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_19",
@@ -2806,7 +2806,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Hand. С какой буквы его пишут?",
-      "after": "Варежка. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_19",
@@ -2820,7 +2820,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Herz. Mit welchem Buchstaben schreibt man das deutsche Wort am Anfang?",
-      "after": "Herzschlag. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_20",
@@ -2834,7 +2834,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Herz. Which letter does it start with?",
-      "after": "Heartbeat. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_20",
@@ -2848,7 +2848,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Herz. С какой буквы его пишут?",
-      "after": "Сердечко. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_20",
@@ -2862,7 +2862,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Schmetterling. Wie viele Silben hörst du?",
-      "after": "Schmetterling. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_21",
@@ -2876,7 +2876,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Schmetterling. How many syllables can you hear?",
-      "after": "Butterfly. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_21",
@@ -2890,7 +2890,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Schmetterling. Сколько слогов ты слышишь?",
-      "after": "Бабочка. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_21",
@@ -2904,7 +2904,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Schildkröte. Wie viele Silben hörst du?",
-      "after": "Schildkröte. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_22",
@@ -2918,7 +2918,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Schildkröte. How many syllables can you hear?",
-      "after": "Tortoise. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_22",
@@ -2932,7 +2932,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Schildkröte. Сколько слогов ты слышишь?",
-      "after": "Черепашка. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_22",
@@ -2946,7 +2946,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Batterie. Wie viele Silben hörst du?",
-      "after": "Taschenlampe. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_23",
@@ -2960,7 +2960,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Batterie. How many syllables can you hear?",
-      "after": "Flashlight. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_23",
@@ -2974,7 +2974,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Batterie. Сколько слогов ты слышишь?",
-      "after": "Фонарик. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_23",
@@ -2988,7 +2988,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Papier. Wie viele Silben hörst du?",
-      "after": "Papierflieger. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_24",
@@ -3002,7 +3002,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Papier. How many syllables can you hear?",
-      "after": "Airplane. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_24",
@@ -3016,7 +3016,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Papier. Сколько слогов ты слышишь?",
-      "after": "Самолёт. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_24",
@@ -3030,7 +3030,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Seife. Wie viele Silben hörst du?",
-      "after": "Seifenblase. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_25",
@@ -3044,7 +3044,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Seife. How many syllables can you hear?",
-      "after": "Bubble. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_25",
@@ -3058,7 +3058,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Seife. Сколько слогов ты слышишь?",
-      "after": "Пузырёк. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_25",
@@ -3072,7 +3072,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Auge. Wie viele Silben hörst du?",
-      "after": "Augenbraue. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_26",
@@ -3086,7 +3086,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Auge. How many syllables can you hear?",
-      "after": "Eyebrow. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_26",
@@ -3100,7 +3100,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Auge. Сколько слогов ты слышишь?",
-      "after": "Брови. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_26",
@@ -3114,7 +3114,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Gehirn. Wie viele Silben hörst du?",
-      "after": "Gedanken. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_27",
@@ -3128,7 +3128,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Gehirn. How many syllables can you hear?",
-      "after": "Thought. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_27",
@@ -3142,7 +3142,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Gehirn. Сколько слогов ты слышишь?",
-      "after": "Мысли. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_27",
@@ -3156,7 +3156,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Magen. Wie viele Silben hörst du?",
-      "after": "Bauchnabel. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_28",
@@ -3170,7 +3170,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Magen. How many syllables can you hear?",
-      "after": "Bellybutton. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_28",
@@ -3184,7 +3184,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Magen. Сколько слогов ты слышишь?",
-      "after": "Пупок. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_28",
@@ -3198,7 +3198,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Wolke. Wie viele Silben hörst du?",
-      "after": "Gewitter. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_29",
@@ -3212,7 +3212,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Wolke. How many syllables can you hear?",
-      "after": "Thunder. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_29",
@@ -3226,7 +3226,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Wolke. Сколько слогов ты слышишь?",
-      "after": "Гроза. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_29",
@@ -3240,7 +3240,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Regen. Wie viele Silben hörst du?",
-      "after": "Regenbogen. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_30",
@@ -3254,7 +3254,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Regen. How many syllables can you hear?",
-      "after": "Rainbow. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_30",
@@ -3268,7 +3268,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Regen. Сколько слогов ты слышишь?",
-      "after": "Радуга. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_30",
@@ -3282,7 +3282,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Insel. Wie viele Silben hörst du?",
-      "after": "Schatzinsel. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_31",
@@ -3296,7 +3296,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Insel. How many syllables can you hear?",
-      "after": "Treasure. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_31",
@@ -3310,7 +3310,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Insel. Сколько слогов ты слышишь?",
-      "after": "Сокровище. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_31",
@@ -3324,7 +3324,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Hammer. Wie viele Silben hörst du?",
-      "after": "Werkzeug. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_32",
@@ -3338,7 +3338,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "German word: Hammer. How many syllables can you hear?",
-      "after": "Toolbox. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_32",
@@ -3352,7 +3352,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Немецкое слово: Hammer. Сколько слогов ты слышишь?",
-      "after": "Инструмент. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_32",
@@ -3366,7 +3366,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Vogelhaus. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_33",
@@ -3380,7 +3380,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Birdhouse. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_33",
@@ -3394,7 +3394,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Скворечник. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_33",
@@ -3408,7 +3408,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Mondlicht. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_34",
@@ -3422,7 +3422,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Moonlight. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_34",
@@ -3436,7 +3436,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Спутник. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_34",
@@ -3450,7 +3450,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Baumkrone. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_35",
@@ -3464,7 +3464,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Treetop. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_35",
@@ -3478,7 +3478,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Макушка. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_35",
@@ -3492,7 +3492,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Milchzahn. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_36",
@@ -3506,7 +3506,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Toothbrush. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_36",
@@ -3520,7 +3520,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Зубик. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_36",
@@ -3534,7 +3534,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Fußabdruck. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_37",
@@ -3548,7 +3548,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Footprint. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_37",
@@ -3562,7 +3562,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Следопыт. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_37",
@@ -3576,7 +3576,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Entenei. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_38",
@@ -3590,7 +3590,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Eggshell. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_38",
@@ -3604,7 +3604,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Скорлупа. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_38",
@@ -3618,7 +3618,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Meereswelle. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_39",
@@ -3632,7 +3632,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Seashell. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_39",
@@ -3646,7 +3646,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Ракушка. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_39",
@@ -3660,7 +3660,7 @@
       "locale": "de",
       "field": "prompt",
       "before": "Welches deutsche Wort passt zum Bild?",
-      "after": "Abenteuer. Welche beiden Buchstaben fehlen?"
+      "after": "Welche beiden Buchstaben fehlen?"
     },
     {
       "id": "german_40",
@@ -3674,7 +3674,7 @@
       "locale": "en",
       "field": "prompt",
       "before": "Which German word matches the picture?",
-      "after": "Adventure. Which two letters are missing?"
+      "after": "Which two letters are missing?"
     },
     {
       "id": "german_40",
@@ -3688,7 +3688,7 @@
       "locale": "ru",
       "field": "prompt",
       "before": "Какое немецкое слово подходит к картинке?",
-      "after": "Приключение. Какие две буквы пропущены?"
+      "after": "Какие две буквы пропущены?"
     },
     {
       "id": "german_40",

@@ -37,9 +37,10 @@ def inspect(tasks,root=ROOT):
     languages=json.loads((root/'games/quest/languages.json').read_text())
     categories=json.loads((root/'scripts/content/answer-categories.json').read_text())
     expected=set(json.loads((root/'games/quest/legacy-rewards.json').read_text())['rewards'])
-    if {t['id'] for t in tasks}!=expected or len(tasks)!=320:failures.append('Base IDs/count changed')
+    expected.update(f'{subject}_{n:02d}' for subject in ['math','german','logic','physics','biology','chemistry','body','geography'] for n in range(41,51))
+    if {t['id'] for t in tasks}!=expected or len(tasks)!=400:failures.append('Base IDs/count changed')
     expected_all=expected|{p+'_bonus_'+str(n) for p in expected for n in (1,2)}
-    if {t['id'] for t in all_tasks}!=expected_all or len(all_tasks)!=960:failures.append('Bonus IDs/count changed')
+    if {t['id'] for t in all_tasks}!=expected_all or len(all_tasks)!=1200:failures.append('Bonus IDs/count changed')
     prompt_groups=collections.defaultdict(list);option_groups=collections.defaultdict(list);type_counts=collections.Counter()
     owners={b['id']:p['id'] for p in tasks for b in p.get('bonuses',[])}
     for t in all_tasks:
@@ -57,6 +58,8 @@ def inspect(tasks,root=ROOT):
                 listed=r'(?<!\w)'+r'\s*\.\s*'.join(re.escape(c) for c in str(answer))+r'\s*\.'
                 if re.search(listed,hint,re.I):failures.append(id+': missing-letter-list '+locale)
                 if str(v['word']).casefold() in hint.casefold():failures.append(id+': complete-word-in-hint '+locale)
+                if str(v['word']).casefold() in text['prompt'].casefold():failures.append(id+': complete-word-in-question '+locale)
+                if '＿' in v.get('display','') or any(c not in '_'+v['word'] for c in v.get('display','')):failures.append(id+': complex-gap-symbol '+locale)
             if t['kind']=='discovery':
                 labels=[languages['objects'][str(answer)][locale],v.get('option_labels',{}).get(str(answer),'')]
                 for label in set(labels)-{''}:
@@ -65,7 +68,7 @@ def inspect(tasks,root=ROOT):
             result_prefix=r'(?:zuletzt|finally|в конце|(?:das\s+)?(?:endergebnis|ergebnis|lösung)\s*(?:ist|lautet|:|=)|(?:final\s+)?(?:answer|result)\s*(?:is|:|=)|(?:итог|ответ|результат)\s*(?:равен|:|=)?)'
             if subject=='math' and re.search(result_prefix+r'\s*'+re.escape(str(answer))+r'\b',hint,re.I):failures.append(id+': final-result '+locale)
             if locale=='ru' and re.search('[A-Za-z]',text['prompt']+hint):failures.append(id+': Latin learning text')
-            prompt_groups[(subject,t['kind'],locale,normalized(text['prompt']))].append((id,parent,t.get('display','')))
+            prompt_groups[(subject,t['kind'],locale,normalized(text['prompt']+' '+v.get('display','') if subject=='german' else text['prompt']))].append((id,parent,t.get('display','')))
             option_groups[(subject,t['kind'],locale,str(answer),tuple(sorted(map(str,options))))].append(id)
         if t['subject']=='logic' and 'parent_id' in t:
             failures.extend(id+': '+err for err in logic_errors(t))

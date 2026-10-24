@@ -68,6 +68,9 @@ func setup(owner_host: Control,data: Dictionary,parent: Dictionary={},index := -
 		var visual := preload("res://games/quest/choice.gd").new()
 		visual.value = option
 		visual.kind = task.kind
+		if task.kind=="word":
+			visual.slot_pattern=task.get("option_displays",{}).get(str(option),"")
+			b.tooltip_text=visual.slot_pattern
 		if task.kind in ["discovery","rhyme","reasoning_choice"]: visual.caption = b.tooltip_text
 		visual.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 		b.add_child(visual)
@@ -120,9 +123,18 @@ func arrange() -> void:
 	var diameter := minf(88,(size.x-56)/3.0) if not landscape else 76.0
 	var choice_y := size.y-174 if not landscape else maxf(170.0,picture_top)
 	var choice_center := size.x/2 if not landscape else size.x*.79
+	if task.kind=="word":
+		choice_y=maxf(118,picture_top) if landscape else size.y-270
+		if not landscape: picture.size.y=maxf(40,choice_y-picture_top-12)
 	for i in range(choices.size()):
 		choices[i].size = Vector2.ONE*diameter
 		choices[i].position = Vector2(choice_center+(i-(choices.size()-1)*.5)*(diameter+8)-diameter/2,choice_y)
+		if task.kind=="word":
+			var row_height:=48.0 if landscape else 50.0
+			var row_width:=size.x*.42 if landscape else size.x-40
+			choices[i].size=Vector2(row_width,row_height)
+			choices[i].position=Vector2(size.x-row_width-20 if landscape else 20,choice_y+i*(row_height+6))
+			if landscape: picture.size.x=size.x*.52
 		if task.kind=="compare":
 			# Answer by touching the actual pile, not by decoding left/right arrows.
 			choices[i].position = picture.position+Vector2(i*picture.size.x*.57,0)
@@ -132,6 +144,9 @@ func arrange() -> void:
 	feedback.position = Vector2(20,size.y-102 if not landscape else size.y-110)
 	feedback.size = Vector2(size.x-40 if not landscape else size.x*.42,46)
 	if landscape: feedback.position.x = size.x*.57
+	if task.kind=="word":
+		feedback.position.y=size.y-77 if landscape else size.y-95
+		feedback.size.y=20 if landscape else 32
 	help_button.position = Vector2(size.x/2-84 if not landscape else size.x*.79-84,size.y-57)
 	help_button.size = Vector2(168,48)
 	next_button.position = help_button.position
@@ -139,6 +154,10 @@ func arrange() -> void:
 	if bonus_index>=0 and not complete:
 		help_button.position=Vector2(18,size.y-57);help_button.size=Vector2(size.x/2-26,48)
 		next_button.position=Vector2(size.x/2+8,size.y-57);next_button.size=Vector2(size.x/2-26,48)
+	for button in [help_button,next_button]:
+		var px:=22
+		while px>16 and Art.font().get_string_size(button.text,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x>button.size.x-16: px-=1
+		button.add_theme_font_size_override("font_size",px)
 	for i in range(bonus_buttons.size()):
 		bonus_buttons[i].position=Vector2(20+i*(size.x-32)/2,size.y-174)
 		bonus_buttons[i].size=Vector2((size.x-48)/2,58)
@@ -175,7 +194,7 @@ func answer(value: Variant) -> void:
 		feedback.text = host.t("reward").replace("10",str(earned)) if fresh else host.t("remembered")
 		for i in range(choices.size()):
 			choices[i].disabled=true
-			if task.kind=="compare": choices[i].hide()
+			if task.kind in ["compare","word"]: choices[i].hide()
 			elif Progress.same(task.options[i],task.answer):
 				var frame:=StyleBoxFlat.new()
 				frame.bg_color=Color("d9efdb");frame.border_color=Color("25775c")

@@ -17,7 +17,8 @@ class LocalizationTests(unittest.TestCase):
             if t['subject']!='german':continue
             for locale in ['en','ru']:
                 text=t['texts'][locale];native=t['variants'][locale]
-                self.assertIn(native['word'].casefold(),text['prompt'].casefold())
+                self.assertNotIn(native['word'].casefold(),text['prompt'].casefold())
+                self.assertIn(native['word'].casefold(),text['spoken_prompt'].casefold())
                 self.assertNotIn('. '.join(native['answer'])+'.',text['tip'])
                 self.assertTrue(text['tip'])
     def test_german_targets_are_not_voiced_by_foreign_phonemizers(self):
@@ -38,4 +39,4 @@ class LocalizationTests(unittest.TestCase):
         for locale in ['de','en','ru']:
             texts=voice.narration_texts(locale)
             for t in self.tasks.values():
-                if t['kind']=='discovery':self.assertEqual(texts[t['id']],t['texts'][locale]['prompt'])
+                if t['kind']=='discovery':self.assertEqual(texts[t['id']],t['texts'][locale].get('spoken_prompt',t['texts'][locale]['prompt']))

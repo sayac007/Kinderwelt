@@ -1,20 +1,20 @@
 # Kinderwelt: Qualität und Prüfstand
 
-**Zielgruppe:** Klasse 1–2, aktuelle Aufgaben für die zweite Klasse. Ein lokales Godot-Lernabenteuer mit 320 Grundaufgaben und 640 freiwilligen Boni. Kein Wirksamkeitsnachweis und keine Google-Play-Freigabe.
+**Klasse 1–2:** Ein vollständig lokal spielbares Godot-Lernabenteuer mit 400 Grundaufgaben und 800 freiwilligen Boni. Kinder bewegen eine Figur durch sieben wählbare Kulissen und sammeln dauerhaft gespeicherte Punkte. Keine Konten, Werbung, Käufe, Mikrofonaufnahmen oder Telemetrie. Technische Prüfergebnisse sind kein Nachweis pädagogischer Wirksamkeit oder einer Google-Play-Freigabe.
 
 ## Orientierung
 
-| Bereich | Inhalt / zuständige Dateien |
+| Bereich | Inhalt / zuständige Komponenten |
 |---|---|
-| Lernen | Je 40 Stationen in Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch, Geografie; Sprache jeweils DE/EN/RU. Zahlen-/Wort-/Regelrätsel, Sachfragen mit indirekten Bildhinweisen. |
-| App | `core/quest/main.tscn` und `core/quest/`: Oberfläche, Weltbewegung, Aufgaben, Audio, lokaler Spielstand; keine externe Spielserver-Abhängigkeit. |
-| Redaktion | `scripts/content/generate.py` kompiliert versionierte TSV-/JSON-Quellen und `advanced.py`/`experience.py`/`pedagogy.py` nach `games/quest/`. [Quellen und Ablauf](CONTENT_AUTHORING.md). |
-| Medien | Lokale Vorbisclips: DE/RU Serena, EN LJSpeech. [Sprachverfahren und Hörgrenzen](voice.md). [Musik](music.md), [Bildherkunft](character-origins.md). |
-| Varianten / Android | Getrennte neutrale und private Figurenquellen; [Build und technische Paketprüfung](android.md). Keine privaten Familien-Assets für neutrale Tests nötig. |
+| Lernen | Je **50 Stationen** in Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch und Geografie; jeweils DE/EN/RU. Sprache mit eigenem nativem Wortschatz. Jede Station: 10 Punkte und zwei freiwillige Boni mit 50/100 Punkten. |
+| App | `core/quest/main.tscn`, `core/quest/` und `games/quest/`: Oberfläche, Weltbewegung, Aufgaben, Audio und lokaler Spielstand. Sieben Figuren, fünf Looks, sieben Kulissen und 20 klassische Klavierwiedergaben. |
+| Redaktion | `scripts/content/generate.py` kompiliert TSV-/JSON-Quellen mit `advanced.py`, `experience.py` und `pedagogy.py`. [Quellen, Regeln und Ablauf](CONTENT_AUTHORING.md). |
+| Sprache | Fertige lokale Vorbisclips: weibliche Serena DE/RU und LJSpeech EN. Vollständiges Wortregister, kontextabhängige Betonungsreferenzen, Syntheseprovenienz und unabhängige ASR-Stichproben. [Verfahren und Hörgrenzen](voice.md). |
+| Medien / Android | [Musik](music.md), [Bildherkunft](character-origins.md), [Build und Paketprüfung](android.md). Familien- und neutrale Variante mit gleicher Spiellogik; private Figuren separat. |
 
 ## Ausführen
 
-Dieselben Befehle wie im [README](../README.md):
+Dieselben Befehle wie im [README](../README.md); Godot 4.7.2, Python 3 und FFmpeg erforderlich:
 
 ```sh
 GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash tests/run.sh
@@ -23,60 +23,56 @@ GODOT=/pfad/zu/Godot_v4.7.2-stable_linux.x86_64 KINDERWELT_VARIANT=public bash t
 python3 scripts/qa/documentation.py --check
 ```
 
-Für wiederholte Bildprüfungen ein neues Ausgabeverzeichnis wählen.
+Für neue Bildprüfungen ein neues Ausgabeverzeichnis wählen. CI führt beide Suiten aus. Laufzeitberichte stehen unter `qa-results/`, Pakete unter `build/`; CI-Artefakte laufen nach sieben Tagen ab. Normale Tests benötigen keine privaten Familien-Assets, Tokens oder Sprachmodelle.
 
-Die bestehende CI ruft die vollständige Suite und die grafische Suite auf. Laufzeitdaten landen in `qa-results/`; Android-Ausgaben in `build/`. Auf den anschließenden Wunsch nach einer heute spielbaren Version wird zusätzlich die unveränderte Android-Pipeline für Testpakete ausgeführt. Release-Signierung und Google-Play-Freigaben bleiben ausgeschlossen.
+## Aktueller Prüfstand — 0.9.2
 
-## Aktuell verifiziert
+**23.10.2026. Verifizierte Anwendungsressourcen: `74a50c8d4599257949235a94ac789ac9a3deff27`; QA-/Decoderwerkzeuge: `8c290b27` bei unveränderten Anwendungsressourcen.** Die folgenden Prüfungen wurden lokal tatsächlich ausgeführt. Die Android-Pakete bestätigen den sauberen Anwendungscommit (`source_dirty: false`, keine Änderung während des Builds). Nachfolgende Dokumentationsänderungen betreffen die App nicht. GitHub baut separat; dessen Status, Prüfnachweise und Downloads stehen im jeweiligen [Actionslauf](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml).
 
-**23.10.2026, Anwendungsstand `2f179ce6615e0bb7130e1bad4815fd1bf882ddff`.** Vollständige neutrale Suite, grafische Suite und zusätzlicher Familienstart bestanden. Der lokale Android-Build bestätigt diesen sauberen Commit (`source_dirty: false`, keine Änderung während des Builds). Der spätere Dokumentationscommit ändert die Anwendung nicht. GitHub prüft den Draft-PR zusätzlich; der jeweilige Laufstatus steht im PR, nicht als vorweggenommenes Ergebnis hier.
-
-| Dimension | Tatsächlich verifiziert / Grenze |
+| Dimension | Tatsächlich verifiziert / verbleibende Grenze |
 |---|---|
-| Automatisierte Regressionen | **106 Python-Tests**, darunter 16 neue pädagogische Tests; 9.896 Aufgaben-, 3.608 Welten- und 991 Punkteprüfungen bestanden. Neustart stellt 3.360 Testpunkte wieder her, ohne doppelte Belohnung. Generator reproduziert die Quellen ohne Diff; 320 Grundaufgaben und 640 Boni mit stabilen IDs. |
-| Audio | **3.170 tatsächliche Ogg-Dateien decodiert**, alle 5.841 Text-/ID-Zuordnungen und Dateihashes geprüft; 36 Wiedergabe-, 75 Sequenz- und 38 Weltsprachprüfungen bestanden. DE/RU: offizielle weibliche Serena-Stimme, EN: weibliche LJSpeech; TTS-Integration unverändert. Neun neue Dateien unabhängig mit Whisper erkannt; Schreibweisen von Zahlen und einzelne Erkennungsabweichungen bleiben sichtbar. Keine muttersprachliche Hörfreigabe oder erfundene Wortzeitstempel. |
-| Darstellung | **11.520 Messungen mit der tatsächlich verwendeten fetten Schrift**, kein Abschneiden. Alle 2.880 lokalisierten Grund-/Bonusansichten bei großer Schrift und 320×568 auf Text-/Bild-/Antwortüberschneidung geprüft. **605 echte Renderbilder** in vier Displayprofilen, drei Sprachen, einschließlich 144 neuer Sach-/Logikbonusansichten. Einzelne Bilder manuell angesehen, darunter Russisch mit großer Schrift; kein vollständiger manueller Bild-/Gerätetest. |
-| Android | Familien-APK **287.237.798 Bytes**, AAB **274.078.762 Bytes**, 0.9.1 / Code 14, vorläufig `org.example.kinderwelt.preview.family.v090`. Paketstruktur, alle 6.529 erwarteten Ressourcen je Paket, API 24–36, zwei ABIs, ELF-/ZIP-Ausrichtung, Konfiguration und Signaturstatus bestanden. APK mit bestehendem Entwicklungsschlüssel; **AAB unsigniert**, keine Release-/Play-Freigabe. Lokal nur Familie gebaut; beide Varianten werden im unveränderten vertrauenswürdigen GitHub-Push-Workflow gebaut. |
-| Datenschutz / Herkunft | Bestehender begrenzter Quell-/Konfigurationsaudit bestanden: keine Netzwerk-/Konten-/Werbeintegration, keine Android-Berechtigungen, Backup deaktiviert. Bild-/Modellherkunft und Musikhinweise geprüft. Keine Familiengrafiken geändert oder personenbezogenen Testdaten neu erhoben; keine umfassende Sicherheits-/Rechtszertifizierung. |
-| Redaktion / Grenzen | Typisierte Hinweis-, Regel-, Antwort-, Referenz- und Duplikatprüfungen über alle Aufgaben/Sprachen bestanden. Zwei bekannte Helm-Bildlücken bleiben offen. Fachliche Matrix und Schwierigkeitsindikatoren sind überprüfbare Unterrichtsmodelle, kein unabhängiges Fachgutachten oder empirischer Lernwirkungsnachweis. |
+| Automatisierung / Inhalte | **129 Python-Tests bestanden**; 12.000 Aufgaben-, 4.168 Welten- und 1.231 Punkteprüfungen bestanden. 400 Grundaufgaben + 800 Boni, je 50 Stationen pro Fach in DE/EN/RU; bestehende 320 Grund- und 640 Bonus-IDs und Belohnungsrevision erhalten. Generator reproduziert alle Inhaltsdateien ohne Diff. Fach-/Schwierigkeitsreview bleibt offen. |
+| Wortaufgaben / Darstellung | Sichtbare Frage ohne Lösungswort; `_`-Lücken und positionsgetreue Buchstabenkandidaten. **99.756 Prüfungen über 1.800 echte Wortansichten**, 14.400 Schriftmessungen ohne Überlauf und **673 echte Renderbilder** in vier Displayprofilen bestanden. Große Schrift, Hoch-/Querformat, 48er-Berührungsflächen und Abstand zu Steuerungselementen geprüft. Einzelne Wortansichten DE/RU manuell angesehen; kein vollständiger manueller Geräte-/Bildtest. |
+| Punkte / Start | 64.000 aktuelle Punkte, mit allen alten Belohnungen maximal 67.200. Separater Neustart stellt **3.470 Testpunkte** einschließlich neuer Stationen wieder her, ohne doppelte Belohnung. Frischer Import aus ausschließlich ausgelieferten Dateien sowie zusätzlicher Familienstart über 60 echte Frames mit Produktions-Audioshutdown bestanden. |
+| Audio / Technik | **Alle 3.803 tatsächlichen Ogg-Dateien decodiert**, 7.281 aktuelle Text-/ID-Bindungen und Dateihashes geprüft; 36 Wiedergabe-, 75 Sequenz- und 38 Weltsprachprüfungen bestanden. Modellkarten, Lizenzen, vollständige Wellenformen, Ränder, Dauer und Pegel geprüft. Weibliche Serena DE/RU und LJSpeech EN bleiben erhalten. Unveränderte, besser erkannte Aufnahmen werden mit ihren ursprünglichen Erzeugungsdaten beibehalten; geänderte Eingänge neu erzeugt. |
+| Betonung / Erkennung | Vollständiges ausgeschriebenes Vokabular: DE 1.490, EN 1.228, RU 1.743 unterschiedliche Wörter mit Referenzen; tatsächliche Syntheseeingaben nachgewiesen. Russische Kasusfälle unterscheiden etwa ру́ки/руки́, но́ги/четыре ноги́ und берега́/два бе́рега. **24 Fächeransagen und neun Aufgabenbeispiele** mit tatsächlichen Audiohashes abgesichert. Bei 50 nativen Wortfragen pro Sprache gewinnt ASR **35/50 DE, 31/50 EN, 42/50 RU** Zielschreibweisen exakt zurück; auch Abweichungen bleiben sichtbar. Zusammengesetzte Wörter, reduzierte Vokale, Kasus-/Schreibvarianten und mögliche Ausspracheprobleme bleiben zu hören. ASR-gestützte Auswahl ist kein unabhängiger nachträglicher Verständlichkeitstest und bestätigt keine Silbenbetonung. Interne Zahlwortverbalisation und vollständige muttersprachliche Hörfreigabe bleiben offen. |
+| Android | **Beide APKs und beide unsignierten AABs erzeugt und technisch bestanden**, 0.9.2 / Code 15. Paketkennung, Konfiguration, API 24–36, zwei ABIs, ZIP-/ELF-Ausrichtung, Launcherbilder und Ressourcenintegrität geprüft: Familie 7.797, neutral 7.787 Ressourcen je Paket. APKs mit bestehendem Entwicklungsschlüssel (v2); **AABs unsigniert**, keine Release-/Play-Freigabe. Vorläufige Paketkennungen und stabiler Testkanal bleiben erhalten. |
+| Datenschutz / Herkunft | Bestehender begrenzter Quell-/Konfigurationsaudit bestanden: keine Konten-/Netzwerk-/Werbeintegration, keine Android-Berechtigungen, Backup deaktiviert. Medien-/Modellherkunft und 20 Musik-Lizenzhinweise geprüft. Private Familienquellen und Android-Workflow unverändert; keine personenbezogenen Testdaten erhoben. Keine umfassende Sicherheits-/Rechtszertifizierung. |
+| Dokumentation | **81 lokale Dokumentationsziele, 13 CI-Dateireferenzen und alle 139 Remote-Archivdateien** geprüft. `docs/qa/` weiterhin zwei Referenzdateien / 78.669 Bytes. Externe allgemeine HTTP-Erreichbarkeit wird nicht pauschal zertifiziert. |
 
-Lokale reproduzierbare Ausgaben: `qa-results/kwqa-full-suite.log`, `qa-results/visual-kwqa-final/`, `build/android-kwqa-01/delivery.json` sowie `family/provenance.json` und `family/verification.json`. Keine Laufberichte neu ins Git aufgenommen. Die tatsächlichen Paketdateien liegen unter `build/android-kwqa-01/kinderwelt-debug-family.apk` und `build/android-kwqa-01/kinderwelt-unsigned-family.aab`. APK-SHA-256: `e7411cb3ee29f02de0e1c70a921351264359509d4599928af2cf93bdb42450ff`; AAB: `e5232ba8120d3bdfeda2cab4a0aa4de2d113b59c264e095d1e8540305a703eff`. GitHub baut separat; dessen Paketnachweise und Downloads stehen im jeweiligen Actions-Artefakt.
+**CI-Decoder-Bootstrap:** Zwei GitHub-Runner scheiterten vor den Spieltests bei der bisherigen FFmpeg-Einrichtung mit Zeitlimit-Code 124; auch die Wiederholung brach dort ab. Der Paketmanager-Fallback wurde durch einen SHA-256-gepinnten Linux-x86_64-Decoder aus `imageio-ffmpeg 0.6.0` ersetzt (FFmpeg 7.0.2, Entwicklungswerkzeug außerhalb der App). Vorhandenes funktionierendes FFmpeg bleibt nutzbar. Echte Netzwerk-Installation bei absichtlich nicht verfügbarem Systemdecoder, Wheel-/Binärhash, PATH-Registrierung, Lizenzbeigaben und fünf Bootstrap-Regressionen bestanden; alle 129 Python-Tests einschließlich der 3.803 Audiodateien mit diesem Decoder erneut bestanden. Android-Workflow und App-Ressourcen unverändert.
 
-Der [frühere Ausgangsbericht](https://github.com/sayac007/Kinderwelt/blob/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/test-report.md) bleibt als historischer Vergleich erhalten; er beschreibt nicht den aktuellen Prüfstand.
+Lokale Nachweise: `qa-results/fifty-full-suite.log`, `qa-results/fifty-python-final.log`, `qa-results/fifty-python-pinned-decoder.log`, `qa-results/fifty-real-decoder-bootstrap.log`, `qa-results/visual-v092-final/`, `qa-results/fifty-documentation-final.log` und `build/android-v092-fifty/delivery.json` samt beiden Variantenverzeichnissen mit Provenienz und Verifikation. Die notwendige [Erkennungsreferenz](../tests/fixtures/voice/subject-recognition.json) bewahrt tatsächlich gemessene Transkripte und Hashes dauerhaft, einschließlich der offenen Fälle. Neue Rohlogs wurden nicht ins Git aufgenommen.
 
-## KW-QA-01: Dokumentation konsolidiert
+Die Offline-Hörseite `build/android-v092-fifty/kinderwelt-listening.html` enthält **262 tatsächliche Hörfolgen**, darunter alle 50 Lernwörter je Sprache und kurze russische Kasus-/Betonungsbeispiele. Sie enthält keine Aufnahme- oder Übertragungsfunktion und liegt auch dem Android-Actions-Artefakt bei. Die Hörprobenseite behandelt `FUSSABDRUCK` und gesprochenes **Fußabdruck** mit derselben Normalisierung wie der Aufgabengenerator; ein vollständiger Erzeugungstest sichert alle 50 Wörter je Sprache ab.
 
-139 Dateien / **7.383.943 Bytes** wurden im verifizierten Git-Archiv erhalten; `docs/qa/` enthält jetzt zwei notwendige Referenzdateien / **78.669 Bytes**. Keine Historie gelöscht. Alle 139 Remote-Blobs samt Archivtag geprüft, lokale Dokumentations- und CI-Dateiverweise gültig; zwei neue Linkregressionen und der umgezogene ASR-Fixture-Test bestanden. GitHub-Einstellungs-/Actionsseiten erfordern Anmeldung; keine allgemeine öffentliche HTTP-Erreichbarkeit behauptet. [Inventar und Ablageentscheidung](qa/README.md).
+Lokale Paketdateien unter `build/android-v092-fifty/` (GitHub-Builds haben eigene Nachweise und können andere Archivhashes besitzen):
 
-## KW-QA-01: Inhaltskorrekturen
+| Datei | Bytes | SHA-256 |
+|---|---:|---|
+| `kinderwelt-debug-family.apk` | 321.911.510 | `95151aefac922c4f13b1f644eab6ad7661d193ec8904342139ad6f2fe7345a42` |
+| `kinderwelt-debug-neutral.apk` | 317.040.567 | `4ee6f53d99b52afe8f0ba2d17c813c52dd9d0409b1cde64dfa9c79b0a565858c` |
+| `kinderwelt-unsigned-family.aab` | 307.995.219 | `d3d2a4364c8a2eeadeea0402de1df6bf34bfb80806a6c960b132555bb2da74cb` |
+| `kinderwelt-unsigned-neutral.aab` | 303.131.828 | `90e1de93b564d03308142c79d73aef2edfadd45bf90e74ca0bb37beed155072a` |
 
-**880 einzelne Datensätze geändert: 240 Grundaufgaben und alle 640 Boni.** Dabei wurden 608 Fragetexte und 880 Hinweise überarbeitet (jeweils Datensätze, nicht dreifach gezählte Übersetzungen). Weiterhin 320 Grundaufgaben, acht Fächer, 960 eindeutige IDs und 10/50/100 Punkte; Spielstandrevision und Belohnungslogik unverändert.
+## Qualitätsdimensionen und Regeln
 
-| Ursprünglicher Befund | Korrektur und Absicherung |
-|---|---|
-| Verratende Hinweise | 600 Sachhinweise mit direkter Lösung entfernt; alle 120 Wortaufgaben erhalten Laut-/Lesestrategien statt Buchstabenlisten. Mathehinweise unterstützen Rechenwege ohne Endantwort. Regressionen prüfen alle drei Sprachen und bewusst eingebaute Fehler. |
-| Logikboni | Alle 40 50-Punkte-Boni: zwei tatsächlich verschiedene Schritte, zweimal fortsetzen und die neuen Zahlen addieren. Alle 40 100-Punkte-Boni: aus Beispielen Regel ableiten und rückwärts anwenden. Die fünf gemeldeten +1/+1-Fälle werden einzeln als Negativfälle getestet; Grammatik bereinigt. |
-| Ablenker | Alle ursprünglichen 33 auffälligen Grundaufgaben mit Begründung nachgeprüft; weitere Fragen/Optionen redigiert. Kleine, ausschließlich prüfende Kategorietabelle. Zwei offene Bildlücken bei `physics_09` und `body_16`: Es fehlen alternative Kopfschutzbilder. Die Kategorienheuristik wurde geändert; „33 → 2“ ist deshalb kein gemessener Qualitätszuwachs. |
-| Wiederholungen | 400 neue Sachboni: drei/vier fachliche Aussagen prüfen und genau zwei/drei passende erkennen. Jede falsche Option erfüllt mindestens eine Aussage. Je Fach 80 unterschiedliche Merkmalssätze statt bisher 23–39 verschiedener deutscher Texte; Logik 80 statt zwei Textschablonen. Das Kompass-Paar `geography_01`/`geography_31` und stationsübergreifende Nicht-Mathe-Duplikate sind abgesichert. |
-| Fachsprache | Zwölf ursprüngliche Blume/Blüte-Fälle überprüft: drei Grundaufgaben präzisiert, neun alte Boni ersetzt. Bestäubung und Hebel werden erklärt; Industriefertigung von Glas und Flüssigkeitsverlust durch Schwitzen konkretisiert; umständliche Kompassfrage vereinfacht; `SCHILDKRÖTENEI` durch `ENTENEI` ersetzt. Physik-/Biologiematrix berücksichtigt auch die Schraubendreherachse und Wasseraufnahme einer Eiche. |
+- **Inhalte:** stabile IDs, eindeutige Antworten, plausible Ablenker, Hinweise ohne Endlösung, zwei verschiedene Schritte bei alternierenden Regeln, native Alphabete und überprüfbare Vergleichsmerkmale. Bewusst eingebaute Fehler und zulässige Gegenbeispiele sind Regressionstests. Rechenschablonen mit verschiedenen Zahlen sind keine automatischen Duplikate.
+- **Sprache:** aktuelle Text-/ID-Bindungen, Hashes und Modellkarten; jede Ogg-Datei tatsächlich decodieren, Ränder/Dauer/Pegel prüfen. Godot-Tests kontrollieren vollständige Sprechfolgen, Navigation, Musikabsenkung und Unterbrechung. Wörterbuch-/Phonemvorgaben und ASR sind keine menschliche Hörfreigabe.
+- **Bedienbarkeit:** tatsächliche Schriftmessung bei normaler/großer Schrift, Hoch-/Querformat, 320×568 und dichteren Displays; echte Touch-Ereignisse, Punkteabstände, Rotation und lokale Neustarts. Bildprüfungen ersetzen keine Geräte- und Kinderbeobachtung.
+- **Android:** isolierter Export, Quellenprovenienz, Ressourceninventar, ZIP-/ELF-Ausrichtung, Paketkennung, Version, API, ABIs und Signaturstatus. APK nur mit bestehendem Entwicklungsschlüssel; AAB unsigniert. Keine Google-Play-Uploadfreigabe.
+- **Datenschutz / Herkunft:** begrenzter Quell-/Konfigurationsaudit auf Netzwerk, Berechtigungen und personenbezogene Datenerhebung, geprüfte Medienherkunft und Lizenzhinweise. Keine umfassende Sicherheits-/Rechtszertifizierung.
 
-**Begründete Ausnahmen:** Identische Wortfragen innerhalb derselben Station bleiben zulässig, weil andere Lücken zu lösen sind. Rechenschablonen mit verschiedenen Zahlen sind keine Inhaltsduplikate. Wiederholte Antwort-/Optionsmengen werden separat ausgewiesen und bedeuten bei anderen Fragen nicht automatisch einen Fehler. `biology_32` (lebendig/unbelebt) und `body_29` (Nahrung/Sicherheit) verwenden absichtlich unterschiedliche Kategorien. Ein sinnvolles mathematisches Zwischenresultat ist kein Lösungsverrat; kurze Wörter wie „Ei“ dürfen „Eine/Eigenschaft“ nicht fälschlich beanstanden. Diese Gegenbeispiele werden getestet.
+## Bekannte Grenzen und manuelle Freigaben
 
-**Schwierigkeitsdiagnostik:** Alle 640 Boni werden ausgewiesen. Mathe zeigt mehr Rechenoperationen als die Grundaufgabe, Sprache mehr Lücken, Logik einen zusätzlichen Verarbeitungsschritt. Sachboni umfassen neun/zwölf mögliche Merkmalszuordnungen plus exakte Anzahl; alle 400 bleiben als fachlich und empirisch zu prüfende Schwierigkeitsindikatoren markiert. Einige Merkmale hängen zusammen und erlauben Abkürzungen; neun/zwölf mögliche Zuordnungen sind keine garantierte Zahl unabhängiger Denkschritte. Auch Rechenoperationen können sich vereinfachen. Mehr Merkmale beweisen weder höheren Lerngewinn noch angemessene Schwierigkeit für jedes Kind.
+Zwei bestehende Helm-Bildlücken (`physics_09`, `body_16`); muttersprachliches Hören aller neuen Clips mit Schwerpunkt auf Wortbetonung, Verneinungen und Zahlen; unabhängiges Fachreview der Unterrichtsmodelle und Schwierigkeitsangemessenheit; Geräte-, Drehungs-, Unterbrechungs- und Update-/Spielstandprüfungen. Die Faktenmatrix gilt für die konkret genannten Beispiele, nicht für jede Tierart oder jedes Material. Mehr Merkmale/Rechenschritte sind Schwierigkeitsindikatoren und beweisen keinen Lerngewinn.
 
-**Zusätzlich gefundene Darstellungsfehler behoben:** Die Vorprüfung maß zunächst die normale statt der tatsächlich verwendeten fetten Schrift. Die korrigierte Messung fand 43 zu lange Überschriften bei großer Schrift. Hochformat erlaubt jetzt bis zu acht Zeilen; die Illustration gibt bei Bedarf Platz frei, Schrift und Antwortflächen bleiben groß. Eine weitere Prüfung deckte veraltete Texthöhen nach dem ersten Umbruch auf; die Ansicht ordnet sich bei geänderter Mindesthöhe neu an. Die anschließend vollständig wiederholten Prüfungen oben bestanden. Geänderte Fragen und Hinweise sind mit ihren bestehenden Engines tatsächlich neu vertont und vollständig eingebunden; keine alten Aufnahmen umetikettiert.
+Für Untersuchungen mit Kindern sind Testprotokoll, Einwilligung und Datenschutzentscheidung vor personenbezogener Datenerhebung erforderlich. Aktuell werden keine Kinderaufnahmen oder Telemetriedaten erhoben. Empirische Lernwirkungen sind nicht nachgewiesen.
 
-**Speicher beim Vertonen:** Das von der Plattform festgelegte 32-GiB-Limit ist hier nicht veränderbar. Ein paralleler DE-Lauf wurde durch Speichermangel beendet; Checkpoint-Wiederaufnahme und serielle Erzeugung haben alle drei Sprachbanken vollständig abgeschlossen. TTS-Modelle werden nicht mit der App ausgeliefert.
+## Historische Nachweise und Dokumentationsregeln
 
-## Offene manuelle und empirische Freigaben
+Der [verifizierte 0.9.1-Überblick mit KW-QA-01-Korrekturen](https://github.com/sayac007/Kinderwelt/blob/ebf226b55564ffb1f27ad7006b0f57ce6b4f562b/docs/QUALITY_ASSURANCE.md) enthält den früheren vollständigen Prüfstand einschließlich Commit `2f179ce6615e0bb7130e1bad4815fd1bf882ddff`, 106 Python-Tests, 605 Renderbildern und tatsächlichem Familien-APK-/AAB-Nachweis. Diese Angaben sind historisch.
 
-Zwei Helm-Bildlücken; muttersprachliches Hören der neuen Clips; unabhängiges Fachreview der Unterrichtsmodelle und Formulierungen; Beobachtung von Bedienung, Verständnis und Schwierigkeit mit Kindern; reale Android-Geräte-, Drehungs- und Update-/Spielstandprüfungen. Die Aussagen gelten für die in `science-models.json` genannten Beispiele, nicht unterschiedslos für jede Tierart oder jedes Material. Automatische Konsistenzprüfungen bestätigen keine fachliche Vollständigkeit der Ausgangsmatrix.
+[Archiv und Inventar](qa/README.md): **139 unveränderte Originaldateien / 7.383.943 Bytes** sind im geprüften, versionierten Git-Archiv unter Tag `qa-evidence/2026-10-23-v091`, Commit `a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e`, dauerhaft erhalten. `docs/qa/` behält zwei notwendige Referenzdateien / 78.669 Bytes. Keine Historie oder privaten Assets entfernt/veröffentlicht.
 
-Für eine Kinderstudie sind Protokoll, Einwilligung und Datenschutzentscheidung vor jeder personenbezogenen Datenerhebung erforderlich; aktuell werden keine Kinderaufnahmen oder Telemetriedaten gesammelt. Es gibt keine empirisch belegte Lernwirkung oder Google-Play-Uploadfreigabe.
-
-## Dokumentationsregeln
-
-- Ein aktueller Überblick, Anleitungen und begründete langfristige Referenzen im Git; **keine neuen Einzelberichte je Testlauf**.
-- Neue Logs/JSONs nach `qa-results/` oder `build/`; CI-Artefakte werden nach sieben Tagen gelöscht. Dauerhafte Freigaben brauchen eine verifizierte versionierte Ablage mit Commit, Datum, Namen und Hashes.
-- Historische Dateien erst nach geprüfter Ersatzablage entfernen. [Archiv und vollständiger Index](qa/README.md): 139 Originaldateien unverändert erreichbar; keine Veröffentlichung privater Grafiken oder Zugangsdaten.
-- README, CI und Anleitungen müssen dieselben Testkommandos verwenden. `documentation.py` kontrolliert lokale Markdown-Ziele, Archivindex und CI-Dateireferenzen; externe HTTP-Erreichbarkeit wird getrennt ausgewiesen.
+Im Git nur aktuelle Übersicht, Anleitungen, bekannte Grenzen und notwendige langfristige Referenzen pflegen. **Keine neuen Einzelberichte je Testlauf.** Neue Logs/JSONs gehören nach `qa-results/` oder `build/`. Dauerhafte Freigaben benötigen eine verifizierte Ablage mit Commit, Datum, Dateinamen und Hashes. Originale erst nach verifizierter Ersatzablage entfernen. `documentation.py` prüft lokale Links, Archivindex und CI-Dateireferenzen; externe HTTP-Erreichbarkeit wird getrennt ausgewiesen. README und Überblick müssen dieselben Testkommandos nennen.

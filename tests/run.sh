@@ -12,7 +12,7 @@ export XDG_DATA_HOME="$STATE/data" XDG_CONFIG_HOME="$STATE/config" XDG_CACHE_HOM
 mkdir -p "$XDG_DATA_HOME" "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
 checked() {
   local result=0
-  timeout 120 "${GODOT:-godot}" "$@" >"$STATE/run.log" 2>&1 || result=$?
+  timeout 180 "${GODOT:-godot}" "$@" >"$STATE/run.log" 2>&1 || result=$?
   cat "$STATE/run.log"
   if ((result!=0)); then return "$result"; fi
   if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$STATE/run.log"; then return 1; fi
@@ -25,6 +25,7 @@ KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd
 KINDERWELT_SAVE_TEST=read checked --headless --path . -s tests/save_restart.gd
 checked --headless --path . -s tests/rewards.gd
 checked --headless --path . -s tests/qa/content_layout.gd
+checked --headless --path . -s tests/qa/letter_layout.gd
 export KINDERWELT_SPEECH_REPORT=${KINDERWELT_SPEECH_REPORT:-"$PROJECT/qa-results/speech-playback.json"}
 export KINDERWELT_SEQUENCE_REPORT=${KINDERWELT_SEQUENCE_REPORT:-"$PROJECT/qa-results/speech-sequences.json"}
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_playback.gd
@@ -43,6 +44,8 @@ python3 scripts/qa/distractors.py --check
 python3 scripts/qa/localization.py --check
 
 python3 scripts/qa/voice_models.py
+
+python3 scripts/qa/pronunciation.py --voices assets/voice/quest
 
 python3 scripts/music/notices.py --check
 

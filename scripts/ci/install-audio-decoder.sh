@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
-# Hosted runners usually provide FFmpeg. Avoid an unnecessary network update;
-# package mirrors must not consume the entire quality-job time budget.
+# Hosted runners usually provide FFmpeg. The fallback uses a pinned static
+# development decoder; unrelated apt repositories cannot block game tests.
 set -euo pipefail
 mkdir -p qa-results
 setup_log=qa-results/audio-decoder-setup.log
 if ! ffmpeg -version >"$setup_log" 2>&1; then
-  timeout 120 sudo apt-get -o Acquire::Retries=2 \
-    -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 update 2>&1 | tee -a "$setup_log"
-  timeout 120 sudo apt-get -o Acquire::Retries=2 \
-    -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 \
-    -o DPkg::Lock::Timeout=30 install -y --no-install-recommends ffmpeg 2>&1 | tee -a "$setup_log"
+  cat "$setup_log"
+  decoder_root="${RUNNER_TEMP:-$PWD/build/ci-tools}/kinderwelt-ffmpeg"
+  timeout 120 python3 "$(dirname "$0")/audio_decoder.py" --destination "$decoder_root" 2>&1 | tee -a "$setup_log"
+  export PATH="$decoder_root:$PATH"
   ffmpeg -version >>"$setup_log" 2>&1
 fi
-sed -n '1p' "$setup_log"
+ffmpeg -version 2>&1 | sed -n '1p'

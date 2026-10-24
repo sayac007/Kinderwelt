@@ -31,5 +31,5 @@ class DistractorTests(unittest.TestCase):
     def test_review_is_reproducible_and_changes_have_stable_answers(self):
         document,rows=qa.markdown(self.tasks,self.changes)
         self.assertEqual((ROOT/'docs/distractor-review.md').read_text(),document)
-        self.assertEqual(len(rows),960)
+        self.assertEqual(len(rows),1200)
         for change in self.changes:self.assertEqual(change['answer_before'],change['answer_after'])

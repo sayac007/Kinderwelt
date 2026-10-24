@@ -1,0 +1,26 @@
+{
+  "scope": "Only screened spelling cues enter the same Serena voice; untested broad accent insertion degraded intelligibility.",
+  "de_written_stress_words": [
+    "physik",
+    "chemie",
+    "geografie",
+    "biologie"
+  ],
+  "ru_control": "Screened apostrophe cues only for context-sensitive forms; ordinary native learning words retain the preferred natural spelling after paired ASR showed regressions",
+  "ru_written_stress_words": [
+    "оси",
+    "органы",
+    "цвета",
+    "воды",
+    "белки",
+    "мозгу",
+    "руки",
+    "ноги",
+    "скорлупы",
+    "среды",
+    "слова",
+    "берега",
+    "места",
+    "облака"
+  ]
+}

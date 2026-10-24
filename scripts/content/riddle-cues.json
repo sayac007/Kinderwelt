@@ -1823,5 +1823,405 @@
       "Growing",
       "Рост"
     ]
+  },
+  "physics_41": {
+    "scene": "materials",
+    "keywords": [
+      "Dämmen",
+      "Insulate",
+      "Утепление"
+    ]
+  },
+  "physics_42": {
+    "scene": "motion",
+    "keywords": [
+      "Drehen",
+      "Turning",
+      "Вращение"
+    ]
+  },
+  "physics_43": {
+    "scene": "motion",
+    "keywords": [
+      "Umlenken",
+      "Redirect",
+      "Направление"
+    ]
+  },
+  "physics_44": {
+    "scene": "tools",
+    "keywords": [
+      "Verbinden",
+      "Connect",
+      "Соединение"
+    ]
+  },
+  "physics_45": {
+    "scene": "electric",
+    "keywords": [
+      "Speichern",
+      "Store",
+      "Запас"
+    ]
+  },
+  "physics_46": {
+    "scene": "materials",
+    "keywords": [
+      "Trennen",
+      "Separate",
+      "Изоляция"
+    ]
+  },
+  "physics_47": {
+    "scene": "materials",
+    "keywords": [
+      "Durchblick",
+      "See through",
+      "Прозрачность"
+    ]
+  },
+  "physics_48": {
+    "scene": "motion",
+    "keywords": [
+      "Kippen",
+      "Tilt",
+      "Наклон"
+    ]
+  },
+  "physics_49": {
+    "scene": "materials",
+    "keywords": [
+      "Anziehen",
+      "Attract",
+      "Притяжение"
+    ]
+  },
+  "physics_50": {
+    "scene": "tools",
+    "keywords": [
+      "Suchen",
+      "Find",
+      "Поиск"
+    ]
+  },
+  "biology_41": {
+    "scene": "life",
+    "keywords": [
+      "Boden",
+      "Soil",
+      "Почва"
+    ]
+  },
+  "biology_42": {
+    "scene": "life",
+    "keywords": [
+      "Aufnehmen",
+      "Absorb",
+      "Всасывание"
+    ]
+  },
+  "biology_43": {
+    "scene": "life",
+    "keywords": [
+      "Licht nutzen",
+      "Use light",
+      "Свет"
+    ]
+  },
+  "biology_44": {
+    "scene": "life",
+    "keywords": [
+      "Anlocken",
+      "Attract",
+      "Привлечение"
+    ]
+  },
+  "biology_45": {
+    "scene": "life",
+    "keywords": [
+      "Keimen",
+      "Germinate",
+      "Прорастание"
+    ]
+  },
+  "biology_46": {
+    "scene": "life",
+    "keywords": [
+      "Ohne Blattgrün",
+      "No green",
+      "Без хлорофилла"
+    ]
+  },
+  "biology_47": {
+    "scene": "life",
+    "keywords": [
+      "Sechs Beine",
+      "Six legs",
+      "Шесть ног"
+    ]
+  },
+  "biology_48": {
+    "scene": "life",
+    "keywords": [
+      "Unter Wasser",
+      "Underwater",
+      "Под водой"
+    ]
+  },
+  "biology_49": {
+    "scene": "life",
+    "keywords": [
+      "Schlüpfen",
+      "Hatch",
+      "Вылупление"
+    ]
+  },
+  "biology_50": {
+    "scene": "life",
+    "keywords": [
+      "Viele Jahre",
+      "Many years",
+      "Много лет"
+    ]
+  },
+  "chemistry_41": {
+    "scene": "materials",
+    "keywords": [
+      "Zurückgewinnen",
+      "Recover",
+      "Возвращение"
+    ]
+  },
+  "chemistry_42": {
+    "scene": "materials",
+    "keywords": [
+      "Filtern",
+      "Filter",
+      "Фильтр"
+    ]
+  },
+  "chemistry_43": {
+    "scene": "materials",
+    "keywords": [
+      "Abkühlen",
+      "Cooling",
+      "Охлаждение"
+    ]
+  },
+  "chemistry_44": {
+    "scene": "materials",
+    "keywords": [
+      "Kondensieren",
+      "Condense",
+      "Конденсация"
+    ]
+  },
+  "chemistry_45": {
+    "scene": "materials",
+    "keywords": [
+      "Schichten",
+      "Layers",
+      "Слои"
+    ]
+  },
+  "chemistry_46": {
+    "scene": "materials",
+    "keywords": [
+      "Fasern",
+      "Fibres",
+      "Волокна"
+    ]
+  },
+  "chemistry_47": {
+    "scene": "materials",
+    "keywords": [
+      "Rosten",
+      "Rust",
+      "Ржавчина"
+    ]
+  },
+  "chemistry_48": {
+    "scene": "materials",
+    "keywords": [
+      "Sauber werden",
+      "Get clean",
+      "Чистота"
+    ]
+  },
+  "chemistry_49": {
+    "scene": "materials",
+    "keywords": [
+      "Falten",
+      "Fold",
+      "Сгибание"
+    ]
+  },
+  "chemistry_50": {
+    "scene": "materials",
+    "keywords": [
+      "Schwimmen",
+      "Float",
+      "Плавание"
+    ]
+  },
+  "body_41": {
+    "scene": "sound",
+    "keywords": [
+      "Gleichgewicht",
+      "Balance",
+      "Равновесие"
+    ]
+  },
+  "body_42": {
+    "scene": "vision",
+    "keywords": [
+      "Licht",
+      "Light",
+      "Свет"
+    ]
+  },
+  "body_43": {
+    "scene": "smell",
+    "keywords": [
+      "Duft",
+      "Scent",
+      "Запах"
+    ]
+  },
+  "body_44": {
+    "scene": "smell",
+    "keywords": [
+      "Geschmack",
+      "Taste",
+      "Вкус"
+    ]
+  },
+  "body_45": {
+    "scene": "breath",
+    "keywords": [
+      "Sauerstoff",
+      "Oxygen",
+      "Кислород"
+    ]
+  },
+  "body_46": {
+    "scene": "pump",
+    "keywords": [
+      "Schneller schlagen",
+      "Faster beats",
+      "Чаще биться"
+    ]
+  },
+  "body_47": {
+    "scene": "memory",
+    "keywords": [
+      "Erinnern",
+      "Remember",
+      "Память"
+    ]
+  },
+  "body_48": {
+    "scene": "digest",
+    "keywords": [
+      "Verdauen",
+      "After swallowing",
+      "После глотания"
+    ]
+  },
+  "body_49": {
+    "scene": "support",
+    "keywords": [
+      "Stützen",
+      "Support",
+      "Опора"
+    ]
+  },
+  "body_50": {
+    "scene": "digest",
+    "keywords": [
+      "Zerkleinern",
+      "Break down",
+      "Измельчение"
+    ]
+  },
+  "geography_41": {
+    "scene": "navigation",
+    "keywords": [
+      "Im Nebel",
+      "In fog",
+      "Туман"
+    ]
+  },
+  "geography_42": {
+    "scene": "navigation",
+    "keywords": [
+      "Wege planen",
+      "Plan routes",
+      "Маршрут"
+    ]
+  },
+  "geography_43": {
+    "scene": "navigation",
+    "keywords": [
+      "Kugelform",
+      "Sphere",
+      "Шар"
+    ]
+  },
+  "geography_44": {
+    "scene": "navigation",
+    "keywords": [
+      "Flussrichtung",
+      "Flow",
+      "Течение"
+    ]
+  },
+  "geography_45": {
+    "scene": "navigation",
+    "keywords": [
+      "Rundherum",
+      "All around",
+      "Вокруг"
+    ]
+  },
+  "geography_46": {
+    "scene": "navigation",
+    "keywords": [
+      "Wenig Regen",
+      "Little rain",
+      "Мало осадков"
+    ]
+  },
+  "geography_47": {
+    "scene": "navigation",
+    "keywords": [
+      "Hoch hinauf",
+      "High up",
+      "Высота"
+    ]
+  },
+  "geography_48": {
+    "scene": "weather",
+    "keywords": [
+      "Kristalle",
+      "Crystals",
+      "Кристаллы"
+    ]
+  },
+  "geography_49": {
+    "scene": "weather",
+    "keywords": [
+      "Schweben",
+      "Float",
+      "В воздухе"
+    ]
+  },
+  "geography_50": {
+    "scene": "navigation",
+    "keywords": [
+      "Viele Stämme",
+      "Many trunks",
+      "Много стволов"
+    ]
   }
 }

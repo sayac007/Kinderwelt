@@ -1,7 +1,7 @@
 """Compile native literacy, indirect visual clues and optional reasoning challenges.
 
 Stable parent IDs preserve existing progress. Bonus records are nested so world
-routes stay at forty stations per subject; rewards are independently identified.
+routes stay at fifty stations per subject; rewards are independently identified.
 """
 from copy import deepcopy
 from pathlib import Path
@@ -115,16 +115,18 @@ def language_bonus(parent,index,level):
         from advanced import letter_distractors
         wrong=letter_distractors(answer,alphabet,index+level)
         opts=[answer,*wrong];shift=index%3;opts=opts[shift:]+opts[:shift]
-        masked=''.join('＿' if p in positions else c for p,c in enumerate(word))
-        variant={'word':word,'display':masked,'answer':answer,'options':opts}
+        masked=''.join('_' if p in positions else c for p,c in enumerate(word))
+        variant={'word':word,'display':masked,'answer':answer,'options':opts,'missing_positions':positions,
+                 'option_displays':{o:''.join(o[positions.index(p)] if p in positions else '_' for p in range(len(word))) for o in opts}}
         from pedagogy import STRATEGIES
         if locale=='de':
             from advanced import word_title
-            q=word_title(word,locale)+'. Welche Buchstaben fehlen?'
-        elif locale=='en':q=word.capitalize()+'. Which letters are missing?'
-        else:q=word.capitalize()+'. Какие буквы пропущены?'
+            q='Welche Buchstaben fehlen?'
+        elif locale=='en':q='Which letters are missing?'
+        else:q='Какие буквы пропущены?'
         h=STRATEGIES['german'][LOCALES.index(locale)]
-        bonus['texts'][locale]={'prompt':q,'tip':h}
+        from advanced import word_title
+        bonus['texts'][locale]={'prompt':q,'tip':h,'spoken_prompt':word_title(word,locale)+'. '+q}
         if locale=='de':bonus.update(variant)
         else:bonus['variants'][locale]=variant
     return bonus
@@ -172,7 +174,7 @@ def expand(tasks,languages):
         'syllables':('Wie viele Silben?','How many syllables?','Сколько слогов?'),
         'word':('Welches Wort passt?','Which word matches?','Какое слово подходит?'),
         'rhyme':('Was reimt sich?','Which words rhyme?','Какие слова рифмуются?'),
-        'privacy':('320 Aufgaben und jeweils zwei freiwillige Bonusaufgaben. Keine Konten, Werbung oder Netzwerkverbindungen. Dein Gesamtpunktestand bleibt auf diesem Gerät.','320 tasks, each with two optional bonus challenges. No accounts, adverts or network connections. Your total score stays on this device.','320 заданий, в каждом два необязательных бонусных задания. Нет аккаунтов, рекламы и сетевых соединений. Общий счёт сохраняется на этом устройстве.'),
+        'privacy':('400 Aufgaben und jeweils zwei freiwillige Bonusaufgaben. Keine Konten, Werbung oder Netzwerkverbindungen. Dein Gesamtpunktestand bleibt auf diesem Gerät.','400 tasks, each with two optional bonus challenges. No accounts, adverts or network connections. Your total score stays on this device.','400 заданий, в каждом два необязательных бонусных задания. Нет аккаунтов, рекламы и сетевых соединений. Общий счёт сохраняется на этом устройстве.'),
     }.items():ui[key]=dict(zip(LOCALES,values))
     cues=json.loads((SOURCE/'riddle-cues.json').read_text())
     for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:

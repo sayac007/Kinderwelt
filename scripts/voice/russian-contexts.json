@@ -1,0 +1,35 @@
+{
+  "scope": "Meaning and case decisions for the current task bank, not a universal homograph rule.",
+  "rules": [
+    {
+      "word": "руки",
+      "when": "(?:ополоснуть|вытереть|вымыть|мыть|помой|вымой)\\s+руки",
+      "synthesis": "ру́ки",
+      "reason": "Accusative plural hands, rather than genitive singular of a hand."
+    },
+    {
+      "word": "облака",
+      "when": "облака\\s+закрывают",
+      "synthesis": "о́блака",
+      "reason": "Nominative plural clouds; из облака keeps genitive singular."
+    },
+    {
+      "word": "места",
+      "when": "(?:возможные|и)\\s+места\\b",
+      "synthesis": "места́",
+      "reason": "Plural places; много места keeps singular genitive."
+    },
+    {
+      "word": "ноги",
+      "when": "(?:две|три|четыре|2|3|4)\\s+ноги\\b",
+      "synthesis": "ноги́",
+      "reason": "Count construction uses genitive singular ноги́; uncounted nominative plural remains но́ги. NSU homograph entries distinguish these cases."
+    },
+    {
+      "word": "берега",
+      "when": "(?:два|три|четыре|оба|2|3|4)\\s+берега\\b",
+      "synthesis": "бе́рега",
+      "reason": "Counted inanimate берег after два/оба uses genitive singular бе́рега, also in the accusative object оба берега; uncounted nominative plural is берега́. NSU source explicitly records genitive singular бе+рега."
+    }
+  ]
+}

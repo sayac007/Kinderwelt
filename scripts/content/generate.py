@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile authored multilingual exercises; renew all 320 base tasks and preserve stable routing IDs."""
+"""Compile 400 authored multilingual stations, preserving existing routing IDs."""
 import json
 from pathlib import Path
 
@@ -141,7 +141,7 @@ for i,(start,step) in enumerate([(1,1),(2,1),(3,1),(5,1),(1,2),(3,2),(0,5),(2,5)
 
 for subject in ['physics','biology','chemistry','body','geography']:
     lines=[s for s in (SOURCE/(subject+'.tsv')).read_text().splitlines() if s and not s.startswith('#')]
-    assert len(lines)==40,(subject,len(lines))
+    assert len(lines)==50,(subject,len(lines))
     for i,line in enumerate(lines):
         fields=line.split('|');assert len(fields)==7,(subject,i)
         cue,answer,*wrong=fields[0].split();assert len(wrong)==2
@@ -150,21 +150,31 @@ for subject in ['physics','biology','chemistry','body','geography']:
         shift=i%3;options=options[shift:]+options[:shift]
         add(subject,'discovery',fields[1:4],fields[4:7],object=cue,options=options,answer=answer)
 
-assert len(tasks)==320 and len({t['id'] for t in tasks})==320
+# Append ten new routes per numeric/native subject; renew() supplies their
+# authored learning content. The original 320 IDs and reward revision stay intact.
+for subject in ['math','german','logic']:
+    for index in range(41,51):
+        tasks.append({'id':f'{subject}_{index:02d}','subject':subject,'kind':'word' if subject=='german' else 'equation',
+                      'object':(['cloud','forest','bridge','leaf','snow','compass','gear','mushroom','roots','scissors'][index-41] if subject=='german' else 'star')})
+assert len(tasks)==400 and len({t['id'] for t in tasks})==400
 from advanced import renew
 from experience import expand
 tasks=expand(renew(tasks,languages),languages)
 from pedagogy import apply
 tasks=apply(tasks,languages)
+spoken=json.loads((SOURCE/'spoken-prompts.json').read_text())['tasks']
+by_id={t['id']:t for p in tasks for t in [p,*p['bonuses']]}
+for id,values in spoken.items():
+    for locale,prompt in values.items():by_id[id]['texts'][locale]['spoken_prompt']=prompt
 for subject in ['math','german','logic','physics','biology','chemistry','body','geography']:
-    assert sum(t['subject']==subject for t in tasks)==40
+    assert sum(t['subject']==subject for t in tasks)==50
 for t in tasks:
     assert t['answer'] in t['options'] and len(set(t['options']))==len(t['options'])
     assert set(t['texts'])==set(LOCALES)
     for lang in LOCALES:assert t['texts'][lang]['prompt'] and t['texts'][lang]['tip']
 (ROOT/'games/quest/tasks.json').write_text(json.dumps({'schema':2,'authorship':'Original Kinderwelt tasks; multilingual authored subject bank, no copied commercial exercises.','tasks':tasks},ensure_ascii=False,indent=2)+'\n')
 (ROOT/'games/quest/languages.json').write_text(json.dumps(languages,ensure_ascii=False,indent=2)+'\n')
-print('320 base exercises + 640 optional bonuses; native German, English and Russian literacy.')
+print('400 base exercises + 800 optional bonuses; native German, English and Russian literacy.')
 
 # Keep the existing long-term editorial reference aligned with the compiled
 # base texts. Before-values and baseline identity stay unchanged; no run log.

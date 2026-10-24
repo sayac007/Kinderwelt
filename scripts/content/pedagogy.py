@@ -55,6 +55,9 @@ def science_bonuses(parents,languages):
                 bonus['option_labels']={o:models.get(subject,{}).get(o,[languages['objects'][o][l] for l in LOCALES])[0] for o in options}
                 bonus['variants']={lang:{'option_labels':{o:models.get(subject,{}).get(o,[languages['objects'][o][l] for l in LOCALES])[i] for o in options}} for i,lang in enumerate(LOCALES)}
                 bonus['prompt']=bonus['texts']['de']['prompt'];bonus['tip']=bonus['texts']['de']['tip']
+                # Natural spoken word order avoids the repeatedly ambiguous
+                # isolated "Верны" announcement; the same facts/count apply.
+                bonus['texts']['ru']['spoken_prompt']=('Два признака подходят. ' if level==1 else 'Три признака подходят. ')+' '.join(properties[j]['texts']['ru'] for j in indexes)
     return parents
 
 # Strategies deliberately avoid spelling the answer or every missing letter.
