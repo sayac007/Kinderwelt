@@ -11,6 +11,14 @@ FILES = {'fullBackupContent': 'kinderwelt_backup_rules',
 
 def install(android):
     android = Path(android)
+    main = android / 'src/main/AndroidManifest.xml'
+    text = main.read_text()
+    application = ET.fromstring(text).find('application')
+    if application is None or text.count('<application') != 1:
+        raise ValueError('Expected one application in the pinned main manifest')
+    namespace = '{http://schemas.android.com/apk/res/android}'
+    if any(application.get(namespace + attribute) is not None for attribute in FILES):
+        raise ValueError('Refusing to overwrite existing main-manifest backup policy')
     exclusions = ''.join(f'<exclude domain="{domain}" path="."/>' for domain in sorted(DOMAINS))
     rules = {
         'kinderwelt_backup_rules': '<full-backup-content>' + exclusions + '</full-backup-content>',
@@ -21,15 +29,10 @@ def install(android):
         path = android / 'res/xml' / (name + '.xml')
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text('<?xml version="1.0" encoding="utf-8"?>\n' + content + '\n')
-    # Variant overlays survive Godot regenerating src/main/AndroidManifest.xml.
-    manifest = '<manifest xmlns:android="http://schemas.android.com/apk/res/android"><application android:allowBackup="false" ' + ' '.join(
-        f'android:{attr}="@xml/{name}"' for attr, name in FILES.items()) + '/></manifest>\n'
-    for variant in ('debug', 'release'):
-        path = android / 'src' / variant / 'AndroidManifest.xml'
-        if path.exists():
-            raise ValueError('Refusing to overwrite an existing backup manifest overlay')
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(manifest)
+    # Godot REGENERATES src/debug and src/release manifests on each export.
+    # The pinned src/main manifest is retained and merged into both variants.
+    attributes = ' '.join(f'android:{attr}="@xml/{name}"' for attr, name in FILES.items())
+    main.write_text(re.sub(r'<application\b', '<application ' + attributes + ' ', text, count=1))
 
 
 def xmltree(text):

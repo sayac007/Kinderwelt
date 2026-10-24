@@ -191,4 +191,10 @@ def main():
         data.update({'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()});report['artifacts'][file.name]=data
     (out/'verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:
+        main()
+    except AssertionError as error:
+        message=str(error).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+        print('::error::Android artifact verification failed: '+message,flush=True)
+        raise

@@ -21,13 +21,13 @@ Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzepti
 
 ## Konfigurierbare, vorläufige Identität
 
-Version **0.9.3 / 16**. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@`, das der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
+Version **0.9.4 / 17**. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@`, das der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
 
 | Build | Paket bei Standardkonfiguration | Launchername |
 |---|---|---|
 | Standard, gewählte Variante | `org.example.kinderwelt` | Kinderwelt |
-| Private Vorschau | `org.example.kinderwelt.preview.family.v090` | Kinderwelt 0.9.3 Privat Test |
-| Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v090` | Kinderwelt 0.9.3 Public Test |
+| Private Vorschau | `org.example.kinderwelt.preview.family.v090` | Kinderwelt 0.9.4 Privat Test |
+| Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v090` | Kinderwelt 0.9.4 Public Test |
 
 Der Testkanal `preview_channel=v090` ist unabhängig von der Versionsnummer, damit spätere Builds mit demselben Zertifikat als Update installierbar bleiben. Die alten 0.8.1-Schlüssel waren flüchtig und sind nicht wiederherstellbar. 0.9.0 wird deshalb parallel installiert; alte Punkte werden nicht automatisch zwischen Paketen übertragen. Für die vollständig gelöste erste Runde gibt es im Elternbereich eine ausdrückliche manuelle Bestätigung zur einmaligen Übernahme der 3200 früher verdienten Punkte. Die alte App nicht deinstallieren, wenn ihre Daten gebraucht werden.
 
@@ -59,10 +59,12 @@ evidence, without the neutral APK or an unsigned bundle download. Push builds
 still build both variants; pull requests still build only neutral without family
 secrets. Existing signing-cache and pinned family-source rules are preserved.
 
-[Device-local avatar import feasibility](AVATAR_IMPORT_FEASIBILITY.md) is an
-assessment only. The current family APK does not implement image import.
+[Device-local PNG avatar import](AVATAR_IMPORT_FEASIBILITY.md) is implemented
+for 0.9.4. Only the parents area adds/replaces/removes images; chooser Help is
+read-only. The build still rejects every permission and additionally verifies
+compiled cloud/device-transfer backup exclusions. Native device checks remain open.
 
-Current family-only test download (2026-10-24):
+Previous family-only test download (0.9.3, 2026-10-24):
 [kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060/artifacts/12561253077),
 from [successful manual run 40096417060](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060)
 at commit `8153f919454e05a962e4d04d8b5d56a55b3b4009`. Version remains **0.9.3 / 16**;

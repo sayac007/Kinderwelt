@@ -92,15 +92,22 @@ jobs:
         if: always() && !(github.event_name == 'workflow_dispatch' && inputs.variant == 'family')
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: android-development-artifacts
-          path: build/android-delivery/
+          name: ${{ job.status == 'success' && 'android-development-artifacts' || 'android-build-diagnostics' }}
+          path: |
+            build/android-delivery/kinderwelt-debug-*.apk
+            build/android-delivery/kinderwelt-unsigned-*.aab
+            build/android-delivery/delivery.json
+            build/android-delivery/kinderwelt-listening.html
+            build/android-delivery/*/*.json
+            build/android-delivery/*/*.txt
+            build/android-delivery/*/*.log
           if-no-files-found: error
           retention-days: 7
       - name: Retain only the requested family APK and technical evidence
         if: always() && github.event_name == 'workflow_dispatch' && inputs.variant == 'family'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: kinderwelt-family-test
+          name: ${{ job.status == 'success' && 'kinderwelt-family-test' || 'kinderwelt-family-build-diagnostics' }}
           path: |
             build/android-delivery/kinderwelt-debug-family.apk
             build/android-delivery/delivery.json
