@@ -34,10 +34,12 @@ func run() -> void:
 		app.parents();app.manage_avatar()
 		await app.avatar_manager.load_path("user://store-silhouette.png")
 		app.avatar_manager.preview.set_portrait(true)
+		for frame in range(4):await process_frame
 		app.avatar_manager.scroll.scroll_vertical=maxi(0,roundi(app.avatar_manager.preview.position.y-30))
 		await snap(locale+"-02-own-character.png",locale,"own-character-synthetic")
 		app.avatar_manager.confirm_button.pressed.emit()
 		var game: Control=app.game_view
+		game.choose_hero();game.select_hero("wanja");game.finish_hero()
 		game.switch_subject("math")
 		await snap(locale+"-03-world.png",locale,"world")
 		game.open_task(0)
