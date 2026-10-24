@@ -32,7 +32,17 @@
       "render_profile": "score-modernization-1",
       "file": "wiener_blut.ogg",
       "bytes": 510231,
-      "sha256": "8aafc0293807f9651e53969ac16a7de450a68d6ff8847e60d052c0b63a01b3fe"
+      "sha256": "8aafc0293807f9651e53969ac16a7de450a68d6ff8847e60d052c0b63a01b3fe",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "recording_license": {
+        "license": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "notices": {
+          "de": "Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/",
+          "en": "The recording in this app is also licensed under CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/",
+          "ru": "Запись в этом приложении также распространяется по лицензии CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      }
     },
     {
       "midi_notes": 168,
@@ -55,7 +65,8 @@
       "render_profile": "score-modernization-1",
       "file": "babbino.ogg",
       "bytes": 1071630,
-      "sha256": "24648508301c985a7fa96c8e26a032c9340fd022b93d31b73dbcda235b5c9d03"
+      "sha256": "24648508301c985a7fa96c8e26a032c9340fd022b93d31b73dbcda235b5c9d03",
+      "license_url": "https://opensource.org/license/mit/"
     },
     {
       "midi_notes": 188,
@@ -77,7 +88,8 @@
       "render_profile": "score-modernization-1",
       "file": "french_song.ogg",
       "bytes": 860120,
-      "sha256": "435a5f71b0b51af02bb3bbd5f158752efceabafdaad45f98ea356b797c6b6d65"
+      "sha256": "435a5f71b0b51af02bb3bbd5f158752efceabafdaad45f98ea356b797c6b6d65",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 264,
@@ -99,7 +111,8 @@
       "render_profile": "score-modernization-1",
       "file": "consolation.ogg",
       "bytes": 1531037,
-      "sha256": "9aff15de4a7b76fbf31c58b7c615beb4a67b559ed43a8b65e4e94e42f9e34688"
+      "sha256": "9aff15de4a7b76fbf31c58b7c615beb4a67b559ed43a8b65e4e94e42f9e34688",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
     },
     {
       "midi_notes": 905,
@@ -122,7 +135,8 @@
       "render_profile": "score-modernization-1",
       "file": "elise.ogg",
       "bytes": 1928735,
-      "sha256": "5191d1dcd01ffb4a7170269d745fc2ed0d3075af088b7ee0703884036fb08b17"
+      "sha256": "5191d1dcd01ffb4a7170269d745fc2ed0d3075af088b7ee0703884036fb08b17",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 549,
@@ -145,7 +159,8 @@
       "render_profile": "score-modernization-1",
       "file": "bach_prelude.ogg",
       "bytes": 2078900,
-      "sha256": "e08c5850355ac0b38b6936db6a0192d403ee0b55a30eb9921bcbb0ad14f8ea85"
+      "sha256": "e08c5850355ac0b38b6936db6a0192d403ee0b55a30eb9921bcbb0ad14f8ea85",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 282,
@@ -168,7 +183,8 @@
       "render_profile": "score-modernization-1",
       "file": "gymnopedie.ogg",
       "bytes": 2133361,
-      "sha256": "edd0d7be9e8dc7cd63b1e882aba1568813b9344bb32f0643d0d4533624275f8c"
+      "sha256": "edd0d7be9e8dc7cd63b1e882aba1568813b9344bb32f0643d0d4533624275f8c",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 1494,
@@ -191,7 +207,8 @@
       "render_profile": "score-modernization-1",
       "file": "clair.ogg",
       "bytes": 4842534,
-      "sha256": "88b52f52535036096d64fd75bae1e3b4b2ad009b1cb6e6cef74a0281059a9812"
+      "sha256": "88b52f52535036096d64fd75bae1e3b4b2ad009b1cb6e6cef74a0281059a9812",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 1243,
@@ -214,7 +231,17 @@
       "render_profile": "score-modernization-1",
       "file": "nocturne.ogg",
       "bytes": 3067271,
-      "sha256": "9bb3af311360bb070f3643fce13d2f05fae89121adf6197574e7ea3939cbb4e3"
+      "sha256": "9bb3af311360bb070f3643fce13d2f05fae89121adf6197574e7ea3939cbb4e3",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "recording_license": {
+        "license": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "notices": {
+          "de": "Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "en": "The recording in this app is also licensed under CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "ru": "Запись в этом приложении также распространяется по лицензии CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      }
     },
     {
       "midi_notes": 344,
@@ -237,7 +264,8 @@
       "render_profile": "score-modernization-1",
       "file": "traeumerei.ogg",
       "bytes": 1671082,
-      "sha256": "db6ff245df1e1784f76ef3c6fcc1e0c2dd8e8c6e03496434e2772ab370a2601b"
+      "sha256": "db6ff245df1e1784f76ef3c6fcc1e0c2dd8e8c6e03496434e2772ab370a2601b",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 1288,
@@ -260,7 +288,17 @@
       "render_profile": "score-modernization-1",
       "file": "mozart_sonata.ogg",
       "bytes": 2031804,
-      "sha256": "fd6dcafbd55fd984f03816e2ca02f1bcbca1462ce09744f08d0cdceabf3dca22"
+      "sha256": "fd6dcafbd55fd984f03816e2ca02f1bcbca1462ce09744f08d0cdceabf3dca22",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "recording_license": {
+        "license": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "notices": {
+          "de": "Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "en": "The recording in this app is also licensed under CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "ru": "Запись в этом приложении также распространяется по лицензии CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      }
     },
     {
       "midi_notes": 1458,
@@ -283,7 +321,8 @@
       "render_profile": "score-modernization-1",
       "file": "arabesque.ogg",
       "bytes": 2623843,
-      "sha256": "c15293437bc21b7f6df712d3f5d0cc7d0f05cd6dfeca3bde112b9c0c1a603d99"
+      "sha256": "c15293437bc21b7f6df712d3f5d0cc7d0f05cd6dfeca3bde112b9c0c1a603d99",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 720,
@@ -306,7 +345,8 @@
       "render_profile": "score-modernization-1",
       "file": "brahms_waltz.ogg",
       "bytes": 1030092,
-      "sha256": "cceb4bd41ee61f37f1343ec60a53aae7ab635091a4e06ee7344c21cc81af3498"
+      "sha256": "cceb4bd41ee61f37f1343ec60a53aae7ab635091a4e06ee7344c21cc81af3498",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 138,
@@ -329,7 +369,8 @@
       "render_profile": "score-modernization-1",
       "file": "canon.ogg",
       "bytes": 2668754,
-      "sha256": "3767082e5ff9fbb0789737012f8340d34acd0da2030b11def90763397bc362d3"
+      "sha256": "3767082e5ff9fbb0789737012f8340d34acd0da2030b11def90763397bc362d3",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
     },
     {
       "midi_notes": 2730,
@@ -352,7 +393,8 @@
       "render_profile": "score-modernization-1",
       "file": "impromptu.ogg",
       "bytes": 5169154,
-      "sha256": "a5c410964aac9555d9cca4ec6ff00d90612738582652df376ef428ad44419dcd"
+      "sha256": "a5c410964aac9555d9cca4ec6ff00d90612738582652df376ef428ad44419dcd",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 458,
@@ -375,7 +417,17 @@
       "render_profile": "score-modernization-1",
       "file": "invention.ogg",
       "bytes": 1020449,
-      "sha256": "bcd1b60b4c0eb49329d6bb3ef258162cf33fb4e29429e2067ff77975d50e9b58"
+      "sha256": "bcd1b60b4c0eb49329d6bb3ef258162cf33fb4e29429e2067ff77975d50e9b58",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "recording_license": {
+        "license": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "notices": {
+          "de": "Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "en": "The recording in this app is also licensed under CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/",
+          "ru": "Запись в этом приложении также распространяется по лицензии CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      }
     },
     {
       "midi_notes": 600,
@@ -398,7 +450,8 @@
       "render_profile": "score-modernization-1",
       "file": "chopin_prelude.ogg",
       "bytes": 1575273,
-      "sha256": "122befd5348b8215cceb009e7fefb27940e2d489789bf6106454b7f47fc00d9e"
+      "sha256": "122befd5348b8215cceb009e7fefb27940e2d489789bf6106454b7f47fc00d9e",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 201,
@@ -422,7 +475,8 @@
       "render_profile": "score-modernization-1",
       "file": "minuet.ogg",
       "bytes": 693895,
-      "sha256": "8963db35fddd9e1a09cc3498f7b5937fc72636f08768752fcab98a47e9ed8788"
+      "sha256": "8963db35fddd9e1a09cc3498f7b5937fc72636f08768752fcab98a47e9ed8788",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 1614,
@@ -451,7 +505,8 @@
       "render_profile": "score-modernization-1",
       "file": "turca.ogg",
       "bytes": 3972615,
-      "sha256": "6b77891e9d9cb22ca440d6d6f8bb2dfdbe5a99c5bccbad13ae9c4766fc518bbd"
+      "sha256": "6b77891e9d9cb22ca440d6d6f8bb2dfdbe5a99c5bccbad13ae9c4766fc518bbd",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
     },
     {
       "midi_notes": 1144,
@@ -474,7 +529,17 @@
       "render_profile": "score-modernization-1",
       "file": "moonlight.ogg",
       "bytes": 4080770,
-      "sha256": "36686c3c2c5f6fa5aadff3a1071256181c7d12a68f0ac8b23770d798c0e57243"
+      "sha256": "36686c3c2c5f6fa5aadff3a1071256181c7d12a68f0ac8b23770d798c0e57243",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "recording_license": {
+        "license": "CC-BY-SA-2.5",
+        "url": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "notices": {
+          "de": "Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-2.5: https://creativecommons.org/licenses/by-sa/2.5/",
+          "en": "The recording in this app is also licensed under CC-BY-SA-2.5: https://creativecommons.org/licenses/by-sa/2.5/",
+          "ru": "Запись в этом приложении также распространяется по лицензии CC-BY-SA-2.5: https://creativecommons.org/licenses/by-sa/2.5/"
+        }
+      }
     }
   ]
 }

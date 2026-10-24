@@ -27,6 +27,28 @@ Kuratierte Auswahl bekannter klassischer Stücke, keine objektive Rangliste der 
 
 Die genauen Quellen, Upstream-Commits, Bearbeiter und SHA256 stehen in [catalog.json](../scripts/music/catalog.json), die erzeugten Audiodateien in [manifest.json](../assets/music/manifest.json). Vollständige Namensnennung, Links und Bearbeitungshinweise werden unter `assets/music/NOTICES.txt` mit der App ausgeliefert und unter „Für Erwachsene → Musik & Quellen“ angezeigt. Die Lizenztexte liegen unter `assets/music/licenses/` bei. Christian Petzolds Menuett wird in der alten Vorlage noch Bach zugeschrieben; die App nennt die heutige Zuschreibung und dokumentiert die Abweichung.
 
+## Recording notices in the app
+
+For all five CC-BY-SA-derived tracks, the app recording explicitly retains the
+same CC-BY-SA version and licence URL as its source arrangement. This is stated
+in `NOTICES.txt` and in the parent-only music credits in German, English and
+Russian. Original author names, legal licence identifiers and pinned source
+URLs remain visible in every locale; URLs are plain text and are not opened by
+the app. This corrects the previous Russian view, which omitted those credits.
+Other source licence assertions remain unchanged. The general asset scope is
+documented in [ASSETS_LICENSE](../ASSETS_LICENSE.md).
+
+Reproduce only the notice metadata, without rendering/transcoding any audio:
+
+```sh
+python3 scripts/music/notices.py
+python3 scripts/music/notices.py --check
+```
+
+The full renderer also applies these notices on both newly rendered and cached
+tracks. Android checks both presets' include/exclude filters and the actual bytes
+of bundled source/model/font/software notices, including install-time assets.
+
 ## Erzeugung
 
 Eigener Grand-Piano-Klang: GeneralUser GS 2.0.3 von S. Christian Collins, erlaubte Musikproduktion gemäß beigefügter Lizenz. SoundFont-SHA256 und tatsächlich verwendete Toolversionen stehen im Audiomanifest. SoundFont und Synthesizer werden nicht in die App eingebaut.

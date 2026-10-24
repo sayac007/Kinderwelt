@@ -210,8 +210,15 @@ func music_credits() -> void:
 			label(names.get("composer","")+" · "+names.get("title",""))
 		else:
 			label(track.composer+" · "+track.title)
-			label(track.arranger+"\n"+track.license)
-			label(track.source.repository+"\n"+track.source.path)
+		# Preserve original author names and legal identifiers in every locale.
+		# URLs are displayed as text; this screen performs no network access.
+		var source_url: String=track.source.repository.trim_suffix(".git")+"/blob/"+track.source.commit+"/"+track.source.path
+		var text: String=track.arranger+"\n"+track.license+" · "+track.license_url+"\n"+source_url
+		if track.has("recording_license"):
+			text+="\n"+track.recording_license.notices[store.data.locale]
+		var credit:=label(text)
+		credit.name="music_credit_"+track.id
+	if store.data.locale=="ru":label("GeneralUser GS 2.0.3 · S. Christian Collins")
 	label(t("piano_credit"))
 func confirm_reset() -> void:
 	clear();label(t("reset_question"))

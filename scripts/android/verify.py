@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0,str(__import__('pathlib').Path(__file__).resolve().parent))
 import identity
 import backup_policy
+import asset_notices
 import upload_signing
 import argparse, hashlib, json, re, struct, subprocess, zipfile
 import xml.etree.ElementTree as ET
@@ -53,7 +54,7 @@ def check_payload(names,app_root=None):
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml','.safetensors','.onnx','.pth','.pt')),'Sensitive, specification or development model file packaged'
     required=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
-    for notice in ['assets/quest/OFL.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/CC-BY-3.0.txt','assets/music/licenses/CC-BY-SA-3.0.txt','assets/music/licenses/CC-BY-SA-2.5.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
+    for notice in asset_notices.required():
         assert notice in assets,'Missing bundled notice: '+notice
     for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds','cap','beanie']:
         assert 'assets/quest/'+image+'.png.import' in assets,'Missing image import: '+image
@@ -105,6 +106,7 @@ def check_packaged_data(archive,app_root=None):
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
     data_files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
     data_files += ['games/quest/legacy-rewards.json','assets/quest/appicon.png']
+    asset_notices.check_archive(archive,app_root)
     data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]
     for locale in ['de','ru']:
         folder='assets/voice/quest/'+locale+'/'
@@ -160,7 +162,7 @@ def inspect_zip(path,aab=False,app_root=None,signed=False):
                 abis.add(n.split('/')[-2]);elf_alignment(z.read(n));native_methods.add(z.getinfo(n).compress_type)
         assert abis=={'arm64-v8a','x86_64'},'Unexpected native ABI set'
         assert native_methods=={zipfile.ZIP_DEFLATED},'Expected lossless native library compression'
-        return {'assets_checked':check_payload(names,app_root),'launcher_images':icons,'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
+        return {'assets_checked':check_payload(names,app_root),'bundled_legal_notices':{'status':'PASS','files_checked':len(asset_notices.required())},'launcher_images':icons,'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
 def verify_bundle(aab,tools,out,source,package,signed=False,certificate=None):
     java=tools/'android-jdk/bin/java';bundle=tools/'android-tools/bundletool-1.18.2.jar'

@@ -42,6 +42,7 @@ class VariantTests(unittest.TestCase):
             self.assertFalse((target/'art/private').exists())
             self.assertTrue((target/'scripts/variants.py').exists())
             self.assertTrue((target/'art/public/characters/catalog.json').exists())
+            self.assertEqual((target/'ASSETS_LICENSE.md').read_bytes(),(ROOT/'ASSETS_LICENSE.md').read_bytes())
 
     def test_public_cat_astronaut_frame_excludes_neighboring_tail(self):
         data=json.loads((ROOT/'art/public/characters/frames.json').read_text())

@@ -30,6 +30,7 @@ PAYLOAD += ['assets/core/quest/language.gdc']
 PAYLOAD += ['assets/assets/quest/'+name+'.png.import' for name in ['science-a','science-b','cap','beanie']]
 PAYLOAD += ['assets/assets/quest/OFL.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds','cap','beanie']]
 PAYLOAD += ['assets/core/quest/pet.gdshader']+['assets/assets/music/'+name for name in ['licenses/CC-BY-SA-4.0.txt','licenses/CC-BY-3.0.txt','licenses/CC-BY-SA-3.0.txt','licenses/CC-BY-SA-2.5.txt','licenses/tnm-MIT.txt','licenses/GeneralUser-GS.txt','NOTICES.txt']]
+PAYLOAD += ['assets/assets/voice/quest/en/LICENSE.txt','assets/assets/licenses/Kinderwelt-MIT.txt']
 
 class VerificationTests(unittest.TestCase):
     def test_media_permissions_and_missing_backup_exclusions_are_rejected(self):
@@ -76,6 +77,8 @@ class VerificationTests(unittest.TestCase):
         for locale in ['de','ru']:
             folder='assets/voice/quest/'+locale+'/'
             if json.loads((root/folder/'manifest.json').read_text()).get('model_license')=='Apache-2.0':files.append(folder+'LICENSE.txt')
+        files += ['assets/voice/quest/en/LICENSE.txt','assets/quest/OFL.txt','assets/music/NOTICES.txt','assets/licenses/Kinderwelt-MIT.txt']
+        files += ['assets/music/licenses/'+name for name in ['CC-BY-SA-4.0.txt','CC-BY-3.0.txt','CC-BY-SA-3.0.txt','CC-BY-SA-2.5.txt','tnm-MIT.txt','GeneralUser-GS.txt']]
         with zipfile.ZipFile(memory,'w') as archive:
             for name in files:
                 if change=='missing' and name==files[0]:continue
