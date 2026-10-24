@@ -2,7 +2,8 @@
 
 `silhouette.svg` is an original geometric vector written for the store-render
 script: three shapes, no photograph, reference person, family asset or external
-resource. Repository MIT licence applies to this small vector. It is a clearly
+resource. Its distribution licence remains an operator decision under
+`ASSETS_LICENSE.md`; this provenance note does not choose an asset licence. It is a clearly
 fictional placeholder for the optional local-image feature, not a new bundled
 playable character. No private input is accepted by the store renderer.
 
