@@ -8,6 +8,8 @@ Ein **offline spielbares Lernabenteuer für Klasse 1–2**, derzeit mit anspruch
 
 [Visual asset IP audit and private-review procedure](docs/qa/VISUAL_IP_AUDIT.md) · [Redacted visual inventory](docs/qa/visual-ip-manifest.json).
 
+[Software and asset licence scope, upstream notices and pending operator decision](ASSETS_LICENSE.md).
+
 ## Entwickeln und prüfen
 
 Benötigt: **Godot 4.7.2**, Python 3 und FFmpeg; für grafische Prüfungen eine Anzeige oder `xvfb-run`. Die neutrale Variante benötigt keine Familien-Assets oder Tokens.

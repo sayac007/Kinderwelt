@@ -1,0 +1,18 @@
+English offline voice: upstream provenance notice
+
+Model: en_US-ljspeech-medium
+Supplied model archive:
+https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-en_US-ljspeech-medium.tar.bz2
+
+The unmodified adjacent MODEL_CARD.txt states in its Dataset section:
+  URL: https://keithito.com/LJ-Speech-Dataset/
+  License: public domain
+Its Training section refers to https://brycebeattie.com/files/tts/.
+
+That public-domain statement concerns the dataset. The supplied model card does
+not contain a separate model-weight or generated-recording licence grant. This
+file preserves the available upstream notice; it does not invent or expand one.
+Model/output distribution terms and the operator's licence for the generated
+recordings still require review. See ASSETS_LICENSE.md in the source repository.
+Model weights and the development speech-generation tool are not bundled in the
+application; the app plays its existing offline recordings.

@@ -14,6 +14,7 @@ sys.path.insert(0,str(ROOT/'scripts/android'))
 import identity
 import debug_key
 import backup_policy
+import asset_notices
 import upload_signing
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
@@ -122,6 +123,7 @@ def main():
             upload_fingerprint=upload_signing.certificate(upload_key,java,values)
         variants.snapshot(app,a.variant)
         package=identity.configure(app,a.package_id,a.preview,a.variant)
+        asset_notices.check_filters(app)
         for file in sorted(app.rglob('*')):
             if file.is_file():source.update(str(file.relative_to(app)).encode()+b'\0'+file.read_bytes())
         env=upload_signing.export_environment()

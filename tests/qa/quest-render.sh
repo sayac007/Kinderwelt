@@ -27,3 +27,8 @@ export KINDERWELT_AVATAR_RENDER_OUTPUT="$OUTPUT/avatars"
 timeout 120 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/avatar_render.gd >"$OUTPUT/avatar-render.log" 2>&1
 cat "$OUTPUT/avatar-render.log"
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/avatar-render.log"; then exit 1; fi
+mkdir "$OUTPUT/music-credits"
+export KINDERWELT_CREDITS_OUTPUT="$OUTPUT/music-credits"
+timeout 120 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/music_credits.gd >"$OUTPUT/music-credits.log" 2>&1
+cat "$OUTPUT/music-credits.log"
+if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/music-credits.log"; then exit 1; fi

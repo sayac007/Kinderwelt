@@ -18,7 +18,7 @@ import wave
 import fluidsynth
 import mido
 import numpy as np
-from notices import render_notices
+from notices import render_notices, with_recording_terms, license_urls
 
 ROOT = Path(__file__).resolve().parents[2]
 FONT_SHA = '9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe'
@@ -85,6 +85,7 @@ def main():
     fluidsynth.fluid_version(ctypes.byref(fluid_major), ctypes.byref(fluid_minor), ctypes.byref(fluid_micro))
     fluid_library_version = f'{fluid_major.value}.{fluid_minor.value}.{fluid_micro.value}'
     catalog = json.loads((ROOT / 'scripts/music/catalog.json').read_text())
+    urls=license_urls()
     prior=json.loads((ROOT/'assets/music/manifest.json').read_text())
     cached={t['id']:t for t in prior.get('tracks',[])}
     manifest = {'schema': 3, 'complete':False, 'authorship': 'Own instrumental renderings of named public-domain compositions; score and arrangement licences are listed per track.',
@@ -97,7 +98,7 @@ def main():
             old=cached.get(track['id'],{})
             audio=ROOT/'assets/music'/(track['id']+'.ogg')
             if old.get('render_profile')=='score-modernization-1' and old.get('source')==track['source'] and audio.exists() and hashlib.sha256(audio.read_bytes()).hexdigest()==old.get('sha256'):
-                manifest['tracks'].append(old)
+                manifest['tracks'].append(with_recording_terms(old,urls[track['id']]))
                 print('Cached:',track['title'],flush=True)
                 continue
             source = temp / original.name
@@ -137,7 +138,7 @@ def main():
             data.update(track)
             data["render_profile"]="score-modernization-1"
             data.update(file=output.name, bytes=output.stat().st_size, sha256=hashlib.sha256(output.read_bytes()).hexdigest())
-            manifest['tracks'].append(data)
+            manifest['tracks'].append(with_recording_terms(data,urls[track['id']]))
             (ROOT/'assets/music/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
             print(track['title'], round(data['seconds'], 2), 'seconds', flush=True)
     manifest['complete']=len(manifest['tracks'])==len(catalog['tracks'])

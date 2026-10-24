@@ -8,6 +8,7 @@ Christian F. Coors / OpenRCT2 OpenMusic contributors; Kinderwelt instrumental re
 Lizenz: CC-BY-SA-4.0 · https://creativecommons.org/licenses/by-sa/4.0/
 Quelle: https://github.com/OpenRCT2/OpenMusic/blob/b8f4d46e6775326219bad58fec728da5dc740433/fairground_style/strauss_waltzes/wiener_blut.ly
 Bearbeitung: Eigene Grand-Piano-Wiedergabe der Vorlage wiener_blut.ly. Walzerauszug aus vier Stimmen (Melodie, zweite Melodie, linke Hand, Pedal); MIDI-Score ergänzt; Vierteltempo von 200 auf 180 gesetzt.
+Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/
 
 Giacomo Puccini: O mio babbino caro · Thema
 tnm; Kinderwelt instrumental rendering
@@ -56,6 +57,7 @@ Renato Biolcati Rinaldi / Mutopia; Kinderwelt piano rendering
 Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly
 Bearbeitung: Eigene Grand-Piano-Wiedergabe der Vorlage nocturne.ly. Notensatz und angegebene Include-Dateien per convert-ly für LilyPond 2.24.4 aufbereitet; reine Gravureinstellungen ohne Klangwirkung entfernt, soweit vorhanden.
+Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/
 
 Robert Schumann: Träumerei · Op. 15 Nr. 7
 Ying-Chun Liu / Mutopia; Kinderwelt piano rendering
@@ -68,6 +70,7 @@ Alejandro Sierra / Mutopia; Kinderwelt piano rendering
 Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/MozartWA/KV545/K545-1/K545-1.ly
 Bearbeitung: Eigene Grand-Piano-Wiedergabe der Vorlage mozart_sonata.ly. Notensatz und angegebene Include-Dateien per convert-ly für LilyPond 2.24.4 aufbereitet; reine Gravureinstellungen ohne Klangwirkung entfernt, soweit vorhanden.
+Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/
 
 Claude Debussy: Arabesque Nr. 1
 Keith OHara / Mutopia; Kinderwelt piano rendering
@@ -98,6 +101,7 @@ jeff covey / Mutopia; Kinderwelt piano rendering
 Lizenz: CC-BY-SA-3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly
 Bearbeitung: Eigene Grand-Piano-Wiedergabe der Vorlage invention.ly. Notensatz und angegebene Include-Dateien per convert-ly für LilyPond 2.24.4 aufbereitet; reine Gravureinstellungen ohne Klangwirkung entfernt, soweit vorhanden.
+Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-3.0: https://creativecommons.org/licenses/by-sa/3.0/
 
 Frédéric Chopin: Prélude e-Moll · Op. 28 Nr. 4
 Magnus Lewis-Smith / Mutopia; Kinderwelt piano rendering
@@ -123,3 +127,4 @@ Stewart Holmes / Mutopia; Kinderwelt piano rendering
 Lizenz: CC-BY-SA-2.5 · https://creativecommons.org/licenses/by-sa/2.5/
 Quelle: https://github.com/MutopiaProject/MutopiaProject/blob/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BeethovenLv/O27/moonlight/moonlight-lys/moonlight1-a4.ly
 Bearbeitung: Eigene Grand-Piano-Wiedergabe der Vorlage moonlight.ly. Notensatz und angegebene Include-Dateien per convert-ly für LilyPond 2.24.4 aufbereitet; reine Gravureinstellungen ohne Klangwirkung entfernt, soweit vorhanden.
+Die Aufnahme in dieser App steht ebenfalls unter CC-BY-SA-2.5: https://creativecommons.org/licenses/by-sa/2.5/

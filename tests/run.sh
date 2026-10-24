@@ -19,6 +19,7 @@ checked() {
 }
 checked --headless --path . --editor --import --quit
 checked --headless --path . -s tests/quest.gd
+checked --headless --path . -s tests/music_credits.gd
 checked --headless --path . -s tests/worlds.gd
 checked --headless --path . -s tests/boot.gd
 KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd

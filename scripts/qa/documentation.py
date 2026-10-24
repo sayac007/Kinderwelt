@@ -20,7 +20,7 @@ def check(root=ROOT,remote=False):
     for row in rows:
         assert re.fullmatch('[0-9a-f]{64}',row['sha256'])
         assert row['archive_url']==f'https://github.com/sayac007/Kinderwelt/blob/{SOURCE}/'+row['original_path']
-    docs=[root/'README.md',*sorted((root/'docs').rglob('*.md'))]
+    docs=[root/'README.md',*([root/'ASSETS_LICENSE.md'] if (root/'ASSETS_LICENSE.md').is_file() else []),*sorted((root/'docs').rglob('*.md'))]
     for doc in docs:
         if 'internal' in doc.relative_to(root).parts:continue
         text=re.sub(r'^```[^\n]*\n.*?^```\s*$', '',doc.read_text(),flags=re.M|re.S)
