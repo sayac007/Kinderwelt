@@ -105,8 +105,21 @@ class VisualAuditTests(unittest.TestCase):
         row=next(r for r in first['images'] if r['sha256']==hashlib.sha256(self.raw).hexdigest())
         ledger={'source_reviews':[{'sha256':'0'*64,'resemblance':'low','observation':'Must not apply'}]}
         audit.apply_reviews(first,self.root,ledger);self.assertEqual(row['visual_review'],'not_reviewed')
+    def test_owner_findings_cannot_leak_private_evidence_or_apply_to_stale_hashes(self):
+        report=self.scan();private=next(r for r in report['images'] if any(o['path'].startswith('.private/') for o in r['occurrences']))
+        folder=self.root/'scripts/qa';folder.mkdir(parents=True)
+        owner={'review_date':'2026-10-24','base_commit':'fixture','scope':'fixture','summary':{},'legacy_chronology':{},
+               'sources':[{'source_sha256':private['sha256'],'file_credentials':{'secret':'PRIVATE_CREDENTIAL'},'retained_original':{'secret':'PRIVATE_ORIGINAL'}},
+                          {'source_sha256':'0'*64,'file_credentials':{'secret':'STALE_OWNER_FINDING'},'retained_original':{}}],
+               'manual_review':{'rows':[{'source_sha256':private['sha256'],'owner_decision':'PRIVATE_DECISION'}]}}
+        (folder/'visual-ip-owner-review.json').write_text(json.dumps(owner))
+        audit.apply_reviews(report,self.root,{})
+        self.assertNotIn('owner_manual_reviews',private)
+        exported=json.dumps(audit.redacted(report))
+        for secret in ['PRIVATE_CREDENTIAL','PRIVATE_ORIGINAL','PRIVATE_DECISION','STALE_OWNER_FINDING']:
+            self.assertNotIn(secret,exported)
     def test_tools_have_no_network_or_shell_upload_implementation(self):
-        for name in ['visual_ip.py','visual_ip_pack.py']:
+        for name in ['visual_ip.py','visual_ip_pack.py','visual_c2pa.py']:
             tree=ast.parse((ROOT/'scripts/qa'/name).read_text())
             for node in ast.walk(tree):
                 if isinstance(node,(ast.Import,ast.ImportFrom)):

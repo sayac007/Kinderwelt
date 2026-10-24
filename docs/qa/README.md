@@ -38,7 +38,12 @@ current audit report and its redacted inventory are maintained references, not
 one new report per run. The existing voice-recognition fixtures are necessary
 regression references rather than a general run archive.
 
-The visual contact sheets, individual review copies, full sensitive inventory
-and review ZIPs stay outside the repository in an owner-only local directory.
-They must not be attached to a PR, CI artifact or release. Public-source review
-candidates also require a specific owner decision before any image-search upload.
+The full sensitive inventory and restricted review ZIP stay outside the repository
+in an owner-only local directory. The owner subsequently authorized the unchanged
+40-candidate non-sensitive ZIP on a separate private download branch because
+local links and release-asset uploads failed; see the audit report for that exact
+exception and verified commit. Do not merge the download branch into `main`.
+The owner-returned manual findings and local C2PA metadata are current provenance
+references under `scripts/qa/`, not per-run logs. No automatic image search or
+upload follows from importing them. Restricted material remains excluded from
+Git, PR attachments, CI artifacts and releases.
