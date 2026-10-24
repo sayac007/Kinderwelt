@@ -554,7 +554,7 @@
     "avatar_help_text": {
       "de": "Wähle JPEG, PNG oder WebP. Fotos werden als runder Bildausschnitt gezeigt: verschieben und mit zwei Fingern oder den Tasten zoomen. Für eine ganze Figur nutze ein PNG mit transparentem Hintergrund; Kleidung und weißes Fell bleiben. Eigene Kostüme können schon im Bild sein. Es gibt keine automatische Freistellung oder Kostümerzeugung. Gespeichert wird nur eine verkleinerte App-Kopie ohne Kameradaten. Dein Original bleibt unverändert.",
       "en": "Choose JPEG, PNG or WebP. Photos use a round portrait: drag and zoom with two fingers or the buttons. For a whole figure, use a PNG with a transparent background; clothes and white fur are kept. Your image can already include its own costume. Background removal and costume generation are not automatic. Only a smaller app copy without camera metadata is saved. Your original is unchanged.",
-      "ru": "Выбери JPEG, PNG или WebP. Фотография показывается в круге: двигай изображение и меняй масштаб двумя пальцами или кнопками. Для целого персонажа выбери ПНГ с прозрачным фоном; одежда и белая шерсть сохраняются. Костюм уже может быть на изображении. Фон не удаляется и костюмы не создаются автоматически. Сохраняется только уменьшенная копия без данных камеры. Исходный файл не меняется."
+      "ru": "Выбери ДЖЕЙПЕГ, ПНГ или Веб-пи. Фотография показывается в круге: двигай изображение и меняй масштаб двумя пальцами или кнопками. Для целого персонажа выбери ПНГ с прозрачным фоном; одежда и белая шерсть сохраняются. Костюм уже может быть на изображении. Фон не удаляется и костюмы не создаются автоматически. Сохраняется только уменьшенная копия без данных камеры. Исходный файл не меняется."
     },
     "avatar_preview_hint": {
       "de": "Passt dein Bild? Du bestätigst es erst unten.",
@@ -654,7 +654,7 @@
     "avatar_format": {
       "de": "Bitte wähle ein JPEG-, PNG- oder WebP-Bild.",
       "en": "Choose a JPEG, PNG or WebP image.",
-      "ru": "Выбери изображение в формате JPEG, PNG или WebP."
+      "ru": "Выбери изображение в формате ДЖЕЙПЕГ, ПНГ или Веб-пи."
     },
     "avatar_privacy": {
       "de": "Die App-Kopie bleibt auf diesem Gerät. Die App lädt sie nicht hoch, teilt sie nicht und schließt sie von Backups aus.",

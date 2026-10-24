@@ -67,7 +67,8 @@ func setup(owner_host: Control,show_help := false,allow_changes := false) -> voi
 	var reset:=add_button(host.t("avatar_crop_reset"),func():preview.reset_crop());column.remove_child(reset);crop_controls.add_child(reset)
 	zoom_in=add_button("＋",func():preview.set_zoom(preview.zoom*1.2));column.remove_child(zoom_in);crop_controls.add_child(zoom_in)
 	zoom_out.accessibility_name=host.t("avatar_zoom_out");zoom_in.accessibility_name=host.t("avatar_zoom_in")
-	for b in [zoom_out,reset,zoom_in]:b.size_flags_horizontal=SIZE_EXPAND_FILL
+	for b in [zoom_out,zoom_in]:b.custom_minimum_size.x=64
+	reset.size_flags_horizontal=SIZE_EXPAND_FILL
 	crop_controls.hide()
 	preview.changed.connect(sync_crop_controls)
 	confirm_button=add_button(host.t("avatar_use"),confirm);confirm_button.disabled=true
