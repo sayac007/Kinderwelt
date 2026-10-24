@@ -4,6 +4,56 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Current avatar-import verification (0.9.4)
+
+Application commit `8eaf9968` adds an optional parent-managed, device-local PNG
+figure; [implementation and privacy boundaries](AVATAR_IMPORT_FEASIBILITY.md).
+The previous 0.9.3 tables below remain historical evidence, not newly built files.
+
+- Complete existing suite passed with `KINDERWELT_VARIANT=family`: **162 Python
+  tests**, 12,750 quest checks, 4,168 world checks, 1,231 reward checks, save/restart,
+  14,400 heading and 99,756 letter-layout checks, speech/sequence/world audio and
+  66 lifecycle checks. All 3,803 speech files decoded; pedagogy guards passed.
+- **62 new Godot import/privacy checks** passed across two app processes:
+  transparency/bounds, parent-only mutation controls, failed replacement,
+  point preservation, seven sceneries, restart, metadata stripping and reset.
+- **681 existing real render frames** passed the existing verifier; **18 extra
+  synthetic-avatar frames** were generated for DE/EN/RU in both orientations.
+  Two new preview/help frames were locally inspected; no claim is made that every
+  generated frame received independent manual review.
+- Synthetic EXIF-GPS/camera fixture identity and actual stored-pixel re-encoding
+  were checked. Three backup-policy regressions passed, including a real local
+  aapt2 compile/link and verification of compiled exclusions/manifest references.
+- [Initial Android run 40102432351](https://github.com/sayac007/Kinderwelt/actions/runs/40102432351)
+  failed verification and is **not** an installable delivery. Log downloads were
+  blocked here, so the exact code was reproduced locally: Godot regenerated
+  `src/debug`/`src/release` manifests, dropping the backup-resource references.
+  The strict checker caught this; it was not weakened. The fix puts references
+  in the retained `src/main/AndroidManifest.xml` and tests build-type rewrites.
+- A corrected local family APK **and** unsigned AAB were then actually built and
+  verified: version 0.9.4 / 17, zero permissions, backup disabled, v2 development
+  signature for APK, 16-KB ZIP/ELF alignment, resource/content checks and compiled
+  cloud/device-transfer exclusions with correct manifest references. Local APK:
+  **323,927,586 bytes**, SHA-256
+  `dcbd1521e0ca6bf25d2aefd2c72a296085f58d6376697a7a89b973b7dd09bb45`.
+  This was a dirty-worktree reproduction with the uncommitted fix, not claimed
+  as clean immutable provenance. The fresh [CI run 40105564671](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671)
+  then **succeeded** at fix commit `f892418ac23a4d79a3e442082fd92c5c5117f343`.
+  Its single family-only artifact/download is recorded in [Android](android.md).
+  All **162 Python tests** were also repeated successfully after the backup fix.
+  No permission or release key was added.
+
+A local extra test was initially started while the render script regenerated the
+shared import cache. That concurrent probe was stopped and repeated sequentially:
+both import phases passed without script errors. The reproducible suite already
+orders imports and tests. An earlier character-target layout failure was fixed by
+keeping the original grid size and putting Help in the header.
+
+Native Android picker/URI access, lifecycle and actual backup/restore remain
+manual device checks. The parents screen is a navigation boundary, not an age
+verification or Google Play/Families certification. New raw logs/renders remain
+outside Git.
+
 ## Orientierung
 
 | Bereich | Inhalt / zuständige Komponenten |

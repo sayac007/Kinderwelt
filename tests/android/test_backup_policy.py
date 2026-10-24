@@ -13,14 +13,27 @@ import backup_policy as policy
 
 
 class BackupPolicyTests(unittest.TestCase):
+    def main_fixture(self, root):
+        main = root / 'src/main/AndroidManifest.xml'
+        main.parent.mkdir(parents=True)
+        main.write_text('<manifest xmlns:android="http://schemas.android.com/apk/res/android"><application android:allowBackup="false"/></manifest>')
+        return main
+
     def test_both_variants_exclude_cloud_and_device_transfer_without_permissions(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
+            main = self.main_fixture(root)
             policy.install(root)
             for variant in ['debug', 'release']:
-                manifest = ET.parse(root / 'src' / variant / 'AndroidManifest.xml').getroot()
+                # Emulate Godot replacing its generated build-type manifest.
+                generated = root / 'src' / variant / 'AndroidManifest.xml'
+                generated.parent.mkdir(parents=True)
+                generated.write_text('<manifest><application/></manifest>')
+                manifest = ET.parse(main).getroot()
                 self.assertFalse(manifest.findall('uses-permission'))
                 self.assertEqual(manifest.find('application').get('{http://schemas.android.com/apk/res/android}allowBackup'), 'false')
+                for attribute, name in policy.FILES.items():
+                    self.assertEqual(manifest.find('application').get('{http://schemas.android.com/apk/res/android}' + attribute), '@xml/' + name)
             for attribute, name in policy.FILES.items():
                 policy.validate_rules(ET.parse(root / 'res/xml' / (name + '.xml')).getroot(), attribute == 'dataExtractionRules')
             with self.assertRaisesRegex(ValueError, 'overwrite'):
@@ -40,9 +53,10 @@ class BackupPolicyTests(unittest.TestCase):
             self.skipTest('Local SDK resource integration; real CI APK verifier also checks these rules')
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
+            main = self.main_fixture(root)
             policy.install(root)
             manifest = root / 'manifest.xml'
-            original = (root / 'src/debug/AndroidManifest.xml').read_text()
+            original = main.read_text()
             manifest.write_text(original.replace('<manifest ', '<manifest package="org.example.backuptest" '))
             subprocess.run([str(aapt), 'compile', '--dir', str(root / 'res'), '-o', str(root / 'resources.zip')], check=True, capture_output=True)
             subprocess.run([str(aapt), 'link', '-I', str(android), '--manifest', str(manifest), '--min-sdk-version', '24', '--target-sdk-version', '36', '-o', str(root / 'fixture.apk'), str(root / 'resources.zip')], check=True, capture_output=True)

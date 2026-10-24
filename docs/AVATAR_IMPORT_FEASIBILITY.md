@@ -66,8 +66,8 @@ If that path requires a new permission, stop and report it rather than adding on
 
 The APK/AAB verifier continues to reject **any** Android permission, including
 media/storage/camera permissions. Backup remains disabled. In addition,
-[the build policy](../scripts/android/backup_policy.py) installs debug/release
-manifest overlays and explicit exclusions for root/files/databases/preferences/
+[the build policy](../scripts/android/backup_policy.py) updates the retained main
+manifest shared by debug/release and adds exclusions for root/files/databases/preferences/
 external app data in both cloud backup and device transfer. The actual APK's
 compiled rule resources and their manifest references are verified with aapt2.
 This is technical configuration evidence, not a completed physical-device restore
@@ -85,7 +85,8 @@ EXIF GPS 0° N / 0° E and synthetic camera/XMP markers. Pillow checks its struc
 EXIF fields; the Godot test processes that exact source through the runtime
 importer and checks the stored output has none of those metadata markers or an
 original copy. This is generated test data, not a person's photo/location.
-[Backup regressions](../tests/android/test_backup_policy.py) test both overlays,
+[Backup regressions](../tests/android/test_backup_policy.py) test retention across
+Godot's generated debug/release manifest rewrites,
 incomplete policy rejection and real aapt2-compiled rules/manifest references.
 All of these run without personal/family input files.
 
