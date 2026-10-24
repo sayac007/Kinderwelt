@@ -27,7 +27,11 @@ and [privacy/Store materials #28](https://github.com/sayac007/Kinderwelt/pull/28
   [Private APK/AAB artifact](https://github.com/sayac007/Kinderwelt/actions/runs/40124170320/artifacts/12572279652)
   expires after seven days. These remain development identities, **not final Play bundles**.
 - **Package 5 Store CI PASS:** immutable `7a24f94ce42f2be43d66d4263e2f3db38a0fbfa9`,
-  [render run 40125177324](https://github.com/sayac007/Kinderwelt/actions/runs/40125177324).
+  [render run 40125177324](https://github.com/sayac007/Kinderwelt/actions/runs/40125177324),
+  [quality 40125177353](https://github.com/sayac007/Kinderwelt/actions/runs/40125177353)
+  and [Android 40125177326](https://github.com/sayac007/Kinderwelt/actions/runs/40125177326)
+  all passed. The later documentation-only notice correction leaves the asset
+  distribution licence with the operator; it changes no app/capture bytes.
   Seventeen dimension-checked neutral PNGs: icon, feature and five 1080×1920
   phone captures per language; own-image input is a geometric silhouette.
   Four static, script-free privacy HTML drafts generated. Publication is inactive;
@@ -39,9 +43,41 @@ and [privacy/Store materials #28](https://github.com/sayac007/Kinderwelt/pull/28
   800 bonuses, 7 scenes, 3 languages and 20 music tracks. It contains no learning
   effectiveness claim. Adult listening, independent pedagogy and empirical
   learning effects remain separate open work.
-- Package 6 adds only the canonical version/code in parents and test handoff;
-  its new runtime display check and final combined CI results are pending below.
+- **Package 6 PASS locally:** complete current suite, **207 Python tests** plus
+  **15 actual parent-display checks** in DE/EN/RU, 479 crop + 62 existing avatar
+  checks and all existing runtime/content gates. Source application commit
+  `77735caca21980876eb14f1d2b4e51c6ac7a021d`.
   No optional report/email button, telemetry or new diagnostic export is added.
+- **PASS locally, clean source:** the same commit exported and verified neutral
+  APK **319,072,131 bytes** and unsigned AAB **305,164,266 bytes** in
+  `build/android-play-preparation-neutral/`. Provenance records `source_dirty=false`
+  and no Git-state change during build. Identity `org.example.kinderwelt` remains
+  provisional; version **0.9.5 / 18**, API 24–36, both ABIs, 16KB ELF/ZIP checks,
+  7,802 payload resources and all 15 byte-matched notices passed. APK uses only
+  the cached development key; AAB is explicitly unsigned. Zero permissions and
+  compiled cloud/device-transfer exclusions passed. This is not an operator-signed
+  Play release.
+- Pinned bundletool measured that exact AAB for arm64/de/API36/480dpi:
+  **274,747,187 bytes** initial download, **27,914,374** base and **246,832,813**
+  additional install-time assets. Internal 190 MB base budget **PASS**. Reports
+  are in the ignored build directory; no media was transcoded or key generated.
+- The final local Store render generated/verified **17 PNGs** again from clean
+  application commit `77735cac` (`build/store-release-preparation/`). Russian own-
+  image and English reward frames were visually inspected. The independent
+  [combined Store CI 40125379912](https://github.com/sayac007/Kinderwelt/actions/runs/40125379912)
+  also **PASS**; [private review drafts](https://github.com/sayac007/Kinderwelt/actions/runs/40125379912/artifacts/12572801385)
+  expire after seven days. Direct CI download returns HTTP 403 here; the CI job
+  result/metadata are visible, but no downloaded CI pixels are claimed reviewed.
+  [Combined quality 40125379916](https://github.com/sayac007/Kinderwelt/actions/runs/40125379916)
+  and [Android 40125379879](https://github.com/sayac007/Kinderwelt/actions/runs/40125379879)
+  both **PASS** at `77735cac`; PR quality 40125444850 and Android 40125444946 also
+  **PASS**. [Current APKs/AABs and technical reports](https://github.com/sayac007/Kinderwelt/actions/runs/40125379879/artifacts/12573542271),
+  [quality renders/reports](https://github.com/sayac007/Kinderwelt/actions/runs/40125379916/artifacts/12572717673)
+  and [full offline listening review](https://github.com/sayac007/Kinderwelt/actions/runs/40125379916/artifacts/12572882115)
+  are private seven-day artifacts. The code/application tree remains unchanged
+  by subsequent `[skip ci]` documentation-only synchronization/results commits.
+  [Closed-test draft #29](https://github.com/sayac007/Kinderwelt/pull/29) completes
+  the three separate review packages. No PR was automatically merged.
 
 **NOT VERIFIED / OPERATOR:** Android 13+ and 10–12 selection/URI/lifecycle,
 real hardware performance/update/backup transfer; complete human listening and
