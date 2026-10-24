@@ -9,6 +9,7 @@ import argparse,base64,collections,hashlib,html,io,json,os,re,stat,struct,subpro
 from pathlib import Path
 from xml.etree import ElementTree
 from PIL import Image,ImageDraw,ImageOps,ImageChops,ImageStat
+from visual_c2pa import png_credentials
 ROOT=Path(__file__).resolve().parents[2]
 VISUAL_EXT={'.png','.jpg','.jpeg','.webp','.svg','.gif','.bmp','.tif','.tiff','.ico','.avif','.ctex','.ttf','.otf','.fontdata'}
 ARCHIVE_EXT={'.zip','.apk','.aab','.docx','.pptx','.xlsx','.odt'}
@@ -58,6 +59,7 @@ def fingerprints(image):
 
 def inspect_bytes(raw,path):
     fmt=kind(raw[:2048]);result={'format':fmt or 'unrecognized','bytes':len(raw),'dimensions':None,'pixel_sha256':None,'dhash':None,'decode_status':'not_applicable'}
+    if fmt=='PNG':result['content_credentials']=png_credentials(raw)
     if fmt=='SVG':
         try:
             node=ElementTree.fromstring(raw);box=node.get('viewBox','').split();size=[node.get('width'),node.get('height')]
@@ -482,7 +484,7 @@ def enrich(report,root=ROOT):
             r['evidence']['retained_output_filenames']=retained
             r['risk']['provenance_license']='medium' if retained else 'high'
             r['recommended_action']='Verify legacy authorship, generation context and rights before redistribution; exact retained output bytes are an evidence anchor, not legal approval'
-            r['evidence']['claim']='Exact bytes also found in retained local output files; PNG metadata has no provider/authorship attestation' if retained else None
+            r['evidence']['claim']='Exact bytes also found in retained local output files; embedded credential claims are separate evidence and require authentication' if retained else None
         if r['family_source']:r['sensitivity']='family_private'
         r['risk']['overall']='high' if r.get('historical_unestablished') and r['risk']['provenance_license']=='high' else 'medium' if r['sensitivity']=='non_sensitive' else 'unreviewed'
         r['risk']['private_sensitivity']='low' if r['sensitivity']=='non_sensitive' else 'high'
@@ -506,6 +508,10 @@ def apply_reviews(report,root=ROOT,ledger=None):
     if ledger is None:
         path=root/'scripts/qa/visual-ip-review.json';ledger=json.loads(path.read_text()) if path.exists() else {}
     reviews={r['sha256']:r for r in ledger.get('source_reviews',[])}
+    owner_path=root/'scripts/qa/visual-ip-owner-review.json'
+    owner=json.loads(owner_path.read_text()) if owner_path.exists() else {}
+    credentials={r['source_sha256']:r for r in owner.get('sources',[])}
+    originals={r['retained_original'].get('sha256'):r['retained_original'].get('credentials') for r in owner.get('sources',[])}
     for row in report['images']:
         review=reviews.get(row['sha256'])
         if review and row['sensitivity']=='non_sensitive':
@@ -516,6 +522,14 @@ def apply_reviews(report,root=ROOT,ledger=None):
             row['visual_review']='source_geometry_inspected';row['risk']['overall']='low';row['risk']['resemblance']='low'
         if row['role']=='font_support' and any('Nunito.ttf' in o['path'] for o in row['occurrences']):
             row['visual_review']='license_metadata_inspected';row['risk']['overall']='low';row['risk']['resemblance']='low'
+        if row['sensitivity']=='non_sensitive':
+            if row.get('content_credentials'):row['evidence']['content_credentials']=row['content_credentials']
+            if originals.get(row['sha256']):row['evidence']['content_credentials']=originals[row['sha256']]
+            proof=credentials.get(row['sha256'])
+            if proof:
+                row['evidence']['content_credentials']=proof['file_credentials']
+                row['evidence']['retained_original']=proof['retained_original']
+                row['owner_manual_reviews']=[review for review in owner['manual_review']['rows'] if review['source_sha256']==row['sha256']]
     current_paths={c['local_file'] for c in report['containers'] if c.get('provenance') and c['provenance'].get('version') in {p['version'] for p in report.get('current_package_coverage',[])}}
     current=[r for r in report['images'] if any(o['locator'].get('archive') in current_paths for o in r['occurrences'])]
     source_ids={link['id'] for r in current for link in r.get('lineage_sources',[])}
@@ -524,11 +538,12 @@ def apply_reviews(report,root=ROOT,ledger=None):
     for row in report['images']:
         row['current_distribution']='observed_current_package' if row in current else 'current_package_source' if row['id'] in source_ids else 'retained_or_earlier_only'
     report['current_project_source_ids']=sorted(source_ids)
-    report['review_scope']='Assistant local triage of the ledger-listed originals/atlases; family and unclassified images not visually reviewed; no owner/expert/legal approval'
+    report['review_scope']='Assistant local triage of the ledger-listed originals/atlases; family and unclassified images not visually reviewed; owner-supplied findings tracked separately; no expert/legal approval'
+    if owner:report['owner_review_follow_up']={k:owner[k] for k in ['review_date','base_commit','scope','summary','legacy_chronology']} | {'source_csv_sha256':owner['manual_review'].get('source_csv_sha256')}
 
 def redacted(report):
     """No private paths, names, hashes, pixels, coordinates or local locators."""
-    out={'schema':1,'tool':{'script':'scripts/qa/visual_ip.py','sha256':sha(Path(__file__).read_bytes()),'pillow_version':getattr(Image,'__version__','unknown')},'base_commit':report['base_commit'],'scope':report['scope'],'network_uploads':0,'files_signature_checked':report['files_signature_checked'],'assets':[],'procedural':report['procedural'],'containers':[],'coverage_gaps':[]}
+    out={'schema':1,'tool':{'script':'scripts/qa/visual_ip.py','sha256':sha(Path(__file__).read_bytes()),'content_credentials_reader_sha256':sha(Path(__file__).with_name('visual_c2pa.py').read_bytes()),'pillow_version':getattr(Image,'__version__','unknown')},'base_commit':report['base_commit'],'scope':report['scope'],'network_uploads':0,'files_signature_checked':report['files_signature_checked'],'assets':[],'procedural':report['procedural'],'containers':[],'coverage_gaps':[]}
     private_ids=report.setdefault('private_ids',{})
     next_id=max([int(v.split('-')[-1]) for v in private_ids.values()]+[0])+1
     for index,r in enumerate(report['images'],1):
@@ -542,6 +557,7 @@ def redacted(report):
         entry['lineage_sources']=[{'id':ids_placeholder['id'],'basis':ids_placeholder['basis']} for ids_placeholder in r.get('lineage_sources',[]) if not hidden]
         entry['references']=[p for p in r['references'] if p.startswith(('core/','games/'))] if not hidden else []
         entry['evidence']=r['evidence'] if not hidden else {'status':'Restricted evidence retained only in local pack'}
+        if not hidden and r.get('owner_manual_reviews'):entry['owner_manual_reviews']=r['owner_manual_reviews']
         entry['frames']=[{k:v for k,v in f.items() if k not in ['mask_runs','mask_git_blob','mask_hero_index']} for f in r['frames']] if not hidden else [{'id':private_ids[r['sha256']]+f'/frame-{i+1:03d}','review':'unreviewed'} for i,_ in enumerate(r['frames'])]
         if hidden:entry.update(id=private_ids[r['sha256']],sha256=None,bytes=None,dimensions=None)
         out['assets'].append(entry)
@@ -555,6 +571,7 @@ def redacted(report):
     out['retained_git_visual_blobs']=report.get('retained_git_visual_blobs',0)
     out['git_history_is_shallow']=report.get('git_history_is_shallow')
     out['unavailable_inputs']=report.get('unavailable_inputs',[])
+    if report.get('owner_review_follow_up'):out['owner_review_follow_up']=report['owner_review_follow_up']
     out['coverage_gaps']=[{'kind':g['kind'],'path':'<restricted-or-local>'} for g in report['coverage_gaps']]
     out['totals']={'unique_visual_files':len(report['images']),'logical_frames':sum(len(r['frames']) for r in report['images']),'current_project_sources':len(report.get('current_project_source_ids',[])),'atlas_frames_locally_screened':sum(f.get('review')=='assistant_atlas_visual_triage' for r in report['images'] for f in r['frames']),'occurrences':sum(len(r['occurrences']) for r in report['images']),'risk_counts':dict(collections.Counter(r['risk']['overall'] for r in report['images'])),'sensitivity_counts':dict(collections.Counter(r['sensitivity'] for r in report['images'])),'unreviewed_visual_files':sum(r['visual_review']=='not_reviewed' for r in report['images']),'containers':len(report['containers']),'procedural_sources':len(report['procedural']),'coverage_gaps':len(report['coverage_gaps'])}
     return out

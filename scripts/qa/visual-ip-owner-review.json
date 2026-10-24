@@ -1,0 +1,2174 @@
+{
+  "schema": 1,
+  "review_date": "2026-10-24",
+  "base_commit": "2d69117ed7b15d94319c17bbae9764cc39290513",
+  "scope": "Owner-supplied manual findings plus bounded local C2PA metadata and exact lineage/chronology follow-up for the delivered non-sensitive candidates. No authenticated origin, search completeness or legal clearance is asserted.",
+  "summary": {
+    "review_rows": 40,
+    "unique_source_images": 18,
+    "no_match_reported": 32,
+    "similarity_reported_without_confirmed_exact_copy": 7,
+    "cross_reference_to_another_review": 1,
+    "embedded_manifest_sources": 11,
+    "metadata_absent_derivatives": 7,
+    "metadata_absent_derivatives_linked_to_credentialed_originals": 7,
+    "cryptographic_validations": 0,
+    "new_image_searches_by_assistant": 0
+  },
+  "manual_review": {
+    "source_csv_sha256": "e5d3f9eae0f751374d5d01089ed1b7bf7f9927d8343377c243dd303886ca9ad5",
+    "evidence_type": "owner_supplied_manual_review_not_independently_reproduced",
+    "assistant_external_image_uploads": 0,
+    "rows": [
+      {
+        "id": "image-24a0727f8918027a59d6",
+        "source_path": "assets/quest/science-a.png",
+        "source_sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 6,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e"
+      },
+      {
+        "id": "image-26cd7dab38602ae98834",
+        "source_path": "historical/3909c4c/legacy-3.png",
+        "source_sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+        "owner_decision": "similar",
+        "result_urls": "https://superhivemarket.com/products/stylized-cartoon-black-boy-cute-character-rigged-and-animated",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 1,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05"
+      },
+      {
+        "id": "image-317a7d58430e3f9c88b1",
+        "source_path": "historical/3909c4c/legacy-4.png",
+        "source_sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+        "owner_decision": "similar",
+        "result_urls": "https://play.google.com/store/apps/details?id=com.pplingo.spoken.global&hl=de",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 2,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92"
+      },
+      {
+        "id": "image-35a7192d211191ede087",
+        "source_path": "historical/3909c4c/legacy-1.png",
+        "source_sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+        "owner_decision": "similar",
+        "result_urls": "https://curibits.com/about",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 3,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a"
+      },
+      {
+        "id": "image-4ecc9c82abcd672f9738",
+        "source_path": "assets/quest/cap.png",
+        "source_sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
+        "owner_decision": "a lot of similar, partly paid, partly free",
+        "result_urls": "https://www.magnific.com/de/fotos-vektoren-kostenlos/kappe",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 7,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6"
+      },
+      {
+        "id": "image-63adfe7f1a4ed3e0be8b",
+        "source_path": "assets/quest/objects.png",
+        "source_sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+        "owner_decision": "see rank 6",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 8,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633"
+      },
+      {
+        "id": "image-64c83aa13019c72d1a9c",
+        "source_path": "assets/quest/landscape.png",
+        "source_sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397",
+        "owner_decision": "a lot of similar, free",
+        "result_urls": "https://www.magnific.com/free-photos-vectors/cartoon-beautiful-nature/2",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 9,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397"
+      },
+      {
+        "id": "image-7b627a20f05ac701239b",
+        "source_path": "assets/quest/squirrel.png",
+        "source_sha256": "7b627a20f05ac701239b8ddbecc1f5a2af0c0b34c6112cb667867ceb320becf7",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 10,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "7b627a20f05ac701239b8ddbecc1f5a2af0c0b34c6112cb667867ceb320becf7"
+      },
+      {
+        "id": "image-88f2e7b76cd12d864efa",
+        "source_path": "assets/quest/looks-squirrel.png",
+        "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 11,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90"
+      },
+      {
+        "id": "image-88f2e7b76cd12d864efa/frame-squirrel-alien",
+        "source_path": "assets/quest/looks-squirrel.png",
+        "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 33,
+        "frame_coordinates": [
+          400,
+          6,
+          368,
+          559
+        ],
+        "delivered_candidate_sha256": "e3b6c063bd299d103907b8816544b0fd6604bcd4fed8294d8058e1924e69aaf9"
+      },
+      {
+        "id": "image-88f2e7b76cd12d864efa/frame-squirrel-astronaut",
+        "source_path": "assets/quest/looks-squirrel.png",
+        "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 19,
+        "frame_coordinates": [
+          13,
+          546,
+          419,
+          573
+        ],
+        "delivered_candidate_sha256": "79b3f508f6a4fe0d1d0ad098465faa5f6cab9a5f61f6e48d1624fbe4912c51b0"
+      },
+      {
+        "id": "image-88f2e7b76cd12d864efa/frame-squirrel-hero",
+        "source_path": "assets/quest/looks-squirrel.png",
+        "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 20,
+        "frame_coordinates": [
+          24,
+          9,
+          394,
+          560
+        ],
+        "delivered_candidate_sha256": "03846b6f3b64d92cc14efd4fa8db96360cfbd9127e7dcbf567caca2e417b6ce4"
+      },
+      {
+        "id": "image-88f2e7b76cd12d864efa/frame-squirrel-scientist",
+        "source_path": "assets/quest/looks-squirrel.png",
+        "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 34,
+        "frame_coordinates": [
+          396,
+          550,
+          372,
+          582
+        ],
+        "delivered_candidate_sha256": "23dd6406e4c7c8d6d393ac6f1fd83b15d874f06cb567e731e389061c7387fcd7"
+      },
+      {
+        "id": "image-8e6cb7fc9f33a5ff122c",
+        "source_path": "assets/quest/home.png",
+        "source_sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 12,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 13,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-01-alien",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 35,
+        "frame_coordinates": [
+          440,
+          5,
+          152,
+          242
+        ],
+        "delivered_candidate_sha256": "6c994e26bf7403709de5b291cf685fae5c16364a8182b2615dcbd73e5e00f884"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-01-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 21,
+        "frame_coordinates": [
+          638,
+          8,
+          145,
+          238
+        ],
+        "delivered_candidate_sha256": "79dd60d1aaaca4820989ea4b0e118d8478f51c2ea50f4b28738918bb1d4ef8d0"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-01-classic",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 36,
+        "frame_coordinates": [
+          42,
+          4,
+          158,
+          244
+        ],
+        "delivered_candidate_sha256": "31694034aa9b6ab25ce85788440ee7eec3c4164d8a8f85b38ee7d6925353bbb1"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-01-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 22,
+        "frame_coordinates": [
+          234,
+          7,
+          178,
+          241
+        ],
+        "delivered_candidate_sha256": "c47ddac3bbca18e403f62bf46d57638e1655a90fad941c07746c5de2ed4b15ec"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-01-scientist",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 37,
+        "frame_coordinates": [
+          844,
+          3,
+          149,
+          244
+        ],
+        "delivered_candidate_sha256": "54392ac396d36b388312cc374a13342a916128f6f1f2b31bdd6fbd22b6b8bc23"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-02-alien",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 38,
+        "frame_coordinates": [
+          445,
+          259,
+          150,
+          248
+        ],
+        "delivered_candidate_sha256": "e27509f678680c6127e63a5b0b08f02b9723336453b5e38a615222cd6c34bc21"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-02-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 23,
+        "frame_coordinates": [
+          638,
+          261,
+          148,
+          245
+        ],
+        "delivered_candidate_sha256": "042a0fd177e3ebe68469472db0409e4b22567abafbb6e8e92f1c4820c441fbea"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-02-classic",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 39,
+        "frame_coordinates": [
+          42,
+          255,
+          137,
+          253
+        ],
+        "delivered_candidate_sha256": "cf9b63af6f4f2082da015b5e255b2a9530573f30e42849c81b9d8cfec5cbc19a"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-02-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 24,
+        "frame_coordinates": [
+          254,
+          256,
+          160,
+          252
+        ],
+        "delivered_candidate_sha256": "5b6c7b96c6bd9d54b6c899f1cb8938a3f85cc222141855675e68215184d32f74"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-02-scientist",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 40,
+        "frame_coordinates": [
+          853,
+          257,
+          147,
+          251
+        ],
+        "delivered_candidate_sha256": "8b89f3754f760215a5e3bf28cb4025abbfa699cc613c1269dc9baa97bc9e9c5a"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-03-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 25,
+        "frame_coordinates": [
+          638,
+          518,
+          146,
+          243
+        ],
+        "delivered_candidate_sha256": "78006e62d42e4e87396b8457c971433da699cf6c30b7d300f510ad8ee14aa6ed"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-03-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 26,
+        "frame_coordinates": [
+          233,
+          524,
+          179,
+          239
+        ],
+        "delivered_candidate_sha256": "581b20e1e91fad297ab9b78176d2c9cce1b0fc7d2dbff1e45e6e5a8fb325a69e"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-04-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 27,
+        "frame_coordinates": [
+          640,
+          770,
+          148,
+          247
+        ],
+        "delivered_candidate_sha256": "1cf6436f43e5d42bcf6504070ac18ee385d9b706e2fe784c031dc24188ea1dd9"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-04-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 28,
+        "frame_coordinates": [
+          249,
+          769,
+          173,
+          252
+        ],
+        "delivered_candidate_sha256": "0e016446bcc262c603aa291e93e96265dd74b68e3b9e9f0611568778c80fbc87"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-05-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 29,
+        "frame_coordinates": [
+          625,
+          1026,
+          175,
+          288
+        ],
+        "delivered_candidate_sha256": "9638c06ad0883209f7f0b4236ab49c8d2ac6011fae0f8bfdb365f8838460d49d"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-05-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 30,
+        "frame_coordinates": [
+          208,
+          1025,
+          210,
+          290
+        ],
+        "delivered_candidate_sha256": "7d459a0b6d042e8e2a3df6ad4f9d5924bf079ad25d19c9b101bc64d06dd702e1"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-06-astronaut",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 31,
+        "frame_coordinates": [
+          618,
+          1324,
+          183,
+          201
+        ],
+        "delivered_candidate_sha256": "2bddaf99ef08c749ec902b4236a9fb1264914bbcad13b184bbedcbea7a146bf3"
+      },
+      {
+        "id": "image-9bc9b19a865f7d7c0a7b/frame-cast-06-hero",
+        "source_path": "art/public/characters/neutral-cast.png",
+        "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 32,
+        "frame_coordinates": [
+          223,
+          1320,
+          205,
+          207
+        ],
+        "delivered_candidate_sha256": "c6a74f1fda333514403ed4ce1233a3e5e18c0b6eec79427d1a1a10fdeee658d0"
+      },
+      {
+        "id": "image-a0fb2eaf69eea145a82b",
+        "source_path": "historical/3909c4c/legacy-2.png",
+        "source_sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+        "owner_decision": "many similar but no exact match",
+        "result_urls": "https://www.youtube.com/@Toonverse-i7h",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 4,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae"
+      },
+      {
+        "id": "image-a29766d06ffd5202a994",
+        "source_path": "assets/quest/castle.png",
+        "source_sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 14,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb"
+      },
+      {
+        "id": "image-a82db618e2d2e99b67cf",
+        "source_path": "assets/quest/icons.png",
+        "source_sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 15,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3"
+      },
+      {
+        "id": "image-b0ee49e61cf81cd9bee6",
+        "source_path": "assets/quest/adventure-worlds.png",
+        "source_sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 16,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba"
+      },
+      {
+        "id": "image-b5bb1f530ad5c1be245c",
+        "source_path": "assets/quest/appicon.png",
+        "source_sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 5,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551"
+      },
+      {
+        "id": "image-c89dd5d210b04dda10ed",
+        "source_path": "assets/quest/beanie.png",
+        "source_sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083",
+        "owner_decision": "many similar but no exact match",
+        "result_urls": "https://www.magnific.com/photos/winter-hat-watercolor/6",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 17,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083"
+      },
+      {
+        "id": "image-f52c58e32138d208ec39",
+        "source_path": "assets/quest/science-b.png",
+        "source_sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+        "owner_decision": "no match",
+        "result_urls": "",
+        "access_date": "24.10.2026",
+        "reverse_search_status": "",
+        "online_upload_permitted": "true",
+        "search_notes": "",
+        "follow_up_action": "",
+        "delivered_rank": 18,
+        "frame_coordinates": null,
+        "delivered_candidate_sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_path": "assets/quest/science-a.png",
+      "source_sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "9be3e54a8d3e8f13e087b184145e56b5048b855dbdfead58932c6816543d6c15"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T19:27:49.093798108Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T19:27:49.093801533Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T19:27:49.092207548Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-587da44f-8d03-4a62-8623-57814da17e34.png",
+        "sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "9be3e54a8d3e8f13e087b184145e56b5048b855dbdfead58932c6816543d6c15"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T19:27:49.093798108Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T19:27:49.093801533Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T19:27:49.092207548Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "historical/3909c4c/legacy-3.png",
+      "source_sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "9974313420707f7bbfee73bbca26fefdd8a1774a4b5d4939f9263817aa1449ae"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:13:15.056545082Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:13:15.056551792Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:13:15.052953097Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-c84720a3-0e2c-4434-ad7c-d9264e8abae2.png",
+        "sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "9974313420707f7bbfee73bbca26fefdd8a1774a4b5d4939f9263817aa1449ae"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:13:15.056545082Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:13:15.056551792Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:13:15.052953097Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "historical/3909c4c/legacy-4.png",
+      "source_sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "8132e49ebf9a87d8494370083c0a67bf346def32a5259ca61db8e608416a3dc1"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:13:57.074856783Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:13:57.074862081Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:13:57.066809362Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-2e9c9a6d-7bda-4c43-945d-a0d86d7243fb.png",
+        "sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "8132e49ebf9a87d8494370083c0a67bf346def32a5259ca61db8e608416a3dc1"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:13:57.074856783Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:13:57.074862081Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:13:57.066809362Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "historical/3909c4c/legacy-1.png",
+      "source_sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "7f67d101703602a9c2289080bb7a00c515fd3506054b31da2e27a2030e30a280"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:12:20.030352106Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:12:20.030356122Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:12:20.024776599Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-9f485dfe-5766-4fdf-9a7a-ec04aa40e23b.png",
+        "sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "7f67d101703602a9c2289080bb7a00c515fd3506054b31da2e27a2030e30a280"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:12:20.030352106Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:12:20.030356122Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:12:20.024776599Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/cap.png",
+      "source_sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "fefbf7b346949ba5f637603e97b946002ccadeea7feb4d9b19d66360db3f2d56"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-24T06:34:12.811352980Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-24T06:34:12.811356455Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-24T06:34:12.809510222Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-9b0f5eee-83b3-499a-b118-e20c5d25af00.png",
+        "sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "fefbf7b346949ba5f637603e97b946002ccadeea7feb4d9b19d66360db3f2d56"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-24T06:34:12.811352980Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-24T06:34:12.811356455Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-24T06:34:12.809510222Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/objects.png",
+      "source_sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "ff3e1fdea76a654926aef5964f2472f64b9275142f5246ebe4628b5c1ad7c3b6"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:14:45.147252896Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:14:45.147264473Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:14:45.145819907Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-2efb2e0e-265f-4272-bc02-b16784d259de.png",
+        "sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "ff3e1fdea76a654926aef5964f2472f64b9275142f5246ebe4628b5c1ad7c3b6"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:14:45.147252896Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:14:45.147264473Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:14:45.145819907Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/landscape.png",
+      "source_sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-783daeef-b132-4886-89c2-08b5cf2b7ec1.png",
+        "sha256": "5289b9e3509f388f3d2c4967ae84d2734e7faf827766303ded0638b5269facaa",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "9680ad9237d087beba283c0fbc9b94c2a7d9ebb1f3defa1b2575749bc252491e"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T17:56:54.961685936Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T17:56:54.961692516Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T17:56:54.955916707Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/squirrel.png",
+      "source_sha256": "7b627a20f05ac701239b8ddbecc1f5a2af0c0b34c6112cb667867ceb320becf7",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-4a1bdf7f-91ee-4515-af5c-8bd6e8fa5961.png",
+        "sha256": "77f0c3a781fadeaf60eb231aa72877169c85cd1fdc0ef7079ad6324a55a10ee2",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "3201289d67d35539ccfb5a9fe7d53f3d204e78b802230db2de467eae03d25f5d"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T06:38:36.272496686Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T06:38:36.272501684Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T06:38:36.268905554Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/looks-squirrel.png",
+      "source_sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-8d673d6a-3470-4d65-a980-0da63e2c7aa1.png",
+        "sha256": "e1a584e3b3e70367233cca4a3c3e23073ad780734578f258d7e1a5e9fbb2a302",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "47337aa5ca365348ebec6c9694db1a29025e901f53956526e5f88aa413223cb6"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T07:28:09.200018970Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T07:28:09.200034614Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T07:28:09.197921429Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/home.png",
+      "source_sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-376c67f5-26eb-4979-9396-08a7a3997dbc.png",
+        "sha256": "a8fb3421a474e889937f7cb3132d0539fc96937c7d6755e939152084c5b8df34",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "93cd80a9d4d7059d12de3750218b5e15b279ee387e31ee2c5b0ce3fbcea3df75"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T07:28:48.585781980Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T07:28:48.585785836Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T07:28:48.583755095Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "art/public/characters/neutral-cast.png",
+      "source_sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-d2d1573b-7108-429b-911f-52637d4bfad2.png",
+        "sha256": "00f203af531388bcd5f479c6093929385a8a20bc9b428c58048ed86daadadf71",
+        "hash_verified": true,
+        "relationship": "RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "ac47f7395923b755fc50b5c5b2414ff968aa5b55d823de7b67f4a352127fcc5b"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T11:59:35.460208403Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T11:59:35.460211688Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T11:59:35.456178503Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "historical/3909c4c/legacy-2.png",
+      "source_sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "5ae40f02818d45cf9955fea4e4c948094cbd1c0561cbd4847c70f38be3cff970"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:11:35.473495925Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:11:35.473502605Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:11:35.467524983Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-c5159b37-464c-4659-bfb2-5e319db6bfc0.png",
+        "sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "5ae40f02818d45cf9955fea4e4c948094cbd1c0561cbd4847c70f38be3cff970"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:11:35.473495925Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:11:35.473502605Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:11:35.467524983Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/castle.png",
+      "source_sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-37f74fca-8d3a-42e2-a530-933cb0cafb33.png",
+        "sha256": "62631457013f08fa3c6e5334d899d0a11d24b6c71c2340fc1b22e12b2fedc881",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "37ca1d83fd463eb860c49174bc85506e29fd77a2fd3193c855d141f1667f1fd7"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T07:29:13.962321177Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T07:29:13.962326044Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T07:29:13.956811208Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/icons.png",
+      "source_sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "912ea6dee81a91d8a53804a78f95e66e8046ff349551888d1f3b5f9aa0009141"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T18:05:41.916666581Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T18:05:41.916670066Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T18:05:41.913172081Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-9ae3eed8-80eb-40c7-82f6-bd60458af344.png",
+        "sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "912ea6dee81a91d8a53804a78f95e66e8046ff349551888d1f3b5f9aa0009141"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T18:05:41.916666581Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T18:05:41.916670066Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T18:05:41.913172081Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/adventure-worlds.png",
+      "source_sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "cdf808ac7509734b68bcda470e70ad21dfd6d056e6f0325c6c587a78fbd272ae"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-21T14:24:02.104432014Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-21T14:24:02.104439665Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-21T14:24:02.100191343Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-99bd7710-d4a8-4f8b-b6f2-89ffa3ad7b86.png",
+        "sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "cdf808ac7509734b68bcda470e70ad21dfd6d056e6f0325c6c587a78fbd272ae"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-21T14:24:02.104432014Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-21T14:24:02.104439665Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-21T14:24:02.100191343Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/appicon.png",
+      "source_sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551",
+      "file_credentials": {
+        "status": "absent",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false
+      },
+      "retained_original": {
+        "filename": "exec-094ae2eb-c6ca-418c-a1b0-73fbf73341c1.png",
+        "sha256": "85ed87611142948827c76bd209b79d6e883296d1b90cbee7187ee837ceac2f3c",
+        "hash_verified": true,
+        "relationship": "Lanczos_RGBA_pixels_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "ecffc55b3787cddc7362f13884f8997d4188d02bf886924e12d2c4d04e429e16"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-23T09:37:18.218524801Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-23T09:37:18.218529027Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-23T09:37:18.215259665Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/beanie.png",
+      "source_sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "dde78de70579a69b0c601986d7ee2e89b406e8b806d4e511693ced7b0b61c22b"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-24T06:34:03.884371489Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-24T06:34:03.884380693Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-24T06:34:03.883232231Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-68e46c9f-a066-4f20-9487-9571fd72aafb.png",
+        "sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "dde78de70579a69b0c601986d7ee2e89b406e8b806d4e511693ced7b0b61c22b"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-24T06:34:03.884371489Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-24T06:34:03.884380693Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-24T06:34:03.883232231Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    },
+    {
+      "source_path": "assets/quest/science-b.png",
+      "source_sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "file_credentials": {
+        "status": "metadata_read",
+        "cryptographic_validation": "not_performed",
+        "signature_verified": false,
+        "certificate_trust_verified": false,
+        "asset_binding_verified": false,
+        "png_credential_crc_valid": true,
+        "credential_sha256": [
+          "f47c9bf475386721e8cfe1a0e433620755ff17af5be7783b9ecf3228a53a849f"
+        ],
+        "claim_generators": [
+          {
+            "name": "OpenAI Media Service API"
+          }
+        ],
+        "actions": [
+          {
+            "action": "c2pa.created",
+            "when": "2026-10-20T19:29:54.283915873Z",
+            "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+            "softwareAgent": {
+              "name": "ChatGPT",
+              "version": "gpt-image"
+            }
+          },
+          {
+            "action": "c2pa.converted",
+            "when": "2026-10-20T19:29:54.283923574Z",
+            "softwareAgent": null
+          },
+          {
+            "action": "c2pa.watermarked.unbound",
+            "when": "2026-10-20T19:29:54.281456112Z",
+            "softwareAgent": null
+          }
+        ],
+        "signature_box_present": true,
+        "certificate_name_text_seen": "OpenAI Media Service",
+        "embedded_metadata_image_boxes": 1
+      },
+      "retained_original": {
+        "filename": "exec-c06ad7fb-a0d4-4232-8184-df3aae7465f9.png",
+        "sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+        "hash_verified": true,
+        "relationship": "byte_identical",
+        "pixel_relation_verified": true,
+        "credentials": {
+          "status": "metadata_read",
+          "cryptographic_validation": "not_performed",
+          "signature_verified": false,
+          "certificate_trust_verified": false,
+          "asset_binding_verified": false,
+          "png_credential_crc_valid": true,
+          "credential_sha256": [
+            "f47c9bf475386721e8cfe1a0e433620755ff17af5be7783b9ecf3228a53a849f"
+          ],
+          "claim_generators": [
+            {
+              "name": "OpenAI Media Service API"
+            }
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "when": "2026-10-20T19:29:54.283915873Z",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "softwareAgent": {
+                "name": "ChatGPT",
+                "version": "gpt-image"
+              }
+            },
+            {
+              "action": "c2pa.converted",
+              "when": "2026-10-20T19:29:54.283923574Z",
+              "softwareAgent": null
+            },
+            {
+              "action": "c2pa.watermarked.unbound",
+              "when": "2026-10-20T19:29:54.281456112Z",
+              "softwareAgent": null
+            }
+          ],
+          "signature_box_present": true,
+          "certificate_name_text_seen": "OpenAI Media Service",
+          "embedded_metadata_image_boxes": 1
+        }
+      }
+    }
+  ],
+  "legacy_chronology": {
+    "introduced_commit": "3909c4cf4e055483b746fcbd89b640b2c97e109e",
+    "introduced_git_time_utc": "2026-10-20T18:34:22Z",
+    "removed_commit": "daa0df88d472ceae9be91bc1ff50857b2ba9170a",
+    "removed_git_time_utc": "2026-10-20T20:29:08Z",
+    "interpretation": "Legacy means superseded project cast. All four embedded creation claims predate the recorded introduction commit on the same day. The exact original Git bytes, not regenerated replacements, were inspected. Git clocks and C2PA timestamps are not independently authenticated.",
+    "files": [
+      {
+        "source_sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+        "creation_claim_utc": "2026-10-20T18:12:20.030352106Z",
+        "matches_first_git_blob": true
+      },
+      {
+        "source_sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+        "creation_claim_utc": "2026-10-20T18:11:35.473495925Z",
+        "matches_first_git_blob": true
+      },
+      {
+        "source_sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+        "creation_claim_utc": "2026-10-20T18:13:15.056545082Z",
+        "matches_first_git_blob": true
+      },
+      {
+        "source_sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+        "creation_claim_utc": "2026-10-20T18:13:57.074856783Z",
+        "matches_first_git_blob": true
+      }
+    ]
+  },
+  "metadata_reader_sha256": "cf638b3349a3c5f20662b7bc7962de431ec60ddcecf6b459645938664bbeaf25"
+}

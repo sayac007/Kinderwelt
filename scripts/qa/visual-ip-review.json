@@ -11,17 +11,17 @@
     {
       "sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
       "resemblance": "low",
-      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact first-commit/local-output bytes contain C2PA claims for ChatGPT/gpt-image creation on 2026-10-20. Cryptographic authenticity and rights are unverified. Owner reported similar results, without a confirmed exact copy; see the separate owner-review ledger."
     },
     {
       "sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
       "resemblance": "low",
-      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact first-commit/local-output bytes contain C2PA claims for ChatGPT/gpt-image creation on 2026-10-20. Cryptographic authenticity and rights are unverified. Owner reported similar results, without a confirmed exact copy; see the separate owner-review ledger."
     },
     {
       "sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
       "resemblance": "low",
-      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact first-commit/local-output bytes contain C2PA claims for ChatGPT/gpt-image creation on 2026-10-20. Cryptographic authenticity and rights are unverified. Owner reported similar results, without a confirmed exact copy; see the separate owner-review ledger."
     },
     {
       "sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
@@ -66,7 +66,7 @@
     {
       "sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
       "resemblance": "low",
-      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact first-commit/local-output bytes contain C2PA claims for ChatGPT/gpt-image creation on 2026-10-20. Cryptographic authenticity and rights are unverified. Owner reported similar results, without a confirmed exact copy; see the separate owner-review ledger."
     },
     {
       "sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
@@ -116,5 +116,6 @@
     }
   ],
   "external_reverse_image_searches": 0,
-  "owner_upload_approvals": []
+  "owner_upload_approvals": [],
+  "owner_review_evidence": "scripts/qa/visual-ip-owner-review.json"
 }
