@@ -1,24 +1,44 @@
-# QA-Nachweise: Einstieg und Archiv
+# Quality evidence and long-term references
 
-Der aktuelle Einstieg ist [QUALITY_ASSURANCE.md](../QUALITY_ASSURANCE.md). Dieser Ordner enthält nur diesen Wegweiser und den einmalig erstellten, redaktionell geprüften [Archivindex](ARCHIVE_INDEX.tsv). Neue Testläufe schreiben nach `qa-results/` beziehungsweise `build/`, nicht hierher.
+Start with [QUALITY_ASSURANCE.md](../QUALITY_ASSURANCE.md).
+This directory retains the archive index and the two named, current visual-audit
+references. It is not a destination for individual test-run logs.
 
-## Vollständig erhaltene Historie
+- [VISUAL_IP_AUDIT.md](VISUAL_IP_AUDIT.md): current visual provenance/similarity
+  triage, coverage gaps and owner review actions; no legal clearance.
+- [visual-ip-manifest.json](visual-ip-manifest.json): redacted inventory;
+  private images, identifying paths and private image hashes are withheld.
+- [ARCHIVE_INDEX.tsv](ARCHIVE_INDEX.tsv): the unchanged, reviewed index of
+  **139 historical files / 7,383,943 bytes**.
 
-Vor KW-QA-01: **139 Dateien, 7.383.943 Bytes** (7,04 MiB reine Dateiinhalte; `du` meldete rund 7,4 MiB inklusive Dateisystembelegung). Es waren maschinelle Logs, Android-/ASR-/Größenberichte und Provenienzen, keine handgepflegten Anleitungen.
+## Historical evidence is preserved
 
-Die Originalbytes liegen unverändert im selben **privaten** Repository unter dem festen Tag [`qa-evidence/2026-10-23-v091`](https://github.com/sayac007/Kinderwelt/tree/qa-evidence/2026-10-23-v091/docs/qa), Commit [`a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e`](https://github.com/sayac007/Kinderwelt/tree/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa). Tag und Zielcommit wurden über die GitHub-API geprüft; alle 139 Git-Blob-IDs vor der Entfernung gegen die Originaldateien abgeglichen. SHA-256, Größe, erste Versionierung, letzte Änderung, Zweck und damalige Einzelreferenzen stehen pro Datei im Index. Die Datumsfelder sind Git-Zeitpunkte; ein nicht aufgezeichneter genauer Laufzeitpunkt wird nicht erfunden.
-
-Der Archivtag ist eine dauerhafte Git-Referenz, kein temporärer Downloadlink. Nicht löschen oder neu setzen. Eine frühere Datei lässt sich ohne Checkout zurückholen:
+The original files remain byte-for-byte in the same private repository at tag
+[`qa-evidence/2026-10-23-v091`](https://github.com/sayac007/Kinderwelt/tree/qa-evidence/2026-10-23-v091/docs/qa),
+commit [`a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e`](https://github.com/sayac007/Kinderwelt/tree/a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e/docs/qa).
+The index records source paths, sizes, SHA-256, Git blob IDs, Git dates, purposes
+and earlier references. Unrecorded run times are not invented. This is a durable
+Git reference, not an expiring artifact; do not delete or retarget it.
 
 ```sh
 git fetch origin refs/tags/qa-evidence/2026-10-23-v091:refs/tags/qa-evidence/2026-10-23-v091
 git show qa-evidence/2026-10-23-v091:docs/qa/phase2.log > /tmp/kinderwelt-phase2.log
 ```
 
-Keine neue öffentliche Veröffentlichung: Der Zugangskreis des privaten Repositorys bleibt erhalten. Historische Logs können lokale Pfade und Variantenbezeichnungen enthalten; sie gehören nicht ungeprüft in öffentliche Anhänge. Keine Fotos, Familiengrafiken oder Schlüssel werden diesem Archiv neu hinzugefügt. Eine Bereinigung älterer Git-Historie ist nicht Teil dieser Aufgabe.
+Historical logs can contain local paths and variant metadata. Do not publish
+copies without review. No historical file, photo, family illustration or key
+has been removed or newly published by the visual audit. History rewriting is
+outside this workorder.
 
-## Warum keine Release-Anhänge oder alleinigen CI-Artefakte?
+## Storage policy
 
-- CI-Artefakte eignen sich für neue Laufzeitberichte, laufen hier aber nach sieben Tagen ab. Sie sind kein Langzeitarchiv.
-- Release-Anhänge können langfristig geeignet sein, wären hier eine zusätzliche Kopie mit zusätzlichem Zugriffs-/Uploadnachweis. Historische Zugriffsprobleme und Familien-Metadaten sprechen gegen eine ungeprüfte Veröffentlichung. Es wurde kein neuer Release erzeugt.
-- Die bereits auf GitHub vorhandenen, verifizierten Git-Objekte bieten ohne Umkopieren eine versionsfeste Ersatzablage. Kein Befund wurde vernichtet. Die noch notwendige ASR-Untermenge von 24 Fachansagen liegt zusätzlich als begründete Regressionstest-Referenz unter `tests/fixtures/voice/subject-recognition.json`; sie ist kein neuer Laufbericht.
+New run output belongs in `qa-results/` or `build/`. Ordinary CI artifacts expire
+after seven days and are not a long-term evidence archive. The explicitly named
+current audit report and its redacted inventory are maintained references, not
+one new report per run. The existing voice-recognition fixtures are necessary
+regression references rather than a general run archive.
+
+The visual contact sheets, individual review copies, full sensitive inventory
+and review ZIPs stay outside the repository in an owner-only local directory.
+They must not be attached to a PR, CI artifact or release. Public-source review
+candidates also require a specific owner decision before any image-search upload.

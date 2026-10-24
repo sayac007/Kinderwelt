@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "review_date": "2026-10-24",
+  "reviewer_type": "assistant local visual/source triage, not human/legal clearance",
+  "source_reviews": [
+    {
+      "sha256": "24a0727f8918027a59d6fc4963d251399b3b2f5ca4a0dae80cadc39d7f74966e",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "26cd7dab38602ae98834cd2f64adcafbcfc3fe72868c8977f61d3601f6a1aa05",
+      "resemblance": "low",
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+    },
+    {
+      "sha256": "317a7d58430e3f9c88b17e5a50bcee52b43b710adac083ced32a4a2a2610da92",
+      "resemblance": "low",
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+    },
+    {
+      "sha256": "35a7192d211191ede08733f46e81a8fe6bf94f74a1dec3a427438c3fd6e5be8a",
+      "resemblance": "low",
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+    },
+    {
+      "sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "63adfe7f1a4ed3e0be8b54a4e447d1060bfa663f0732a37a7593dd171c552633",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "64c83aa13019c72d1a9c0be7dce5f5ed5972bdf60869d48eb53e78cde517f397",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "7b627a20f05ac701239b8ddbecc1f5a2af0c0b34c6112cb667867ceb320becf7",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "85ed87611142948827c76bd209b79d6e883296d1b90cbee7187ee837ceac2f3c",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "88f2e7b76cd12d864efa65feb75a4ab6f4236b04f3b86368efc42e70a5413c90",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "8e6cb7fc9f33a5ff122c559b9b2e80e8bfc7db6bcbeb4f992fba8250087f3ae9",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "9bc9b19a865f7d7c0a7b28e23dfdbf82a78a6878d2690f73f2f9f2483d8cb8f4",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "a0fb2eaf69eea145a82b1a4cc9ecb0209dac26eb77328ddcb1abdc53759181ae",
+      "resemblance": "low",
+      "observation": "Legacy stylized child figure locally inspected; no specific franchise identified. Exact matching retained output files were also located; provider/authorship, generation context and rights remain unverified. Prioritize owner source/license review."
+    },
+    {
+      "sha256": "a29766d06ffd5202a9944c33d186cec327a6add4b79fead15879458fe8ea57eb",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "a82db618e2d2e99b67cfa39a7b387f03006096c708be701ed93637dc521fe5e3",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "b0ee49e61cf81cd9bee65dd9ee25697640fb27851cd94160fc3d9f17a92348ba",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "b5bb1f530ad5c1be245ce76a7c4416a9c97e4081ab31838e3b6b4bd0263fa551",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    },
+    {
+      "sha256": "f52c58e32138d208ec3929d8956eacd3a1b139cca69ef31bec3dc3c73ca37581",
+      "resemblance": "low",
+      "observation": "Locally inspected original/atlas: generic educational objects, scenery or stylized characters; no specific protected franchise/logo identified. This is not originality or rights proof."
+    }
+  ],
+  "geometry_reviewed_paths": [
+    "assets/quest/monochrome.svg",
+    "assets/quest/ui/speaker.svg",
+    "assets/quest/ui/home.svg",
+    "assets/quest/ui/previous.svg",
+    "assets/quest/ui/next.svg",
+    "assets/quest/ui/play.svg"
+  ],
+  "public_text_sources": [
+    {
+      "url": "https://github.com/godotengine/godot-design/blob/5a20962ba50c9ba77fc7a7cf07ba827739b39cf3/README.md",
+      "access_date": "2026-10-24",
+      "sha256": "41f65aa257cedb4581a4929beaef427bf4bf77a3c57aa55adade3b096d3f8610",
+      "scope": "Public license text only; no image upload. Godot-design default CC BY 4.0 is not automatically the license of every Android template resource."
+    }
+  ],
+  "external_reverse_image_searches": 0,
+  "owner_upload_approvals": []
+}

@@ -2,6 +2,8 @@
 
 **Klasse 1–2:** Ein lokal spielbares Godot-Lernabenteuer mit 400 Grundaufgaben und 800 freiwilligen Boni. Kinder bewegen eine Figur durch sieben wählbare Kulissen und sammeln dauerhaft gespeicherte Punkte. Keine Konten, Werbung, Käufe, Mikrofonaufnahmen oder Telemetrie integriert. Technische Prüfergebnisse sind kein Nachweis pädagogischer Wirksamkeit oder einer Google-Play-Freigabe.
 
+The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
+
 ## Orientierung
 
 | Bereich | Inhalt / zuständige Komponenten |

@@ -44,7 +44,7 @@ def check(root=ROOT,remote=False):
             ci_count+=1
             if not (root/target).is_file():findings.append(f'{workflow.relative_to(root)}: missing {target}')
     for file in (root/'docs/qa').iterdir():
-        if file.name not in ['README.md','ARCHIVE_INDEX.tsv']:findings.append('Unexpected new QA run file: '+file.name)
+        if file.name not in ['README.md','ARCHIVE_INDEX.tsv','VISUAL_IP_AUDIT.md','visual-ip-manifest.json']:findings.append('Unexpected new QA run file: '+file.name)
     archive_urls={row['archive_url'] for row in rows}
     for url in external:
         prefix=f'https://github.com/sayac007/Kinderwelt/blob/{SOURCE}/docs/qa/'

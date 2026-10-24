@@ -18,3 +18,14 @@ class DocumentationTests(unittest.TestCase):
             result=docs.check(root)
             self.assertEqual(len(result['findings']),1)
             self.assertIn('docs/not-present.md',result['findings'][0])
+
+    def test_only_named_long_term_audit_references_are_allowed(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'docs/qa').mkdir(parents=True)
+            shutil.copy2(ROOT/'docs/qa/ARCHIVE_INDEX.tsv',root/'docs/qa/ARCHIVE_INDEX.tsv')
+            (root/'README.md').write_text(docs.COMMAND);(root/'docs/QUALITY_ASSURANCE.md').write_text(docs.COMMAND)
+            (root/'docs/qa/VISUAL_IP_AUDIT.md').write_text('Current hand-maintained audit')
+            (root/'docs/qa/visual-ip-manifest.json').write_text('{}')
+            self.assertEqual(docs.check(root)['findings'],[])
+            (root/'docs/qa/arbitrary-new-run.log').write_text('Must remain a runtime artifact')
+            self.assertTrue(any('arbitrary-new-run.log' in f for f in docs.check(root)['findings']))
