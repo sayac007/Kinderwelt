@@ -4,6 +4,62 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Play preparation: package 3 source and recording notices (0.9.4 / 17)
+
+Code commit: `bb863fae3d1c2072165a5b284ac9d5c0ea13e6bd`, 2026-10-24.
+[Software/asset scope and pending operator decision](../ASSETS_LICENSE.md).
+
+- The root MIT software licence is unchanged. Its exact text is also bundled;
+  it does not blanket-license artwork, voice recordings, fonts or music.
+- All five CC-BY-SA-derived recordings retain the source's exact licence version
+  and link in the music notice and DE/EN/RU parent credits. Russian credits now
+  also retain original authors, pinned source URLs and piano-source attribution.
+  URLs are displayed as text; no link-opening/network function was added.
+- Both export presets and actual APK/AAB bytes must retain **15 notice files**:
+  software MIT, font OFL, music notices and six music/source licence texts, plus
+  all three voice cards and their licence/provenance notices. Missing, modified,
+  excluded or duplicate files fail verification, including install-time assets.
+- [Legacy chronology](character-origins.md) now reflects the original four PNGs'
+  C2PA creation claims on 20 October 2026. Their original Git bytes/hashes and
+  metadata were re-read locally; no images were regenerated/replaced. Signature
+  authenticity and rights are not inferred from those claims.
+- **PASS locally:** full existing suite with **199 Python tests**, 12,750 quest /
+  4,168 world / 1,231 reward checks and the existing privacy, speech, layout and
+  content guards. Ten notice regressions cover source scope, same-version policy,
+  both filters and each missing/modified/duplicate packaged notice. The updated
+  verifier's 18 regressions and five source-variant tests also passed separately.
+- **PASS locally:** the final credits view passed **528 checks** with six real
+  rendered images, covering 20 tracks, three locales and both orientations.
+  Two frames (Russian phone, English landscape) were visually inspected. This
+  is not a claim of independent visual/legal review of every track or device.
+- Existing audio files, original music manifest fields (including hashes,
+  durations and source licences), model cards, image bytes, task contents,
+  signing identity and Android workflows are unchanged. Only notice metadata,
+  the parent credits and the required software-notice include filter changed.
+- [Quality CI 40119107940](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940)
+  and [Android CI 40119107914](https://github.com/sayac007/Kinderwelt/actions/runs/40119107914)
+  both **PASS** at the code commit above. Quality CI completed the full current
+  suite, existing real-render checks and the six additional credits frames.
+  Android CI rebuilt and verified both cast variants’ APKs and unsigned AABs,
+  including all 15 source-matched notices.
+  [Technical renders/reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940/artifacts/12571010986),
+  [offline adult listening review](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940/artifacts/12571215211),
+  [verified development APKs/AABs and reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107914/artifacts/12571041219)
+  are private seven-day CI artifacts, not permanent legal evidence.
+- An additional local neutral APK and unsigned AAB also passed actual identity,
+  signature/alignment, resources, zero permissions, backup and all 15 notice-byte
+  checks (`build/android-package3-neutral/`). That supplemental build records
+  `source_dirty=true` because the QA summary was being edited; it is not claimed
+  as clean provenance. The CI source above is the immutable reference.
+
+**NOT VERIFIED:** the operator's `{{ASSET_LIZENZ_DES_BETREIBERS}}`, rights for
+distribution, hardware acceptance, protected real-key release and Play approval.
+The English voice card declares only its **dataset** public domain; no separate
+model/output grant is supplied by that card or invented by the new provenance
+notice. Qwen's Apache model licence is not automatically applied to recordings.
+C2PA signature/trust verification remains unperformed. Technical notice delivery
+does not settle these decisions. Packages 4–6 and `docs/qa/` cleanup are untouched.
+
 ## Play preparation: package 2 size measurement (0.9.4 / 17)
 
 Measurement implementation: `c4bdb9b9526fae95a5e4304044f1e79d2fea8a87`;
