@@ -59,6 +59,8 @@ replaces those test passwords with runtime-random values, limits the release job
 to manual `main`, references Environment `release` and adds tested `always()`
 cleanup below `RUNNER_TEMP/kinderwelt-release`. **16 targeted signing/guard tests,
 actionlint and local documentation checks passed.** Gameplay is unchanged.
+[Non-main live dispatch 40112335611](https://github.com/sayac007/Kinderwelt/actions/runs/40112335611)
+skipped the entire job before Environment access, as intended.
 Required reviewers, main-only Environment deployment policy and Environment-scoped
 secrets must be configured and verified by the operator; the metadata API returned
 404, so protection is **NOT VERIFIED**, not asserted from YAML alone.

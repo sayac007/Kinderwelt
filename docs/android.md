@@ -160,6 +160,8 @@ and check that the repository's GitHub plan supports and enforces those rules.
 The YAML references the Environment; it cannot create or guarantee its reviewer
 protection settings. Those settings remain **NOT VERIFIED** until the operator
 checks them. Do not store real upload credentials in an unprotected Environment.
+If the plan cannot enforce both protections, keep CI upload secrets unset and
+use the documented local signing path; do not bypass the reviewer requirement.
 
 Store the four `KINDERWELT_UPLOAD_*` secrets **in the protected release Environment**,
 not as repository/organization-wide secrets (use the Base64 representation for
