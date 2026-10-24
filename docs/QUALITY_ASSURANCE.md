@@ -4,6 +4,48 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Play preparation: package 1 (0.9.4 / 17)
+
+Verified code commit: `c147947a13bea587076bcfbfad581ec050637856`, 2026-10-24.
+[Release configuration and operator setup](android.md) describe the separate,
+neutral-only upload-signing path. `project.godot` is the single version source;
+the original development workflow and all learning/audio/art files are unchanged.
+
+- **PASS:** complete `tests/run.sh` with `KINDERWELT_VARIANT=public`, including
+  **177 Python tests**, all 12,750 quest / 4,168 world / 1,231 reward checks,
+  62 avatar import/restart/privacy checks, layout, speech, lifecycle, fresh-import,
+  pronunciation, licence, documentation and pedagogical regression guards.
+- **PASS:** 15 release/signing regressions: missing/provisional identity, missing
+  credentials/operator placeholders, both preset versions, credential isolation,
+  private temporary keystore cleanup, and the actual CI preflight shell block
+  skipping without secrets. Real JDK signature tests reject unsigned, modified,
+  partly unsigned and wrong-signer archives. Test identities are disposable only.
+- **PASS:** actual neutral release AAB exported and signed using an isolated,
+  disposable acceptance key (destroyed afterward), then technically verified.
+  `build/android-play-package1-verified/kinderwelt-release-neutral.aab`:
+  **306,194,336 bytes**, **7,922 signed payload entries**;
+  `invalid.kinderwelt.fixture`, 0.9.4 / 17, zero permissions, backup disabled,
+  expected signer, manifest/content, ABI and 16-KB ELF checks passed. Provenance:
+  `source_dirty=false`, `git_state_changed_during_build=false` at the commit above.
+  This is a **test fixture, not an operator-signed Play delivery**.
+- **PASS:** actionlint, both workflow YAML parses, local documentation/CI
+  references and `git diff --check`. The production `android.yml` is byte-identical
+  to the base. The new release workflow has only manual dispatch and read-only
+  contents access; it never receives a family token or checks out private assets.
+- Neutral debug/unsigned-AAB [CI verification run 40110051611](https://github.com/sayac007/Kinderwelt/actions/runs/40110051611):
+  **PASS** at the verified code commit: actual neutral debug APK and unsigned AAB
+  built, verified and uploaded as `android-development-artifacts`. An earlier own run was cancelled
+  after a local reproduction exposed Java stderr notices corrupting XML parsing;
+  the corrected checker captures stdout separately and has a regression.
+
+**NOT VERIFIED:** signing with the operator's actual upload key, final package,
+publisher/contact/licence choices, Play upload and all existing device/manual
+acceptance. GitHub returned 404 when dispatching the newly added release workflow
+before it existed on the default branch; its live missing-secrets job remains
+unverified until the operator merges it. The exact preflight script passed locally.
+Packages 2–6 are separate follow-up PRs, not covered by these results. No real
+upload key, contact information, Play approval or new QA run files were added.
+
 ## Current avatar-import verification (0.9.4)
 
 Application commit `8eaf9968` adds an optional parent-managed, device-local PNG
