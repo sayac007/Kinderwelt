@@ -88,6 +88,14 @@ jobs:
             python3 scripts/android/build_variants.py --variants neutral --tools "$RUNNER_TEMP/tools"
       - name: Attach offline listening examples from the actual bundled speech
         run: python3 scripts/qa/listening_pack.py --output build/android-delivery/kinderwelt-listening.html
+      - name: Measure neutral download with pinned bundletool (arm64, de)
+        # Family-only runs contain no neutral bundle to measure.
+        # The size budget only warns; an actual measurement error still fails.
+        if: success() && !(github.event_name == 'workflow_dispatch' && inputs.variant == 'family')
+        run: |
+          python3 scripts/android/size_report.py \
+            --bundle build/android-delivery/kinderwelt-unsigned-neutral.aab \
+            --tools "$RUNNER_TEMP/tools" --output build/android-delivery/size-neutral
       - name: Retain APKs, unsigned bundles and technical evidence; no source repository or tokens
         if: always() && !(github.event_name == 'workflow_dispatch' && inputs.variant == 'family')
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -101,6 +109,8 @@ jobs:
             build/android-delivery/*/*.json
             build/android-delivery/*/*.txt
             build/android-delivery/*/*.log
+            build/android-delivery/size-neutral/*.csv
+            build/android-delivery/size-neutral/*.md
           if-no-files-found: error
           retention-days: 7
       - name: Retain only the requested family APK and technical evidence
