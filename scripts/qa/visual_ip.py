@@ -494,7 +494,8 @@ def enrich(report,root=ROOT):
     for r in rows:
         if r['dhash']:groups[r['dhash']].append(r['id'])
     report['normalized_similarity_groups']=[{'dhash':key,'ids':ids,'scope':'Local thumbnail similarity only; no copying or license inference'} for key,ids in sorted(groups.items()) if len(ids)>1]
-    current=json.loads((root/'scripts/android/app-config.json').read_text())['version_name'] if (root/'scripts/android/app-config.json').exists() else None
+    version_match=re.search(r'^config/version="([^"\n]+)"$',(root/'project.godot').read_text(),re.M) if (root/'project.godot').exists() else None
+    current=version_match[1] if version_match else None
     report['current_package_coverage']=[]
     for c in report['containers']:
         if not c['provenance'] or c['provenance']['version']!=current:continue

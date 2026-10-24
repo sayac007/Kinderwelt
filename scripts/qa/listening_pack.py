@@ -80,7 +80,9 @@ def generate(output):
         cards+='<details><summary>'+html.escape('Betonungsquelle: '+notice.name)+'</summary><pre>'+html.escape(notice.read_text())+'</pre></details>'
     # Keep literal </script and other HTML delimiters out of embedded JSON.
     data=json.dumps(items,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
-    version=json.loads((ROOT/'scripts/android/app-config.json').read_text())['version_name']
+    sys.path.insert(0,str(ROOT/'scripts/android'))
+    import release_version
+    version=release_version.read(ROOT)['version_name']
     document='<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src \'none\'; media-src data:; style-src \'unsafe-inline\'; script-src \'unsafe-inline\'"><title>Kinderwelt Hörprobe '+html.escape(version)+'</title><style>'+STYLE+'</style><h1>Kinderwelt '+html.escape(version)+' · Hörprobe</h1><p>Für die Hörprüfung durch Erwachsene: zuerst ohne Text anhören, dann den erwarteten Text öffnen. Besonders auf Wortanfänge, Wortenden, Verneinungen und Antwortoptionen achten. Die Seite speichert oder übermittelt nichts und nimmt keinen Ton auf. Ohne Musik; die Balance mit Musik bitte in der APK prüfen.</p><p>Sprachaufgaben werden ausschließlich in der gewählten Sprache gesprochen; keine fremdsprachige Folgeaufnahme. Standardtempo 1× entspricht der App. Der Lautstärkeabgleich verwendet denselben Aufnahmepegel wie die App (Web-Audio-fähiger Browser erforderlich).</p><audio id="player" controls preload="none"></audio><p id="status" role="status">Eine Probe wählen.</p><label>Tempo <select id="speed"><option value="1">1× · App-Tempo</option><option value="0.85">0,85× · nur zur Prüfung</option></select></label>'+''.join(rows)+'<h2>Modellnachweise</h2>'+cards+'<script type="application/json" id="data">'+data+'</script><script>'+SCRIPT+'</script></html>'
     output.parent.mkdir(parents=True,exist_ok=True);output.write_text(document)
     print('Created',len(items),'offline listening sequences:',output)
