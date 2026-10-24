@@ -22,6 +22,7 @@ checked --headless --path . -s tests/quest.gd
 checked --headless --path . -s tests/music_credits.gd
 checked --headless --path . -s tests/worlds.gd
 checked --headless --path . -s tests/boot.gd
+KINDERWELT_RELEASE_UI_TEST=synthetic checked --headless --path . -s tests/release_display.gd
 KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd
 KINDERWELT_SAVE_TEST=read checked --headless --path . -s tests/save_restart.gd
 checked --headless --path . -s tests/rewards.gd
@@ -57,3 +58,5 @@ python3 scripts/music/notices.py --check
 python3 scripts/qa/documentation.py --check
 
 python3 scripts/qa/pedagogy.py --check
+
+python3 scripts/store/listing.py --check

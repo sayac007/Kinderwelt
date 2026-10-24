@@ -691,6 +691,16 @@
       "en": "Zoom in",
       "ru": "Увеличить"
     },
+    "app_version": {
+      "de": "Version",
+      "en": "Version",
+      "ru": "Версия"
+    },
+    "app_version_code": {
+      "de": "Code",
+      "en": "Code",
+      "ru": "Код"
+    },
     "bonus": {
       "de": "Bonusaufgabe",
       "en": "Bonus challenge",
