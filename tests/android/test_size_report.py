@@ -1,11 +1,15 @@
 """Size claims use bundletool byte counts, not AAB/asset directory sizes."""
 import importlib.util
+import contextlib
+import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import struct
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -43,6 +47,50 @@ class SizeReportTests(unittest.TestCase):
     def test_base_budget_warns_without_rejecting_the_bundle(self):
         self.assertEqual(size.base_budget({'min_bytes': 0, 'max_bytes': 190_000_000})['status'], 'PASS')
         self.assertEqual(size.base_budget({'min_bytes': 0, 'max_bytes': 190_000_001})['status'], 'WARN')
+
+    def test_report_orchestration_still_succeeds_over_budget_and_strips_secrets(self):
+        # Only this orchestration test substitutes the external tool. Actual
+        # download measurements are separately executed with pinned bundletool.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            tools = root / 'tools'
+            (tools / 'android-tools').mkdir(parents=True)
+            jar = tools / 'android-tools/bundletool-fixture.jar'
+            jar.write_bytes(b'Synthetic tool fixture, never executed')
+            (root / 'scripts/android').mkdir(parents=True)
+            (root / 'scripts/android/toolchain.json').write_text(json.dumps({
+                'bundletool_version': 'fixture', 'java': 'fixture',
+                'bundletool_sha256': hashlib.sha256(jar.read_bytes()).hexdigest()}))
+            bundle = root / 'neutral.aab'
+            with zipfile.ZipFile(bundle, 'w') as archive:
+                archive.writestr('assetPackInstallTime/assets/assets/quest/cast.json', json.dumps({'variant': 'public'}))
+            original = bundle.read_bytes()
+            calls = []
+            def tool(command, env, log):
+                calls.append([str(c) for c in command])
+                self.assertFalse(any(k.startswith('KINDERWELT_UPLOAD_') for k in env))
+                if 'build-apks' in command:
+                    self.assertFalse(any(str(c).startswith('--ks') for c in command))
+                    output = Path(next(c.split('=', 1)[1] for c in command if str(c).startswith('--output=')))
+                    apk = output.parent / 'fixture.apk'
+                    self.fixture(apk)
+                    with zipfile.ZipFile(output, 'w') as archive:
+                        archive.writestr('toc.pb', b'synthetic targeting metadata')
+                        archive.write(apk, 'splits/base-master.apk')
+                    return ''
+                return 'MIN,MAX\n190000001,190000001\n' if '--modules=base' in command else 'MIN,MAX\n200000000,200000000\n'
+            output = root / 'report'
+            summary = root / 'summary.md'
+            with patch.object(size, 'ROOT', root), patch.object(size, 'run', side_effect=tool), \
+                 patch.dict(os.environ, {'KINDERWELT_UPLOAD_KEYSTORE': 'invalid-fixture-marker', 'GITHUB_STEP_SUMMARY': str(summary)}), \
+                 contextlib.redirect_stdout(io.StringIO()) as console:
+                report = size.measure(bundle, tools, output)
+            self.assertEqual(report['base_budget']['status'], 'WARN')
+            self.assertIn('::warning::', console.getvalue())
+            self.assertEqual(bundle.read_bytes(), original)
+            self.assertEqual(summary.read_text().strip(), (output / 'SIZE_REPORT.md').read_text().strip())
+            self.assertEqual(sum('build-apks' in c for c in calls), 1)
+            self.assertEqual(sum('get-size' in c for c in calls), 7)
 
     def test_zip_end_record_parser_handles_false_signatures_in_comments(self):
         comment = b'false signature in comment PK\x05\x06'
