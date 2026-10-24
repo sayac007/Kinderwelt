@@ -21,7 +21,7 @@ Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzepti
 
 ## Konfigurierbare, vorläufige Identität
 
-Version **0.9.4 / 17**. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@`, das der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
+Version **0.9.4 / 17**. `project.godot` is the single editable version source (`config/version` and `config/version_code`); the builder fills both export presets from it. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@` und Versionsplatzhalter, die der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
 
 | Build | Paket bei Standardkonfiguration | Launchername |
 |---|---|---|
@@ -37,7 +37,7 @@ Vorschauen haben eigene lokale Spielstände und können nebeneinander sowie nebe
 
 Die aktuellen tatsächlich gebauten Varianten, Quellcommits und Prüfungen stehen im [Qualitätsüberblick](QUALITY_ASSURANCE.md). Ein früherer Build-Stopp für den damaligen Sprach-/Icon-Quellstand ist historisch; der aktuelle Auftrag umfasst überprüfbare Testpakete.
 
-Jeder Build liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird mit einem ausschließlich für Entwicklung vorgesehenen Godot-Schlüssel außerhalb des Repositorys signiert (`tools/preview-signing/debug.keystore`, alternativ `KINDERWELT_DEBUG_KEYSTORE`). Wiederholte lokale Builds verwenden denselben Schlüssel; die Prüfung vergleicht den SHA-256-Fingerabdruck des Zertifikats mit der APK. Vertrauenswürdige CI-Läufe verwenden einen privaten Actions-Cache; PR-Builds einen isolierten Schlüssel. Cache-Verlust oder ein anderer Branch mit eigenem Cache kann eine neue Entwicklungsidentität erzeugen. Für dauerhafte Testupdates muss der Entwicklungsschlüssel gesichert und derselbe Kanal verwendet werden; dies ist keine Release-Signierung. Keine privaten Schlüssel werden eingecheckt. Vorhandene Installationen nicht unbedacht deinstallieren, wenn ihre lokalen Daten erhalten bleiben sollen.
+Jeder Entwicklungsbuild liefert `kinderwelt-debug.apk`, ein **unsigniertes** `kinderwelt-unsigned.aab`, Prüfberichte, Quellprovenienz, Größenanalyse und Logs. Die APK wird mit einem ausschließlich für Entwicklung vorgesehenen Godot-Schlüssel außerhalb des Repositorys signiert (`tools/preview-signing/debug.keystore`, alternativ `KINDERWELT_DEBUG_KEYSTORE`). Wiederholte lokale Builds verwenden denselben Schlüssel; die Prüfung vergleicht den SHA-256-Fingerabdruck des Zertifikats mit der APK. Vertrauenswürdige CI-Läufe verwenden einen privaten Actions-Cache; PR-Builds einen isolierten Schlüssel. Cache-Verlust oder ein anderer Branch mit eigenem Cache kann eine neue Entwicklungsidentität erzeugen. Für dauerhafte Testupdates muss der Entwicklungsschlüssel gesichert und derselbe Kanal verwendet werden; dies ist keine Release-Signierung. Keine privaten Schlüssel werden eingecheckt. Vorhandene Installationen nicht unbedacht deinstallieren, wenn ihre lokalen Daten erhalten bleiben sollen.
 
 Prüfungen: Paket, Version, API 24–36, keine Berechtigungen, deaktiviertes Backup, Bildschirmrotation, alle acht Fächer, drei Sprachmanifeste und sämtliche tatsächlich spielbaren Sprach-/Musik-/Grafikressourcen, ausgewählte Figurenvariante, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierter Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt. Neue Buildgrößen und tatsächlich erzeugte Dateien: [Testbericht](test-report.md).
 
@@ -83,6 +83,86 @@ technical reports; the ordinary multi-variant upload was skipped. GitHub login
 is required. This is a seven-day CI artifact, not permanent archival storage.
 
 ## Google Play bleibt offen
+
+### Package 1: operator-configured neutral upload signing
+
+Development exports above retain their debug APK and unsigned AAB. A separate
+`--release` mode builds **only the neutral AAB**, never the private family cast.
+It does not publish or upload to Play. A technically verified signature does
+not replace the remaining licensing, privacy, store or device approvals.
+
+The operator must decide the final package, publisher, support contact and asset
+licence. No such facts or permissions are invented here. Release export fails
+before tool access when the package or required environment variables are absent.
+It also rejects unfilled entries in
+`scripts/android/release-metadata.json`; the corresponding environment variables
+override those placeholders without committing personal contact information.
+The package must pass the existing lowercase Android/Java identifier checks and
+must not contain `example`, `test` or `debug`. `--preview` and family release
+exports are rejected.
+
+Required configuration (supply real values securely; these are names, not credentials):
+
+| Variable | Purpose |
+|---|---|
+| `KINDERWELT_PACKAGE_ID` | Final package; alternatively `--package-id` |
+| `KINDERWELT_UPLOAD_KEYSTORE` | Existing keystore path **outside the repository**, or `base64:` followed by its Base64 bytes; at most 1 MiB |
+| `KINDERWELT_UPLOAD_ALIAS` | Upload key alias |
+| `KINDERWELT_UPLOAD_STORE_PASSWORD` | Keystore password |
+| `KINDERWELT_UPLOAD_KEY_PASSWORD` | Private key password |
+| `KINDERWELT_PUBLISHER` | Operator-confirmed publisher |
+| `KINDERWELT_SUPPORT_EMAIL` | Operator-confirmed support contact |
+| `KINDERWELT_ASSET_LICENSE` | Operator's asset licensing decision; this check is not legal approval |
+
+With these values already loaded into the environment:
+
+```sh
+python3 scripts/android/build.py --release --variant public \
+  --tools /workspace/tools --output build/android-release-new
+```
+
+Output: `kinderwelt-release-neutral.aab`, `provenance.json`, `verification.json`
+and sanitized technical evidence. No debug key is loaded/created by this path.
+Godot/Gradle export the unsigned bundle without upload credentials; JDK jarsigner
+then signs it using password environment variables, with tool output withheld.
+The temporary decoded keystore is private (0600), outside source, and removed
+on success or failure. The intermediate unsigned bundle is removed after signing.
+Verification checks every payload entry's actual JAR signature against the
+expected upload certificate, certificate validity, package/version, resources,
+zero permissions, disabled backup and the existing native packaging requirements.
+Unsigned, modified, partially unsigned and wrong-signer bundles fail verification.
+The technical report still marks Play upload readiness **BLOCKED**.
+
+To create an operator-owned upload key, the following is **documentation only**;
+Codex has not run it for a real upload/release identity. Run it locally in a
+trusted terminal, choose the prompted identity/passwords yourself, and keep the
+keystore out of the checkout and shared folders:
+
+```sh
+keytool -genkeypair -storetype JKS -keystore /secure/offline/kinderwelt-upload.jks \
+  -alias upload -keyalg RSA -keysize 3072 -validity 10000
+```
+
+Keep an encrypted offline backup of the key, alias and passwords in the operator's
+password/key management system; do not put them in Git, chat, shell history,
+Actions logs or artifacts. In Play Console the operator enables **Play App
+Signing** and retains the upload key separately from Google's app signing key.
+An upload-signed AAB is not an installable APK and cannot update the development
+APK by itself. Changing package/signing identity must be planned before testing
+with existing local progress.
+
+The separate `.github/workflows/android-release.yml` has only `workflow_dispatch`
+and read-only repository access. Configure the four `KINDERWELT_UPLOAD_*` secrets
+(use the Base64 representation for the keystore) and the three operator metadata
+repository variables listed above. Supply the final package in its manual input.
+With missing configuration it reports **Release signing SKIPPED** and succeeds
+without building. Only a fully verified neutral bundle and its technical reports
+are uploaded. The workflow receives no family-repository token, never checks out
+family assets and does not change the production Android verification workflow.
+
+Regression tests use only an isolated, short-lived **disposable test key**, as
+explicitly required by package 1 acceptance. That fixture is destroyed after
+testing, never retained in Git/artifacts and never represents the operator.
 
 [Vorbereitete Play-Entscheidungen und Datenschutz-/Store-Entwürfe](PLAY_READINESS.md). Es gibt keine Release-Signatur und keine Upload-Freigabe. Offen sind endgültige App-ID, dauerhafter Signierschlüssel mit sicherem Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte/Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben. Keine Uploadbereitschaft wird behauptet.
 

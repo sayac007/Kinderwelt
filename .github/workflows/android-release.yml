@@ -1,0 +1,79 @@
+name: Neutral upload-signed AAB (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      package_id:
+        description: Final Android package identifier (no example, test or debug)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  release-aab:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check operator configuration without exposing its values
+        id: signing
+        env:
+          KINDERWELT_UPLOAD_KEYSTORE: ${{ secrets.KINDERWELT_UPLOAD_KEYSTORE }}
+          KINDERWELT_UPLOAD_ALIAS: ${{ secrets.KINDERWELT_UPLOAD_ALIAS }}
+          KINDERWELT_UPLOAD_STORE_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_STORE_PASSWORD }}
+          KINDERWELT_UPLOAD_KEY_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_KEY_PASSWORD }}
+          KINDERWELT_PUBLISHER: ${{ vars.KINDERWELT_PUBLISHER }}
+          KINDERWELT_SUPPORT_EMAIL: ${{ vars.KINDERWELT_SUPPORT_EMAIL }}
+          KINDERWELT_ASSET_LICENSE: ${{ vars.KINDERWELT_ASSET_LICENSE }}
+        run: |
+          python3 - <<'PY'
+          import os
+          names = ['KINDERWELT_UPLOAD_KEYSTORE', 'KINDERWELT_UPLOAD_ALIAS', 'KINDERWELT_UPLOAD_STORE_PASSWORD', 'KINDERWELT_UPLOAD_KEY_PASSWORD', 'KINDERWELT_PUBLISHER', 'KINDERWELT_SUPPORT_EMAIL', 'KINDERWELT_ASSET_LICENSE']
+          missing = [n for n in names if not os.environ.get(n) or '{{' in os.environ[n]]
+          ready = not missing
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('ready=' + str(ready).lower() + '\n')
+          if missing:
+              print('::notice::Release signing SKIPPED; operator must configure: ' + ', '.join(missing))
+          PY
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        if: steps.signing.outputs.ready == 'true'
+        with:
+          persist-credentials: false
+      - name: Install pinned Godot
+        if: steps.signing.outputs.ready == 'true'
+        run: GODOT_INSTALL_DIR="$RUNNER_TEMP/tools/godot-4.7.2" bash scripts/install-godot.sh
+      - name: Install pinned Android tools
+        if: steps.signing.outputs.ready == 'true'
+        # Enabling this job requires the operator to accept the Android SDK licence.
+        run: python3 scripts/android/install.py --root "$RUNNER_TEMP/tools" --accept-android-sdk-license
+      - name: Install resource decoder
+        if: steps.signing.outputs.ready == 'true'
+        run: bash scripts/ci/install-audio-decoder.sh
+      - name: Export and verify neutral upload-signed AAB
+        if: steps.signing.outputs.ready == 'true'
+        env:
+          KINDERWELT_PACKAGE_ID: ${{ inputs.package_id }}
+          KINDERWELT_UPLOAD_KEYSTORE: ${{ secrets.KINDERWELT_UPLOAD_KEYSTORE }}
+          KINDERWELT_UPLOAD_ALIAS: ${{ secrets.KINDERWELT_UPLOAD_ALIAS }}
+          KINDERWELT_UPLOAD_STORE_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_STORE_PASSWORD }}
+          KINDERWELT_UPLOAD_KEY_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_KEY_PASSWORD }}
+          KINDERWELT_PUBLISHER: ${{ vars.KINDERWELT_PUBLISHER }}
+          KINDERWELT_SUPPORT_EMAIL: ${{ vars.KINDERWELT_SUPPORT_EMAIL }}
+          KINDERWELT_ASSET_LICENSE: ${{ vars.KINDERWELT_ASSET_LICENSE }}
+        run: |
+          GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
+            python3 scripts/android/build.py --release --variant public \
+              --tools "$RUNNER_TEMP/tools" --output build/android-release
+      - name: Retain only the verified neutral bundle and technical checks
+        if: success() && steps.signing.outputs.ready == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: kinderwelt-neutral-upload-signed
+          path: |
+            build/android-release/kinderwelt-release-neutral.aab
+            build/android-release/provenance.json
+            build/android-release/verification.json
+            build/android-release/aab-manifest.xml
+            build/android-release/aab-validation.txt
+            build/android-release/aab-signature.txt
+          if-no-files-found: error
+          retention-days: 7

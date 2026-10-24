@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Build debug APK and UNSIGNED AAB from isolated allowlisted application files."""
+"""Build development APK/unsigned AAB, or an explicitly configured neutral release AAB."""
 import sys
+from contextlib import ExitStack
 import argparse, hashlib, json, os, re, shutil, subprocess, tempfile, zipfile
 from urllib.parse import urlsplit
 from datetime import datetime, timezone
@@ -13,6 +14,7 @@ sys.path.insert(0,str(ROOT/'scripts/android'))
 import identity
 import debug_key
 import backup_policy
+import upload_signing
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
@@ -80,14 +82,27 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tools',type=Path,default=Path('/workspace/tools'))
     p.add_argument('--output',type=Path,default=ROOT/'build/android')
-    p.add_argument('--variant',choices=['family','public'],default='family')
+    p.add_argument('--variant',choices=['family','public'],help='Default: family for development, public for release')
+    p.add_argument('--release',action='store_true',help='Build only a signed neutral release AAB; requires operator-owned upload credentials')
     p.add_argument('--preview',action='store_true',help='Use a separate variant/version test identity and local save')
-    p.add_argument('--package-id',type=identity.validate_package,help='Explicit base identity; default remains provisional test package')
+    p.add_argument('--package-id',help='Explicit identity; release also accepts KINDERWELT_PACKAGE_ID')
     a=p.parse_args();tools=a.tools.resolve();out=a.output.resolve()
+    a.variant=a.variant or ('public' if a.release else 'family')
+    values=None
+    try:
+        if a.release:
+            if a.variant!='public' or a.preview:raise ValueError('Release requires the neutral/public variant without --preview')
+            a.package_id=identity.validate_release_package(a.package_id or os.environ.get('KINDERWELT_PACKAGE_ID'))
+            values=upload_signing.credentials()
+            upload_signing.metadata()
+        elif a.package_id:
+            identity.validate_package(a.package_id)
+    except ValueError as error:
+        p.error(str(error))
     out.mkdir(parents=True,exist_ok=False) # no stale artifact may appear successful
     godot=os.environ.get('GODOT',str(tools/'godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64'))
     with tempfile.TemporaryDirectory(prefix='kinderwelt-version.') as version_cache:
-        probe_env=os.environ.copy()
+        probe_env=upload_signing.export_environment()
         probe_env['XDG_CACHE_HOME']=version_cache
         if subprocess.check_output([godot,'--version'],text=True,env=probe_env).strip()!=LOCK['godot']:raise ValueError('Wrong Godot')
     java=tools/'android-jdk'
@@ -99,13 +114,17 @@ def main():
     sys.path.insert(0,str(ROOT/'scripts/qa'))
     import character_origins
     character_origins.audit(ROOT)
-    with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory:
+    with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory, ExitStack() as signing_context:
         temp=Path(directory);app=temp/'app'
+        upload_key=None
+        if a.release:
+            upload_key=signing_context.enter_context(upload_signing.materialize(values,temp))
+            upload_fingerprint=upload_signing.certificate(upload_key,java,values)
         variants.snapshot(app,a.variant)
         package=identity.configure(app,a.package_id,a.preview,a.variant)
         for file in sorted(app.rglob('*')):
             if file.is_file():source.update(str(file.relative_to(app)).encode()+b'\0'+file.read_bytes())
-        env=os.environ.copy()
+        env=upload_signing.export_environment()
         for kind in ['DATA','CONFIG','CACHE']:
             env['XDG_'+kind+'_HOME']=str(temp/kind.lower());(temp/kind.lower()).mkdir()
         env['JAVA_HOME']=str(java)
@@ -128,9 +147,11 @@ def main():
             if trust.is_file():options+=['-Djavax.net.ssl.trustStore='+str(trust)]
             env['JAVA_TOOL_OPTIONS']=env.get('JAVA_TOOL_OPTIONS','')+' '+' '.join(options)
 
-        key=debug_key.ensure(tools,java)
+        key=None if a.release else debug_key.ensure(tools,java)
         settings=temp/'config/godot';settings.mkdir()
-        (settings/'editor_settings-4.7.tres').write_text('[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\nexport/android/debug_keystore='+json.dumps(str(key))+'\nexport/android/debug_keystore_user="androiddebugkey"\nexport/android/debug_keystore_pass="android"\n')
+        editor='[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path='+json.dumps(str(tools/'android-sdk'))+'\nexport/android/java_sdk_path='+json.dumps(str(java))+'\n'
+        if key:editor+='export/android/debug_keystore='+json.dumps(str(key))+'\nexport/android/debug_keystore_user="androiddebugkey"\nexport/android/debug_keystore_pass="android"\n'
+        (settings/'editor_settings-4.7.tres').write_text(editor)
         templates=temp/'data/godot/export_templates/4.7.2.stable'
         shutil.copytree(tools/'android-tools/templates',templates)
         # Equivalent to Godot's template installer; checksum verified by install.py.
@@ -145,13 +166,21 @@ def main():
         gradle=app/'android/build/gradle.properties'
         with gradle.open('a') as f:f.write('\norg.gradle.workers.max=2\norg.gradle.daemon=false\norg.gradle.logging.stacktrace=all\n')
         run([godot,'--headless','--path',str(app),'--editor','--import','--quit'],env,app,out/'import.log')
-        run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
+        if not a.release:
+            run([godot,'--headless','--path',str(app),'--export-debug','Android Debug',str(out/'kinderwelt-debug.apk')],env,app,out/'apk.log')
         run([godot,'--headless','--path',str(app),'--export-release','Android Unsigned AAB',str(out/'kinderwelt-unsigned.aab')],env,app,out/'aab.log')
-        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':{'apk':'cached development-only Godot key; not a release identity','aab':'UNSIGNED','development_certificate_sha256':debug_key.fingerprint(key,java)},'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
+        if a.release:
+            upload_signing.sign(out/'kinderwelt-unsigned.aab',out/'kinderwelt-release-neutral.aab',upload_key,java,values)
+            upload_signing.verify(out/'kinderwelt-release-neutral.aab',java,upload_fingerprint)
+            (out/'kinderwelt-unsigned.aab').unlink()
+        evidence={'schema':2,'built_utc':datetime.now(timezone.utc).isoformat(),**tracking,'git_state_changed_during_build':(git_provenance(ROOT)!=tracking) if tracking['source_tracking']=='git-worktree' else None,'application_source_sha256':source.hexdigest(),'toolchain':LOCK,'variant':a.variant,'package':package,'identity_status':identity.CONFIG['identity_status'] if not a.package_id else 'EXPLICIT_OVERRIDE; no Play approval','version_name':identity.CONFIG['version_name'],'version_code':identity.CONFIG['version_code'],'signing':({'aab':'UPLOAD_SIGNED','upload_certificate_sha256':upload_fingerprint} if a.release else {'apk':'cached development-only Godot key; not a release identity','aab':'UNSIGNED','development_certificate_sha256':debug_key.fingerprint(key,java)}),'upload_readiness':'BLOCKED','artifacts':{file.name:{'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()} for file in out.iterdir() if file.suffix in ['.apk','.aab']}}
         (out/'provenance.json').write_text(json.dumps(evidence,indent=2)+'\n')
-        subprocess.run(['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)],check=True)
-        subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],check=True)
-        print('Verified debug APK and unsigned AAB:',out)
+        verify=['python3',str(ROOT/'scripts/android/verify.py'),'--tools',str(tools),'--output',str(out),'--package',evidence['package'],'--source',str(app)]
+        if a.release:verify+=['--release','--upload-certificate-sha256',upload_fingerprint]
+        subprocess.run(verify,env=env,check=True)
+        if not a.release:
+            subprocess.run(['python3',str(ROOT/'scripts/android/analyze_size.py'),str(out/'kinderwelt-debug.apk'),str(out/'kinderwelt-unsigned.aab'),'--output',str(out/'size-analysis.json')],env=env,check=True)
+        print('Verified neutral upload-signed AAB; Play approval remains BLOCKED:' if a.release else 'Verified debug APK and unsigned AAB:',out)
 
 
 if __name__=='__main__':main()

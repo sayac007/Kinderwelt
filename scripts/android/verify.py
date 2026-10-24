@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0,str(__import__('pathlib').Path(__file__).resolve().parent))
 import identity
 import backup_policy
+import upload_signing
 import argparse, hashlib, json, re, struct, subprocess, zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -14,7 +15,9 @@ VERSION=identity.CONFIG['version_name']
 CODE=identity.CONFIG['version_code']
 
 def command(args):
-    return subprocess.check_output([str(x) for x in args],stderr=subprocess.STDOUT,text=True)
+    # Java writes JAVA_TOOL_OPTIONS notices to stderr. They are diagnostics,
+    # not part of bundletool's XML/JSON stdout, even on a successful command.
+    return subprocess.check_output([str(x) for x in args],stderr=subprocess.PIPE,text=True)
 
 def check_manifest(root,package=PACKAGE):
     identity.validate_package(package)
@@ -140,13 +143,15 @@ def check_launcher_images(archive,app_root=None,aab=False):
         result[resource]={'normalized_rgb_mean_absolute_error':round(error,4),'status':'PASS'}
     return result
 
-def inspect_zip(path,aab=False,app_root=None):
+def inspect_zip(path,aab=False,app_root=None,signed=False):
     with zipfile.ZipFile(path) as z:
         assert z.testzip() is None,'Corrupt ZIP'
         names=z.namelist();assert len(names)==len(set(names)),'Duplicate ZIP entries'
         assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names),'Unsafe archive path'
         assert ('BundleConfig.pb' in names and 'base/manifest/AndroidManifest.xml' in names) if aab else 'AndroidManifest.xml' in names
-        if aab:assert not any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names),'Expected unsigned AAB'
+        if aab:
+            has_signature=any(re.match(r'META-INF/[^/]+\.(RSA|DSA|EC|SF)$',n,re.I) for n in names)
+            assert has_signature==signed,'Expected signed AAB' if signed else 'Expected unsigned AAB'
         check_packaged_data(z,app_root)
         icons=check_launcher_images(z,app_root,aab)
         abis=set();native_methods=set()
@@ -157,11 +162,41 @@ def inspect_zip(path,aab=False,app_root=None):
         assert native_methods=={zipfile.ZIP_DEFLATED},'Expected lossless native library compression'
         return {'assets_checked':check_payload(names,app_root),'launcher_images':icons,'abis':sorted(abis),'elf_16kb_alignment':'PASS','native_packaging':'deflated; extracted by Android on installation'}
 
+def verify_bundle(aab,tools,out,source,package,signed=False,certificate=None):
+    java=tools/'android-jdk/bin/java';bundle=tools/'android-tools/bundletool-1.18.2.jar'
+    validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)])
+    (out/'aab-validation.txt').write_text(validation)
+    manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base'])
+    (out/'aab-manifest.xml').write_text(manifest)
+    root=ET.fromstring(manifest)
+    data=inspect_zip(aab,True,app_root=source,signed=signed)
+    data.update(check_manifest(root,package))
+    rendering=root.find('application/meta-data[@'+ANDROID+'name="org.godotengine.rendering.method"]')
+    assert rendering is not None and rendering.get(ANDROID+'value')=='gl_compatibility','Unexpected Android rendering backend'
+    data['rendering']='gl_compatibility'
+    if signed:
+        identity.validate_release_package(package)
+        data.update(upload_signing.verify(aab,tools/'android-jdk',certificate))
+        (out/'aab-signature.txt').write_text('Every payload entry verified against the expected upload certificate; certificate validity checked.\n')
+    else:
+        signing=command([tools/'android-jdk/bin/jarsigner','-verify',aab])
+        assert 'jar is unsigned' in signing,'Expected unsigned bundle'
+        data['signature']='UNSIGNED'
+        (out/'aab-signature.txt').write_text(signing)
+    return data
+
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',type=identity.validate_package,default=PACKAGE);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--tools',type=Path,default=Path('/workspace/tools'));p.add_argument('--output',type=Path,required=True);p.add_argument('--package',type=identity.validate_package,default=PACKAGE);p.add_argument('--release',action='store_true');p.add_argument('--upload-certificate-sha256');a=p.parse_args()
     tools=a.tools;out=a.output;bt=tools/'android-sdk/build-tools/36.1.0';java=tools/'android-jdk/bin/java';bundle=tools/'android-tools/bundletool-1.18.2.jar'
     report={'status':'PASS','upload_readiness':'BLOCKED','artifacts':{}}
-    apk=out/'kinderwelt-debug.apk';aab=out/'kinderwelt-unsigned.aab'
+    apk=out/'kinderwelt-debug.apk';aab=out/('kinderwelt-release-neutral.aab' if a.release else 'kinderwelt-unsigned.aab')
+    if a.release:
+        data=verify_bundle(aab,tools,out,a.source,a.package,True,a.upload_certificate_sha256)
+        data.update({'bytes':aab.stat().st_size,'sha256':hashlib.sha256(aab.read_bytes()).hexdigest()})
+        report['artifacts'][aab.name]=data
+        (out/'verification.json').write_text(json.dumps(report,indent=2)+'\n')
+        print(json.dumps(report,indent=2))
+        return
     apk_data=inspect_zip(apk,app_root=a.source)
     badging=command([bt/'aapt2','dump','badging',apk]);(out/'apk-badging.txt').write_text(badging)
     for pattern in [rf"package: name='{re.escape(a.package)}' versionCode='{CODE}' versionName='{re.escape(VERSION)}'",r"minSdkVersion:'24'",r"targetSdkVersion:'36'"]:
@@ -179,14 +214,7 @@ def main():
     assert re.search(r'Signer #1 certificate SHA-256 digest: '+re.escape(expected_certificate),signature,re.I),'APK signer differs from reused development key'
     command([bt/'zipalign','-c','-P','16','-v','4',apk])
     apk_data.update({'package':a.package,'version_name':VERSION,'version_code':CODE,'min_sdk':24,'target_sdk':36,'permissions':[],'allow_backup':False,'orientation':'fullUser','signature':'verified Godot development certificate, v2','certificate_sha256':expected_certificate,'zip_16kb_alignment':'PASS'})
-    validation=command([java,'-jar',bundle,'validate','--bundle='+str(aab)]);(out/'aab-validation.txt').write_text(validation)
-    manifest=command([java,'-jar',bundle,'dump','manifest','--bundle='+str(aab),'--module=base']);(out/'aab-manifest.xml').write_text(manifest)
-    aab_data=inspect_zip(aab,True,app_root=a.source);aab_data.update(check_manifest(ET.fromstring(manifest),a.package));aab_data['signature']='UNSIGNED'
-    rendering=ET.fromstring(manifest).find('application/meta-data[@'+ANDROID+'name="org.godotengine.rendering.method"]')
-    assert rendering is not None and rendering.get(ANDROID+'value')=='gl_compatibility','Unexpected Android rendering backend'
-    aab_data['rendering']='gl_compatibility'
-    signing=command([tools/'android-jdk/bin/jarsigner','-verify',aab]);assert 'jar is unsigned' in signing,'Expected unsigned bundle'
-    (out/'aab-signature.txt').write_text(signing)
+    aab_data=verify_bundle(aab,tools,out,a.source,a.package)
     for file,data in [(apk,apk_data),(aab,aab_data)]:
         data.update({'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()});report['artifacts'][file.name]=data
     (out/'verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
@@ -194,7 +222,7 @@ def main():
 if __name__=='__main__':
     try:
         main()
-    except AssertionError as error:
+    except (AssertionError, ValueError) as error:
         message=str(error).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
         print('::error::Android artifact verification failed: '+message,flush=True)
         raise
