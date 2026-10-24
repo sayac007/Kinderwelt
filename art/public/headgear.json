@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "scope": "Documented generation provenance, not a worldwide legal clearance",
+  "images": [
+    {
+      "path": "assets/quest/cap.png",
+      "sha256": "4ecc9c82abcd672f97385852a396af11927611d48a487d29d246180b17e739d6",
+      "bytes": 1038353,
+      "origin": "Original OpenAI image_gen generation, 2026-10-24; no reference image or external download",
+      "generation_output_filename": "exec-9b0f5eee-83b3-499a-b118-e20c5d25af00.png",
+      "transform": "Copied byte for byte; no image editing",
+      "purpose": "Plausible soft headgear distractor, not protective equipment"
+    },
+    {
+      "path": "assets/quest/beanie.png",
+      "sha256": "c89dd5d210b04dda10edab6578fcbc6e49fce611f9e9ed4f9901e8fc7f9db083",
+      "bytes": 1553167,
+      "origin": "Original OpenAI image_gen generation, 2026-10-24; no reference image or external download",
+      "generation_output_filename": "exec-68e46c9f-a066-4f20-9487-9571fd72aafb.png",
+      "transform": "Copied byte for byte; no image editing",
+      "purpose": "Plausible soft headgear distractor, not protective equipment"
+    }
+  ]
+}

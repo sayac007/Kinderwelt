@@ -1,5 +1,5 @@
 {
-  "scope": "Necessary immutable recognition regression reference for actual 0.9.2 subject, instruction and native-word recordings. Selection-assisted ASR is not a held-out human intelligibility or word-stress approval.",
+  "scope": "Necessary immutable recognition regression reference for actual 0.9.3 subject, instruction and native-word recordings. Selection-assisted ASR is not a held-out human intelligibility or word-stress approval.",
   "model": "multilingual Whisper small, int8, sherpa-onnx",
   "model_files": {
     "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
@@ -336,6 +336,9 @@
     "human_word_stress_review": "OPEN",
     "locales": {
       "de": {
+        "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+        "samples": 50,
+        "character_error_rate": 0.01173,
         "rows": [
           {
             "id": "german_sun",
@@ -394,14 +397,14 @@
           },
           {
             "id": "german_read",
-            "reference": "Ballspiel. Welche beiden Buchstaben fehlen?",
-            "recognized": "Bauspie - welche beiden Buchstaben fehlen?",
-            "character_errors": 3,
-            "reference_characters": 37,
-            "seconds": 4.04,
-            "sha256": "7e189aebbcbf1d9f82eec9aef46eaa8b3cfab05a046fcc36c44d7cca2b9efd1e",
+            "reference": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+            "recognized": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+            "character_errors": 0,
+            "reference_characters": 47,
+            "seconds": 4.52,
+            "sha256": "3bde4786b6b2d7aeabf7dfdeb10da2de29cb9d8aff6996ee627e721de076bbc1",
             "target_word": "BALLSPIEL",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_flower",
@@ -460,14 +463,14 @@
           },
           {
             "id": "german_12",
-            "reference": "Vogelnest. Welche beiden Buchstaben fehlen?",
-            "recognized": "Wo gönnest? Welche beiden Buchstaben fehlen?",
-            "character_errors": 3,
-            "reference_characters": 37,
-            "seconds": 4.52,
-            "sha256": "d99941d1cde0d3a29368564e58f3fb42851a37e2a5719d270f598912089139fa",
+            "reference": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?",
+            "recognized": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?",
+            "character_errors": 0,
+            "reference_characters": 47,
+            "seconds": 5.32,
+            "sha256": "6d0a2e548cc0a445f35a664ff5e554265e2230ba72cf02d38f8d36c3cfc2a429",
             "target_word": "VOGELNEST",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_13",
@@ -548,14 +551,14 @@
           },
           {
             "id": "german_20",
-            "reference": "Herzschlag. Welche beiden Buchstaben fehlen?",
-            "recognized": "Herzlag, welche beiden Buchstaben fehlen?",
-            "character_errors": 3,
-            "reference_characters": 38,
-            "seconds": 3.8,
-            "sha256": "10a550cc560f683351920037c4b2a6443f1b2721bab46358bebcdfcc03015692",
+            "reference": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+            "recognized": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+            "character_errors": 0,
+            "reference_characters": 48,
+            "seconds": 5.16,
+            "sha256": "7af776465438f23184d21456c1cb238e6d593c039af3c44c5751049b59813896",
             "target_word": "HERZSCHLAG",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_21",
@@ -570,14 +573,14 @@
           },
           {
             "id": "german_22",
-            "reference": "Schildkröte. Welche beiden Buchstaben fehlen?",
-            "recognized": "Schildköte, welche beiden Buchstaben fehlen?",
-            "character_errors": 1,
-            "reference_characters": 39,
-            "seconds": 4.28,
-            "sha256": "a179cf94dd9eb8fe2543938d3277c422175564f963345d111b6788904f38a965",
+            "reference": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?",
+            "recognized": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?",
+            "character_errors": 0,
+            "reference_characters": 49,
+            "seconds": 5.16,
+            "sha256": "100cdbf564dd938d9f3b53bc149e827e4e665555e585db11c020533750719187",
             "target_word": "SCHILDKRÖTE",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_23",
@@ -888,9 +891,13 @@
             "target_spelling_recovered": false
           }
         ],
-        "target_spellings_recovered": 35
+        "target_spellings_recovered": 39,
+        "target_scope": "ASR spelling screen only; compound spacing and ё/е normalized; not heard stress or human intelligibility approval"
       },
       "en": {
+        "voice_model": "en_US-ljspeech-medium",
+        "samples": 50,
+        "character_error_rate": 0.01665,
         "rows": [
           {
             "id": "german_sun",
@@ -949,14 +956,14 @@
           },
           {
             "id": "german_read",
-            "reference": "Football. Which two letters are missing?",
-            "recognized": "\"Foth Mall\", which two letters are missing.",
-            "character_errors": 3,
-            "reference_characters": 33,
-            "seconds": 3.4919,
-            "sha256": "05756e3497ec7842a15f0c230c4046cb14364367093a4ef2984a92eb87ed0a96",
+            "reference": "The word is Football. Which two letters are missing?",
+            "recognized": "The word is football, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 42,
+            "seconds": 4.026,
+            "sha256": "31a31c8c7aedf9a3302963c08d7e299feccbae4345b75992614bc6a4ca142110",
             "target_word": "FOOTBALL",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_flower",
@@ -1103,14 +1110,14 @@
           },
           {
             "id": "german_20",
-            "reference": "Heartbeat. Which two letters are missing?",
-            "recognized": "Partbeat, which two letters are missing.",
-            "character_errors": 2,
-            "reference_characters": 34,
-            "seconds": 3.3642,
-            "sha256": "6b6c8a220c8e75fe6ed14737a23c4456ce01ff4c99f3f9e7b938669731f34f87",
+            "reference": "The word is Heartbeat. Which two letters are missing?",
+            "recognized": "The word is heartbeat, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 43,
+            "seconds": 3.9911,
+            "sha256": "f0b5a56e7f6ec40637762d4fbdef69398e1b2e713e47cf57436d739a1880313a",
             "target_word": "HEARTBEAT",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_21",
@@ -1180,14 +1187,14 @@
           },
           {
             "id": "german_27",
-            "reference": "Thought. Which two letters are missing?",
-            "recognized": "Point, which two letters are missing.",
-            "character_errors": 5,
-            "reference_characters": 32,
-            "seconds": 3.0391,
-            "sha256": "8a28f7e54173d6a2a4bbcde8562afdbf959934ea635d55eed33870637e376657",
+            "reference": "The word is Thought. Which two letters are missing?",
+            "recognized": "The word is thought, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 41,
+            "seconds": 3.8634,
+            "sha256": "e5efa2a9366e9481b0169247f80357983eafda9759a0e0008d9eff2a270df8c6",
             "target_word": "THOUGHT",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_28",
@@ -1213,14 +1220,14 @@
           },
           {
             "id": "german_30",
-            "reference": "Rainbow. Which two letters are missing?",
-            "recognized": "Rain know which two letters are missing.",
-            "character_errors": 2,
-            "reference_characters": 32,
-            "seconds": 3.2946,
-            "sha256": "6e78d94914a1b66b7dd6f70bf29e09d09cf1267e610ec4898488ebff219d2311",
+            "reference": "The word is Rainbow. Which two letters are missing?",
+            "recognized": "The word is rainbow, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 41,
+            "seconds": 3.8518,
+            "sha256": "5ea407319bd39f6c14edd714dc4768fc356ad8e52aa1cdf3761998d4190a183f",
             "target_word": "RAINBOW",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_31",
@@ -1246,14 +1253,14 @@
           },
           {
             "id": "german_33",
-            "reference": "Birdhouse. Which two letters are missing?",
-            "recognized": "\"Furthouse,\" which two letters are missing.",
-            "character_errors": 3,
-            "reference_characters": 34,
-            "seconds": 3.5035,
-            "sha256": "05dff8e17f86ab9b6fcf1d7cef45574f555a7b24aa22cd34fd810de6e1716048",
+            "reference": "The word is Birdhouse. Which two letters are missing?",
+            "recognized": "The word is \"Bird House,\" which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 43,
+            "seconds": 4.1421,
+            "sha256": "4ccc6d4c8a6e5fa4d5ea19242cef526dc23b3f71c545bfdf5325e119acd88105",
             "target_word": "BIRDHOUSE",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_34",
@@ -1268,14 +1275,14 @@
           },
           {
             "id": "german_35",
-            "reference": "Treetop. Which two letters are missing?",
-            "recognized": "TRETA, which two letters are missing.",
-            "character_errors": 3,
-            "reference_characters": 32,
-            "seconds": 3.2946,
-            "sha256": "d525f6fb4fd6135afa5930ab738e8480002132a4e9a02489318ef6ee1843e388",
+            "reference": "The word is Treetop. Which two letters are missing?",
+            "recognized": "The word is treetop, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 41,
+            "seconds": 3.9911,
+            "sha256": "88e837feafa36bf8f3ac105919eb30786dd523f74e935705e75f7ca58f09c1e5",
             "target_word": "TREETOP",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_36",
@@ -1345,14 +1352,14 @@
           },
           {
             "id": "german_42",
-            "reference": "Footpath. Which two letters are missing?",
-            "recognized": "foot F, which two letters are missing.",
-            "character_errors": 4,
-            "reference_characters": 33,
-            "seconds": 3.2713,
-            "sha256": "62104bcd71610671c3097ffd50e8c0d325ced1a84c5021a28828d1a35753bd32",
+            "reference": "The word is Footpath. Which two letters are missing?",
+            "recognized": "The word is footpath, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 42,
+            "seconds": 3.9796,
+            "sha256": "c02f88a2333e906ae9fbfc80b0aefff6f99ede2aca894d2d33925c3868dbdbb5",
             "target_word": "FOOTPATH",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_43",
@@ -1389,25 +1396,25 @@
           },
           {
             "id": "german_46",
-            "reference": "Needle. Which two letters are missing?",
-            "recognized": "Nido, which two letters are missing.",
-            "character_errors": 4,
-            "reference_characters": 31,
-            "seconds": 3.2946,
-            "sha256": "d203dda2bc1ad431e8df6277b2ac8ab391e45ea5c3948f075654e9f0129f8604",
+            "reference": "The word is Needle. Which two letters are missing?",
+            "recognized": "The word is needle, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 40,
+            "seconds": 3.7473,
+            "sha256": "5babeceecd06f66ad6f608ea3b371778263b173045125310a9ab321b8d58a4d8",
             "target_word": "NEEDLE",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_47",
-            "reference": "Gearwheel. Which two letters are missing?",
-            "recognized": "Here we go, which two letters are missing.",
-            "character_errors": 6,
-            "reference_characters": 34,
-            "seconds": 3.2713,
-            "sha256": "027741756b618b299bc7921ca69152a3c95e6009d3dfb5fa0cdfa5203db56c29",
+            "reference": "The word is Gearwheel. Which two letters are missing?",
+            "recognized": "The word is gear wheel, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 43,
+            "seconds": 3.8982,
+            "sha256": "489a594d2645e85b60046a612887a8c8540daee2b6a35634e50911be217c42ea",
             "target_word": "GEARWHEEL",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_48",
@@ -1422,14 +1429,14 @@
           },
           {
             "id": "german_49",
-            "reference": "Roots. Which two letters are missing?",
-            "recognized": "Roupes, which two letters are missing.",
-            "character_errors": 3,
-            "reference_characters": 30,
-            "seconds": 3.2829,
-            "sha256": "fd6f9cead30574db0475fd697342b3f9ae14e1b7af9249ed46c631b105f409a5",
+            "reference": "The word is Roots. Which two letters are missing?",
+            "recognized": "The word is roots, which two letters are missing.",
+            "character_errors": 0,
+            "reference_characters": 39,
+            "seconds": 4.1072,
+            "sha256": "0af3042532564e50f017903a795594f39e06486e39722d6c47200c810da6ae81",
             "target_word": "ROOTS",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_50",
@@ -1443,9 +1450,13 @@
             "target_spelling_recovered": true
           }
         ],
-        "target_spellings_recovered": 31
+        "target_spellings_recovered": 41,
+        "target_scope": "ASR spelling screen only; compound spacing and ё/е normalized; not heard stress or human intelligibility approval"
       },
       "ru": {
+        "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+        "samples": 50,
+        "character_error_rate": 0.00673,
         "rows": [
           {
             "id": "german_sun",
@@ -1779,14 +1790,14 @@
           },
           {
             "id": "german_31",
-            "reference": "Сокровище. Какие две буквы пропущены?",
-            "recognized": "Сокровища. Какие две буквы пропущены?",
-            "character_errors": 1,
-            "reference_characters": 31,
-            "seconds": 4.92,
-            "sha256": "5bb0614742ef0ab48a0d198e726aeca9379a4ab3e3d8345bdc5e6fc50d48329d",
+            "reference": "Это слово: Сокровище. Какие две буквы пропущены?",
+            "recognized": "Это слово сокровище. Какие две буквы пропущены?",
+            "character_errors": 0,
+            "reference_characters": 39,
+            "seconds": 7.08,
+            "sha256": "cdb0815eadc424f5e6f6665514f3c47573fb58431b5a4142e7f58104523af460",
             "target_word": "СОКРОВИЩЕ",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_32",
@@ -1977,14 +1988,14 @@
           },
           {
             "id": "german_49",
-            "reference": "Корешок. Какие две буквы пропущены?",
-            "recognized": "Кришок. Какие две буквы пропущены?",
-            "character_errors": 2,
-            "reference_characters": 29,
-            "seconds": 4.28,
-            "sha256": "edbc3a3c9f77648a968da762ac67d70d025e307f26d8987f963864d4d6814630",
+            "reference": "Это слово: Корешок. Какие две буквы пропущены?",
+            "recognized": "Это слово - корешок. Какие две буквы пропущены?",
+            "character_errors": 0,
+            "reference_characters": 37,
+            "seconds": 5.48,
+            "sha256": "6a1b01b187e02e347c5d59e1ea51a192826a5eb471bd15579536edc5b2ce3b1b",
             "target_word": "КОРЕШОК",
-            "target_spelling_recovered": false
+            "target_spelling_recovered": true
           },
           {
             "id": "german_50",
@@ -1998,7 +2009,8 @@
             "target_spelling_recovered": true
           }
         ],
-        "target_spellings_recovered": 42
+        "target_spellings_recovered": 44,
+        "target_scope": "ASR spelling screen only; compound spacing and ё/е normalized; not heard stress or human intelligibility approval"
       }
     }
   }

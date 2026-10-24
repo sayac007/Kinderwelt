@@ -3,6 +3,7 @@ const INK := Color("293b4c")
 const OBJECTS = preload("res://assets/quest/objects.png")
 const SCIENCE_A = preload("res://assets/quest/science-a.png")
 const SCIENCE_B = preload("res://assets/quest/science-b.png")
+const HEADGEAR := {"cap":preload("res://assets/quest/cap.png"),"beanie":preload("res://assets/quest/beanie.png")}
 const SCIENCE_IDS := ["gear","wheel","bridge","magnet","bulb","battery","scissors","hammer","screwdriver","lever","pulley","helmet","bird","butterfly","bee","frog","turtle","cat","seed","roots","mushroom","egg","nest","worm","water","ice","steam","salt","sand","oil","glass","metal","wood","paper","fabric","soap","eye","ear","nose","tongue","hand","heart","lungs","brain","bone","tooth","foot","stomach","globe","map","compass","mountain","river","island","cloud","rain","snow","desert","forest","sea"]
 const REGIONS := {"apple":Rect2(18,0,349,334),"leaf":Rect2(399,0,358,334),"star":Rect2(783,0,358,334),"moon":Rect2(1164,0,360,334),"sun":Rect2(20,339,350,296),"ball":Rect2(405,340,350,296),"house":Rect2(785,341,350,297),"mouse":Rect2(1164,340,360,299),"robot":Rect2(20,636,350,370),"flower":Rect2(405,649,350,357),"fish":Rect2(784,643,350,363),"tree":Rect2(1164,643,360,363)}
 static var face: FontVariation
@@ -16,6 +17,11 @@ static func text(canvas: CanvasItem,word: String,center: Vector2,px: int,color :
 	var f := font()
 	canvas.draw_string(f,center-Vector2(f.get_string_size(word,HORIZONTAL_ALIGNMENT_LEFT,-1,px).x/2.0,-px*.34),word,HORIZONTAL_ALIGNMENT_LEFT,-1,px,color)
 static func object(canvas: CanvasItem,id: String,rect: Rect2,tint := Color.WHITE) -> void:
+	if HEADGEAR.has(id):
+		var texture: Texture2D = HEADGEAR[id]
+		var fit := texture.get_size()*minf(rect.size.x/texture.get_width(),rect.size.y/texture.get_height())
+		canvas.draw_texture_rect(texture,Rect2(rect.get_center()-fit/2,fit),false,tint)
+		return
 	if REGIONS.has(id):
 		canvas.draw_texture_rect_region(OBJECTS,rect,REGIONS[id],tint)
 		return
@@ -29,7 +35,7 @@ static func object(canvas: CanvasItem,id: String,rect: Rect2,tint := Color.WHITE
 		canvas.draw_texture_rect_region(atlas,Rect2(rect.get_center()-fit/2,fit),region,tint)
 
 static func has_object(id: String) -> bool:
-	return REGIONS.has(id) or id in SCIENCE_IDS
+	return REGIONS.has(id) or id in SCIENCE_IDS or HEADGEAR.has(id)
 
 static func star(canvas: CanvasItem,center: Vector2,radius: float,color: Color) -> void:
 	var points := PackedVector2Array()

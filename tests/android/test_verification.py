@@ -4,7 +4,7 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('verify',Path(__file__).resolve().parents[2]/'scripts/android/verify.py')
 v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
 
-MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="15" android:versionName="0.9.2"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
+MANIFEST='''<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.example.kinderwelt" android:versionCode="16" android:versionName="0.9.3"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"/><application android:allowBackup="false" android:extractNativeLibs="true"><activity android:screenOrientation="fullUser"><intent-filter><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>'''
 PAYLOAD=['assets/core/quest/scenery.gdc','assets/core/quest/scenery_card.gdc','assets/core/quest/wardrobe.gdc','assets/core/quest/score_badge.gdc','assets/core/quest/letter_slots.gdc','assets/core/mobile.gdc','assets/project.binary','assets/core/quest/main.gdc']
 PAYLOAD += ['assets/games/quest/legacy-rewards.json']
 PAYLOAD += ['assets/'+n for n in ['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']]
@@ -26,8 +26,8 @@ for locale in ['de','en','ru']:
     for filename in sorted({c['file'] for c in manifest['clips']}):
         PAYLOAD += ['assets/'+folder+filename+'.import','assets/.godot/imported/'+filename+'-fixture.oggvorbisstr']
 PAYLOAD += ['assets/core/quest/language.gdc']
-PAYLOAD += ['assets/assets/quest/'+name+'.png.import' for name in ['science-a','science-b']]
-PAYLOAD += ['assets/assets/quest/OFL.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds']]
+PAYLOAD += ['assets/assets/quest/'+name+'.png.import' for name in ['science-a','science-b','cap','beanie']]
+PAYLOAD += ['assets/assets/quest/OFL.txt','assets/.godot/imported/Nunito.ttf-fixture.fontdata']+['assets/.godot/imported/'+image+'.png-fixture.ctex' for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds','cap','beanie']]
 PAYLOAD += ['assets/core/quest/pet.gdshader']+['assets/assets/music/'+name for name in ['licenses/CC-BY-SA-4.0.txt','licenses/CC-BY-3.0.txt','licenses/CC-BY-SA-3.0.txt','licenses/CC-BY-SA-2.5.txt','licenses/tnm-MIT.txt','licenses/GeneralUser-GS.txt','NOTICES.txt']]
 
 class VerificationTests(unittest.TestCase):
@@ -40,7 +40,7 @@ class VerificationTests(unittest.TestCase):
         root=ET.fromstring(MANIFEST);ET.SubElement(root,'uses-permission',{v.ANDROID+'name':'android.permission.INTERNET'})
         with self.assertRaises(AssertionError):v.check_manifest(root)
     def test_identity_version_sdk_backup_rotation_drift_rejected(self):
-        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="15"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
+        for before,after in [('org.example.kinderwelt','org.wrong.app'),('versionCode="16"','versionCode="99"'),('targetSdkVersion="36"','targetSdkVersion="35"'),('allowBackup="false"','allowBackup="true"'),('fullUser','portrait'),('extractNativeLibs="true"','extractNativeLibs="false"')]:
             with self.subTest(before=before),self.assertRaises(AssertionError):v.check_manifest(ET.fromstring(MANIFEST.replace(before,after)))
     def test_valid_payload(self):self.assertEqual(v.check_payload(PAYLOAD),len(PAYLOAD))
     def test_development_and_key_files_rejected(self):

@@ -1,4 +1,4 @@
-# Stimmen, Betonung und Hörprüfung — 0.9.2
+# Stimmen, Betonung und Hörprüfung — 0.9.3
 
 Die bisherigen weiblichen Stimmen bleiben auf Wunsch erhalten: **Serena** aus Qwen3-TTS-12Hz-0.6B-CustomVoice für Deutsch und Russisch, **LJSpeech** für Englisch. Kein Pitch-/Formant-Filter, keine Schauspielerimitation und keine Familienaufnahme als Stimmvorlage. Die App enthält ausschließlich fertige lokale Vorbisclips; keine Sprachmodelle, Python, Mikrofon- oder Netzwerkanbindung.
 
@@ -52,6 +52,12 @@ python3 scripts/qa/speech_recognition.py --model /pfad/sherpa-onnx-whisper-small
 Erst vollständige, geprüfte Banken nach `assets/voice/quest/<locale>` übernehmen und die vollständige Suite aus [QUALITY_ASSURANCE.md](QUALITY_ASSURANCE.md) ausführen. `--ids` erzeugt nur eine Teilbank; diese niemals direkt ausliefern. Die Nachweise der tatsächlich ausgeführten Läufe und die Grenzen stehen zentral im Qualitätsüberblick, neue Rohlogs unter `qa-results/`.
 
 Die tatsächlichen 24 Fächeransagen, neun Aufgabenbeispiele und 150 nativen Wortfragen sind als notwendige [Regressionsreferenz](../tests/fixtures/voice/subject-recognition.json) mit Audiohash, erwartetem Text und Erkennung erhalten. Auch nicht wiedergewonnene Zielschreibweisen bleiben dort sichtbar. Das ist kein neuer Einzelbericht pro Lauf.
+
+## Aktuelle Verbesserungen
+
+44 Aufnahmen in vier deutschen, zehn englischen und zwei russischen Wortstationen wurden nach Vergleich überarbeitet; DE/EN einschließlich beider Boni. Kurze gesprochene Einleitungen stabilisieren den Wortbeginn, ohne das Lösungswort sichtbar einzublenden. Zwei englische und zwei russische positive Probetakes behalten ihre tatsächlichen Originalparameter/Batchnachweise. Bei nicht bestätigten Versuchen bleiben die bisherigen Aufnahmen erhalten. ASR gewinnt die Zielschreibweise bei **39/50 DE, 41/50 EN und 44/50 RU** statt zuvor 35/31/42 zurück; 28 geänderte DE-/EN-Bonusfragen werden vollständig erkannt. Das sind Auswahl-/Regressionssignale, keine menschlichen Verständlichkeits- oder Betonungsquoten.
+
+[Praktische Abnahme](ACCEPTANCE.md): Das vollständige Offlinepaket umfasst alle 3.803 unterschiedlichen Aufnahmen und 7.281 Verwendungen; in den Quality-Actions als separates `kinderwelt-full-listening-review`-Artefakt (sieben Tage). Es speichert keine Personenangaben. Freiwillige lokale Prüferklärungen sind an Text-/Audiohashes gebunden; offene und auffällige Fälle werden nicht automatisch freigegeben.
 
 ## Manuell offen
 

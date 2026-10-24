@@ -162,6 +162,19 @@ class QuestAssetsTests(unittest.TestCase):
             # This verifies honest traceability; it intentionally does not turn
             # the still-unrecognized targets into a green intelligibility claim.
 
+    def test_bonus_carrier_recordings_match_measured_actual_audio(self):
+        data=json.loads((ROOT/'tests/fixtures/voice/carrier-recognition.json').read_text())
+        self.assertEqual(data['human_review'],'OPEN')
+        self.assertEqual(data['model_files'],json.loads((ROOT/'tests/fixtures/voice/subject-recognition.json').read_text())['model_files'])
+        for locale,count in [('de',8),('en',20)]:
+            clips={c['id']:c for c in json.loads((ROOT/'assets/voice/quest'/locale/'manifest.json').read_text())['clips']}
+            rows=data['locales'][locale]['rows'];self.assertEqual(len(rows),count)
+            for row in rows:
+                self.assertIn('_bonus_',row['id'])
+                self.assertEqual(row['sha256'],clips[row['id']]['sha256'])
+                self.assertEqual(row['reference'],clips[row['id']]['text'])
+                self.assertEqual(row['character_errors'],0)
+
     def test_translations_images_and_legacy_reward_migration_remain_complete(self):
         tasks=json.loads((ROOT/'games/quest/tasks.json').read_text())['tasks']
         languages=json.loads((ROOT/'games/quest/languages.json').read_text())

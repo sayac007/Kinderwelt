@@ -53,6 +53,8 @@ func run() -> void:
 	state = Progress.clean(null)
 	for subject in Progress.SUBJECTS: check(Progress.tasks(subject).size()==50,"Fifty real tasks in "+subject)
 	for task in Progress.tasks():
+		if task.kind=="discovery":
+			for option in task.options:check(preload("res://core/quest/art.gd").has_object(option),"Discovery option has real art: "+task.id+" / "+str(option))
 		if expected.has(task.id): check(expected[task.id]==task.answer,"Independent second-round answer fixture "+task.id)
 		if task.kind=="add": check(task.answer==task.left+task.right,"Addition is arithmetically correct")
 		if task.kind=="subtract": check(task.answer==task.left-task.right,"Subtraction is arithmetically correct")

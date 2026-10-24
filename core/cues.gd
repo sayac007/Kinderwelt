@@ -49,6 +49,10 @@ func cue(success: bool = false, tone: int = -1) -> void:
 	stream = wav
 	play()
 
+func _notification(what: int) -> void:
+	if what==NOTIFICATION_APPLICATION_PAUSED: stream_paused=true
+	elif what==NOTIFICATION_APPLICATION_RESUMED: stream_paused=false
+
 func _exit_tree() -> void:
 	stop()
 	stream = null

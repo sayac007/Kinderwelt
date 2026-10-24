@@ -20,6 +20,11 @@ class PedagogyTests(unittest.TestCase):
         facts=qa.properties()
         self.assertIn('screwdriver',facts['physics']['axis']['members'])
         self.assertIn('tree',facts['biology']['uptake']['members'])
+    def test_independently_authored_classroom_counterexamples(self):
+        cases=json.loads((ROOT/'tests/fixtures/pedagogy/science-counterexamples.json').read_text())['cases']
+        facts=qa.properties()
+        for subject,property_id,object_id,expected,reason in cases:
+            self.assertEqual(object_id in facts[subject][property_id]['members'],expected,reason)
     def test_reported_terminology_and_long_word_are_corrected(self):
         _,by=self.data()
         self.assertEqual(len(self.baseline['original_flower_cases']),12)
@@ -38,7 +43,7 @@ class PedagogyTests(unittest.TestCase):
         self.assertEqual(report['failures'],[])
         self.assertEqual(len(report['baseline_33_rechecks']),33)
         self.assertTrue(all(r['review'] for r in report['baseline_33_rechecks']))
-        self.assertEqual({r['id'] for r in report['baseline_33_rechecks'] if r['remaining_image_warning']},{'physics_09','body_16'})
+        self.assertEqual({r['id'] for r in report['baseline_33_rechecks'] if r['remaining_image_warning']},set())
         self.assertEqual(len(report['difficulty_review']),800)
         self.assertFalse(any(r['probably_easier_structurally'] for r in report['difficulty_review']))
     def test_solution_prefixes_and_bare_science_answers_fail_in_each_language(self):
@@ -93,7 +98,7 @@ class PedagogyTests(unittest.TestCase):
         data,by=self.data();by['physics_35']['options']=['wheel','salt','scissors']
         self.assertTrue(any('unrelated comparison categories' in e for e in self.errors(data)))
         data,by=self.data();by['physics_09']['options']=['helmet','paper','salt']
-        self.assertTrue(any('unreviewed exception options' in e for e in self.errors(data)))
+        self.assertTrue(any('unrelated comparison categories' in e for e in self.errors(data)))
     def test_bonus_parent_and_source_references_must_match(self):
         for parent in ('german_sun','physics_02'):
             data,by=self.data();by['physics_01_bonus_1']['parent_id']=parent

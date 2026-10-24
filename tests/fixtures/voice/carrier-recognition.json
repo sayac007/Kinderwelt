@@ -1,0 +1,277 @@
+{
+  "scope": "Current delivered DE/EN bonus carrier phrases, selection-assisted ASR screening; not independent human listening or exact stress certification",
+  "human_review": "OPEN",
+  "model_files": {
+    "small-encoder.int8.onnx": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+    "small-decoder.int8.onnx": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+    "small-tokens.txt": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+  },
+  "locales": {
+    "de": {
+      "voice_model": "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+      "samples": 8,
+      "character_error_rate": 0.0,
+      "rows": [
+        {
+          "id": "german_read_bonus_1",
+          "reference": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 4.84,
+          "sha256": "8acf6fd7c70a736fe2e78918e8d9a242a6dc056aeea10ae614e8b7a30300c1cf"
+        },
+        {
+          "id": "german_read_bonus_2",
+          "reference": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 4.84,
+          "sha256": "8acf6fd7c70a736fe2e78918e8d9a242a6dc056aeea10ae614e8b7a30300c1cf"
+        },
+        {
+          "id": "german_12_bonus_1",
+          "reference": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 5.4,
+          "sha256": "57f3ecb29df82f6a97c303ee5475f3503999b6d92fe44347928d8fbb4c26f70b"
+        },
+        {
+          "id": "german_12_bonus_2",
+          "reference": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 41,
+          "seconds": 5.4,
+          "sha256": "57f3ecb29df82f6a97c303ee5475f3503999b6d92fe44347928d8fbb4c26f70b"
+        },
+        {
+          "id": "german_20_bonus_1",
+          "reference": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 42,
+          "seconds": 4.6,
+          "sha256": "e4fb2fd9e93a8a19e0a869fa49d0d4ab624afd092780b1ca2474a73af95292df"
+        },
+        {
+          "id": "german_20_bonus_2",
+          "reference": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 42,
+          "seconds": 4.6,
+          "sha256": "e4fb2fd9e93a8a19e0a869fa49d0d4ab624afd092780b1ca2474a73af95292df"
+        },
+        {
+          "id": "german_22_bonus_1",
+          "reference": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 43,
+          "seconds": 4.76,
+          "sha256": "b67cdd1062f2f7708f9d5540f7c9ced64051f95f1fff598a3e535e97bc710da2"
+        },
+        {
+          "id": "german_22_bonus_2",
+          "reference": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+          "recognized": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+          "character_errors": 0,
+          "reference_characters": 43,
+          "seconds": 4.76,
+          "sha256": "b67cdd1062f2f7708f9d5540f7c9ced64051f95f1fff598a3e535e97bc710da2"
+        }
+      ]
+    },
+    "en": {
+      "voice_model": "en_US-ljspeech-medium",
+      "samples": 20,
+      "character_error_rate": 0.0,
+      "rows": [
+        {
+          "id": "german_42_bonus_1",
+          "reference": "The word is Footpath. Which letters are missing?",
+          "recognized": "The word is footpath, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 39,
+          "seconds": 3.6544,
+          "sha256": "865c4d2fcd6809354dfc7a36bb56fa230508d618ce5623096c32aad0d882ccf1"
+        },
+        {
+          "id": "german_42_bonus_2",
+          "reference": "The word is Footpath. Which letters are missing?",
+          "recognized": "The word is footpath, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 39,
+          "seconds": 3.6544,
+          "sha256": "865c4d2fcd6809354dfc7a36bb56fa230508d618ce5623096c32aad0d882ccf1"
+        },
+        {
+          "id": "german_read_bonus_1",
+          "reference": "The word is Football. Which letters are missing?",
+          "recognized": "The word is \"football\" which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 39,
+          "seconds": 3.8518,
+          "sha256": "101af1289413e9b8259cbddcb9f50d6bb0c7e3f7012872cc371c58291b98085a"
+        },
+        {
+          "id": "german_read_bonus_2",
+          "reference": "The word is Football. Which letters are missing?",
+          "recognized": "The word is \"football\" which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 39,
+          "seconds": 3.8518,
+          "sha256": "101af1289413e9b8259cbddcb9f50d6bb0c7e3f7012872cc371c58291b98085a"
+        },
+        {
+          "id": "german_20_bonus_1",
+          "reference": "The word is Heartbeat. Which letters are missing?",
+          "recognized": "The word is heartbeat, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.7822,
+          "sha256": "11096855ee080a1eda4fe7399bf8d5ae35106abe6fdad9eb929cc9ab8b3bb46e"
+        },
+        {
+          "id": "german_20_bonus_2",
+          "reference": "The word is Heartbeat. Which letters are missing?",
+          "recognized": "The word is heartbeat, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.7822,
+          "sha256": "11096855ee080a1eda4fe7399bf8d5ae35106abe6fdad9eb929cc9ab8b3bb46e"
+        },
+        {
+          "id": "german_27_bonus_1",
+          "reference": "The word is Thought. Which letters are missing?",
+          "recognized": "The word is thought, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5732,
+          "sha256": "f219389df9b87759c2c56e30665d3dbbc1bda3501c1a8f83b4d44415227f90d1"
+        },
+        {
+          "id": "german_27_bonus_2",
+          "reference": "The word is Thought. Which letters are missing?",
+          "recognized": "The word is thought, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5732,
+          "sha256": "f219389df9b87759c2c56e30665d3dbbc1bda3501c1a8f83b4d44415227f90d1"
+        },
+        {
+          "id": "german_30_bonus_1",
+          "reference": "The word is Rainbow. Which letters are missing?",
+          "recognized": "The word is rainbow, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5499,
+          "sha256": "00bee3bed6babf5160a4c99dadadc3c894ac6a8d1c8bb338a695eb2e1bc59736"
+        },
+        {
+          "id": "german_30_bonus_2",
+          "reference": "The word is Rainbow. Which letters are missing?",
+          "recognized": "The word is rainbow, which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5499,
+          "sha256": "00bee3bed6babf5160a4c99dadadc3c894ac6a8d1c8bb338a695eb2e1bc59736"
+        },
+        {
+          "id": "german_33_bonus_1",
+          "reference": "The word is Birdhouse. Which letters are missing?",
+          "recognized": "The word is \"birdhouse\". Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.7822,
+          "sha256": "943bcc7b7108ff01e5e3df6c50917e90206ceb1c78d0b7be80e19cb8d7c61cbf"
+        },
+        {
+          "id": "german_33_bonus_2",
+          "reference": "The word is Birdhouse. Which letters are missing?",
+          "recognized": "The word is \"birdhouse\". Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.7822,
+          "sha256": "943bcc7b7108ff01e5e3df6c50917e90206ceb1c78d0b7be80e19cb8d7c61cbf"
+        },
+        {
+          "id": "german_35_bonus_1",
+          "reference": "The word is Treetop. Which letters are missing?",
+          "recognized": "The word is treetop, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5499,
+          "sha256": "42d0dc48a5e3f1f65a07740970f7a037b570e47d7b5822a9af28cd1bb487ad59"
+        },
+        {
+          "id": "german_35_bonus_2",
+          "reference": "The word is Treetop. Which letters are missing?",
+          "recognized": "The word is treetop, which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 38,
+          "seconds": 3.5499,
+          "sha256": "42d0dc48a5e3f1f65a07740970f7a037b570e47d7b5822a9af28cd1bb487ad59"
+        },
+        {
+          "id": "german_46_bonus_1",
+          "reference": "The word is Needle. Which letters are missing?",
+          "recognized": "The word is needle. Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 37,
+          "seconds": 3.4687,
+          "sha256": "f888d489bb6c496fea7d04acf0ced33a061a3a1e4d8ed075d0b1a1c2a3ede5c8"
+        },
+        {
+          "id": "german_46_bonus_2",
+          "reference": "The word is Needle. Which letters are missing?",
+          "recognized": "The word is needle. Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 37,
+          "seconds": 3.4687,
+          "sha256": "f888d489bb6c496fea7d04acf0ced33a061a3a1e4d8ed075d0b1a1c2a3ede5c8"
+        },
+        {
+          "id": "german_47_bonus_1",
+          "reference": "The word is Gearwheel. Which letters are missing?",
+          "recognized": "The word is \"gearwheel\", which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.6428,
+          "sha256": "95367ffb0efa236c6858ceabbae760e148d3b9740f35458bee16a18b92bc1d07"
+        },
+        {
+          "id": "german_47_bonus_2",
+          "reference": "The word is Gearwheel. Which letters are missing?",
+          "recognized": "The word is \"gearwheel\", which letters are missing.",
+          "character_errors": 0,
+          "reference_characters": 40,
+          "seconds": 3.6428,
+          "sha256": "95367ffb0efa236c6858ceabbae760e148d3b9740f35458bee16a18b92bc1d07"
+        },
+        {
+          "id": "german_49_bonus_1",
+          "reference": "The word is Roots. Which letters are missing?",
+          "recognized": "The word is roots. Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 36,
+          "seconds": 3.6661,
+          "sha256": "d8813bd1ac827d75773993902e30249718fa0be55e1cdac9f08e874965e5df70"
+        },
+        {
+          "id": "german_49_bonus_2",
+          "reference": "The word is Roots. Which letters are missing?",
+          "recognized": "The word is roots. Which letters are missing?",
+          "character_errors": 0,
+          "reference_characters": 36,
+          "seconds": 3.6661,
+          "sha256": "d8813bd1ac827d75773993902e30249718fa0be55e1cdac9f08e874965e5df70"
+        }
+      ]
+    }
+  }
+}

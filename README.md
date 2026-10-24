@@ -4,7 +4,7 @@ Ein **offline spielbares Lernabenteuer für Klasse 1–2**, derzeit mit anspruch
 
 **Inhalte:** acht Fächer mit je 50 Grundaufgaben: Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch und Geografie. Zu jeder Grundaufgabe gehören zwei freiwillige Boni: insgesamt 400 + 800 Aufgabenplätze. Deutsch, Englisch und Russisch haben eigene Sprachlernaufgaben. Sieben Figuren, fünf Looks, 20 klassische Klavierwiedergaben und lokale Sprachclips ergänzen das Spiel. Familien- und neutrale Variante verwenden dieselbe Spiellogik; Familiengrafiken bleiben separat privat.
 
-**Hier beginnen:** [Qualität, Architektur, Prüfstand und Grenzen](docs/QUALITY_ASSURANCE.md). Dort sind technische Testerfolge, offene fachliche Prüfungen und nicht nachgewiesene Lernwirkungen getrennt. [Bedienung](docs/experience.md) · [Inhaltsquellen und Redaktion](docs/CONTENT_AUTHORING.md) · [Android](docs/android.md) · [Sprachprüfung](docs/voice.md).
+**Hier beginnen:** [Qualität, Architektur, Prüfstand und Grenzen](docs/QUALITY_ASSURANCE.md). Dort sind technische Testerfolge, offene fachliche Prüfungen und nicht nachgewiesene Lernwirkungen getrennt. [Bedienung](docs/experience.md) · [Inhaltsquellen und Redaktion](docs/CONTENT_AUTHORING.md) · [Android](docs/android.md) · [Sprachprüfung](docs/voice.md) · [Manuelle Abnahme](docs/ACCEPTANCE.md) · [Offene Play-Schritte](docs/PLAY_READINESS.md).
 
 ## Entwickeln und prüfen
 

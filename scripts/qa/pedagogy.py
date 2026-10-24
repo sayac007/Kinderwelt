@@ -83,7 +83,7 @@ def inspect(tasks,root=ROOT):
             exception=categories['exceptions'].get(id)
             if exception and set(t['options'])!=set(exception['options']):failures.append(id+': unreviewed exception options')
             if not common and not exception:failures.append(id+': unrelated comparison categories')
-            if exception:warnings.append({'id':id,'dimension':'distractors','reason':exception['reason'],'open_image_gap':id in ('physics_09','body_16')})
+            if exception:warnings.append({'id':id,'dimension':'distractors','reason':exception['reason'],'open_image_gap':exception.get('open_image_gap',False)})
         if 'comparison' in t:
             c=t['comparison']
             if c.get('model')!=subject or len(set(c['property_ids']))!=len(c['property_ids']) or any(k not in facts[subject] for k in c['property_ids']):
@@ -128,7 +128,7 @@ def inspect(tasks,root=ROOT):
                 if len({r[1] for r in same})>1:failures.append('Duplicate identical math bonuses: '+','.join(r[0] for r in same))
     baseline=json.loads((root/'tests/fixtures/pedagogy/baseline-cases.json').read_text())
     by_id={t['id']:t for t in tasks}
-    rechecks=[{'id':id,'current_options':by_id[id]['options'],'review':by_id[id].get('pedagogical_review',''),'remaining_image_warning':id in ('physics_09','body_16')} for id in baseline['weak_base_ids'] if id in by_id]
+    rechecks=[{'id':id,'current_options':by_id[id]['options'],'review':by_id[id].get('pedagogical_review',''),'remaining_image_warning':categories['exceptions'].get(id,{}).get('open_image_gap',False)} for id in baseline['weak_base_ids'] if id in by_id]
     return {'failures':sorted(set(failures)),'status':'FAIL' if failures else 'PASS','scope':'Offline consistency and editorial diagnostics; no professional, child-usability or learning-effect certification',
         'base_tasks':len(tasks),'bonus_tasks':len(all_tasks)-len(tasks),'typed_counts':[{'subject':s,'kind':k,'count':n} for (s,k),n in sorted(type_counts.items())],
         'text_repetitions':duplicates,'repeated_answer_option_sets':[{'subject':s,'kind':k,'locale':l,'ids':ids} for (s,k,l,answer,opts),ids in option_groups.items() if len(ids)>1],

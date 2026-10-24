@@ -9578,53 +9578,71 @@
       "id": "german_robot_bonus_2_hint"
     },
     {
-      "text": "Football. Which two letters are missing?",
-      "file": "voice_en_46ada2b67f701d061a76.ogg",
-      "seconds": 3.4918820861678004,
-      "bytes": 20467,
-      "sha256": "05756e3497ec7842a15f0c230c4046cb14364367093a4ef2984a92eb87ed0a96",
+      "text": "The word is Football. Which two letters are missing?",
+      "file": "voice_en_cad66796360d6125c622.ogg",
+      "seconds": 4.0259410430839,
+      "bytes": 24074,
+      "sha256": "31a31c8c7aedf9a3302963c08d7e299feccbae4345b75992614bc6a4ca142110",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7185133099555969,
+        "decoded_peak": 0.6970516443252563,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.621179,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.667619,
+          "end": 0.806939,
+          "seconds": 0.13932
+        },
+        {
           "phonemes": "fˈʊtbɔːl.",
-          "start": 0.27288,
-          "end": 1.027528,
-          "seconds": 0.754649
+          "start": 0.899819,
+          "end": 1.608027,
+          "seconds": 0.708209
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.377188,
-          "end": 1.609388,
-          "seconds": 0.2322
+          "start": 1.934467,
+          "end": 2.131837,
+          "seconds": 0.19737
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.690658,
-          "end": 1.864807,
-          "seconds": 0.17415
+          "start": 2.247937,
+          "end": 2.503356,
+          "seconds": 0.25542
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.946077,
-          "end": 2.364036,
+          "start": 2.549796,
+          "end": 2.967755,
           "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 2.468526,
-          "end": 2.584626,
+          "start": 2.990975,
+          "end": 3.107075,
           "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.642676,
-          "end": 3.107075,
+          "start": 3.153515,
+          "end": 3.617914,
           "seconds": 0.464399
         }
       ],
@@ -9640,9 +9658,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Football. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "861553d21684510151f070dbe8c756a29fb00cc0440103a6d8de4a09141d7e7e",
+        "synthesis_text": "The word is Football. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "a5d653bc8a54b2b1c30ed95800dd7921232b9a7e9dc898c84d50af59a69991ce",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -9762,47 +9780,65 @@
       "id": "german_read_hint"
     },
     {
-      "text": "Football. Which letters are missing?",
-      "file": "voice_en_97e445beba121ec00696.ogg",
-      "seconds": 3.120362811791383,
-      "bytes": 18175,
-      "sha256": "3bbbae2176cc3a9a89bfa03960e1597f1f9b155788206611e3e93b68f2c88101",
+      "text": "The word is Football. Which letters are missing?",
+      "file": "voice_en_a572a30f74e2a9bf3235.ogg",
+      "seconds": 3.851791383219955,
+      "bytes": 23024,
+      "sha256": "101af1289413e9b8259cbddcb9f50d6bb0c7e3f7012872cc371c58291b98085a",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6979680061340332,
+        "decoded_peak": 0.6769506335258484,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.27288,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.795329,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.818549,
+          "end": 0.981088,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "fˈʊtbɔːl.",
-          "start": 0.22644,
-          "end": 0.934649,
-          "seconds": 0.708209
+          "start": 1.085578,
+          "end": 1.689297,
+          "seconds": 0.603719
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.295918,
-          "end": 1.528118,
-          "seconds": 0.2322
+          "start": 2.027347,
+          "end": 2.236327,
+          "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.574558,
-          "end": 1.980907,
+          "start": 2.282766,
+          "end": 2.689116,
           "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 2.004127,
-          "end": 2.178277,
-          "seconds": 0.17415
+          "start": 2.816825,
+          "end": 2.898095,
+          "seconds": 0.08127
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.224717,
-          "end": 2.758776,
+          "start": 2.944535,
+          "end": 3.478594,
           "seconds": 0.534059
         }
       ],
@@ -9818,9 +9854,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Football. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "5b3b4f2fd56da8ff5375966bab4612e20f6604e37e8cb27502947f268af25d8f",
+        "synthesis_text": "The word is Football. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "601582ab55487e533ffa9990540c79802cc829cdce806d0d01407c1ede9cfaed",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -9940,47 +9976,65 @@
       "id": "german_read_bonus_1_hint"
     },
     {
-      "text": "Football. Which letters are missing?",
-      "file": "voice_en_97e445beba121ec00696.ogg",
-      "seconds": 3.120362811791383,
-      "bytes": 18175,
-      "sha256": "3bbbae2176cc3a9a89bfa03960e1597f1f9b155788206611e3e93b68f2c88101",
+      "text": "The word is Football. Which letters are missing?",
+      "file": "voice_en_a572a30f74e2a9bf3235.ogg",
+      "seconds": 3.851791383219955,
+      "bytes": 23024,
+      "sha256": "101af1289413e9b8259cbddcb9f50d6bb0c7e3f7012872cc371c58291b98085a",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6979680061340332,
+        "decoded_peak": 0.6769506335258484,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.27288,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.795329,
+          "seconds": 0.429569
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.818549,
+          "end": 0.981088,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "fˈʊtbɔːl.",
-          "start": 0.22644,
-          "end": 0.934649,
-          "seconds": 0.708209
+          "start": 1.085578,
+          "end": 1.689297,
+          "seconds": 0.603719
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.295918,
-          "end": 1.528118,
-          "seconds": 0.2322
+          "start": 2.027347,
+          "end": 2.236327,
+          "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.574558,
-          "end": 1.980907,
+          "start": 2.282766,
+          "end": 2.689116,
           "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 2.004127,
-          "end": 2.178277,
-          "seconds": 0.17415
+          "start": 2.816825,
+          "end": 2.898095,
+          "seconds": 0.08127
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.224717,
-          "end": 2.758776,
+          "start": 2.944535,
+          "end": 3.478594,
           "seconds": 0.534059
         }
       ],
@@ -9996,9 +10050,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Football. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "5b3b4f2fd56da8ff5375966bab4612e20f6604e37e8cb27502947f268af25d8f",
+        "synthesis_text": "The word is Football. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "601582ab55487e533ffa9990540c79802cc829cdce806d0d01407c1ede9cfaed",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -42288,54 +42342,72 @@
       "id": "german_19_bonus_2_hint"
     },
     {
-      "text": "Heartbeat. Which two letters are missing?",
-      "file": "voice_en_2207742e7aadfe5bce2a.ogg",
-      "seconds": 3.364172335600907,
-      "bytes": 20119,
-      "sha256": "6b6c8a220c8e75fe6ed14737a23c4456ce01ff4c99f3f9e7b938669731f34f87",
+      "text": "The word is Heartbeat. Which two letters are missing?",
+      "file": "voice_en_93c53a6df8410075c445.ogg",
+      "seconds": 3.991111111111111,
+      "bytes": 24049,
+      "sha256": "f0b5a56e7f6ec40637762d4fbdef69398e1b2e713e47cf57436d739a1880313a",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6818421483039856,
+        "decoded_peak": 0.684665322303772,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.34254,
+          "seconds": 0.13932
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.38898,
+          "end": 0.632789,
+          "seconds": 0.24381
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.667619,
+          "end": 0.772109,
+          "seconds": 0.10449
+        },
+        {
           "phonemes": "hˈɑːtbiːt.",
-          "start": 0.22644,
-          "end": 0.981088,
-          "seconds": 0.754649
+          "start": 0.818549,
+          "end": 1.526757,
+          "seconds": 0.708209
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.319138,
-          "end": 1.551338,
-          "seconds": 0.2322
-        },
-        {
-          "phonemes": "tˈuː",
-          "start": 1.609388,
-          "end": 1.806757,
+          "start": 1.876417,
+          "end": 2.073787,
           "seconds": 0.19737
         },
         {
+          "phonemes": "tˈuː",
+          "start": 2.178277,
+          "end": 2.340816,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "lˈɛtəz",
-          "start": 1.864807,
-          "end": 2.294376,
+          "start": 2.410476,
+          "end": 2.840045,
           "seconds": 0.429569
         },
         {
           "phonemes": "ɑː",
-          "start": 2.352426,
-          "end": 2.456916,
+          "start": 2.886485,
+          "end": 2.990975,
           "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.514966,
-          "end": 2.967755,
-          "seconds": 0.452789
+          "start": 3.037415,
+          "end": 3.536644,
+          "seconds": 0.499229
         }
       ],
       "generation_profile": {
@@ -42350,9 +42422,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Heartbeat. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "02ee54bc8094ed0bd2d1c128dcbd832d92dd24a64fbab0ae8651ccee6d10dc83",
+        "synthesis_text": "The word is Heartbeat. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "2cc06826a6ae142a2a46a5bd9bb096dfeb7d0169bcfd647fddfb52cffbcb2216",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -42472,48 +42544,66 @@
       "id": "german_20_hint"
     },
     {
-      "text": "Heartbeat. Which letters are missing?",
-      "file": "voice_en_22a560190d8b9052563e.ogg",
-      "seconds": 3.073922902494331,
-      "bytes": 18398,
-      "sha256": "a2321c8f6906165e61b61407a0fbfc5cec734d20318898c21d0a8ed3738254b8",
+      "text": "The word is Heartbeat. Which letters are missing?",
+      "file": "voice_en_1ffe540c07ef186f1f90.ogg",
+      "seconds": 3.7821315192743765,
+      "bytes": 22401,
+      "sha256": "11096855ee080a1eda4fe7399bf8d5ae35106abe6fdad9eb929cc9ab8b3bb46e",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6905719637870789,
+        "decoded_peak": 0.6944920420646667,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.38898,
+          "end": 0.702449,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.748889,
+          "end": 0.841769,
+          "seconds": 0.09288
+        },
+        {
           "phonemes": "hˈɑːtbiːt.",
-          "start": 0.26127,
-          "end": 0.946259,
-          "seconds": 0.684989
+          "start": 0.911429,
+          "end": 1.654467,
+          "seconds": 0.743039
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.307528,
-          "end": 1.551338,
-          "seconds": 0.24381
+          "start": 1.980907,
+          "end": 2.201497,
+          "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.609388,
-          "end": 1.992517,
-          "seconds": 0.383129
+          "start": 2.259546,
+          "end": 2.654286,
+          "seconds": 0.394739
         },
         {
           "phonemes": "ɑː",
-          "start": 2.062177,
-          "end": 2.178277,
+          "start": 2.735556,
+          "end": 2.851655,
           "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.213107,
-          "end": 2.677506,
-          "seconds": 0.464399
+          "start": 2.909705,
+          "end": 3.408934,
+          "seconds": 0.499229
         }
       ],
       "generation_profile": {
@@ -42528,9 +42618,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Heartbeat. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "8fca15e6b2b57a4bb9f09be49a8e77f790937710cda0d07dcad18473de7eeb22",
+        "synthesis_text": "The word is Heartbeat. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "8da2d987b33dfaa8957937c13e2987102feb3a28a71bc1dfb6337989ef3fe4bd",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -42650,48 +42740,66 @@
       "id": "german_20_bonus_1_hint"
     },
     {
-      "text": "Heartbeat. Which letters are missing?",
-      "file": "voice_en_22a560190d8b9052563e.ogg",
-      "seconds": 3.073922902494331,
-      "bytes": 18398,
-      "sha256": "a2321c8f6906165e61b61407a0fbfc5cec734d20318898c21d0a8ed3738254b8",
+      "text": "The word is Heartbeat. Which letters are missing?",
+      "file": "voice_en_1ffe540c07ef186f1f90.ogg",
+      "seconds": 3.7821315192743765,
+      "bytes": 22401,
+      "sha256": "11096855ee080a1eda4fe7399bf8d5ae35106abe6fdad9eb929cc9ab8b3bb46e",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6905719637870789,
+        "decoded_peak": 0.6944920420646667,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.38898,
+          "end": 0.702449,
+          "seconds": 0.313469
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.748889,
+          "end": 0.841769,
+          "seconds": 0.09288
+        },
+        {
           "phonemes": "hˈɑːtbiːt.",
-          "start": 0.26127,
-          "end": 0.946259,
-          "seconds": 0.684989
+          "start": 0.911429,
+          "end": 1.654467,
+          "seconds": 0.743039
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.307528,
-          "end": 1.551338,
-          "seconds": 0.24381
+          "start": 1.980907,
+          "end": 2.201497,
+          "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.609388,
-          "end": 1.992517,
-          "seconds": 0.383129
+          "start": 2.259546,
+          "end": 2.654286,
+          "seconds": 0.394739
         },
         {
           "phonemes": "ɑː",
-          "start": 2.062177,
-          "end": 2.178277,
+          "start": 2.735556,
+          "end": 2.851655,
           "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.213107,
-          "end": 2.677506,
-          "seconds": 0.464399
+          "start": 2.909705,
+          "end": 3.408934,
+          "seconds": 0.499229
         }
       ],
       "generation_profile": {
@@ -42706,9 +42814,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Heartbeat. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "8fca15e6b2b57a4bb9f09be49a8e77f790937710cda0d07dcad18473de7eeb22",
+        "synthesis_text": "The word is Heartbeat. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "8da2d987b33dfaa8957937c13e2987102feb3a28a71bc1dfb6337989ef3fe4bd",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -46068,54 +46176,72 @@
       "id": "german_26_bonus_2_hint"
     },
     {
-      "text": "Thought. Which two letters are missing?",
-      "file": "voice_en_443192799dde4d412bc8.ogg",
-      "seconds": 3.039092970521542,
-      "bytes": 18027,
-      "sha256": "8a28f7e54173d6a2a4bbcde8562afdbf959934ea635d55eed33870637e376657",
+      "text": "The word is Thought. Which two letters are missing?",
+      "file": "voice_en_61580f5262a832d729e2.ogg",
+      "seconds": 3.8634013605442177,
+      "bytes": 22839,
+      "sha256": "e5efa2a9366e9481b0169247f80357983eafda9759a0e0008d9eff2a270df8c6",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7164047360420227,
+        "decoded_peak": 0.6896223425865173,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.21483,
+          "end": 0.31932,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.656009,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.679229,
+          "end": 0.888209,
+          "seconds": 0.20898
+        },
+        {
           "phonemes": "θˈɔːt.",
-          "start": 0.22644,
-          "end": 0.690839,
-          "seconds": 0.464399
+          "start": 0.923039,
+          "end": 1.457098,
+          "seconds": 0.534059
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.017279,
-          "end": 1.214649,
-          "seconds": 0.19737
+          "start": 1.783537,
+          "end": 1.992517,
+          "seconds": 0.20898
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.353968,
-          "end": 1.516508,
-          "seconds": 0.16254
+          "start": 2.120227,
+          "end": 2.305986,
+          "seconds": 0.18576
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.539728,
-          "end": 1.957687,
+          "start": 2.340816,
+          "end": 2.758776,
           "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 1.992517,
-          "end": 2.097007,
-          "seconds": 0.10449
+          "start": 2.781995,
+          "end": 2.898095,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.120227,
-          "end": 2.665896,
-          "seconds": 0.545669
+          "start": 2.932925,
+          "end": 3.443764,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -46130,9 +46256,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Thought. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "8fe301208a983d8707a3a7ef9f2242b23f564cda332057b1423ec2a4fe78e2d2",
+        "synthesis_text": "The word is Thought. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "42b0161b46e5d504457cc601ec48c847fa92d5d1914be143e75bb7c1a1656891",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -46252,48 +46378,66 @@
       "id": "german_27_hint"
     },
     {
-      "text": "Thought. Which letters are missing?",
-      "file": "voice_en_2680fd642d72f4b70816.ogg",
-      "seconds": 2.9694331065759636,
-      "bytes": 16876,
-      "sha256": "e423853f07a7ccd4219581f37c7f3de613a5eac4199d78781045e9fa4f2e0359",
+      "text": "The word is Thought. Which letters are missing?",
+      "file": "voice_en_807e1fdeaeed22eec5f2.ogg",
+      "seconds": 3.5731519274376415,
+      "bytes": 21236,
+      "sha256": "f219389df9b87759c2c56e30665d3dbbc1bda3501c1a8f83b4d44415227f90d1",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6828294396400452,
+        "decoded_peak": 0.6808850765228271,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.621179,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.818549,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "θˈɔːt.",
-          "start": 0.22644,
-          "end": 0.725669,
-          "seconds": 0.499229
+          "start": 0.888209,
+          "end": 1.433878,
+          "seconds": 0.545669
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.063719,
-          "end": 1.319138,
-          "seconds": 0.25542
+          "start": 1.771927,
+          "end": 1.992517,
+          "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.377188,
-          "end": 1.795147,
-          "seconds": 0.417959
+          "start": 2.038957,
+          "end": 2.445306,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.899637,
-          "end": 2.027347,
-          "seconds": 0.12771
+          "start": 2.526576,
+          "end": 2.665896,
+          "seconds": 0.13932
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.085397,
-          "end": 2.549796,
-          "seconds": 0.464399
+          "start": 2.689116,
+          "end": 3.188345,
+          "seconds": 0.499229
         }
       ],
       "generation_profile": {
@@ -46308,9 +46452,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Thought. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "931e89f676c491798c106e85ca183628ca508b69e9ede4d7a187de4d4ff8eb09",
+        "synthesis_text": "The word is Thought. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "3c8d9d666f49407a915f81007694e2fe21f32fe5cd54cc0b287d015616cc22ce",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -46430,48 +46574,66 @@
       "id": "german_27_bonus_1_hint"
     },
     {
-      "text": "Thought. Which letters are missing?",
-      "file": "voice_en_2680fd642d72f4b70816.ogg",
-      "seconds": 2.9694331065759636,
-      "bytes": 16876,
-      "sha256": "e423853f07a7ccd4219581f37c7f3de613a5eac4199d78781045e9fa4f2e0359",
+      "text": "The word is Thought. Which letters are missing?",
+      "file": "voice_en_807e1fdeaeed22eec5f2.ogg",
+      "seconds": 3.5731519274376415,
+      "bytes": 21236,
+      "sha256": "f219389df9b87759c2c56e30665d3dbbc1bda3501c1a8f83b4d44415227f90d1",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6828294396400452,
+        "decoded_peak": 0.6808850765228271,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.621179,
+          "seconds": 0.278639
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.818549,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "θˈɔːt.",
-          "start": 0.22644,
-          "end": 0.725669,
-          "seconds": 0.499229
+          "start": 0.888209,
+          "end": 1.433878,
+          "seconds": 0.545669
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.063719,
-          "end": 1.319138,
-          "seconds": 0.25542
+          "start": 1.771927,
+          "end": 1.992517,
+          "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.377188,
-          "end": 1.795147,
-          "seconds": 0.417959
+          "start": 2.038957,
+          "end": 2.445306,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.899637,
-          "end": 2.027347,
-          "seconds": 0.12771
+          "start": 2.526576,
+          "end": 2.665896,
+          "seconds": 0.13932
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.085397,
-          "end": 2.549796,
-          "seconds": 0.464399
+          "start": 2.689116,
+          "end": 3.188345,
+          "seconds": 0.499229
         }
       ],
       "generation_profile": {
@@ -46486,9 +46648,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Thought. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "931e89f676c491798c106e85ca183628ca508b69e9ede4d7a187de4d4ff8eb09",
+        "synthesis_text": "The word is Thought. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "3c8d9d666f49407a915f81007694e2fe21f32fe5cd54cc0b287d015616cc22ce",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -47688,54 +47850,72 @@
       "id": "german_29_bonus_2_hint"
     },
     {
-      "text": "Rainbow. Which two letters are missing?",
-      "file": "voice_en_fcba225dfa1963ef75c6.ogg",
-      "seconds": 3.2945124716553287,
-      "bytes": 19644,
-      "sha256": "6e78d94914a1b66b7dd6f70bf29e09d09cf1267e610ec4898488ebff219d2311",
+      "text": "The word is Rainbow. Which two letters are missing?",
+      "file": "voice_en_b423cac2a3753ef95709.ogg",
+      "seconds": 3.851791383219955,
+      "bytes": 22983,
+      "sha256": "5ea407319bd39f6c14edd714dc4768fc356ad8e52aa1cdf3761998d4190a183f",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6922242045402527,
+        "decoded_peak": 0.6935573816299438,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.28449,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.609569,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.667619,
+          "end": 0.783719,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "ɹˈeɪnbəʊ.",
-          "start": 0.23805,
-          "end": 0.934649,
-          "seconds": 0.696599
+          "start": 0.864989,
+          "end": 1.526757,
+          "seconds": 0.661769
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.284308,
-          "end": 1.446848,
-          "seconds": 0.16254
+          "start": 1.853197,
+          "end": 2.073787,
+          "seconds": 0.22059
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.551338,
-          "end": 1.713878,
-          "seconds": 0.16254
+          "start": 2.131837,
+          "end": 2.305986,
+          "seconds": 0.17415
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.795147,
-          "end": 2.224717,
+          "start": 2.340816,
+          "end": 2.770385,
           "seconds": 0.429569
         },
         {
           "phonemes": "ɑː",
-          "start": 2.271156,
-          "end": 2.364036,
-          "seconds": 0.09288
+          "start": 2.805215,
+          "end": 2.944535,
+          "seconds": 0.13932
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.398866,
-          "end": 2.909705,
-          "seconds": 0.510839
+          "start": 2.967755,
+          "end": 3.420544,
+          "seconds": 0.452789
         }
       ],
       "generation_profile": {
@@ -47750,9 +47930,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Rainbow. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "a420375bda9ea774a596f2ad5fc9363c1434b338a6f7cefbd7eb9a2e0f3d95fd",
+        "synthesis_text": "The word is Rainbow. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "9da46e86c414a4fcf490e29056fe15039f3ce9500f36522fd46ca6c853f949f3",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -47872,48 +48052,66 @@
       "id": "german_30_hint"
     },
     {
-      "text": "Rainbow. Which letters are missing?",
-      "file": "voice_en_7a50820e5ae1b2c2751c.ogg",
-      "seconds": 2.9578231292517008,
-      "bytes": 17373,
-      "sha256": "e197a456f72ea6c32a0de6567b8f48b51cc3db2ece110f00195a5c8d25391288",
+      "text": "The word is Rainbow. Which letters are missing?",
+      "file": "voice_en_ac4c193688577aca38d0.ogg",
+      "seconds": 3.5499319727891154,
+      "bytes": 21205,
+      "sha256": "00bee3bed6babf5160a4c99dadadc3c894ac6a8d1c8bb338a695eb2e1bc59736",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7163058519363403,
+        "decoded_peak": 0.6982874274253845,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.621179,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.667619,
+          "end": 0.783719,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "ɹˈeɪnbəʊ.",
-          "start": 0.23805,
-          "end": 0.830159,
-          "seconds": 0.592109
+          "start": 0.853379,
+          "end": 1.422268,
+          "seconds": 0.568889
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.179819,
-          "end": 1.377188,
-          "seconds": 0.19737
+          "start": 1.795147,
+          "end": 2.004127,
+          "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.435238,
-          "end": 1.841587,
-          "seconds": 0.406349
+          "start": 2.050567,
+          "end": 2.422086,
+          "seconds": 0.371519
         },
         {
           "phonemes": "ɑː",
-          "start": 1.864807,
-          "end": 1.992517,
-          "seconds": 0.12771
+          "start": 2.538186,
+          "end": 2.631066,
+          "seconds": 0.09288
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.062177,
-          "end": 2.584626,
-          "seconds": 0.522449
+          "start": 2.677506,
+          "end": 3.165125,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -47928,9 +48126,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Rainbow. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "4e110189bae7d82b06dfaa7ef3984a87b5e4a5bc00c180528eb8df03ee03087d",
+        "synthesis_text": "The word is Rainbow. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "dd08da29c55ca81a8accf5a10c5e63aa0d7be5c8afa7a41140137d3685be53c4",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -48050,48 +48248,66 @@
       "id": "german_30_bonus_1_hint"
     },
     {
-      "text": "Rainbow. Which letters are missing?",
-      "file": "voice_en_7a50820e5ae1b2c2751c.ogg",
-      "seconds": 2.9578231292517008,
-      "bytes": 17373,
-      "sha256": "e197a456f72ea6c32a0de6567b8f48b51cc3db2ece110f00195a5c8d25391288",
+      "text": "The word is Rainbow. Which letters are missing?",
+      "file": "voice_en_ac4c193688577aca38d0.ogg",
+      "seconds": 3.5499319727891154,
+      "bytes": 21205,
+      "sha256": "00bee3bed6babf5160a4c99dadadc3c894ac6a8d1c8bb338a695eb2e1bc59736",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7163058519363403,
+        "decoded_peak": 0.6982874274253845,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.621179,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.667619,
+          "end": 0.783719,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "ɹˈeɪnbəʊ.",
-          "start": 0.23805,
-          "end": 0.830159,
-          "seconds": 0.592109
+          "start": 0.853379,
+          "end": 1.422268,
+          "seconds": 0.568889
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.179819,
-          "end": 1.377188,
-          "seconds": 0.19737
+          "start": 1.795147,
+          "end": 2.004127,
+          "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.435238,
-          "end": 1.841587,
-          "seconds": 0.406349
+          "start": 2.050567,
+          "end": 2.422086,
+          "seconds": 0.371519
         },
         {
           "phonemes": "ɑː",
-          "start": 1.864807,
-          "end": 1.992517,
-          "seconds": 0.12771
+          "start": 2.538186,
+          "end": 2.631066,
+          "seconds": 0.09288
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.062177,
-          "end": 2.584626,
-          "seconds": 0.522449
+          "start": 2.677506,
+          "end": 3.165125,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -48106,9 +48322,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Rainbow. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "4e110189bae7d82b06dfaa7ef3984a87b5e4a5bc00c180528eb8df03ee03087d",
+        "synthesis_text": "The word is Rainbow. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "dd08da29c55ca81a8accf5a10c5e63aa0d7be5c8afa7a41140137d3685be53c4",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -49308,54 +49524,72 @@
       "id": "german_32_bonus_2_hint"
     },
     {
-      "text": "Birdhouse. Which two letters are missing?",
-      "file": "voice_en_cb4c4ef74f6c533d688f.ogg",
-      "seconds": 3.5034920634920637,
-      "bytes": 20977,
-      "sha256": "05dff8e17f86ab9b6fcf1d7cef45574f555a7b24aa22cd34fd810de6e1716048",
+      "text": "The word is Birdhouse. Which two letters are missing?",
+      "file": "voice_en_af57014a3e59685c0073.ogg",
+      "seconds": 4.1420408163265305,
+      "bytes": 25108,
+      "sha256": "4ccc6d4c8a6e5fa4d5ea19242cef526dc23b3f71c545bfdf5325e119acd88105",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6812040209770203,
+        "decoded_peak": 0.7197965383529663,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "bˈɜːdhaʊs.",
+          "phonemes": "ðə",
           "start": 0.20322,
-          "end": 1.073968,
-          "seconds": 0.870748
+          "end": 0.28449,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.632789,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.783719,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "bˈɜːdhaʊs.",
+          "start": 0.876599,
+          "end": 1.666077,
+          "seconds": 0.789478
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.458458,
-          "end": 1.655828,
-          "seconds": 0.19737
+          "start": 2.015737,
+          "end": 2.224717,
+          "seconds": 0.20898
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.702268,
-          "end": 1.899637,
-          "seconds": 0.19737
+          "start": 2.294376,
+          "end": 2.503356,
+          "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.957687,
-          "end": 2.352426,
-          "seconds": 0.394739
+          "start": 2.573016,
+          "end": 3.025805,
+          "seconds": 0.452789
         },
         {
           "phonemes": "ɑː",
-          "start": 2.456916,
-          "end": 2.607846,
-          "seconds": 0.15093
+          "start": 3.083855,
+          "end": 3.188345,
+          "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.631066,
-          "end": 3.083855,
-          "seconds": 0.452789
+          "start": 3.223175,
+          "end": 3.757234,
+          "seconds": 0.534059
         }
       ],
       "generation_profile": {
@@ -49370,9 +49604,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Birdhouse. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "c85769e2dc0cbbf5e2440fdad48cb9fb6043ff36de6f37fcb4270ee675f8db11",
+        "synthesis_text": "The word is Birdhouse. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "42d849d6fbd7ca6fa2f683efca960e1182fb183d8b28e095f5e6ad03ed379f41",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -49492,48 +49726,66 @@
       "id": "german_33_hint"
     },
     {
-      "text": "Birdhouse. Which letters are missing?",
-      "file": "voice_en_af57d13ec72d5a0359d8.ogg",
-      "seconds": 3.2364625850340136,
-      "bytes": 19688,
-      "sha256": "789f19ca8d836111ad6e0a50c5a98c48a40c265bc13c6508a6e37120dcc87559",
+      "text": "The word is Birdhouse. Which letters are missing?",
+      "file": "voice_en_4b3fdb5e7538d0e8186a.ogg",
+      "seconds": 3.7821315192743765,
+      "bytes": 22693,
+      "sha256": "943bcc7b7108ff01e5e3df6c50917e90206ceb1c78d0b7be80e19cb8d7c61cbf",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6855723857879639,
+        "decoded_peak": 0.6991122961044312,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "bˈɜːdhaʊs.",
+          "phonemes": "ðə",
           "start": 0.20322,
-          "end": 1.050748,
-          "seconds": 0.847528
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.632789,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.679229,
+          "end": 0.876599,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "bˈɜːdhaʊs.",
+          "start": 0.911429,
+          "end": 1.735737,
+          "seconds": 0.824308
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.412018,
-          "end": 1.609388,
+          "start": 2.085397,
+          "end": 2.282766,
           "seconds": 0.19737
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.644218,
-          "end": 2.062177,
-          "seconds": 0.417959
+          "start": 2.340816,
+          "end": 2.723946,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.120227,
-          "end": 2.224717,
+          "start": 2.770385,
+          "end": 2.874875,
           "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.259546,
-          "end": 2.840045,
-          "seconds": 0.580499
+          "start": 2.909705,
+          "end": 3.385714,
+          "seconds": 0.476009
         }
       ],
       "generation_profile": {
@@ -49548,9 +49800,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Birdhouse. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "4fafe3d7e3d693fdaa14b00306868d11a433577e211768e372ed20dc35e03fdc",
+        "synthesis_text": "The word is Birdhouse. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "b6f5a4651b771a0f63abe8c8e69f7e76fddb3e66298a391a2a2cad9132c82447",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -49670,48 +49922,66 @@
       "id": "german_33_bonus_1_hint"
     },
     {
-      "text": "Birdhouse. Which letters are missing?",
-      "file": "voice_en_af57d13ec72d5a0359d8.ogg",
-      "seconds": 3.2364625850340136,
-      "bytes": 19688,
-      "sha256": "789f19ca8d836111ad6e0a50c5a98c48a40c265bc13c6508a6e37120dcc87559",
+      "text": "The word is Birdhouse. Which letters are missing?",
+      "file": "voice_en_4b3fdb5e7538d0e8186a.ogg",
+      "seconds": 3.7821315192743765,
+      "bytes": 22693,
+      "sha256": "943bcc7b7108ff01e5e3df6c50917e90206ceb1c78d0b7be80e19cb8d7c61cbf",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6855723857879639,
+        "decoded_peak": 0.6991122961044312,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "bˈɜːdhaʊs.",
+          "phonemes": "ðə",
           "start": 0.20322,
-          "end": 1.050748,
-          "seconds": 0.847528
+          "end": 0.2961,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.632789,
+          "seconds": 0.267029
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.679229,
+          "end": 0.876599,
+          "seconds": 0.19737
+        },
+        {
+          "phonemes": "bˈɜːdhaʊs.",
+          "start": 0.911429,
+          "end": 1.735737,
+          "seconds": 0.824308
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.412018,
-          "end": 1.609388,
+          "start": 2.085397,
+          "end": 2.282766,
           "seconds": 0.19737
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.644218,
-          "end": 2.062177,
-          "seconds": 0.417959
+          "start": 2.340816,
+          "end": 2.723946,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.120227,
-          "end": 2.224717,
+          "start": 2.770385,
+          "end": 2.874875,
           "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.259546,
-          "end": 2.840045,
-          "seconds": 0.580499
+          "start": 2.909705,
+          "end": 3.385714,
+          "seconds": 0.476009
         }
       ],
       "generation_profile": {
@@ -49726,9 +49996,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Birdhouse. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "4fafe3d7e3d693fdaa14b00306868d11a433577e211768e372ed20dc35e03fdc",
+        "synthesis_text": "The word is Birdhouse. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "b6f5a4651b771a0f63abe8c8e69f7e76fddb3e66298a391a2a2cad9132c82447",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -50388,54 +50658,72 @@
       "id": "german_34_bonus_2_hint"
     },
     {
-      "text": "Treetop. Which two letters are missing?",
-      "file": "voice_en_9f7d032c95e848fb338d.ogg",
-      "seconds": 3.2945124716553287,
-      "bytes": 19578,
-      "sha256": "d525f6fb4fd6135afa5930ab738e8480002132a4e9a02489318ef6ee1843e388",
+      "text": "The word is Treetop. Which two letters are missing?",
+      "file": "voice_en_143b68669d4036d9d37d.ogg",
+      "seconds": 3.991111111111111,
+      "bytes": 23931,
+      "sha256": "88e837feafa36bf8f3ac105919eb30786dd523f74e935705e75f7ca58f09c1e5",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6840206980705261,
+        "decoded_peak": 0.686672568321228,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "tɹˈiːtɒp.",
-          "start": 0.24966,
-          "end": 0.830159,
-          "seconds": 0.580499
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
         },
         {
-          "phonemes": "wˌɪtʃ",
-          "start": 1.156599,
-          "end": 1.353968,
-          "seconds": 0.19737
+          "phonemes": "wˈɜːd",
+          "start": 0.37737,
+          "end": 0.609569,
+          "seconds": 0.2322
         },
         {
-          "phonemes": "tˈuː",
-          "start": 1.470068,
-          "end": 1.632608,
-          "seconds": 0.16254
-        },
-        {
-          "phonemes": "lˈɛtəz",
-          "start": 1.690658,
-          "end": 2.155057,
-          "seconds": 0.464399
-        },
-        {
-          "phonemes": "ɑː",
-          "start": 2.224717,
-          "end": 2.340816,
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.772109,
           "seconds": 0.1161
         },
         {
-          "phonemes": "mˈɪsɪŋ?",
-          "start": 2.387256,
-          "end": 2.840045,
+          "phonemes": "tɹˈiːtɒp.",
+          "start": 0.853379,
+          "end": 1.515147,
+          "seconds": 0.661769
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 1.829977,
+          "end": 2.004127,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 2.085397,
+          "end": 2.271156,
+          "seconds": 0.18576
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.375646,
+          "end": 2.828435,
           "seconds": 0.452789
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 2.909705,
+          "end": 3.002585,
+          "seconds": 0.09288
+        },
+        {
+          "phonemes": "mˈɪsɪŋ?",
+          "start": 3.060635,
+          "end": 3.617914,
+          "seconds": 0.557279
         }
       ],
       "generation_profile": {
@@ -50450,13 +50738,28 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Treetop. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "2f8599166ae649a5414a4f6c18b0e7fc949da008dbe58decc66b315d858055d7",
+        "synthesis_text": "The word is Treetop. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "6cb8c6a7ecabf17108e687e055c3a85def33ea402c5ca8982162c84ffe6235e6",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_35"
+      "id": "german_35",
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "7ad56edbabd08a1b9e8192946ef9a7f245f86b1c7061d1dbebc2c5a3b402e1a3",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -50572,48 +50875,66 @@
       "id": "german_35_hint"
     },
     {
-      "text": "Treetop. Which letters are missing?",
-      "file": "voice_en_7566ace4fc8561ab188f.ogg",
-      "seconds": 3.039092970521542,
-      "bytes": 18183,
-      "sha256": "b122419bebacef04b73f77e18e4e27f69309bc2d97017d84de0cb7a0aef38185",
+      "text": "The word is Treetop. Which letters are missing?",
+      "file": "voice_en_79511a8a52e23298dfb2.ogg",
+      "seconds": 3.5499319727891154,
+      "bytes": 21697,
+      "sha256": "42d0dc48a5e3f1f65a07740970f7a037b570e47d7b5822a9af28cd1bb487ad59",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6915348768234253,
+        "decoded_peak": 0.6789434552192688,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.551519,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.609569,
+          "end": 0.725669,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "tɹˈiːtɒp.",
-          "start": 0.21483,
-          "end": 0.830159,
-          "seconds": 0.615329
+          "start": 0.818549,
+          "end": 1.480317,
+          "seconds": 0.661769
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.168209,
-          "end": 1.388798,
+          "start": 1.818367,
+          "end": 2.038957,
           "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.435238,
-          "end": 1.841587,
-          "seconds": 0.406349
+          "start": 2.085397,
+          "end": 2.456916,
+          "seconds": 0.371519
         },
         {
           "phonemes": "ɑː",
-          "start": 1.957687,
-          "end": 2.085397,
-          "seconds": 0.12771
+          "start": 2.491746,
+          "end": 2.607846,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.120227,
-          "end": 2.654286,
-          "seconds": 0.534059
+          "start": 2.642676,
+          "end": 3.153515,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -50628,9 +50949,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Treetop. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "31c49de127cda408ed9fc4066aabe91f6fbfac13f379ccc1a87cf81811031421",
+        "synthesis_text": "The word is Treetop. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "04b215a3c856ef152e3b6bdb95d7fe65ac44e1d41b1d27be9c0183aca158f4e5",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -50750,48 +51071,66 @@
       "id": "german_35_bonus_1_hint"
     },
     {
-      "text": "Treetop. Which letters are missing?",
-      "file": "voice_en_7566ace4fc8561ab188f.ogg",
-      "seconds": 3.039092970521542,
-      "bytes": 18183,
-      "sha256": "b122419bebacef04b73f77e18e4e27f69309bc2d97017d84de0cb7a0aef38185",
+      "text": "The word is Treetop. Which letters are missing?",
+      "file": "voice_en_79511a8a52e23298dfb2.ogg",
+      "seconds": 3.5499319727891154,
+      "bytes": 21697,
+      "sha256": "42d0dc48a5e3f1f65a07740970f7a037b570e47d7b5822a9af28cd1bb487ad59",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6915348768234253,
+        "decoded_peak": 0.6789434552192688,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.551519,
+          "seconds": 0.20898
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.609569,
+          "end": 0.725669,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "tɹˈiːtɒp.",
-          "start": 0.21483,
-          "end": 0.830159,
-          "seconds": 0.615329
+          "start": 0.818549,
+          "end": 1.480317,
+          "seconds": 0.661769
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.168209,
-          "end": 1.388798,
+          "start": 1.818367,
+          "end": 2.038957,
           "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.435238,
-          "end": 1.841587,
-          "seconds": 0.406349
+          "start": 2.085397,
+          "end": 2.456916,
+          "seconds": 0.371519
         },
         {
           "phonemes": "ɑː",
-          "start": 1.957687,
-          "end": 2.085397,
-          "seconds": 0.12771
+          "start": 2.491746,
+          "end": 2.607846,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.120227,
-          "end": 2.654286,
-          "seconds": 0.534059
+          "start": 2.642676,
+          "end": 3.153515,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -50806,9 +51145,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Treetop. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "31c49de127cda408ed9fc4066aabe91f6fbfac13f379ccc1a87cf81811031421",
+        "synthesis_text": "The word is Treetop. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "04b215a3c856ef152e3b6bdb95d7fe65ac44e1d41b1d27be9c0183aca158f4e5",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -260384,53 +260723,71 @@
       "id": "german_41_bonus_2_hint"
     },
     {
-      "text": "Footpath. Which two letters are missing?",
-      "file": "voice_en_4cc84f71527d99c37c0d.ogg",
-      "seconds": 3.2712925170068026,
-      "bytes": 19590,
-      "sha256": "62104bcd71610671c3097ffd50e8c0d325ced1a84c5021a28828d1a35753bd32",
+      "text": "The word is Footpath. Which two letters are missing?",
+      "file": "voice_en_fee319441779f35e0ef6.ogg",
+      "seconds": 3.979501133786848,
+      "bytes": 24129,
+      "sha256": "c02f88a2333e906ae9fbfc80b0aefff6f99ede2aca894d2d33925c3868dbdbb5",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
-        "uniform_gain": 1.0,
-        "decoded_peak": 0.6757139563560486,
+        "uniform_gain": 0.9789273804121241,
+        "decoded_peak": 0.8164109587669373,
         "ceiling": 0.95,
-        "encodes": 1
+        "encodes": 2
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊtpaθ.",
-          "start": 0.27288,
-          "end": 0.911429,
-          "seconds": 0.638549
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
         },
         {
-          "phonemes": "wˌɪtʃ",
-          "start": 1.249478,
-          "end": 1.458458,
-          "seconds": 0.20898
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.632789,
+          "seconds": 0.267029
         },
         {
-          "phonemes": "tˈuː",
-          "start": 1.539728,
-          "end": 1.690658,
+          "phonemes": "ɪz",
+          "start": 0.679229,
+          "end": 0.830159,
           "seconds": 0.15093
         },
         {
+          "phonemes": "fˈʊtpaθ.",
+          "start": 0.864989,
+          "end": 1.515147,
+          "seconds": 0.650159
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 1.876417,
+          "end": 2.108617,
+          "seconds": 0.2322
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 2.201497,
+          "end": 2.398866,
+          "seconds": 0.19737
+        },
+        {
           "phonemes": "lˈɛtəz",
-          "start": 1.748707,
-          "end": 2.155057,
-          "seconds": 0.406349
+          "start": 2.456916,
+          "end": 2.874875,
+          "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 2.189887,
-          "end": 2.305986,
-          "seconds": 0.1161
+          "start": 2.956145,
+          "end": 3.060635,
+          "seconds": 0.10449
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.364036,
-          "end": 2.886485,
+          "start": 3.083855,
+          "end": 3.606304,
           "seconds": 0.522449
         }
       ],
@@ -260446,9 +260803,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Footpath. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "586ff6a7775f0a86d6840aaa90a2dbfbf1cd4623133f57b0316a7b55c0fefef7",
+        "synthesis_text": "The word is Footpath. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "3f8c16013d18d9f7117c6df19d68f238c3b9b23ecf9b417b36fbfc828d80ada2",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -260568,48 +260925,66 @@
       "id": "german_42_hint"
     },
     {
-      "text": "Footpath. Which letters are missing?",
-      "file": "voice_en_1682e8db317b3257b3a9.ogg",
-      "seconds": 3.015873015873016,
-      "bytes": 18187,
-      "sha256": "511374be2e93072c8e94b54f6313250e16f78737d048c0a03203e86bff7ac1dd",
+      "text": "The word is Footpath. Which letters are missing?",
+      "file": "voice_en_2337225930948aa66615.ogg",
+      "seconds": 3.654421768707483,
+      "bytes": 22201,
+      "sha256": "865c4d2fcd6809354dfc7a36bb56fa230508d618ce5623096c32aad0d882ccf1",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.707676887512207,
+        "decoded_peak": 0.6850279569625854,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊtpaθ.",
-          "start": 0.28449,
-          "end": 0.876599,
-          "seconds": 0.592109
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
         },
         {
-          "phonemes": "wˌɪtʃ",
-          "start": 1.214649,
-          "end": 1.470068,
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.597959,
           "seconds": 0.25542
         },
         {
+          "phonemes": "ɪz",
+          "start": 0.644399,
+          "end": 0.795329,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "fˈʊtpaθ.",
+          "start": 0.853379,
+          "end": 1.491927,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 1.853197,
+          "end": 2.062177,
+          "seconds": 0.20898
+        },
+        {
           "phonemes": "lˈɛtəz",
-          "start": 1.516508,
-          "end": 1.922857,
-          "seconds": 0.406349
+          "start": 2.108617,
+          "end": 2.526576,
+          "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 1.980907,
-          "end": 2.085397,
-          "seconds": 0.10449
+          "start": 2.607846,
+          "end": 2.689116,
+          "seconds": 0.08127
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.108617,
-          "end": 2.584626,
-          "seconds": 0.476009
+          "start": 2.747166,
+          "end": 3.258005,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -260624,9 +260999,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Footpath. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "7c283fa618753e5490014bf16ad46e1b28ae6b263dc3975a59a8b19d03d4f989",
+        "synthesis_text": "The word is Footpath. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "1020e995fba1522d229a84dd1c18077c8e79cf8aff8a4fa966df9bc1b08a3088",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -260746,48 +261121,66 @@
       "id": "german_42_bonus_1_hint"
     },
     {
-      "text": "Footpath. Which letters are missing?",
-      "file": "voice_en_1682e8db317b3257b3a9.ogg",
-      "seconds": 3.015873015873016,
-      "bytes": 18187,
-      "sha256": "511374be2e93072c8e94b54f6313250e16f78737d048c0a03203e86bff7ac1dd",
+      "text": "The word is Footpath. Which letters are missing?",
+      "file": "voice_en_2337225930948aa66615.ogg",
+      "seconds": 3.654421768707483,
+      "bytes": 22201,
+      "sha256": "865c4d2fcd6809354dfc7a36bb56fa230508d618ce5623096c32aad0d882ccf1",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.707676887512207,
+        "decoded_peak": 0.6850279569625854,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "fˈʊtpaθ.",
-          "start": 0.28449,
-          "end": 0.876599,
-          "seconds": 0.592109
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.2961,
+          "seconds": 0.09288
         },
         {
-          "phonemes": "wˌɪtʃ",
-          "start": 1.214649,
-          "end": 1.470068,
+          "phonemes": "wˈɜːd",
+          "start": 0.34254,
+          "end": 0.597959,
           "seconds": 0.25542
         },
         {
+          "phonemes": "ɪz",
+          "start": 0.644399,
+          "end": 0.795329,
+          "seconds": 0.15093
+        },
+        {
+          "phonemes": "fˈʊtpaθ.",
+          "start": 0.853379,
+          "end": 1.491927,
+          "seconds": 0.638549
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 1.853197,
+          "end": 2.062177,
+          "seconds": 0.20898
+        },
+        {
           "phonemes": "lˈɛtəz",
-          "start": 1.516508,
-          "end": 1.922857,
-          "seconds": 0.406349
+          "start": 2.108617,
+          "end": 2.526576,
+          "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 1.980907,
-          "end": 2.085397,
-          "seconds": 0.10449
+          "start": 2.607846,
+          "end": 2.689116,
+          "seconds": 0.08127
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.108617,
-          "end": 2.584626,
-          "seconds": 0.476009
+          "start": 2.747166,
+          "end": 3.258005,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -260802,9 +261195,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Footpath. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "7c283fa618753e5490014bf16ad46e1b28ae6b263dc3975a59a8b19d03d4f989",
+        "synthesis_text": "The word is Footpath. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "1020e995fba1522d229a84dd1c18077c8e79cf8aff8a4fa966df9bc1b08a3088",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -262544,54 +262937,72 @@
       "id": "german_45_bonus_2_hint"
     },
     {
-      "text": "Needle. Which two letters are missing?",
-      "file": "voice_en_c91f48188058861df288.ogg",
-      "seconds": 3.2945124716553287,
-      "bytes": 19596,
-      "sha256": "d203dda2bc1ad431e8df6277b2ac8ab391e45ea5c3948f075654e9f0129f8604",
+      "text": "The word is Needle. Which two letters are missing?",
+      "file": "voice_en_55967e3f4c2cfa34693b.ogg",
+      "seconds": 3.747301587301587,
+      "bytes": 22742,
+      "sha256": "5babeceecd06f66ad6f608ea3b371778263b173045125310a9ab321b8d58a4d8",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6859838962554932,
+        "decoded_peak": 0.918061375617981,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.28449,
+          "seconds": 0.08127
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.609569,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.783719,
+          "seconds": 0.12771
+        },
+        {
           "phonemes": "nˈiːdəl.",
-          "start": 0.21483,
-          "end": 0.818549,
-          "seconds": 0.603719
+          "start": 0.830159,
+          "end": 1.306168,
+          "seconds": 0.476009
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.156599,
-          "end": 1.342358,
-          "seconds": 0.18576
+          "start": 1.655828,
+          "end": 1.876417,
+          "seconds": 0.22059
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.470068,
-          "end": 1.644218,
-          "seconds": 0.17415
+          "start": 1.934467,
+          "end": 2.097007,
+          "seconds": 0.16254
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.690658,
-          "end": 2.131837,
-          "seconds": 0.441179
+          "start": 2.201497,
+          "end": 2.654286,
+          "seconds": 0.452789
         },
         {
           "phonemes": "ɑː",
-          "start": 2.213107,
-          "end": 2.340816,
+          "start": 2.758776,
+          "end": 2.886485,
           "seconds": 0.12771
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.398866,
-          "end": 2.886485,
-          "seconds": 0.487619
+          "start": 2.909705,
+          "end": 3.350884,
+          "seconds": 0.441179
         }
       ],
       "generation_profile": {
@@ -262606,9 +263017,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Needle. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "696466b82e9ed1a5694993b8a4490fcfdf8cb6a40de28d2858a3b44456a419e6",
+        "synthesis_text": "The word is Needle. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "10e9ebc20d1afb8f4360adc6a1d2103bc1cc6f6cc57e23ac77b3e5a63d193689",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -262728,48 +263139,66 @@
       "id": "german_46_hint"
     },
     {
-      "text": "Needle. Which letters are missing?",
-      "file": "voice_en_e5c30b071ee90d729a6b.ogg",
-      "seconds": 2.9113832199546485,
-      "bytes": 17362,
-      "sha256": "b61dc80518c1812025c8592f77857269020595bf5bc7cb529d60beb32843b3e8",
+      "text": "The word is Needle. Which letters are missing?",
+      "file": "voice_en_76fec7a710b40e086cb4.ogg",
+      "seconds": 3.4686621315192743,
+      "bytes": 20657,
+      "sha256": "f888d489bb6c496fea7d04acf0ced33a061a3a1e4d8ed075d0b1a1c2a3ede5c8",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6833736300468445,
+        "decoded_peak": 0.6804203987121582,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.33093,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.574739,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.644399,
+          "end": 0.760499,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "nˈiːdəl.",
-          "start": 0.23805,
-          "end": 0.772109,
-          "seconds": 0.534059
+          "start": 0.830159,
+          "end": 1.294558,
+          "seconds": 0.464399
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.121769,
-          "end": 1.342358,
+          "start": 1.644218,
+          "end": 1.864807,
           "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.400408,
-          "end": 1.771927,
-          "seconds": 0.371519
+          "start": 1.911247,
+          "end": 2.317596,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.818367,
-          "end": 1.934467,
-          "seconds": 0.1161
+          "start": 2.364036,
+          "end": 2.503356,
+          "seconds": 0.13932
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 1.980907,
-          "end": 2.480136,
-          "seconds": 0.499229
+          "start": 2.549796,
+          "end": 3.037415,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -262784,9 +263213,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Needle. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "dc221e57d05b6051d29087ecefd1f8cf5e8d31e82bbdf7a7de05ddd9d6c94e7c",
+        "synthesis_text": "The word is Needle. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "7f8c5e0f4cb5874b998d5dca06726678bbdc1433be7de243d61182dc6eb7f093",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -262906,48 +263335,66 @@
       "id": "german_46_bonus_1_hint"
     },
     {
-      "text": "Needle. Which letters are missing?",
-      "file": "voice_en_e5c30b071ee90d729a6b.ogg",
-      "seconds": 2.9113832199546485,
-      "bytes": 17362,
-      "sha256": "b61dc80518c1812025c8592f77857269020595bf5bc7cb529d60beb32843b3e8",
+      "text": "The word is Needle. Which letters are missing?",
+      "file": "voice_en_76fec7a710b40e086cb4.ogg",
+      "seconds": 3.4686621315192743,
+      "bytes": 20657,
+      "sha256": "f888d489bb6c496fea7d04acf0ced33a061a3a1e4d8ed075d0b1a1c2a3ede5c8",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6833736300468445,
+        "decoded_peak": 0.6804203987121582,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.33093,
+          "seconds": 0.12771
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.574739,
+          "seconds": 0.22059
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.644399,
+          "end": 0.760499,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "nˈiːdəl.",
-          "start": 0.23805,
-          "end": 0.772109,
-          "seconds": 0.534059
+          "start": 0.830159,
+          "end": 1.294558,
+          "seconds": 0.464399
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.121769,
-          "end": 1.342358,
+          "start": 1.644218,
+          "end": 1.864807,
           "seconds": 0.22059
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.400408,
-          "end": 1.771927,
-          "seconds": 0.371519
+          "start": 1.911247,
+          "end": 2.317596,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.818367,
-          "end": 1.934467,
-          "seconds": 0.1161
+          "start": 2.364036,
+          "end": 2.503356,
+          "seconds": 0.13932
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 1.980907,
-          "end": 2.480136,
-          "seconds": 0.499229
+          "start": 2.549796,
+          "end": 3.037415,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -262962,9 +263409,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Needle. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "dc221e57d05b6051d29087ecefd1f8cf5e8d31e82bbdf7a7de05ddd9d6c94e7c",
+        "synthesis_text": "The word is Needle. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "7f8c5e0f4cb5874b998d5dca06726678bbdc1433be7de243d61182dc6eb7f093",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -263084,54 +263531,72 @@
       "id": "german_46_bonus_2_hint"
     },
     {
-      "text": "Gearwheel. Which two letters are missing?",
-      "file": "voice_en_63991af545720838a0d7.ogg",
-      "seconds": 3.2712925170068026,
-      "bytes": 19437,
-      "sha256": "027741756b618b299bc7921ca69152a3c95e6009d3dfb5fa0cdfa5203db56c29",
+      "text": "The word is Gearwheel. Which two letters are missing?",
+      "file": "voice_en_b5ecc6a7e4dbe582560a.ogg",
+      "seconds": 3.8982312925170066,
+      "bytes": 23008,
+      "sha256": "489a594d2645e85b60046a612887a8c8540daee2b6a35634e50911be217c42ea",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6917158961296082,
+        "decoded_peak": 0.6837475299835205,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
-          "phonemes": "ɡˈiəwiːl.",
-          "start": 0.24966,
-          "end": 0.876599,
-          "seconds": 0.626939
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.28449,
+          "seconds": 0.08127
         },
         {
-          "phonemes": "wˌɪtʃ",
-          "start": 1.214649,
-          "end": 1.400408,
-          "seconds": 0.18576
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.667619,
+          "seconds": 0.301859
         },
         {
-          "phonemes": "tˈuː",
-          "start": 1.516508,
-          "end": 1.702268,
-          "seconds": 0.18576
-        },
-        {
-          "phonemes": "lˈɛtəz",
-          "start": 1.771927,
-          "end": 2.189887,
-          "seconds": 0.417959
-        },
-        {
-          "phonemes": "ɑː",
-          "start": 2.224717,
-          "end": 2.352426,
+          "phonemes": "ɪz",
+          "start": 0.702449,
+          "end": 0.830159,
           "seconds": 0.12771
         },
         {
+          "phonemes": "ɡˈiəwiːl.",
+          "start": 0.888209,
+          "end": 1.480317,
+          "seconds": 0.592109
+        },
+        {
+          "phonemes": "wˌɪtʃ",
+          "start": 1.853197,
+          "end": 2.027347,
+          "seconds": 0.17415
+        },
+        {
+          "phonemes": "tˈuː",
+          "start": 2.166667,
+          "end": 2.329206,
+          "seconds": 0.16254
+        },
+        {
+          "phonemes": "lˈɛtəz",
+          "start": 2.375646,
+          "end": 2.747166,
+          "seconds": 0.371519
+        },
+        {
+          "phonemes": "ɑː",
+          "start": 2.828435,
+          "end": 2.944535,
+          "seconds": 0.1161
+        },
+        {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.387256,
-          "end": 2.898095,
-          "seconds": 0.510839
+          "start": 3.002585,
+          "end": 3.490204,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -263146,13 +263611,28 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Gearwheel. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "afb52066bd747a060b72b8532714b736d1ec0cdb3ac78a1a854c3fff154daeb0",
+        "synthesis_text": "The word is Gearwheel. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "5fe427c22f5e6d2a37ba0f20ca720650525cb1f0058001fc8b5831573c02a7e7",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "id": "german_47"
+      "id": "german_47",
+      "pronunciation_review": {
+        "policy": "Later lexical review; original phonemes and synthesis settings verified equal; not regenerated",
+        "original_manifest_sha256": "7ad56edbabd08a1b9e8192946ef9a7f245f86b1c7061d1dbebc2c5a3b402e1a3",
+        "reviewed_generation_profile": {
+          "revision": "articulated-stress-3",
+          "length_scale": 1.18,
+          "noise_scale": 0.5,
+          "noise_w_scale": 0.6,
+          "volume": 0.68,
+          "lead_seconds": 0.18,
+          "tail_seconds": 0.35,
+          "sentence_pause_seconds": 0.28,
+          "pronunciation_revision": "lexical-stress-1"
+        }
+      }
     },
     {
       "text": "Say the word slowly. Match each missing sound to the groups of letters.",
@@ -263268,48 +263748,66 @@
       "id": "german_47_hint"
     },
     {
-      "text": "Gearwheel. Which letters are missing?",
-      "file": "voice_en_4550103aea3f4c39ee47.ogg",
-      "seconds": 2.9113832199546485,
-      "bytes": 17177,
-      "sha256": "82c15fd191060b67548f97b2beab2a37d6b0c96504cfa99fc6c69eb941569ee4",
+      "text": "The word is Gearwheel. Which letters are missing?",
+      "file": "voice_en_e725ad1cf53af4d1b7a6.ogg",
+      "seconds": 3.64281179138322,
+      "bytes": 21913,
+      "sha256": "95367ffb0efa236c6858ceabbae760e148d3b9740f35458bee16a18b92bc1d07",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6843608617782593,
+        "decoded_peak": 0.7011284232139587,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.21483,
+          "end": 0.31932,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.609569,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.795329,
+          "seconds": 0.13932
+        },
+        {
           "phonemes": "ɡˈiəwiːl.",
-          "start": 0.22644,
-          "end": 0.899819,
-          "seconds": 0.673379
+          "start": 0.888209,
+          "end": 1.515147,
+          "seconds": 0.626939
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.226259,
-          "end": 1.435238,
+          "start": 1.864807,
+          "end": 2.073787,
           "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.470068,
-          "end": 1.853197,
-          "seconds": 0.383129
+          "start": 2.097007,
+          "end": 2.503356,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.899637,
-          "end": 2.004127,
-          "seconds": 0.10449
+          "start": 2.573016,
+          "end": 2.689116,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.062177,
-          "end": 2.514966,
-          "seconds": 0.452789
+          "start": 2.735556,
+          "end": 3.223175,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -263324,9 +263822,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Gearwheel. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "9ae48b4e3fe88417e46663c72a2878d894e4ef6c2c42fdc522e7ce449b55e2e1",
+        "synthesis_text": "The word is Gearwheel. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "d25b7a4203e463e3dd72c13575b13270e889d1f0840dda67bc9b3c28f0b74c41",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -263446,48 +263944,66 @@
       "id": "german_47_bonus_1_hint"
     },
     {
-      "text": "Gearwheel. Which letters are missing?",
-      "file": "voice_en_4550103aea3f4c39ee47.ogg",
-      "seconds": 2.9113832199546485,
-      "bytes": 17177,
-      "sha256": "82c15fd191060b67548f97b2beab2a37d6b0c96504cfa99fc6c69eb941569ee4",
+      "text": "The word is Gearwheel. Which letters are missing?",
+      "file": "voice_en_e725ad1cf53af4d1b7a6.ogg",
+      "seconds": 3.64281179138322,
+      "bytes": 21913,
+      "sha256": "95367ffb0efa236c6858ceabbae760e148d3b9740f35458bee16a18b92bc1d07",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6843608617782593,
+        "decoded_peak": 0.7011284232139587,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.21483,
+          "end": 0.31932,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.35415,
+          "end": 0.609569,
+          "seconds": 0.25542
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.656009,
+          "end": 0.795329,
+          "seconds": 0.13932
+        },
+        {
           "phonemes": "ɡˈiəwiːl.",
-          "start": 0.22644,
-          "end": 0.899819,
-          "seconds": 0.673379
+          "start": 0.888209,
+          "end": 1.515147,
+          "seconds": 0.626939
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.226259,
-          "end": 1.435238,
+          "start": 1.864807,
+          "end": 2.073787,
           "seconds": 0.20898
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.470068,
-          "end": 1.853197,
-          "seconds": 0.383129
+          "start": 2.097007,
+          "end": 2.503356,
+          "seconds": 0.406349
         },
         {
           "phonemes": "ɑː",
-          "start": 1.899637,
-          "end": 2.004127,
-          "seconds": 0.10449
+          "start": 2.573016,
+          "end": 2.689116,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.062177,
-          "end": 2.514966,
-          "seconds": 0.452789
+          "start": 2.735556,
+          "end": 3.223175,
+          "seconds": 0.487619
         }
       ],
       "generation_profile": {
@@ -263502,9 +264018,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Gearwheel. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "9ae48b4e3fe88417e46663c72a2878d894e4ef6c2c42fdc522e7ce449b55e2e1",
+        "synthesis_text": "The word is Gearwheel. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "d25b7a4203e463e3dd72c13575b13270e889d1f0840dda67bc9b3c28f0b74c41",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -264164,54 +264680,72 @@
       "id": "german_48_bonus_2_hint"
     },
     {
-      "text": "Roots. Which two letters are missing?",
-      "file": "voice_en_09f73fdfc947b2959dc3.ogg",
-      "seconds": 3.282902494331066,
-      "bytes": 19766,
-      "sha256": "fd6f9cead30574db0475fd697342b3f9ae14e1b7af9249ed46c631b105f409a5",
+      "text": "The word is Roots. Which two letters are missing?",
+      "file": "voice_en_9aea0af9072319407c46.ogg",
+      "seconds": 4.107210884353742,
+      "bytes": 25305,
+      "sha256": "0af3042532564e50f017903a795594f39e06486e39722d6c47200c810da6ae81",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.7820330262184143,
+        "decoded_peak": 0.6858149766921997,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.30771,
+          "seconds": 0.10449
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.714059,
+          "seconds": 0.348299
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.795329,
+          "end": 0.899819,
+          "seconds": 0.10449
+        },
+        {
           "phonemes": "ɹˈuːts.",
-          "start": 0.23805,
-          "end": 0.864989,
-          "seconds": 0.626939
+          "start": 1.004308,
+          "end": 1.689297,
+          "seconds": 0.684989
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.203039,
-          "end": 1.388798,
-          "seconds": 0.18576
+          "start": 2.038957,
+          "end": 2.259546,
+          "seconds": 0.22059
         },
         {
           "phonemes": "tˈuː",
-          "start": 1.516508,
-          "end": 1.702268,
+          "start": 2.317596,
+          "end": 2.503356,
           "seconds": 0.18576
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.760317,
-          "end": 2.178277,
+          "start": 2.596236,
+          "end": 3.014195,
           "seconds": 0.417959
         },
         {
           "phonemes": "ɑː",
-          "start": 2.224717,
-          "end": 2.340816,
+          "start": 3.060635,
+          "end": 3.176735,
           "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.398866,
-          "end": 2.863265,
-          "seconds": 0.464399
+          "start": 3.223175,
+          "end": 3.734014,
+          "seconds": 0.510839
         }
       ],
       "generation_profile": {
@@ -264226,9 +264760,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Roots. Which two letters are missing?",
-        "word_count": 6,
-        "sha256": "9533c0473a864113c9f558517c6c2d3114cebbb2b49e855c64696ba679b9fd99",
+        "synthesis_text": "The word is Roots. Which two letters are missing?",
+        "word_count": 9,
+        "sha256": "8ea3b99df27f46275cb5794657047004af36a914ba4181617a38a91586f763a9",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -264348,48 +264882,66 @@
       "id": "german_49_hint"
     },
     {
-      "text": "Roots. Which letters are missing?",
-      "file": "voice_en_f04e467ede05aac626d7.ogg",
-      "seconds": 3.097142857142857,
-      "bytes": 18349,
-      "sha256": "56aa20ae71462f28982356e3e86e712211df6f16685f574c438f7fa499b5ccde",
+      "text": "The word is Roots. Which letters are missing?",
+      "file": "voice_en_14ebbd58465fb9bc424a.ogg",
+      "seconds": 3.666031746031746,
+      "bytes": 21752,
+      "sha256": "d8813bd1ac827d75773993902e30249718fa0be55e1cdac9f08e874965e5df70",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6897844076156616,
+        "decoded_peak": 0.6872649788856506,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.27288,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.656009,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.714059,
+          "end": 0.876599,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "ɹˈuːts.",
-          "start": 0.23805,
-          "end": 0.888209,
-          "seconds": 0.650159
+          "start": 0.981088,
+          "end": 1.619637,
+          "seconds": 0.638549
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.237868,
-          "end": 1.446848,
-          "seconds": 0.20898
+          "start": 1.946077,
+          "end": 2.178277,
+          "seconds": 0.2322
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.493288,
-          "end": 1.934467,
-          "seconds": 0.441179
+          "start": 2.236327,
+          "end": 2.619456,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.050567,
-          "end": 2.131837,
-          "seconds": 0.08127
+          "start": 2.677506,
+          "end": 2.793605,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.178277,
-          "end": 2.689116,
-          "seconds": 0.510839
+          "start": 2.828435,
+          "end": 3.281224,
+          "seconds": 0.452789
         }
       ],
       "generation_profile": {
@@ -264404,9 +264956,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Roots. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "1fb8409bbaf256b23a51feddc993ea8f6655d4392a896abd120bb5f0a08a73a2",
+        "synthesis_text": "The word is Roots. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "73cd6f6a53117faa688eed39d86af7466d9c2e06947b130b21a4cb8c8cf19462",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
@@ -264526,48 +265078,66 @@
       "id": "german_49_bonus_1_hint"
     },
     {
-      "text": "Roots. Which letters are missing?",
-      "file": "voice_en_f04e467ede05aac626d7.ogg",
-      "seconds": 3.097142857142857,
-      "bytes": 18349,
-      "sha256": "56aa20ae71462f28982356e3e86e712211df6f16685f574c438f7fa499b5ccde",
+      "text": "The word is Roots. Which letters are missing?",
+      "file": "voice_en_14ebbd58465fb9bc424a.ogg",
+      "seconds": 3.666031746031746,
+      "bytes": 21752,
+      "sha256": "d8813bd1ac827d75773993902e30249718fa0be55e1cdac9f08e874965e5df70",
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.6897844076156616,
+        "decoded_peak": 0.6872649788856506,
         "ceiling": 0.95,
         "encodes": 1
       },
       "phonetic_units": [
         {
+          "phonemes": "ðə",
+          "start": 0.20322,
+          "end": 0.27288,
+          "seconds": 0.06966
+        },
+        {
+          "phonemes": "wˈɜːd",
+          "start": 0.36576,
+          "end": 0.656009,
+          "seconds": 0.290249
+        },
+        {
+          "phonemes": "ɪz",
+          "start": 0.714059,
+          "end": 0.876599,
+          "seconds": 0.16254
+        },
+        {
           "phonemes": "ɹˈuːts.",
-          "start": 0.23805,
-          "end": 0.888209,
-          "seconds": 0.650159
+          "start": 0.981088,
+          "end": 1.619637,
+          "seconds": 0.638549
         },
         {
           "phonemes": "wˌɪtʃ",
-          "start": 1.237868,
-          "end": 1.446848,
-          "seconds": 0.20898
+          "start": 1.946077,
+          "end": 2.178277,
+          "seconds": 0.2322
         },
         {
           "phonemes": "lˈɛtəz",
-          "start": 1.493288,
-          "end": 1.934467,
-          "seconds": 0.441179
+          "start": 2.236327,
+          "end": 2.619456,
+          "seconds": 0.383129
         },
         {
           "phonemes": "ɑː",
-          "start": 2.050567,
-          "end": 2.131837,
-          "seconds": 0.08127
+          "start": 2.677506,
+          "end": 2.793605,
+          "seconds": 0.1161
         },
         {
           "phonemes": "mˈɪsɪŋ?",
-          "start": 2.178277,
-          "end": 2.689116,
-          "seconds": 0.510839
+          "start": 2.828435,
+          "end": 3.281224,
+          "seconds": 0.452789
         }
       ],
       "generation_profile": {
@@ -264582,9 +265152,9 @@
         "pronunciation_revision": "lexical-stress-1"
       },
       "pronunciation": {
-        "synthesis_text": "Roots. Which letters are missing?",
-        "word_count": 5,
-        "sha256": "1fb8409bbaf256b23a51feddc993ea8f6655d4392a896abd120bb5f0a08a73a2",
+        "synthesis_text": "The word is Roots. Which letters are missing?",
+        "word_count": 8,
+        "sha256": "73cd6f6a53117faa688eed39d86af7466d9c2e06947b130b21a4cb8c8cf19462",
         "control": "stress phonemes where matched; native contextual fallback",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },

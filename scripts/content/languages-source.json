@@ -887,6 +887,16 @@
       "de": "Meer",
       "en": "sea",
       "ru": "море"
+    },
+    "cap": {
+      "de": "Kappe",
+      "en": "cap",
+      "ru": "кепка"
+    },
+    "beanie": {
+      "de": "Wollmütze",
+      "en": "woolly hat",
+      "ru": "вязаная шапка"
     }
   },
   "heroes": {
