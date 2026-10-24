@@ -59,6 +59,9 @@ evidence, without the neutral APK or an unsigned bundle download. Push builds
 still build both variants; pull requests still build only neutral without family
 secrets. Existing signing-cache and pinned family-source rules are preserved.
 
+[Device-local avatar import feasibility](AVATAR_IMPORT_FEASIBILITY.md) is an
+assessment only. The current family APK does not implement image import.
+
 ## Google Play bleibt offen
 
 [Vorbereitete Play-Entscheidungen und Datenschutz-/Store-Entwürfe](PLAY_READINESS.md). Es gibt keine Release-Signatur und keine Upload-Freigabe. Offen sind endgültige App-ID, dauerhafter Signierschlüssel mit sicherem Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte/Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben. Keine Uploadbereitschaft wird behauptet.
