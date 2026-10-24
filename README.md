@@ -6,6 +6,8 @@ Ein **offline spielbares Lernabenteuer für Klasse 1–2**, derzeit mit anspruch
 
 **Hier beginnen:** [Qualität, Architektur, Prüfstand und Grenzen](docs/QUALITY_ASSURANCE.md). Dort sind technische Testerfolge, offene fachliche Prüfungen und nicht nachgewiesene Lernwirkungen getrennt. [Bedienung](docs/experience.md) · [Inhaltsquellen und Redaktion](docs/CONTENT_AUTHORING.md) · [Android](docs/android.md) · [Sprachprüfung](docs/voice.md) · [Manuelle Abnahme](docs/ACCEPTANCE.md) · [Offene Play-Schritte](docs/PLAY_READINESS.md).
 
+[Visual asset IP audit and private-review procedure](docs/qa/VISUAL_IP_AUDIT.md) · [Redacted visual inventory](docs/qa/visual-ip-manifest.json).
+
 ## Entwickeln und prüfen
 
 Benötigt: **Godot 4.7.2**, Python 3 und FFmpeg; für grafische Prüfungen eine Anzeige oder `xvfb-run`. Die neutrale Variante benötigt keine Familien-Assets oder Tokens.
