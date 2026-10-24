@@ -68,6 +68,12 @@ jobs:
           GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
             python3 scripts/android/build.py --release --variant public \
               --tools "$RUNNER_TEMP/tools" --output build/android-release
+      - name: Measure neutral download without upload credentials
+        if: success() && steps.signing.outputs.ready == 'true'
+        run: |
+          python3 scripts/android/size_report.py \
+            --bundle build/android-release/kinderwelt-release-neutral.aab \
+            --tools "$RUNNER_TEMP/tools" --output build/android-release/size
       - name: Retain only the verified neutral bundle and technical checks
         if: success() && steps.signing.outputs.ready == 'true'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -80,6 +86,10 @@ jobs:
             build/android-release/aab-manifest.xml
             build/android-release/aab-validation.txt
             build/android-release/aab-signature.txt
+            build/android-release/size/*.json
+            build/android-release/size/*.csv
+            build/android-release/size/*.md
+            build/android-release/size/*.log
           if-no-files-found: error
           retention-days: 7
       - name: Remove private temporary signing files even after export failure

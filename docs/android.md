@@ -84,6 +84,76 @@ is required. This is a seven-day CI artifact, not permanent archival storage.
 
 ## Google Play bleibt offen
 
+### Package 2: measured download size and budget
+
+The standalone report uses checksum-pinned bundletool 1.18.2 and the pinned JDK,
+with a fixed device specification: **arm64-v8a, German, API 36, 480 dpi**.
+Only neutral bundles are accepted. It runs `build-apks` and `get-size total`,
+then repeats the latter with `--modules=base`. The difference is the additional
+install-time asset download, not an invented estimate from the AAB file length.
+
+```sh
+python3 scripts/android/size_report.py \
+  --bundle build/android-delivery/kinderwelt-unsigned-neutral.aab \
+  --tools /workspace/tools --output build/size-neutral-new
+```
+
+Use a new output directory. Results: `size-report.json`, `SIZE_REPORT.md`, the
+actual bundletool CSVs/logs and `device.json`. In CI the report is also visible
+in the job summary and numeric annotations. The normal Android workflow measures
+neutral PR/push/manual builds (family-only runs skip it); the protected manual
+release job measures its verified neutral AAB before artifact upload. Reports
+are included in the respective existing seven-day Actions artifacts. APK-set
+measurement caches are temporary and never uploaded.
+
+No signing key is required: bundletool uses an isolated JVM/Android home without
+a debug keystore and creates **unsigned, non-installable measurement APK sets**.
+No key is generated. The source AAB is checked unchanged after the measurement.
+
+The speech/music/graphics/engine/other figures also come from **bundletool**, not
+from multiplying ZIP or source-directory sizes. For each category, a disposable
+diagnostic APK set omits that category; all surviving compressed ZIP entry bytes
+are copied verbatim. `get-size total` is run again and subtracted from the full
+download. These are **marginal contributions**, including ZIP/gzip interactions;
+they are not additive, independently installable packages or measured savings
+from an encoder change. Diagnostic copies are discarded, and no audio/image is
+transcoded. Raw-copy ZIP32 probes are tested with stored/deflated payloads,
+streaming data descriptors, CRC checks and unchanged compressed bytes.
+
+`BASE_WARNING_BYTES` is an internal **190,000,000-byte** base-module budget. A
+larger measured base prints an Actions warning and still succeeds; a failed
+measurement must fail rather than report a false pass. A larger total download
+does not mean the base module exceeds that budget.
+
+**Play limits checked on 2026-10-24** against Google's
+[official size-limit documentation](https://support.google.com/googleplay/android-developer/answer/9859372?hl=en):
+base module **500 MB**, individual asset pack **1.5 GB**, cumulative modules plus
+install-time packs **4 GB**. The internal 190 MB threshold is deliberately not
+presented as Google's limit. The same documentation describes a non-blocking
+large-download notice over 200 MB on mobile data. Play Console's compressed-size
+calculation remains authoritative; Google's [bundletool documentation](https://developer.android.com/tools/bundletool)
+describes the CLI estimate, which is similar but not identical to Play's.
+
+The first local measurement of the verified 0.9.4 neutral acceptance bundle was
+**274.734 MB initial**, **27.914 MB base**, **246.819 MB additional install-time
+assets**. Marginals: speech **182.033 MB**, music **43.432 MB**, graphics **22.103
+MB**, engine/Android code **26.117 MB**, other (including fonts/metadata) **1.051
+MB**. These numbers are for the stated device/locale, not every possible device
+and not a Play Console acceptance result. All three offline speech languages
+remain included even when the measurement device locale is German.
+
+Options below are **analysis only**; no media or delivery logic was changed:
+
+| Possible change | Explicit planning scenario, not verified encoder savings | Work/acceptance needed |
+|---|---|---|
+| Lower Vorbis speech quality | A hypothetical 25–40% reduction of the measured speech contribution gives roughly **45–73 MB** less initial download | Re-encode from retained originals, regenerate manifests/integrity data, then human listening acceptance under [ACCEPTANCE](ACCEPTANCE.md) in all three languages; no intelligibility claim from bitrate alone |
+| Language packs through Play Asset Delivery | If two of three equally sized speech packs were deferred, the initial download could drop by roughly **121 MB**; real language sizes and overhead must be measured | Godot currently exports one install-time resource pack. Per-language delivery needs Gradle/export packaging changes and a Godot Android/Play Core bridge, download/error/retry state, offline availability and new privacy/device checks. It is a separate architecture project, not a configuration toggle |
+| Lower music bitrate | A hypothetical 25–40% reduction of its measured contribution gives roughly **11–17 MB** | Re-encode only after agreement; listening/loop checks and source/licence/manifests must be preserved |
+
+The present neutral base is below the internal budget. The larger initial
+download is principally an offline asset-size question, not evidence of an
+oversized base module. No Play upload readiness is claimed.
+
 ### Package 1: operator-configured neutral upload signing
 
 Development exports above retain their debug APK and unsigned AAB. A separate

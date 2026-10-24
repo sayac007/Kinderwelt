@@ -4,6 +4,56 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Play preparation: package 2 size measurement (0.9.4 / 17)
+
+Measurement implementation: `c4bdb9b9526fae95a5e4304044f1e79d2fea8a87`;
+additional test-only orchestration check: `d2d28897`. Measured on 2026-10-24.
+[Reproduction, method, official limits and analysis-only options](android.md).
+
+| Pinned bundletool, arm64 / de / API 36 / 480 dpi | Local fixture bytes | CI neutral preview bytes |
+|---|---:|---:|
+| Initial download including install-time assets | 274,733,766 | 274,734,124 |
+| Base module | 27,914,395 | 27,914,648 |
+| Additional install-time assets (difference) | 246,819,371 | 246,819,476 |
+| Internal base warning budget | 190,000,000 — **PASS** | 190,000,000 — **PASS** |
+
+The verified local input is the **neutral disposable-fixture AAB** from package
+1, application commit `c147947a`, not an operator-signed Play release. The report
+records clean measurement provenance, input hash and unchanged source bundle.
+Marginal contributions also measured by bundletool: speech 182,033,094 bytes,
+music 43,431,958, graphics 22,103,106, engine/Android code 26,117,001, other including
+fonts/metadata 1,050,726. They are **not additive**: diagnostic APK sets omit one
+category with surviving compressed entries copied verbatim, then rerun get-size.
+These unsigned/non-installable sets are discarded; no media is re-encoded, no
+source AAB changed, and no signing key is used/created. The generated CI-summary
+Markdown matched the retained report exactly.
+
+- **PASS:** complete public `tests/run.sh`, **189 Python tests**, 12,750 quest /
+  4,168 world / 1,231 reward checks, 62 avatar import/privacy/restart checks and
+  existing layout, speech, lifecycle, fresh-import and content/QA guards.
+- **PASS:** 11 size regressions: raw numeric CSV, classification, exact compressed
+  bytes/CRC and streaming-descriptor preservation, APK-set targeting metadata,
+  neutral-only inputs, source immutability, signing-secret isolation and the
+  warning path completing successfully above budget. Oversized data in this
+  orchestration test is explicitly a tool fixture, not a measured large bundle.
+- **PASS:** actionlint, local documentation/CI references and `git diff --check`.
+- [Neutral CI run 40113455357](https://github.com/sayac007/Kinderwelt/actions/runs/40113455357):
+  **PASS** at `c4bdb9b9`: actual neutral APK/unsigned AAB rebuilt and verified,
+  real bundletool measurement completed and reports uploaded in
+  [android-development-artifacts](https://github.com/sayac007/Kinderwelt/actions/runs/40113455357/artifacts/12567781464).
+  Numeric CI annotations independently expose the measured values without
+  depending on an artifact download. CI marginals: speech 182,033,105 bytes, music
+  43,431,860, graphics 22,103,156, engine/Android code 26,117,026, other 1,051,098.
+  The small local/CI difference reflects different fixture/preview builds; these
+  are separately labelled results, not an assertion of byte-identical bundles.
+
+Google's official limits were checked separately: base **500 MB**, individual
+asset pack **1.5 GB**, cumulative modules/install-time packs **4 GB**. The 190 MB
+budget is internal. Play Console's similar but non-identical size calculation,
+other device profiles, protected real-key release signing, reviewer protection,
+Play acceptance and hardware remain **NOT VERIFIED**. All three speech languages
+remain included. No per-run report or hash inventory was added to `docs/qa/`.
+
 ## Play preparation: package 1 (0.9.4 / 17)
 
 Verified code commit: `c147947a13bea587076bcfbfad581ec050637856`, 2026-10-24.
