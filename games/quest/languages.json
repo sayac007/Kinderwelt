@@ -542,9 +542,9 @@
       "ru": "Выбрать своё изображение персонажа"
     },
     "avatar_pick": {
-      "de": "PNG vom Gerät auswählen",
-      "en": "Choose a PNG from this device",
-      "ru": "Выбрать файл ПНГ на устройстве"
+      "de": "Bild vom Gerät auswählen",
+      "en": "Choose an image from this device",
+      "ru": "Выбрать изображение на устройстве"
     },
     "avatar_help": {
       "de": "Hilfe",
@@ -552,14 +552,14 @@
       "ru": "Помощь"
     },
     "avatar_help_text": {
-      "de": "Nutze eine PNG-Datei mit transparentem Hintergrund. Bitte deine Bild-KI, nur den Hintergrund zu entfernen und die ganze Figur zu zeigen. Kleidung und weiße Fellstellen dürfen bleiben. In der Vorschau kannst du das Ergebnis ausprobieren. Dein Bild bleibt auf diesem Gerät.",
-      "en": "Use a PNG with a transparent background. Ask your image AI to remove only the background and show the whole character. Keep clothes and white fur. Try the result in the preview. Your image stays on this device.",
-      "ru": "Выбери изображение ПНГ с прозрачным фоном. Попроси свою нейросеть убрать только фон и показать персонажа целиком. Одежду и белую шерсть оставь. Посмотри результат в предпросмотре. Твоё изображение останется на этом устройстве."
+      "de": "Wähle JPEG, PNG oder WebP. Fotos werden als runder Bildausschnitt gezeigt: verschieben und mit zwei Fingern oder den Tasten zoomen. Für eine ganze Figur nutze ein PNG mit transparentem Hintergrund; Kleidung und weißes Fell bleiben. Eigene Kostüme können schon im Bild sein. Es gibt keine automatische Freistellung oder Kostümerzeugung. Gespeichert wird nur eine verkleinerte App-Kopie ohne Kameradaten. Dein Original bleibt unverändert.",
+      "en": "Choose JPEG, PNG or WebP. Photos use a round portrait: drag and zoom with two fingers or the buttons. For a whole figure, use a PNG with a transparent background; clothes and white fur are kept. Your image can already include its own costume. Background removal and costume generation are not automatic. Only a smaller app copy without camera metadata is saved. Your original is unchanged.",
+      "ru": "Выбери JPEG, PNG или WebP. Фотография показывается в круге: двигай изображение и меняй масштаб двумя пальцами или кнопками. Для целого персонажа выбери ПНГ с прозрачным фоном; одежда и белая шерсть сохраняются. Костюм уже может быть на изображении. Фон не удаляется и костюмы не создаются автоматически. Сохраняется только уменьшенная копия без данных камеры. Исходный файл не меняется."
     },
     "avatar_preview_hint": {
-      "de": "Passt die Figur auf hellem und dunklem Hintergrund?",
-      "en": "Does your character look right on both backgrounds?",
-      "ru": "Хорошо ли виден персонаж на светлом и тёмном фоне?"
+      "de": "Passt dein Bild? Du bestätigst es erst unten.",
+      "en": "Does your image look right? Confirm it below.",
+      "ru": "Нравится результат? Подтверди его внизу."
     },
     "avatar_use": {
       "de": "Mit dieser Figur spielen",
@@ -592,14 +592,14 @@
       "ru": "Выбери файл ПНГ. В разделе «Помощь» есть подсказка."
     },
     "avatar_too_large": {
-      "de": "Das Bild ist zu groß. Nutze höchstens 4096 × 4096 Bildpunkte und 10 MB.",
-      "en": "This image is too large. Use at most 4096 × 4096 pixels and 10 MB.",
-      "ru": "Изображение слишком большое. Нужно не больше 4096 × 4096 точек и 10 мегабайт."
+      "de": "Das Bild ist zu groß. Höchstens 4096 × 4096 Pixel und 20 MiB.",
+      "en": "This image is too large. Use at most 4096 × 4096 pixels and 20 MiB.",
+      "ru": "Изображение слишком большое. Нужно не больше 4096 × 4096 точек и 20 мебибайт."
     },
     "avatar_invalid": {
-      "de": "Dieses Bild lässt sich nicht öffnen. Probiere eine andere PNG-Datei.",
-      "en": "This image cannot be opened. Try another PNG.",
-      "ru": "Не получилось открыть изображение. Попробуй другой файл ПНГ."
+      "de": "Dieses Bild lässt sich nicht öffnen. Probiere ein anderes Bild.",
+      "en": "This image cannot be opened. Try another image.",
+      "ru": "Не получилось открыть изображение. Попробуй другое."
     },
     "avatar_empty": {
       "de": "Auf diesem Bild ist nichts zu sehen. Wähle ein anderes Bild.",
@@ -645,6 +645,51 @@
       "de": "Dabei wird auch deine eigene Spielfigur aus der App gelöscht. Das Originalbild auf deinem Gerät bleibt erhalten.",
       "en": "This also deletes your imported character from the app. The original image on your device is kept.",
       "ru": "При этом твой импортированный персонаж тоже будет удалён из приложения. Исходное изображение на устройстве останется."
+    },
+    "avatar_images": {
+      "de": "Bilder",
+      "en": "Images",
+      "ru": "Изображения"
+    },
+    "avatar_format": {
+      "de": "Bitte wähle ein JPEG-, PNG- oder WebP-Bild.",
+      "en": "Choose a JPEG, PNG or WebP image.",
+      "ru": "Выбери изображение в формате JPEG, PNG или WebP."
+    },
+    "avatar_privacy": {
+      "de": "Die App-Kopie bleibt auf diesem Gerät. Die App lädt sie nicht hoch, teilt sie nicht und schließt sie von Backups aus.",
+      "en": "The app copy stays on this device. The app does not upload or share it and excludes it from backups.",
+      "ru": "Копия в приложении остаётся на этом устройстве. Приложение не отправляет её, не делится ею и исключает её из резервных копий."
+    },
+    "avatar_figure": {
+      "de": "Ganze Figur",
+      "en": "Whole figure",
+      "ru": "Целый персонаж"
+    },
+    "avatar_portrait": {
+      "de": "Runder Ausschnitt",
+      "en": "Round portrait",
+      "ru": "Круглый портрет"
+    },
+    "avatar_crop_hint": {
+      "de": "Im Kreis verschieben, mit zwei Fingern oder − / + zoomen. Für die ganze Figur ist Transparenz nötig.",
+      "en": "Drag inside the circle; pinch or use − / + to zoom. A whole figure needs transparency.",
+      "ru": "Двигай изображение в круге. Меняй масштаб двумя пальцами или кнопками − / +. Для целого персонажа нужен прозрачный фон."
+    },
+    "avatar_crop_reset": {
+      "de": "Ausschnitt zurücksetzen",
+      "en": "Reset crop",
+      "ru": "Сбросить обрезку"
+    },
+    "avatar_zoom_out": {
+      "de": "Verkleinern",
+      "en": "Zoom out",
+      "ru": "Уменьшить"
+    },
+    "avatar_zoom_in": {
+      "de": "Vergrößern",
+      "en": "Zoom in",
+      "ru": "Увеличить"
     },
     "bonus": {
       "de": "Bonusaufgabe",

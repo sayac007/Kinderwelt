@@ -93,6 +93,8 @@ def check_payload(names,app_root=None):
     assert not any('gut' in n.lower() for n in assets),'Development framework packaged'
     assert not any(any(old+'.png' in n for old in ['mina','leo','sam','jule']) for n in assets),'Replaced character artwork packaged'
     assert any(n.startswith('core/quest/pet.gdshader') for n in assets),'Missing animated cat shader'
+    assert any(n.startswith('core/quest/avatar_image.gd') for n in assets),'Missing bounded image decoder'
+    assert any(n.startswith('core/quest/avatar_circle.gdshader') for n in assets),'Missing avatar crop preview shader'
     return len(assets)
 
 def elf_alignment(data):

@@ -21,13 +21,13 @@ Die Lizenzoption setzt voraus, dass der Betreiber die Android-SDK-Lizenz akzepti
 
 ## Konfigurierbare, vorläufige Identität
 
-Version **0.9.4 / 17**. `project.godot` is the single editable version source (`config/version` and `config/version_code`); the builder fills both export presets from it. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@` und Versionsplatzhalter, die der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
+Version **0.9.5 / 18**. `project.godot` is the single editable version source (`config/version` and `config/version_code`); the builder fills both export presets from it. `scripts/android/app-config.json` hält ausdrücklich die vorläufige Testkennung `org.example.kinderwelt`. Eine endgültige Paketkennung ist noch nicht entschieden. `--package-id` überschreibt nur den aktuellen Build; `export_presets.cfg` enthält `@KINDERWELT_PACKAGE_ID@` und Versionsplatzhalter, die der Builder ersetzt. Android-Exporte deshalb über das Skript ausführen. Ungültige Bezeichner und Java-Schlüsselwörter werden vor dem Export abgelehnt; die Prüfung vergleicht anschließend die explizit erwartete Identität.
 
 | Build | Paket bei Standardkonfiguration | Launchername |
 |---|---|---|
 | Standard, gewählte Variante | `org.example.kinderwelt` | Kinderwelt |
-| Private Vorschau | `org.example.kinderwelt.preview.family.v090` | Kinderwelt 0.9.4 Privat Test |
-| Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v090` | Kinderwelt 0.9.4 Public Test |
+| Private Vorschau | `org.example.kinderwelt.preview.family.v090` | Kinderwelt 0.9.5 Privat Test |
+| Öffentliche Vorschau | `org.example.kinderwelt.preview.neutral.v090` | Kinderwelt 0.9.5 Public Test |
 
 Der Testkanal `preview_channel=v090` ist unabhängig von der Versionsnummer, damit spätere Builds mit demselben Zertifikat als Update installierbar bleiben. Die alten 0.8.1-Schlüssel waren flüchtig und sind nicht wiederherstellbar. 0.9.0 wird deshalb parallel installiert; alte Punkte werden nicht automatisch zwischen Paketen übertragen. Für die vollständig gelöste erste Runde gibt es im Elternbereich eine ausdrückliche manuelle Bestätigung zur einmaligen Übernahme der 3200 früher verdienten Punkte. Die alte App nicht deinstallieren, wenn ihre Daten gebraucht werden.
 
@@ -59,12 +59,14 @@ evidence, without the neutral APK or an unsigned bundle download. Push builds
 still build both variants; pull requests still build only neutral without family
 secrets. Existing signing-cache and pinned family-source rules are preserved.
 
-[Device-local PNG avatar import](AVATAR_IMPORT_FEASIBILITY.md) is implemented
-for 0.9.4. Only the parents area adds/replaces/removes images; chooser Help is
-read-only. The build still rejects every permission and additionally verifies
-compiled cloud/device-transfer backup exclusions. Native device checks remain open.
+[Device-local character images](AVATAR_IMPORT_FEASIBILITY.md) now support JPEG,
+PNG and static WebP in 0.9.5 / 18, including EXIF orientation and a drag/pinch crop
+editor. Only the parents area adds/replaces/removes images; chooser Help is
+read-only. Existing transparent figures and points are preserved. The build still
+rejects every permission and verifies compiled cloud/device-transfer exclusions.
+Native checks on Android 13+ and 10–12 remain **NOT VERIFIED**.
 
-Current **0.9.4 / 17** family-only download (2026-10-24):
+Previous **0.9.4 / 17** family-only download (2026-10-24):
 [kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671/artifacts/12564507418),
 from [successful manual run 40105564671](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671),
 commit `f892418ac23a4d79a3e442082fd92c5c5117f343`. One private artifact,

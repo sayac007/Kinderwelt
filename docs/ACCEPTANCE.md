@@ -37,6 +37,25 @@ Ausgabe nach `qa-results/` oder private Testablage; keine neuen Einzelprotokolle
 
 Nur für das eigene autorisierte Testgerät: `adb install -r DATEI.apk` aktualisiert bei passender Signatur. Ein `INSTALL_FAILED_UPDATE_INCOMPATIBLE` ist ein Abbruchgrund; kein automatisches Deinstallieren. Für die Abnahme mindestens ein kleines, leistungsschwaches Gerät und ein weiteres Displayformat wählen. Emulatorergebnisse getrennt kennzeichnen. Desktop-Godot-Notifications und Fenstergrößenänderungen sind keine Android-Geräteprüfung.
 
+## Device-local character image: additional release checks
+
+Use only the synthetic fixtures from `tests/fixtures/avatar/` for recorded tests;
+never put real child/family images in screenshots, bug reports or CI artifacts.
+Run the following on **at least one Android 13+ device and one Android 10–12
+device**, recording actual results rather than assuming desktop equivalence:
+
+| Check | Required observation |
+|---|---|
+| System selection | From the parents area, select local JPEG, PNG and WebP; cancel/back and reselect. **If media/storage/camera permission is requested, stop and report; do not add a permission.** |
+| Orientation and crop | Import mirrored/rotated synthetic EXIF examples. Drag and pinch; also use the zoom/reset buttons. Rotate the phone mid-edit. Preview/crop remain usable and confirmation saves the selected region. |
+| Display and looks | Portrait and transparent full figure play in all seven scenes and task companions. Built-in looks stay available for bundled figures; custom images show their supplied clothes and have no incompatible wardrobe masks. |
+| Privacy and deletion | Confirm only from parents; chooser help has no editing/deletion controls. Cancel/rejected input preserves the previous image and points. Parent deletion/reset removes the app copy. The device original remains unchanged. |
+| Restart/update/backup | Update an existing 0.9.4 custom figure to 0.9.5 with the same package/certificate; points and legacy PNG pixels remain. Test actual backup/device-transfer exclusions separately; manifest verification is not a restore test. |
+
+These checks remain **NOT VERIFIED on physical devices** until executed. The
+existing parent navigation is not identity/age verification. No camera, sharing,
+cloud synchronisation, automatic background removal or costume generation is added.
+
 ## Unabhängige Inhaltsprüfung
 
 Je Fach und Sprache alle 50 Grundaufgaben und beide Boni ansehen/hören. Referenzquellen: [Redaktionsquellen](CONTENT_AUTHORING.md), `science-properties.tsv`, `science-models.json`, `pedagogy-base.tsv` und aktuelle generierte Aufgaben. Prüfen: sachlich richtige und eindeutige Lösung, plausible falsche Optionen, Bild-/Begriffsübereinstimmung, kurze verständliche Sprache, Hinweis mit Denkschritt ohne Lösung, Bonus tatsächlich anspruchsvoller und freiwillig, Zahlraum/Lesebelastung passend. Konkrete Gegenbeispiele sind wichtiger als Kategorienübereinstimmung.
