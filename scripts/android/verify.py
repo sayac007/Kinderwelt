@@ -15,7 +15,9 @@ VERSION=identity.CONFIG['version_name']
 CODE=identity.CONFIG['version_code']
 
 def command(args):
-    return subprocess.check_output([str(x) for x in args],stderr=subprocess.STDOUT,text=True)
+    # Java writes JAVA_TOOL_OPTIONS notices to stderr. They are diagnostics,
+    # not part of bundletool's XML/JSON stdout, even on a successful command.
+    return subprocess.check_output([str(x) for x in args],stderr=subprocess.PIPE,text=True)
 
 def check_manifest(root,package=PACKAGE):
     identity.validate_package(package)

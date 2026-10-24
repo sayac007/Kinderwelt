@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -69,6 +70,13 @@ class ReleaseGuardTests(unittest.TestCase):
         env['PATH'] = '/tools'
         self.assertEqual(signing.export_environment(env), {'PATH': '/tools'})
 
+    def test_verification_tool_diagnostics_do_not_corrupt_manifest_stdout(self):
+        spec = importlib.util.spec_from_file_location('verify_release_io_test', ROOT / 'scripts/android/verify.py')
+        verifier = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(verifier)
+        result = verifier.command([sys.executable, '-c', 'import sys; print("Picked up JAVA_TOOL_OPTIONS: fixture", file=sys.stderr); print("<manifest />")'])
+        self.assertEqual(result, '<manifest />\n')
+
     def test_base64_material_is_private_and_always_removed(self):
         values = {'KINDERWELT_UPLOAD_KEYSTORE': 'base64:' + base64.b64encode(b'synthetic-not-a-key').decode()}
         with tempfile.TemporaryDirectory() as directory:
@@ -112,6 +120,20 @@ class ReleaseGuardTests(unittest.TestCase):
         self.assertNotIn('.private', text)
         self.assertIn('Release signing SKIPPED', text)
         self.assertIn('--release --variant public', text)
+
+    def test_actual_ci_preflight_skips_without_secrets(self):
+        # Run the exact workflow shell block, not a mirrored implementation.
+        text = (ROOT / '.github/workflows/android-release.yml').read_text()
+        block = text.split('        run: |\n', 1)[1].split('      - ', 1)[0]
+        shell = '\n'.join(line[10:] for line in block.splitlines())
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / 'outputs'
+            env = signing.export_environment()
+            env['GITHUB_OUTPUT'] = str(output)
+            result = subprocess.run(['bash', '-e', '-c', shell], env=env, text=True, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(output.read_text(), 'ready=false\n')
+            self.assertIn('Release signing SKIPPED', result.stdout)
 
 
 class RealUploadSignatureTests(unittest.TestCase):

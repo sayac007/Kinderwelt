@@ -79,8 +79,7 @@ def materialize(values, directory, root=ROOT):
         if not data or len(data) > MAX_KEYSTORE_BYTES:
             raise ValueError('Upload keystore must contain 1 byte to 1 MiB')
         temporary = Path(directory) / 'upload.keystore'
-        with temporary.open('xb') as stream:
-            temporary.chmod(0o600)
+        with os.fdopen(os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600), 'wb') as stream:
             stream.write(data)
         key = temporary
     else:
