@@ -47,6 +47,18 @@ Für vertrauenswürdige Pushes und manuelle Läufe erzeugt der Workflow nach Ein
 
 Artefakte werden sieben Tage aufbewahrt und entstehen erst nach erfolgreichem Export/Upload. Ein Push oder lokal bestandener Build beweist keinen erfolgreichen Remote-Lauf. Geräteprüfungen sind separat erforderlich.
 
+For a family-only device test, run `android.yml` manually with `variant=family`:
+
+```sh
+gh workflow run android.yml --ref YOUR_BRANCH -f variant=family
+```
+
+This manual selection builds only the family cast. Its private Actions artifact
+`kinderwelt-family-test` contains `kinderwelt-debug-family.apk` and technical
+evidence, without the neutral APK or an unsigned bundle download. Push builds
+still build both variants; pull requests still build only neutral without family
+secrets. Existing signing-cache and pinned family-source rules are preserved.
+
 ## Google Play bleibt offen
 
 [Vorbereitete Play-Entscheidungen und Datenschutz-/Store-Entwürfe](PLAY_READINESS.md). Es gibt keine Release-Signatur und keine Upload-Freigabe. Offen sind endgültige App-ID, dauerhafter Signierschlüssel mit sicherem Schlüsselspeicher/Play App Signing, Datenschutztext, Data-Safety-Angaben, Kinder-Zielgruppe und Families-Regeln, Altersfreigabe, Store-Texte/Screenshots, interne Gerätetests und die zum Veröffentlichungszeitpunkt gültigen Play-Vorgaben. Keine Uploadbereitschaft wird behauptet.

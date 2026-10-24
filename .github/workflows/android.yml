@@ -1,5 +1,17 @@
 name: Android verification builds
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      variant:
+        description: Variant to build for this manual test run
+        type: choice
+        default: both
+        options:
+          - both
+          - family
+          - neutral
 permissions:
   contents: read
 jobs:
@@ -57,11 +69,18 @@ jobs:
         run: |
           python3 scripts/variants.py prepare --variant public --output .
           python3 -m unittest discover -s tests/android -v
-      - name: Build both separately installable APKs and unsigned bundles
+      - name: Build selected separately installable APKs and unsigned bundles
         if: github.event_name != 'pull_request'
+        env:
+          BUILD_VARIANT: ${{ github.event_name == 'workflow_dispatch' && inputs.variant || 'both' }}
         run: |
+          case "$BUILD_VARIANT" in
+            both) set -- ;;
+            family|neutral) set -- --variants "$BUILD_VARIANT" ;;
+            *) echo '::error::Unsupported build variant'; exit 1 ;;
+          esac
           GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
-            python3 scripts/android/build_variants.py --tools "$RUNNER_TEMP/tools"
+            python3 scripts/android/build_variants.py --tools "$RUNNER_TEMP/tools" "$@"
       - name: Verify neutral Android export for pull requests without private secrets
         if: github.event_name == 'pull_request'
         run: |
@@ -70,10 +89,23 @@ jobs:
       - name: Attach offline listening examples from the actual bundled speech
         run: python3 scripts/qa/listening_pack.py --output build/android-delivery/kinderwelt-listening.html
       - name: Retain APKs, unsigned bundles and technical evidence; no source repository or tokens
-        if: always()
+        if: always() && !(github.event_name == 'workflow_dispatch' && inputs.variant == 'family')
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: android-development-artifacts
           path: build/android-delivery/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Retain only the requested family APK and technical evidence
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.variant == 'family'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: kinderwelt-family-test
+          path: |
+            build/android-delivery/kinderwelt-debug-family.apk
+            build/android-delivery/delivery.json
+            build/android-delivery/family/*.json
+            build/android-delivery/family/*.txt
+            build/android-delivery/family/*.log
           if-no-files-found: error
           retention-days: 7
