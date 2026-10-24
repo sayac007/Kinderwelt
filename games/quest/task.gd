@@ -54,7 +54,7 @@ func setup(owner_host: Control,data: Dictionary,parent: Dictionary={},index := -
 	add_child(picture)
 	companion = preload("res://core/quest/hero.gd").new()
 	companion.person = host.store.data.hero
-	companion.costume = host.store.data.looks[host.store.data.hero]
+	companion.costume = host.store.data.looks.get(host.store.data.hero,"classic")
 	companion.selected = true
 	companion.reduced_motion = host.store.data.reduced_motion
 	add_child(companion)

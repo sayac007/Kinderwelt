@@ -526,6 +526,126 @@
       "en": "Yes, all 320 were completed · restore points",
       "ru": "Да, все 320 были решены · восстановить очки"
     },
+    "avatar_name": {
+      "de": "Meine Figur",
+      "en": "My character",
+      "ru": "Мой персонаж"
+    },
+    "avatar_title": {
+      "de": "Deine eigene Spielfigur",
+      "en": "Your own character",
+      "ru": "Твой собственный персонаж"
+    },
+    "avatar_import": {
+      "de": "Eigene Spielfigur als Bild laden",
+      "en": "Load your own character image",
+      "ru": "Выбрать своё изображение персонажа"
+    },
+    "avatar_pick": {
+      "de": "PNG vom Gerät auswählen",
+      "en": "Choose a PNG from this device",
+      "ru": "Выбрать файл ПНГ на устройстве"
+    },
+    "avatar_help": {
+      "de": "Hilfe",
+      "en": "Help",
+      "ru": "Помощь"
+    },
+    "avatar_help_text": {
+      "de": "Nutze eine PNG-Datei mit transparentem Hintergrund. Bitte deine Bild-KI, nur den Hintergrund zu entfernen und die ganze Figur zu zeigen. Kleidung und weiße Fellstellen dürfen bleiben. In der Vorschau kannst du das Ergebnis ausprobieren. Dein Bild bleibt auf diesem Gerät.",
+      "en": "Use a PNG with a transparent background. Ask your image AI to remove only the background and show the whole character. Keep clothes and white fur. Try the result in the preview. Your image stays on this device.",
+      "ru": "Выбери изображение ПНГ с прозрачным фоном. Попроси свою нейросеть убрать только фон и показать персонажа целиком. Одежду и белую шерсть оставь. Посмотри результат в предпросмотре. Твоё изображение останется на этом устройстве."
+    },
+    "avatar_preview_hint": {
+      "de": "Passt die Figur auf hellem und dunklem Hintergrund?",
+      "en": "Does your character look right on both backgrounds?",
+      "ru": "Хорошо ли виден персонаж на светлом и тёмном фоне?"
+    },
+    "avatar_use": {
+      "de": "Mit dieser Figur spielen",
+      "en": "Play as this character",
+      "ru": "Играть этим персонажем"
+    },
+    "avatar_remove": {
+      "de": "Eigene Figur entfernen",
+      "en": "Remove my character",
+      "ru": "Удалить своего персонажа"
+    },
+    "avatar_clothes": {
+      "de": "Deine Kleidung steckt schon in deinem Bild.",
+      "en": "Your clothes are already part of your image.",
+      "ru": "Одежда уже есть на твоём изображении."
+    },
+    "avatar_png": {
+      "de": "PNG-Bilder",
+      "en": "PNG images",
+      "ru": "Изображения ПНГ"
+    },
+    "avatar_loading": {
+      "de": "Dein Bild wird vorbereitet …",
+      "en": "Preparing your image …",
+      "ru": "Готовим твоё изображение …"
+    },
+    "avatar_png_only": {
+      "de": "Bitte wähle eine PNG-Datei. Hilfe zeigt dir, wie es geht.",
+      "en": "Choose a PNG image. Help shows you how.",
+      "ru": "Выбери файл ПНГ. В разделе «Помощь» есть подсказка."
+    },
+    "avatar_too_large": {
+      "de": "Das Bild ist zu groß. Nutze höchstens 4096 × 4096 Bildpunkte und 10 MB.",
+      "en": "This image is too large. Use at most 4096 × 4096 pixels and 10 MB.",
+      "ru": "Изображение слишком большое. Нужно не больше 4096 × 4096 точек и 10 мегабайт."
+    },
+    "avatar_invalid": {
+      "de": "Dieses Bild lässt sich nicht öffnen. Probiere eine andere PNG-Datei.",
+      "en": "This image cannot be opened. Try another PNG.",
+      "ru": "Не получилось открыть изображение. Попробуй другой файл ПНГ."
+    },
+    "avatar_empty": {
+      "de": "Auf diesem Bild ist nichts zu sehen. Wähle ein anderes Bild.",
+      "en": "This image is completely transparent. Choose another image.",
+      "ru": "Это изображение полностью прозрачное. Выбери другое."
+    },
+    "avatar_opaque": {
+      "de": "Der Hintergrund ist noch nicht transparent. Öffne „Hilfe“.",
+      "en": "The background is not transparent yet. Open Help.",
+      "ru": "Фон пока не прозрачный. Открой «Помощь»."
+    },
+    "avatar_read_failed": {
+      "de": "Das Bild ist nicht erreichbar. Wähle es noch einmal vom Gerät aus.",
+      "en": "This image is not available. Choose it again from this device.",
+      "ru": "Изображение недоступно. Выбери его на устройстве ещё раз."
+    },
+    "avatar_save_failed": {
+      "de": "Dein Bild konnte nicht gespeichert werden. Deine bisherige Figur bleibt erhalten.",
+      "en": "Your image could not be saved. Your previous character is kept.",
+      "ru": "Не удалось сохранить изображение. Твой прежний персонаж остался."
+    },
+    "avatar_manage": {
+      "de": "Eigene Spielfigur als Bild laden",
+      "en": "Load your own character image",
+      "ru": "Выбрать своё изображение персонажа"
+    },
+    "avatar_help_chooser": {
+      "de": "Eigene Figur · Hilfe",
+      "en": "My character · Help",
+      "ru": "Мой персонаж · Помощь"
+    },
+    "avatar_parent_hint": {
+      "de": "Neue Bilder werden im Elternbereich hinzugefügt und entfernt. Dort kann dir ein Erwachsener helfen.",
+      "en": "Add or remove images in the parents area. An adult can help you there.",
+      "ru": "Добавлять и удалять изображения можно в разделе для взрослых. Там тебе может помочь взрослый."
+    },
+    "avatar_native_unavailable": {
+      "de": "Die systemeigene Bildauswahl ist hier nicht verfügbar. Es werden keine zusätzlichen Berechtigungen angefordert.",
+      "en": "The system image picker is not available here. No extra permissions will be requested.",
+      "ru": "Системный выбор изображения недоступен. Дополнительные разрешения не запрашиваются."
+    },
+    "avatar_reset_note": {
+      "de": "Dabei wird auch deine eigene Spielfigur aus der App gelöscht. Das Originalbild auf deinem Gerät bleibt erhalten.",
+      "en": "This also deletes your imported character from the app. The original image on your device is kept.",
+      "ru": "При этом твой импортированный персонаж тоже будет удалён из приложения. Исходное изображение на устройстве останется."
+    },
     "bonus": {
       "de": "Bonusaufgabe",
       "en": "Bonus challenge",

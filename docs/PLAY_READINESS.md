@@ -37,3 +37,24 @@ Keine Aussagen zu nachgewiesener Lernwirkung, Garantien oder angeblicher pädago
 | RU | Мир знаний — приключения | Восемь предметов, герои, загадки и необязательные бонусные задания. |
 
 Langtextgrundlage: 50 Stationen pro Fach mit je zwei freiwilligen Boni; Mathe, Sprache, Logik, Physik, Biologie, Chemie, Mensch und Geografie. Sprachaufgaben mit eigenem Wortschatz in Deutsch, Englisch oder Russisch. Sieben wählbare Kulissen, Punktefortschritt auf dem Gerät und anpassbare Audioeinstellungen. Keine Konten oder Werbung. Zahlen/Features vor Veröffentlichung mit dem tatsächlich freigegebenen Paket erneut abgleichen. Einträge und Screenshots erst nach den offenen Entscheidungen finalisieren.
+
+## Optional device-local avatar processing (0.9.4)
+
+The parent area can select a finished transparent PNG through the system document
+picker. This optionally processes personal image content **on the device**; it is
+not accurate to claim that no personal image is ever processed. Only normalized,
+re-encoded pixels are retained in private app storage. No original copy, source
+URI or EXIF/GPS/camera metadata is retained, and no image is transmitted by the
+app. The original device file remains untouched. Parent removal and reset delete
+the private normalized copy and pending file.
+
+The manifest still declares zero permissions and disables backup. Explicit cloud
+and device-transfer exclusion rules are additionally verified in the compiled
+APK. A synthetic GPS/camera PNG exercises the actual runtime re-encoding and
+deleted-copy behavior. These technical checks do not substitute for native-device
+picker/lifecycle/backup tests. See the [implementation and test boundaries](AVATAR_IMPORT_FEASIBILITY.md).
+
+Before approving Data Safety statements, the operator must distinguish local
+image processing from off-device collection under the current Play definitions
+and check the actual distributed build/SDKs. No console declarations, privacy
+publication, target-audience decision or Google Play/Families approval was changed.

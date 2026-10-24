@@ -32,6 +32,8 @@ checked --headless --audio-driver Dummy --path . -s tests/qa/speech_playback.gd
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_sequences.gd
 checked --headless --audio-driver Dummy --path . -s tests/qa/world_speech.gd
 checked --headless --audio-driver Dummy --path . -s tests/qa/lifecycle.gd
+KINDERWELT_AVATAR_TEST=write checked --headless --audio-driver Dummy --path . -s tests/avatar_import.gd
+KINDERWELT_AVATAR_TEST=read checked --headless --audio-driver Dummy --path . -s tests/avatar_import.gd
 # Verify a shipping-files-only project with an entirely empty import cache.
 mkdir "$STATE/fresh"
 cp -R core games assets project.godot export_presets.cfg "$STATE/fresh/"

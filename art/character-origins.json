@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "reviewed": "2026-10-24",
-  "scope": "All active playable character source images, all five looks, shared NPC/object atlases and PNG backgrounds/UI; not a legal clearance or claim that AI images have no copyright",
+  "scope": "Bundled character source images, five prepared looks, shared NPC/object atlases and PNG backgrounds/UI only; optional device-local custom avatars are user inputs outside this generation registry; not legal clearance or a claim that AI images have no copyright",
   "sources": [
     {
       "path": ".private/characters/wanja.png",

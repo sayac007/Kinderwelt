@@ -37,7 +37,7 @@ func setup(owner_host: Control,area: String) -> void:
 	reduced_motion = host.store.data.reduced_motion
 	hero = preload("res://core/quest/hero.gd").new()
 	hero.person = host.store.data.hero
-	hero.costume = host.store.data.looks[host.store.data.hero]
+	hero.costume = host.store.data.looks.get(host.store.data.hero,"classic")
 	hero.selected = true
 	hero.reduced_motion = reduced_motion
 	add_child(hero)

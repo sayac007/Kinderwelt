@@ -28,7 +28,7 @@ static func clean(value: Variant) -> Dictionary:
 			result[key]=clampf(float(v),1,1.15) if key=="text_scale" else clampf(float(v),0,1)
 	if value.get("hero") is String:
 		var id: String = {"mina":"wanja","leo":"du","sam":"mama","jule":"katze"}.get(value.hero,value.hero)
-		if id in ["wanja","mischa","du","mama","katze","george","squirrel"]: result.hero=id
+		if id in ["wanja","mischa","du","mama","katze","george","squirrel","custom"]: result.hero=id
 	if value.get("music_track") is String and preload("res://core/quest/tracks.gd").ITEMS.has(value.music_track): result.music_track=value.music_track
 	else: result.music_locked=false
 	result.quest=Progress.clean(value.get("quest"))
@@ -37,10 +37,13 @@ func load_save() -> void:
 	data=defaults()
 	if not FileAccess.file_exists(PATH): return
 	data=clean(JSON.parse_string(FileAccess.get_file_as_string(PATH)))
+	if data.hero=="custom" and not preload("res://core/quest/custom_avatar.gd").available():data.hero="wanja"
 func persist() -> Error:
 	var file:=FileAccess.open(PATH+".tmp",FileAccess.WRITE)
 	if file==null: return FileAccess.get_open_error()
 	file.store_string(JSON.stringify(data));file.close()
 	return DirAccess.rename_absolute(PATH+".tmp",PATH)
 func reset() -> Error:
+	var error:=preload("res://core/quest/custom_avatar.gd").erase()
+	if error!=OK:return error
 	data=defaults();return persist()

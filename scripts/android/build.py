@@ -12,6 +12,7 @@ import variants
 sys.path.insert(0,str(ROOT/'scripts/android'))
 import identity
 import debug_key
+import backup_policy
 LOCK=json.loads((ROOT/'scripts/android/toolchain.json').read_text())
 
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
@@ -137,6 +138,7 @@ def main():
         with zipfile.ZipFile(templates/'android_source.zip') as z:z.extractall(android)
         (app/'android/.build_version').write_text('4.7.2.stable\n')
         (android/'gradlew').chmod(0o755)
+        backup_policy.install(android)
         (android/'.gdignore').write_text('')
         wrapper=app/'android/build/gradle/wrapper/gradle-wrapper.properties'
         with wrapper.open('a') as f:f.write('\ndistributionSha256Sum='+LOCK['gradle_sha256']+'\n')

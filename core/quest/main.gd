@@ -10,6 +10,7 @@ var scenery_grid: GridContainer
 var body: VBoxContainer
 var scroll_view: ScrollContainer
 var game_view: Control
+var avatar_manager: Control
 var closing := false
 var layout_pending := false
 var updating_layout := false
@@ -67,6 +68,8 @@ func praise_id() -> String:
 
 func clear() -> void:
 	narration.cancel()
+	if is_instance_valid(avatar_manager):
+		remove_child(avatar_manager);avatar_manager.queue_free();avatar_manager=null
 	if is_instance_valid(game_view):
 		game_view.persist()
 		remove_child(game_view);game_view.queue_free();game_view=null
@@ -146,7 +149,7 @@ func languages() -> void:
 			store.data.locale=locale;save();hub())
 func settings() -> void:
 	clear();button(t("back"),hub)
-	label(("Мир детства" if store.data.locale=="ru" else "Kinderwelt")+" 0.9.0")
+	label(("Мир детства" if store.data.locale=="ru" else "Kinderwelt")+" "+str(ProjectSettings.get_setting("application/config/version","")))
 	button(t("language"),languages)
 	button(t("scenery"),sceneries)
 	button(flag("sound",not store.data.muted),func(): toggle_sound();settings())
@@ -173,11 +176,22 @@ func parents() -> void:
 	label(t("voluntary"))
 	label(t("respect"))
 	label(t("privacy"))
+	button(t("avatar_manage"),manage_avatar)
 	if store.data.quest.archived.size()<preload("res://games/quest/progress.gd").legacy_rewards().size():
 		button(t("restore_old_round"),confirm_old_round)
 	button(t("controls"),settings)
 	button(t("music_sources"),music_credits)
 	button(t("reset"),confirm_reset)
+func manage_avatar() -> void:
+	clear();scroll_view.hide()
+	avatar_manager=preload("res://core/quest/avatar_import.gd").new()
+	add_child(avatar_manager);avatar_manager.setup(self,true,true)
+	avatar_manager.closed.connect(parents)
+	avatar_manager.imported.connect(func():
+		store.data.hero="custom";store.data.quest.hero_chosen=true;save();hub())
+	avatar_manager.removed.connect(func():
+		if store.data.hero=="custom":store.data.hero="wanja"
+		save();parents())
 func confirm_old_round() -> void:
 	clear();label(t("restore_old_explanation"))
 	button(t("cancel"),parents)
@@ -201,15 +215,20 @@ func music_credits() -> void:
 	label(t("piano_credit"))
 func confirm_reset() -> void:
 	clear();label(t("reset_question"))
+	label(t("avatar_reset_note"))
 	button(t("cancel"),parents)
 	button(t("reset_yes"),func():
 		if store.reset()==OK: hub()
 		else: label(t("reset_error")))
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"): hub();get_viewport().set_input_as_handled()
+	if event.is_action_pressed("ui_cancel"): go_back();get_viewport().set_input_as_handled()
+func go_back() -> void:
+	if is_instance_valid(avatar_manager):avatar_manager.handle_back();return
+	if is_instance_valid(game_view) and game_view.handle_avatar_back():return
+	hub()
 func _notification(what: int) -> void:
 	if not is_instance_valid(body): return
-	if what==NOTIFICATION_WM_GO_BACK_REQUEST: hub()
+	if what==NOTIFICATION_WM_GO_BACK_REQUEST: go_back()
 	elif what==NOTIFICATION_WM_CLOSE_REQUEST: shutdown()
 func shutdown() -> void:
 	if closing: return
