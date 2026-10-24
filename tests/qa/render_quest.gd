@@ -39,7 +39,10 @@ func run() -> void:
 		for subject in preload("res://games/quest/progress.gd").SUBJECTS:
 			game.switch_subject(subject)
 			await snap(profile.id+"-"+subject+"-world")
-			for index in (range(8)+[49] if subject in ["math","german","logic"] else [0,19,39,49]):
+			var indices: Array = range(8)+[49] if subject in ["math","german","logic"] else [0,19,39,49]
+			if subject=="physics":indices.append(8)
+			if subject=="body":indices.append(15)
+			for index in indices:
 				game.open_task(index)
 				await snap(profile.id+"-"+subject+"-task-"+str(index))
 				if index==0:

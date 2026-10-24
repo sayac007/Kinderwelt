@@ -2219,12 +2219,12 @@
         "de": {
           "prompt": "Welche beiden Buchstaben fehlen?",
           "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-          "spoken_prompt": "Ballspiel. Welche beiden Buchstaben fehlen?"
+          "spoken_prompt": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?"
         },
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Football. Which two letters are missing?"
+          "spoken_prompt": "The word is Football. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -2342,12 +2342,12 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Ballspiel. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Football. Which letters are missing?"
+              "spoken_prompt": "The word is Football. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -2434,12 +2434,12 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Ballspiel. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Football. Which letters are missing?"
+              "spoken_prompt": "The word is Football. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -8236,7 +8236,7 @@
         "de": {
           "prompt": "Welche beiden Buchstaben fehlen?",
           "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-          "spoken_prompt": "Vogelnest. Welche beiden Buchstaben fehlen?"
+          "spoken_prompt": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?"
         },
         "en": {
           "prompt": "Which two letters are missing?",
@@ -8361,7 +8361,7 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Vogelnest. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
@@ -8453,7 +8453,7 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Vogelnest. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
@@ -10444,12 +10444,12 @@
         "de": {
           "prompt": "Welche beiden Buchstaben fehlen?",
           "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-          "spoken_prompt": "Herzschlag. Welche beiden Buchstaben fehlen?"
+          "spoken_prompt": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?"
         },
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Heartbeat. Which two letters are missing?"
+          "spoken_prompt": "The word is Heartbeat. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -10569,12 +10569,12 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Herzschlag. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Heartbeat. Which letters are missing?"
+              "spoken_prompt": "The word is Heartbeat. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -10661,12 +10661,12 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Herzschlag. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Heartbeat. Which letters are missing?"
+              "spoken_prompt": "The word is Heartbeat. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -10996,7 +10996,7 @@
         "de": {
           "prompt": "Welche beiden Buchstaben fehlen?",
           "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-          "spoken_prompt": "Schildkröte. Welche beiden Buchstaben fehlen?"
+          "spoken_prompt": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?"
         },
         "en": {
           "prompt": "Which two letters are missing?",
@@ -11121,7 +11121,7 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Schildkröte. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
@@ -11213,7 +11213,7 @@
             "de": {
               "prompt": "Welche Buchstaben fehlen?",
               "tip": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
-              "spoken_prompt": "Schildkröte. Welche Buchstaben fehlen?"
+              "spoken_prompt": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?"
             },
             "en": {
               "prompt": "Which letters are missing?",
@@ -12381,7 +12381,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Thought. Which two letters are missing?"
+          "spoken_prompt": "The word is Thought. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -12506,7 +12506,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Thought. Which letters are missing?"
+              "spoken_prompt": "The word is Thought. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -12598,7 +12598,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Thought. Which letters are missing?"
+              "spoken_prompt": "The word is Thought. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -13209,7 +13209,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Rainbow. Which two letters are missing?"
+          "spoken_prompt": "The word is Rainbow. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -13334,7 +13334,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Rainbow. Which letters are missing?"
+              "spoken_prompt": "The word is Rainbow. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -13426,7 +13426,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Rainbow. Which letters are missing?"
+              "spoken_prompt": "The word is Rainbow. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -13490,7 +13490,7 @@
         "ru": {
           "prompt": "Какие две буквы пропущены?",
           "tip": "Медленно произнеси слово. Сравни каждый пропущенный звук с группами букв.",
-          "spoken_prompt": "Сокровище. Какие две буквы пропущены?"
+          "spoken_prompt": "Это слово: Сокровище. Какие две буквы пропущены?"
         }
       },
       "prompt": "Welche beiden Buchstaben fehlen?",
@@ -14037,7 +14037,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Birdhouse. Which two letters are missing?"
+          "spoken_prompt": "The word is Birdhouse. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -14162,7 +14162,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Birdhouse. Which letters are missing?"
+              "spoken_prompt": "The word is Birdhouse. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -14254,7 +14254,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Birdhouse. Which letters are missing?"
+              "spoken_prompt": "The word is Birdhouse. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -14589,7 +14589,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Treetop. Which two letters are missing?"
+          "spoken_prompt": "The word is Treetop. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -14714,7 +14714,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Treetop. Which letters are missing?"
+              "spoken_prompt": "The word is Treetop. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -14806,7 +14806,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Treetop. Which letters are missing?"
+              "spoken_prompt": "The word is Treetop. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -22186,9 +22186,9 @@
       "kind": "discovery",
       "object": "helmet",
       "options": [
+        "cap",
         "helmet",
-        "paper",
-        "flower"
+        "beanie"
       ],
       "answer": "helmet",
       "texts": {
@@ -22374,7 +22374,7 @@
           }
         }
       ],
-      "pedagogical_review": "Safer wording; plausible alternative headgear images are still missing, retain explicit warning."
+      "pedagogical_review": "Compare actual head coverings; soft cotton/wool clothing does not replace an impact-absorbing, fitted bicycle helmet."
     },
     {
       "id": "physics_10",
@@ -52972,8 +52972,8 @@
       "kind": "discovery",
       "object": "brain",
       "options": [
-        "soap",
-        "paper",
+        "beanie",
+        "cap",
         "helmet"
       ],
       "answer": "helmet",
@@ -53160,7 +53160,7 @@
           }
         }
       ],
-      "pedagogical_review": "Safety maintained; alternative headgear artwork still missing, explicit remaining warning."
+      "pedagogical_review": "Compare a fitted bicycle helmet with soft hats; no skull-bone distractor that would also protect the brain."
     },
     {
       "id": "body_17",
@@ -70913,7 +70913,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Footpath. Which two letters are missing?"
+          "spoken_prompt": "The word is Footpath. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -70998,7 +70998,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Footpath. Which letters are missing?"
+              "spoken_prompt": "The word is Footpath. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -71090,7 +71090,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Footpath. Which letters are missing?"
+              "spoken_prompt": "The word is Footpath. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -72017,7 +72017,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Needle. Which two letters are missing?"
+          "spoken_prompt": "The word is Needle. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -72102,7 +72102,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Needle. Which letters are missing?"
+              "spoken_prompt": "The word is Needle. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -72194,7 +72194,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Needle. Which letters are missing?"
+              "spoken_prompt": "The word is Needle. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -72293,7 +72293,7 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Gearwheel. Which two letters are missing?"
+          "spoken_prompt": "The word is Gearwheel. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
@@ -72378,7 +72378,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Gearwheel. Which letters are missing?"
+              "spoken_prompt": "The word is Gearwheel. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -72470,7 +72470,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Gearwheel. Which letters are missing?"
+              "spoken_prompt": "The word is Gearwheel. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -72845,12 +72845,12 @@
         "en": {
           "prompt": "Which two letters are missing?",
           "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-          "spoken_prompt": "Roots. Which two letters are missing?"
+          "spoken_prompt": "The word is Roots. Which two letters are missing?"
         },
         "ru": {
           "prompt": "Какие две буквы пропущены?",
           "tip": "Медленно произнеси слово. Сравни каждый пропущенный звук с группами букв.",
-          "spoken_prompt": "Корешок. Какие две буквы пропущены?"
+          "spoken_prompt": "Это слово: Корешок. Какие две буквы пропущены?"
         }
       },
       "thinking": "auditory spelling and reconstructing missing letter pairs",
@@ -72930,7 +72930,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Roots. Which letters are missing?"
+              "spoken_prompt": "The word is Roots. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",
@@ -73022,7 +73022,7 @@
             "en": {
               "prompt": "Which letters are missing?",
               "tip": "Say the word slowly. Match each missing sound to the groups of letters.",
-              "spoken_prompt": "Roots. Which letters are missing?"
+              "spoken_prompt": "The word is Roots. Which letters are missing?"
             },
             "ru": {
               "prompt": "Какие буквы пропущены?",

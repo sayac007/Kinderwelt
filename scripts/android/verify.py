@@ -50,7 +50,7 @@ def check_payload(names,app_root=None):
     for item in required: assert item in assets,'Missing quest asset: '+item
     for notice in ['assets/quest/OFL.txt','assets/music/licenses/CC-BY-SA-4.0.txt','assets/music/licenses/CC-BY-3.0.txt','assets/music/licenses/CC-BY-SA-3.0.txt','assets/music/licenses/CC-BY-SA-2.5.txt','assets/music/licenses/tnm-MIT.txt','assets/music/licenses/GeneralUser-GS.txt','assets/music/NOTICES.txt']:
         assert notice in assets,'Missing bundled notice: '+notice
-    for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds']:
+    for image in ['landscape','icons','objects','appicon','science-a','science-b','home','castle','adventure-worlds','cap','beanie']:
         assert 'assets/quest/'+image+'.png.import' in assets,'Missing image import: '+image
         assert any(n.startswith('.godot/imported/'+image+'.png-') and n.endswith('.ctex') for n in assets),'Missing actual image texture: '+image
     assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'

@@ -17,6 +17,15 @@ jobs:
         run: bash scripts/ci/install-audio-decoder.sh
       - name: Complete current test suite
         run: GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" bash tests/run.sh
+      - name: Prepare complete offline adult listening review without family images
+        run: python3 scripts/qa/review_pack.py prepare --output build/listening-acceptance
+      - name: Retain complete offline adult listening review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: kinderwelt-full-listening-review
+          path: build/listening-acceptance/
+          if-no-files-found: error
+          retention-days: 7
       - name: Original tasks, science samples, languages and animations at four display profiles
         run: |
           GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" LIBGL_ALWAYS_SOFTWARE=1 \

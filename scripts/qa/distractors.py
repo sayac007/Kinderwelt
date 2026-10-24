@@ -3,8 +3,8 @@
 import argparse,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-# The two unresolved image gaps are intentionally visible review warnings.
-REQUIRES_IMAGES={key:row['reason'] for key,row in json.loads((ROOT/'scripts/content/answer-categories.json').read_text())['exceptions'].items() if key in ('physics_09','body_16')}
+# Explicit image-gap exceptions remain visible until their assets and options are replaced.
+REQUIRES_IMAGES={key:row['reason'] for key,row in json.loads((ROOT/'scripts/content/answer-categories.json').read_text())['exceptions'].items() if row.get('open_image_gap')}
 
 def evaluate(task):
     if task['kind']!='discovery':
@@ -33,7 +33,7 @@ def evaluate(task):
 def markdown(tasks,changes):
     all_tasks=[t for p in tasks for t in [p,*p.get('bonuses',[])]]
     rows=[evaluate(t) for t in all_tasks]
-    document='# Antwortalternativen prüfen\n\nAktueller Prüfstand und verbleibende Warnungen: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die vollständige Prüfung umfasst Grundaufgaben **und Boni**; Einzelbewertungen werden ausschließlich nach `qa-results/distractors.json` geschrieben.\n\nDie kleine, nachvollziehbare Kategorietabelle liegt in `scripts/content/answer-categories.json`. Kategorien sind eine QA-Hilfe und erzeugen keine beliebigen falschen Antworten. Bei Merkmalsboni muss jedes falsche Bild wenigstens eine Aussage erfüllen; nur eine Option darf die geforderte Anzahl erfüllen. Die Richtigkeit der zugrunde liegenden Sachmerkmale ist eine eigene redaktionelle Prüfung.\n\n`pedagogy-base.tsv` erklärt jede neue Grundaufgabenkorrektur. Die 33 ursprünglichen Warnfälle sind als feste Regressionstest-Referenz aufgeführt; Helmaufgaben bleiben wegen fehlender alternativer Kopfbedeckungen ausdrücklich offen. Absichtliche Sicherheits-/Lebewesenkontraste sind begründete Ausnahmen. `distractor-changes.json` dokumentiert die frühere Kuratierung und ist keine Liste aller späteren Änderungen.\n\n```sh\npython3 scripts/content/generate.py\npython3 scripts/qa/distractors.py --check\npython3 scripts/qa/pedagogy.py --check\n```\n\nKeine automatische fachliche oder empirische Freigabe aus einer Kategorienübereinstimmung ableiten.\n'
+    document='# Antwortalternativen prüfen\n\nAktueller Prüfstand und verbleibende Warnungen: [zentraler QA-Überblick](QUALITY_ASSURANCE.md). Die vollständige Prüfung umfasst Grundaufgaben **und Boni**; Einzelbewertungen werden ausschließlich nach `qa-results/distractors.json` geschrieben.\n\nDie kleine, nachvollziehbare Kategorietabelle liegt in `scripts/content/answer-categories.json`. Kategorien sind eine QA-Hilfe und erzeugen keine beliebigen falschen Antworten. Bei Merkmalsboni muss jedes falsche Bild wenigstens eine Aussage erfüllen; nur eine Option darf die geforderte Anzahl erfüllen. Die Richtigkeit der zugrunde liegenden Sachmerkmale ist eine eigene redaktionelle Prüfung.\n\n`pedagogy-base.tsv` erklärt jede neue Grundaufgabenkorrektur. Die 33 ursprünglichen Warnfälle sind als feste Regressionstest-Referenz aufgeführt; Helmaufgaben vergleichen nun den Fahrradhelm mit original KI-generierter Kappe und Wollmütze. Absichtliche Sicherheits-/Lebewesenkontraste sind begründete Ausnahmen. `distractor-changes.json` dokumentiert die frühere Kuratierung und ist keine Liste aller späteren Änderungen.\n\n```sh\npython3 scripts/content/generate.py\npython3 scripts/qa/distractors.py --check\npython3 scripts/qa/pedagogy.py --check\n```\n\nKeine automatische fachliche oder empirische Freigabe aus einer Kategorienübereinstimmung ableiten.\n'
     return document,rows
 
 def main():

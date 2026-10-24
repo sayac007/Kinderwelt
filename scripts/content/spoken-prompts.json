@@ -5,13 +5,16 @@
       "de": "Schau genau. Licht kommt vom Bild. Welcher Körperteil meldet seine Farben ans Gehirn?"
     },
     "german_42": {
-      "de": "Das Wort ist Waldweg. Welche beiden Buchstaben fehlen?"
+      "de": "Das Wort ist Waldweg. Welche beiden Buchstaben fehlen?",
+      "en": "The word is Footpath. Which two letters are missing?"
     },
     "german_42_bonus_1": {
-      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?"
+      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?",
+      "en": "The word is Footpath. Which letters are missing?"
     },
     "german_42_bonus_2": {
-      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?"
+      "de": "Das Wort ist Waldweg. Welche Buchstaben fehlen?",
+      "en": "The word is Footpath. Which letters are missing?"
     },
     "german_50": {
       "de": "Das Wort ist Bastelschere. Welche beiden Buchstaben fehlen?"
@@ -21,6 +24,115 @@
     },
     "german_50_bonus_2": {
       "de": "Das Wort ist Bastelschere. Welche Buchstaben fehlen?"
+    },
+    "german_read": {
+      "de": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+      "en": "The word is Football. Which two letters are missing?"
+    },
+    "german_read_bonus_1": {
+      "de": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+      "en": "The word is Football. Which letters are missing?"
+    },
+    "german_read_bonus_2": {
+      "de": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+      "en": "The word is Football. Which letters are missing?"
+    },
+    "german_12": {
+      "de": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?"
+    },
+    "german_12_bonus_1": {
+      "de": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?"
+    },
+    "german_12_bonus_2": {
+      "de": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?"
+    },
+    "german_20": {
+      "de": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+      "en": "The word is Heartbeat. Which two letters are missing?"
+    },
+    "german_20_bonus_1": {
+      "de": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+      "en": "The word is Heartbeat. Which letters are missing?"
+    },
+    "german_20_bonus_2": {
+      "de": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+      "en": "The word is Heartbeat. Which letters are missing?"
+    },
+    "german_22": {
+      "de": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?"
+    },
+    "german_22_bonus_1": {
+      "de": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?"
+    },
+    "german_22_bonus_2": {
+      "de": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?"
+    },
+    "german_27": {
+      "en": "The word is Thought. Which two letters are missing?"
+    },
+    "german_27_bonus_1": {
+      "en": "The word is Thought. Which letters are missing?"
+    },
+    "german_27_bonus_2": {
+      "en": "The word is Thought. Which letters are missing?"
+    },
+    "german_30": {
+      "en": "The word is Rainbow. Which two letters are missing?"
+    },
+    "german_30_bonus_1": {
+      "en": "The word is Rainbow. Which letters are missing?"
+    },
+    "german_30_bonus_2": {
+      "en": "The word is Rainbow. Which letters are missing?"
+    },
+    "german_33": {
+      "en": "The word is Birdhouse. Which two letters are missing?"
+    },
+    "german_33_bonus_1": {
+      "en": "The word is Birdhouse. Which letters are missing?"
+    },
+    "german_33_bonus_2": {
+      "en": "The word is Birdhouse. Which letters are missing?"
+    },
+    "german_35": {
+      "en": "The word is Treetop. Which two letters are missing?"
+    },
+    "german_35_bonus_1": {
+      "en": "The word is Treetop. Which letters are missing?"
+    },
+    "german_35_bonus_2": {
+      "en": "The word is Treetop. Which letters are missing?"
+    },
+    "german_46": {
+      "en": "The word is Needle. Which two letters are missing?"
+    },
+    "german_46_bonus_1": {
+      "en": "The word is Needle. Which letters are missing?"
+    },
+    "german_46_bonus_2": {
+      "en": "The word is Needle. Which letters are missing?"
+    },
+    "german_47": {
+      "en": "The word is Gearwheel. Which two letters are missing?"
+    },
+    "german_47_bonus_1": {
+      "en": "The word is Gearwheel. Which letters are missing?"
+    },
+    "german_47_bonus_2": {
+      "en": "The word is Gearwheel. Which letters are missing?"
+    },
+    "german_49": {
+      "en": "The word is Roots. Which two letters are missing?",
+      "ru": "Это слово: Корешок. Какие две буквы пропущены?"
+    },
+    "german_49_bonus_1": {
+      "en": "The word is Roots. Which letters are missing?"
+    },
+    "german_49_bonus_2": {
+      "en": "The word is Roots. Which letters are missing?"
+    },
+    "german_31": {
+      "ru": "Это слово: Сокровище. Какие две буквы пропущены?"
     }
   }
 }

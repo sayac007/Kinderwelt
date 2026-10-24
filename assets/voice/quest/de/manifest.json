@@ -6337,19 +6337,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Ballspiel. Welche beiden Buchstaben fehlen?",
-      "file": "voice_de_8bbb7bcd98ae502a9a4b.ogg",
-      "seconds": 4.04,
-      "synthesized_seconds": 3.44,
+      "text": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+      "file": "voice_de_765240d5fbfffc6746fa.ogg",
+      "seconds": 4.52,
+      "synthesized_seconds": 3.92,
       "source_sample_rate": 24000,
-      "source_samples": 82560,
-      "source_waveform_sha256": "36f505cec70fda7f5eda6b01ab9803cad2b9826b04878116de143740eec168fc",
+      "source_samples": 94080,
+      "source_waveform_sha256": "db54a1b773280c3c98aae787c320033e5f38b3d7f26f9074d7ff2aaa178e4dc1",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.34167179465293884,
+        "decoded_peak": 0.5060584545135498,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -6373,28 +6373,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 2956591489,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 100,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Ballspiel. Welche beiden Buchstaben fehlen?",
-        "word_count": 5,
-        "sha256": "283f43a6a90a69c1ff3c5fc0ca649864816e5f116b02134f5bff04a900841c02",
+        "synthesis_text": "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+        "word_count": 8,
+        "sha256": "39c9f426a8310e7f42116d5518c75b59c05344f2ea0decba9b019103caac0614",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 22660,
-      "sha256": "7e189aebbcbf1d9f82eec9aef46eaa8b3cfab05a046fcc36c44d7cca2b9efd1e",
+      "bytes": 26642,
+      "sha256": "3bde4786b6b2d7aeabf7dfdeb10da2de29cb9d8aff6996ee627e721de076bbc1",
       "id": "german_read",
-      "generation_batch_sha256": "9c290b3f89fddf17fc22758e79853eb3968127f5c20c68d0ba2a2e9e7ef65bc8",
-      "playback_gain_db": 6.229778
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 2.817947
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -6457,19 +6457,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Ballspiel. Welche Buchstaben fehlen?",
-      "file": "voice_de_e153e8c5386d1d4105f0.ogg",
-      "seconds": 3.88,
-      "synthesized_seconds": 3.28,
+      "text": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+      "file": "voice_de_f5fddd844216b0847b05.ogg",
+      "seconds": 4.84,
+      "synthesized_seconds": 4.24,
       "source_sample_rate": 24000,
-      "source_samples": 78720,
-      "source_waveform_sha256": "fe49280f6faa773de7961d94e4951365dedf9b607743e44d62ec08d049b14c78",
+      "source_samples": 101760,
+      "source_waveform_sha256": "31ecc164a48bc46a7bb5be8ceba2b71ac7e634c46dce92ef211be1bdf2dc8a21",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.26372310519218445,
+        "decoded_peak": 0.2493751347064972,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -6493,28 +6493,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Ballspiel. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "7f8c3d99b349fe6723f728ebecfa922aaef17aad20aa77e06a07a09839e63342",
+        "synthesis_text": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "92967bd779b15dd8c19287bf57644af4d5698bc3e947f3ffb314d9a5029f900f",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 21744,
-      "sha256": "8010770691d0ec8e402844e478593c52dba2f0fd355940e11cd5f871840ed1de",
+      "bytes": 27257,
+      "sha256": "8acf6fd7c70a736fe2e78918e8d9a242a6dc056aeea10ae614e8b7a30300c1cf",
       "id": "german_read_bonus_1",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 8.478997
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.964898
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -6577,19 +6577,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Ballspiel. Welche Buchstaben fehlen?",
-      "file": "voice_de_e153e8c5386d1d4105f0.ogg",
-      "seconds": 3.88,
-      "synthesized_seconds": 3.28,
+      "text": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+      "file": "voice_de_f5fddd844216b0847b05.ogg",
+      "seconds": 4.84,
+      "synthesized_seconds": 4.24,
       "source_sample_rate": 24000,
-      "source_samples": 78720,
-      "source_waveform_sha256": "fe49280f6faa773de7961d94e4951365dedf9b607743e44d62ec08d049b14c78",
+      "source_samples": 101760,
+      "source_waveform_sha256": "31ecc164a48bc46a7bb5be8ceba2b71ac7e634c46dce92ef211be1bdf2dc8a21",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.26372310519218445,
+        "decoded_peak": 0.2493751347064972,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -6613,28 +6613,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Ballspiel. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "7f8c3d99b349fe6723f728ebecfa922aaef17aad20aa77e06a07a09839e63342",
+        "synthesis_text": "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "92967bd779b15dd8c19287bf57644af4d5698bc3e947f3ffb314d9a5029f900f",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 21744,
-      "sha256": "8010770691d0ec8e402844e478593c52dba2f0fd355940e11cd5f871840ed1de",
+      "bytes": 27257,
+      "sha256": "8acf6fd7c70a736fe2e78918e8d9a242a6dc056aeea10ae614e8b7a30300c1cf",
       "id": "german_read_bonus_2",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 8.478997
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.964898
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -22949,19 +22949,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Vogelnest. Welche beiden Buchstaben fehlen?",
-      "file": "voice_de_375b85254a6d7ee030db.ogg",
-      "seconds": 4.52,
-      "synthesized_seconds": 3.92,
+      "text": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?",
+      "file": "voice_de_123d473f89624732a2d5.ogg",
+      "seconds": 5.32,
+      "synthesized_seconds": 4.72,
       "source_sample_rate": 24000,
-      "source_samples": 94080,
-      "source_waveform_sha256": "b6cf923dd1fe564cd2644383ec71b5ccb1ee408b42b082fe8aa9788b8f05425d",
+      "source_samples": 113280,
+      "source_waveform_sha256": "33a8a549bd8882dec1b89126cbd86ba3b3e74ef20403f742dc1c45261691e7aa",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.29819175601005554,
+        "decoded_peak": 0.46165913343429565,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -22985,28 +22985,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 2956591489,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 100,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Vogelnest. Welche beiden Buchstaben fehlen?",
-        "word_count": 5,
-        "sha256": "c746cc6baa0f6533ee97f1e867329ee765d7a6691a3532de16df55c0965d9e20",
+        "synthesis_text": "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?",
+        "word_count": 8,
+        "sha256": "cf549015e76482cdb2162151a1cad1f8e2d553603996ab193fb5d15298669b2c",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 25630,
-      "sha256": "d99941d1cde0d3a29368564e58f3fb42851a37e2a5719d270f598912089139fa",
+      "bytes": 30568,
+      "sha256": "6d0a2e548cc0a445f35a664ff5e554265e2230ba72cf02d38f8d36c3cfc2a429",
       "id": "german_12",
-      "generation_batch_sha256": "9c290b3f89fddf17fc22758e79853eb3968127f5c20c68d0ba2a2e9e7ef65bc8",
-      "playback_gain_db": 7.412048
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 3.615532
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -23069,19 +23069,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Vogelnest. Welche Buchstaben fehlen?",
-      "file": "voice_de_38c23881e8108f789774.ogg",
-      "seconds": 5.0,
-      "synthesized_seconds": 4.4,
+      "text": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+      "file": "voice_de_27efaf5c27b8b4f9f9f8.ogg",
+      "seconds": 5.4,
+      "synthesized_seconds": 4.8,
       "source_sample_rate": 24000,
-      "source_samples": 105600,
-      "source_waveform_sha256": "c8c4ac979da49eacf2ffe86fd3c2ebc9e3e3d65e50402632f3de572410ab43d5",
+      "source_samples": 115200,
+      "source_waveform_sha256": "594a24d53a8afbc85f55b662f524d0b00f005546145e6ae6bf422b8984db6347",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.36611512303352356,
+        "decoded_peak": 0.2583322525024414,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -23105,28 +23105,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Vogelnest. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "823818f8ea28aaf73f47775ef941b37dc85b1b6a50f056858116b4aabc11290d",
+        "synthesis_text": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "6caa2707c42e641b16bca6dbf610f4dfd72ebd6b23a65a37ece52d4e3b06883a",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 26150,
-      "sha256": "3b2857ed8a4a0f7eb28695c5aa93e46483e32dc5b6b32fc8985a127d17a8157e",
+      "bytes": 31179,
+      "sha256": "57f3ecb29df82f6a97c303ee5475f3503999b6d92fe44347928d8fbb4c26f70b",
       "id": "german_12_bonus_1",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 5.629607
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.658388
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -23189,19 +23189,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Vogelnest. Welche Buchstaben fehlen?",
-      "file": "voice_de_38c23881e8108f789774.ogg",
-      "seconds": 5.0,
-      "synthesized_seconds": 4.4,
+      "text": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+      "file": "voice_de_27efaf5c27b8b4f9f9f8.ogg",
+      "seconds": 5.4,
+      "synthesized_seconds": 4.8,
       "source_sample_rate": 24000,
-      "source_samples": 105600,
-      "source_waveform_sha256": "c8c4ac979da49eacf2ffe86fd3c2ebc9e3e3d65e50402632f3de572410ab43d5",
+      "source_samples": 115200,
+      "source_waveform_sha256": "594a24d53a8afbc85f55b662f524d0b00f005546145e6ae6bf422b8984db6347",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.36611512303352356,
+        "decoded_peak": 0.2583322525024414,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -23225,28 +23225,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Vogelnest. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "823818f8ea28aaf73f47775ef941b37dc85b1b6a50f056858116b4aabc11290d",
+        "synthesis_text": "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "6caa2707c42e641b16bca6dbf610f4dfd72ebd6b23a65a37ece52d4e3b06883a",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 26150,
-      "sha256": "3b2857ed8a4a0f7eb28695c5aa93e46483e32dc5b6b32fc8985a127d17a8157e",
+      "bytes": 31179,
+      "sha256": "57f3ecb29df82f6a97c303ee5475f3503999b6d92fe44347928d8fbb4c26f70b",
       "id": "german_12_bonus_2",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 5.629607
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.658388
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -25829,19 +25829,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Herzschlag. Welche beiden Buchstaben fehlen?",
-      "file": "voice_de_0e281c684b36b1b68dea.ogg",
-      "seconds": 3.8,
-      "synthesized_seconds": 3.2,
+      "text": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+      "file": "voice_de_451af3546709aead5747.ogg",
+      "seconds": 5.16,
+      "synthesized_seconds": 4.56,
       "source_sample_rate": 24000,
-      "source_samples": 76800,
-      "source_waveform_sha256": "aee6a850ec5bf433c82fe946a8a305d4be58c65c6260e653bed8a98f15a04603",
+      "source_samples": 109440,
+      "source_waveform_sha256": "8fb5393baaf2453d52ccdfa77b02e2963652fc3bba57939076080116831de56c",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.40327319502830505,
+        "decoded_peak": 0.27272117137908936,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -25865,28 +25865,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 2956591489,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 100,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Herzschlag. Welche beiden Buchstaben fehlen?",
-        "word_count": 5,
-        "sha256": "775c5bb15c26e350c6926dcb69c3e6a9871db819e61d35f574159b858cd850df",
+        "synthesis_text": "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+        "word_count": 8,
+        "sha256": "7790d71cfc22cbb4837fddd46552ba2d58be6be522beff304729fa184562bb54",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 21674,
-      "sha256": "10a550cc560f683351920037c4b2a6443f1b2721bab46358bebcdfcc03015692",
+      "bytes": 29563,
+      "sha256": "7af776465438f23184d21456c1cb238e6d593c039af3c44c5751049b59813896",
       "id": "german_20",
-      "generation_batch_sha256": "9c290b3f89fddf17fc22758e79853eb3968127f5c20c68d0ba2a2e9e7ef65bc8",
-      "playback_gain_db": 4.789974
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.187584
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -25949,19 +25949,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Herzschlag. Welche Buchstaben fehlen?",
-      "file": "voice_de_80054a4c2e7405243187.ogg",
-      "seconds": 3.96,
-      "synthesized_seconds": 3.36,
+      "text": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+      "file": "voice_de_0ecccf8b3c9ec4d15266.ogg",
+      "seconds": 4.6,
+      "synthesized_seconds": 4.0,
       "source_sample_rate": 24000,
-      "source_samples": 80640,
-      "source_waveform_sha256": "cbccf0d68a2c23db79dc5eb50a6d9b8b595b62f3e5607b10721b5322a6b8c4a4",
+      "source_samples": 96000,
+      "source_waveform_sha256": "81285018b63ef000f28c9e6273e336ca9db0695e5d355fa01f8d21806cd3a386",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.32742902636528015,
+        "decoded_peak": 0.25712090730667114,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -25985,28 +25985,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Herzschlag. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "f12c6f6e50974b450b23d25434196acfe900edb822fa7fa0317845e2d3c8e100",
+        "synthesis_text": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "025e96d0aa7090d8efc77851fa3b43d33fc3f503fc19589207f16b70f790b9f3",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 22347,
-      "sha256": "218ab581ce98fe37effcd809c5dd131d2ceba95cf159d5e47564b9c5a776bf1e",
+      "bytes": 26177,
+      "sha256": "e4fb2fd9e93a8a19e0a869fa49d0d4ab624afd092780b1ca2474a73af95292df",
       "id": "german_20_bonus_1",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 6.599617
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.699213
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -26069,19 +26069,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Herzschlag. Welche Buchstaben fehlen?",
-      "file": "voice_de_80054a4c2e7405243187.ogg",
-      "seconds": 3.96,
-      "synthesized_seconds": 3.36,
+      "text": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+      "file": "voice_de_0ecccf8b3c9ec4d15266.ogg",
+      "seconds": 4.6,
+      "synthesized_seconds": 4.0,
       "source_sample_rate": 24000,
-      "source_samples": 80640,
-      "source_waveform_sha256": "cbccf0d68a2c23db79dc5eb50a6d9b8b595b62f3e5607b10721b5322a6b8c4a4",
+      "source_samples": 96000,
+      "source_waveform_sha256": "81285018b63ef000f28c9e6273e336ca9db0695e5d355fa01f8d21806cd3a386",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.32742902636528015,
+        "decoded_peak": 0.25712090730667114,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -26105,28 +26105,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 3158157138,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 96,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Herzschlag. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "f12c6f6e50974b450b23d25434196acfe900edb822fa7fa0317845e2d3c8e100",
+        "synthesis_text": "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "025e96d0aa7090d8efc77851fa3b43d33fc3f503fc19589207f16b70f790b9f3",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 22347,
-      "sha256": "218ab581ce98fe37effcd809c5dd131d2ceba95cf159d5e47564b9c5a776bf1e",
+      "bytes": 26177,
+      "sha256": "e4fb2fd9e93a8a19e0a869fa49d0d4ab624afd092780b1ca2474a73af95292df",
       "id": "german_20_bonus_2",
-      "generation_batch_sha256": "350756333945e5eeba8f96aee9c0b6eb4c1f305a5a6da74b919836bbdb4aab46",
-      "playback_gain_db": 6.599617
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 8.699213
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -26549,19 +26549,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Schildkröte. Welche beiden Buchstaben fehlen?",
-      "file": "voice_de_d118c4b9065d4382564e.ogg",
-      "seconds": 4.28,
-      "synthesized_seconds": 3.68,
+      "text": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?",
+      "file": "voice_de_8ed8c0057bd013b0f8b0.ogg",
+      "seconds": 5.16,
+      "synthesized_seconds": 4.56,
       "source_sample_rate": 24000,
-      "source_samples": 88320,
-      "source_waveform_sha256": "579c86d29ab7a27a6920a7c26c9e8bb3cbd678e95eb8e9e73095718d96ab3df5",
+      "source_samples": 109440,
+      "source_waveform_sha256": "054515743775acd981b4e317c6b67cf12dadafe8fa07c96ad226fa1f54bdd947",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.2906092405319214,
+        "decoded_peak": 0.3425818085670471,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -26585,28 +26585,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 427840245,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 172,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Schildkröte. Welche beiden Buchstaben fehlen?",
-        "word_count": 5,
-        "sha256": "caea8167dd1cb83d96d5b0157468cc97b995e600a70813b1d78a9d6b7c1b7dd8",
+        "synthesis_text": "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?",
+        "word_count": 8,
+        "sha256": "5fd74721fba71896827a8b80f83ea098bff9e9f80bf580a9687701703485d231",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 24259,
-      "sha256": "a179cf94dd9eb8fe2543938d3277c422175564f963345d111b6788904f38a965",
+      "bytes": 29799,
+      "sha256": "100cdbf564dd938d9f3b53bc149e827e4e665555e585db11c020533750719187",
       "id": "german_22",
-      "generation_batch_sha256": "8aa880610b8df10b75c38717fe1bd2368f56a0f749b5756c6b3a237fb4cc3e46",
-      "playback_gain_db": 7.635772
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 6.206675
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -26669,19 +26669,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Schildkröte. Welche Buchstaben fehlen?",
-      "file": "voice_de_a7edd70df6673b3a0559.ogg",
-      "seconds": 4.12,
-      "synthesized_seconds": 3.52,
+      "text": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+      "file": "voice_de_7109d0d5f67785007bbd.ogg",
+      "seconds": 4.76,
+      "synthesized_seconds": 4.16,
       "source_sample_rate": 24000,
-      "source_samples": 84480,
-      "source_waveform_sha256": "6a6f49692837604a78b4d4ed0df3eeb5310e774c1ab8879ebdbd1e045782210a",
+      "source_samples": 99840,
+      "source_waveform_sha256": "34280173409b9106c09512083a2a7a0a09ed508655756b6d2cb9c912c4a396eb",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.30565330386161804,
+        "decoded_peak": 0.299029141664505,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -26705,28 +26705,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 2399813606,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 100,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Schildkröte. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "9587cc9b26b8355e13789e0d9e538a57c0327f3da49e62acccaa10485e11cb25",
+        "synthesis_text": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "3dcbe9dccb7ba04c3c29ba8218224c413075b20a86354a26387958eb6805893c",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 23156,
-      "sha256": "d02b726e0281f953c89d3702a782c657cec5582b881e9dabcb39f021fc436657",
+      "bytes": 27194,
+      "sha256": "b67cdd1062f2f7708f9d5540f7c9ced64051f95f1fff598a3e535e97bc710da2",
       "id": "german_22_bonus_1",
-      "generation_batch_sha256": "c8689a2ace81bf6a1524fa5deb9eb0f2cc0c5ac42c96c9f39f7a3202420af8b0",
-      "playback_gain_db": 7.197379
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 7.387691
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -26789,19 +26789,19 @@
       "playback_gain_db": 10.545776
     },
     {
-      "text": "Schildkröte. Welche Buchstaben fehlen?",
-      "file": "voice_de_a7edd70df6673b3a0559.ogg",
-      "seconds": 4.12,
-      "synthesized_seconds": 3.52,
+      "text": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+      "file": "voice_de_7109d0d5f67785007bbd.ogg",
+      "seconds": 4.76,
+      "synthesized_seconds": 4.16,
       "source_sample_rate": 24000,
-      "source_samples": 84480,
-      "source_waveform_sha256": "6a6f49692837604a78b4d4ed0df3eeb5310e774c1ab8879ebdbd1e045782210a",
+      "source_samples": 99840,
+      "source_waveform_sha256": "34280173409b9106c09512083a2a7a0a09ed508655756b6d2cb9c912c4a396eb",
       "uniform_waveform_gain": 1.0,
-      "synthesis_threads": 4,
+      "synthesis_threads": 2,
       "encoding": {
         "policy": "decoded-vorbis-peak-1",
         "uniform_gain": 1.0,
-        "decoded_peak": 0.30565330386161804,
+        "decoded_peak": 0.299029141664505,
         "ceiling": 0.95,
         "encodes": 1
       },
@@ -26825,28 +26825,28 @@
         "sentence_pause_seconds": null,
         "runtime_sample_rate": 22050
       },
-      "seed": 2399813606,
+      "seed": 2171124665,
       "generation_parameters": {
         "do_sample": true,
         "subtalker_dosample": true,
-        "max_new_tokens": 100,
+        "max_new_tokens": 160,
         "temperature": 0.65,
         "top_p": 0.85,
         "top_k": 30,
         "subtalker_temperature": 0.65
       },
       "pronunciation": {
-        "synthesis_text": "Schildkröte. Welche Buchstaben fehlen?",
-        "word_count": 4,
-        "sha256": "9587cc9b26b8355e13789e0d9e538a57c0327f3da49e62acccaa10485e11cb25",
+        "synthesis_text": "Das Wort ist Schildkröte. Welche Buchstaben fehlen?",
+        "word_count": 7,
+        "sha256": "3dcbe9dccb7ba04c3c29ba8218224c413075b20a86354a26387958eb6805893c",
         "control": "screened written stress cues; native German spelling otherwise",
         "acoustic_stress_review": "OPEN; lexical contract and ASR do not certify heard syllable stress"
       },
-      "bytes": 23156,
-      "sha256": "d02b726e0281f953c89d3702a782c657cec5582b881e9dabcb39f021fc436657",
+      "bytes": 27194,
+      "sha256": "b67cdd1062f2f7708f9d5540f7c9ced64051f95f1fff598a3e535e97bc710da2",
       "id": "german_22_bonus_2",
-      "generation_batch_sha256": "c8689a2ace81bf6a1524fa5deb9eb0f2cc0c5ac42c96c9f39f7a3202420af8b0",
-      "playback_gain_db": 7.197379
+      "generation_batch_sha256": "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802",
+      "playback_gain_db": 7.387691
     },
     {
       "text": "Sprich das Wort langsam. Vergleiche jeden fehlenden Laut mit den Buchstabengruppen.",
@@ -148829,6 +148829,16 @@
       "Du hast genau hingeschaut. Klasse!",
       "Abwechselnd 2 dazu, dann eins dazu.",
       "Wunderbar! Das hast du gut gemacht."
+    ],
+    "560aaff6bbc9f0664fc5fc764f881ee908ad8dd591b3950eceffd7921cebd802": [
+      "Das Wort ist Ballspiel. Welche beiden Buchstaben fehlen?",
+      "Das Wort ist Vogelnest. Welche beiden Buchstaben fehlen?",
+      "Das Wort ist Herzschlag. Welche beiden Buchstaben fehlen?",
+      "Das Wort ist Schildkröte. Welche beiden Buchstaben fehlen?",
+      "Das Wort ist Ballspiel. Welche Buchstaben fehlen?",
+      "Das Wort ist Vogelnest. Welche Buchstaben fehlen?",
+      "Das Wort ist Herzschlag. Welche Buchstaben fehlen?",
+      "Das Wort ist Schildkröte. Welche Buchstaben fehlen?"
     ]
   },
   "playback_level": {

@@ -31,6 +31,7 @@ export KINDERWELT_SEQUENCE_REPORT=${KINDERWELT_SEQUENCE_REPORT:-"$PROJECT/qa-res
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_playback.gd
 checked --headless --audio-driver Dummy --path . -s tests/qa/speech_sequences.gd
 checked --headless --audio-driver Dummy --path . -s tests/qa/world_speech.gd
+checked --headless --audio-driver Dummy --path . -s tests/qa/lifecycle.gd
 # Verify a shipping-files-only project with an entirely empty import cache.
 mkdir "$STATE/fresh"
 cp -R core games assets project.godot export_presets.cfg "$STATE/fresh/"

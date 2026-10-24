@@ -162,7 +162,9 @@ from experience import expand
 tasks=expand(renew(tasks,languages),languages)
 from pedagogy import apply
 tasks=apply(tasks,languages)
-spoken=json.loads((SOURCE/'spoken-prompts.json').read_text())['tasks']
+spoken_source=json.loads((SOURCE/'spoken-prompts.json').read_text())
+assert set(spoken_source)=={'scope','tasks'},'Unexpected spoken-prompts fields; overrides belong under tasks'
+spoken=spoken_source['tasks']
 by_id={t['id']:t for p in tasks for t in [p,*p['bonuses']]}
 for id,values in spoken.items():
     for locale,prompt in values.items():by_id[id]['texts'][locale]['spoken_prompt']=prompt
