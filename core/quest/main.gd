@@ -173,6 +173,9 @@ func volume_control(title: String,key: String) -> void:
 		store.data[key]=value;audio.sync_settings();narration.sync_settings();save())
 func parents() -> void:
 	clear();button(t("back"),hub)
+	var version:=label(t("app_version")+" "+str(ProjectSettings.get_setting("application/config/version"))+" · "+t("app_version_code")+" "+str(ProjectSettings.get_setting("application/config/version_code")))
+	version.name="release_version"
+	version.add_theme_font_size_override("font_size",roundi(16*store.data.text_scale))
 	label(t("voluntary"))
 	label(t("respect"))
 	label(t("privacy"))

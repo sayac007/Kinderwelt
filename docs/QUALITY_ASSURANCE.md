@@ -4,6 +4,54 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Play preparation: current 0.9.5 / 18
+
+Separate draft changes retain package boundaries: [local images #27](https://github.com/sayac007/Kinderwelt/pull/27)
+and [privacy/Store materials #28](https://github.com/sayac007/Kinderwelt/pull/28).
+[Upload checklist and reproducible commands](play/README.md),
+[three-language tester guide](play/closed-test.md), [open acceptance](play/known-issues.md).
+
+- **Package 4 PASS in CI:** immutable `b87b4d1fcf76f2ef841c652df9930f658dcd26f0`;
+  [quality 40124170330](https://github.com/sayac007/Kinderwelt/actions/runs/40124170330)
+  and [Android 40124170320](https://github.com/sayac007/Kinderwelt/actions/runs/40124170320).
+  Push and PR gates passed. Runtime: 479 new crop/format/orientation checks plus
+  62 existing avatar/privacy/restart checks. JPEG/PNG/static WebP; all eight EXIF
+  orientations; actual synthetic GPS/camera metadata removed; selected crop,
+  private-only storage, points, legacy PNGs, deletion/reset and touch handling.
+  No photo/person input was used. Existing quest/world/reward/speech/layout and
+  fresh-import gates passed. Twenty-four local crop frames were rendered; selected
+  actual phone/landscape views were inspected and reset-button width corrected.
+- Both cast variants' APKs and unsigned AABs passed actual resource/15-notice-byte,
+  identity, signing/alignment, permission and compiled backup-rule checks in the
+  push run above; PR built neutral without family secrets.
+  [Private APK/AAB artifact](https://github.com/sayac007/Kinderwelt/actions/runs/40124170320/artifacts/12572279652)
+  expires after seven days. These remain development identities, **not final Play bundles**.
+- **Package 5 Store CI PASS:** immutable `7a24f94ce42f2be43d66d4263e2f3db38a0fbfa9`,
+  [render run 40125177324](https://github.com/sayac007/Kinderwelt/actions/runs/40125177324).
+  Seventeen dimension-checked neutral PNGs: icon, feature and five 1080×1920
+  phone captures per language; own-image input is a geometric silhouette.
+  Four static, script-free privacy HTML drafts generated. Publication is inactive;
+  `--final` rejects unresolved operator placeholders. Six new Store regressions
+  cover stale listings, privacy publication guards, geometric-only inputs and
+  rejection of family/unknown cast resources. Full current local suite passed
+  **207 Python tests**, including those six, plus existing runtime/content gates.
+- Listing text is generated/checked against actual catalogs: 8 × 50 base tasks,
+  800 bonuses, 7 scenes, 3 languages and 20 music tracks. It contains no learning
+  effectiveness claim. Adult listening, independent pedagogy and empirical
+  learning effects remain separate open work.
+- Package 6 adds only the canonical version/code in parents and test handoff;
+  its new runtime display check and final combined CI results are pending below.
+  No optional report/email button, telemetry or new diagnostic export is added.
+
+**NOT VERIFIED / OPERATOR:** Android 13+ and 10–12 selection/URI/lifecycle,
+real hardware performance/update/backup transfer; complete human listening and
+independent content review; publisher/contact/legal bases/rights, privacy hosting,
+final package/upload key, current audience/rating/Data Safety answers and Play
+track/pre-launch approval. The release-environment API returned 404 here; actual
+required reviewers/deployment restrictions are **not certified** by the workflow
+configuration. No Play setting, production key or family source was changed.
+No pedagogical efficacy or upload-readiness claim follows from these tests.
+
 ## Play preparation: package 3 source and recording notices (0.9.4 / 17)
 
 Code commit: `bb863fae3d1c2072165a5b284ac9d5c0ea13e6bd`, 2026-10-24.
@@ -58,7 +106,7 @@ The English voice card declares only its **dataset** public domain; no separate
 model/output grant is supplied by that card or invented by the new provenance
 notice. Qwen's Apache model licence is not automatically applied to recordings.
 C2PA signature/trust verification remains unperformed. Technical notice delivery
-does not settle these decisions. Packages 4–6 and `docs/qa/` cleanup are untouched.
+does not settle these decisions. At this package-3 snapshot, packages 4–6 and `docs/qa/` cleanup were untouched.
 
 ## Play preparation: package 2 size measurement (0.9.4 / 17)
 

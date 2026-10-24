@@ -59,3 +59,10 @@ materials. This folder contains operator-review drafts, not approval decisions.
 protection, publisher/support/legal decisions, public privacy URL, asset rights,
 audience/rating/Data Safety answers, tester invitations/account requirements,
 actual Play acceptance and production decision. Do not paste keys into chat or Git.
+
+## Closed-test handoff
+
+Use the [DE/EN/RU tester guide](closed-test.md) and [known-issue register](known-issues.md).
+The parents area shows the canonical version/code without collecting diagnostics.
+The optional email/report button is intentionally omitted: reports use the
+operator-selected channel, with no new permission or in-app data-export path.
