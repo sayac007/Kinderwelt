@@ -64,6 +64,16 @@ for 0.9.4. Only the parents area adds/replaces/removes images; chooser Help is
 read-only. The build still rejects every permission and additionally verifies
 compiled cloud/device-transfer backup exclusions. Native device checks remain open.
 
+Current **0.9.4 / 17** family-only download (2026-10-24):
+[kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671/artifacts/12564507418),
+from [successful manual run 40105564671](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671),
+commit `f892418ac23a4d79a3e442082fd92c5c5117f343`. One private artifact,
+**322,605,725 bytes**, expires 2026-10-31. Unzip and install
+`kinderwelt-debug-family.apk`; neutral APK and unsigned AAB are not included.
+The run passed actual APK/AAB resource, identity, signing/alignment, zero-permission
+and backup checks. Failed runs are now explicitly named diagnostic artifacts;
+unverified raw binaries in variant subdirectories are excluded from uploads.
+
 Previous family-only test download (0.9.3, 2026-10-24):
 [kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060/artifacts/12561253077),
 from [successful manual run 40096417060](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060)

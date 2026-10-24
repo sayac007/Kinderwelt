@@ -37,9 +37,11 @@ The previous 0.9.3 tables below remain historical evidence, not newly built file
   **323,927,586 bytes**, SHA-256
   `dcbd1521e0ca6bf25d2aefd2c72a296085f58d6376697a7a89b973b7dd09bb45`.
   This was a dirty-worktree reproduction with the uncommitted fix, not claimed
-  as clean immutable provenance. The fresh CI download is recorded in
-  [Android](android.md) only after that run succeeds. No permission or release
-  key was added.
+  as clean immutable provenance. The fresh [CI run 40105564671](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671)
+  then **succeeded** at fix commit `f892418ac23a4d79a3e442082fd92c5c5117f343`.
+  Its single family-only artifact/download is recorded in [Android](android.md).
+  All **162 Python tests** were also repeated successfully after the backup fix.
+  No permission or release key was added.
 
 A local extra test was initially started while the render script regenerated the
 shared import cache. That concurrent probe was stopped and repeated sequentially:
