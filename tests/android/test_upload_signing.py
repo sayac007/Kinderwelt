@@ -7,6 +7,7 @@ import base64
 import importlib.util
 import json
 import os
+import secrets
 from pathlib import Path
 import shutil
 import subprocess
@@ -120,6 +121,27 @@ class ReleaseGuardTests(unittest.TestCase):
         self.assertNotIn('.private', text)
         self.assertIn('Release signing SKIPPED', text)
         self.assertIn('--release --variant public', text)
+        self.assertIn("if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'", text)
+        self.assertIn('    environment: release\n', text)
+        self.assertIn('TMPDIR: ${{ runner.temp }}/kinderwelt-release', text)
+
+    def test_actual_ci_cleanup_removes_only_its_private_temporary_directory(self):
+        text = (ROOT / '.github/workflows/android-release.yml').read_text()
+        block = text.split('name: Remove private temporary signing files', 1)[1].split('        run: |\n', 1)[1]
+        shell = '\n'.join(line[10:] for line in block.splitlines())
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            private = root / 'kinderwelt-release'
+            private.mkdir()
+            (private / 'synthetic-marker').write_text('Not a real key')
+            keep = root / 'unrelated-file'
+            keep.write_text('Keep this')
+            env = signing.export_environment()
+            env['RUNNER_TEMP'] = str(root)
+            result = subprocess.run(['bash', '-e', '-c', shell], env=env, text=True, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertFalse(private.exists())
+            self.assertEqual(keep.read_text(), 'Keep this')
 
     def test_actual_ci_preflight_skips_without_secrets(self):
         # Run the exact workflow shell block, not a mirrored implementation.
@@ -150,7 +172,8 @@ class RealUploadSignatureTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory(prefix='kinderwelt-upload-test.')
         cls.directory = Path(cls.temp.name)
         cls.key = cls.directory / 'disposable-test.keystore'
-        cls.values = dict(KINDERWELT_UPLOAD_KEYSTORE=str(cls.key), KINDERWELT_UPLOAD_ALIAS='fixture', KINDERWELT_UPLOAD_STORE_PASSWORD='disposable-test-only', KINDERWELT_UPLOAD_KEY_PASSWORD='disposable-test-only')
+        password = secrets.token_urlsafe(32)
+        cls.values = dict(KINDERWELT_UPLOAD_KEYSTORE=str(cls.key), KINDERWELT_UPLOAD_ALIAS='fixture', KINDERWELT_UPLOAD_STORE_PASSWORD=password, KINDERWELT_UPLOAD_KEY_PASSWORD=password)
         env = signing.export_environment()
         env.update(cls.values)
         # Exception expressly allowed by package 1 acceptance: a test-only
@@ -195,7 +218,7 @@ class RealUploadSignatureTests(unittest.TestCase):
                 signing.verify(target, self.java, self.fingerprint)
 
     def test_wrong_password_has_no_secret_diagnostics(self):
-        values = dict(self.values, KINDERWELT_UPLOAD_KEY_PASSWORD='do-not-print-this-password')
+        values = dict(self.values, KINDERWELT_UPLOAD_KEY_PASSWORD=secrets.token_urlsafe(32))
         with self.assertRaises(ValueError) as error:
             signing.sign(self.unsigned, self.directory / 'wrong-password.aab', self.key, self.java, values)
         self.assertNotIn(values['KINDERWELT_UPLOAD_KEY_PASSWORD'], str(error.exception))

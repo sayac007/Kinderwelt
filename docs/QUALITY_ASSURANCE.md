@@ -41,10 +41,29 @@ the original development workflow and all learning/audio/art files are unchanged
 **NOT VERIFIED:** signing with the operator's actual upload key, final package,
 publisher/contact/licence choices, Play upload and all existing device/manual
 acceptance. GitHub returned 404 when dispatching the newly added release workflow
-before it existed on the default branch; its live missing-secrets job remains
-unverified until the operator merges it. The exact preflight script passed locally.
+before it existed on the default branch. After the operator merged #23,
+[live run 40112054573](https://github.com/sayac007/Kinderwelt/actions/runs/40112054573)
+completed successfully: configuration check passed, signing/build/upload steps
+were visibly skipped. The safety input retained the invalid package placeholder,
+so an unexpectedly configured job could not have signed a bundle.
+Environment protection settings and real signing remain unverified.
 Packages 2–6 are separate follow-up PRs, not covered by these results. No real
 upload key, contact information, Play approval or new QA run files were added.
+
+### Release guard follow-up
+
+The review of merged #23 found no tracked keystores/certificates, private-key PEM
+blocks or added long Base64 blocks. Its fixed disposable test passwords matched
+none of the retained run logs; their key directories were gone. The follow-up
+replaces those test passwords with runtime-random values, limits the release job
+to manual `main`, references Environment `release` and adds tested `always()`
+cleanup below `RUNNER_TEMP/kinderwelt-release`. **16 targeted signing/guard tests,
+actionlint and local documentation checks passed.** Gameplay is unchanged.
+[Non-main live dispatch 40112335611](https://github.com/sayac007/Kinderwelt/actions/runs/40112335611)
+skipped the entire job before Environment access, as intended.
+Required reviewers, main-only Environment deployment policy and Environment-scoped
+secrets must be configured and verified by the operator; the metadata API returned
+404, so protection is **NOT VERIFIED**, not asserted from YAML alone.
 
 ## Current avatar-import verification (0.9.4)
 

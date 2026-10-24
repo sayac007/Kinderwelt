@@ -152,12 +152,30 @@ APK by itself. Changing package/signing identity must be planned before testing
 with existing local progress.
 
 The separate `.github/workflows/android-release.yml` has only `workflow_dispatch`
-and read-only repository access. Configure the four `KINDERWELT_UPLOAD_*` secrets
-(use the Base64 representation for the keystore) and the three operator metadata
-repository variables listed above. Supply the final package in its manual input.
+and read-only repository access. Its signing job runs only at `refs/heads/main`
+and declares the GitHub Environment **`release`**. Before storing any real upload
+credentials, the operator must configure that Environment in repository Settings:
+require an explicit reviewer approval, restrict deployment branches to **main**,
+and check that the repository's GitHub plan supports and enforces those rules.
+The YAML references the Environment; it cannot create or guarantee its reviewer
+protection settings. Those settings remain **NOT VERIFIED** until the operator
+checks them. Do not store real upload credentials in an unprotected Environment.
+If the plan cannot enforce both protections, keep CI upload secrets unset and
+use the documented local signing path; do not bypass the reviewer requirement.
+
+Store the four `KINDERWELT_UPLOAD_*` secrets **in the protected release Environment**,
+not as repository/organization-wide secrets (use the Base64 representation for
+the keystore). Remove/migrate any old repository-level copies so other workflows
+cannot read them. Configure the three operator metadata variables there as well.
+Supply the final package in the manual input. Environment approval applies even
+to the first missing-secrets test; after approval it should visibly skip signing.
 With missing configuration it reports **Release signing SKIPPED** and succeeds
 without building. Only a fully verified neutral bundle and its technical reports
-are uploaded. The workflow receives no family-repository token, never checks out
+are uploaded. Decoded signing material stays in a private directory below
+`RUNNER_TEMP/kinderwelt-release`. In addition to per-process finally cleanup, an
+`always()` job step deletes that directory, including after export failure; no
+signing-directory cache or artifact is configured. Hosted-runner teardown covers
+forcible runner termination. The workflow receives no family-repository token, never checks out
 family assets and does not change the production Android verification workflow.
 
 Regression tests use only an isolated, short-lived **disposable test key**, as
