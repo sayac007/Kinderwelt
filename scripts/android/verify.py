@@ -3,6 +3,7 @@
 import sys
 sys.path.insert(0,str(__import__('pathlib').Path(__file__).resolve().parent))
 import identity
+import backup_policy
 import argparse, hashlib, json, re, struct, subprocess, zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -25,6 +26,7 @@ def check_manifest(root,package=PACKAGE):
     assert not root.findall('uses-permission') and not root.findall('uses-permission-sdk-23'),'Unexpected Android permission'
     app=root.find('application');assert app is not None
     assert app.get(ANDROID+'allowBackup')=='false','Backup must be disabled'
+    assert all(app.get(ANDROID+name) for name in backup_policy.FILES),'Missing explicit cloud/device-transfer backup exclusions'
     assert app.get(ANDROID+'extractNativeLibs')=='true','Compressed libraries must be extracted'
     assert app.get(ANDROID+'debuggable','false')=='false','Release bundle must not be debuggable'
     launcher=[a for a in list(app.findall('activity'))+list(app.findall('activity-alias')) if a.find('intent-filter/category[@'+ANDROID+'name="android.intent.category.LAUNCHER"]') is not None]
@@ -56,7 +58,7 @@ def check_payload(names,app_root=None):
     assert any(n.startswith('.godot/imported/Nunito.ttf-') and n.endswith('.fontdata') for n in assets),'Missing actual font resource'
     for script in ['game','world','world_props','vehicle','task','picture','progress','choice']:
         assert any(n.startswith('games/quest/'+script+'.gd') for n in assets),'Missing quest runtime: '+script
-    for script in ['core/quest/score_badge.gd','core/quest/scenery.gd','core/quest/scenery_card.gd','core/mobile.gd','core/quest/wardrobe.gd','core/quest/letter_slots.gd']:
+    for script in ['core/quest/score_badge.gd','core/quest/scenery.gd','core/quest/scenery_card.gd','core/mobile.gd','core/quest/wardrobe.gd','core/quest/letter_slots.gd','core/quest/custom_avatar.gd','core/quest/avatar_import.gd','core/quest/avatar_preview.gd']:
         assert any(n.startswith(script) for n in assets),'Missing score or adaptive screen layout: '+script
     assert any(n.startswith('core/quest/main.gd') for n in assets),'Missing application entry'
     cast=json.loads((app_root/'assets/quest/cast.json').read_text())
@@ -168,6 +170,7 @@ def main():
     xmltree=command([bt/'aapt2','dump','xmltree',apk,'--file','AndroidManifest.xml']);(out/'apk-manifest.txt').write_text(xmltree)
     assert re.search(r'android:extractNativeLibs[^\n]*=true\b',xmltree),'Compressed native libraries must be extracted'
     assert re.search(r'android:allowBackup[^\n]*=false\b',xmltree),'APK backup enabled'
+    apk_data['backup_policy']=backup_policy.verify_apk(bt/'aapt2',apk,xmltree)
     assert re.search(r'android:screenOrientation[^\n]*=13\b',xmltree),'APK orientation mismatch'
     signature=command([bt/'apksigner','verify','--verbose','--print-certs',apk]);(out/'apk-signature.txt').write_text(signature)
     assert 'CN=Godot' in signature and 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature,'Unexpected development signature'

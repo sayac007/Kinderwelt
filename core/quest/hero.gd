@@ -6,6 +6,11 @@ const NAMES = Cast.NAMES
 const IDS := ["wanja","mischa","du","mama","katze","george","squirrel"]
 const SPRITES = Cast.SPRITES
 const Wardrobe=preload("res://core/quest/wardrobe.gd")
+const Avatar=preload("res://core/quest/custom_avatar.gd")
+static func choices() -> Array:
+	var result: Array=IDS.duplicate()
+	if Avatar.available():result.append("custom")
+	return result
 var person := "wanja"
 var costume := "classic"
 var animation := "idle"
@@ -17,6 +22,7 @@ var reaction := 0.0
 var pet: MeshInstance2D
 var pet_size := Vector2.ZERO
 func current_texture() -> Texture2D:
+	if person=="custom" and Avatar.available():return Avatar.texture()
 	var dressed:=Wardrobe.frame(person,costume)
 	return dressed if dressed!=null else SPRITES.get(person,SPRITES.wanja)
 func aspect() -> float:
@@ -74,12 +80,12 @@ func _draw() -> void:
 	var base := Vector2(size.x/2,size.y*.72+bob)
 	var tint := Color.WHITE.lerp(glow,minf(.18,reaction*.12)) if not reduced_motion else Color.WHITE
 	if is_instance_valid(pet):
-		pet.visible = person in ["katze","squirrel"] or costume!="classic"
+		pet.visible = person in ["katze","squirrel","custom"] or costume!="classic"
 		if pet.visible:
 			if texture is AtlasTexture:
 				pet.texture=texture.atlas
-				pet.material.set_shader_parameter("frame_mask",Wardrobe.mask(person))
-				pet.material.set_shader_parameter("mask_id",float(Wardrobe.LOOKS.find(costume)))
+				if person!="custom":pet.material.set_shader_parameter("frame_mask",Wardrobe.mask(person))
+				pet.material.set_shader_parameter("mask_id",0.0 if person=="custom" else float(Wardrobe.LOOKS.find(costume)))
 				var bounds: Rect2=texture.region
 				var atlas_size: Vector2=texture.atlas.get_size()
 				pet.material.set_shader_parameter("atlas_rect",Vector4(bounds.position.x/atlas_size.x,bounds.position.y/atlas_size.y,bounds.size.x/atlas_size.x,bounds.size.y/atlas_size.y))
@@ -94,7 +100,7 @@ func _draw() -> void:
 			pet.scale = Vector2(facing,1)
 			pet.modulate = tint
 			pet.material.set_shader_parameter("phase",clock)
-			pet.material.set_shader_parameter("walking",animation in ["move","climb","swim","moon"] and not reduced_motion)
+			pet.material.set_shader_parameter("walking",person!="custom" and animation in ["move","climb","swim","moon"] and not reduced_motion)
 			pet.material.set_shader_parameter("still",reduced_motion)
 			pet.material.set_shader_parameter("sprite_size",pet_size)
 			pet.material.set_shader_parameter("squirrel",person=="squirrel")

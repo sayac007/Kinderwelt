@@ -20,6 +20,10 @@ var hero_choices: Array[Button] = []
 var start_button: Button
 var chooser_label: Label
 var look_buttons: Array[Button]=[]
+var chooser_ids: Array=[]
+var avatar_panel: Control
+var import_help: Button
+var custom_note: Label
 var last_station := 0
 func setup(owner_host: Control) -> void:
 	host = owner_host
@@ -157,6 +161,7 @@ func arrange() -> void:
 	if is_instance_valid(chooser): arrange_chooser()
 	queue_redraw()
 func hero_name(id: String) -> String:
+	if id=="custom":return host.t("avatar_name")
 	if host.store.data.locale=="ru":
 		var family: bool=preload("res://core/quest/cast.gd").FAMILY
 		return Lang.data().heroes["family" if family else "neutral"][id]
@@ -215,12 +220,13 @@ func choose_hero() -> void:
 	chooser_label = label(host.t("choose"),chooser)
 	chooser_label.add_theme_color_override("font_color",Color("fff4dc"))
 	hero_choices.clear()
-	for id in preload("res://core/quest/hero.gd").IDS:
+	chooser_ids=preload("res://core/quest/hero.gd").choices()
+	for id in chooser_ids:
 		var b := button("",func(): select_hero(id),chooser)
 		b.tooltip_text = hero_name(id)
 		var figure := preload("res://core/quest/hero.gd").new()
 		figure.person = id
-		figure.costume = host.store.data.looks[id]
+		figure.costume = host.store.data.looks.get(id,"classic")
 		figure.animation = "idle"
 		figure.reduced_motion = host.store.data.reduced_motion
 		b.add_child(figure)
@@ -240,13 +246,21 @@ func choose_hero() -> void:
 		caption.add_theme_font_size_override("font_size",10)
 		caption.autowrap_mode=TextServer.AUTOWRAP_ARBITRARY
 		look_buttons.append(look_button)
+	import_help=button("? "+host.t("avatar_help"),open_avatar_help,chooser)
+	import_help.tooltip_text=host.t("avatar_help_chooser")
+	import_help.add_theme_font_size_override("font_size",16)
+	custom_note=label(host.t("avatar_clothes"),chooser)
+	custom_note.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	custom_note.add_theme_font_size_override("font_size",17)
 	start_button = button(host.t("start"),finish_hero,chooser)
 	arrange_chooser()
 	select_hero(host.store.data.hero)
 	host.narration.play_clip("quest/choose",true)
 func arrange_chooser() -> void:
 	var landscape := size.x>size.y*1.3
-	chooser_label.position = Vector2(12,12);chooser_label.size = Vector2(size.x-24,48)
+	chooser_label.position = Vector2(12,12);chooser_label.size = Vector2(size.x-136,48)
+	chooser_label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	chooser_label.add_theme_font_size_override("font_size",20)
 	var count := hero_choices.size()
 	var featured := count>=5 and count%2==1 and not landscape
 	var columns := count if landscape else (3 if count>=7 else 2)
@@ -278,30 +292,37 @@ func arrange_chooser() -> void:
 		look_buttons[i].get_child(0).size=Vector2(26,26)
 		look_buttons[i].get_child(1).position=Vector2(2,27)
 		look_buttons[i].get_child(1).size=Vector2(look_buttons[i].size.x-4,26)
+	import_help.position=Vector2(size.x-112,12);import_help.size=Vector2(100,48)
+	custom_note.position=Vector2(10,size.y-126);custom_note.size=Vector2(size.x-20,54)
 	start_button.position = Vector2(size.x*.14,size.y-65);start_button.size = Vector2(size.x*.72,52)
 func refresh_looks() -> void:
+	var custom: bool=host.store.data.hero=="custom"
+	custom_note.visible=custom
 	var looks: Array=preload("res://core/quest/wardrobe.gd").LOOKS
 	for i in range(look_buttons.size()):
-		var selected_look: bool=host.store.data.looks[host.store.data.hero]==looks[i]
+		look_buttons[i].visible=not custom
+		var selected_look: bool=host.store.data.looks.get(host.store.data.hero,"classic")==looks[i]
 		var style:=StyleBoxFlat.new()
 		style.bg_color=Color("f8d382") if selected_look else Color("fff6df")
 		style.set_corner_radius_all(18)
 		look_buttons[i].add_theme_stylebox_override("normal",style)
 func select_look(look: String) -> void:
+	if host.store.data.hero=="custom":return
 	if look not in preload("res://core/quest/wardrobe.gd").LOOKS:return
 	host.store.data.looks[host.store.data.hero]=look
 	host.save()
-	var index: int=preload("res://core/quest/hero.gd").IDS.find(host.store.data.hero)
+	var index: int=chooser_ids.find(host.store.data.hero)
 	var figure: Control=hero_choices[index].get_child(0)
 	figure.costume=look;figure.react()
 	arrange_chooser();refresh_looks()
 	host.narration.play_clip("quest/look_"+look,true)
 func select_hero(id: String) -> void:
+	if id not in chooser_ids:return
 	host.store.data.hero = id
 	host.save()
 	refresh_looks()
 	for i in range(hero_choices.size()):
-		var chosen: bool = preload("res://core/quest/hero.gd").IDS[i]==id
+		var chosen: bool = chooser_ids[i]==id
 		var style := StyleBoxFlat.new()
 		style.bg_color = Color("31576b") if chosen else Color(1,1,1,0)
 		style.set_corner_radius_all(34)
@@ -318,10 +339,18 @@ func finish_hero() -> void:
 	remove_child(chooser);chooser.queue_free();chooser=null
 	choosing = false
 	world.hero.person = host.store.data.hero
-	world.hero.costume = host.store.data.looks[host.store.data.hero]
+	world.hero.costume = host.store.data.looks.get(host.store.data.hero,"classic")
 	world.set_process(true)
 	update_score()
 	host.narration.play_clip("quest/world_"+world.scene_id() if world.scene_id() in ["tree","seabed","city","moon"] else "quest/walk",true)
+func open_avatar_help() -> void:
+	if is_instance_valid(avatar_panel):return
+	avatar_panel=preload("res://core/quest/avatar_import.gd").new()
+	chooser.add_child(avatar_panel);avatar_panel.setup(host,true,false)
+func handle_avatar_back() -> bool:
+	if not is_instance_valid(avatar_panel):return false
+	avatar_panel.handle_back()
+	return true
 func open_menu() -> void:
 	if is_instance_valid(menu): return
 	menu = Panel.new()

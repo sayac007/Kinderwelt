@@ -1,5 +1,12 @@
 # Herkunft aller aktuell verwendeten Spielfiguren
 
+Scope clarification for 0.9.4: the historical table below concerns **bundled**
+project artwork. Optional device-local PNG avatars are user-provided inputs,
+not part of the preapproved generation registry or a new project authorship
+claim. They are never included in a build or this provenance scan. The current
+[visual audit](qa/VISUAL_IP_AUDIT.md) supersedes the old legacy-origin description
+below with the subsequently discovered C2PA evidence.
+
 Prüfung vom 23. Oktober 2026. Erfasst sind beide Figurenvarianten mit je sieben Figuren und fünf Looks. Die bestehende Gestaltung wird erhalten; es wurden **keine aktuell eingebauten heruntergeladenen Figurenbilder festgestellt**, die jetzt neu ersetzt werden müssten.
 
 | Figurenbestand | Herkunft | Konkreter Nachweis | Behandlung |

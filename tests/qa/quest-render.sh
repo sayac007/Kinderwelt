@@ -23,3 +23,7 @@ cat "$OUTPUT/render.log"
 if ((RESULT!=0)); then exit "$RESULT"; fi
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/render.log"; then exit 1; fi
 python3 scripts/qa/verify_renders.py "$OUTPUT"
+export KINDERWELT_AVATAR_RENDER_OUTPUT="$OUTPUT/avatars"
+timeout 120 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/avatar_render.gd >"$OUTPUT/avatar-render.log" 2>&1
+cat "$OUTPUT/avatar-render.log"
+if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/avatar-render.log"; then exit 1; fi

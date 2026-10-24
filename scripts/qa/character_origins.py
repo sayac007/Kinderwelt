@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify approved generated character sources; not a legal copyright certification."""
+"""Verify bundled generated character sources; not user-selected local avatars."""
 import argparse,hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
