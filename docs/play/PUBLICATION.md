@@ -6,6 +6,23 @@ so existing test installations keep their package/signing identity and local sav
 Release builds reject another package; neither a test identifier nor a development
 certificate is used as a substitute for an upload identity.
 
+## Current delivery
+
+The first operator-key-signed neutral AAB was actually built, verified and
+uploaded in [successful release run 40381017488](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488)
+from `main` `83580881e0e47f72005318753bbc9ebbfd025dd8`, version **0.9.6 / 19**,
+package **`io.github.sayac007.kinderwelt`**. The preflight, export/signature and
+resource/configuration checks, size measurement, upload and key cleanup all
+completed successfully. The operator approved the protected environment first.
+
+[Download `kinderwelt-neutral-upload-signed`](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488/artifacts/12678504174)
+and extract **`kinderwelt-release-neutral.aab`**. The **304,643,817-byte ZIP** also
+contains provenance, verification and size reports. It expires **29 October 2026
+at 19:54 Europe/Berlin**. Archive digest and evidence limits are recorded in the
+[quality overview](../QUALITY_ASSURANCE.md). This client cannot independently
+download/extract the files because the network returns HTTP 403. Signing success
+is verified by CI; Play acceptance remains a separate operator decision.
+
 ## Reviewed content and privacy
 
 This preparation branch starts at `main` commit `75655da2` and integrates the
@@ -40,9 +57,11 @@ In [repository environments](https://github.com/sayac007/Kinderwelt/settings/env
 configure **`release`**, limit deployment to `main`, and add the required human
 reviewer if supported by the account. The source guard also allows only manual
 runs on `main`; a workflow environment name alone does not prove that protection
-rules are configured. The 2026-10-26 environment API check confirms the `main`-only branch rule;
-no required-reviewer protection was present. Secret listing remains inaccessible
-to this client. Configure the human approval before adding signing credentials.
+rules are configured. The latest 2026-10-26 environment API check confirms the `main`-only branch rule,
+required reviewer `sayac007`, self-review allowed and administrator bypass
+disabled. Release run 40381017488 actually waited for the operator's approval.
+Secret values were not read by this client; the live signing/verification checks
+confirmed that the configured credentials work together.
 
 Create/retain your upload key using [the existing local instructions](../android.md)
 or the [browser-only Azure Cloud Shell alternative](../android-cloud-shell.md)
@@ -126,7 +145,7 @@ internal/closed Play test and inspect Play's pre-launch result. No account-speci
 tester-duration requirement or production readiness is claimed here. No PR is
 automatically merged; no Play/Pages publication is performed by this preparation.
 
-## Verified preparation outputs
+## Earlier unsigned preparation outputs
 
 Application commit `dbbff35cd50005b43d6736d231adb47c6357ce1c` passed the full local
 suite (217 Python tests, 18 privacy-view checks and existing gameplay/audio/privacy
@@ -137,8 +156,8 @@ draft-delivery guard before any network call. Actual bundletool initial download
 is 274,754,030 bytes; base 27,914,430 bytes, below the internal 190 MB budget.
 Updated operator-licence/template checks passed after the non-application changes.
 
-Current push CI completed the technical checks but failed on Actions quota during
-artifact retention. See the [central results](../QUALITY_ASSURANCE.md). Original
-policy bytes, earlier evidence and all family sources are preserved. The next
-signing preflight now reports only the four upload-key secrets as missing; the
-operator's publisher/contact and conditional own-asset statement are recorded.
+The earlier push runs failed on artifact quota after technical checks. Subsequent
+main CI and the first real signing/upload run succeeded; see the
+[central results](../QUALITY_ASSURANCE.md). Original policy bytes, permanent QA
+evidence and family sources remain preserved. The four operator credentials were
+configured and successfully exercised in protected release run 40381017488.
