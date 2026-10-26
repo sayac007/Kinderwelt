@@ -39,7 +39,8 @@ class ReleaseGuardTests(unittest.TestCase):
             out = Path(directory) / 'absent'
             cases = [([], 'Release requires --package-id'),
                      (['--package-id', 'org.example.kinderwelt'], 'must be final'),
-                     (['--package-id', 'de.publisher.kinderwelt'], 'KINDERWELT_UPLOAD_KEYSTORE'),
+                     (['--package-id', identity.CONFIG['release_package']], 'KINDERWELT_UPLOAD_KEYSTORE'),
+                     (['--package-id', 'de.publisher.kinderwelt'], 'operator-confirmed'),
                      (['--variant', 'family'], 'neutral/public'),
                      (['--preview'], 'without --preview')]
             for args, message in cases:
@@ -49,8 +50,11 @@ class ReleaseGuardTests(unittest.TestCase):
                 self.assertFalse(out.exists())
 
     def test_operator_placeholders_block_release(self):
-        with self.assertRaisesRegex(ValueError, 'KINDERWELT_PUBLISHER'):
-            signing.metadata({})
+        with tempfile.TemporaryDirectory() as directory:
+            config=Path(directory)/'scripts/android';config.mkdir(parents=True)
+            (config/'release-metadata.json').write_text(json.dumps(dict(publisher='{{PUBLISHER}}',support_email='{{EMAIL}}',asset_license='{{ASSET}}')))
+            with self.assertRaisesRegex(ValueError, 'KINDERWELT_PUBLISHER'):
+                signing.metadata({},Path(directory))
         env = dict(KINDERWELT_PUBLISHER='Synthetic operator fixture', KINDERWELT_SUPPORT_EMAIL='fixture@example.invalid', KINDERWELT_ASSET_LICENSE='Fixture only, no legal approval')
         self.assertEqual(signing.metadata(env)['publisher'], env['KINDERWELT_PUBLISHER'])
         env['KINDERWELT_SUPPORT_EMAIL'] = 'invalid'

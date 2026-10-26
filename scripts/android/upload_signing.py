@@ -34,7 +34,7 @@ def metadata(env=None, root=ROOT):
     env = os.environ if env is None else env
     values = json.loads((Path(root) / 'scripts/android/release-metadata.json').read_text())
     for key, variable in METADATA_ENV.items():
-        value = env.get(variable, values.get(key, '')).strip()
+        value = (env.get(variable) or values.get(key, '')).strip()
         if not value or '{{' in value or '}}' in value:
             raise ValueError('Release operator information is missing: ' + variable)
         values[key] = value

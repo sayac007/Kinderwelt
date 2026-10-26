@@ -27,9 +27,13 @@ class ArtifactPolicyTests(unittest.TestCase):
         for name in ['android.yml', 'test.yml']:
             text = (WORKFLOWS / name).read_text()
             self.assertIn('  push:\n    branches: [main]\n  pull_request:', text)
+        for path in WORKFLOWS.glob('*.yml'):
+            text = path.read_text()
+            if not re.search(r'(?m)^  (?:push|pull_request):', text):
+                continue
             for step in steps(text):
                 if 'uses: actions/upload-artifact@' in step:
-                    with self.subTest(workflow=name, step=step.splitlines()[0]):
+                    with self.subTest(workflow=path.name, step=step.splitlines()[0]):
                         self.assertRegex(step, r"(?m)^        if: .*github.event_name == 'workflow_dispatch'")
 
     def test_private_family_access_requires_explicit_manual_selection(self):

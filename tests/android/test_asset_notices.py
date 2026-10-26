@@ -136,13 +136,17 @@ class AssetNoticeTests(unittest.TestCase):
                         with self.assertRaises(AssertionError):
                             notices.check_archive(archive)
 
-    def test_operator_asset_licence_stays_unselected_and_release_blocked(self):
+    def test_operator_asset_licence_is_explicit_and_never_replaces_upstream_terms(self):
         text = (ROOT / 'ASSETS_LICENSE.md').read_text()
-        self.assertIn('{{ASSET_LIZENZ_DES_BETREIBERS}}', text)
+        decision=json.loads((ROOT/'scripts/android/release-metadata.json').read_text())['asset_license']
+        self.assertIn(decision, text)
         self.assertIn('not a blanket licence', text)
         self.assertIn('dataset', text)
-        with self.assertRaisesRegex(ValueError, 'KINDERWELT_ASSET_LICENSE'):
-            signing.metadata({'KINDERWELT_PUBLISHER': 'Synthetic fixture only', 'KINDERWELT_SUPPORT_EMAIL': 'fixture@example.invalid'})
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);config=root/'scripts/android';config.mkdir(parents=True)
+            (config/'release-metadata.json').write_text(json.dumps(dict(publisher='Synthetic fixture',support_email='fixture@example.invalid',asset_license='{{ASSET}}')))
+            with self.assertRaisesRegex(ValueError, 'KINDERWELT_ASSET_LICENSE'):
+                signing.metadata({},root)
 
     def test_english_notice_does_not_invent_a_model_or_output_grant(self):
         manifest = json.loads((ROOT / 'assets/voice/quest/en/manifest.json').read_text())

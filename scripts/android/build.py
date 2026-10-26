@@ -93,7 +93,7 @@ def main():
     try:
         if a.release:
             if a.variant!='public' or a.preview:raise ValueError('Release requires the neutral/public variant without --preview')
-            a.package_id=identity.validate_release_package(a.package_id or os.environ.get('KINDERWELT_PACKAGE_ID'))
+            a.package_id=identity.validate_configured_release_package(a.package_id or os.environ.get('KINDERWELT_PACKAGE_ID'))
             values=upload_signing.credentials()
             upload_signing.metadata()
         elif a.package_id:
@@ -115,6 +115,9 @@ def main():
     sys.path.insert(0,str(ROOT/'scripts/qa'))
     import character_origins
     character_origins.audit(ROOT)
+    sys.path.insert(0,str(ROOT/'scripts/store'))
+    import approved_privacy
+    approved_privacy.check(ROOT/'docs/privacy/site')
     with tempfile.TemporaryDirectory(prefix='kinderwelt-android.') as directory, ExitStack() as signing_context:
         temp=Path(directory);app=temp/'app'
         upload_key=None

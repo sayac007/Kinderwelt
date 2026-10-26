@@ -1,5 +1,6 @@
 {
   "test_package": "org.example.kinderwelt",
-  "identity_status": "PROVISIONAL_TEST_ONLY; final package undecided",
-  "preview_channel": "v090"
+  "identity_status": "DEVELOPMENT_PACKAGE_UNCHANGED; release package confirmed by operator on 2026-10-26",
+  "preview_channel": "v090",
+  "release_package": "io.github.sayac007.kinderwelt"
 }

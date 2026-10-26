@@ -26,6 +26,9 @@ In **Kinderwelt quality gates → Run workflow**, both options default to false:
 `retain_evidence` retains reports and rendered screenshots; `listening_review`
 prepares/retains the complete offline adult listening pack (about 180 MB).
 The full suite and graphical checks precede all uploads.
+The Store workflow still checks/renders on relevant `main` pushes, but uploads
+review drafts only on an explicitly manual run, also for three days. This covers
+the Store workflow introduced by the merged publication PR.
 
 Three days is not a byte quota. Several manually requested APKs or a single
 `both` download can still exceed a free plan's included storage. Generate only
