@@ -35,8 +35,32 @@ landed in predecessor feature branches.
   Four upload-key secrets remain required; no production key was
   created and no signed release AAB is claimed.
 
-Final source-build/render and remote CI results will be recorded after the code
-is frozen. Physical Android picker/update/backup acceptance, human listening,
+Clean application source `dbbff35cd50005b43d6736d231adb47c6357ce1c` exported
+and verified neutral APK **319,079,418 bytes** and unsigned AAB **305,170,971 bytes**
+in `/tmp/kinderwelt-publication/android-neutral/`: correct release package,
+0.9.6 / 19, API 24–36, zero permissions, backup exclusions, 16KB checks,
+**7,803 resources / 15 notice files**, development APK signer and unsigned AAB
+status PASS. Provenance records clean/unchanged source. The real unsigned AAB
+was rejected by draft delivery before any GitHub call. Bundletool measured
+**274,754,030 bytes** initial download, **27,914,430** base and **246,839,600**
+install-time assets; internal base budget PASS. No media was re-encoded.
+
+Twelve real policy frames rendered in DE/EN/RU, phone/landscape, start/end;
+German phone start and Russian landscape end were visually inspected. These
+are desktop frames, not physical Android certification. Subsequent operator-
+licence and inactive-template documentation changes leave application bytes
+unchanged. Updated licence, signing, delivery, source-variant, policy and template
+regressions passed separately after those changes.
+
+[Push quality 40329261366](https://github.com/sayac007/Kinderwelt/actions/runs/40329261366),
+[Android 40329261368](https://github.com/sayac007/Kinderwelt/actions/runs/40329261368)
+and [Store 40329261399](https://github.com/sayac007/Kinderwelt/actions/runs/40329261399)
+failed only in artifact-retention steps with the confirmed storage-quota error;
+technical test/render/build/size steps succeeded. The quality renders now run
+before retention, as intended. This is **not an overall green CI/upload result**.
+No signed AAB, live draft delivery or public privacy URL is claimed.
+
+Physical Android picker/update/backup acceptance, human listening,
 external email/Google practices, privacy hosting and Play decisions remain open.
 No new task/audio/artwork content or empirical learning-effect claim is introduced.
 

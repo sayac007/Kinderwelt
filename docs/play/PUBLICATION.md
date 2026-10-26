@@ -121,3 +121,20 @@ acceptance from [ACCEPTANCE](../ACCEPTANCE.md). Upload the neutral signed AAB to
 internal/closed Play test and inspect Play's pre-launch result. No account-specific
 tester-duration requirement or production readiness is claimed here. No PR is
 automatically merged; no Play/Pages publication is performed by this preparation.
+
+## Verified preparation outputs
+
+Application commit `dbbff35cd50005b43d6736d231adb47c6357ce1c` passed the full local
+suite (217 Python tests, 18 privacy-view checks and existing gameplay/audio/privacy
+gates), actual neutral APK/AAB export/verification and twelve real policy renders.
+The AAB is **305,170,971 bytes and unsigned**, with the confirmed package and
+0.9.6 / 19; it is not a Play-upload candidate. It was deliberately rejected by the
+draft-delivery guard before any network call. Actual bundletool initial download
+is 274,754,030 bytes; base 27,914,430 bytes, below the internal 190 MB budget.
+Updated operator-licence/template checks passed after the non-application changes.
+
+Current push CI completed the technical checks but failed on Actions quota during
+artifact retention. See the [central results](../QUALITY_ASSURANCE.md). Original
+policy bytes, earlier evidence and all family sources are preserved. The next
+signing preflight now reports only the four upload-key secrets as missing; the
+operator's publisher/contact and conditional own-asset statement are recorded.
