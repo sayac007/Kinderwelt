@@ -1,6 +1,26 @@
 # Manuelle Abnahme und Evaluation
 
-Aktueller technischer Stand und Nachweise: [Qualitätsüberblick](QUALITY_ASSURANCE.md). Diese Anleitung beschreibt **noch auszuführende** menschliche Prüfungen. Ein bestandenes Skript, eine ASR-Transkription oder eine angekreuzte Selbstauskunft ersetzt keine unabhängige Fachprüfung und keinen Nachweis einer Lernwirkung.
+Aktueller technischer Stand und Nachweise: [Qualitätsüberblick](QUALITY_ASSURANCE.md). Diese Anleitung enthält gemeldete menschliche Abnahmen und wiederverwendbare Prüfabläufe. Ein bestandenes Skript, eine ASR-Transkription oder eine angekreuzte Selbstauskunft ersetzt keine unabhängige Fachprüfung und keinen Nachweis einer Lernwirkung.
+
+## Betreiberprüfung auf Handy und Tablet — 26. Oktober 2026
+
+Der Betreiber meldet: „Bildauswahl, Rotation, Updates usw. auf Handy und Tablet geprüft, alles funktioniert.“
+
+| Praktische Prüfung | Handy | Tablet | Nachweisart |
+|---|---|---|---|
+| Bildauswahl | BESTANDEN | BESTANDEN | Betreiberrückmeldung vom 26.10.2026 |
+| Bildschirmrotation | BESTANDEN | BESTANDEN | Betreiberrückmeldung vom 26.10.2026 |
+| App-Updates | BESTANDEN | BESTANDEN | Betreiberrückmeldung vom 26.10.2026 |
+
+Diese Rückmeldung dokumentiert die praktische Geräteabnahme durch den Betreiber.
+App-Version, APK-Hash, Paketkennung, Gerätemodelle und Androidversionen wurden
+nicht mitgeteilt; dafür werden keine Werte ergänzt. Die allgemeine Aussage
+„alles funktioniert“ wird als positive Rückmeldung zur getesteten Bedienung
+festgehalten, nicht in einzeln ausgeführte Randfalltests umgedeutet. Insbesondere
+sind eine bestimmte Android-Versionsmatrix, Cloud-Backup-/Geräteübertragungsversuche
+und die vollständige Hörprüfung nicht einzeln protokolliert. Diese fehlenden
+Detailangaben sind keine gemeldeten Fehler. Die folgenden Tabellen bleiben als
+wiederverwendbare Prüfabläufe erhalten; sie ersetzen die Betreiberabnahme nicht.
 
 ## Erwachsene: vollständige Hörprüfung
 
@@ -14,11 +34,11 @@ python3 -m http.server 8765 --bind 127.0.0.1 --directory build/listening-accepta
 python3 scripts/qa/review_pack.py verify --receipt /pfad/kinderwelt-listening-review.json --locale ru
 ```
 
-Der Quality-Actionslauf stellt es separat als `kinderwelt-full-listening-review` bereit; sieben Tage Aufbewahrung, kein dauerhaftes Freigabearchiv. ZIP entpacken und `index.html` öffnen.
+Ein manueller Quality-Actionslauf mit `listening_review=true` stellt es separat als `kinderwelt-full-listening-review` bereit; drei Tage Aufbewahrung, kein dauerhaftes Freigabearchiv. ZIP entpacken und `index.html` öffnen.
 
 Das Paket enthält **jede unterschiedliche tatsächlich ausgelieferte Sprachaufnahme**, mit allen verwendenden Aufgaben-/Hinweis-IDs und SHA-256. Gleiche Aufnahmen müssen nicht mehrfach gehört werden. Die Seite enthält keine Familienbilder, Modelle, Zugangsdaten oder Aufnahmefunktion. Erwarteter Text ist zunächst verborgen; Markierungen sind eigene Erklärungen des prüfenden Erwachsenen. Kein automatisches Speichern: Ergebnisse freiwillig als lokale JSON-Datei exportieren. Exportierte Ergebnisse können über „Frühere Ergebnisse fortsetzen“ wieder eingelesen werden, sofern die Hashes noch stimmen. Teilprüfungen bleiben `INCOMPLETE`; auffällige Aufnahmen `ISSUES`. `DECLARED_REVIEW_COMPLETE` bedeutet nur vollständig vorliegende, an aktuelle Text-/Audiohashes gebundene Selbstauskünfte. Das Werkzeug bezeugt weder die Person noch das tatsächliche Hören. Dateien aus verschiedenen Inhaltsständen dürfen nicht vermischt werden. Kein Personenname oder freier Kommentar ist im Format vorgesehen.
 
-Die kompakte `kinderwelt-listening.html` im Android-Artefakt eignet sich für erste Stichproben. Sie ersetzt die vollständige Abnahme nicht. Auffälligkeiten anhand der Aufgaben-ID und einer Fehlerkategorie melden, ohne Angaben zu Kindern. Bei Änderungen an Aufnahme, Pegel oder Aufgabenkontext alte Freigaben erneut prüfen. Für langfristige Freigaben gelten die verifizierten Ablageregeln aus dem Qualitätsüberblick.
+Die mit `scripts/qa/listening_pack.py` lokal erzeugbare kompakte `kinderwelt-listening.html` eignet sich für erste Stichproben; sie wird nicht mehr automatisch an Android-Artefakte angehängt. Sie ersetzt die vollständige Abnahme nicht. Auffälligkeiten anhand der Aufgaben-ID und einer Fehlerkategorie melden, ohne Angaben zu Kindern. Bei Änderungen an Aufnahme, Pegel oder Aufgabenkontext alte Freigaben erneut prüfen. Für langfristige Freigaben gelten die verifizierten Ablageregeln aus dem Qualitätsüberblick.
 
 ## Android: praktische Geräteprüfung
 
@@ -52,7 +72,9 @@ device**, recording actual results rather than assuming desktop equivalence:
 | Privacy and deletion | Confirm only from parents; chooser help has no editing/deletion controls. Cancel/rejected input preserves the previous image and points. Parent deletion/reset removes the app copy. The device original remains unchanged. |
 | Restart/update/backup | Update an existing 0.9.4 custom figure to 0.9.5 with the same package/certificate; points and legacy PNG pixels remain. Test actual backup/device-transfer exclusions separately; manifest verification is not a restore test. |
 
-These checks remain **NOT VERIFIED on physical devices** until executed. The
+The operator reports image selection, rotation and updates as **PASS on a phone
+and tablet** on 2026-10-26; see the operator record above. Detailed per-format,
+Android-version and backup/transfer results were not supplied. The
 existing parent navigation is not identity/age verification. No camera, sharing,
 cloud synchronisation, automatic background removal or costume generation is added.
 

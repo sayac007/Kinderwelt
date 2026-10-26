@@ -4,10 +4,33 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Operator device acceptance — 2026-10-26
+
+The operator reports **image selection, rotation and updates PASS on a phone and
+a tablet**, with the exercised app behaviour working. The [acceptance record](ACCEPTANCE.md)
+and [issue register](play/known-issues.md) now record that practical acceptance.
+Device/OS identifiers and the tested app version/hash were not supplied; no broad
+Android-version matrix or individually executed backup/transfer test is invented.
+This is operator-reported manual evidence, separate from assistant-run automated
+checks, full native-language listening or empirical learning-effect evidence.
+Earlier NOT VERIFIED statements below remain historical snapshots, superseded
+for this reported device-test scope.
+
+The technical baseline is merged `main` `0c42d326`, with the same source tree as
+the locally verified `1afb7edb` (224 Python tests and the full Godot suite).
+Latest main [Quality](https://github.com/sayac007/Kinderwelt/actions/runs/40356409169),
+[Android](https://github.com/sayac007/Kinderwelt/actions/runs/40356409187) and
+[Store](https://github.com/sayac007/Kinderwelt/actions/runs/40356409325) runs passed.
+These are existing technical results, separate from the new operator report.
+
+The existing key-generation path now has a [browser-only Azure Cloud Shell alternative](android-cloud-shell.md).
+This is an operator-run procedure, not a newly executed signing job. Play Console
+completion remains with the operator and is outside this update.
+
 ## Actions storage remediation — 2026-10-26
 
 The operator-requested cleanup deleted **210 transient artifacts / 66,713,266,904 bytes**;
-the live API now lists **5 retained artifacts / 505,439,680 bytes** (about 482 MiB).
+the immediate post-cleanup API snapshot listed **5 retained artifacts / 505,439,680 bytes** (about 482 MiB).
 This is observed repository inventory, not a confirmed refreshed billing quota.
 `Kinderwelt-Privat` has zero Actions artifacts. The live `Kinderwelt` repository
 is currently public. No release or permanent QA archive was removed or created.
@@ -33,6 +56,9 @@ Full current validation is recorded in the focused storage Draft PR; no new
 single-run report is committed under `docs/qa/`.
 
 ## Publication preparation: 0.9.6 / 19 (2026-10-26)
+
+The following records the initial preparation snapshot; current merged CI and
+operator device acceptance are recorded above.
 
 [Current handoff, signing setup and quota-safe delivery](play/PUBLICATION.md).
 The confirmed release package is `io.github.sayac007.kinderwelt`; development

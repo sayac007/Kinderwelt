@@ -234,6 +234,11 @@ keytool -genkeypair -storetype JKS -keystore /secure/offline/kinderwelt-upload.j
   -alias upload -keyalg RSA -keysize 3072 -validity 10000
 ```
 
+If the Windows computer cannot install a JDK, use the documented
+[browser-only Azure Cloud Shell procedure](android-cloud-shell.md). It uses
+interactive password prompts and creates no key through repository YAML or CI.
+The operator runs it in their own authorized Azure account and secures the backup.
+
 Keep an encrypted offline backup of the key, alias and passwords in the operator's
 password/key management system; do not put them in Git, chat, shell history,
 Actions logs or artifacts. In Play Console the operator enables **Play App
