@@ -23,4 +23,4 @@ python3 scripts/qa/documentation.py --check
 
 Für wiederholte Bildprüfungen ein neues Ausgabeverzeichnis wählen.
 
-App-Einstieg: `core/quest/main.tscn`; erzeugte Inhalte: `games/quest/tasks.json`. Ältere Nachweise bleiben vollständig im [versionsfesten QA-Archiv](docs/qa/README.md). Neue Laufberichte gehören in CI-Artefakte, nicht als Einzeldateien ins Git.
+App-Einstieg: `core/quest/main.tscn`; erzeugte Inhalte: `games/quest/tasks.json`. Ältere Nachweise bleiben vollständig im [versionsfesten QA-Archiv](docs/qa/README.md). Neue Laufberichte bleiben lokal oder in ausdrücklich angeforderten, drei Tage aufbewahrten CI-Artefakten; keine Einzelberichte ins Git. [Download- und Speicherregeln](docs/ci-artifacts.md).

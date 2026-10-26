@@ -91,7 +91,7 @@ jobs:
             build/android-release/size/*.md
             build/android-release/size/*.log
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 3
       - name: Remove private temporary signing files even after export failure
         if: always()
         run: |

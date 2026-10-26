@@ -32,8 +32,8 @@ outside this workorder.
 
 ## Storage policy
 
-New run output belongs in `qa-results/` or `build/`. Ordinary CI artifacts expire
-after seven days and are not a long-term evidence archive. The explicitly named
+New run output belongs in `qa-results/` or `build/`. Manually requested new CI artifacts expire
+after three days and are not a long-term evidence archive. The explicitly named
 current audit report and its redacted inventory are maintained references, not
 one new report per run. The existing voice-recognition fixtures are necessary
 regression references rather than a general run archive.

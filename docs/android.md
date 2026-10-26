@@ -43,21 +43,15 @@ Prüfungen: Paket, Version, API 24–36, keine Berechtigungen, deaktiviertes Bac
 
 ## GitHub Actions
 
-Für vertrauenswürdige Pushes und manuelle Läufe erzeugt der Workflow nach Einrichtung des getrennten privaten Figurenrepositorys beide Varianten. Die Quellbilder werden aus einem festgelegten Commit mit einem gesonderten Lesetoken importiert; Pull Requests erhalten diesen Zugang nicht und bauen nur neutral. [Einrichtung des privaten Figurenrepositorys](family-repository.md). [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml) öffnen, passenden Branch/Lauf auswählen und unter **Artifacts** `android-development-artifacts` herunterladen. GitHub-Anmeldung ist erforderlich. ZIP entpacken: `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk` liegen direkt darin, außerdem zwei unsignierte AABs und Prüfberichte. Die Pakete sind getrennte Vorschau-Installationen. Den tatsächlich ausgeführten Lauf und die geprüfte Version dem aktuellen Testbericht entnehmen.
-
-Artefakte werden sieben Tage aufbewahrt und entstehen erst nach erfolgreichem Export/Upload. Ein Push oder lokal bestandener Build beweist keinen erfolgreichen Remote-Lauf. Geräteprüfungen sind separat erforderlich.
-
-For a family-only device test, run `android.yml` manually with `variant=family`:
+Pushes auf `main` und Pull Requests bauen und prüfen ausschließlich die neutrale Variante, ohne Familien-Token und ohne Artefakt-Uploads. Installierbare Downloads entstehen nur über **Run workflow** unter [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml). Standard ist `variant=neutral`; `family` oder `both` muss ausdrücklich gewählt werden. Nur diese manuellen Familienläufe importieren den festgelegten privaten Figurenstand. [Einrichtung](family-repository.md).
 
 ```sh
-gh workflow run android.yml --ref YOUR_BRANCH -f variant=family
+gh workflow run android.yml --ref main -f variant=family
 ```
 
-This manual selection builds only the family cast. Its private Actions artifact
-`kinderwelt-family-test` contains `kinderwelt-debug-family.apk` and technical
-evidence, without the neutral APK or an unsigned bundle download. Push builds
-still build both variants; pull requests still build only neutral without family
-secrets. Existing signing-cache and pinned family-source rules are preserved.
+`kinderwelt-family-test` enthält `kinderwelt-debug-family.apk` und kleine technische Nachweise. Neutrale bzw. beide APKs liegen in `android-development-artifacts`. Unsigned AABs werden weiterhin gebaut und geprüft, aber nur mit `include_unsigned_bundles=true` separat hochgeladen. Sie sind nicht Play-uploadfähig. Keine Sprachbeispiele oder Screenshots werden ungefragt angehängt.
+
+Neue Uploads werden **drei Tage** aufbewahrt. Artefakte entstehen erst nach erfolgreichem Upload; ein Push oder lokaler Testerfolg belegt keinen herunterladbaren Remote-Build. Bereits vorhandene Artefakte behalten ihr ursprüngliches Ablaufdatum. Weitere Bedienung und Speichergrenzen: [CI artifact storage](ci-artifacts.md).
 
 [Device-local character images](AVATAR_IMPORT_FEASIBILITY.md) now support JPEG,
 PNG and static WebP in 0.9.5 / 18, including EXIF orientation and a drag/pinch crop
@@ -69,7 +63,7 @@ Native checks on Android 13+ and 10–12 remain **NOT VERIFIED**.
 Previous **0.9.4 / 17** family-only download (2026-10-24):
 [kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671/artifacts/12564507418),
 from [successful manual run 40105564671](https://github.com/sayac007/Kinderwelt/actions/runs/40105564671),
-commit `f892418ac23a4d79a3e442082fd92c5c5117f343`. One private artifact,
+commit `f892418ac23a4d79a3e442082fd92c5c5117f343`. One artifact,
 **322,605,725 bytes**, expires 2026-10-31. Unzip and install
 `kinderwelt-debug-family.apk`; neutral APK and unsigned AAB are not included.
 The run passed actual APK/AAB resource, identity, signing/alignment, zero-permission
@@ -77,12 +71,12 @@ and backup checks. Failed runs are now explicitly named diagnostic artifacts;
 unverified raw binaries in variant subdirectories are excluded from uploads.
 
 Previous family-only test download (0.9.3, 2026-10-24):
-[kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060/artifacts/12561253077),
+[kinderwelt-family-test](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060),
 from [successful manual run 40096417060](https://github.com/sayac007/Kinderwelt/actions/runs/40096417060)
 at commit `8153f919454e05a962e4d04d8b5d56a55b3b4009`. Version remains **0.9.3 / 16**;
 the game sources are unchanged. The ZIP contains the installable family APK and
 technical reports; the ordinary multi-variant upload was skipped. GitHub login
-is required. This is a seven-day CI artifact, not permanent archival storage.
+is required. This historical artifact was removed during the operator-requested storage cleanup on 2026-10-26; its run and source remain available.
 
 ## Google Play bleibt offen
 
@@ -105,7 +99,7 @@ actual bundletool CSVs/logs and `device.json`. In CI the report is also visible
 in the job summary and numeric annotations. The normal Android workflow measures
 neutral PR/push/manual builds (family-only runs skip it); the protected manual
 release job measures its verified neutral AAB before artifact upload. Reports
-are included in the respective existing seven-day Actions artifacts. APK-set
+are retained only for manual downloads, with three-day retention. Automatic runs still expose measurements in the job summary. APK-set
 measurement caches are temporary and never uploaded.
 
 No signing key is required: bundletool uses an isolated JVM/Android home without

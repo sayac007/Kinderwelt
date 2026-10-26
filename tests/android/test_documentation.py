@@ -29,3 +29,19 @@ class DocumentationTests(unittest.TestCase):
             self.assertEqual(docs.check(root)['findings'],[])
             (root/'docs/qa/arbitrary-new-run.log').write_text('Must remain a runtime artifact')
             self.assertTrue(any('arbitrary-new-run.log' in f for f in docs.check(root)['findings']))
+
+    def test_jekyll_navigation_checks_extensionless_sibling_sources(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'docs/qa').mkdir(parents=True)
+            shutil.copy2(ROOT/'docs/qa/ARCHIVE_INDEX.tsv',root/'docs/qa/ARCHIVE_INDEX.tsv')
+            (root/'README.md').write_text(docs.COMMAND)
+            (root/'docs/QUALITY_ASSURANCE.md').write_text(docs.COMMAND)
+            pages=root/'docs/privacy';pages.mkdir()
+            (pages/'index.md').write_text('---\ntitle: Privacy\n---\n[English](en)')
+            (pages/'en.md').write_text('---\nlang: en\n---\nPolicy')
+            self.assertEqual(docs.check(root)['findings'],[])
+            (pages/'index.md').write_text('---\ntitle: Privacy\n---\n[Missing](ru)')
+            self.assertTrue(any('missing ru' in f for f in docs.check(root)['findings']))
+            # Ordinary documentation does not silently reinterpret missing paths.
+            (pages/'index.md').write_text('[English](en)')
+            self.assertTrue(any('missing en' in f for f in docs.check(root)['findings']))
