@@ -102,6 +102,10 @@ file availability still requires repository access. This path's live signed
 export/delivery remains **NOT VERIFIED** until operator credentials are configured
 and the workflow runs successfully from reviewed `main`.
 
+The inactive Pages template now verifies/stages the checked static policy files;
+GitHub Pages is currently disabled (`has_pages=false`), and no public privacy
+URL is configured in the repository. Hosting is still an operator decision.
+
 The original [artifact workflow](../../.github/workflows/android-release.yml) is
 still available after the account's Actions storage is cleared/increased. Do not
 replace delivery errors with a false successful-upload claim.

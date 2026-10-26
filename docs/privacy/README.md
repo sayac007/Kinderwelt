@@ -23,3 +23,7 @@ Copy the reviewed generated HTML pages into `docs/privacy/site/` after an intend
 policy change. The check rejects stale site/app copies and unresolved fields.
 The older generic privacy renderer remains a preview tool; the approved-source
 export is the current publication handoff. [Release steps](../play/PUBLICATION.md).
+
+The inactive Pages template stages these checked static files; it does not use
+the generic preview renderer. Operator hosting/reviewer configuration and review
+of the translations are still required before enabling it.

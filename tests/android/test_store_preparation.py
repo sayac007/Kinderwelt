@@ -57,4 +57,4 @@ class StorePreparationTests(unittest.TestCase):
         self.assertTrue(path.exists());self.assertFalse((ROOT/'.github/workflows/privacy-pages.yml').exists())
         text=path.read_text()
         self.assertIn('workflow_dispatch:',text);self.assertIn("github.ref == 'refs/heads/main'",text)
-        self.assertIn('privacy.py --final',text);self.assertNotIn('secrets.',text);self.assertNotIn('FAMILY_ASSETS',text)
+        self.assertIn('approved_privacy.py --check',text);self.assertNotIn('secrets.',text);self.assertNotIn('FAMILY_ASSETS',text)
