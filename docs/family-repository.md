@@ -19,7 +19,7 @@ Für Actions einen **Fine-grained Personal Access Token** erzeugen, der ausschli
 
 [Actions-Secrets für Kinderwelt](https://github.com/sayac007/Kinderwelt/settings/secrets/actions). Es wurde kein PAT erfunden, keine Release-Signierung geändert und kein Schlüssel in Git geschrieben.
 
-Danach baut ein vertrauenswürdiger Push oder manueller Workflowlauf beide Varianten. Actions liest den festgelegten Commit, prüft zusätzlich, dass das Figurenrepository wirklich privat ist, und importiert ausschließlich die 14 hashgeprüften erlaubten Dateien. Zugangsdaten werden von Checkout nicht dauerhaft gespeichert. **Pull Requests erhalten keinen Zugriff auf das Figurenrepository oder seinen Token** und prüfen ausschließlich die neutrale Variante; `pull_request_target` wird nicht verwendet.
+Danach baut ein ausdrücklich manueller Workflowlauf mit `variant=family` oder `variant=both` die gewünschten Familienvarianten. Pushes auf `main` und Pull Requests bauen nur neutral und laden keine Artefakte hoch. Actions liest den festgelegten Commit, prüft zusätzlich, dass das Figurenrepository wirklich privat ist, und importiert ausschließlich die 14 hashgeprüften erlaubten Dateien. Zugangsdaten werden von Checkout nicht dauerhaft gespeichert. **Pull Requests erhalten keinen Zugriff auf das Figurenrepository oder seinen Token** und prüfen ausschließlich die neutrale Variante; `pull_request_target` wird nicht verwendet.
 
 ## Lokale Reproduktion ohne GitHub-Secret
 
@@ -31,6 +31,6 @@ python3 scripts/android/build_variants.py --tools /workspace/tools \
   --output build/android-delivery-neu
 ```
 
-Die beiden fertigen APKs heißen exakt `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. Zusätzlich entstehen `kinderwelt-unsigned-family.aab`, `kinderwelt-unsigned-neutral.aab`, Nachweise je Variante sowie `delivery.json`. Die APKs haben getrennte vorläufige Paketkennungen und können gleichzeitig installiert werden; lokale Spielstände sind getrennt. Es wird niemals eine neutrale APK als fehlende Familienversion ausgegeben. Fehlender Zugang oder ein falscher Manifest-Hash bricht den Familienbuild verständlich ab.
+Die beiden fertigen APKs heißen exakt `kinderwelt-debug-family.apk` und `kinderwelt-debug-neutral.apk`. Zusätzlich entstehen lokal unsignierte AABs, Nachweise je Variante sowie `delivery.json`. AAB-Uploads sind separat über `include_unsigned_bundles=true` anzufordern; neue Downloads laufen nach drei Tagen ab. Siehe [Speicherregeln](ci-artifacts.md). Die APKs haben getrennte vorläufige Paketkennungen und können gleichzeitig installiert werden; lokale Spielstände sind getrennt. Es wird niemals eine neutrale APK als fehlende Familienversion ausgegeben. Fehlender Zugang oder ein falscher Manifest-Hash bricht den Familienbuild verständlich ab.
 
 Alle großen APK-/AAB-Dateien stehen nur einmal im Ausgabeverzeichnis. Private Quellbilder, Repository-Metadaten und Zugangsdaten sind nicht Teil des hochgeladenen Actions-Artefakts. Die Familien-APK enthält naturgemäß die daraus sichtbaren Figuren; Zugriff und Aufbewahrung der Build-Artefakte müssen zur gewünschten privaten Nutzung passen.

@@ -2,6 +2,7 @@ name: Neutral store preparation (no publishing)
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - 'scripts/store/**'
       - 'art/store/**'
@@ -32,6 +33,7 @@ jobs:
           GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" LIBGL_ALWAYS_SOFTWARE=1 \
             xvfb-run -a -s '-screen 0 1280x1920x24 -noreset' python3 scripts/store/render.py --output build/store
       - name: Retain review drafts without publishing or signing
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: kinderwelt-store-review-drafts
@@ -41,4 +43,4 @@ jobs:
             build/store/
             docs/play/
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 3

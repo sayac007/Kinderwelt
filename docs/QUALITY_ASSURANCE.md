@@ -4,6 +4,34 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Actions storage remediation — 2026-10-26
+
+The operator-requested cleanup deleted **210 transient artifacts / 66,713,266,904 bytes**;
+the live API now lists **5 retained artifacts / 505,439,680 bytes** (about 482 MiB).
+This is observed repository inventory, not a confirmed refreshed billing quota.
+`Kinderwelt-Privat` has zero Actions artifacts. The live `Kinderwelt` repository
+is currently public. No release or permanent QA archive was removed or created.
+
+[Current download/retention rules and preserved files](ci-artifacts.md): automatic
+main/PR checks keep the full suite, renders and neutral Android export/verification/
+size checks, but upload no artifacts. Manual APK requests default to neutral;
+family access, AABs, screenshots and complete listening packs require explicit
+selection. The newly integrated Store workflow uploads only on manual runs too.
+New uploads last three days. Six storage regressions cover these
+rules. The documentation checker also verifies extensionless Jekyll sibling-page
+sources; it previously rejected the operator's valid new Pages navigation.
+The supplied privacy text and live route links are unchanged.
+
+The original **139 historical QA files / 7,383,943 bytes** were reverified via
+GitHub tree/tag and local SHA-256 against archive commit
+`a55e9e0a3bfda0128d2a1aeba94e5dd1b300981e`. Historical run logs/source remain;
+links to deleted temporary downloads below now lead to their retained runs.
+Repository-wide retention cannot be changed by this integration (Actions admin
+API HTTP 403); the operator must set Settings → Actions → General → Artifact
+and log retention to three days. Workflow rules take effect after review/merge.
+Full current validation is recorded in the focused storage Draft PR; no new
+single-run report is committed under `docs/qa/`.
+
 ## Publication preparation: 0.9.6 / 19 (2026-10-26)
 
 [Current handoff, signing setup and quota-safe delivery](play/PUBLICATION.md).
@@ -186,10 +214,10 @@ Code commit: `bb863fae3d1c2072165a5b284ac9d5c0ea13e6bd`, 2026-10-24.
   suite, existing real-render checks and the six additional credits frames.
   Android CI rebuilt and verified both cast variants’ APKs and unsigned AABs,
   including all 15 source-matched notices.
-  [Technical renders/reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940/artifacts/12571010986),
-  [offline adult listening review](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940/artifacts/12571215211),
-  [verified development APKs/AABs and reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107914/artifacts/12571041219)
-  are private seven-day CI artifacts, not permanent legal evidence.
+  [Technical renders/reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940),
+  [offline adult listening review](https://github.com/sayac007/Kinderwelt/actions/runs/40119107940),
+  [verified development APKs/AABs and reports](https://github.com/sayac007/Kinderwelt/actions/runs/40119107914)
+  were temporary seven-day CI artifacts. They were removed during the operator-requested storage cleanup on 2026-10-26; these links now lead to the retained run logs, not downloads. They were never permanent legal evidence.
 - An additional local neutral APK and unsigned AAB also passed actual identity,
   signature/alignment, resources, zero permissions, backup and all 15 notice-byte
   checks (`build/android-package3-neutral/`). That supplemental build records
@@ -240,7 +268,7 @@ Markdown matched the retained report exactly.
 - [Neutral CI run 40113455357](https://github.com/sayac007/Kinderwelt/actions/runs/40113455357):
   **PASS** at `c4bdb9b9`: actual neutral APK/unsigned AAB rebuilt and verified,
   real bundletool measurement completed and reports uploaded in
-  [android-development-artifacts](https://github.com/sayac007/Kinderwelt/actions/runs/40113455357/artifacts/12567781464).
+  [android-development-artifacts](https://github.com/sayac007/Kinderwelt/actions/runs/40113455357).
   Numeric CI annotations independently expose the measured values without
   depending on an artifact download. CI marginals: speech 182,033,105 bytes, music
   43,431,860, graphics 22,103,156, engine/Android code 26,117,026, other 1,051,098.

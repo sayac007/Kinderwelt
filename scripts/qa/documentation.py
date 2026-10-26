@@ -33,6 +33,11 @@ def check(root=ROOT,remote=False):
                 external.add(target);continue
             if url.scheme:continue
             path=(doc.parent/unquote(url.path)).resolve() if url.path else doc;local_count+=1
+            # Jekyll privacy pages deliberately link to extensionless sibling routes.
+            # Verify the actual Markdown source instead of treating live routes as files.
+            if (not path.exists() and not path.suffix and doc.read_text().startswith('---\n')
+                    and path.parent==doc.parent.resolve() and path.with_suffix('.md').is_file()):
+                path=path.with_suffix('.md')
             if not path.exists():findings.append(f'{doc.relative_to(root)}: missing {target}')
             elif url.fragment and path.suffix=='.md':
                 headings=re.findall(r'^#+\s+(.+?)\s*#*$',path.read_text(),re.M)
