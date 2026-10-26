@@ -52,7 +52,7 @@ def check_payload(names,app_root=None):
     for n in assets:
         assert not re.search(r'(^|/)(art|tests|scripts|docs|addons|qa-results|android|build)(/|$)',n),'Development files packaged: '+n
         assert not n.endswith(('.keystore','.jks','.p12','.pem','.yaml','.safetensors','.onnx','.pth','.pt')),'Sensitive, specification or development model file packaged'
-    required=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
+    required=['assets/privacy/policy.json','games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json','assets/quest/Nunito.ttf.import','assets/quest/landscape.png.import','assets/quest/icons.png.import','assets/quest/objects.png.import','assets/quest/appicon.png.import']
     for item in required: assert item in assets,'Missing quest asset: '+item
     for notice in asset_notices.required():
         assert notice in assets,'Missing bundled notice: '+notice
@@ -106,7 +106,7 @@ def elf_alignment(data):
 def check_packaged_data(archive,app_root=None):
     """Godot uses an install-time asset pack in AABs, ordinary assets in APKs."""
     app_root=Path(app_root) if app_root else Path(__file__).resolve().parents[2]
-    data_files=['games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
+    data_files=['assets/privacy/policy.json','games/quest/tasks.json','games/quest/languages.json','assets/quest/looks.json','assets/quest/cast.json','assets/music/manifest.json']
     data_files += ['games/quest/legacy-rewards.json','assets/quest/appicon.png']
     asset_notices.check_archive(archive,app_root)
     data_files += ['assets/voice/quest/'+locale+'/'+name for locale in ['de','en','ru'] for name in ['manifest.json','MODEL_CARD.txt']]

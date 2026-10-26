@@ -15,6 +15,7 @@ var closing := false
 var layout_pending := false
 var updating_layout := false
 var praise_cursor := randi()%6
+var privacy_reading := false
 func _ready() -> void:
 	get_tree().auto_accept_quit=false
 	theme=preload("res://core/quest/theme.gd").make_theme()
@@ -67,6 +68,7 @@ func praise_id() -> String:
 	return result
 
 func clear() -> void:
+	privacy_reading=false
 	narration.cancel()
 	if is_instance_valid(avatar_manager):
 		remove_child(avatar_manager);avatar_manager.queue_free();avatar_manager=null
@@ -173,15 +175,30 @@ func volume_control(title: String,key: String) -> void:
 		store.data[key]=value;audio.sync_settings();narration.sync_settings();save())
 func parents() -> void:
 	clear();button(t("back"),hub)
+	var version:=label(t("app_version")+" "+str(ProjectSettings.get_setting("application/config/version"))+" · "+t("app_version_code")+" "+str(ProjectSettings.get_setting("application/config/version_code")))
+	version.name="release_version"
+	version.add_theme_font_size_override("font_size",roundi(16*store.data.text_scale))
 	label(t("voluntary"))
 	label(t("respect"))
 	label(t("privacy"))
+	var privacy_button:=button(t("privacy_policy"),privacy_policy)
+	privacy_button.name="privacy_policy"
 	button(t("avatar_manage"),manage_avatar)
 	if store.data.quest.archived.size()<preload("res://games/quest/progress.gd").legacy_rewards().size():
 		button(t("restore_old_round"),confirm_old_round)
 	button(t("controls"),settings)
 	button(t("music_sources"),music_credits)
 	button(t("reset"),confirm_reset)
+func privacy_policy() -> void:
+	clear();privacy_reading=true
+	button(t("return"),parents)
+	var document: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/privacy/policy.json"))
+	for paragraph in document.texts[store.data.locale]:
+		var text:=label(paragraph)
+		text.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
+		text.add_theme_font_size_override("font_size",roundi(18*store.data.text_scale))
+	# A plain reference only: no browser, network or sharing function.
+	label(document.google_privacy_url)
 func manage_avatar() -> void:
 	clear();scroll_view.hide()
 	avatar_manager=preload("res://core/quest/avatar_import.gd").new()
@@ -230,6 +247,7 @@ func confirm_reset() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"): go_back();get_viewport().set_input_as_handled()
 func go_back() -> void:
+	if privacy_reading:parents();return
 	if is_instance_valid(avatar_manager):avatar_manager.handle_back();return
 	if is_instance_valid(game_view) and game_view.handle_avatar_back():return
 	hub()

@@ -59,3 +59,10 @@ Before approving Data Safety statements, the operator must distinguish local
 image processing from off-device collection under the current Play definitions
 and check the actual distributed build/SDKs. No console declarations, privacy
 publication, target-audience decision or Google Play/Families approval was changed.
+
+## Store and privacy preparation
+
+The [upload checklist and reproducible neutral Store tools](play/README.md) now
+provide DE/EN/RU privacy and listing drafts, Data Safety/IARC worksheets and an
+inactive Pages template. These are operator-review materials, not published
+policies or Console approvals. `--final` refuses unfilled privacy placeholders.

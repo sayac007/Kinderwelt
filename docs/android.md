@@ -84,6 +84,31 @@ the game sources are unchanged. The ZIP contains the installable family APK and
 technical reports; the ordinary multi-variant upload was skipped. GitHub login
 is required. This is a seven-day CI artifact, not permanent archival storage.
 
+## Current 0.9.5 / 18 preparation downloads
+
+Verified source `77735caca21980876eb14f1d2b4e51c6ac7a021d`:
+[Android run 40125379879](https://github.com/sayac007/Kinderwelt/actions/runs/40125379879)
+**PASS**. [Private APK/AAB artifact](https://github.com/sayac007/Kinderwelt/actions/runs/40125379879/artifacts/12573542271)
+contains the family/neutral development APKs, unsigned preview AABs and verification
+reports. It requires repository access and expires after seven days. For Play,
+use only the neutral cast, final identity and the upload-signed output of the
+protected manual release workflow after operator approval. These unsigned/test-
+identity downloads are not final Play uploads.
+
+[Store review drafts](https://github.com/sayac007/Kinderwelt/actions/runs/40125379912/artifacts/12572801385)
+contain 17 neutral PNGs, four static privacy HTML drafts and proposed forms/texts.
+They have the same private seven-day retention. [Upload checklist](play/README.md)
+and [known acceptance boundaries](play/known-issues.md) list remaining decisions.
+Direct artifact retrieval from this environment returned 403; CI metadata/results
+and the independently verified local builds are recorded in the quality overview.
+
+An additional clean local neutral export of the same application source is in
+`build/android-play-preparation-neutral/`: APK 319,072,131 bytes, unsigned AAB
+305,164,266 bytes, provisional `org.example.kinderwelt`, 0.9.5 / 18. Both passed
+verification; pinned bundletool measured 274,747,187 bytes initial / 27,914,374
+base. Store outputs from the same clean source are in
+`build/store-release-preparation/`. These generated directories are not committed.
+
 ## Google Play bleibt offen
 
 ### Package 2: measured download size and budget

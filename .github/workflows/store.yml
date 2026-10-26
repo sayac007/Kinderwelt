@@ -1,0 +1,44 @@
+name: Neutral store preparation (no publishing)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/store/**'
+      - 'art/store/**'
+      - 'docs/privacy/**'
+      - 'docs/play/**'
+      - '.github/workflows/store.yml'
+permissions:
+  contents: read
+jobs:
+  store:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install pinned Godot
+        run: GODOT_INSTALL_DIR="$RUNNER_TEMP/godot" bash scripts/install-godot.sh
+      - name: Check actual content counts and build offline privacy drafts
+        run: |
+          python3 scripts/store/listing.py --check
+          python3 scripts/store/privacy.py --output build/privacy
+          python3 scripts/store/approved_privacy.py --check --output docs/privacy/site
+          python3 scripts/store/approved_privacy.py --output build/privacy-approved
+          python3 scripts/qa/documentation.py --check
+      - name: Render only neutral characters and a geometric own-image placeholder
+        run: |
+          GODOT="$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" LIBGL_ALWAYS_SOFTWARE=1 \
+            xvfb-run -a -s '-screen 0 1280x1920x24 -noreset' python3 scripts/store/render.py --output build/store
+      - name: Retain review drafts without publishing or signing
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: kinderwelt-store-review-drafts
+          path: |
+            build/privacy/
+            build/privacy-approved/
+            build/store/
+            docs/play/
+          if-no-files-found: error
+          retention-days: 7

@@ -691,6 +691,21 @@
       "en": "Zoom in",
       "ru": "Увеличить"
     },
+    "app_version": {
+      "de": "Version",
+      "en": "Version",
+      "ru": "Версия"
+    },
+    "app_version_code": {
+      "de": "Code",
+      "en": "Code",
+      "ru": "Код"
+    },
+    "privacy_policy": {
+      "de": "Datenschutzerklärung",
+      "en": "Privacy policy",
+      "ru": "Конфиденциальность"
+    },
     "bonus": {
       "de": "Bonusaufgabe",
       "en": "Bonus challenge",
