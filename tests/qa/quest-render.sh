@@ -32,3 +32,8 @@ export KINDERWELT_CREDITS_OUTPUT="$OUTPUT/music-credits"
 timeout 120 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/music_credits.gd >"$OUTPUT/music-credits.log" 2>&1
 cat "$OUTPUT/music-credits.log"
 if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/music-credits.log"; then exit 1; fi
+mkdir "$OUTPUT/privacy"
+export KINDERWELT_PRIVACY_RENDER_OUTPUT="$OUTPUT/privacy"
+timeout 120 "${GODOT:-godot}" --path . --audio-driver Dummy -s tests/qa/privacy_render.gd >"$OUTPUT/privacy-render.log" 2>&1
+cat "$OUTPUT/privacy-render.log"
+if rg -q 'SCRIPT ERROR:|ERROR:|Parse Error' "$OUTPUT/privacy-render.log"; then exit 1; fi

@@ -77,7 +77,7 @@ def export_public(output,root=ROOT):
         def ignore(directory,names):
             return [n for n in names if n in ['internal','__pycache__'] or (Path(directory)==root/'art' and n=='private') or n.endswith(('.zip','.mp3'))]
         shutil.copytree(root/name,Path(output)/name,ignore=ignore)
-    for name in ['README.md','.gitignore','.gitattributes','LICENSE','ASSETS_LICENSE.md']:
+    for name in ['README.md','.gitignore','.gitattributes','LICENSE','ASSETS_LICENSE.md','Datenschutzerklärung für die App.htm']:
         if (root/name).exists():shutil.copy2(root/name,Path(output)/name)
     return result
 

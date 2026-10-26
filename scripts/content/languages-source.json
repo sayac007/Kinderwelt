@@ -700,6 +700,11 @@
       "de": "Code",
       "en": "Code",
       "ru": "Код"
+    },
+    "privacy_policy": {
+      "de": "Datenschutzerklärung",
+      "en": "Privacy policy",
+      "ru": "Конфиденциальность"
     }
   },
   "objects": {

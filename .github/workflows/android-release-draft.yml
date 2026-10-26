@@ -1,0 +1,101 @@
+name: Neutral AAB to private draft release (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      package_id:
+        description: Final Android package identifier (no example, test or debug)
+        required: true
+        default: io.github.sayac007.kinderwelt
+        type: string
+permissions:
+  contents: read
+jobs:
+  release-aab:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    environment: release
+    permissions:
+      contents: write # Only this protected manual workflow can create the private draft.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Require the private repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          data = json.loads(subprocess.check_output(['gh', 'api', 'repos/' + os.environ['GITHUB_REPOSITORY']]))
+          if data.get('private') is not True:
+              raise SystemExit('Draft delivery requires the private repository')
+          PY
+      - name: Check operator configuration without exposing its values
+        id: signing
+        env:
+          KINDERWELT_PACKAGE_ID: ${{ inputs.package_id }}
+          KINDERWELT_UPLOAD_KEYSTORE: ${{ secrets.KINDERWELT_UPLOAD_KEYSTORE }}
+          KINDERWELT_UPLOAD_ALIAS: ${{ secrets.KINDERWELT_UPLOAD_ALIAS }}
+          KINDERWELT_UPLOAD_STORE_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_STORE_PASSWORD }}
+          KINDERWELT_UPLOAD_KEY_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_KEY_PASSWORD }}
+          KINDERWELT_PUBLISHER: ${{ vars.KINDERWELT_PUBLISHER }}
+          KINDERWELT_SUPPORT_EMAIL: ${{ vars.KINDERWELT_SUPPORT_EMAIL }}
+          KINDERWELT_ASSET_LICENSE: ${{ vars.KINDERWELT_ASSET_LICENSE }}
+        # Release signing SKIPPED is emitted with field names only.
+        run: |
+          python3 scripts/android/release_preflight.py
+      - name: Install pinned Godot
+        if: steps.signing.outputs.ready == 'true'
+        run: GODOT_INSTALL_DIR="$RUNNER_TEMP/tools/godot-4.7.2" bash scripts/install-godot.sh
+      - name: Install pinned Android tools
+        if: steps.signing.outputs.ready == 'true'
+        # Enabling this job requires the operator to accept the Android SDK licence.
+        run: python3 scripts/android/install.py --root "$RUNNER_TEMP/tools" --accept-android-sdk-license
+      - name: Install resource decoder
+        if: steps.signing.outputs.ready == 'true'
+        run: bash scripts/ci/install-audio-decoder.sh
+      - name: Export and verify neutral upload-signed AAB
+        if: steps.signing.outputs.ready == 'true'
+        env:
+          TMPDIR: ${{ runner.temp }}/kinderwelt-release
+          KINDERWELT_PACKAGE_ID: ${{ inputs.package_id }}
+          KINDERWELT_UPLOAD_KEYSTORE: ${{ secrets.KINDERWELT_UPLOAD_KEYSTORE }}
+          KINDERWELT_UPLOAD_ALIAS: ${{ secrets.KINDERWELT_UPLOAD_ALIAS }}
+          KINDERWELT_UPLOAD_STORE_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_STORE_PASSWORD }}
+          KINDERWELT_UPLOAD_KEY_PASSWORD: ${{ secrets.KINDERWELT_UPLOAD_KEY_PASSWORD }}
+          KINDERWELT_PUBLISHER: ${{ vars.KINDERWELT_PUBLISHER }}
+          KINDERWELT_SUPPORT_EMAIL: ${{ vars.KINDERWELT_SUPPORT_EMAIL }}
+          KINDERWELT_ASSET_LICENSE: ${{ vars.KINDERWELT_ASSET_LICENSE }}
+        run: |
+          mkdir -p "$TMPDIR"
+          chmod 700 "$TMPDIR"
+          GODOT="$RUNNER_TEMP/tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64" \
+            python3 scripts/android/build.py --release --variant public \
+              --tools "$RUNNER_TEMP/tools" --output build/android-release
+      - name: Measure neutral download without upload credentials
+        if: success() && steps.signing.outputs.ready == 'true'
+        run: |
+          python3 scripts/android/size_report.py \
+            --bundle build/android-release/kinderwelt-release-neutral.aab \
+            --tools "$RUNNER_TEMP/tools" --output build/android-release/size
+      - name: Deliver only the verified neutral bundle to a private draft
+        if: success() && steps.signing.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/android/draft_release.py --output build/android-release \
+            --tools "$RUNNER_TEMP/tools" --repo "$GITHUB_REPOSITORY" \
+            --run-id "$GITHUB_RUN_ID.$GITHUB_RUN_ATTEMPT"
+      - name: Remove private temporary signing files even after export failure
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, shutil
+          directory = pathlib.Path(os.environ['RUNNER_TEMP']) / 'kinderwelt-release'
+          if directory.is_symlink():
+              directory.unlink()
+          elif directory.exists():
+              shutil.rmtree(directory)
+          print('Release temporary directory removed; no key material retained.')
+          PY

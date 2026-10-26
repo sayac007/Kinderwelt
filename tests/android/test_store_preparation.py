@@ -22,13 +22,17 @@ class StorePreparationTests(unittest.TestCase):
             for locale in listing.LOCALES:
                 html=(out/f'{locale}.html').read_text()
                 self.assertIn(f'lang="{locale}"',html)
-                self.assertIn('{{HERAUSGEBER}}',html)
+                self.assertIn('a.w.kulikov@gmail.com',html)
                 self.assertNotIn('<script',html)
                 self.assertNotIn('<img',html)
                 self.assertNotIn('<iframe',html)
-            final=Path(d)/'final'
-            with self.assertRaisesRegex(ValueError,'placeholders'):privacy.build(final,True)
-            self.assertFalse(final.exists())
+            final=Path(d)/'final';privacy.build(final,True)
+            self.assertTrue((final/'de.html').exists())
+            fixture=Path(d)/'fixture';(fixture/'docs/privacy').mkdir(parents=True)
+            for name in privacy.FILES.values():(fixture/'docs/privacy'/name).write_text('{{HERAUSGEBER}}')
+            rejected=Path(d)/'rejected'
+            with self.assertRaisesRegex(ValueError,'placeholders'):privacy.build(rejected,True,fixture)
+            self.assertFalse(rejected.exists())
     def test_geometric_placeholder_has_no_photo_or_external_input(self):
         render.validate_placeholder(ROOT/'art/store/silhouette.svg')
         for bad in ['<svg><image href="family.png"/></svg>','<svg><path fill="url(https://invalid/)"/></svg>','<!DOCTYPE svg><svg/>','<svg onload="x"/>']:

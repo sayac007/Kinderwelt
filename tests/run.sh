@@ -23,6 +23,7 @@ checked --headless --path . -s tests/music_credits.gd
 checked --headless --path . -s tests/worlds.gd
 checked --headless --path . -s tests/boot.gd
 KINDERWELT_RELEASE_UI_TEST=synthetic checked --headless --path . -s tests/release_display.gd
+KINDERWELT_PRIVACY_TEST=synthetic checked --headless --path . -s tests/privacy_view.gd
 KINDERWELT_SAVE_TEST=write checked --headless --path . -s tests/save_restart.gd
 KINDERWELT_SAVE_TEST=read checked --headless --path . -s tests/save_restart.gd
 checked --headless --path . -s tests/rewards.gd
@@ -60,3 +61,5 @@ python3 scripts/qa/documentation.py --check
 python3 scripts/qa/pedagogy.py --check
 
 python3 scripts/store/listing.py --check
+
+python3 scripts/store/approved_privacy.py --check --output docs/privacy/site

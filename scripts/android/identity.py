@@ -21,6 +21,13 @@ def validate_release_package(value):
         raise ValueError('Release package must be final: placeholders and example/test/debug identifiers are forbidden')
     return validate_package(value)
 
+def validate_configured_release_package(value):
+    value=validate_release_package(value)
+    configured=CONFIG.get('release_package')
+    if configured and value!=configured:
+        raise ValueError('Release package differs from the operator-confirmed release_package in app-config.json')
+    return value
+
 def configure(app,package=None,preview=False,variant='family'):
     base=validate_package(package or CONFIG['test_package'])
     chosen=validate_package(base+f'.preview.{"family" if variant=="family" else "neutral"}.'+CONFIG['preview_channel'] if preview else base)

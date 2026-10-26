@@ -4,7 +4,42 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
-## Play preparation: current 0.9.5 / 18
+## Publication preparation: 0.9.6 / 19 (2026-10-26)
+
+[Current handoff, signing setup and quota-safe delivery](play/PUBLICATION.md).
+The confirmed release package is `io.github.sayac007.kinderwelt`; development
+packages and their save/signing channel remain unchanged. The preparation starts
+at current `main` `75655da2` and restores the reviewed Store/test work that had
+landed in predecessor feature branches.
+
+- **PASS locally:** full current suite, **217 Python tests**, **18 new offline
+  privacy-view checks**, 15 version-display / 479 crop / 62 import/restart checks
+  and existing quest, world, points, speech, layout, fresh-import and content gates.
+- The original German policy upload is unchanged. DE/EN/RU offline app text and
+  four static HTML pages are generated/checked against the supplied master and
+  translation sources. EN/RU translations still need operator review. No web
+  hosting/publication was enabled. Privacy text is a read-only parent screen;
+  the Google reference is plain text and opens no browser/network service.
+- The latest main CI failures are proven **Actions artifact storage quota**
+  errors, not a Godot build failure. Quality uploads now follow all technical
+  checks, so unavailable delivery cannot prevent the render checks from running.
+- A separate manual/main-only/private-repository draft-release delivery path is
+  prepared for the verified neutral upload-signed AAB, without Actions artifact
+  storage. Only that job requests repository write permission for the private
+  draft; the original release workflow remains read-only. Live signed delivery
+  is **NOT VERIFIED**. No historical artifact or family source was deleted.
+- The real main release probe [40322560219](https://github.com/sayac007/Kinderwelt/actions/runs/40322560219)
+  **skipped export**, reporting unavailable signing credentials/operator fields.
+  Publisher/contact defaults now use the supplied document. Operator asset
+  licensing and four upload-key secrets remain required; no production key was
+  created and no signed release AAB is claimed.
+
+Final source-build/render and remote CI results will be recorded after the code
+is frozen. Physical Android picker/update/backup acceptance, human listening,
+external email/Google practices, privacy hosting and Play decisions remain open.
+No new task/audio/artwork content or empirical learning-effect claim is introduced.
+
+## Play preparation snapshot: 0.9.5 / 18
 
 Separate draft changes retain package boundaries: [local images #27](https://github.com/sayac007/Kinderwelt/pull/27)
 and [privacy/Store materials #28](https://github.com/sayac007/Kinderwelt/pull/28).

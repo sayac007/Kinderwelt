@@ -24,6 +24,8 @@ jobs:
         run: |
           python3 scripts/store/listing.py --check
           python3 scripts/store/privacy.py --output build/privacy
+          python3 scripts/store/approved_privacy.py --check --output docs/privacy/site
+          python3 scripts/store/approved_privacy.py --output build/privacy-approved
           python3 scripts/qa/documentation.py --check
       - name: Render only neutral characters and a geometric own-image placeholder
         run: |
@@ -35,6 +37,7 @@ jobs:
           name: kinderwelt-store-review-drafts
           path: |
             build/privacy/
+            build/privacy-approved/
             build/store/
             docs/play/
           if-no-files-found: error

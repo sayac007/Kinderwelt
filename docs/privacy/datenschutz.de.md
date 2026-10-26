@@ -1,21 +1,65 @@
-# Kinderwelt – Datenschutzhinweise (Entwurf)
+# Datenschutzerklärung für die App „Kinderwelt“
 
-Nicht veröffentlicht oder rechtlich freigegeben. Betreiber muss alle Platzhalter ersetzen und die Angaben am endgültigen neutralen Build prüfen. Stand: {{STAND_DATUM}}. Verantwortlich: {{HERAUSGEBER}}, {{ANSCHRIFT}}. Kontakt: {{SUPPORT_EMAIL}}. Dauerhafte Fassung: {{DATENSCHUTZ_URL}}. Anwendbare Rechtsgrundlagen und Rechte: {{RECHTSGRUNDLAGEN_UND_BETROFFENENRECHTE}}.
+26. Okt. 2026 · a.w.kulikov@gmail.com
 
-## Offline spielen
+Stand: 26. Oktober 2026
 
-Kinderwelt benötigt kein Konto. Aufgaben, Bilder, Sprache und Musik werden mitgeliefert. Die App enthält keine Werbung, Käufe, Analytik, Telemetrie, Kamera- oder Mikrofonaufnahme und keinen eigenen Netzwerkdienst. Der geprüfte Android-Build fordert keine Berechtigungen an. Es werden keine Kinderprofile erstellt. Dies beschreibt die App, nicht die Datenverarbeitung durch Google Play, Android oder andere Apps.
+## 1. Verantwortlicher
 
-## Spielstand auf dem Gerät
+Alexander Kulikov Georg-Philipp-Gail Str. 14, 35394 Gießen a.w.kulikov@gmail.com
 
-Punkte, gelöste Aufgaben, ausgewählte Sprache, Figur, Kleidung, Kulissen und Audio-/Bedienungseinstellungen liegen im privaten App-Speicher. Es gibt keinen Server-Spielstand und keine Synchronisation. Die Elternfunktion „Spielstand zurücksetzen“ fragt vorher nach und setzt diese Daten zurück. Deinstallation entfernt den privaten App-Speicher; Android-Backup und Geräteübertragung der App-Daten sind durch Manifest und Ausschlussregeln deaktiviert. Die praktische Geräteprüfung ist noch offen.
+## 2. Das Wichtigste in Kürze
 
-## Eigenes Figurenbild
+Kinderwelt verarbeitet Spielstände, Einstellungen und optionale Figurenbilder ausschließlich lokal auf dem Gerät und übermittelt diese Inhalte nicht an uns oder an Dritte. Die App hat keine Benutzerkonten, keine Werbung, keine Analyse- oder Tracking-Werkzeuge und fordert keine Android-Berechtigungen an. App-Sicherungen in die Cloud sind deaktiviert.
 
-Ein Erwachsener kann im Elternbereich JPEG, PNG oder statisches WebP über die Android-Systemauswahl wählen. Die App fordert keinen allgemeinen Zugriff auf Fotos, Speicher oder Kamera an. Das Bild wird ausgerichtet, verkleinert, gegebenenfalls zugeschnitten und neu als PNG kodiert. Nur die ausgewählten Bildpunkte, ohne EXIF-, GPS- und Kameradaten, werden privat in der App gespeichert. Das Original, sein Name und seine Adresse werden nicht aufbewahrt. Abbrechen oder eine ungültige Datei ersetzt kein gespeichertes Bild.
+## 3. Was auf dem Gerät gespeichert wird
 
-Das Bild wird von Kinderwelt nicht hochgeladen, geteilt oder exportiert. Die Ausschlüsse von Cloud-Backup und Geräteübertragung betreffen die App-Kopie. Das unveränderte Original in Galerie, Dokumentanbieter oder deren eigener Cloud bleibt außerhalb der Kontrolle der App. Nur Erwachsene können die App-Kopie hinzufügen, ersetzen oder entfernen; Entfernen und bestätigtes Zurücksetzen löschen sie. Deinstallation löscht sie mit den App-Daten. Für Fehlermeldungen bitte keine Bilder realer Kinder und keine Screenshots mit solchen Bildern senden.
+Damit das Spiel funktioniert, speichert die App im privaten Speicherbereich auf dem Gerät:
 
-## Aufbewahrung und Kontakt
+Spielfortschritt, gesammelte Punkte und Belohnungen
 
-Lokale Daten bleiben bis zum Entfernen, Zurücksetzen oder Deinstallieren auf diesem Gerät. Kinderwelt sendet keine automatischen Fehlerberichte. Wenn Sie selbst den Betreiber kontaktieren, gilt für diese getrennte Kommunikation: {{SUPPORT_VERARBEITUNG_UND_LOESCHFRIST}}. Angaben zu Rechten, zuständiger Aufsicht und Verfahren muss der Betreiber vor Veröffentlichung ergänzen; dieser Entwurf ersetzt keine Rechtsprüfung.
+Einstellungen wie Sprache, gewählte Figur und Spielwelt
+
+optional ein eigenes Figurenbild (siehe Abschnitt 4)
+
+Andere Apps haben darauf keinen Zugriff. Die Daten werden nicht übertragen und nicht in App-Sicherungen aufgenommen. Wir als Anbieter haben keinen Zugriff darauf.
+
+## 4. Eigenes Figurenbild
+
+Eltern können im Elternbereich ein eigenes Foto als Spielfigur auswählen. Dabei gilt:
+
+Die Auswahl erfolgt über die Bildauswahl des Betriebssystems. Die App erhält nur das ausgewählte Bild und benötigt dafür keine Berechtigung.
+
+Nach der Auswahl wird eine Vorschau vorbereitet. Erst nach Bestätigung wird ausschließlich eine verkleinerte, von Metadaten wie Aufnahmeort und Kameradaten bereinigte Bildkopie gespeichert. Die Originaldatei bleibt unverändert an ihrem bisherigen Ort.
+
+Die Bildkopie wird nur im privaten Speicherbereich der App abgelegt. Sie wird nicht hochgeladen, nicht geteilt und nicht in App-Sicherungen aufgenommen.
+
+## 5. Kinder
+
+Kinderwelt richtet sich an Kinder im Grundschulalter. Spielstände, Einstellungen und Figurenbilder werden ausschließlich lokal verarbeitet und nicht an uns oder an Dritte übermittelt. Die Auswahl eines Fotos ist dem Elternbereich vorbehalten.
+
+## 6. Daten löschen
+
+Figurenbild löschen: im Elternbereich jederzeit möglich.
+
+Spielstand zurücksetzen (Elternbereich): löscht das Figurenbild und setzt Spielstand und Einstellungen auf die Standardwerte zurück.
+
+Deinstallation: Android entfernt dabei alle privaten Daten der App vom Gerät.
+
+Das ursprünglich ausgewählte Foto ist davon nicht betroffen. Es bleibt in Ihrer Galerie bzw. an seinem Speicherort und wird von Kinderwelt nie verändert oder gelöscht.
+
+## 7. Google Play
+
+Die App wird über Google Play bereitgestellt. Beim Herunterladen, Installieren und Aktualisieren verarbeitet Google Daten in eigener Verantwortung, zum Beispiel Angaben zu Ihrem Google-Konto und Gerät. Je nach Ihren Geräteeinstellungen kann Google außerdem technische Diagnosedaten wie Absturzberichte erheben und uns in zusammengefasster Form zur Verfügung stellen. Kinderwelt selbst enthält keine Diagnose- oder Absturzberichtswerkzeuge. Einzelheiten finden Sie in der Datenschutzerklärung von Google.
+
+## 8. Kontakt per E-Mail
+
+Wenn Sie uns per E-Mail schreiben, etwa mit Feedback oder einer Fehlermeldung, verwenden wir Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht ausschließlich, um Ihr Anliegen zu bearbeiten. Rechtsgrundlage ist unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Wir geben diese Daten nicht weiter und löschen sie, sobald Ihr Anliegen erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Bitte senden Sie uns keine Fotos von Kindern, solche E-Mails werden nicht beachtet und sofort endgültig gelöscht.
+
+## 9. Ihre Rechte
+
+Soweit wir personenbezogene Daten von Ihnen verarbeiten, also bei Kontakt per E-Mail, haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Hessischen Beauftragten für Datenschutz und Informationsfreiheit.
+
+## 10. Änderungen
+
+Wenn sich die App so verändert, dass sie Daten anders verarbeitet, passen wir diese Datenschutzerklärung an. Die aktuelle Fassung ist immer unter dieser Adresse abrufbar.

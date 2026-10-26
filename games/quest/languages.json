@@ -701,6 +701,11 @@
       "en": "Code",
       "ru": "Код"
     },
+    "privacy_policy": {
+      "de": "Datenschutzerklärung",
+      "en": "Privacy policy",
+      "ru": "Конфиденциальность"
+    },
     "bonus": {
       "de": "Bonusaufgabe",
       "en": "Bonus challenge",

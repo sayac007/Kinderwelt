@@ -1,5 +1,8 @@
 # Play upload preparation
 
+Current operator configuration, supplied German privacy page and quota-safe
+AAB delivery: [publication handoff](PUBLICATION.md).
+
 The public release is **neutral only**. Draft PRs remain separate; no automatic
 merge or Play upload is performed. Family graphics/photos never enter Store
 materials. This folder contains operator-review drafts, not approval decisions.

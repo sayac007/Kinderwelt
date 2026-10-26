@@ -41,6 +41,7 @@ class VariantTests(unittest.TestCase):
             self.assertFalse((target/'docs/internal').exists())
             self.assertFalse((target/'art/private').exists())
             self.assertTrue((target/'scripts/variants.py').exists())
+            self.assertEqual((target/'Datenschutzerklärung für die App.htm').read_bytes(),(ROOT/'Datenschutzerklärung für die App.htm').read_bytes())
             self.assertTrue((target/'art/public/characters/catalog.json').exists())
             self.assertEqual((target/'ASSETS_LICENSE.md').read_bytes(),(ROOT/'ASSETS_LICENSE.md').read_bytes())
 
