@@ -30,8 +30,8 @@ This exports the supplied text; it does not certify legal correctness, support
 practice or Google processing. The EN/RU texts are complete translations prepared for operator review, not an
 independent legal approval. All four static pages and the in-app JSON are checked
 against the same sources. The supplied publisher and
-support email are used as release metadata defaults. Asset licensing remains the
-operator's separate decision. Nothing is hosted or published automatically.
+support email are used as release metadata defaults. The operator recorded “Alle Rechte vorbehalten, soweit Schutzrechte bestehen.”
+for own assets on 2026-10-26; upstream notices retain their separate terms. Nothing is hosted or published automatically.
 The final public privacy URL must be reachable without login for Play review.
 
 ## Signing configuration
@@ -53,8 +53,9 @@ Set these environment **Secrets**, not ordinary variables or repository files:
 | `KINDERWELT_UPLOAD_STORE_PASSWORD` | Keystore password |
 | `KINDERWELT_UPLOAD_KEY_PASSWORD` | Key password |
 
-Set environment variable **`KINDERWELT_ASSET_LICENSE`** to the operator's actual
-asset licensing decision, or record that decision in `release-metadata.json`.
+The operator’s asset statement is now recorded in `release-metadata.json`:
+**“Alle Rechte vorbehalten, soweit Schutzrechte bestehen.”** Environment variable
+**`KINDERWELT_ASSET_LICENSE`** is an optional explicit override.
 The existing software, music, font and upstream notices retain their own terms;
 this value is not a blanket replacement for them. Publisher/contact can optionally
 be overridden with `KINDERWELT_PUBLISHER` / `KINDERWELT_SUPPORT_EMAIL`; empty

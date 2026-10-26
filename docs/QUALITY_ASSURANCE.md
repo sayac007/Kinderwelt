@@ -31,7 +31,8 @@ landed in predecessor feature branches.
 - The real main release probe [40322560219](https://github.com/sayac007/Kinderwelt/actions/runs/40322560219)
   **skipped export**, reporting unavailable signing credentials/operator fields.
   Publisher/contact defaults now use the supplied document. Operator asset
-  licensing and four upload-key secrets remain required; no production key was
+  statement now reads “Alle Rechte vorbehalten, soweit Schutzrechte bestehen.”
+  Four upload-key secrets remain required; no production key was
   created and no signed release AAB is claimed.
 
 Final source-build/render and remote CI results will be recorded after the code
