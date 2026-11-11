@@ -41,6 +41,19 @@ Jeder Entwicklungsbuild liefert `kinderwelt-debug.apk`, ein **unsigniertes** `ki
 
 Prüfungen: Paket, Version, API 24–36, keine Berechtigungen, deaktiviertes Backup, Bildschirmrotation, alle acht Fächer, drei Sprachmanifeste und sämtliche tatsächlich spielbaren Sprach-/Musik-/Grafikressourcen, ausgewählte Figurenvariante, zwei ABIs, 16-KB-ELF-Ausrichtung, ZIP-Ausrichtung, APK-Signatur und unsignierter Bundle-Status. Native Bibliotheken sind verlustfrei komprimiert und werden bei Installation entpackt. Neue Buildgrößen und tatsächlich erzeugte Dateien: [Testbericht](test-report.md).
 
+## Current upload-signed bundle
+
+Protected manual [release run 40381017488](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488)
+passed actual upload-key signing, bundle verification, size measurement, upload
+and temporary-key cleanup for neutral **0.9.6 / 19**, package
+`io.github.sayac007.kinderwelt`, source `83580881`. Download the
+[`kinderwelt-neutral-upload-signed` ZIP](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488/artifacts/12678504174)
+and extract `kinderwelt-release-neutral.aab`. The ZIP is **304,643,817 bytes** and
+expires **29 October 2026, 19:54 Europe/Berlin**. It contains technical reports;
+it is distinct from development APKs and earlier unsigned bundles. See the
+[current handoff](play/PUBLICATION.md) for evidence limits. This is technical
+signing/delivery success, not a Play Console acceptance or production decision.
+
 ## GitHub Actions
 
 Pushes auf `main` und Pull Requests bauen und prüfen ausschließlich die neutrale Variante, ohne Familien-Token und ohne Artefakt-Uploads. Installierbare Downloads entstehen nur über **Run workflow** unter [Android verification builds](https://github.com/sayac007/Kinderwelt/actions/workflows/android.yml). Standard ist `variant=neutral`; `family` oder `both` muss ausdrücklich gewählt werden. Nur diese manuellen Familienläufe importieren den festgelegten privaten Figurenstand. [Einrichtung](family-repository.md).
@@ -254,8 +267,10 @@ credentials, the operator must configure that Environment in repository Settings
 require an explicit reviewer approval, restrict deployment branches to **main**,
 and check that the repository's GitHub plan supports and enforces those rules.
 The YAML references the Environment; it cannot create or guarantee its reviewer
-protection settings. Those settings remain **NOT VERIFIED** until the operator
-checks them. Do not store real upload credentials in an unprotected Environment.
+protection settings. The latest live API check and operator-approved release run
+40381017488 confirm the main-only rule, required operator reviewer and disabled
+admin bypass. Maintain these protections for future runs. Do not store real
+upload credentials in an unprotected Environment.
 If the plan cannot enforce both protections, keep CI upload secrets unset and
 use the documented local signing path; do not bypass the reviewer requirement.
 

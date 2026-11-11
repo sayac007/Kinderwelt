@@ -4,6 +4,41 @@
 
 The separate [visual asset IP audit](qa/VISUAL_IP_AUDIT.md) adds two named, current reference files under `docs/qa/`. Its privacy-redacted inventory and local review packs do not constitute legal clearance. The two-file folder counts below describe the pre-audit 0.9.3 verification snapshot.
 
+## Upload-signed neutral AAB — verified CI delivery, 2026-10-26
+
+The operator approved environment `release`; real upload-key export, signature
+verification, bundletool size measurement, artifact upload and temporary-key
+cleanup all **PASS** in [release run 40381017488](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488),
+job `121776935439`, source `83580881e0e47f72005318753bbc9ebbfd025dd8` on `main`.
+The configuration preflight passed and the export was executed, not skipped.
+
+- Bundle: **`kinderwelt-release-neutral.aab`**, neutral cast, package
+  **`io.github.sayac007.kinderwelt`**, version **0.9.6 / 19**.
+- CI's release verifier checks the actual expected upload certificate on every
+  payload entry, certificate validity, package/version, resources/notices,
+  API/permission/backup configuration and native 16KB packaging. The measurement
+  step and the artifact upload both completed successfully.
+- [Download ZIP artifact](https://github.com/sayac007/Kinderwelt/actions/runs/40381017488/artifacts/12678504174):
+  `kinderwelt-neutral-upload-signed`, **304,643,817 bytes**. This is the archive
+  size, not an independently read individual AAB size. The ZIP also includes
+  verification, provenance and size reports. Expiry: **29 October 2026,
+  19:54 Europe/Berlin**; download/retain the approved files before expiry.
+- GitHub-reported **archive SHA-256**:
+  `bfcb791f50be1a4b1440b1d967f7f3e8d654b12d003482eea7b858302248bc86`.
+  Individual AAB checksum and certificate fingerprint are in the retained reports.
+- Environment metadata confirms only `main` deployments, required reviewer
+  `sayac007`, self-review allowed for the single operator, and administrator
+  bypass disabled. The actual run waited for the operator's approval.
+
+This is live CI evidence with operator-owned credentials, separate from prior
+unsigned/disposable-key fixtures. Artifact and job-log downloads return HTTP 403
+in this client's network, so no independent local extraction, checksum or
+signature re-verification is claimed. The artifact existence/digest and every
+job-step result were confirmed through the API. The CI report's generic
+`upload_readiness=BLOCKED` does not negate signing success; it is not changed
+into a Google Play or production approval. Play Console remains operator-owned;
+no Console operation or Play upload was performed.
+
 ## Operator device acceptance — 2026-10-26
 
 The operator reports **image selection, rotation and updates PASS on a phone and
